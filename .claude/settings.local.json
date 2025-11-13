@@ -23,7 +23,19 @@
       "Bash(echo \"Processing $file\")",
       "Bash(fi)",
       "Bash(do echo \"=== $file ===\")",
-      "Bash(while read file)"
+      "Bash(while read file)",
+      "Bash(npm create:*)",
+      "Bash(npx:*)",
+      "Bash(npm uninstall:*)",
+      "Bash(ln:*)",
+      "Bash(npm run dev:*)",
+      "Bash(npm run build:*)",
+      "Bash(npm run lint)",
+      "Bash(npm run typecheck:*)",
+      "Bash(curl:*)",
+      "Bash(readlink:*)",
+      "Bash(npm run lint:*)",
+      "Read(//home/lanath/Work/masterMonkey/rpg/**)"
     ],
     "deny": [],
     "ask": []

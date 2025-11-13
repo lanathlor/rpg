@@ -5,11 +5,11 @@ levels:
     name: Cartouche de shrapnel augmentée
     prerequisites:
       affinities:
-        - "A. fusil à pompe: 2"
+        école_requirement: "A.École[balistique]: 2"
       equipment:
         - Fusil à pompe
     conditions:
-      recharge: 80 sec
+    recharge_time: "80 sec"
     effects:
       damage_bonus: Rajoutez 1d8 d4 à votre prochaine attaque
 school: balistique

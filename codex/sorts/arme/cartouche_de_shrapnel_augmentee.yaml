@@ -5,10 +5,10 @@ levels:
     name: Cartouche de shrapnel augmentée
     prerequisites:
       affinities:
-        - "A. balistique: 6"
+        école_requirement: "A.École[balistique]: 6"
     conditions:
       special: aucune
-      recharge: 20 sec
+    recharge_time: "20 sec"
     effects:
       damage: 1d6+2 dans un rayon de 2m autour de l'impact
       area_effect: true

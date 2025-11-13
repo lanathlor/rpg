@@ -1,0 +1,22 @@
+spell_series: "Vent cinglant"
+description_base: "Projette un vent glacial sur une distance de 25 mètres, créant une bourrasque de froid intense qui traverse les rangs ennemis."
+
+school: givre
+type: destruction
+
+levels:
+  - level: "1"
+    name: "Vent cinglant"
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[givre]: 5"
+        type_requirement: "A.Type[destruction]: 4"
+        mixed_requirement: "A.École[givre] + A.Type[destruction]: 7"
+    conditions:
+      intelligence_required: 18
+      flux_cost: 10
+    effects:
+      damage: "1d12+1d8 givre"
+      special: "Inflige 2x 'Gelure' aux personnes touchées"
+      area: "Zone linéaire de 25 mètres"
+    recharge_time: "50 sec"

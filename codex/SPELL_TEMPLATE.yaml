@@ -1,0 +1,70 @@
+# STANDARDIZED SPELL YAML TEMPLATE
+# Use this template for all new spells and when standardizing existing ones
+
+# Basic spell information
+spell_series: "Spell Name"
+description_base: "Brief description of what the spell does and its visual/thematic effects."
+
+# Magic system classification (REQUIRED at root level)
+school: "school_name"  # Options: feu, givre, arcane, biomagie, balistique, etc.
+type: "type_name"      # Options: destruction, alteration, amelioration, deplacement, arme, protection, affliction
+
+# Spell levels (array - spells can have multiple levels)
+levels:
+  - level: "1"  # ALWAYS string, not integer
+    name: "Spell Name"  # Can be different from spell_series for level variants
+
+    # Prerequisites (STANDARDIZED FORMAT)
+    prerequisites:
+      # New affinity system (PREFERRED FORMAT)
+      affinities:
+        école_requirement: "A.École[school_name]: X"      # School requirement
+        type_requirement: "A.Type[type_name]: Y"          # Type requirement
+        mixed_requirement: "A.École[school_name] + A.Type[type_name]: Z"  # Combined requirement
+
+      # Special prerequisites (if any)
+      special: "Special prerequisite text"  # Use only if spell has unique requirements
+
+    # Conditions (STANDARDIZED FIELD NAMES)
+    conditions:
+      # Stat requirements (use appropriate one)
+      intelligence_required: 16    # For magical spells
+      perception_required: 14      # For precision/targeting spells
+
+      # Resource costs
+      flux_cost: 8                 # Mana/flux cost
+
+      # Special conditions
+      activation: "How spell is triggered"  # Only if not standard casting
+      special: "Special condition text"     # Any unique casting conditions
+
+    # Effects (what the spell actually does)
+    effects:
+      # Damage (if applicable)
+      damage: "2d6+4 fire"         # Format: "XdY+Z damage_type"
+      area_damage: "1d4 fire"      # Area damage if different
+
+      # Special effects
+      special: "Special effect description"  # Debuffs, status effects, etc.
+
+      # Area/targeting (if applicable)
+      area: "Description of area of effect"
+      range: "Spell range"
+
+    # Duration (if spell has ongoing effects)
+    duration: "X turns"            # Only include if spell has duration
+
+    # Recharge time (STANDARDIZED FIELD NAME)
+    recharge_time: "X sec"         # Format: "X sec" or "instantané"
+
+    # Level-specific description (optional)
+    description: "Additional description for this specific level"
+
+# NOTES FOR STANDARDIZATION:
+# 1. Always use "recharge_time" at root level, never "recharge" in conditions
+# 2. Always use new affinity format with école_requirement/type_requirement/mixed_requirement
+# 3. Use consistent time format: "X sec" (not "X secs"), "instantané", never "aucun"
+# 4. Prerequisites go in prerequisites section, conditions in conditions section
+# 5. Special effects go in effects.special, not scattered in other sections
+# 6. All levels are strings ("1", "2") not integers (1, 2)
+# 7. school and type are at root level, not inside levels

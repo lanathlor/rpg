@@ -5,11 +5,11 @@ levels:
     name: Plombs à haute vélocité
     prerequisites:
       affinities:
-        - "A. fusil à pompe: 2"
+        école_requirement: "A.École[balistique]: 2"
       equipment:
         - Fusil à pompe
     conditions:
-      recharge: 50 sec
+    recharge_time: "50 sec"
     effects:
       damage_bonus: +2 à chacun de vos dés lors de votre prochaine attaque avec un fusil à pompe
 school: balistique

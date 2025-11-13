@@ -5,20 +5,20 @@ levels:
     name: Attaque multiple
     prerequisites:
       affinities:
-        - "A. CAC: 6"
+        école_requirement: "A.École[martial]: 6"
     conditions:
       dexterity_required: 16
-      recharge: 60 sec
+    recharge_time: "60 sec"
     effects:
       multiple_attack: Lance une copie de la prochaine attaque
   - level: "2"
     name: Attaque multiple II
     prerequisites:
       affinities:
-        - "A. CAC: 8"
+        école_requirement: "A.École[martial]: 8"
     conditions:
       dexterity_required: 16
-      recharge: 40 sec
+    recharge_time: "40 sec"
     effects:
       multiple_attack: Lance une copie de la prochaine attaque
 school: martial

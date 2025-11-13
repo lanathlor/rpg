@@ -1,0 +1,19 @@
+spell_series: "Gelure"
+description_base: "La cible est victime de gelure, perturbant ses sens. Effect de gel cumulatif qui ralentit et affaiblit progressivement la victime."
+
+school: givre
+type: affliction
+
+levels:
+  - level: "1"
+    name: "Gelure"
+    prerequisites:
+      special: "Ne peut être incanté directement par un personnage - uniquement appliqué par d'autres sorts"
+    conditions:
+      activation: "Déclenché par un sort de givre"
+      flux_cost: 0
+    effects:
+      debuff: "-1 vitesse, -1 score de toucher par accumulation"
+      special: "Cumulable. Nouvelle application remet la durée à 0. 5 accumulations = 2d20+8 dégâts puis perte de 5 'Gelure'"
+      duration: "2 tours"
+    recharge_time: "instantané"

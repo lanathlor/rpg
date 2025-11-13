@@ -5,10 +5,10 @@ levels:
     name: Roulade
     prerequisites:
       affinities:
-        - "A. CAC: 4"
+        école_requirement: "A.École[martial]: 4"
     conditions:
       dexterity_required: 14
-      recharge: 20 sec
+    recharge_time: "20 sec"
     effects:
       movement: Déplacement de 5m + esquive automatique
       defense_bonus: +2 en défense jusqu'au prochain tour
@@ -20,7 +20,7 @@ levels:
         - Exosquelette
     conditions:
       dexterity_required: 12
-      recharge: 40 sec
+    recharge_time: "40 sec"
     description: >-
       Grâce à la rapidité de vos mouvements et à la puissance conférée par l'exosquelette, vous vous propulsez loin du
       danger.

@@ -1,0 +1,21 @@
+spell_series: "Givre"
+description_base: "Glace modérément la cible avec une formation de cristaux de glace qui adhèrent à la peau et maintiennent les effets de gel existants."
+
+school: givre
+type: destruction
+
+levels:
+  - level: "1"
+    name: "Givre"
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[givre]: 3"
+        type_requirement: "A.Type[destruction]: 3"
+        mixed_requirement: "A.École[givre] + A.Type[destruction]: 5"
+    conditions:
+      intelligence_required: 16
+      flux_cost: 4
+    effects:
+      damage: "1d4+4 givre"
+      special: "Rafraîchit les effets 'Gelure' sur la cible"
+    recharge_time: "instantané"

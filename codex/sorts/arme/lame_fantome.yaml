@@ -1,14 +1,14 @@
 spell_series: Lame fantôme
 description_base: Frappe d'un coup d'épée fantomatique l'adversaire visé.
 levels:
-  - level: '1'
+  - level: "1"
     name: Lame fantôme
     prerequisites:
       affinities:
-        - 'A. CAC: 4'
+        école_requirement: "A.École[martial]: 4"
     conditions:
       special: aucune
-      recharge: 20 sec
+    recharge_time: "20 sec"
     effects:
       damage: +1d6+1 aux dégâts d'arme
       special: Ignore l'armure

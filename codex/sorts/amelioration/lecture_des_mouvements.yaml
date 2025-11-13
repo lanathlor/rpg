@@ -8,7 +8,7 @@ levels:
         - Vétéran
     conditions:
       perception_required: 14
-      recharge: 30 sec
+    recharge_time: "30 sec"
     effects:
       prediction: Prédis l'action de la cible, la précision est accrue avec le jet
     notes: Ce sort est considéré comme une manœuvre

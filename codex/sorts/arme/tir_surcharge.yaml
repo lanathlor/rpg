@@ -1,14 +1,14 @@
 spell_series: Tir surchargé
 description_base: Surcharge l'arme pour un tir dévastateur.
 levels:
-  - level: '2'
+  - level: "2"
     name: Tir surchargé
     prerequisites:
       affinities:
-        - 'A. balistique: 10'
+        école_requirement: "A.École[balistique]: 10"
     conditions:
       special: aucune
-      recharge: 60 sec
+    recharge_time: "60 sec"
     effects:
       damage: +3d6+6 aux dégâts d'arme
       special: Risque de surchauffe de l'arme

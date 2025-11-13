@@ -5,10 +5,10 @@ levels:
     name: Charge
     prerequisites:
       affinities:
-        - "A. CAC: 4"
+        école_requirement: "A.École[martial]: 4"
     conditions:
       target_range: cible à porter (1d8 + vitesse)
-      recharge: instantané
+    recharge_time: "instantané"
     effects:
       damage: Vous vous déplacez jusqu'à la cible et lui infligez 1d4 dégâts
 school: martial

@@ -9,11 +9,11 @@ levels:
         - Rôdeur
     conditions:
       dexterity_required: 16
-      recharge: 80 sec
+    recharge_time: "80 sec"
     effects:
       success: vous êtes camouflée automatiquement pendant 3 tours
       failure: "-1 aux jets d'attaques contre vous"
       automatic_success: si personne ne vous voit
     notes: Se sort est considéré comme une manœuvre
-school: electricite
+school: électricité
 type: amélioration

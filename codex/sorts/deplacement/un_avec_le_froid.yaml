@@ -1,0 +1,21 @@
+spell_series: "Un avec le froid"
+description_base: "Vous vous propulsez grâce à une bourrasque de vent glacial, utilisant la magie du givre pour créer un déplacement rapide et fluide."
+
+school: givre
+type: deplacement
+
+levels:
+  - level: "1"
+    name: "Un avec le froid"
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[givre]: 4"
+        type_requirement: "A.Type[déplacement]: 3"
+        mixed_requirement: "A.École[givre] + A.Type[déplacement]: 6"
+    conditions:
+      intelligence_required: 14
+      flux_cost: 5
+    effects:
+      movement: "Déplacement de 20 mètres librement, écartant les obstacles légers"
+      special: "N'active pas les jets d'opportunité. Inflige 2x 'Gelure' au lanceur"
+    recharge_time: "instantané"

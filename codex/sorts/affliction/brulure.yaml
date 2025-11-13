@@ -7,7 +7,7 @@ levels:
       note: Ne peut être incanté par un personnage
     conditions:
       activation: activé par un sort
-      recharge: instantané
+    recharge_time: "instantané"
     effects:
       damage: 1d4 à chaque tour
       dice_rolled_once: true
@@ -18,7 +18,7 @@ levels:
       note: Ne peut être incanté par un personnage
     conditions:
       activation: activé par un sort
-      recharge: instantané
+    recharge_time: "instantané"
     effects:
       damage: 1d4 + 3 à chaque tour
       dice_rolled_once: true

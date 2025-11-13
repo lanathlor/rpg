@@ -1,0 +1,368 @@
+import { Badge } from '@/components/ui/badge'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Separator } from '@/components/ui/separator'
+import type { Spell, SpellLevel } from '@/types'
+import { Flame, Zap, Shield, Sparkles, Sword, ArrowRight, Users, Skull } from 'lucide-react'
+
+interface SpellDetailProps {
+  spell: Spell
+}
+
+const getSchoolIcon = (school: string) => {
+  switch (school) {
+    case 'feu':
+      return <Flame className="h-4 w-4" />
+    case 'electricite':
+      return <Zap className="h-4 w-4" />
+    case 'biomagie':
+      return <Users className="h-4 w-4" />
+    case 'arcane':
+    default:
+      return <Sparkles className="h-4 w-4" />
+  }
+}
+
+const getTypeIcon = (type: string) => {
+  switch (type) {
+    case 'destruction':
+      return <Skull className="h-4 w-4" />
+    case 'protection':
+      return <Shield className="h-4 w-4" />
+    case 'arme':
+      return <Sword className="h-4 w-4" />
+    case 'deplacement':
+      return <ArrowRight className="h-4 w-4" />
+    case 'alteration':
+    case 'amelioration':
+    case 'affliction':
+    default:
+      return <Sparkles className="h-4 w-4" />
+  }
+}
+
+const getSchoolColor = (school: string) => {
+  switch (school) {
+    case 'feu':
+      return 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300'
+    case 'electricite':
+      return 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300'
+    case 'biomagie':
+      return 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300'
+    case 'arcane':
+    default:
+      return 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300'
+  }
+}
+
+const getTypeColor = (type: string) => {
+  switch (type) {
+    case 'destruction':
+      return 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300'
+    case 'protection':
+      return 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300'
+    case 'alteration':
+      return 'bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300'
+    case 'amelioration':
+      return 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300'
+    case 'deplacement':
+      return 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300'
+    case 'arme':
+      return 'bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-300'
+    case 'affliction':
+      return 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300'
+    default:
+      return 'bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-300'
+  }
+}
+
+function SpellLevelDetail({ level }: { level: SpellLevel }) {
+  return (
+    <Card className="mb-4">
+      <CardHeader>
+        <div className="flex items-center justify-between">
+          <CardTitle className="text-lg flex items-center gap-2">
+            <Badge variant="outline">Niveau {level.level}</Badge>
+            {level.name}
+          </CardTitle>
+        </div>
+        {level.description && (
+          <CardDescription className="mt-2">
+            {level.description}
+          </CardDescription>
+        )}
+      </CardHeader>
+      <CardContent className="space-y-4">
+        {/* Prerequisites */}
+        <div>
+          <h4 className="font-semibold text-sm mb-2">Prérequis</h4>
+          <div className="space-y-1 text-sm text-muted-foreground">
+            {/* New format: object with specific keys */}
+            {level.prerequisites?.affinities?.école_requirement && (
+              <div>• École: {level.prerequisites.affinities.école_requirement}</div>
+            )}
+            {level.prerequisites?.affinities?.type_requirement && (
+              <div>• Type: {level.prerequisites.affinities.type_requirement}</div>
+            )}
+            {level.prerequisites?.affinities?.mixed_requirement && (
+              <div>• Mixte: {level.prerequisites.affinities.mixed_requirement}</div>
+            )}
+
+            {/* Old format: array of strings */}
+            {Array.isArray(level.prerequisites?.affinities) && level.prerequisites.affinities.map((affinity, index) => (
+              <div key={index}>• {affinity}</div>
+            ))}
+
+            {/* Handle special prerequisites */}
+            {level.prerequisites?.special && (
+              <div>• {level.prerequisites.special}</div>
+            )}
+          </div>
+        </div>
+
+        {/* Conditions */}
+        <div>
+          <h4 className="font-semibold text-sm mb-2">Conditions</h4>
+          <div className="grid grid-cols-2 gap-4 text-sm">
+            {/* Show flux cost if available */}
+            {level.conditions?.flux_cost && (
+              <div>
+                <span className="font-medium">Coût de flux:</span> {level.conditions.flux_cost}
+              </div>
+            )}
+
+            {/* Show recharge prominently if no flux cost, or always if present */}
+            {(level.conditions?.recharge || level.recharge_time) && (
+              <div className={!level.conditions?.flux_cost ? "font-semibold text-blue-600" : ""}>
+                <span className="font-medium">Recharge:</span> {level.conditions?.recharge || level.recharge_time}
+              </div>
+            )}
+
+            {level.conditions?.intelligence_required && (
+              <div>
+                <span className="font-medium">Intelligence:</span> {level.conditions.intelligence_required}
+              </div>
+            )}
+            {level.conditions?.perception_required && (
+              <div>
+                <span className="font-medium">Perception:</span> {level.conditions.perception_required}
+              </div>
+            )}
+            {level.conditions?.special && level.conditions.special !== 'aucune' && (
+              <div className="col-span-2">
+                <span className="font-medium">Spécial:</span> {level.conditions.special}
+              </div>
+            )}
+          </div>
+        </div>
+
+        {/* Effects */}
+        <div>
+          <h4 className="font-semibold text-sm mb-2">Effets</h4>
+          <div className="space-y-1 text-sm">
+            {/* Damage Category - Red */}
+            {level.effects?.damage && (
+              <div>
+                <span className="font-medium text-red-600 dark:text-red-400">Dégâts:</span> {level.effects.damage}
+              </div>
+            )}
+            {level.effects?.area_damage && (
+              <div>
+                <span className="font-medium text-red-600 dark:text-red-400">Dégâts de zone:</span> {level.effects.area_damage}
+              </div>
+            )}
+            {level.effects?.damage_bonus && (
+              <div>
+                <span className="font-medium text-red-600 dark:text-red-400">Bonus dégâts:</span> {level.effects.damage_bonus}
+              </div>
+            )}
+            {level.effects?.burning_chance && (
+              <div>
+                <span className="font-medium text-red-600 dark:text-red-400">Chance brûlure:</span> {level.effects.burning_chance}
+              </div>
+            )}
+
+            {/* Status/Debuff Category - Purple/Orange */}
+            {level.effects?.debuff && (
+              <div>
+                <span className="font-medium text-purple-600 dark:text-purple-400">Affaiblissement:</span> {level.effects.debuff}
+              </div>
+            )}
+            {level.effects?.status && (
+              <div>
+                <span className="font-medium text-purple-600 dark:text-purple-400">Statut:</span> {level.effects.status}
+              </div>
+            )}
+            {level.effects?.emp && (
+              <div>
+                <span className="font-medium text-orange-600 dark:text-orange-400">IEM:</span> {level.effects.emp}
+              </div>
+            )}
+
+            {/* Movement Category - Blue */}
+            {level.effects?.movement && (
+              <div>
+                <span className="font-medium text-blue-600 dark:text-blue-400">Mouvement:</span> {level.effects.movement}
+              </div>
+            )}
+            {level.effects?.teleport && (
+              <div>
+                <span className="font-medium text-blue-600 dark:text-blue-400">Téléportation:</span> {level.effects.teleport}
+              </div>
+            )}
+
+            {/* Defense Category - Green */}
+            {level.effects?.protection && (
+              <div>
+                <span className="font-medium text-green-600 dark:text-green-400">Protection:</span> {level.effects.protection}
+              </div>
+            )}
+            {level.effects?.defense && (
+              <div>
+                <span className="font-medium text-green-600 dark:text-green-400">Défense:</span> {level.effects.defense}
+              </div>
+            )}
+            {level.effects?.defense_bonus && (
+              <div>
+                <span className="font-medium text-green-600 dark:text-green-400">Bonus défense:</span> {level.effects.defense_bonus}
+              </div>
+            )}
+            {level.effects?.damage_reduction && (
+              <div>
+                <span className="font-medium text-green-600 dark:text-green-400">Réduction dégâts:</span> {level.effects.damage_reduction}
+              </div>
+            )}
+
+            {/* Attack Enhancement Category - Yellow */}
+            {level.effects?.attack_bonus && (
+              <div>
+                <span className="font-medium text-yellow-600 dark:text-yellow-400">Bonus attaque:</span> {level.effects.attack_bonus}
+              </div>
+            )}
+            {level.effects?.critical_chance && (
+              <div>
+                <span className="font-medium text-yellow-600 dark:text-yellow-400">Critique:</span> {level.effects.critical_chance}
+              </div>
+            )}
+            {level.effects?.multiple_attack && (
+              <div>
+                <span className="font-medium text-yellow-600 dark:text-yellow-400">Attaque multiple:</span> {level.effects.multiple_attack}
+              </div>
+            )}
+
+            {/* Utility Category - Gray */}
+            {level.effects?.information && (
+              <div>
+                <span className="font-medium text-gray-600 dark:text-gray-400">Information:</span> {level.effects.information}
+              </div>
+            )}
+            {level.effects?.prediction && (
+              <div>
+                <span className="font-medium text-gray-600 dark:text-gray-400">Prédiction:</span> {level.effects.prediction}
+              </div>
+            )}
+            {level.effects?.success && (
+              <div>
+                <span className="font-medium text-gray-600 dark:text-gray-400">En cas de succès:</span> {level.effects.success}
+              </div>
+            )}
+            {level.effects?.failure && (
+              <div>
+                <span className="font-medium text-gray-600 dark:text-gray-400">En cas d'échec:</span> {level.effects.failure}
+              </div>
+            )}
+            {level.effects?.automatic_success && (
+              <div>
+                <span className="font-medium text-gray-600 dark:text-gray-400">Succès auto:</span> {level.effects.automatic_success}
+              </div>
+            )}
+
+            {/* Area/Technical Category - Indigo */}
+            {level.effects?.area && (
+              <div>
+                <span className="font-medium text-indigo-600 dark:text-indigo-400">Zone:</span> {level.effects.area}
+              </div>
+            )}
+            {level.effects?.area_effect && (
+              <div>
+                <span className="font-medium text-indigo-600 dark:text-indigo-400">Effet de zone:</span> {level.effects.area_effect === true ? 'Oui' : level.effects.area_effect}
+              </div>
+            )}
+
+            {/* Special Category - Teal (kept last as catch-all) */}
+            {level.effects?.special && (
+              <div>
+                <span className="font-medium text-teal-600 dark:text-teal-400">Spécial:</span> {level.effects.special}
+              </div>
+            )}
+            {level.effects?.spell_enhancement && (
+              <div>
+                <span className="font-medium text-teal-600 dark:text-teal-400">Amélioration:</span> {level.effects.spell_enhancement}
+              </div>
+            )}
+          </div>
+        </div>
+
+        {/* Duration and Usage */}
+        <div className="flex gap-4 text-sm">
+          {level.duration && (
+            <div>
+              <span className="font-medium">Durée:</span> {level.duration}
+            </div>
+          )}
+          {level.usage && (
+            <div>
+              <span className="font-medium">Usage:</span> {level.usage}
+            </div>
+          )}
+        </div>
+      </CardContent>
+    </Card>
+  )
+}
+
+export function SpellDetail({ spell }: SpellDetailProps) {
+  return (
+    <div className="max-w-4xl mx-auto space-y-6">
+      {/* Header */}
+      <div className="space-y-4">
+        <div className="flex items-start justify-between">
+          <div>
+            <h1 className="text-3xl font-bold tracking-tight">{spell.name}</h1>
+            <p className="text-lg text-muted-foreground mt-1">{spell.spell_series}</p>
+          </div>
+          <div className="flex gap-2">
+            <Badge className={getSchoolColor(spell.school)}>
+              {getSchoolIcon(spell.school)}
+              <span className="ml-1 capitalize">{spell.school}</span>
+            </Badge>
+            <Badge className={getTypeColor(spell.type)}>
+              {getTypeIcon(spell.type)}
+              <span className="ml-1 capitalize">{spell.type}</span>
+            </Badge>
+          </div>
+        </div>
+
+        <div>
+          <h3 className="font-semibold text-sm mb-2">Description</h3>
+          <p className="text-muted-foreground leading-relaxed">
+            {spell.description_base}
+          </p>
+        </div>
+      </div>
+
+      <Separator />
+
+      {/* Levels */}
+      <div>
+        <h2 className="text-xl font-semibold mb-4">
+          Niveaux disponibles ({spell.levels.length})
+        </h2>
+        <div className="space-y-4">
+          {spell.levels.map((level, index) => (
+            <SpellLevelDetail key={`${level.level}-${index}`} level={level} />
+          ))}
+        </div>
+      </div>
+    </div>
+  )
+}
