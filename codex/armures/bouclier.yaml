@@ -1,0 +1,9 @@
+name: "Bouclier"
+category: "Armure"
+subcategory: "bouclier"
+prerequisites:
+  stat: "FOR 14"
+stats:
+  defense_bonus: "+2 au score de défense"
+  special_ability: "Permet de parer les attaques physiques"
+description: "Bouclier robuste permettant de bloquer activement les attaques ennemies et d'améliorer les capacités défensives."

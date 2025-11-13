@@ -1,0 +1,19 @@
+spell_series: Colonne de flamme
+description_base: Fait jaillir une colonne de flammes du sol.
+levels:
+  - level: "2"
+    name: Colonne de flamme
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[feu]: 5"
+        type_requirement: "A.Type[destruction]: 5"
+        mixed_requirement: "A.École[feu] + A.Type[destruction]: 8"
+    conditions:
+      intelligence_required: 16
+      flux_cost: 15
+    effects:
+      damage: 3d6+4 feu
+      area_effect: Colonne de 2m de rayon
+      special: Traverse les armures légères
+school: feu
+type: destruction

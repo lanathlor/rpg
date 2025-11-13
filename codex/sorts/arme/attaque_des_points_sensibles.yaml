@@ -1,0 +1,29 @@
+spell_series: Attaque des points sensibles
+description_base: Vise les points faibles de l'adversaire pour maximiser les dégâts.
+levels:
+  - level: '1'
+    name: Attaque des points sensibles
+    prerequisites:
+      affinities:
+        - 'A. CAC: 6'
+    conditions:
+      dexterity_required: 14
+      recharge: 30 sec
+    effects:
+      damage: +1d8+3 aux dégâts d'arme
+      critical_chance: Critique sur 19-20
+  - level: '2'
+    name: Attaque des points sensibles II
+    prerequisites:
+      affinities:
+        - 'A. CAC: 4'
+    conditions:
+      perception_required: 18
+      recharge: 120 sec
+    description: >-
+      Trouve les points vitaux de la cible et les attaque en priorité,
+      infligeant d'énormes dégâts.
+    effects:
+      damage: 2d20 + 10
+school: martial
+type: arme

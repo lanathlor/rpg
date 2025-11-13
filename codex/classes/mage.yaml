@@ -1,0 +1,65 @@
+name: "Mage"
+description: "Les mages de l'Empire sont sélectionnés dès l'enfance parmi ceux manifestant une sensibilité naturelle au flux magique. Après des décennies d'études rigoureuses dans les Académies Impériales, ils émergent comme de véritables armes vivantes. Maîtres de la destruction pure, ils excellent dans les guerres de position et les batailles rangées, capable de faire pleuvoir les flammes de l'enfer sur leurs ennemis. Leur pouvoir dévastateur peut réduire en cendres des escouades entières, que ce soit en formation groupée ou lors d'embuscades de guérilla. Bien qu'exponentiellement plus puissants en groupe, sous-estimer un mage isolé reste une erreur souvent fatale."
+
+image: "[Placeholder for mage image]"
+
+# Statistiques de base
+base_stats:
+  health: 40
+  speed: 3
+
+# Système de flux
+flux_system:
+  reserve: 30
+  per_turn: 8
+  recovery: 3
+
+# Affinités
+affinities:
+  distance: 2
+  melee: 2
+  schools:
+    feu: 4
+    givre: 2
+    biomagie: 3
+  types:
+    destruction: 5
+    alteration: 3
+
+# Statistiques
+stats:
+  force: 9
+  dexterite: 9
+  constitution: 10
+  intelligence: 16
+  perception: 12
+  precision: 11
+  charisme: 11
+
+# Équipements (références vers le codex)
+equipment:
+  weapons:
+    - "Épée légère"
+  armor:
+    - "Tunique"
+  consumables:
+    - name: "Kit de soins"
+      quantity: 1
+    - name: "Cristal de mana"
+      quantity: 1
+
+# Compétences (références vers le codex)
+skills:
+  - "Armure de magie"
+  - "Vue des arcanes"
+
+# Sorts
+spells:
+  - "Boule de feu"
+  - "Flammèche"
+  - "Colonne de flamme"
+  - "Éclaire"
+  - "Confusion"
+
+# Guide de jeu
+gameplay_guide: "Le mage est une classe infligeant beaucoup de dégât en peu de temps, mais ne les tient pas dans le temps. Il est plus efficient dans les combats de courte durée ou avec beaucoup d'ennemies proches grâce à colonnes de flamme. Sa capacité de survie est limitée. Les sorts et le positionnement du mage doivent être réfléchis prudemment."

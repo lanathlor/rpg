@@ -1,0 +1,7 @@
+name: "Ingénieur"
+category: "Compétence"
+subcategory: "technique"
+effect:
+  repair_ability: "Permet de réparer les dégâts mécaniques et électriques"
+  construction_ability: "Permet de construire des objets"
+description: "Formation technique approfondie en mécanique et électronique permettant la réparation et la construction d'équipements."

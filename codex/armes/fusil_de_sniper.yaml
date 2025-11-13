@@ -1,0 +1,14 @@
+name: "Fusil de sniper"
+category: "Arme à distance"
+subcategory: "arme à deux mains"
+type: "sniper"
+prerequisites:
+  affinity: "A. sniper 1"
+stats:
+  damage: "2d8"
+  attack_type: "attaque à distance (PRE)"
+  defense_type: "parade (FOR)"
+special_effects:
+  - "X2 au jet de précision"
+  - "1/20 de chance de toucher à moins de 10 mètres"
+description: "Chef-d'œuvre de l'ingénierie balistique impériale, ce fusil de précision à canon long est équipé d'optiques de visiée avancées et d'un système de stabilisation gyroscopique. Conçu pour éliminer des cibles à des distances où l'ennemi ne peut même pas soupçonner la présence du tireur. Son poids et sa longueur considérables le rendent cependant totalement inadapté aux engagements rapprochés, nécessitant un positionnement tactique réfléchi."

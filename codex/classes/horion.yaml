@@ -1,0 +1,62 @@
+name: "Horion"
+description: "Ayant fait les meilleures écoles militaires, les horions sont de redoutables combattants. Entrainés à affronter tout type d'ennemies sur une grande variété de terrain, ils sont spécialisés dans les guérillas. Avec leurs techniques remarquables et leur stratégie de « drop & go », ils sont capables de reprendre le contrôle des zones même écrasé par le nombre. Souvent confondus avec les soldats d'infanterie, c'est une erreur rarement commise deux fois, si toutefois ils vous laissent cette occasion."
+
+image: "https://www.pinterest.fr/pin/398005685813511461/"
+
+# Statistiques de base
+base_stats:
+  health: 50
+  speed: 6
+
+# Système de flux
+flux_system:
+  reserve: 5
+  per_turn: 2
+  recovery: 1
+
+# Affinités
+affinities:
+  distance: 8
+  melee: 2
+  schools:
+    balistique: 4
+  types:
+    arme: 6
+    amelioration: 2
+
+# Statistiques
+stats:
+  force: 10
+  dexterite: 8
+  constitution: 12
+  intelligence: 11
+  perception: 12
+  precision: 16
+  charisme: 11
+
+# Équipements
+equipment:
+  weapons:
+    - "Fusil mitrailleur"
+  armor:
+    - "Exosquelette de combat"
+  consumables:
+    - name: "Kit de soins"
+      quantity: 1
+    - name: "Grenade"
+      quantity: 1
+
+# Compétences
+skills:
+  - "Vétéran"
+  - "Tacticien"
+
+# Sorts
+spells:
+  - "Tir à la tête"
+  - "Tir de barrage"
+  - "Lecture des mouvements"
+  - "Roulade"
+
+# Guide de jeu
+gameplay_guide: "Le horion est une classe capable d'infliger des dégâts sur la durée tout en restant en sécurité. Choisir correctement ses cibles et dialoguer du plan de combat avec ses alliés est ce qui permet au horion de se distinguer. Le placement du horion lors des combats est indispensable afin de tirer le meilleur de tous les outils à votre disposition."

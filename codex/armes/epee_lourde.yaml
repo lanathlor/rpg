@@ -1,0 +1,11 @@
+name: "Épée lourde"
+category: "Arme de corps à corps"
+subcategory: "2 mains"
+type: "épées"
+prerequisites:
+  affinity: "A. CAC 6"
+stats:
+  damage: "1d12"
+  attack_type: "attaque lourde (FOR)"
+  defense_type: "parade (FOR)"
+description: "Grande épée à deux mains nécessitant une grande maîtrise. Dégâts élevés mais maniement difficile réservé aux experts."

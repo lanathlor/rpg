@@ -1,0 +1,32 @@
+spell_series: Boule de feu
+description_base: "Une orbe de flammes concentrées se forme dans la paume du mage avant d'être projetée vers sa cible. À l'impact, cette sphère incandescente explose en une déflagration aveuglante, incinérant tout dans un rayon conquérant et laissant derrière elle l'odeur âcre de la magie de destruction."
+levels:
+  - level: "1"
+    name: Boule de feu
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[feu]: 4"
+        type_requirement: "A.Type[destruction]: 4"
+        mixed_requirement: "A.École[feu] + A.Type[destruction]: 6"
+    conditions:
+      special: aucune
+      flux_cost: 8
+    effects:
+      damage: 2d6+3 feu
+      area_damage: 1d4 feu dans un rayon de 3m
+      special: Zone d'effet
+  - level: "2"
+    name: Boule de feu II
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[feu]: 5"
+        type_requirement: "A.Type[destruction]: 5"
+        mixed_requirement: "A.École[feu] + A.Type[destruction]: 8"
+    conditions:
+      intelligence_required: 17
+      flux_cost: 12
+    description: "Version amplifiée et raffinée du sort de base, cette orbe enflammée pulse d'énergie destructrice avant de frapper sa cible. L'explosion résultante déploie des flammes si intenses qu'elles adhèrent à la chair et aux matériaux, continuant de consumer bien après l'impact initial."
+    effects:
+      damage: 2d8+4 feu et « brûlure II » à la cible
+school: feu
+type: destruction

@@ -1,0 +1,66 @@
+name: "Spectre"
+description: "Ombres silencieuses de l'Empire, les spectres opèrent là où d'autres n'oseraient s'aventurer. Maîtres absolus du tir de précision et de l'infiltration, ils éliminent leurs cibles avec une précision chirurgicale depuis des positions que l'ennemi ne soupçonne même pas. Leur entraînement rigoureux combine techniques de camouflage, maîtrise balistique et endurance mentale pour créer des soldats capables d'opérer seuls derrière les lignes ennemies pendant des semaines. Chaque tir qu'ils effectuent peut changer le cours d'une bataille, chaque information qu'ils rapportent peut sauver des milliers de vies impériales."
+
+image: "https://www.pinterest.fr/pin/spectre-image/"
+
+# Statistiques de base
+base_stats:
+  health: 40
+  speed: 5
+
+# Système de flux
+flux_system:
+  reserve: 8
+  per_turn: 3
+  recovery: 1
+
+# Affinités
+affinities:
+  distance: 6
+  melee: 4
+  sniper: 2
+  schools:
+    balistique: 4
+    electricite: 2
+    arcane: 2
+  types:
+    arme: 6
+    amelioration: 2
+
+# Statistiques
+stats:
+  force: 8
+  dexterite: 14
+  constitution: 9
+  intelligence: 10
+  perception: 11
+  precision: 14
+  charisme: 10
+
+# Équipements
+equipment:
+  weapons:
+    - "Fusil de sniper"
+    - "Épée courte"
+  armor:
+    - "Exosquelette stabilisateur"
+  consumables:
+    - name: "Kit de soins"
+      quantity: 1
+    - name: "Flash"
+      quantity: 1
+
+# Compétences
+skills:
+  - "Œil d'aigle"
+  - "Rôdeur"
+
+# Sorts
+spells:
+  - "Tir à la tête"
+  - "Tir surchargé"
+  - "Charge"
+  - "Camouflage"
+
+# Guide de jeu
+gameplay_guide: "Le spectre est une classe se jouant plus tirant un grand avantage de son fusil de sniper. Il se joue plus à distance, parfois à l'écart du groupe pour pouvoir lui offrir un soutien maximal. Faites attention à ne pas perdre les ennemis de vue au risque de vous faire isoler."

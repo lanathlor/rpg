@@ -1,0 +1,18 @@
+spell_series: Lame de foudre
+description_base: Enrobe l'arme d'électricité pour la prochaine attaque.
+levels:
+  - level: "1"
+    name: Lame de foudre
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[électricité]: 3"
+        type_requirement: "A.Type[arme]: 3"
+        mixed_requirement: "A.École[électricité] + A.Type[arme]: 4"
+    conditions:
+      special: aucune
+      flux_cost: 5
+    effects:
+      damage: 1d6+2 + 1d4 électricité
+      special: Dégâts supplémentaires d'électricité
+school: électricité
+type: arme

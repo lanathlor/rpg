@@ -1,0 +1,9 @@
+name: "Fléchette anti-magie"
+category: "Consommable"
+subcategory: "tactique"
+effect:
+  spell_block: "Empêche une cible de lancer des sorts"
+  exception: "Hors amélioration d'attaque et attaque d'arme"
+  duration: "2 tours"
+  usage: "action d'attaque"
+description: "Fléchette spécialisée contenant des inhibiteurs magiques pour neutraliser temporairement les lanceurs de sorts."

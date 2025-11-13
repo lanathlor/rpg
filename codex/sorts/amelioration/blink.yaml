@@ -1,0 +1,29 @@
+spell_series: Blink
+description_base: Vous vous téléportez dans la direction choisie sans pouvoir être bloquée. Ne déclenche pas de jet d'opportunité.
+levels:
+  - level: "1"
+    name: Blink
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[arcane]: 3"
+        type_requirement: "A.Type[amélioration]: 3"
+        mixed_requirement: "A.École[arcane] + A.Type[amélioration]: 5"
+    conditions:
+      intelligence_required: 18
+      flux_cost: 8
+    effects:
+      teleport: Téléport a 1d4 + vitesse mètre
+  - level: "2"
+    name: Blink II
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[arcane]: 4"
+        type_requirement: "A.Type[amélioration]: 4"
+        mixed_requirement: "A.École[arcane] + A.Type[amélioration]: 6"
+    conditions:
+      intelligence_required: 16
+      flux_cost: 10
+    effects:
+      teleport: Téléport a 1d4 + 2 + vitesse mètre
+school: arcane
+type: amélioration

@@ -1,0 +1,19 @@
+spell_series: Magnétisation
+description_base: Utilise les forces magnétiques pour se propulser rapidement.
+levels:
+  - level: "1"
+    name: Magnétisation
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[magnétique]: 4"
+        type_requirement: "A.Type[altération]: 4"
+        mixed_requirement: "A.École[magnétique] + A.Type[altération]: 6"
+    conditions:
+      special: aucune
+      flux_cost: 7
+    effects:
+      movement: Déplacement instantané de 10m
+      special: Peut traverser les objets métalliques
+    duration: instantané
+school: magnétique
+type: altération

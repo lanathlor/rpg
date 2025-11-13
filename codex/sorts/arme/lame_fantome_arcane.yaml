@@ -1,0 +1,16 @@
+spell_series: Lame fantôme
+description_base: Votre lame devient fantomatique, traversant tous les objets jusqu'à sa cible.
+levels:
+  - level: "1"
+    name: Lame fantôme
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[arcane]: 3"
+        type_requirement: "A.Type[arme]: 3"
+        mixed_requirement: "A.École[arcane] + A.Type[arme]: 4"
+    conditions:
+      flux_cost: 6
+    effects:
+      attack_bonus: La prochaine attaque physique est inévitable
+school: arcane
+type: arme

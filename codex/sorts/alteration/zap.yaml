@@ -1,0 +1,18 @@
+spell_series: Zap
+school: électricité
+type: altération
+description_base: Paralyse la cible avec un choc électrique.
+levels:
+  - level: "1"
+    name: Zap
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[électricité]: 3"
+        type_requirement: "A.Type[altération]: 3"
+        mixed_requirement: "A.École[électricité] + A.Type[altération]: 4"
+    conditions:
+      intelligence_required: 16
+      flux_cost: 5
+    effects:
+      status: La cible est paralysée
+    duration: 1 tour

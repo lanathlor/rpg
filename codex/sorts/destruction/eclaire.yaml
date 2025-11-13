@@ -1,0 +1,18 @@
+spell_series: Éclaire
+description_base: Projette un éclair électrique sur la cible.
+levels:
+  - level: "1"
+    name: Éclaire
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[électricité]: 3"
+        type_requirement: "A.Type[destruction]: 3"
+        mixed_requirement: "A.École[électricité] + A.Type[destruction]: 4"
+    conditions:
+      special: aucune
+      flux_cost: 6
+    effects:
+      damage: 1d8+2 électricité
+      special: Peut chaîner sur une cible proche
+school: électricité
+type: destruction

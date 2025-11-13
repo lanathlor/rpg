@@ -1,0 +1,31 @@
+spell_series: Flash
+description_base: Crée une sphère de lumière aveugle une cible.
+levels:
+  - level: "1"
+    name: Flash
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[lumière]: 2"
+        type_requirement: "A.Type[altération]: 2"
+        mixed_requirement: "A.École[lumière] + A.Type[altération]: 3"
+    conditions:
+      intelligence_required: 14
+      flux_cost: 4
+    effects:
+      status: La cible ne peut plus agir ni se défendre
+    duration: 1 tour
+  - level: "2"
+    name: Flash II
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[lumière]: 3"
+        type_requirement: "A.Type[altération]: 3"
+        mixed_requirement: "A.École[lumière] + A.Type[altération]: 5"
+    conditions:
+      intelligence_required: 14
+      flux_cost: 7
+    effects:
+      status: La cible ne peut plus agir ni se défendre
+    duration: 2 tours
+school: lumière
+type: altération

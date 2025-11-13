@@ -1,0 +1,6 @@
+name: "Œil d'aigle"
+category: "Compétence"
+subcategory: "précision"
+effect:
+  stat_bonus: "+1 PRE"
+description: "Acuité visuelle exceptionnelle développée par l'entraînement au tir longue distance."

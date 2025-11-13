@@ -1,0 +1,7 @@
+name: "Hackeur"
+category: "Compétence"
+subcategory: "technique"
+effect:
+  tech_bonus: "Permet d'utiliser les technologies avec une plus grande chance de succès"
+  repair_ability: "Permet de réparer les dégâts électriques légers"
+description: "Expertise en systèmes informatiques et électroniques permettant le piratage et la manipulation de technologies."

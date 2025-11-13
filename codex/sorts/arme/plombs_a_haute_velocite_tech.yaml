@@ -1,0 +1,16 @@
+spell_series: Plombs à haute vélocité
+description_base: Votre fusil tire les plombs de votre prochaine attaque avec une vélocité accrue.
+levels:
+  - level: "1"
+    name: Plombs à haute vélocité
+    prerequisites:
+      affinities:
+        - "A. fusil à pompe: 2"
+      equipment:
+        - Fusil à pompe
+    conditions:
+      recharge: 50 sec
+    effects:
+      damage_bonus: +2 à chacun de vos dés lors de votre prochaine attaque avec un fusil à pompe
+school: balistique
+type: arme

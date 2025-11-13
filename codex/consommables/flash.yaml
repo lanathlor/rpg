@@ -1,0 +1,9 @@
+name: "Flash"
+category: "Consommable"
+subcategory: "tactique"
+effect:
+  blind_effect: "Aveugle les personnages proches du centre d'explosion"
+  duration: "Jusqu'à leur tour"
+  area: "Zone autour du centre d'explosion"
+  usage: "action d'attaque"
+description: "Grenade aveuglante produisant un flash intense pour désorienter temporairement les ennemis."

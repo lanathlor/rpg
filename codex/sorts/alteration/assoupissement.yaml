@@ -1,0 +1,18 @@
+spell_series: Assoupissement
+description_base: Endors la cible. Elle ne peut plus agir et ce réveil à la fin de l'effet ou en cas de dégât.
+levels:
+  - level: "1"
+    name: Assoupissement
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[arcane]: 4"
+        type_requirement: "A.Type[altération]: 4"
+        mixed_requirement: "A.École[arcane] + A.Type[altération]: 6"
+    conditions:
+      intelligence_required: 18
+      flux_cost: 10
+    effects:
+      status: La cible est incapacitée
+    duration: 1d4
+school: arcane
+type: altération

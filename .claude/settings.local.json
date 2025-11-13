@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir:*)",
+      "Bash(find:*)",
+      "Bash(while read base)",
+      "Bash(do echo \"Base: $base\")",
+      "Bash(done)",
+      "Bash(cat:*)",
+      "Bash(node:*)",
+      "Bash(npm install:*)",
+      "Bash(xargs:*)",
+      "Bash(for:*)",
+      "Bash(do sed -i 's/school: physique/school: martial/g' \"$file\")",
+      "Bash(echo \"Updated: $file\")",
+      "Bash(do sed -i 's/type: déplacement/type: altération/g' \"$file\")",
+      "Bash(do sed -i 's/type: protection/type: amélioration/g' \"$file\")",
+      "Bash(do sed -i 's/type: affliction/type: altération/g' \"$file\")",
+      "Bash(do)",
+      "Bash(if [ -f \"$file\" ])",
+      "Bash(grep:*)",
+      "Bash(then)",
+      "Bash(echo \"Processing $file\")",
+      "Bash(fi)",
+      "Bash(do echo \"=== $file ===\")",
+      "Bash(while read file)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

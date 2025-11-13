@@ -1,0 +1,31 @@
+spell_series: Void
+description_base: Lance une EMP à faible zone au point ciblé.
+levels:
+  - level: "1"
+    name: Void
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[magnétique]: 3"
+        type_requirement: "A.Type[altération]: 3"
+        mixed_requirement: "A.École[magnétique] + A.Type[altération]: 4"
+    conditions:
+      intelligence_required: 16
+      flux_cost: 4
+    effects:
+      emp: Désactive les bonus des exosquelettes et stop tous les appareils électriques d'une cible
+    duration: 1 tour
+  - level: "2"
+    name: Void II
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[magnétique]: 4"
+        type_requirement: "A.Type[altération]: 4"
+        mixed_requirement: "A.École[magnétique] + A.Type[altération]: 6"
+    conditions:
+      intelligence_required: 16
+      flux_cost: 6
+    effects:
+      emp: Désactive les bonus des exosquelettes et stop tous les appareils électriques de 2 cibles
+    duration: 1 tour
+school: magnétique
+type: altération

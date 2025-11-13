@@ -1,0 +1,18 @@
+spell_series: Flammèche
+description_base: "Une gerbe de flammes miniature jaillit du bout des doigts du lanceur, fusant vers sa cible dans un crépitement lumineux. Cette manifestation élémentaire basique du feu arcanique peut enflammer les matériaux combustibles au contact et marquer la chair de brûlures douloureuses."
+levels:
+  - level: "1"
+    name: Flammèche
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[feu]: 3"
+        type_requirement: "A.Type[destruction]: 3"
+        mixed_requirement: "A.École[feu] + A.Type[destruction]: 4"
+    conditions:
+      special: aucune
+      flux_cost: 3
+    effects:
+      damage: 1d4+1 feu
+      burning_chance: 25% de chance d'enflammer (1d4 par tour, 2 tours)
+school: feu
+type: destruction

@@ -1,0 +1,14 @@
+spell_series: Tir à la tête A
+description_base: Vise la tête de la cible avec une précision hors du commun.
+levels:
+  - level: '2'
+    name: Tir à la tête A
+    prerequisites:
+      affinities:
+        - 'A. dist: 16'
+    conditions:
+      recharge: aucun
+    effects:
+      damage: Dégâts d'arme maximum
+school: martial
+type: arme

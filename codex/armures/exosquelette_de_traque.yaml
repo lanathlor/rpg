@@ -1,0 +1,10 @@
+name: "Exosquelette de traque"
+category: "Armure"
+subcategory: "exosquelette"
+prerequisites:
+  stat: "DEX 14"
+stats:
+  special_ability: "Choisis une cible. +1 au jet d'attaque contre cette cible"
+  cooldown: "Peut changer de cible tous les 4 tours"
+  action_required: "Nécessite une manœuvre pour changer de cible"
+description: "Exosquelette spécialisé pour la chasse et le tracking, permettant de verrouiller sur une cible spécifique."

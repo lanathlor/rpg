@@ -1,0 +1,16 @@
+name: "Fusil à pompe surchargé"
+category: "Arme à distance"
+subcategory: "arme à deux mains"
+type: "fusil à pompe"
+prerequisites:
+  affinity: "A. fusil à pompe 2"
+stats:
+  damage: "4d4 (ou moins de dés)"
+  attack_type: "attaque à distance (PRE)"
+  defense_type: "esquive (DEX)"
+  special: "attaque multiple"
+special_effects:
+  - "Vous reculez d'un mètre pour chaque dé lancé dans la direction opposée de la cible"
+  - "S'applique aussi aux sorts d'attaque d'arme"
+  - "Score d'attaque divisé par 2"
+description: "Fusil à pompe modifié pour des dégâts maximaux. Le recul important nécessite un positionnement tactique."

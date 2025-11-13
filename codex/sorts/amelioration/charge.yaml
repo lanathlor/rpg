@@ -1,0 +1,15 @@
+spell_series: Charge
+description_base: Charge la cible avec force.
+levels:
+  - level: "1"
+    name: Charge
+    prerequisites:
+      affinities:
+        - "A. CAC: 4"
+    conditions:
+      target_range: cible à porter (1d8 + vitesse)
+      recharge: instantané
+    effects:
+      damage: Vous vous déplacez jusqu'à la cible et lui infligez 1d4 dégâts
+school: martial
+type: amélioration

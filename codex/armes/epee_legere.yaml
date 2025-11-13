@@ -1,0 +1,12 @@
+name: "Épée légère"
+category: "Arme de corps à corps"
+subcategory: "1 main"
+type: "épées"
+prerequisites:
+  affinity: "A. CAC 2"
+stats:
+  damage: "1d8"
+  off_hand_damage: "1d4"
+  attack_type: "attaque rapide (DEX)"
+  defense_type: "esquive (DEX)"
+description: "Épée légère et équilibrée, idéale pour les combattants privilégiant la vitesse à la puissance brute."

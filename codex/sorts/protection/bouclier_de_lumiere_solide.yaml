@@ -1,0 +1,20 @@
+spell_series: Bouclier de lumière solide
+description_base: Crée un bouclier de lumière solidifiée pour bloquer les attaques.
+levels:
+  - level: "1"
+    name: Bouclier de lumière solide
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[lumière]: 4"
+        type_requirement: "A.Type[amélioration]: 4"
+        mixed_requirement: "A.École[lumière] + A.Type[amélioration]: 6"
+    conditions:
+      special: aucune
+      flux_cost: 8
+    effects:
+      defense: +4 en défense
+      damage_reduction: Réduit les dégâts de 3 points
+      special: Peut bloquer les attaques énergétiques
+    duration: 5 tours
+school: lumière
+type: amélioration

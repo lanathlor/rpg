@@ -1,0 +1,62 @@
+name: "Taliste"
+description: "Véritables maîtres des territoires sauvages, les talistes sont les yeux et les oreilles de l'Empire dans les régions inexplorées. Formés dès l'enfance à lire les signes de la nature et à communier avec les écosystèmes les plus hostiles, ils possèdent une compréhension intuitive du monde vivant que peu peuvent égaler. Leurs sens affinés leur permettent de détecter les moindres indices de présence ennemie, tandis que leur magie bio-arcanique leur offre la capacité de se fondre dans leur environnement. Éclaireurs incomparables et guides infaillibles, ils ouvrent la voie à la conquête impériale des nouveaux mondes."
+
+image: "https://www.pinterest.fr/pin/taliste-image/"
+
+# Statistiques de base
+base_stats:
+  health: 35
+  speed: 8
+
+# Système de flux
+flux_system:
+  reserve: 20
+  per_turn: 5
+  recovery: 4
+
+# Affinités
+affinities:
+  distance: 2
+  melee: 0
+  schools:
+    biomagie: 4
+    arcane: 3
+  types:
+    alteration: 4
+    amelioration: 3
+
+# Statistiques
+stats:
+  force: 6
+  dexterite: 8
+  constitution: 9
+  intelligence: 14
+  perception: 18
+  precision: 10
+  charisme: 12
+
+# Équipements
+equipment:
+  weapons:
+    - "Pistolet"
+  armor:
+    - "Tenue de survie"
+  consumables:
+    - name: "Kit de soins"
+      quantity: 2
+
+# Compétences
+skills:
+  - "Traque"
+  - "Expert des terrains"
+  - "Compréhension de la nature"
+
+# Sorts
+spells:
+  - "Lecture des mouvements"
+  - "Assoupissement"
+  - "Blink"
+  - "Camouflage"
+
+# Guide de jeu
+gameplay_guide: "Le taliste est la classe de support ayant la plus grande versatilité mais le moins d'efficacité en combat. Il est donc nécessaire pour lui d'être bien entourer et d'éviter les combats. Un taliste attentif au roleplay pourra être d'une grande utilité pour son groupe."

@@ -1,0 +1,61 @@
+name: "Maître d'armes"
+description: "Les maîtres d'armes incarnent le fer-de-lance de l'armée impériale. Étant une des plus anciennes écoles martiales de l'humanité, les maîtres d'armes on put prouver leurs valeurs sur de nombreux champs de bataille et sont entrés dans la légende. Formant souvent la première ligne, rares sont les maîtres d'armes qui ont l'occasion d'être appelés des vétérans. Mais ces derniers sont, à raison, craints par tous et vus comme le bras de Blanc au sein de l'armée."
+
+image: "https://www.pinterest.fr/pin/514536326159247012/"
+
+# Statistiques de base
+base_stats:
+  health: 65
+  speed: 5
+
+# Système de flux
+flux_system:
+  reserve: 8
+  per_turn: 3
+  recovery: 1
+
+# Affinités
+affinities:
+  distance: 0
+  melee: 8
+  schools:
+    martial: 6
+    arcane: 2
+  types:
+    arme: 6
+    amelioration: 2
+
+# Statistiques
+stats:
+  force: 16
+  dexterite: 12
+  constitution: 14
+  intelligence: 10
+  perception: 8
+  precision: 10
+  charisme: 12
+
+# Équipements
+equipment:
+  weapons:
+    - "Épée lourde"
+  armor:
+    - "Armure de plate lourde"
+  consumables:
+    - name: "Kit de soins"
+      quantity: 2
+
+# Compétences
+skills:
+  - "Guerrier"
+  - "Tacticien"
+
+# Sorts
+spells:
+  - "Attaque de force"
+  - "Fendre"
+  - "Lame fantôme"
+  - "Charge"
+
+# Guide de jeu
+gameplay_guide: "Le maître d'armes est une classe à sens unique : faible en dehors des combats, il brille au milieu de la mêlée. Mais il ne faut pas fendre sur le premier ennemi à vue. Vous serez le garde-fou en cas de mauvaise surprise."

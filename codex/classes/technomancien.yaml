@@ -1,0 +1,63 @@
+name: "Technomancien"
+description: "Pont entre l'arcane et la technologie, les technomanciens représentent l'évolution ultime de l'ingénierie impériale. Formés dans les prestigieux instituts doubles de l'Empire, ils maîtrisent autant les circuits électriques que les flux magiques, créant des synergies impossibles pour un esprit non initié. Leurs implants neuraux leur permettent d'interfacer directement avec les systèmes informatiques, tandis que leur compréhension des énergies arcaniques transforme chaque équipement en instrument de guerre. Sur le terrain, ils sement la confusion dans les rangs ennemis, corromptent les données hostiles et retournent les technologies adverses contre leurs anciens maîtres. Imprévisibles et polyvalents, ils incarnent la supériorité technologique de l'Empire."
+
+image: "https://www.pinterest.fr/pin/492299802990469266/?lp=true"
+
+# Statistiques de base
+base_stats:
+  health: 30
+  speed: 6
+
+# Système de flux
+flux_system:
+  reserve: 20
+  per_turn: 5
+  recovery: 3
+
+# Affinités
+affinities:
+  distance: 2
+  melee: 0
+  schools:
+    electricite: 4
+  types:
+    alteration: 4
+    amelioration: 2
+
+# Statistiques
+stats:
+  force: 9
+  dexterite: 11
+  constitution: 10
+  intelligence: 14
+  perception: 12
+  precision: 8
+  charisme: 14
+
+# Équipements
+equipment:
+  weapons:
+    - "Pistolet"
+  armor:
+    - "Implant neural militaire"
+    - "Drone de combat"
+  consumables:
+    - name: "Kit de soins"
+      quantity: 1
+    - name: "Bombe IEM"
+      quantity: 1
+
+# Compétences
+skills:
+  - "Ingénieur"
+  - "Hackeur"
+
+# Sorts
+spells:
+  - "Brouillage"
+  - "Void"
+  - "Vol de données"
+  - "Camouflage"
+
+# Guide de jeu
+gameplay_guide: "Le technomancien est une classe de support pouvant réduire la force de combat des cibles et casser les tactiques mises en place pendant que vous utilisez la vôtre. Le technomancien a une efficacité incontestable hors des combats, pouvant ouvrir de nouvelles routes et limiter les risques de glissade du groupe. Gardez à l'esprit vos sorts, même en dehors des combats."

@@ -1,0 +1,8 @@
+name: "Exosquelette de vitesse"
+category: "Armure"
+subcategory: "exosquelette"
+prerequisites:
+  stat: "DEX 12"
+stats:
+  speed_bonus: "+2 vitesse"
+description: "Exosquelette léger optimisé pour la mobilité et les déplacements rapides."

@@ -1,0 +1,7 @@
+name: "Charismatique"
+category: "Compétence"
+subcategory: "social"
+effect:
+  stat_bonus: "+1 CHA"
+  threat_attraction: "Augmente les chances d'être pris pour cible"
+description: "Présence naturelle et autorité qui inspire mais attire aussi l'attention des ennemis qui voient la menace potentielle."

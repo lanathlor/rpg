@@ -1,0 +1,18 @@
+spell_series: Intervention
+description_base: Intervient rapidement pour protéger un allié en danger.
+levels:
+  - level: "1"
+    name: Intervention
+    prerequisites:
+      competences:
+        - Gardien
+    conditions:
+      special: aucune
+      recharge: 30 sec
+    effects:
+      protection: Prend les dégâts à la place d'un allié
+      movement: Déplacement instantané vers l'allié
+      special: Réaction défensive
+    duration: instantané
+school: martial
+type: amélioration

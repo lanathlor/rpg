@@ -1,0 +1,16 @@
+spell_series: Tir à la tête
+description_base: Vise précisément la tête de l'adversaire pour un tir critique.
+levels:
+  - level: '2'
+    name: Tir à la tête
+    prerequisites:
+      affinities:
+        - 'A. balistique: 8'
+    conditions:
+      perception_required: 16
+      recharge: 45 sec
+    effects:
+      damage: +2d8+4 aux dégâts d'arme
+      special: Critique automatique si touché
+school: balistique
+type: arme

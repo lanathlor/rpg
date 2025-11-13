@@ -1,0 +1,6 @@
+name: "Guerrier"
+category: "Compétence"
+subcategory: "combat"
+effect:
+  multiple_attacks: "Peut attaquer 2 fois en 1 tour"
+description: "Maîtrise martiale avancée permettant d'enchaîner plusieurs attaques dans un même tour de combat."

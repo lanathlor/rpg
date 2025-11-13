@@ -1,0 +1,6 @@
+name: "Course"
+category: "Compétence"
+subcategory: "mobilité"
+effect:
+  movement_bonus: "Peut se déplacer deux fois en un tour"
+description: "Entraînement physique permettant de couvrir de grandes distances rapidement, même en situation de combat."

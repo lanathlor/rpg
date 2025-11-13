@@ -1,0 +1,6 @@
+name: "Vétéran"
+category: "Compétence"
+subcategory: "tactique"
+effect:
+  identification: "Reconnaît la classe des ennemis"
+description: "Expérience de combat permettant d'identifier rapidement les capacités et spécialisations des adversaires."

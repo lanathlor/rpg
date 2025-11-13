@@ -1,0 +1,12 @@
+name: "Épée courte"
+category: "Arme de corps à corps"
+subcategory: "1 main"
+type: "épées"
+prerequisites:
+  affinity: "A. CAC 1"
+stats:
+  damage: "1d6"
+  off_hand_damage: "1d4"
+  attack_type: "attaque rapide (DEX)"
+  defense_type: "esquive (DEX)"
+description: "Épée courte et maniable, idéale comme arme secondaire ou pour les combattants privilégiant la discrétion."

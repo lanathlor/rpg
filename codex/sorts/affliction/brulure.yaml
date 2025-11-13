@@ -1,0 +1,27 @@
+spell_series: Brûlure
+description_base: Brule la chair de la personne touchée.
+levels:
+  - level: "1"
+    name: Brûlure
+    prerequisites:
+      note: Ne peut être incanté par un personnage
+    conditions:
+      activation: activé par un sort
+      recharge: instantané
+    effects:
+      damage: 1d4 à chaque tour
+      dice_rolled_once: true
+    duration: 3 tours
+  - level: "2"
+    name: Brûlure II
+    prerequisites:
+      note: Ne peut être incanté par un personnage
+    conditions:
+      activation: activé par un sort
+      recharge: instantané
+    effects:
+      damage: 1d4 + 3 à chaque tour
+      dice_rolled_once: true
+    duration: 3 tours
+school: feu
+type: altération

@@ -1,0 +1,25 @@
+spell_series: Attaque multiple
+description_base: Enchaine avec virtuosité les attaques autour de soi.
+levels:
+  - level: "1"
+    name: Attaque multiple
+    prerequisites:
+      affinities:
+        - "A. CAC: 6"
+    conditions:
+      dexterity_required: 16
+      recharge: 60 sec
+    effects:
+      multiple_attack: Lance une copie de la prochaine attaque
+  - level: "2"
+    name: Attaque multiple II
+    prerequisites:
+      affinities:
+        - "A. CAC: 8"
+    conditions:
+      dexterity_required: 16
+      recharge: 40 sec
+    effects:
+      multiple_attack: Lance une copie de la prochaine attaque
+school: martial
+type: arme

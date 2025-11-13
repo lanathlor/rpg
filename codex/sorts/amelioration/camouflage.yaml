@@ -1,0 +1,19 @@
+spell_series: Camouflage
+description_base: "Les systèmes de camouflage intégrés à l'exosquelette analysent l'environnement et adaptent instantanément leur pigmentation pour se fondre parfaitement dans le décor. Combiné à la maîtrise du mouvement furtif de l'utilisateur, cette technologie permet de disparaître complètement aux yeux des adversaires, créant l'illusion d'une disparition surnaturelle."
+levels:
+  - level: "1"
+    name: Camouflage
+    prerequisites:
+      armure: Exosquelette
+      competences:
+        - Rôdeur
+    conditions:
+      dexterity_required: 16
+      recharge: 80 sec
+    effects:
+      success: vous êtes camouflée automatiquement pendant 3 tours
+      failure: "-1 aux jets d'attaques contre vous"
+      automatic_success: si personne ne vous voit
+    notes: Se sort est considéré comme une manœuvre
+school: electricite
+type: amélioration

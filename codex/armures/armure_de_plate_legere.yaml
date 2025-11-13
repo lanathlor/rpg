@@ -1,0 +1,8 @@
+name: "Armure de plate légère"
+category: "Armure"
+subcategory: "plate"
+prerequisites:
+  stat: "FOR 12"
+stats:
+  protection_bonus: "+2 scores de protection à distance"
+description: "Armure de plaques métalliques offrant une bonne protection contre les projectiles tout en conservant une mobilité acceptable."

@@ -1,0 +1,16 @@
+spell_series: Cartouche de shrapnel augmentée
+description_base: Vous armez une cartouche disposant de plus de shrapnels.
+levels:
+  - level: "1"
+    name: Cartouche de shrapnel augmentée
+    prerequisites:
+      affinities:
+        - "A. fusil à pompe: 2"
+      equipment:
+        - Fusil à pompe
+    conditions:
+      recharge: 80 sec
+    effects:
+      damage_bonus: Rajoutez 1d8 d4 à votre prochaine attaque
+school: balistique
+type: arme

@@ -1,0 +1,3874 @@
+Player Handbook
+
+1
+
+Table des matières
+INTRODUCTION
+
+4
+
+1. Abstract
+
+4
+
+2. A propos
+
+4
+
+BASE DES RÈGLES
+
+5
+
+1. Emprunts
+
+5
+
+2. Caractéristiques
+
+5
+
+3. Statistiques
+
+5
+
+●
+
+Force (For)
+
+5
+
+●
+
+Dextérité (Dex)
+
+6
+
+●
+
+Intelligence (Int)
+
+6
+
+●
+
+Perception (Per)
+
+6
+
+●
+
+Précision (Pre)
+
+6
+
+●
+
+Charisme (Cha)
+
+6
+
+4. Compétence
+
+6
+
+5. Sorts
+
+6
+
+6. Affinité
+
+7
+
+●
+
+Affinité avec les armes de mêlée (A. CAC)
+
+7
+
+●
+
+Affinité avec les armes à distances (A. dist)
+
+7
+
+●
+
+Affinité avec la magie (A. mag)
+
+7
+
+COMBAT
+
+9
+
+●
+
+Début du combat
+
+9
+
+●
+
+Déroulement du tour
+
+9
+
+○
+
+Déplacement
+
+9
+
+○
+
+Attaque
+
+10
+
+○
+
+Maneuver
+
+12
+
+Fin du combat
+
+12
+
+●
+
+EN PARTIE
+
+13
+
+1. Méthode de jeu
+
+13
+
+○
+
+Perception
+
+13
+
+○
+
+Jet d’opportunité
+
+13
+
+○
+
+Jet de compétence
+
+13
+
+○
+
+Jet de sauvegarde
+
+14
+
+2. Jeu en équipe
+CLASSE
+
+14
+15
+
+2
+
+○
+
+Mage
+
+15
+
+○
+
+Mage de combat
+
+22
+
+○
+
+Tutélaire
+
+28
+
+○
+
+Sentinel
+
+33
+
+○
+
+Horion
+
+38
+
+○
+
+Spectre
+
+43
+
+○
+
+Chasseur
+
+49
+
+○
+
+Magus
+
+54
+
+○
+
+Taliste
+
+59
+
+○
+
+Technomancien
+
+60
+
+HISTOIRE
+
+66
+
+●
+
+Période clés :
+
+66
+
+●
+
+Résumer
+
+66
+
+1.
+
+Expansion
+
+66
+
+2.
+
+Guerre avec les Acéras
+
+66
+
+3.
+
+Au-delà
+
+66
+
+●
+
+Contexte militaire
+
+67
+
+●
+
+Contexte politique de l’empire
+
+67
+
+●
+
+Contexte économique et technologique
+
+68
+
+●
+
+Magie
+
+68
+
+LEXIQUE
+
+69
+
+Note de MJ aux joueurs
+
+71
+
+3
+
+INTRODUCTION
+1.
+
+Abstract
+
+Le but de ce document est de livrer les règles suffisantes à la préparation
+d’une partie par les joueurs. Les règles ne sont pas encore assez complètes pour
+animer une campagne dans sa totalité. Les différentes classes présentent sont
+pensées pour les scénarios « one-shot ». Les règles et données (classes, monstres,
+sorts) seront développées dans le futur et après avoir eu des tests satisfaisant avec
+les éléments en présence. Notez que certaines classes sont plus orientées pour le
+combat que d’autres et ont donc de meilleures attaques. Des incohérences entre le
+lore et les statistiques pures peuvent aussi être présentes, si des classes ne
+semblent pas incarner leur background au niveau de leurs statistiques (un mage
+avec plus de force que d’intelligence), cela relève d’une incohérence. Vous pouvez
+aussi proposer de nouvelles classes ou des modifications des classes existantes.
+
+À propos
+Le document est un « player handbook », présent dans de nombreux jeux
+de rôles papier. Il permet au joueur de préparer une partie, d’apprendre les règles
+en amont et peut être apporté à la table lors d’une partie pour que le joueur puisse
+réfléchir à sa prochaine action du point de vue des règles. Le document se limite
+donc volontairement au besoin des joueurs, il ne présente pas de scénarios ou de
+monstres, ceux-ci étant à la discrétion du MJ. Toutefois, une présentation de
+l’univers et de quelques personnages clés et moment fort seront donnés à la fin de
+ce papier.
+
+4
+
+BASE DES RÈGLES
+Cette partie a pour but de présenter les règles de bases. La plupart des joueurs seront
+donc déjà à l’aise avec les conceptions présentées, mais certains détails, soit dans les
+appellations, soit dans les calculs, seront présentés ici.
+
+1.
+
+Emprunts
+
+D&D5 et de Pathfinder ont servie de base pour la plupart des règles. Ces deux
+jeux étant des monolithes du jeu de rôle papier, il semblait approprié de les prendre
+comme point de départ. Ils ont tout de même dû être réadaptés pour coller à un
+univers de science-fiction. Call of Cthulhu a aussi servi de modèle dans sa capacité
+unique à permettre le roleplay.
+
+2. Caractéristiques
+Les caractéristiques de chaque personnage sont séparées en 4 catégories
+principales : statistiques, compétences, affinités, et modifiable ;
+-
+
+Statistiques : éléments principaux décrivant les capacités de votre personnage
+
+-
+
+Compétence : éléments secondaires présentant les talents propres à votre
+personnage, acquis au cours de sa formation et de son expérience sur le
+terrain
+
+-
+
+Affinité : la capacité que votre personnage a vis-à-vis du maniement de
+certaines armes.
+
+-
+
+Modifiable : les points de vie, armes, armures, sorts et vitesse de votre
+personnage. Plus d’information sera donnée dans la section sur les combats.
+
+3. Statistiques
+Les statistiques sont l’essence même des JDR. Accompagnées de lancers de
+dés, elles permettent d’attaquer en combat ou de réaliser des actions basiques en
+dehors. Elles sont importantes à prendre en compte pour se représenter le potentiel
+d’un personnage. Les statistiques de tout personnage sont :
+
+5
+
+● Force (For)
+La force physique de votre personnage. Permets de défoncer des
+portes, portées des armures ou objets lourds et de manier des armes
+lourdes.
+
+Dextérité (Dex)
+L’agilité de votre personnage. Permets de se déplacer dans des
+endroits exotiques, d’esquiver des coups et de manier des armes légères.
+
+Intelligence (Int)
+Les capacités de votre personnage à réfléchir. Permets d’effectuer des
+tâches complexes, de comprendre ce qu’il se passe et de lancer des sorts.
+
+Perception (Per)
+La capacité de votre personnage à ressentir les choses. Permets de voir
+les éléments importants et d’être alerté par les dangers.
+
+Précision (Pre)
+La capacité de votre personnage à être précis. Permets de lancer des
+objets au bon endroit et d’utiliser des armes à distances.
+
+Charisme (Cha)
+Le charisme de votre personnage. Permet d’intimider, persuader et
+convaincre, même les alliées.
+Les statistiques peuvent être temporairement modifié par des armes, armures,
+sorts, ou consommables. Penser à les prendre en compte.
+
+4. Compétence
+Les compétences de votre personnage sont ce qui le permet de se distinguer
+en dehors des combats. Elles permettent de réaliser des actions exceptionnelles,
+parfois même sans lancer de dés, la ou les autres personnages ne peuvent
+qu’échouer. Les compétences sont permanentes à votre personnage, elles peuvent
+être inutilisables à cause de blessures (l’acrobatie avec une jambe en moins c’est
+dur), mais elles seront de nouveau valides lors que les debuffs seront enlevés. De
+même, une compétence peut être temporairement gagnée grâce à un buff, mais
+une fois celui-ci parti, la compétence est « oubliée ». Il ne tient qu’à vous d’utiliser
+vos compétences au meilleur moment, ne les oublierais pas et faites preuve
+d’imagination, vous en serait souvent récompensé.
+Chaque compétence sera détaillée dans les sections relatives au personnage
+les possédant.
+
+6
+
+5. Sorts
+Les sorts sont le nerf de la guerre en combat. Le temps de base d’un tour
+étant de 10 seconds, un sort avec 10 seconds de recharge mettra 1 tour avant d’être
+réutilisable. Le même calcul s’applique pour un sort avec un temps de recharge.
+Certains sorts se placent dans des catégories spécial. Ainsi les sorts
+d’altération et d’amélioration n’ont en général pas de dégât, mais viennent modifier
+les statistiques des cibles. Les sorts d’amélioration d’attaque (et non les sorts
+d’attaque d’arme) ne consomment pas d’action et peuvent donc être accumulé
+avant une attaque ou un sort. Ces sorts ne sont pas consommés (et ne sont pas en
+recharge) tant que l’attaque ne touche pas.
+Certains sorts ne consomment pas d’action d’attaque, cela est spécifié dans
+la description du sort.
+Certains sorts ne disposent pas du champ de dégât. Ils ont alors un effet.
+D’autres sorts ont un champ de durée, décrivant le temps d’activité de
+
+leurs effets.
+Les affinités sont primordiales pour votre personnage et ses options de
+combat. Elles dictent les armes que votre personnage peut manipuler, ou non. Les
+armes disposent d’un prérequis d’affinité pour être maniées et seuls les personnages
+ayant une affinité égale ou supérieure peuvent les utiliser au combat. Les sorts
+suivent aussi cette règle, si votre personnage n’a pas l’affinité suffisante, il peut
+apprendre le sort, mais pas le lancer. Certaines affinités sont considérées comme
+basiques :
+
+● Affinité avec les armes de mêlée (A. CAC)
+Capacité de votre personnage à manier les armes blanches : épée, hache...
+
+Affinité avec les armes à distances (A. dist)
+Capacité de votre personnage à manier les armes à feu : pistolets, fusils…
+
+Affinité avec la magie (A. mag)
+Capacité de votre personnage à manier la magie.
+D’autres affinités sont considérées comme particulières et ne seront
+présentées que sur les personnages disposant de celle-ci (affinité avec les épées,
+affinité avec les snipers). Elles peuvent être ajoutées à l’affinité basique
+correspondant à la famille de l’arme au besoin. Une affinité basique ne peut pas
+être rajoutée à une affinité particulière. Les affinités particulières ne peuvent pas
+être additionnées entre elles pour valider une affinité particulière.
+Exemple :
+Si votre personnage dispose d’une affinité avec les armes de mêlée de 2 et
+une affinité avec les épées de 2 est :
+A. CAC : 2
+
+7
+
+A. épée : 2
+Il sera alors capable de manier les armes suivantes :
+Épée nécessitant A. CAC 4 (arme -> 2 mains -> épée). L’affinité avec les épées
+est prise en compte, car l’arme appartenait aux familles CAC et épée, les
+deux A. du personnage s’additionnent
+Épée nécessitant A. CAC 4 et A. épée 2. Comme au-dessus et l’affinité aux
+épées est complété.
+Mais le personnage sera incapable de manier :
+Hache nécessitant A. CAC 4. L’affinité avec les épées n’est pas prise en compte et
+A. CAC du personnage n’est que de 2.
+Épée nécessitant A. CAC 4 et A. épée 4. l’A. épée du personnage n’est que de 2 et
+l’A CAC ne put pas être rajouté dans ce sens.
+Lance nécessitant A. CAC 2 et A. lance 2. l’A. CAC du personnage est assez élevé,
+mais il ne dispose pas de l’A. lance pour cette arme.
+
+8
+
+COMBAT
+● Début du combat
+Au début de chaque combat, un jet d’initiative (d20) est lancé par tous les
+personnages. Le premier à jouer est le personnage avec le score le plus élevé
+(n’oubliez pas vos bonus d’initiative si vous en avez).
+Si des personnages on était pris en embuscade, ils passent toujours derniers.
+Dans ce cas, les jets d’initiative sont comparés entre eux s’ils sont plusieurs (note : il
+peut y avoir plusieurs « couches » d’embuscade. Les attaquants ont alors le buff
+« embuscade », leurs donnant +1 à leur prochain jet d’attaque.
+Seuls les personnages impliqués [dans la pièce] sont considérés en combat, si
+d’autres personnages devaient les rejoindre, le MJ détermine le temps nécessaire [en
+nombre de tours] avant que ces personnages viennent. S’ils étaient prévenus, les
+joueurs peuvent alors avoir un bonus « embuscade ».
+Certains personnages peuvent se camoufler ou disparaître en cours de combat.
+Ils sont alors considérés comme hors combat jusqu’à ce qu’il décide de venir. Les
+personnages camouflés et à porter d’action peuvent rejoindre le combat quand bon
+leur semble entre le tour de deux combattants. Ils gardent cette configuration de
+tours jusqu’à la fin du combat, ou s’ils se camouflent à nouveau. Lorsqu’une personne
+camouflée fait une action qui le fait remarquer, il perd son camouflage. Si le joueur ne
+prend aucune action offensive durant le tour de tous les personnages il pourra
+effectuer des actions librement à la fin du tour.
+Le placement de chaque joueur et ennemi seront énoncés clairement par le MJ
+au début du combat. Les ennemis camouflés ne seront pas placés, ni même
+annoncés. Les ennemis non camouflés, mais cachés par des obstacles seront désignés
+comme tels sans plus de précision).
+
+Déroulement du tour
+Durant vos tours de jeu, vous aurez de nombreux choix devant vous : attaquer,
+vous déplacer ou faire une manœuvre. Vous ne pouvez faire que 2 de ces actions et
+une fois chaque une (vous pouvez aussi ne rien faire). Cette partie expliquera ces 3
+actions. Prenaient le temps de la lire correctement pour pouvoir choisir vos
+personnages en connaissance de cause et pour les utiliser au mieux.
+
+Déplacement
+À chaque tour, votre personnage peut se replacer pour se mettre à
+couvert ou s’approcher des ennemies. La statistique de vitesse indique alors
+les nombres de mètres que votre personnage peut parcourir durant le tour en
+une fois, sur une ligne droite et en courant. Si votre personnage devait faire un
+
+9
+
+déplacement autre qu’une simple course, cette statistique serait réduite pour
+un souci de réalisme (diviser par deux si vous marchez). Des déplacements
+plus complexes peuvent nécessiter un jet de dés ou des compétences
+particuliers pour être effectués, la vitesse ne servant qu’à déterminer la
+distance parcourue (exemple : escalader est liée à un jet de dextérité ou est
+automatiquement réussi par les personnages acrobate).
+Si votre personnage est blessé, handicapé ou retenu par quelque
+chose, un jet, une compétence ou un échec automatique peuvent être
+nécessaires.
+Lors d’un déplacement, un jet d’opportunité peut être déclenché si un
+personnage s’éloigne d’un autre en étant dans sa portée d’attaque (peut être
+déclenché sur les alliés). L’adversaire peut alors porter une attaque en dehors
+de son tour de manière classique profitant d’un bonus +1 au jet d’attaque
+(voir la section sur l’attaque en dessous). Plus d’informations sur les jets
+d’opportunités dans la section des jets d’opportunité.
+Les personnages avec la compétence : « course » peuvent se déplacer
+deux fois en un tour.
+
+Attaque
+L’attaque est l’action principale permettant d’effectuer des dégâts aux
+adversaires. Elle se décompose en deux temps : jet d’attaque et jet de dégât.
+● Jet d’attaque
+Ce jet permet de savoir si l’attaque touche ou échoue. En
+fonction de l’arme utilisée, la statistique à prendre en compte
+n’est pas la même. En général :
+-
+
+Armes à deux mains ou lourdes : force
+
+Armes à une main ou légères : dextérité
+Armes à distance : précision
+Sort : intelligence
+La statistique à prendre en compte sera toujours
+spécifiée sur l’arme
+À cela, il faut ajouter à votre score un d4. Si la somme des deux
+est supérieure au score de défense du personnage ciblé, votre
+attaque touche et vous pouvez compter les dégâts.
+Pour les sorts : la valeur à atteindre pour toucher est
+spécifiée dans la description du sort.
+Pour les armes à distance, le résultat doit dépasser la
+distance entre le tireur et la cible. Le calcule à utiliser est
+spécifié dans la description de l’arme. Attention, les armes à
+longue portée (snipers) ont une portée minimum.
+
+10
+
+Jet de dégât
+Le jet de dégât est l’élément qui permet de savoir combien de
+points de vie vous retirez à l’adversaire. Les dés à lancer seront
+toujours spécifiés sur l’attaque ou l’arme utilisée.
+Les attaques en zone font des dégâts à toutes les personnes
+présents dans le rayon d’action (même les alliés).
+Si vous utilisez deux armes en même temps, vous pouvez
+choisir deux cibles, mais l’action est considérée comme une
+seule attaque. Seules les armes à une main (armes de corps à
+corps légères ou pistolets) peuvent être maniées dans deux
+mains différentes. Les armes à deux mains, à distance, lourdes
+et tout objet nécessitant deux mains valides ne peuvent être
+maniés à deux mains. Lors de l’utilisation de deux armes, une
+des deux sera utilisée en « deuxième main », les dégâts seront
+ceux spécifiés dans la description de l’arme.
+Score de défense
+Le score de défense n’est pas un jet : il ne requiert pas de
+lancer un dès. Le calcul est effectué en fonction de la
+statistique (en fonction du type de défense de l’arme) ce à quoi
+s’ajoutent les bonus de défense du personnage. Ce score
+permet de savoir si le personnage est touché par une attaque
+physique. Le jet d’attaque de l’attaquant doit être supérieur ou
+égal au score de défense de la cible.
+Score de protection
+Le score de protection réduit les dégâts subis par le
+personnage. Le jet de protection est calculé en fonction de la
+source de dégât :
+Magique
+Physique
+Distance
+Les sorts sont des outils puissants, mais la plupart ont un temps de
+recharge. Quand le sort réussit et inflige des dégâts, il ne peut pas être utilisé
+avant un certain temps. Les tours durent approximativement 10 seconds. Les
+temps de recharge sont aussi effectifs hors combat, si un sort avec un temps
+de recharge est lancé juste avant le combat, il sera en recharge pendant le
+combat. La plupart des sorts n’ont comme seule condition un jet
+d’intelligence, voir même son de simple support d’attaque, réussissant
+automatiquement si votre l’attaque avec votre arme réussie. D’autres sorts,
+les sorts « légendaires », ont des conditions plus spécifiques à remplir pour
+être incantés. Si un sort a un temps d’incantation spécifier, toute action
+effectuée durant ce temps casse l’incantation du sort. Il est alors considéré
+comme annulé et peut être relancé. L’incantation se termine toujours au
+début de votre tour.
+
+11
+
+Le dégât d’une attaque est la somme des dés de dégâts. Une réduction
+des dégâts s’applique sur ce résultat et non sur les scores de chacun des dès.
+Si une attaque stipule qu’elle est multiple (Eg. Fusil à pompe), alors chaque dé
+est considéré comme une attaque et la réduction des dégâts s’appliquent sur
+chacun des dés.
+Les personnages avec la compétence : « guerrier » peuvent attaquer deux fois
+en un tour.
+
+Maneuver
+Les manœuvres sont tous les éléments qui ne sont pas compris dans les deux
+autres sections. Cela peut aller de l’utilisation d’un objet (grenade, pack de
+soins) à l’utilisation de l’environnement (le gros bouton rouge). Les
+manœuvres peuvent être un bon moyen de reprendre l’avantage dans un
+combat compliqué : modifié l’environnement, la position des personnages ou
+handicaper des adversaires. Le jet à utiliser dépendra de votre action ainsi que
+de ces conséquences.
+Les personnages avec la compétence : « stratège » peuvent faire une
+manœuvre deux fois dans le tour.
+
+Fin du combat
+Un combat se termine lorsque tous les participants d’un camp sont morts, en
+fuite, largement hors de portée ou ont capitulé. Le jeu reprend son cours
+normalement à ce moment. Les joueurs peuvent donc fouiller les cadavres, interroger
+les survivants ou reprendre leurs tâches précédant le combat.
+Si un système d’expérience est utilisé, le MJ pourra attribuer les gains en
+compétence ou statistique aux joueurs en fonction des actions de chacun et de la
+difficulté du combat. L’expérience ne donne pas des niveaux, mais un gain de
+statistique ou de compétence symbolisant la progression de votre personnage dans
+un domaine à la suite d’actions réussi ou échoué (on apprend de ses erreurs).
+
+12
+
+EN PARTIE
+1.
+
+Méthode de jeu
+
+Une grande partie du jeu de rôle se passe hors combat. Vos statistiques et
+compétences peuvent toujours y être utiles. Vos choix sont presque illimités et le
+scénario se déroulera en fonction de vos actions. Soyez vigilant, un mauvais pas ou un
+oubli peut parfois couter cher. L’ensemble des actions possible ne peuvent pas être
+listé ici, mais certains aspects récurrents est importants sont toutefois à noter.
+
+Perception
+Un jet de perception permet d’avoir des informations sur ce qui vous
+entoure. Le jet se fait avec un d20 plus votre statistique de perception. Plus le
+score est élevé, plus vous aurez d’information. Mais un faible score peut vous
+donner des informations partielles ou fausses. Un score de 20 au dès (avant
+addition) est une réussite critique, vous aurez toutes les informations que vos
+personnages peuvent avoir dans ce contexte sans faire preuve de prescience
+(des détails peuvent tout de même leur échapper).
+Les jets de perception peuvent être effectués à chaque arrêt de jeu
+(quand le MJ vous demande ce que vous voulez faire). N’ayez pas peur de les
+utiliser.
+Les jets de perception prennent du temps en jeu. Des événements
+peuvent se passer pendant que les personnages les réalisent. Si tous les
+personnages en font un en même temps, des détails peuvent vous échapper,
+un timing peut être perdu ou une embuscade peut avoir lieu.
+Les jets de perception peuvent être utilisés en combat comme une
+manœuvre. Un jet réussi peut détecter une ennemie camoufler, un piège ou
+un élément qui est passé inaperçu plus tôt.
+Le MJ peut vous demander de faire un jet de perception sans raison
+apparente, seule une réussite pourra vous aider à savoir pourquoi.
+
+Jet d’opportunité
+Les jets d’opportunité sont déclenchés quand un personnage s’éloigne
+d’un autre tout en étant à sa portée. En lui tournant le dos, le personnage est
+vulnérable à une attaque ou l’attaquant a un bonus « embuscade ». Que
+l’attaque réussisse ou non, un combat est déclenché.
+Pour voir comment le jet d’opportunité a une influence sur les
+combats, voir la section de déplacement
+
+Jet de compétence
+Les jets de compétence sont utilisés quand votre personnage essaye
+de réaliser une action difficile à réussir, il y’a 4 catégories :
+-
+
+Impossible à échouer : votre personnage réussi quoiqu’il arrive
+
+13
+
+Dur à échouer : d20 + statistiques concernées par l’action. Le résultat doit être supérieur à
+20. 20 aux dés et une réussite critique, l’action réussie avec brio. 1 aux dés est un échec
+critique, votre personnage échoue… avec brio. Les bonus sont à prendre en comptes.
+Dur à réussir. D20 + statistiques concernées par l’action. Le résultat doit être supérieur à 30.
+1 aux dés est un échec critique. La réussite critique est impossible dans avec cette action.
+Plusieurs statistiques peuvent être concernées par l’action. Leurs valeurs sont ajoutées au
+résultat. Mais le score à passer augmente de 15 par statistiques supplémentaires prises en
+compte. Le MJ prend la décision.
+Impossible à réussir : l’action sera forcément un échec. Un d20 est lancé, si vous faites un 1
+c’est un échec critique, sinon rien ne se passe.
+Le MJ décide de la difficulté de l’action. Vous pouvez lui
+demander la catégorie de l’action avant de la réaliser. Mais sa réponse
+sera toujours en fonction des connaissances de votre personnage (un
+jet de perception raté peut lui faire croire qu’escalader la paroi est
+simple, mais il n’a pas vu que c’était un dragon). Une fois que l’action
+est lancée, elle ne peut pas être annulée.
+
+Jet de sauvegarde
+Les jets de sauvegarde peuvent sauver votre personnage d’une mort
+imminente ou d’une rencontre malheureuse sur le chemin. Elle suit la même
+règle que les jets de compétence, mais ne peut être lancée que par décision
+du MJ. Il n’est pas obligé de vous dire de quoi vous devez vous sauver, même
+en cas de réussite.
+
+Jeu en équipe
+Les jeux de rôles sont des jeux d’équipe. N’oubliez pas les compétences de vos
+collègues. Vos personnages peuvent ne pas avoir les compétences pour réussir une
+action tandis qu’un autre joueur le peut : ce qui peut être dur à réussir pour vous
+peut être impossible à échouer pour d’autres. Il est aussi important de comprendre
+que votre personnage a des connaissances et un caractère près établi, en partie par
+vous, mais aussi par l’univers ou l’aventure. De plus, le jet de perception a une
+influence sur la connaissance de votre personnage par rapport ou autre. Toutes les
+informations que le MJ donnera peut-être biaisé par le point de vue de votre
+personnage. La même question aura plusieurs réponses en fonction de qui la pose.
+De plus, si une aventure se veut difficile, certains MJ peuvent prendre plaisir à
+brouiller les pistes entre vraies et fausses informations.
+
+14
+
+CLASSE
+Mage
+Histoire
+
+1
+
+Seuls les enfants dotés d’une capacité à l’utilisation de la magie dès leur plus jeune âge
+peuvent aspirer à devenir mage. Et les études qui suivent sont longues et compliquées. Mais une fois leur
+entrainement terminé, les mages deviennent des armes de destruction incroyable. Souvent utiliser dans les
+guerres de position ou les batailles rangées. Ils sont capables, en alliant leur force, de faire pleuvoir les enfers
+sur les ennemies. Ils savent aussi briller par leur capacité à réduire en cendre des escouades seule lors de
+guérilla. Plus puissant avec d’autres mages, les sous-estimer quand ils sont seuls peut tout de même changer
+l’issue une bataille.
+
+1
+
+Image : https://i.pinimg.com/originals/97/f8/4e/97f84e45444c38e3759f66d9471e7888.jpg
+
+15
+
+Caractéristique
+Nom :
+
+Classe : Mage
+Vie
+
+40
+
+Vitesse
+
+3
+
+Affinités
+A. Dist
+
+2
+
+A. CAC
+
+2
+
+A. Mag
+
+5
+
+A. Feu
+
+3
+
+Statistiques
+For
+
+9
+
+Dex
+
+9
+
+Int
+
+16
+
+Per
+
+12
+
+Pre
+
+11
+
+Cha
+
+11
+
+Équipements
+Arme
+
+Bâton
+
+Armures
+
+Tunique
+
+Consommable
+
+1x kit de soins, 1x
+cristal de mana
+Compétences
+Armure de magie
+Vue des arcanes
+
+Sorts
+Javelot de glace
+Vent cinglant
+
+16
+
+Froid mordant
+Givre
+Un avec le froid
+
+17
+
+Description des objets et compétence
+Kit de soins : rends 15 PV
+Cristal de mana : annule le temps de recharge du prochain sort jouer
+Armure de magie : +2 score de protection magique.
+Vue des arcanes : augmente les chances de voir des éléments liés à la
+magie.
+
+Tunique
+Famille
+
+Armure légère -> tissu
+
+Prérequis
+Aucun
+Bonus
+Aucun
+
+Bâton
+Famille
+
+Arme de corps à corps -> 2 mains -> bâton
+
+Prérequis
+A. CAC
+
+1
+
+Attaque
+1d4
+Type d’attaque : attaque lourde (FOR)
+Type de défense : parade (FOR)
+
+18
+
+Sorts
+Gelure
+Famille
+
+Sort -> affliction -> givre
+
+Prérequis
+Ne peut être incanté par un personnage
+
+Condition : activé par un sort
+Incantation : instantané
+
+Recharge : instantané
+
+Description
+
+Durée
+
+La cible est victime de gelure, perturbant ces
+sens.
+-1 de vitesse. -1 au score de toucher. Peut-être
+accumuler. Une nouvelle application remet à 0
+la durée des anciennes.
+5 accumulations entraine 2d20 + 8 dégâts, puis
+la perte de 5 « Gelure ».
+2 tours.
+
+Javelot de glace
+Famille
+
+Sort -> destruction -> givre
+
+Prérequis
+A. mag
+
+6
+
+Effet
+
+Condition : 16 INT
+Incantation : instantané
+
+Recharge : 40 sec
+
+Description
+Dégâts
+
+Lance un javelot de glace a la cible et la gèle.
+2d12 + 4 et « Gelure » a la cible.
+
+19
+
+Vent cinglant
+Famille
+
+Sort -> destruction -> givre
+
+Prérequis
+A. mag
+A. givre
+
+6
+2
+
+Condition : 18 INT
+Incantation : instantané
+
+Recharge : 50 sec
+
+Description
+
+Projet un vent glacial sur une distance de 25
+mètres.
+1d12 + 1d8 et 2 x « Gelure » aux personnes
+touchées.
+
+Dégâts
+
+Froid mordant
+Famille
+
+Sort -> altération -> givre
+
+Prérequis
+A. mag
+A. givre
+
+4
+4
+
+Condition : 16 INT
+Incantation : instantané
+
+Recharge : 20 sec
+
+Description
+Effet
+
+Refroidi intensément une cible.
+4 x « Gelure » a la cible
+
+20
+
+21
+
+Givre
+Famille
+
+Sort -> destruction -> givre
+
+Prérequis
+A. mag
+
+4
+
+Condition : 16 INT
+Incantation : instantané
+
+Recharge : instantané
+
+Description
+Dégât
+Effet
+
+Glace modérément la cible.
+1d4 + 4
+Rafraichi les « gelure » sur la cible.
+
+Un avec le froid
+Famille
+
+Sort -> déplacement -> givre
+
+Prérequis
+A. givre
+
+4
+
+Condition : 14 INT
+Incantation : instantané
+
+Recharge : instantané
+
+Description
+
+Vous vous propulser grâce a une bourrasque
+de vent.
+Vous vous déplacer sur une distance de 20
+mètres librement, écartant les obstacles légers.
+N’active pas les jets d’opportunité.
+2 x « gelure » a vous-même.
+
+Effet
+
+Comment jouer
+Le mage est une classe infligeant beaucoup de dégât en peu de
+temps, mais ne les tient pas dans le temps. Il est plus efficient dans les
+combats de courte durée ou avec beaucoup d’ennemies proches grâce
+à colonnes de flamme. Sa capacité de survie est limitée. Les sorts et le
+positionnement du mage doivent être réfléchis prudemment.
+
+22
+
+Mage de combat
+Histoire
+
+2
+
+Lors de la guerre contre les Acéras, il devenait évidant que la guérilla est la
+clé du succès. Les mages, puissant lors des batailles a grande envergure, devait se prendre un
+nouveau rôle. Les mages de combat sont la réponse. Efficace contre des groupes de soldat
+d’infanterie, les mages de combat sont capables de bouger vite et de déplacer le champ de
+batail sur des points stratégique. Leur férocité et leur indépendance leurs ont valu une place
+unique au sein de l’armée.
+
+2
+
+Image : https://i.pinimg.com/736x/2b/95/af/2b95af02e170eb88efd9b7c4afbe8ba0.jpg
+
+23
+
+Caractéristiques
+Nom :
+
+Classe : mage de combat
+
+Vie
+
+50
+
+Vitesse
+
+4
+
+Affinités
+A. Dist
+
+0
+
+A. CAC
+
+4
+
+A. Mag
+
+4
+
+A. électrique
+
+2
+
+Statistiques
+For
+
+8
+
+Dex
+
+15
+
+Int
+
+15
+
+Per
+
+10
+
+Pre
+
+9
+
+Cha
+
+11
+
+Équipements
+Arme
+
+épée légère
+
+Armures
+
+Exosquelette
+combat
+2x kit de soins
+
+Consommable
+
+de
+
+Compétences
+Champ électromagnétique
+Vue des arcanes
+Sorts
+Eclaire
+Charge statique
+
+24
+
+Lame de foudre
+Zap
+Magnétisation
+
+25
+
+Description des objets et compétence
+Kit de soins : rends 15 PV
+Cristal de mana : annule le temps de recharge du prochain sort jouer
+Champ électromagnétique : +2 scores de protection à distance.
+Vue des arcanes : augmente les chances de voir des éléments liés à la
+magie.
+Exosquelette de combat
+Famille
+
+Armure -> exosquelette
+
+Prérequis
+FOR
+
+12
+
+Bonus
++2 score de protection physique. -1 DEX
+
+Épée légère
+Famille
+
+Arme de corps à corps -> 1 main -> épées
+
+Prérequis
+A. CAC
+
+4
+
+Attaque
+1d8
+Attaque maint 1d4
+2
+Type d’attaque : attaque rapide (DEX)
+Type de défense : esquive (DEX)
+
+26
+
+Sorts
+Éclaire
+Famille
+
+Sorts -> destruction -> électrique
+
+Prérequis
+A. mag
+
+4
+
+Condition : 17 INT
+Incantation : instantané
+
+Recharge : 40 sec
+
+Description
+Dégâts
+
+Vous projetez une fourche électrique vers 2
+personnages
+2d12 à 2 cibles.
+
+Charge statique
+Famille
+
+Sorts -> amélioration d’attaque -> électrique
+
+Prérequis
+A. CAC
+A. électrique
+
+4
+1
+
+Condition : aucune
+Incantation : instantanée
+
+Recharge : 50 sec
+
+Description
+
+Vôtre arme se charge de courant, électrocutant
+la prochaine personne recevant un coup.
+Votre prochaine attaque physique inflige 9
+dégâts supplémentaire.
+
+Effet
+
+27
+
+Lame de foudre
+Famille
+
+Sorts -> attaque d’arme -> électrique
+
+Prérequis
+A. CAC
+A. électrique
+
+4
+2
+
+Condition : 17 INT
+Incantation : instantanée
+
+Recharge : 60 sec
+
+Description
+
+Votre attaque est suivie d’une décharge
+chargeant le personnage le plus proche.
+Vous lancez une attaque inévitable avec votre
+arme. Une autre cible subis la moitié des
+dégâts infligés sous forme magique (arrondie a
+l’inférieur). La cible est la personne la plus
+proche de vous (hors la cible de l’attaque
+initial).
+
+Effet
+
+Zap
+Famille
+
+Sorts -> altération -> électrique
+
+Prérequis
+A. électrique
+
+2
+
+Condition : 16 INT
+Incantation : instantanée
+
+Recharge : 50 sec
+
+Description
+
+Vous envoyez un petit arc électrique sur une
+cible, paralysant ses muscles pendant un cours
+instant.
+La cible est paralysée.
+1 tour.
+
+Effet
+Durée
+
+28
+
+Magnétisation
+Famille
+
+Sorts -> déplacement -> électrique
+
+Prérequis
+A. Mag
+
+4
+
+Condition : cible a portée (1d8 + 6 mètres)
+Incantation : instantanée
+
+Recharge : 50 sec
+
+Description
+
+Vous crée un champ magnétique entre vous et
+une cible, vous rapprochant l’un de l’autre.
+Vous et votre cible êtes attiré l’un vers l’autre.
+Vous pouvez interrompre l’effet avant d’être au
+contact.
+
+Effet
+
+Comment jouer
+Le mage de combat est pensé pour éliminer rapidement de multiples
+unités fragiles. Mais le mage de combat, par sa fragilité, peut être en
+danger lors des combats plus longs. Il faudra alors faire preuve de
+patience et laisser la première ligne a vos alliés plus résistants.
+
+29
+
+Maître d’armes
+Histoire
+
+3
+
+Les maîtres d’armes incarnent le fer-de-lance de l’armée impériale. Étant
+une des plus anciennes écoles martiales de l’humanité, les maîtres d’armes on put prouver
+leurs valeurs sur de nombreux champs de bataille et sont entrés dans la légende. Formant
+souvent la première ligne, rares sont les maîtres d’armes qui ont l’occasion d’être appelés des
+vétérans. Mais ces derniers sont, à raison, craints par tous et vus comme le bras de Blanc au
+sein de l’armée.
+
+3
+
+Image : https://www.pinterest.fr/pin/514536326159247012/
+
+30
+
+Caractéristiques
+Nom :
+
+Classe : maître d’armes
+
+Vie
+
+65
+
+Vitesse
+
+5
+
+Affinités
+A. Dist
+
+0
+
+A. CAC
+
+8
+
+A. Mag
+
+2
+
+Statistiques
+For
+
+16
+
+Dex
+
+12
+
+Int
+
+10
+
+Per
+
+8
+
+Pre
+
+10
+
+Cha
+
+12
+
+Équipements
+Arme
+
+Épée lourde
+
+Armures
+
+Armure de plate
+lourde
+2x kit de soins
+
+Consommable
+
+Compétences
+Guerrier
+Tacticien
+Sorts
+Attaque de force
+Fendre
+Lame fantôme
+
+31
+
+Charge
+
+32
+
+Description des objets et compétence
+Kit de soins : rends 15 PV
+Guerrier : peut attaquer 2 fois en 1 tour
+Tacticien : +1 au jet d’initiative
+
+Armure de plate légère
+Famille
+
+Armure -> plate
+
+Prérequis
+FOR
+
+12
+
+Bonus
++2 scores de protection à distance
+
+Épée lourde
+Famille
+
+Arme de corps à corps -> 2 mains -> épées
+
+Prérequis
+A. CAC
+
+6
+
+Attaque
+1d12
+Type d’attaque : attaque lourde (FOR)
+Type de défense : parade (FOR)
+
+33
+
+Sorts
+Attaque de force
+Famille
+
+Sort -> amélioration d’attaque
+
+Prérequis
+FOR
+
+14
+
+Condition : aucune
+Incantation : 0 sec
+
+Recharge : 30 secs
+
+Description
+Effet
+
+Prépare une attaque dévastatrice contre un
+adversaire proche.
++1d8 a la prochaine attaque physique.
+
+Fendre
+Famille
+
+Sort -> attaque d’arme
+
+Prérequis
+A. CAC
+
+8
+
+Condition : score d’attaque >= 18
+Incantation : 0 sec
+
+Recharge : 30 secs
+
+Description
+
+Lance une attaque horizontale touchant tous
+les ennemis devant vous.
+1d12
+
+Dégâts
+
+34
+
+Lame fantôme
+Famille
+
+Sort -> amélioration d’attaque
+
+Prérequis
+A. CAC
+A. mag
+
+4
+2
+
+Condition : aucune
+Incantation : 0 sec
+
+Recharge : 60 secs
+
+Description
+Effet
+
+Votre lame devient fantomatique, traversant
+tous les objets jusqu’à sa cible.
+La prochaine attaque physique est inévitable.
+
+Charge
+Famille
+
+Sort -> amélioration
+
+Prérequis
+A. CAC
+A. mag
+
+4
+2
+
+Condition : cible à porter (1d8 + vitesse)
+Incantation : aucune
+
+Recharge : 0 sec
+
+Description
+Dégâts
+
+Charge la cible avec force
+Vous vous déplacez jusqu’à la cible et lui
+infligez 1d4 dégâts.
+
+Comment jouer
+Le maître d’armes est une classe à sens unique : faible en dehors des
+combats, il brille au milieu de la mêlée. Mais il ne faut pas fendre sur le
+premier ennemi à vue. Vous serez le garde-fou en cas de mauvaise
+surprise.
+
+35
+
+Tutélaire
+Histoire
+
+4
+
+Les tutélaires constituent la première ligne de l’armée impériale.
+Protecteurs des autres soldats, ils permettent à l’armée de prendre position sous les feux
+ennemis les plus intenses. En plus petits groupes, ils offrent l’occasion de ne jamais reculer
+devant l’agresseur. Grâce à leur magie de lumières solide, les tutélaires incarnent les phares
+menant les unités perdues au cœur de la bataille.
+
+4
+
+Image : https://www.pinterest.fr/pin/404549979018902762/
+
+36
+
+Caractéristiques
+Nom :
+
+Classe : tutélaire
+
+Vie
+
+75
+
+Vitesse
+
+4
+
+Affinités
+A. Dist
+
+0
+
+A. CAC
+
+6
+
+A. Mag
+
+0
+
+A. Lumière
+
+2
+
+Statistiques
+For
+
+14
+
+Dex
+
+10
+
+Int
+
+12
+
+Per
+
+9
+
+Pre
+
+10
+
+Cha
+
+13
+
+Équipements
+Arme
+
+Épée légère
+
+Armures
+
+Armure de plate
+lourde, bouclier
+3x kit de soins
+
+Consommable
+
+Compétences
+À l’affut
+Charismatique
+Sorts
+Intervention
+Flash
+
+37
+
+Bouclier de lumière solide
+Attaque de force
+
+38
+
+Description des objets et compétence
+Kit de soins : rends 15 PV
+À l’affut : peut attaquer ou lancer un sort dès le début d’un combat.
+Charismatique : +1 CHA. Augmente les chances d’être pris pour cible.
+Armure de plate lourde
+Famille
+
+Armure -> plate
+
+Prérequis
+FOR
+
+14
+
+Bonus
++3 scores de protection à distance. +1 emplacement de consommable.
+
+Bouclier
+Famille
+
+Armure -> bouclier
+
+Prérequis
+FOR
+
+14
+
+Bonus
+Permets de parer les attaques physiques. +2 au score de défense.
+
+Épée légère
+Famille
+
+Arme de corps à corps -> 1 main -> épées
+
+Prérequis
+A. CAC
+
+4
+
+Attaque
+1d8
+Attaque maint 1d4
+2
+Type d’attaque : attaque rapide (DEX)
+Type de défense : esquive (DEX)
+
+39
+
+Sorts
+Intervention
+Famille
+
+Sort -> protection -> physique
+
+Prérequis
+Armure
+
+Bouclier
+
+Condition : cible à porter (1d8 + vitesse)
+Incantation : 0 sec
+
+Recharge : 20 secs
+
+Description
+
+Charge la cible et la protège d’une attaque
+imminente.
+Ce déplace vers la cible. Si la cible doit subir
+des dégâts, vous les subissiez à sa place
+(application des scores de protections).
+
+Effet
+
+Flash
+Famille
+
+Sort -> altération -> lumière
+
+Prérequis
+A. lumière
+
+1
+
+Condition : 14 INT
+Incantation : 0 sec
+
+Recharge : 60 sec
+
+Description
+Effet
+Durée
+
+Crée une sphère de lumière aveugle une cible.
+La cible ne peut plus agir ni se défendre.
+1 tour
+
+40
+
+Bouclier de lumière solide
+Famille
+
+Sort -> protection -> lumière
+
+Prérequis
+A. lumière
+
+2
+
+Condition : aucune
+Incantation : 0 sec
+
+Recharge : 40 sec
+
+Description
+
+Durée
+
+Crée un bouclier de lumière solide autour de
+vous.
++3 au score de protection contre toutes
+attaques
+1 tour
+
+Attaque de force
+Famille
+
+Sort -> amélioration d’attaque
+
+Prérequis
+FOR
+
+14
+
+Effet
+
+Condition : aucune
+Incantation : 0 sec
+
+Recharge : 30 sec
+
+Description
+
+Prépare une attaque dévastatrice contre un
+adversaire proche.
++1d8 a la prochaine attaque physique.
+
+Effet
+
+Comment jouer
+Le tutélaire est le tank du groupe. Votre capacité à attirer les tirs vers
+vous et à les encaisser mieux que le groupe vous oblige à passer
+devant pour le protéger.
+
+41
+
+Sentinel
+Histoire
+
+5
+
+La sentinelle est la force défensive de l’armée. Son rôle oscille entre le
+contre-espionnage et la défense des points stratégiques urbains. Sa force vient
+principalement de sa capacité à surprendre l’adversaire par une connaissance précise du
+terrain et des embuscades dévastatrices. Peu de rapport ennemi parle des sentinelles, mais
+la disparition des unités infiltrer sur le territoire humain est un fait connu de tous.
+
+5
+
+Image : https://www.pinterest.fr/pin/453667362436419874/
+
+42
+
+Caractéristiques
+Nom :
+
+Classe : sentinelle
+
+Vie
+
+55
+
+Vitesse
+
+7
+
+Affinités
+A. Dist
+
+2
+
+A. CAC
+
+6
+
+A. Mag
+
+2
+
+A. arme 1 main
+
+2
+
+Statistiques
+For
+
+11
+
+Dex
+
+16
+
+Int
+
+11
+
+Per
+
+12
+
+Pre
+
+10
+
+Cha
+
+8
+
+Équipements
+Arme
+
+2x épée légère
+
+Armures
+
+Exosquelette
+vitesse
+2x kit de soins
+
+Consommable
+
+de
+
+Compétences
+Course
+Rôdeur
+Sorts
+Attaque multiple
+Fendre
+
+43
+
+Lame fantôme
+Attaque des points sensibles
+
+44
+
+Description des objets et compétence
+Kit de soins : rends 15 PV
+Course : peut se déplacer deux fois en un tour
+Rôdeur : peut éviter d’entrer en combat et rester camoufler. (Jet de
+DEX)
+
+Exosquelette de vitesse
+Famille
+
+Armure -> exosquelette
+
+Prérequis
+DEX
+
+12
+
+Bonus
++2 vitesses
+
+Épée légère
+Famille
+
+Arme de corps à corps -> 1 main -> épées
+
+Prérequis
+A. CAC
+
+4
+
+Attaque
+1d8
+Attaque maint 1d4
+2
+Type d’attaque : attaque rapide (DEX)
+Type de défense : esquive (DEX)
+
+45
+
+Sorts
+Attaque multiple
+Famille
+
+Sort -> amélioration d’attaque
+
+Prérequis
+A. CAC
+
+6
+
+Condition : 16 DEX
+Incantation : 0 sec
+
+Recharge : 60 sec
+
+Description
+Effet
+
+Enchaine avec virtuosité les attaques autour
+de soi.
+Lance une copie de la prochaine attaque
+
+Fendre
+Famille
+
+Sort -> attaque d’arme
+
+Prérequis
+A. CAC
+
+8
+
+Condition : score d’attaque >= 18
+Incantation : aucune
+
+Recharge : 30 sec
+
+Description
+
+Lance une attaque horizontale touchant tous
+les ennemis devant vous.
+1d12
+
+Dégâts
+
+46
+
+Lame fantôme
+Famille
+
+Sort -> amélioration d’attaque
+
+Prérequis
+A. CAC
+A. mag
+
+4
+2
+
+Condition : aucune
+Incantation : 0 sec
+
+Recharge : 60 sec
+
+Description
+Effet
+
+Votre lame devient fantomatique, traversant
+tous les objets jusqu’à sa cible.
+La prochaine attaque physique est inévitable.
+
+Attaque des points sensibles
+Famille
+
+Sort -> attaque d’arme
+
+Prérequis
+A. CAC
+
+4
+
+Condition: 14 PER
+Incantation : 0 sec
+
+Recharge : 120 sec
+
+Description
+
+Trouve les points vitaux de la cible et les
+attaques en priorité, infligeant d’énormes
+dégâts
+2d20
+
+Effet
+
+Comment jouer
+La sentinelle est une classe de combat fondant sur son ennemie pour
+l’abattre avant d’être remarqué. En utilisant vos attaques efficacement,
+vous pouvez créer un trou dans les lignes ennemies. Mais votre
+placement est primordial à votre réussite.
+
+47
+
+Horion
+Histoire
+
+6
+
+Ayant fait les meilleures écoles militaires, les horions sont de redoutables
+combattants. Entrainés à affronter tout type d’ennemies sur une grande variété de terrain, ils
+sont spécialisés dans les guérillas. Avec leurs techniques remarquables et leur stratégie de
+« drop & go », ils sont capables de reprendre le contrôle des zones même écrasé par le
+nombre. Souvent confondus avec les soldats d’infanterie, c’est une erreur rarement commise
+deux fois, si toutefois ils vous laissent cette occasion.
+
+6
+
+Image : https://www.pinterest.fr/pin/398005685813511461/
+
+48
+
+Caractéristiques
+Nom :
+
+Classe : horion
+
+Vie
+
+50
+
+Vitesse
+
+6
+
+Affinités
+A. Dist
+
+8
+
+A. CAC
+
+2
+
+A. Mag
+
+0
+
+Statistiques
+For
+
+10
+
+Dex
+
+8
+
+Int
+
+11
+
+Per
+
+12
+
+Pre
+
+16
+
+Cha
+
+11
+
+Équipements
+Arme
+
+Fusil mitrailleur
+
+Armures
+
+Exosquelette
+de
+combat
+1x kit de soins, 1x
+grenade
+
+Consommable
+
+Compétences
+Vétéran
+Tacticien
+Sorts
+Tir à la tête
+Tir de barrage
+Lecture des mouvements
+Roulade
+
+49
+
+50
+
+Description des objets et compétence
+Kit de soins : rends 15 PV
+Grenade : 1d12 dans une zone de 4 mètres
+Vétéran : reconnais la classe des ennemies
+Tacticien : +1 au jet d’initiative
+
+Exosquelette de combat
+Famille
+
+Armure -> exosquelette
+
+Prérequis
+FOR
+
+12
+
+Bonus
++2 score de protection physique. -1 DEX
+
+Fusil mitrailleur
+Famille
+
+Prérequis
+A. dist
+
+Arme à distance -> arme à deux mains ->
+mitrailleur
+
+6
+
+Attaque
+1d12
+Type d’attaque : tir à distance (PRE)
+Type de défense : esquive (DEX)
+
+51
+
+Sorts
+Tir à la tête
+Famille
+
+Sort -> attaque d’arme
+
+Prérequis
+A. dist
+
+8
+
+Condition : aucune
+Incantation : 0 sec
+
+Recharge : 20 sec
+
+Description
+Effet
+
+Vise la tête de la cible avec une précision hors
+du commun
+Attaque physique au dégât maximum
+
+Tir de barrage
+Famille
+
+Sort -> attaque d’arme
+
+Prérequis
+A. dist
+
+6
+
+Condition : 17 PRE
+Incantation : aucune
+
+Recharge : 30 sec
+
+Description
+
+Attaque tous les ennemis devant vous lors
+d’un tir en rafale
+2d8
+
+Dégâts
+
+52
+
+Lecture des mouvements
+Famille
+
+Sort -> amélioration
+
+Prérequis
+Compétence
+
+Vétéran
+
+Condition : 14 PER
+Incantation : aucune
+
+Recharge : 30 sec
+
+Description
+
+Grâce aux années passées sur le champ de
+bataille, lire les mouvements d’une personne
+est chose aisée.
+Prédis l’action de la cible, la précision est
+accrue avec le jet. Ce sort est considéré
+comme une manœuvre.
+
+Effet
+
+Roulade
+Famille
+
+Sort -> déplacement
+
+Prérequis
+Armure
+
+Exosquelette
+
+Condition : 10 DEX
+Incantation : aucune
+
+Recharge : 40 sec
+
+Description
+
+Grâce à la rapidité de vos mouvements et à la
+puissance conférée par l’exosquelette, vous
+vous propulsez loin du danger
+Déplacement de 1d4 + vitesse dans n’importe
+quelle direction. Ne déclenche pas de jet
+d’opportunité. Ce sort est considéré comme un
+déplacement.
+
+Effet
+
+Comment jouer
+Le horion est une classe capable d’infliger des dégâts sur la durée tout
+en restant en sécurité. Choisir correctement ses cibles et dialoguer du
+plan de combat avec ses alliés est ce qui permet au horion de se
+distinguer. Le placement du horion lors des combats est indispensable
+afin de tirer le meilleur de tous les outils à votre disposition.
+
+53
+
+Spectre
+Histoire
+
+7
+
+Sniper par défaut de l’armée, les spectres ont souvent pour mission
+d’éliminer les MVP dans les lignes ennemies. Souvent solitaires, pour plus de discrétion, ils
+sont tout aussi capables de travailler en groupe pour détruire les bases ennemies à distance.
+Leur vue excellente, et leur discrétion les amènent régulièrement à être envoyés en éclaireur
+en territoire hostile, les rendant experts en survie et de bons connaisseurs de leurs
+ennemies. Leurs cibles comprennent vite leurs seul option : rester à couvert.
+
+7
+
+Image : https://www.pinterest.fr/pin/290060032221698051/
+
+54
+
+Caractéristiques
+Nom :
+
+Classe : spectre
+
+Vie
+
+40
+
+Vitesse
+
+5
+
+Affinités
+A. Dist
+
+6
+
+A. CAC
+
+4
+
+A. Mag
+
+0
+
+A. sniper
+
+2
+
+Statistiques
+For
+
+8
+
+Dex
+
+14
+
+Int
+
+10
+
+Per
+
+11
+
+Pre
+
+14
+
+Cha
+
+10
+
+Équipements
+Arme
+Armures
+Consommable
+
+Fusil de sniper, épée
+courte
+Exosquelette
+stabilisateur
+1x kit de soins, 1x
+flash
+Compétences
+Œil d’aigle
+Rôdeur
+
+Sorts
+Tir à la tête
+Tir surcharge
+
+55
+
+Lame fantôme
+Camouflage
+
+56
+
+Description des objets et compétence
+Kit de soins : rends 15 PV
+Flash : aveugle les personnages proches du centre d’explosion jusqu’à
+leur tour
+Œil d’aigle : +1 PRE
+Rôdeur : peut éviter d’entrer en combat et rester camouflé. (Jet de
+DEX)
+Exosquelette stabilisateur
+Famille
+
+Armure -> exosquelette
+
+Bonus
++1 de PRE et +3 dégâts si vous n’avez pas bougé depuis 20 sec
+
+Fusil de sniper
+Famille
+
+Prérequis
+A. sniper
+
+Arme à distance -> arme à deux mains ->
+sniper
+
+1
+
+Attaque
+1d20
+Type d’attaque : attaque à distance (PRE)
+Type de défense : parade (FOR)
+Bonus
+X3 au jet de précision. 1/20 de toucher à moins de 10 mètres
+
+Épée légère
+Famille
+
+Arme de corps à corps -> 1 main -> épées
+
+Prérequis
+A. CAC
+
+4
+
+Attaque
+1d8
+Attaque maint 1d4
+2
+Type d’attaque : attaque rapide (DEX)
+
+57
+
+Type de défense : esquive (DEX)
+
+58
+
+Sorts
+Tir à la tête
+Famille
+
+Sort -> attaque d’arme
+
+Prérequis
+A. dist
+
+8
+
+Condition : aucune
+Incantation : 0 sec
+
+Recharge : 20 sec
+
+Description
+Effet
+
+Vise la tête de la cible avec une précision hors
+du commun
+Attaque physique au dégât maximum
+
+Tir surchargé
+Famille
+
+Sort -> attaque d’arme
+
+Prérequis
+Arme
+
+Fusil de sniper
+
+Condition : 17 PRE
+Incantation : 20 sec
+
+Recharge : 120 sec
+
+Description
+
+Charge le fusil en énergie, préparant un tir à
+haute vélocité.
+1d100
+
+Dégâts
+
+59
+
+Lame fantôme
+Famille
+
+Sort -> amélioration d’attaque
+
+Prérequis
+A. CAC
+A. mag
+
+4
+2
+
+Condition : aucune
+Incantation : 0 sec
+
+Recharge : 60 sec
+
+Description
+Effet
+
+Votre lame devient fantomatique, traversant
+tous les objets jusqu’à sa cible.
+La prochaine attaque physique est inévitable.
+
+Camouflage
+Famille
+
+Sort -> amélioration
+
+Prérequis
+Armure
+Compétence
+
+Exosquelette
+Rôdeur
+
+Condition : 16 DEX
+Incantation : 0 sec
+
+Recharge : 80 sec
+
+Description
+
+L’exosquelette prend les couleurs de
+l’environnement et conjointement à vos
+capacités de discrétion, vous disparaissez, sous
+les yeux de vos ennemis
+Succès :
+vous
+êtes
+camouflée
+automatiquement pendant 3 tours.
+Échec : -1 aux jets d’attaques contre vous.
+Réussite automatique si personne ne vous voit.
+Se sort est considéré comme une manœuvre.
+
+Effet
+
+Comment jouer
+Le spectre est une classe se jouant plus tirant un grand avantage de
+son fusil de sniper. Il se joue plus à distance, parfois à l’écart du groupe
+pour pouvoir lui offrir un soutien maximal. Faites attention à ne pas
+perdre les ennemis de vue au risque de vous faire isoler.
+
+60
+
+Chasseur
+Histoire
+
+8
+
+Les chasseurs se sont spécialisés dans la traque des unités magiques. Leur
+entrainement consiste principalement au rudiment des armes à feu, ainsi que la magie afin
+de retourner ces armes contre leurs utilisateurs. Ils sont devenus une unité clé dans les
+combats de guérilla. Capables d’anéantir les mages sans prendre de risque, ils sont appelés
+en priorité lors de conflit impliquant de la magie.
+
+8
+
+Image :
+https://www.pinterest.fr/pin/AVGtAwJaNDiHoiFCQYfCDSG3myCVAaMxOfqaELv1GUtj7BxiUvZgjGI/
+
+61
+
+Caractéristiques
+Nom :
+
+Classe : chasseur
+
+Vie
+
+40
+
+Vitesse
+
+6
+
+Affinités
+A. Dist
+
+4
+
+A. CAC
+
+0
+
+A. Mag
+
+2
+
+A. fusil à pompe
+
+4
+
+Statistiques
+For
+
+13
+
+Dex
+
+14
+
+Int
+
+8
+
+Per
+
+12
+
+Pre
+
+11
+
+Cha
+
+10
+
+Équipements
+Arme
+Armures
+Consommable
+
+Fusil
+à
+pompe
+surchargé
+Exosquelette
+de
+traque
+1x kit de soins, 1x
+fléchette anti-magie
+Compétences
+Armure de magie
+Vue des arcanes
+
+Sorts
+Cartouche de shrapnel augmentée
+Plombs à haute vélocité
+
+62
+
+Tir à la tête
+Roulade II
+
+63
+
+Description des objets et compétence
+Kit de soins : rends 15 PV
+Fléchette anti-magie : empêche une cible de lancer des sorts (hors
+amélioration d’attaque et attaque d’arme) pendant 2 tours.
+Armure de magie : +2 a la protection des sorts
+Vue des arcanes : augmente les chances de voir des éléments liés à la
+magie.
+
+Exosquelette de traque
+Famille
+
+Armure -> exosquelette
+
+Prérequis
+DEX
+
+14
+
+Bonus
+Choisis une cible. +1 au jet d’attaque contre cette cible. Peut changer de cible tous les 4 tours.
+Nécessite une manœuvre pour changer de cible.
+
+Fusil à pompe surchargée
+Famille
+
+Arme -> arme à deux mains -> fusil a pompe
+
+Prérequis
+A. fusil à pompe
+
+2
+
+Attaque
+4d4 (ou moins de dés) (attaque multiple)
+Type d’attaque : attaque à distance (PRE)
+Type de défense : esquive (DEX)
+Bonus
+Vous reculez d’un mètre pour chaque dé lancé lors d’une attaque avec cette arme dans la
+direction opposer de la cible (y compris les sorts d’attaque d’arme). Score d’attaque divisé par 2.
+
+64
+
+Sorts
+Cartouche de shrapnel augmentée
+Famille
+
+Sort -> amélioration d’attaque
+
+Prérequis
+A. fusil à pompe
+Arme
+
+2
+Fusil à pompe
+
+Condition : aucune
+Incantation : aucune
+
+Recharge : 80 sec
+
+Description
+Effet
+
+Vous armez une cartouche disposant de plus
+de shrapnels.
+Rajoutez 1d8 d4 à votre prochaine attaque.
+
+Plombs à haute vélocité
+Famille
+
+Sort -> amélioration d’attaque
+
+Prérequis
+A. fusil à pompe
+Arme
+
+2
+Fusil à pompe
+
+Condition : aucune
+Incantation : aucune
+
+Recharge : 50 sec
+
+Description
+
+Votre fusil tire les plombs de votre prochaine
+attaque avec une vélocité accrus
++2 à chacun de vos dès lors de votre prochaine
+attaque avec un fusil a pompe.
+
+Effet
+
+65
+
+Tir à la tête
+Famille
+
+Sort -> attaque d’arme
+
+Prérequis
+A. dist
+
+8
+
+Condition : aucune
+Incantation : 0 sec
+
+Recharge : 20 sec
+
+Description
+Effet
+
+Vise la tête de la cible avec une précision hors
+du commun
+Attaque physique au dégât maximum
+
+Roulade II
+Famille
+
+Sort -> déplacement
+
+Prérequis
+Armure
+
+Exosquelette
+
+Condition : 12 DEX
+Incantation : aucune
+
+Recharge : 40 sec
+
+Description
+
+Grâce à la rapidité de vos mouvements et à la
+puissance conférée par l’exosquelette, vous
+vous propulsez loin du danger.
+Déplacement de 1d8 + vitesse dans n’importe
+quelle direction. Ne déclenche pas de jet
+d’opportunité. Ce sort est considéré comme un
+déplacement.
+
+Effet
+
+Comment jouer
+Le chasseur est une classe capable de fournir d’énormes dégâts. Et en
+peut de temps. L’accumulation de « Cartouche de shrapnel
+augmentée » et « Plombs à haute vélocité » ensemble est la solution à
+bien des problèmes. Ça survit dépend de sa capacité à se replacer
+correctement sur le terrain.
+
+66
+
+Magus
+Histoire
+
+9
+
+Les magus sont souvent assimilés à des mages par les civils. À vrai dire, les
+magus sont des enfants ayant rêvés de devenir mage, mais qui n’ont développé leur affinité
+que plus tard. Mais les confondre avec des mages est une erreur. Les magus se concentrent
+sur l’étude et la compréhension de la magie. Tels des ingénieurs, ils créent et perfectionnent
+les sorts, militaires comme industrielle. Tous les sorts utilisés par un mage sont créés par un
+magus. Les sorts ne pouvant être adaptés au terrain par leurs utilisateurs, les magus ont très
+tôt développé une branche combattante pour envoyer des magus sur le terrain en support à
+l’utilisateur de magie. Les magus sont capables de rendre toutes les batailles imprévisibles.
+
+9
+
+Image: https://i.pinimg.com/originals/af/0b/b1/af0bb197779b2a84c88d5f168274f75f.jpg
+
+67
+
+Caractéristiques
+Nom :
+
+Classe : magus
+
+Affinités
+A. Dist
+
+0
+
+A. CAC
+
+2
+
+A. Mag
+
+6
+
+A. amélioration
+
+2
+
+Vie
+
+40
+
+Vitesse
+
+4
+
+Statistiques
+For
+
+9
+
+Dex
+
+10
+
+Int
+
+14
+
+Per
+
+16
+
+Pre
+
+9
+
+Cha
+
+10
+
+Équipements
+Arme
+
+Bâton
+
+Armures
+
+Tunique
+
+Consommable
+
+1x kit de soins, 1x
+cristal de mana
+Compétences
+Connaisseur de magie
+Scientifique
+
+Sorts
+Confusion
+Flammèche
+Optimisation
+
+68
+
+Partage de connaissance
+
+69
+
+Description des objets et compétence
+Kit de soins : rends 15 PV
+Cristal de mana : annule le temps de recharge du prochain sort jouer
+Connaisseur de magie : augmente les chances de voir des éléments
+liés à la magie. Permets de reconnaître les sorts incantés grâce à une
+manœuvre.
+Scientifique : peut tirer plus d’information d’un jet d’inspection
+Tunique
+Famille
+
+Armure légère -> tissu
+
+Prérequis
+Aucun
+Bonus
+Aucun
+
+Bâton
+Famille
+
+Arme de corps à corps -> 2 mains -> bâton
+
+Prérequis
+A. CAC
+
+1
+
+Attaque
+1d4
+Type d’attaque : attaque lourde (FOR)
+Type de défense : parade (FOR)
+
+70
+
+Sorts
+Confusion
+Famille
+
+Sort -> altération
+
+Prérequis
+A. mag
+
+6
+
+Condition : 16 INT
+Incantation : 0 sec
+
+Recharge : 40 sec
+
+Description
+Effet
+Durée
+
+Les cibles deviennent confuses et voient leurs
+capacités de combat diminuer
+-1 au jet d’attaque de 1d4 cibles
+1 tour
+
+Flammèche
+Famille
+
+Sort -> destruction -> feu
+
+Prérequis
+A. mag
+
+4
+
+Condition : 16 INT
+Incantation : 0 sec
+
+Recharge : 0
+
+Description
+
+Lance une flamme en direction d’une cible et
+la brûle.
+1d8
+
+Dégâts
+
+71
+
+Optimisation
+Famille
+
+Sort -> amélioration
+
+Prérequis
+A. mag
+A. amélioration
+
+4
+2
+
+Condition : 16 INT
+Incantation : 0 sec
+
+Recharge : 50 sec
+
+Description
+
+Optimise la consommation magique du
+prochain sort lancé par la cible.
+Le prochain sort lancé par la cible n’a pas de
+temps de recharge (hors attaque d’arme).
+
+Effet
+
+Partage de connaissance
+Famille
+
+Sort -> amélioration
+
+Prérequis
+A. mag
+A. amélioration
+
+6
+2
+
+Condition : 17 INT
+Incantation : 0 sec
+
+Recharge : 20 sec
+
+Description
+
+Vous
+partagez
+vos
+connaissances
+magiquement, permettant à une cible de
+profiter de celle-ci pour agir au mieux
+Rank-up le prochain dès utilisé par la cible
+(hors jet de dégât). (d20-> d20 + d12)
+
+Effet
+
+Comment jouer
+Le magus est une classe de soutien, vous dépendez de vos alliés et eux
+de vous. La communication est la clé pour faire de cette classe un pilier solide de votre
+groupe. Votre perception élevée est un outil parfait pour naviguer correctement sans rater
+les détails importants, si vous regardez aux bons endroits.
+
+72
+
+Taliste
+Histoire
+
+10
+
+Les talistes constitue une unité très particulière de l’armée. Ce sont les
+seules unités de l’armée à n’avoir aucune réelle éducation militaire. Leurs capacités à survivre
+seuls sur les terrains les plus hostiles et à poursuivre leurs cibles sans relâche les envoie sur
+les missions les plus périlleuses. Travaillant régulièrement sur les affaires les plus importantes
+et avec les meilleurs guerriers de l’Empire, le respect qui leurs est portée efface vite leurs
+lacunes sur le plan martial.
+10
+
+Image : https://www.pinterest.fr/pin/701154235710903158/
+
+73
+
+74
+
+Caractéristiques
+Nom :
+
+Classe : Taliste
+
+Vie
+
+35
+
+Vitesse
+
+8
+
+Affinités
+A. Dist
+
+2
+
+A. CAC
+
+0
+
+A. Mag
+
+2
+
+A. Nature
+
+4
+
+Statistiques
+For
+
+6
+
+Dex
+
+8
+
+Int
+
+14
+
+Per
+
+18
+
+Pre
+
+10
+
+Cha
+
+12
+
+Équipements
+Arme
+
+Pistolet
+
+Armures
+
+Tenue de survie
+
+Consommable
+
+2x kit de soins
+
+Compétences
+Traque
+Expert des terrains
+Compréhension de la nature
+Sorts
+Poursuite
+
+75
+
+Révélation
+Sens à l’affut
+Silence
+
+76
+
+Description des objets et compétence
+Kit de soins : rends 15 PV
+Traque : Vous traquez vos proies avec une grande efficacité, révélant
+les indices laissées derrière.
+Expert des terrains : Vous êtes moins handicapé sur les terrains
+complexe et accidentés. Vos handicapes aux jets de déplacement sont
+réduit de 2.
+Compréhension de la nature : Vous comprenais la nature mieux que
+quiconque. L’identification des plantes et animaux est plus simple.
+Vous pouvez communiquer de manière primaire avec certains
+animaux.
+Tenue de survie
+Famille
+
+Armure légère -> cuir
+
+Prérequis
+Vie
+
+<= 35
+
+Bonus
++2 au jet de sauvegarde contre les altérations.
+
+Pistolet
+Famille
+
+Arme à distance -> arme à une main -> pistolet
+
+Prérequis
+A. dist
+
+1
+
+Attaque
+1d8
+Attaque maint 2
+1d4
+Type d’attaque : tir à distance (PRE)
+Type de défense : esquive (DEX)
+
+77
+
+Sorts
+Poursuite
+Famille
+
+Sort -> amélioration -> nature
+
+Prérequis
+A. nature
+
+2
+
+Condition : connaissance de la cible
+Incantation : 0 sec
+
+Recharge : 4 heures
+
+Description
+
+Durée
+
+Votre connexion aux éléments vous permette
+de localiser n’importe qui sur la planète.
+Choisissez une cible. Vous savez précisément
+où se trouve votre cible.
+1 heure
+
+Révélation
+Famille
+
+Sort -> amélioration -> nature
+
+Effet
+
+Prérequis
+
+Condition : 18 PER
+Incantation : 0 sec
+
+Recharge : 10 min
+
+Description
+
+Vos connaissances topographiques vous
+donnent l’aptitude de révéler le terrain devant
+vous d’un coup d’œil.
+Vous révélez une parcelle de terrain de 20m² a
+une distance maximale de 100 mètres. Révèle
+les
+pièges
+et
+les
+personnages
+approximativement.
+
+Effet
+
+78
+
+Sens à l’affut
+Famille
+
+Sort -> amélioration -> nature
+
+Prérequis
+A. nature
+
+4
+
+Condition : aucune
+Incantation : 0 sec
+
+Recharge : 150 sec
+
+Description
+
+Durée
+
+Vos sens sont temporairement plus aiguisées,
+rien ne vous échappe.
++2 à la perception. +1 au jet de sauvegarde. +1
+à l’initiative.
+30 sec
+
+Silence
+Famille
+
+Sort -> amélioration -> physique
+
+Effet
+
+Prérequis
+
+Condition : aucune
+Incantation : 0 sec
+
+Recharge : 200 sec
+
+Description
+Effet
+
+Vous vous déplacer sans aucun bruit.
+Réduit les chances d’être détecté lors de
+mouvements.
+1 min
+
+Durée
+
+Comment jouer
+Le taliste est la classe de support ayant la plus grande versatilité mais le moins d’efficacité en
+combat. Il est donc nécessaire pour lui d’être bien entourer et d’éviter les combats. Un taliste
+attentif au roleplay pourra être d’une grande utilité pour son groupe.
+
+79
+
+Technomancien
+Histoire
+
+11
+
+Les Technomancien sont des ingénieurs formés à la fois à la magie et aux
+technologies. Avant tout utile lors de crises naturelles, d’accident majeur ou pour accélérer le
+processus de colonisation. Leur double diplôme leur permet d’opérer sur de nombreux
+terrain. Si bien même que certains décident d’aller au front, où leur aide peut être d’une
+grande utilité pour stopper l’adversaire dans son élan. Ils contribuent aussi, plus
+discrètement, à la destruction et sécurisation des informations. Les technomanciens sont
+toujours un élément de surprise, faisant regretter de ne pas les avoir pris en compte.
+
+11
+
+Image: https://www.pinterest.fr/pin/492299802990469266/?lp=true
+
+80
+
+Caractéristiques
+Nom :
+
+Classe : technomancien
+
+Vie
+
+30
+
+Vitesse
+
+6
+
+Affinités
+A. Dist
+
+2
+
+A. CAC
+
+0
+
+A. Mag
+
+2
+
+A. altération
+
+4
+
+Statistiques
+For
+
+9
+
+Dex
+
+11
+
+Int
+
+14
+
+Per
+
+12
+
+Pre
+
+8
+
+Cha
+
+14
+
+Équipements
+Arme
+
+Pistolet
+
+Armures
+
+Implant
+neural
+militaire, drone de
+combat
+1x kit de soins, 1x
+bombe IEM
+
+Consommable
+
+Compétences
+Ingénieur
+Hackeur
+Sorts
+Brouillage
+Void
+
+81
+
+Overclock
+Vol de données
+
+82
+
+Description des objets et compétence
+Kit de soins : rends 15 PV
+Grenade IEM : désactive les bonus des exosquelettes et stoppe tous les
+appareils électriques dans un rayon de 10 mètres pendant 20 sec.
+Ingénieur : permets de réparer les dégâts mécaniques et électriques et
+de construire des objets.
+Hackeur : permets d’utiliser les technologies avec une plus grande
+chance de succès et de réparer les dégâts électriques légers.
+
+Implant neural militaire
+Famille
+
+Armure -> implant -> neural
+
+Prérequis
+Compétence
+
+Hackeur ou ingénieur
+
+Bonus
++2 au jet de piratage. Réduit les chances de deadlock les mainframes.
+
+Drone de combat
+Famille
+
+Proxy -> drone
+
+Prérequis
+armure
+
+Implant -> neural
+
+Bonus
+Le drone dispose de 5 points de vie et 10 points de vitesse.
+Déplacer le drone ne prend pas de point d’action.
+Peut lancer un sort d’amélioration ou d’altération du propriétaire grâce à une manœuvre.
+-1 aux jets d’attaques.
+
+83
+
+Pistolet
+Famille
+
+Arme à distance -> arme à une main -> pistolet
+
+Prérequis
+A. dist
+
+1
+
+Attaque
+1d8
+Attaque maint 2
+1d4
+Type d’attaque : tir à distance (PRE)
+Type de défense : esquive (DEX)
+
+84
+
+Sorts
+Brouillage II
+Famille
+
+Sort -> altération
+
+Prérequis
+A. altération
+
+4
+
+Condition : 16 INT
+Incantation : 0 sec
+
+Recharge : 40 sec
+
+Description
+Effet
+
+Durée
+
+Brouille les systèmes électroniques de la cible.
+Si la cible a un exosquelette : -1 aux jets
+d’attaques
+-2 à la détection du camouflage.
+Désactive les communications à distance des
+ennemies.
+1d4 tours.
+
+Void
+Famille
+
+Sort -> altération
+
+Prérequis
+A. altération
+
+4
+
+Condition : 16 INT
+Incantation : 0 sec
+
+Recharge : 0 sec
+
+Description
+Effet
+
+Lance une EMP à faible zone au point ciblé
+Désactive les bonus des exosquelettes et stop
+tous les appareils électriques d’une cible.
+1 tour
+
+Durée
+
+85
+
+Overclock
+Famille
+
+Sort -> amélioration
+
+Prérequis
+A. magie
+Armure de la cible
+
+4
+Exosquelette
+
+Condition : 16 INT
+Incantation : 0 sec
+
+Recharge : 40 sec
+
+Description
+
+Durée
+
+Overclock l’exosquelette de la cible,
+augmentant ces capacités.
++ 1d4 à une statistique de la cible choisie par
+vous
+1 tour
+
+Vol de données
+Famille
+
+Sort -> altération
+
+Prérequis
+A. altération
+Compétence
+
+2
+Hackeur
+
+Effet
+
+Condition : 15 INT
+Incantation : 0 sec
+
+Recharge : 60 sec
+
+Description
+Effet
+
+Vol les données de la cible.
+Récupère des informations partielles sur la
+cible.
+Un meilleur jet augmente le nombre
+d’informations.
+Des jets sur la même cible révèlent de
+nouvelles informations.
+
+Comment jouer
+Le technomancien est une classe de support pouvant réduire la force
+de combat des cibles et casser les tactiques mises en place pendant que vous utilisez la
+vôtre. Le technomancien a une efficacité incontestable hors des combats, pouvant ouvrir de
+nouvelles routes et limiter les risques de glissade du groupe. Gardez à l’esprit vos sorts,
+même en dehors des combats.
+
+86
+
+HISTOIRE
+● Période clés :
+~3500 ans après la fondation : l’empire commence son expansion.
+5527 ans après la fondation : l’empire rencontre les Acéras et entre en conflit.
+5863 ans après la fondation : l’empire fédère tous les clans humains sous sa bannière.
+5974 ans après la fondation : la civilisation Acéra perd en puissance.
+9042 ans après la fondation : la paix est déclarée.
+
+● Résumer
+1. Expansion
+Après avoir posé des bases solides dans son système proche, l’empire
+commence à s’étendre dans l’espace et à rencontrer d’autres humains isolés. Menés
+par le conseil des gardiens, 5 êtres mystérieux aux traits humains, mais immortels et
+redoutablement intelligents, les humains de l’empire se montrent vite en position de
+meneur dans les premiers dialogues. Blanc, le chef du conseil se montre très présent
+lors des rencontres diplomatiques et ne cache pas sa volonté de fédérer tous les
+peuples humains.
+
+2. Guerre avec les Acéras
+Alors que l’empire continue de ce développé et devient de loin la première
+puissance géopolitique, une rencontre avec race aliens, alors très rares, ce produit.
+Les Acéras, race tellurique de grande taille, mais de faible force, n’ont aucune envie
+de parlementer avec les humains et les premiers échanges se font immédiatement
+avec les armes. Ce conflit durera longtemps et permettra à l’empire d’unir les
+humains dans une volonté de gagner cette guerre au plus vite. Les morts seront
+nombreuses de chacun des côtés et marquera l’histoire de ces deux civilisations, les
+faisant entrer au panthéon des premières races à s’être construit autour de la guerre
+interstellaire. Leurs noms, ainsi que cette guerre, seront à jamais dans les livres
+d’histoire.
+
+3. Au-delà
+Les retombés de cette guerre sont nombreux et complexes. Mais il n’est pas
+prévu que ce jeu de rôle s’étende au-delà.
+
+87
+
+● Contexte militaire
+L’empire est vaste et s’étend énormément durant cette période. De nombreuses
+stratégie et tactique apparaisse pour faire face aux Acéras. S’il convient avant chaque
+scénario ou campagne de rappeler la situation et les enjeux, il y a tout de même des
+éléments, mineurs, qui ne changent pas.
+L’armée est divisée en deux corps : spatial et tellurique. Elle est dirigée par le
+conseil ainsi que les seigneurs de guerres. Chaque un d’entre eux dispose d’une
+armada ; armée complète et autonome, tandis que le conseil en dispose d’une
+dizaine.
+Les unités militaires sont réparties en 4 catégories :
+Infanterie : unités standard de l’armée, plus faiblement entrainée, mais en grand nombre.
+Spécialiste : unités entrainer à effectuer des missions en autonomie et à effectuer des tâches
+spécifiques avec de grandes chances de succès.
+Élite : unités beaucoup plus entrainées, capables de changer à elles seules le cours de
+certaines batailles. Les unités d’élite les plus connues sont les opales, envoyés spéciaux du
+conseil afin de ravager à elles seules des cohortes entières.
+Secrète : Les unités secrètes brillent par l’absence d’information sur elles. Les rapports de
+leurs missions se faisant à l’oral et leurs entrainements n’étant pas coordonnés à l’écrit, il est
+impossible pour l’adversaire de connaitre précisément leurs méthodes. Les unités de rangs
+A-0 ont même de secret jusqu’à leurs noms, utilités et nombres.
+En plus de cela, l’armée dispose de héros. Unités autonomes dans leurs
+méthodes. Ils disposent du droit de choisir leurs missions, mais son responsable de la
+maintenance de leur matériel ainsi que de leurs formations. Ils disposent d’un rang
+qui leurs est propre : H, allant de H-1 pour les plus renommer à H-6 pour les plus
+jeunes. N’importe qui peut devenir un héros, mais peut vive assez longtemps pour
+devenir des légendes.
+
+● Contexte politique de l’empire
+Régnant suprême, le conseil des gardiens est l’instance politique la plus haute
+de l’empire. Ils sont secondés par les seigneurs de guerres : des humains s’étend
+illustrer tant par leurs capacités de meneur que de guerrier. Les castes autonomes
+rattachées à l’empire sont d’abord fédérées avec un gouverneur, pouvant dicter des
+lois en autonomie par rapport à l’empire, et, en échange d’une taxe, dispose d’une
+armée prêter par l’empire. Il n’est pas rare à cette étape que ces castes soient aussi
+leurs propres armées. Puis les castes deviennent des états, nommant un sénateur
+pour négocier les lois et les taxes avec l’empire, qui garde le dernier mot. Leurs
+défenses sont entièrement gérées par l’empire et leurs autonomies minimales, leurs
+territoires étant ceux de l’empire. Puis les états deviennent des colonies, n’ayant plus
+aucune séparation politique, économique ou militaire avec l’Empire.
+Les droits civils sont peut existants, mais la stabilité sociale et économique rend
+les citoyens suffisamment heureux, et les habitants de système encore non fédérer
+envie. Ce rayonnement aide ainsi l’empire à s’étendre de manière pacifique en ralliant
+petit à petit les peuples, faisant crouler les dirigeants sont la pression populaire.
+88
+
+● Contexte économique et technologique
+L’Empire est appuyé par une avance technologique assez faible, mais
+permettant de créer des différences notables. La téléportation d’un système à un
+autre est limitée à l’utilisation de porte cosmique. Le seul autre moyen de transport
+rapide étant le warp : raccourcissant l’espace devant soit, les vaisseaux ont, de leurs
+points de vue, une distance plus faible à parcourir. Cette méthode ne se fait pas sans
+risque : les débris impactent les vaisseaux avec force et la moindre erreur de calcul
+peut faire arriver loin du point voulu, voir dans un objet stellaire. Les voyages en warp
+sont donc limités aux parties connues de l’espace et l’exploration interstellaire est
+encore lente.
+L’humanité dispose de moyens de production permettant de contenter les
+besoins primaires de l’ensemble des citoyens, à part pour certaines civilisations
+humaines encore sous-développées. Mais les ressources nécessaires à la création de
+villes et de vaisseaux sont encore rares et son extraction périlleuse. L’humanité ne
+dispose alors que de deux planètes-monde, dont une à l’empire. Ces planètes,
+entièrement urbanisées et à l’environnement maitrisé, sont des joyaux précieux pour
+toute forme de civilisation rêvant de stabilité.
+
+● Magie
+La magie, forme d’énergie présente en abondance à travers l’espace, est une
+ressource que l’humanité est encore en train d’apprendre à maitriser. Aidé par le
+conseil, l’Empire dispose d’une compréhension accrue de cette source intarissable de
+puissance. Disposant ainsi de systèmes industriels, équiper de cristaux de pouvoir,
+des cellules de magie solide capable de réaliser des tâches calculer sont réserve
+d’être alimenté. Cette technologie permet une fusion de l’informatique et de la
+magie, mêlant ainsi les deux sciences pour les faire avancer en même temps.
+Très vite, les sorts deviennent eux aussi des programmes. Une technologie
+donnant la capacité d’apprendre aux humains des algorithmes, autrement dit des
+sorts, et leur permettant de les retenir parfaitement en mémoire. Les magus,
+scientifique spécialiste de la magie, deviennent alors des informaticiens, codant des
+sorts pour les mages qui disposent des capacités à les lancer. Les mages, eux,
+deviennent alors des machines à lancer des sorts, entrainement juste leurs affinités
+aux différentes magies et, dans certain cas, leurs talents tactiques pour le combat
+rapprocher.
+Dans ce contexte, les mages impériaux deviennent des outils des destructions
+plus redoutables encore que l’artillerie et changent le visage des champs de bataille.
+
+89
+
+LEXIQUE
+JDR : jeu de rôle, aussi appelé RPG (roleplaying game)
+MJ : maître de jeu. La personne qui raconte le scénario et joue les pnj
+PNJ : personnage non joueur. Tout personnage qui est présent dans le scénario, mais qui
+n’est pas joué. Peut désigner un personnage allié, ennemi ou neutre. Aussi appelé NPC (non
+playable character)
+Session : Unité de temps de jeu. Peut-être une soirée ou une journée entière
+Scénario : L’histoire jouée en une session.
+Campagne : Histoire jouée en plusieurs sessions. Elle peut être divisé en plusieurs scénarios
+ou être un seul scénario, mais suffisamment long pour nécessiter plusieurs sessions de jeu.
+Background : histoire d’un personnage, d’un lieu ou d’une entité.
+Lore : L’univers qui soutient le scénario.
+Méta : le fait de sortir de l’univers. Peut désigner le fait de jouer en fonction de ce qui est le
+plus rentable même si cela n’est pas adapter au personnage. Ou de prévoir ce qui va se
+passer dans le cadre d’un scénario un peu cliché et de jouer en fonction de ça. De manière
+générale, le fait d’approcher le jeu du point de vue de joueur plutôt que du personnage que
+l’on joue.
+Roleplay : jouer un rôle. Aussi appelé RP. En jdr, « jouer RP » désigne le fait de joueur son
+personnage et de prendre des décisions en approchant au mieux la psychologie de son
+personnage.
+In-game : en jeu. Tout ce qui appartient à l’univers du jeu. En opposition avec
+IRL: in real life. Ce qui se passe dans la vraie vie. Se faire couper un bras et une chose, la
+question est : IRL ou in-game ?
+dX : un dès à X faces.
+Buff : bonus temporaire d’un élément du personnage (buff de statistique, buff de
+régénération)
+Debuff : malus temporaire d’un élément du personnage (debuff de statistique)
+Clean : le fait d’enlever un debuff
+
+90
+
+DOT: damage over time. Dégât sur la durée. Type de debuff spécifique où le personnage subit
+des dégâts à intervalle de temps régulier.
+HOT: heal over time. Soins sur la durée. Type de buff spécifique où le personnage récupère
+des points de vie à intervalle de temps régulier.
+CC: crowd control. Debuff qui handicape un personnage. Ralentissement, incapacité à
+réaliser une action
+Snare : type de CC qui ralentit la cible.
+Root : type de CC qui immobilise la cible
+Sleep : type de CC qui endort la cible.
+AOE: area of effect. Zone d’effet. Utilisé pour parler d’une attaque qui a une zone d’effet ou
+peut toucher plusieurs cibles.
+
+91
+
+Note de MJ aux joueurs
+Cette note est à destination des nouveaux joueurs. Son but n’est pas d’être un tutoriel
+ou un guide, mais plus un répertoire de bonnes pratiques et une introduction à l’univers des
+jeux de rôle papier.
+Le principe le plus important à comprendre est qu’il n’y a pas de limite à vos actions.
+Contrairement à un jeu vidéo, tout peut être fait. Vous pouvez réaliser des actions
+surprenantes et inattendues, sortir des sentiers battus. Mais en contrepartie à cela, le MJ ne
+vous donnera jamais les solutions, les choix possibles. La méthode pour ouvrir la porte ne
+tient qu’à vous, si vous voulez l’ouvrir. Vous pouvez escalader ce mur, mais aussi essayer de le
+détruire avec des grenades. N’ayez pas de problèmes à demander ce qui est réalisable ou
+non. Demander l’avis de vos collègues.
+Vous pouvez préparer une aventure, même en étant un joueur. Préparer un
+personnage : sa classe, son background. Vous pouvez même créer votre personnage sur
+mesure. Demander au MJ ce qui est possible ou non. Un personnage fort ou faible peut être
+refusé pour ne pas casser le scénario, mais un personnage unique et original n’a pas de
+raison de l’être a priori. Pour plus d’informations, allez voir cette vidéo (et les autres de la
+chaîne
+si
+vous
+en
+avez
+l’envie,
+elles
+sont
+bien)
+:
+https://www.youtube.com/watch?v=C4yXwO0_J7k (anglais).
+Il y’a beaucoup de débats autour du méta. Est-il acceptable de jouer méta ? un MJ
+peut-il interdire une action purement méta ? Ces questions ne trouveront pas de réponses
+ici. Toutefois, il ne vous sera jamais reprocher de « trop jouer roleplay » et que la plupart des
+joueurs apprécient de jouer RP avec des gens eux-mêmes RP. Mais jouer RP n’est pas
+forcément évident et même un joueur vétéran ne peut parfois jouer méta sans faire exprès.
+Il y’a aussi une harmonie à trouver entre la méta et le RP. Mais essayons de voir déjà ce qui
+permet de s’approcher du RP. Essayer de prendre les décisions en fonction de ce que votre
+personnage aimerait faire. C’est acceptable de faire une action évidemment mauvaise si elle
+est logique du point de vue RP. Éviter quand même de tuer tout le monde pour du RP, mais
+mettre 1 point de dégât à un joueur qui vous a volé un gâteau en jeu est RP et assez courant.
+Le MJ donnera toujours les résultats des jets d’initiative à haute voix (sauf si le MJ est très
+méthodique et que c’est important pour le scénario). Même si, en tant que joueur, vous
+savez ce qui se passe, votre personnage n’a rien vu et rien entendu. Il est alors illogique que
+votre personnage attaque un ennemi que lui n’a pas vu par exemple. Vous verrez souvent les
+joueurs expérimenter demander : « mon personnage est-il au courant de ça ? » pour essayer
+de coller au RP au mieux. Si vous êtes séparé de votre groupe, n’oubliez pas que leurs
+personnages n’ont pas les mêmes informations que vous. Il est logique, d’un point de vue RP,
+que votre personnage prenne une décision malgré un échec au jet de perception, votre
+personnage a vu ce qu’il a vu. Pour aider à l’immersion, les joueurs peuvent s’appellent entre
+eux avec le pseudo de leurs personnages et voir imitent la voix de leur personnage, alternant
+leur vraie voie pour parler méta et leur « imitation » pour parler in-game. À vous de décider
+jusqu’où vous allez dans le RP. N’oubliez pas que certains seront plus RP, et d’autres plus
+méta, soyez donc prêt à parler entre vous pour trouver un équilibre. Ici une vidéo avec un MJ
+et
+des
+joueurs
+très
+proche
+du
+côté
+RP
+des
+JDR
+:
+https://www.youtube.com/watch?v=1ntfXLb5eFk
+(anglais)
+&
+https://www.youtube.com/watch?v=FTHu-uv673E (anglais aussi)
+
+92
+
+N’oubliez pas que le but du jeu est de s’amuser, il n’y a pas de classement donc lâcher
+vous, le MJ verra tout pour équilibrer le tout.
+Tips :
+Vous pouvez lancer plusieurs dés en même temps (s’ils sont différents), vous pouvez
+donc faire un jet d’attaque et de dégât en même temps.
+Venez avec de quoi noter, si vous oubliez des choses, le MJ peut partir du principe
+que votre personnage à oublier et ne le répétera pas.
+Quel que soit le jdr auquel vous jouez, prendre le livre de règle avec soi pour le
+feuilleter en jeu c’est toujours agréable.
+Le MJ n’est pas votre ennemie. Même s’il joue vos ennemies. Son objectif est que
+vous passiez un bon moment et que vous appréciez le scénario dans lequel il vous place.
+Toute règle est toujours discutable, on appelle ça du « homebrew ». Les règles
+présentées dans un livre de règles sont pensées pour supporter un contexte dans un univers
+particulier avec sa propre cohérence. Modifier trop de règles peut donc finir par nuire au
+réalisme et à la qualité d’une partie. Après tu finis par créer ses propres règles et c’est assez
+fatigant quand même.
+
+GLHF
+
+93
+
+

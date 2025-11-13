@@ -1,0 +1,12 @@
+name: "Drone de combat"
+category: "Proxy"
+subcategory: "drone"
+prerequisites:
+  equipment: "Implant neural"
+stats:
+  health: "5 points de vie"
+  speed: "10 points de vitesse"
+  movement: "Déplacer le drone ne prend pas de point d'action"
+  spellcasting: "Peut lancer un sort d'amélioration ou d'altération du propriétaire grâce à une manœuvre"
+  attack_penalty: "-1 aux jets d'attaques"
+description: "Drone de combat autonome contrôlé par interface neurale, capable d'assistance tactique et de lancement de sorts."

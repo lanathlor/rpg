@@ -1,0 +1,6 @@
+name: "À l'affût"
+category: "Compétence"
+subcategory: "tactique"
+effect:
+  first_action: "Peut attaquer ou lancer un sort dès le début d'un combat"
+description: "Vigilance constante et réflexes développés permettant d'agir immédiatement au début des hostilités."

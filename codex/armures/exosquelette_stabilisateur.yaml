@@ -1,0 +1,8 @@
+name: "Exosquelette stabilisateur"
+category: "Armure"
+subcategory: "exosquelette"
+prerequisites:
+  none: true
+stats:
+  conditional_bonus: "+1 PRE et +3 dégâts si immobile depuis 20 secondes"
+description: "Exosquelette de sniper avec systèmes de stabilisation avancés pour tirs de précision."

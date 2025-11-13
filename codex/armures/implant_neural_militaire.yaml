@@ -1,0 +1,10 @@
+name: "Implant neural militaire"
+category: "Armure"
+subcategory: "implant"
+type: "neural"
+prerequisites:
+  skill: "Compétence Hackeur ou Ingénieur"
+stats:
+  hacking_bonus: "+2 au jet de piratage"
+  special: "Réduit les chances de deadlock des mainframes"
+description: "Cette puce neurale de dernière génération s'interface directement avec le cortex cérébral pour augmenter les capacités cognitives de traitement informatique. Dotée de protocoles de sécurité militaires et d'algorithmes d'intrusion avancés, elle permet à son porteur de naviguer dans les systèmes informatiques ennemis avec une fluidité surhumaine. L'implant intègre également des safeguards pour éviter les pièges logiques les plus dangereux."

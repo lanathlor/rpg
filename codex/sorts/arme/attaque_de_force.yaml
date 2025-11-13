@@ -1,0 +1,25 @@
+spell_series: Attaque de force
+description_base: Prépare une attaque dévastatrice contre un adversaire proche.
+levels:
+  - level: "1"
+    name: Attaque de force
+    prerequisites:
+      stats:
+        - "FOR: 14"
+    conditions:
+      special: aucune
+      recharge: 30 secs
+    effects:
+      damage_bonus: +1d8 a la prochaine attaque physique
+  - level: "2"
+    name: Attaque de force II
+    prerequisites:
+      stats:
+        - "FOR: 18"
+    conditions:
+      special: aucune
+      recharge: 30 secs
+    effects:
+      damage_bonus: +1d8 + 4 a la prochaine attaque physique
+school: martial
+type: arme

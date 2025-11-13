@@ -1,0 +1,16 @@
+spell_series: Fendre
+description_base: Porte un coup puissant qui peut traverser plusieurs ennemis alignés.
+levels:
+  - level: '2'
+    name: Fendre
+    prerequisites:
+      affinities:
+        - 'A. CAC: 8'
+    conditions:
+      strength_required: 16
+      recharge: 40 sec
+    effects:
+      damage: +2d6+4 aux dégâts d'arme
+      special: Frappe en ligne droite, peut toucher plusieurs cibles
+school: martial
+type: arme

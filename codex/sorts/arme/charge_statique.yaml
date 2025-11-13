@@ -1,0 +1,16 @@
+spell_series: Charge statique
+description_base: Charge votre arme d'électricité statique pour augmenter sa puissance.
+levels:
+  - level: "1"
+    name: Charge statique
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[électricité]: 2"
+        type_requirement: "A.Type[arme]: 2"
+        mixed_requirement: "A.École[électricité] + A.Type[arme]: 3"
+    conditions:
+      flux_cost: 4
+    effects:
+      damage_bonus: Votre prochaine attaque physique inflige 9 dégâts supplémentaire
+school: électricité
+type: arme

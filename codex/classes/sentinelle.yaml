@@ -1,0 +1,62 @@
+name: "Sentinelle"
+description: "La sentinelle est la force défensive de l'armée. Son rôle oscille entre le contre-espionnage et la défense des points stratégiques urbains. Sa force vient principalement de sa capacité à surprendre l'adversaire par une connaissance précise du terrain et des embuscades dévastatrices. Peu de rapport ennemi parle des sentinelles, mais la disparition des unités infiltrer sur le territoire humain est un fait connu de tous."
+
+image: "https://www.pinterest.fr/pin/453667362436419874/"
+
+# Statistiques de base
+base_stats:
+  health: 55
+  speed: 7
+
+# Système de flux
+flux_system:
+  reserve: 10
+  per_turn: 3
+  recovery: 1
+
+# Affinités
+affinities:
+  distance: 2
+  melee: 6
+  arme_1_main: 2
+  schools:
+    martial: 4
+    arcane: 2
+  types:
+    arme: 6
+
+# Statistiques
+stats:
+  force: 11
+  dexterite: 16
+  constitution: 13
+  intelligence: 11
+  perception: 12
+  precision: 10
+  charisme: 8
+
+# Équipements
+equipment:
+  weapons:
+    - "Épée légère"
+    - "Épée légère"  # 2x épée légère
+  armor:
+    - "Exosquelette de vitesse"
+  consumables:
+    - name: "Kit de soins"
+      quantity: 2
+
+# Compétences
+skills:
+  - "Course"
+  - "Rôdeur"
+
+# Sorts
+spells:
+  - "Attaque multiple"
+  - "Fendre"
+  - "Lame fantôme"
+  - "Attaque des points sensibles"
+
+# Guide de jeu
+gameplay_guide: "La sentinelle est une classe de combat fondant sur son ennemie pour l'abattre avant d'être remarqué. En utilisant vos attaques efficacement, vous pouvez créer un trou dans les lignes ennemies. Mais votre placement est primordial à votre réussite."

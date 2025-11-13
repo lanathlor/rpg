@@ -1,0 +1,62 @@
+name: "Chasseur"
+description: "Spécialistes impitoyables de la chasse aux mages, les chasseurs forment l'élite anti-magique de l'Empire. Entraînés à reconnaître les signes subtils de la magie et à exploiter les faiblesses des lanceurs de sorts, ils maîtrisent un arsenal dévastateur conçu spécifiquement pour percer les défenses arcaniques. Leur fusil à pompe surchargé et leurs munitions spéciales peuvent réduire en chargie le mage le plus puissant avant même qu'il n'ait le temps d'incanter. Maîtres de la mobilité tactique et du positionnement, ils frappent vite et fort avant de disparaître dans l'ombre, laissant derrière eux des adversaires déconcertés et terrifiés."
+
+image: "https://www.pinterest.fr/pin/AVGtAwJaNDiHoiFCQYfCDSG3myCVAaMxOfqaELv1GUtj7BxiUvZgjGI/"
+
+# Statistiques de base
+base_stats:
+  health: 40
+  speed: 6
+
+# Système de flux
+flux_system:
+  reserve: 5
+  per_turn: 2
+  recovery: 1
+
+# Affinités
+affinities:
+  distance: 4
+  melee: 0
+  fusil_a_pompe: 4
+  schools:
+    balistique: 4
+  types:
+    arme: 4
+
+# Statistiques
+stats:
+  force: 13
+  dexterite: 14
+  constitution: 12
+  intelligence: 8
+  perception: 12
+  precision: 11
+  charisme: 10
+
+# Équipements
+equipment:
+  weapons:
+    - "Fusil à pompe surchargé"
+  armor:
+    - "Exosquelette de traque"
+  consumables:
+    - name: "Kit de soins"
+      quantity: 1
+    - name: "Fléchette anti-magie"
+      quantity: 1
+
+# Compétences
+skills:
+  - "Armure de magie"
+  - "Vue des arcanes"
+
+# Sorts
+spells:
+  - "Cartouche de shrapnel augmentée"
+  - "Plombs à haute vélocité"
+  - "Tir à la tête"
+  - "Roulade"
+
+# Guide de jeu
+gameplay_guide: "Le chasseur est une classe capable de fournir d'énormes dégâts en peu de temps. La combinaison de « Cartouche de shrapnel augmentée » et « Plombs à haute vélocité » est la solution à bien des problèmes. Sa survie dépend de sa capacité à se replacer correctement sur le terrain."

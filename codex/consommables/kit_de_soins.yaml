@@ -1,0 +1,7 @@
+name: "Kit de soins"
+category: "Consommable"
+subcategory: "médical"
+effect:
+  healing: "15 PV"
+  usage: "action simple"
+description: "Trousse de premiers secours contenant bandages, antiseptiques et stimulants permettant de soigner rapidement les blessures."

@@ -1,0 +1,7 @@
+name: "Expert des terrains"
+category: "Compétence"
+subcategory: "survie"
+effect:
+  terrain_bonus: "Moins handicapé sur les terrains complexes et accidentés"
+  movement_bonus: "Handicaps aux jets de déplacement réduits de 2"
+description: "Expérience approfondie des environnements difficiles permettant de naviguer efficacement sur tout type de terrain."

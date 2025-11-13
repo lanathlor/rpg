@@ -1,0 +1,16 @@
+spell_series: Tir de barrage
+description_base: Effectue une salve de tirs rapides sur une zone.
+levels:
+  - level: '1'
+    name: Tir de barrage
+    prerequisites:
+      affinities:
+        - 'A. balistique: 6'
+    conditions:
+      special: aucune
+      recharge: 35 sec
+    effects:
+      damage: +4d4+2 aux dégâts d'arme
+      special: Zone d'effet 3x3m
+school: balistique
+type: arme

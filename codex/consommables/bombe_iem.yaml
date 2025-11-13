@@ -1,0 +1,9 @@
+name: "Bombe IEM"
+category: "Consommable"
+subcategory: "technologique"
+effect:
+  emp_effect: "Désactive les bonus des exosquelettes et stoppe tous les appareils électriques"
+  area: "10 mètres de rayon"
+  duration: "20 secondes"
+  usage: "action d'attaque"
+description: "Impulsion électromagnétique qui neutralise temporairement tous les équipements électroniques dans la zone d'effet."

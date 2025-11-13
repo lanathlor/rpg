@@ -1,0 +1,16 @@
+spell_series: Cartouche de shrapnel augmentée
+description_base: Tire un projectile qui explose en touchant sa cible.
+levels:
+  - level: "1"
+    name: Cartouche de shrapnel augmentée
+    prerequisites:
+      affinities:
+        - "A. balistique: 6"
+    conditions:
+      special: aucune
+      recharge: 20 sec
+    effects:
+      damage: 1d6+2 dans un rayon de 2m autour de l'impact
+      area_effect: true
+school: balistique
+type: arme

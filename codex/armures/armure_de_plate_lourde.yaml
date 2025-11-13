@@ -1,0 +1,9 @@
+name: "Armure de plate lourde"
+category: "Armure"
+subcategory: "plate"
+prerequisites:
+  stat: "FOR 14"
+stats:
+  protection_bonus: "+3 scores de protection à distance"
+  inventory_bonus: "+1 emplacement de consommable"
+description: "Armure complète en plaques lourdes, offrant une protection maximale et des compartiments de stockage intégrés."
