@@ -23,7 +23,7 @@ affinities:
     martial: 4
     quantique: 2
   types:
-    arme: 6
+    arme: 5
 
 # Statistiques
 stats:

@@ -1,6 +1,7 @@
 name: "Cristal de mana"
 category: "Consommable"
 subcategory: "quantotechnique"
+cost: "800 crédits"
 effect:
   spell_enhancement: "Annule le temps de recharge du prochain sort joué"
   usage: "action simple"

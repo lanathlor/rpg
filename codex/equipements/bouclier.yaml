@@ -1,6 +1,7 @@
 name: "Bouclier"
 category: "Armure"
 subcategory: "bouclier"
+cost: "600 crédits"
 prerequisites:
   stat: "FOR 14"
 stats:

@@ -2,6 +2,7 @@ name: "Fusil de sniper"
 category: "Arme à distance"
 subcategory: "arme à deux mains"
 type: "sniper"
+cost: "2200 crédits"
 prerequisites:
   affinity: "A. sniper 1"
 stats:

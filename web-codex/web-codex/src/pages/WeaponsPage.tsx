@@ -237,6 +237,11 @@ export function WeaponsPage() {
                   {weapon.stats.range && (
                     <div><strong>Portée:</strong> {weapon.stats.range}</div>
                   )}
+                  {weapon.cost && (
+                    <div className="font-medium text-green-600 dark:text-green-400">
+                      <strong>Coût:</strong> {weapon.cost}
+                    </div>
+                  )}
                 </div>
               </div>
             </CardContent>

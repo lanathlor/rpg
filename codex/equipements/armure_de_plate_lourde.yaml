@@ -1,6 +1,7 @@
 name: "Armure de plate lourde"
 category: "Armure"
 subcategory: "plate"
+cost: "1200 crédits"
 prerequisites:
   stat: "FOR 14"
 stats:

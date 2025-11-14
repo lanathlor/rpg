@@ -180,6 +180,23 @@ export function ConsumableDetail({ consumable }: ConsumableDetailProps) {
           )}
         </CardContent>
       </Card>
+
+      {/* Cost */}
+      {consumable.cost && (
+        <>
+          <Separator />
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-lg">Coût</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="text-lg font-medium">
+                {consumable.cost}
+              </div>
+            </CardContent>
+          </Card>
+        </>
+      )}
     </div>
   )
 }

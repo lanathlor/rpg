@@ -47,7 +47,9 @@
       "Bash(rg:*)",
       "Bash(files=\"/home/lanath/Work/masterMonkey/rpg/rpg/rules/08_histoire.md /home/lanath/Work/masterMonkey/rpg/rpg/rules/06_systeme_de_mana.md /home/lanath/Work/masterMonkey/rpg/rpg/rules/00_introduction.md /home/lanath/Work/masterMonkey/rpg/rpg/rules/02_combat.md /home/lanath/Work/masterMonkey/rpg/rpg/rules/09_lexique.md /home/lanath/Work/masterMonkey/rpg/rpg/CLAUDE.md\")",
       "Bash(do echo \"=== Processing $file ===\")",
-      "Bash(echo:*)"
+      "Bash(echo:*)",
+      "Bash(python:*)",
+      "Bash(kill:*)"
     ],
     "deny": [],
     "ask": []

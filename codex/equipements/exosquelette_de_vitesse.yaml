@@ -1,6 +1,7 @@
 name: "Exosquelette de vitesse"
 category: "Armure"
 subcategory: "exosquelette"
+cost: "2200 crédits"
 prerequisites:
   stat: "DEX 12"
 stats:

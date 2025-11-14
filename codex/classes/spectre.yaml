@@ -16,7 +16,7 @@ flux_system:
 
 # Affinités
 affinities:
-  distance: 6
+  distance: 5
   melee: 4
   sniper: 2
   schools:

@@ -6,6 +6,8 @@ levels:
     prerequisites:
       affinities:
         école_requirement: "A.École[balistique]: 8"
+        type_requirement: "A.Type[arme]: 8"
+        mixed_requirement: "A.École[balistique] + A.Type[arme]: 10"
     conditions:
       perception_required: 16
     recharge_time: "45 sec"

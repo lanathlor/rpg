@@ -2,6 +2,7 @@ name: "Épée lourde"
 category: "Arme de corps à corps"
 subcategory: "2 mains"
 type: "épées"
+cost: "800 crédits"
 prerequisites:
   affinity: "A. CAC 6"
 stats:

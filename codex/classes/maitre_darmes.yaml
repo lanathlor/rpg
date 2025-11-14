@@ -19,10 +19,10 @@ affinities:
   distance: 0
   melee: 8
   schools:
-    martial: 6
+    martial: 5
     quantique: 2
   types:
-    arme: 6
+    arme: 5
     amelioration: 2
 
 # Statistiques

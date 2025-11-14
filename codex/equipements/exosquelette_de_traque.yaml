@@ -1,6 +1,7 @@
 name: "Exosquelette de traque"
 category: "Armure"
 subcategory: "exosquelette"
+cost: "2800 crédits"
 prerequisites:
   stat: "DEX 14"
 stats:

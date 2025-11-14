@@ -1,6 +1,7 @@
 name: "Exosquelette de combat"
 category: "Armure"
 subcategory: "exosquelette"
+cost: "2500 crédits"
 prerequisites:
   stat: "FOR 12"
 stats:

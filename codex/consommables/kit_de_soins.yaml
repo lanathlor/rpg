@@ -1,6 +1,7 @@
 name: "Kit de soins"
 category: "Consommable"
 subcategory: "médical"
+cost: "120 crédits"
 effect:
   healing: "15 PV"
   usage: "action simple"

@@ -1,6 +1,7 @@
 name: "Bombe IEM"
 category: "Consommable"
 subcategory: "technologique"
+cost: "500 crédits"
 effect:
   emp_effect: "Désactive les bonus des exosquelettes et stoppe tous les appareils électriques"
   area: "10 mètres de rayon"

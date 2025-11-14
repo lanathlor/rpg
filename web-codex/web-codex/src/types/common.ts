@@ -3,6 +3,7 @@ export interface BaseItem {
   description?: string
   category?: string
   subcategory?: string
+  cost?: string
 }
 
 export interface Prerequisites {

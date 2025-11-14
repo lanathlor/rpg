@@ -273,6 +273,11 @@ export function EquipmentsPage() {
                   {armor.stats.armor_value && (
                     <div><strong>Valeur d'armure:</strong> {armor.stats.armor_value}</div>
                   )}
+                  {armor.cost && (
+                    <div className="font-medium text-green-600 dark:text-green-400">
+                      <strong>Coût:</strong> {armor.cost}
+                    </div>
+                  )}
                 </div>
               </div>
             </CardContent>

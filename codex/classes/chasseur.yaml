@@ -16,11 +16,11 @@ flux_system:
 
 # Affinités
 affinities:
-  distance: 4
+  distance: 3
   melee: 0
   fusil_a_pompe: 4
   schools:
-    balistique: 4
+    balistique: 6
   types:
     arme: 4
 

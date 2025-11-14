@@ -19,9 +19,9 @@ affinities:
   distance: 2
   melee: 0
   schools:
-    electricite: 4
+    electricite: 3
   types:
-    alteration: 4
+    alteration: 3
     amelioration: 2
 
 # Statistiques

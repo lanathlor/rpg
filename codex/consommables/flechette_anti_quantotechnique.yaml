@@ -1,6 +1,7 @@
 name: "Fléchette anti-quantotechnique"
 category: "Consommable"
 subcategory: "tactique"
+cost: "400 crédits"
 effect:
   spell_block: "Empêche une cible de lancer des sorts"
   exception: "Hors amélioration d'attaque et attaque d'arme"

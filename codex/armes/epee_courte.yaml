@@ -2,6 +2,7 @@ name: "Épée courte"
 category: "Arme de corps à corps"
 subcategory: "1 main"
 type: "épées"
+cost: "150 crédits"
 prerequisites:
   affinity: "A. CAC 1"
 stats:

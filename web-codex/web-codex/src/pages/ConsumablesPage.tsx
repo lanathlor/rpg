@@ -183,6 +183,11 @@ export function ConsumablesPage() {
                 <div className="text-sm">
                   <strong>Effets:</strong> {getEffectPreview(consumable)}
                 </div>
+                {consumable.cost && (
+                  <div className="text-sm font-medium text-green-600 dark:text-green-400">
+                    <strong>Coût:</strong> {consumable.cost}
+                  </div>
+                )}
               </div>
             </CardContent>
           </Card>

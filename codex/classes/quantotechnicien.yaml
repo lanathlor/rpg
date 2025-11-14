@@ -20,11 +20,11 @@ affinities:
   melee: 2
   schools:
     givre: 5
-    bioquantotechnique: 3
+    bioquantotechnique: 2
   types:
-    destruction: 5
-    alteration: 3
-    deplacement: 3
+    destruction: 4
+    alteration: 2
+    deplacement: 2
 
 # Statistiques
 stats:

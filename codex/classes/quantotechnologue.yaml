@@ -22,7 +22,7 @@ affinities:
     bioquantotechnique: 4
     feu: 2
   types:
-    alteration: 4
+    alteration: 3
     amelioration: 3
     destruction: 2
 

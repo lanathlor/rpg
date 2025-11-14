@@ -19,10 +19,10 @@ affinities:
   distance: 2
   melee: 0
   schools:
-    bioquantotechnique: 4
+    bioquantotechnique: 3
     quantique: 3
   types:
-    alteration: 4
+    alteration: 3
     amelioration: 3
 
 # Statistiques

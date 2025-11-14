@@ -16,7 +16,7 @@ flux_system:
 
 # Affinités
 affinities:
-  distance: 8
+  distance: 6
   melee: 2
   schools:
     balistique: 4
@@ -26,7 +26,7 @@ affinities:
 
 # Statistiques
 stats:
-  force: 10
+  force: 12
   dexterite: 8
   constitution: 12
   intelligence: 11

@@ -1,6 +1,7 @@
 name: "Tunique"
 category: "Armure légère"
 subcategory: "tissu"
+cost: "50 crédits"
 prerequisites:
   none: true
 stats:

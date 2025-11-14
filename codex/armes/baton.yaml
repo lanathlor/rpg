@@ -2,6 +2,7 @@ name: "Bâton"
 category: "Arme de corps à corps"
 subcategory: "2 mains"
 type: "bâton"
+cost: "50 crédits"
 prerequisites:
   affinity: "A. CAC 1"
 stats:

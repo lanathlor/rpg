@@ -2,6 +2,7 @@ name: "Pistolet"
 category: "Arme à distance"
 subcategory: "arme à une main"
 type: "pistolet"
+cost: "300 crédits"
 prerequisites:
   affinity: "A. dist 1"
 stats:

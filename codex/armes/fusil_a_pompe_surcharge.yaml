@@ -2,6 +2,7 @@ name: "Fusil à pompe surchargé"
 category: "Arme à distance"
 subcategory: "arme à deux mains"
 type: "fusil à pompe"
+cost: "1800 crédits"
 prerequisites:
   affinity: "A. fusil à pompe 2"
 stats:

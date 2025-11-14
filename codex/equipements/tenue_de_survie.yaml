@@ -1,6 +1,7 @@
 name: "Tenue de survie"
 category: "Armure légère"
 subcategory: "cuir"
+cost: "400 crédits"
 prerequisites:
   stat: "Vie <= 35"
 stats:

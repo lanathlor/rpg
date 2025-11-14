@@ -2,6 +2,7 @@ name: "Fusil mitrailleur"
 category: "Arme à distance"
 subcategory: "arme à deux mains"
 type: "mitrailleur"
+cost: "1500 crédits"
 prerequisites:
   affinity: "A. dist 6"
 stats:

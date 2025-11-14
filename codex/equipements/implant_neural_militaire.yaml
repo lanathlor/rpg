@@ -2,6 +2,7 @@ name: "Implant neural militaire"
 category: "Augmentation"
 subcategory: "implant"
 type: "neural"
+cost: "4000 crédits"
 prerequisites:
   skill: "Compétence Hackeur ou Ingénieur"
 stats:

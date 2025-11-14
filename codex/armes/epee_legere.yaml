@@ -2,6 +2,7 @@ name: "Épée légère"
 category: "Arme de corps à corps"
 subcategory: "1 main"
 type: "épées"
+cost: "200 crédits"
 prerequisites:
   affinity: "A. CAC 2"
 stats:

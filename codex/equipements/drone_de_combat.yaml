@@ -1,6 +1,7 @@
 name: "Drone de combat"
 category: "Proxy"
 subcategory: "drone"
+cost: "3500 crédits"
 prerequisites:
   equipment: "Implant neural"
 stats:

@@ -1,6 +1,7 @@
 name: "Flash"
 category: "Consommable"
 subcategory: "tactique"
+cost: "150 crédits"
 effect:
   blind_effect: "Aveugle les personnages proches du centre d'explosion"
   duration: "Jusqu'à leur tour"

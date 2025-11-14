@@ -1,6 +1,7 @@
 name: "Exosquelette stabilisateur"
 category: "Armure"
 subcategory: "exosquelette"
+cost: "2600 crédits"
 prerequisites:
   none: true
 stats:
