@@ -1,14 +1,14 @@
-# Technomancien
+# Technologue
 
 ## Histoire
 
-Les Technomancien sont des ingénieurs formés à la fois à la magie et aux technologies. Avant tout utile lors de crises naturelles, d'accident majeur ou pour accélérer le processus de colonisation. Leur double diplôme leur permet d'opérer sur de nombreux terrain. Si bien même que certains décident d'aller au front, où leur aide peut être d'une grande utilité pour stopper l'adversaire dans son élan. Ils contribuent aussi, plus discrètement, à la destruction et sécurisation des informations. Les technomanciens sont toujours un élément de surprise, faisant regretter de ne pas les avoir pris en compte.
+Les Technologues sont des ingénieurs formés à la fois à la quantotechnique et aux technologies. Avant tout utile lors de crises naturelles, d'accident majeur ou pour accélérer le processus de colonisation. Leur double diplôme leur permet d'opérer sur de nombreux terrain. Si bien même que certains décident d'aller au front, où leur aide peut être d'une grande utilité pour stopper l'adversaire dans son élan. Ils contribuent aussi, plus discrètement, à la destruction et sécurisation des informations. Les technologues sont toujours un élément de surprise, faisant regretter de ne pas les avoir pris en compte.
 
 **Image:** https://www.pinterest.fr/pin/492299802990469266/?lp=true
 
 ## Caractéristiques
 
-**Classe :** technomancien
+**Classe :** technologue
 
 ### Statistiques de base
 - **Vie :** 30
@@ -86,4 +86,4 @@ Les Technomancien sont des ingénieurs formés à la fois à la magie et aux tec
 
 
 ## Comment jouer
-Le technomancien est une classe de support pouvant réduire la force de combat des cibles et casser les tactiques mises en place pendant que vous utilisez la vôtre. Le technomancien a une efficacité incontestable hors des combats, pouvant ouvrir de nouvelles routes et limiter les risques de glissade du groupe. Gardez à l'esprit vos sorts, même en dehors des combats.
+Le technologue est une classe de support pouvant réduire la force de combat des cibles et casser les tactiques mises en place pendant que vous utilisez la vôtre. Le technologue a une efficacité incontestable hors des combats, pouvant ouvrir de nouvelles routes et limiter les risques de glissade du groupe. Gardez à l'esprit vos sorts, même en dehors des combats.

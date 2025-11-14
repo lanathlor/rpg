@@ -33,6 +33,7 @@ import {
   Hand
 } from 'lucide-react'
 import { useClasses, useSpells, useWeapons, useArmors, useSkills, useConsumables } from '@/lib/dataProvider'
+import { getSchoolIcon, getSchoolColor, getTypeIcon } from '@/lib/schoolUtils'
 import { SpellDetail } from '@/components/SpellDetail'
 import { WeaponDetail } from '@/components/WeaponDetail'
 import { ArmorDetail } from '@/components/ArmorDetail'
@@ -70,29 +71,6 @@ const getHighestStat = (characterClass: any) => {
   )
 }
 
-const getSchoolIcon = (school: string) => {
-  switch (school.toLowerCase()) {
-    case 'feu': return <Flame className="h-4 w-4 text-red-500" />
-    case 'electricite': return <Zap className="h-4 w-4 text-yellow-500" />
-    case 'givre': return <Sparkles className="h-4 w-4 text-blue-500" />
-    case 'biomagie': return <Users className="h-4 w-4 text-green-500" />
-    case 'arcane': return <Sparkles className="h-4 w-4 text-purple-500" />
-    case 'balistique': return <Target className="h-4 w-4 text-gray-500" />
-    default: return <Sparkles className="h-4 w-4" />
-  }
-}
-
-const getTypeIcon = (type: string) => {
-  switch (type.toLowerCase()) {
-    case 'destruction': return <Flame className="h-4 w-4 text-red-500" />
-    case 'alteration': return <Zap className="h-4 w-4 text-blue-500" />
-    case 'amelioration': return <Sparkles className="h-4 w-4 text-green-500" />
-    case 'deplacement': return <Target className="h-4 w-4 text-cyan-500" />
-    case 'protection': return <Shield className="h-4 w-4 text-purple-500" />
-    case 'arme': return <Sword className="h-4 w-4 text-orange-500" />
-    default: return <Sparkles className="h-4 w-4" />
-  }
-}
 
 export function ClassDetailPage() {
   const { className } = useParams<{ className: string }>()
@@ -325,7 +303,7 @@ export function ClassDetailPage() {
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <Sparkles className="h-5 w-5 text-purple-500" />
-            Affinités magiques
+            Affinités quantotechniques
           </CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
@@ -352,7 +330,7 @@ export function ClassDetailPage() {
             {/* Schools */}
             {characterClass.affinities.schools && (
               <div>
-                <h4 className="font-medium text-sm mb-3">Écoles de magie</h4>
+                <h4 className="font-medium text-sm mb-3">Écoles de quantotechnique</h4>
                 <div className="space-y-2">
                   {Object.entries(characterClass.affinities.schools).map(([school, level]) => (
                     <div key={school} className="flex items-center justify-between">
@@ -370,7 +348,7 @@ export function ClassDetailPage() {
             {/* Types */}
             {characterClass.affinities.types && (
               <div>
-                <h4 className="font-medium text-sm mb-3">Types de magie</h4>
+                <h4 className="font-medium text-sm mb-3">Types de quantotechnique</h4>
                 <div className="space-y-2">
                   {Object.entries(characterClass.affinities.types).map(([type, level]) => (
                     <div key={type} className="flex items-center justify-between">

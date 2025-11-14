@@ -1,0 +1,38 @@
+spell_series: Poigne de force
+description_base: Génère une force kinesthésique invisible pour manipuler ou écraser.
+levels:
+  - level: "1"
+    name: Poigne de force
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[kinesthésique]: 2"
+        type_requirement: "A.Type[destruction]: 2"
+        mixed_requirement: "A.École[kinesthésique] + A.Type[destruction]: 3"
+    conditions:
+      intelligence_required: 16
+      flux_cost: 4
+    effects:
+      specials:
+        - "Immobilise une cible pendant 2 tours"
+        - "Inflige 1d4 dégâts de compression chaque tour"
+        - "Peut manipuler des objets à distance (jusqu'à 50kg)"
+    duration: 2 tours
+  - level: "2"
+    name: Poigne de force destructrice
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[kinesthésique]: 3"
+        type_requirement: "A.Type[destruction]: 3"
+        mixed_requirement: "A.École[kinesthésique] + A.Type[destruction]: 5"
+    conditions:
+      intelligence_required: 18
+      flux_cost: 7
+    effects:
+      specials:
+        - "Immobilise jusqu'à 2 cibles pendant 3 tours"
+        - "Inflige 2d4 dégâts de compression chaque tour"
+        - "Peut soulever et projeter des objets de jusqu'à 200kg"
+        - "Peut briser les armures légères (réduit la protection de 2 points)"
+    duration: 3 tours
+school: kinesthésique
+type: destruction

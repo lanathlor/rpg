@@ -5,9 +5,9 @@ levels:
     name: Blink
     prerequisites:
       affinities:
-        école_requirement: "A.École[arcane]: 3"
+        école_requirement: "A.École[quantique]: 3"
         type_requirement: "A.Type[amélioration]: 3"
-        mixed_requirement: "A.École[arcane] + A.Type[amélioration]: 5"
+        mixed_requirement: "A.École[quantique] + A.Type[amélioration]: 5"
     conditions:
       intelligence_required: 18
       flux_cost: 8
@@ -17,13 +17,13 @@ levels:
     name: Blink II
     prerequisites:
       affinities:
-        école_requirement: "A.École[arcane]: 4"
+        école_requirement: "A.École[quantique]: 4"
         type_requirement: "A.Type[amélioration]: 4"
-        mixed_requirement: "A.École[arcane] + A.Type[amélioration]: 6"
+        mixed_requirement: "A.École[quantique] + A.Type[amélioration]: 6"
     conditions:
       intelligence_required: 16
       flux_cost: 10
     effects:
       teleport: Téléport a 1d4 + 2 + vitesse mètre
-school: arcane
-type: amélioration
+school: quantique
+type: amelioration

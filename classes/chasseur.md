@@ -2,7 +2,7 @@
 
 ## Histoire
 
-Les chasseurs se sont spécialisés dans la traque des unités magiques. Leur entrainement consiste principalement au rudiment des armes à feu, ainsi que la magie afin de retourner ces armes contre leurs utilisateurs. Ils sont devenus une unité clé dans les combats de guérilla. Capables d'anéantir les mages sans prendre de risque, ils sont appelés en priorité lors de conflit impliquant de la magie.
+Les chasseurs se sont spécialisés dans la traque des unités quantotechniques. Leur entrainement consiste principalement au rudiment des armes à feu, ainsi que la quantotechnique afin de retourner ces armes contre leurs utilisateurs. Ils sont devenus une unité clé dans les combats de guérilla. Capables d'anéantir les Quantotechniciens sans prendre de risque, ils sont appelés en priorité lors de conflit impliquant de la quantotechnique.
 
 **Image :** https://www.pinterest.fr/pin/AVGtAwJaNDiHoiFCQYfCDSG3myCVAaMxOfqaELv1GUtj7BxiUvZgjGI/
 
@@ -45,11 +45,11 @@ Les chasseurs se sont spécialisés dans la traque des unités magiques. Leur en
 
 ### Consommables
 - 1x kit de soins
-- 1x fléchette anti-magie
+- 1x fléchette anti-quantotechnique
 
 ### Compétences
-- **Armure de magie**
-- **Vue des arcanes**
+- **Armure de quantotechnique**
+- **Vue des quantiques**
 
 ## Sorts
 - Cartouche de shrapnel augmentée
@@ -61,9 +61,9 @@ Les chasseurs se sont spécialisés dans la traque des unités magiques. Leur en
 
 ### Objets
 - **Kit de soins :** rends 15 PV
-- **Fléchette anti-magie :** empêche une cible de lancer des sorts (hors amélioration d'attaque et attaque d'arme) pendant 2 tours
-- **Armure de magie :** +2 a la protection des sorts
-- **Vue des arcanes :** augmente les chances de voir des éléments liés à la magie
+- **Fléchette anti-quantotechnique :** empêche une cible de lancer des sorts (hors amélioration d'attaque et attaque d'arme) pendant 2 tours
+- **Armure de quantotechnique :** +2 a la protection des sorts
+- **Vue des quantiques :** augmente les chances de voir des éléments liés à la quantotechnique
 
 ### Exosquelette de traque
 - **Famille :** Armure → exosquelette

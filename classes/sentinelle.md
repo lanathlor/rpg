@@ -23,7 +23,7 @@ La sentinelle est la force défensive de l'armée. Son rôle oscille entre le co
 - **A. Dist :** 2
 - **A. CAC :** 6
 - **A.École[martial] :** 4
-- **A.École[arcane] :** 2
+- **A.École[quantique] :** 2
 - **A.Type[arme] :** 6
 - **A. arme 1 main :** 2
 

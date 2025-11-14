@@ -1,6 +1,6 @@
 spell_series: Zap
 school: électricité
-type: altération
+type: alteration
 description_base: Paralyse la cible avec un choc électrique.
 levels:
   - level: "1"

@@ -1,0 +1,38 @@
+spell_series: Distorsion gravitationnelle
+description_base: Altère la gravité locale pour manipuler le poids et les mouvements.
+levels:
+  - level: "1"
+    name: Distorsion gravitationnelle
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[gravitonique]: 3"
+        type_requirement: "A.Type[altération]: 2"
+        mixed_requirement: "A.École[gravitonique] + A.Type[altération]: 4"
+    conditions:
+      intelligence_required: 17
+      flux_cost: 5
+    effects:
+      specials:
+        - "Réduit le poids d'une cible de 50% (double sa vitesse de déplacement)"
+        - "Ou augmente le poids d'un ennemi de 100% (divise sa vitesse par 2)"
+        - "Affect la trajectoire des projectiles dans la zone"
+    duration: 3 tours
+  - level: "2"
+    name: Distorsion gravitationnelle majeure
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[gravitonique]: 4"
+        type_requirement: "A.Type[altération]: 3"
+        mixed_requirement: "A.École[gravitonique] + A.Type[altération]: 6"
+    conditions:
+      intelligence_required: 19
+      flux_cost: 8
+    effects:
+      specials:
+        - "Peut créer une zone de gravité nulle (lévitation) ou triple gravité"
+        - "Affect jusqu'à 3 cibles dans un rayon de 6m"
+        - "Peut faire léviter des objets de jusqu'à 500kg"
+        - "Dévie automatiquement tous les projectiles"
+    duration: 4 tours
+school: gravitonique
+type: alteration

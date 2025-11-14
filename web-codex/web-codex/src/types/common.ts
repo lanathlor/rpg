@@ -9,6 +9,7 @@ export interface Prerequisites {
   affinity?: string
   stat?: string
   special?: string
+  equipment?: string  // For drone/proxy items
   affinities?: {
     école_requirement?: string
     type_requirement?: string
@@ -23,9 +24,9 @@ export interface AffinityStats {
   schools?: {
     feu?: number
     givre?: number
-    biomagie?: number
+    'bio-quantotechnique'?: number
     electricite?: number
-    arcane?: number
+    quantique?: number
   }
   types?: {
     destruction?: number
@@ -40,7 +41,7 @@ export interface AffinityStats {
 export type CodexCategory =
   | 'sorts'
   | 'armes'
-  | 'armures'
+  | 'equipements'
   | 'classes'
   | 'competences'
   | 'consommables'

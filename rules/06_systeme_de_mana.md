@@ -1,7 +1,7 @@
 # Système de Mana et Conversion du Flux
 
-La magie dans cet univers repose sur la manipulation d’une énergie fondamentale : le **Flux**.
-Chaque sort, chaque effet magique et chaque altération reposent sur la capacité d’un personnage à **mobiliser**, **convertir**, puis **stabiliser** cette énergie.
+L'quantotechnique dans cet univers repose sur la manipulation d'une énergie fondamentale : le **Flux**.
+Chaque sort, chaque effet quantotechnique et chaque altération reposent sur la capacité d’un personnage à **mobiliser**, **convertir**, puis **stabiliser** cette énergie.
 
 Ce document décrit le fonctionnement complet de cette ressource.
 
@@ -9,7 +9,7 @@ Ce document décrit le fonctionnement complet de cette ressource.
 
 # 1. Réserve de Flux
 
-La **Réserve de Flux** est la quantité maximale d’énergie magique qu’un personnage peut contenir à un instant donné.
+La **Réserve de Flux** est la quantité maximale d’énergie quantotechnique qu’un personnage peut contenir à un instant donné.
 
 - Elle représente la capacité du corps et du système nerveux à supporter la pression énergétique.
 - Lorsqu’elle tombe à 0, un personnage ne peut plus lancer de sorts tant qu’il n’a pas récupéré.
@@ -17,7 +17,7 @@ La **Réserve de Flux** est la quantité maximale d’énergie magique qu’un p
 **Notation :**
 
 ```
-Réserve de Flux = énergie magique maximale du personnage
+Réserve de Flux = énergie quantotechnique maximale du personnage
 ```
 
 Chaque sort possède un **coût en Flux**.
@@ -71,7 +71,7 @@ Récupération Naturelle = flux regagné automatiquement à la fin du tour
 
 Elle représente :
 
-- la respiration magique,
+- la respiration quantotechnique,
 - l’équilibrage naturel des flux internes,
 - la resynchronisation avec l’environnement.
 
@@ -113,7 +113,7 @@ En cas d’interruption, le personnage perd **la moitié du flux accumulé**, ar
 
 # 5. Instabilité du Flux (Surcharge)
 
-Lorsque le flux manipulé dépasse les capacités naturelles du mage, une **Instabilité du Flux** apparaît.
+Lorsque le flux manipulé dépasse les capacités naturelles du Quantotechnicien, une **Instabilité du Flux** apparaît.
 Cela survient lorsque :
 
 - le personnage dépasse son Afflux par Tour,
@@ -125,7 +125,7 @@ Cela survient lorsque :
 - Perte de 1d4 points de Réserve de Flux
 - Sort annulé
 - Dégâts internes (1d6)
-- Pulse magique mineur (effet RP décidé par le MJ)
+- Pulse quantotechnique mineur (effet RP décidé par le MJ)
 
 La surcharge n’est jamais mortelle, mais elle limite l’abus de sorts lourds.
 
@@ -150,11 +150,21 @@ Ces éléments ne modifient **pas** le coût en flux, mais influencent :
 
 Un sort est accessible si :
 
-- l’affinité d’École est suffisante,
-- **ou** l’affinité de Type,
+- l'affinité d'École est suffisante,
+- **ou** l'affinité de Type,
 - **ou** une combinaison des deux.
 
 Voir le fichier : `03_systeme_affinites_et_types.md`.
+
+### 6.3. Disponibilité des sorts
+
+**Accès au codex :** Un personnage peut utiliser **n'importe quel sort du codex** s'il remplit les conditions d'affinité requises. Il n'y a pas de coût d'apprentissage ni de restriction de disponibilité au-delà des affinités.
+
+**Emplacements de sorts :** Chaque personnage dispose de **4 emplacements de sorts** de base. Ces emplacements déterminent combien de sorts peuvent être "préparés" et disponibles pour usage immédiat.
+
+**Changement de sorts :** En zone de repos sécurisée, un personnage peut librement échanger ses sorts préparés contre d'autres sorts du codex, tant qu'il possède les affinités requises.
+
+**Emplacements supplémentaires :** Des emplacements de sorts additionnels peuvent être débloqués au cours du jeu par l'expérience, l'équipement ou des récompenses de mission.
 
 ---
 
@@ -166,10 +176,10 @@ Voir le fichier : `03_systeme_affinites_et_types.md`.
 
 ### Vulnérabilités :
 - Les ennemis peuvent **interrompre la concentration** (dégâts, contrôle, déplacement forcé)
-- Les sorts longs créent une tension tactique : le mage doit être protégé
+- Les sorts longs créent une tension tactique : le Quantotechnicien doit être protégé
 - Seuls les sorts nécessitant concentration sont vulnérables à l'interruption
 
-Le système rend la magie puissante mais vulnérable au timing et au positionnement.
+Le système rend la quantotechnique puissante mais vulnérable au timing et au positionnement.
 
 ---
 
@@ -186,9 +196,9 @@ Hors combat, un personnage récupère l’intégralité de sa Réserve de Flux v
 
 | Élément                | Nom                     | Rôle                                          |
 | ---------------------- | ----------------------- | --------------------------------------------- |
-| Réserve de Flux        | Capacité maximale       | Détermine le total de magie disponible        |
+| Réserve de Flux        | Capacité maximale       | Détermine le total de quantotechnique disponible        |
 | Afflux par Tour        | Vitesse de mobilisation | Détermine la vitesse de préparation d’un sort |
-| Récupération Naturelle | Regain automatique      | Permet de maintenir le rythme magique         |
+| Récupération Naturelle | Regain automatique      | Permet de maintenir le rythme quantotechnique         |
 | Instabilité du Flux    | Surcharge               | Limite l’abus de sorts lourds                 |
 | Coût du sort           | —                       | Flux à atteindre pour lancer un sort          |
 
@@ -205,7 +215,7 @@ Ce système met l’accent sur :
 - la **surcharge**,
 - et le **timing tactique**.
 
-Un mage puissant n’est pas celui qui a le plus de flux,
+Un Quantotechnicien puissant n’est pas celui qui a le plus de flux,
 mais celui qui sait **le convertir au bon moment**.
 
 ---

@@ -1,4 +1,4 @@
-name: "Fléchette anti-magie"
+name: "Fléchette anti-quantotechnique"
 category: "Consommable"
 subcategory: "tactique"
 effect:
@@ -6,4 +6,4 @@ effect:
   exception: "Hors amélioration d'attaque et attaque d'arme"
   duration: "2 tours"
   usage: "action d'attaque"
-description: "Fléchette spécialisée contenant des inhibiteurs magiques pour neutraliser temporairement les lanceurs de sorts."
+description: "Fléchette spécialisée contenant des inhibiteurs quantotechniques pour neutraliser temporairement les lanceurs de sorts."

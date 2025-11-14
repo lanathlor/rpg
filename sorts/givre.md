@@ -8,7 +8,7 @@ Glace modérément la cible.
 
 ## Prérequis
 
-**A. mag :** 4
+**A. arc :** 4
 **Condition :** 16 INT
 **Incantation :** instantané
 **Recharge :** instantané

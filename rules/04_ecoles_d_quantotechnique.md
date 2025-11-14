@@ -1,7 +1,7 @@
-# Écoles de Magie
+# Écoles de Quantotechnique
 
-La magie est une **énergie potentielle fondamentale**, présente dans toute matière. Les pratiquants — appelés _canalisateurs_ — apprennent à convertir cette énergie en différentes formes physiques mesurables : chaleur, lumière, champ électromagnétique, gravité, etc.
-Chaque école correspond à une **conversion spécifique** d’énergie magique en énergie physique, biologique ou informationnelle.
+La quantotechnique est une **énergie potentielle fondamentale**, présente dans toute matière. Les pratiquants — appelés _canalisateurs_ — apprennent à convertir cette énergie en différentes formes physiques mesurables : chaleur, lumière, champ électromagnétique, gravité, etc.
+Chaque école correspond à une **conversion spécifique** d'énergie quantotechnique en énergie physique, biologique ou informationnelle.
 
 ---
 
@@ -79,7 +79,7 @@ Chaque école correspond à une **conversion spécifique** d’énergie magique 
 
 ## ☀️ Lumière — Conversion photonique stabilisée
 
-**Principe :** Conversion du mana en flux photonique cohérent contenu dans un champ photomagique.
+**Principe :** Conversion du mana en flux photonique cohérent contenu dans un champ photoquantotechnique.
 Permet la création de **murs de lumière solide** via confinement et rétro-alimentation énergétique.
 
 **Forces :**
@@ -91,7 +91,7 @@ Permet la création de **murs de lumière solide** via confinement et rétro-ali
 **Faiblesses :**
 
 - Consommation initiale élevée.
-- Vulnérable aux interférences magiques (ombre, pure).
+- Vulnérable aux interférences quantotechniques (ombre, pure).
 - Déphase sous surcharge énergétique.
 
 ---
@@ -114,7 +114,7 @@ Permet la création de **murs de lumière solide** via confinement et rétro-ali
 
 ---
 
-## 💀 Nécromancie — Conversion bioénergétique
+## 💀 Biométabolique — Conversion bioénergétique
 
 **Principe :** Manipule le champ vital des organismes : extraction, transfert ou inversion de l’énergie biologique.
 
@@ -128,18 +128,18 @@ Permet la création de **murs de lumière solide** via confinement et rétro-ali
 
 - Instabilité mentale de l’utilisateur.
 - Corruption progressive.
-- Contrecarrée par la magie de lumière.
+- Contrecarrée par la quantotechnique de lumière.
 
 ---
 
-## 💫 Arcane — Manipulation quantique
+## 💫 Quantique — Manipulation quantique
 
 **Principe :** Altération des liaisons subatomiques et états de matière (spin, charge, phase).
 
 **Forces :**
 
 - Téléportation, transmutation, altération de densité.
-- Interaction universelle avec toute autre magie.
+- Interaction universelle avec toute autre quantotechnique.
 - Annule les effets physiques sans destruction.
 
 **Faiblesses :**
@@ -150,15 +150,15 @@ Permet la création de **murs de lumière solide** via confinement et rétro-ali
 
 ---
 
-## ⚪ Pure — Manipulation du flux magique
+## ⚪ Pure — Manipulation du flux quantotechnique
 
-**Principe :** Action sur la magie elle-même : interruption, déviation, brûlure de mana, amplification.
+**Principe :** Action sur la quantotechnique elle-même : interruption, déviation, brûlure de mana, amplification.
 
 **Forces :**
 
-- Contre toute autre magie.
+- Contre toute autre quantotechnique.
 - Neutralisation de sort.
-- Annulation de flux magique.
+- Annulation de flux quantotechnique.
 
 **Faiblesses :**
 
@@ -185,7 +185,7 @@ Permet la création de **murs de lumière solide** via confinement et rétro-ali
 
 ---
 
-## 🌊 Hydromancie — Conversion fluide
+## 🌊 Hydrodynamique — Conversion fluide
 
 **Principe :** Transformation du mana en énergie contrôlant l’eau et ses états.
 
@@ -219,7 +219,7 @@ Permet la création de **murs de lumière solide** via confinement et rétro-ali
 
 ---
 
-## 🧬 Biomagie — Conversion biologique
+## 🧬 Bioquantotechnique — Conversion biologique
 
 **Principe :** Utilisation du mana pour influencer la croissance et la régénération cellulaire.
 
@@ -252,7 +252,7 @@ Permet la création de **murs de lumière solide** via confinement et rétro-ali
 
 ---
 
-## 🕰️ Chronomancie — Conversion temporelle
+## 🕰️ Chronodynamique — Conversion temporelle
 
 **Principe :** Manipulation du rythme local du temps via compression ou dilatation du flux de mana.
 
@@ -296,13 +296,13 @@ Permet la création de **murs de lumière solide** via confinement et rétro-ali
 **Faiblesses :**
 
 - Inefficace contre IA.
-- Dissipée par la magie pure.
+- Dissipée par la quantotechnique pure.
 
 ---
 
 ## ⚔️ Martial — Techniques de combat physique
 
-**Principe :** Techniques de combat rapproché développées par l'entraînement et l'expérience, n'impliquant aucune manipulation magique. Basées sur la maîtrise du corps, des armes de mêlée et de la stratégie.
+**Principe :** Techniques de combat rapproché développées par l'entraînement et l'expérience, n'impliquant aucune manipulation quantotechnique. Basées sur la maîtrise du corps, des armes de mêlée et de la stratégie.
 
 **Forces :**
 
@@ -314,7 +314,7 @@ Permet la création de **murs de lumière solide** via confinement et rétro-ali
 
 - Limitées par les capacités physiques.
 - Nécessitent un entraînement long et rigoureux.
-- Inefficaces contre certaines protections magiques.
+- Inefficaces contre certaines protections quantotechniques.
 
 ---
 

@@ -24,7 +24,7 @@ Sniper par défaut de l'armée, les spectres ont souvent pour mission d'élimine
 - **A. CAC :** 4
 - **A.École[balistique] :** 4
 - **A.École[électricité] :** 2
-- **A.École[arcane] :** 2
+- **A.École[quantique] :** 2
 - **A.Type[arme] :** 6
 - **A.Type[amélioration] :** 2
 - **A. sniper :** 2

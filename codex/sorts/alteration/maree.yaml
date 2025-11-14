@@ -1,0 +1,38 @@
+spell_series: Marée
+description_base: Manipule l'eau environnante pour créer des vagues et courants.
+levels:
+  - level: "1"
+    name: Marée
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[hydrodynamique]: 2"
+        type_requirement: "A.Type[alteration]: 2"
+        mixed_requirement: "A.École[hydrodynamique] + A.Type[alteration]: 3"
+    conditions:
+      intelligence_required: 15
+      flux_cost: 4
+    effects:
+      area: "Transforme le terrain en zone difficile (boue, eau) sur 20m²"
+      specials:
+        - "Les ennemis dans la zone subissent -2 à leurs déplacements"
+        - "Peut éteindre les flammes et refroidir les surfaces chaudes"
+    duration: 3d4 tours
+  - level: "2"
+    name: Marée destructrice
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[hydrodynamique]: 3"
+        type_requirement: "A.Type[alteration]: 3"
+        mixed_requirement: "A.École[hydrodynamique] + A.Type[alteration]: 5"
+    conditions:
+      intelligence_required: 17
+      flux_cost: 7
+    effects:
+      area: "Transforme le terrain en zone difficile sur 40m²"
+      damage: 1d4 noyade aux ennemis dans la zone chaque tour
+      specials:
+        - "Les ennemis dans la zone subissent -3 à leurs déplacements et attaques"
+        - "Peut emporter les objets légers et débris"
+    duration: 4d4 tours
+school: hydrodynamique
+type: alteration

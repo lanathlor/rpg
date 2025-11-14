@@ -1,0 +1,36 @@
+spell_series: Drain vital
+description_base: Absorbe l'énergie vitale de la cible pour se soigner.
+levels:
+  - level: "1"
+    name: Drain vital
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[biométabolique]: 2"
+        type_requirement: "A.Type[affliction]: 2"
+        mixed_requirement: "A.École[biométabolique] + A.Type[affliction]: 3"
+    conditions:
+      intelligence_required: 16
+      flux_cost: 4
+    effects:
+      damage: 1d6
+      special: "Le lanceur regagne la moitié des dégâts en PV"
+      specials:
+        - "La cible subit -1 à tous ses jets pendant 2 tours"
+  - level: "2"
+    name: Drain vital majeur
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[biométabolique]: 4"
+        type_requirement: "A.Type[affliction]: 3"
+        mixed_requirement: "A.École[biométabolique] + A.Type[affliction]: 6"
+    conditions:
+      intelligence_required: 18
+      flux_cost: 7
+    effects:
+      damage: 2d6
+      special: "Le lanceur regagne tous les dégâts en PV"
+      specials:
+        - "La cible subit -2 à tous ses jets pendant 3 tours"
+        - "Peut cibler jusqu'à 2 ennemis adjacents"
+school: biométabolique
+type: affliction

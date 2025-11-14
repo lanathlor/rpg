@@ -27,11 +27,11 @@ import type { CharacterClass } from '@/types'
 
 const getClassIcon = (className: string) => {
   const name = className.toLowerCase()
-  if (name.includes('mage')) return <Sparkles className="h-5 w-5" />
+  if (name.includes('Quantotechnicien') || name.includes('quantotechnologue')) return <Sparkles className="h-5 w-5" />
   if (name.includes('chasseur')) return <Target className="h-5 w-5" />
   if (name.includes('horion') || name.includes('maitre')) return <Sword className="h-5 w-5" />
   if (name.includes('sentinelle') || name.includes('tutelaire')) return <Shield className="h-5 w-5" />
-  if (name.includes('technomancien')) return <Cog className="h-5 w-5" />
+  if (name.includes('technologue')) return <Cog className="h-5 w-5" />
   if (name.includes('spectre')) return <Eye className="h-5 w-5" />
   if (name.includes('taliste')) return <Brain className="h-5 w-5" />
   return <Users className="h-5 w-5" />
@@ -39,11 +39,11 @@ const getClassIcon = (className: string) => {
 
 const getClassColor = (className: string) => {
   const name = className.toLowerCase()
-  if (name.includes('mage')) return 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300'
+  if (name.includes('Quantotechnicien') || name.includes('quantotechnologue')) return 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300'
   if (name.includes('chasseur')) return 'bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300'
   if (name.includes('horion') || name.includes('maitre')) return 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300'
   if (name.includes('sentinelle') || name.includes('tutelaire')) return 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300'
-  if (name.includes('technomancien')) return 'bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300'
+  if (name.includes('technologue')) return 'bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300'
   if (name.includes('spectre')) return 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300'
   if (name.includes('taliste')) return 'bg-cyan-100 text-cyan-800 dark:bg-cyan-900 dark:text-cyan-300'
   return 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300'
@@ -60,7 +60,7 @@ const getClassArchetype = (characterClass: CharacterClass) => {
   if (hasHighForce && !hasSpells) return 'Combattant'
   if (hasHighSpeed && name.includes('chasseur')) return 'Tireur d\'élite'
   if (name.includes('sentinelle') || name.includes('tutelaire')) return 'Défenseur'
-  if (name.includes('technomancien')) return 'Technomancien'
+  if (name.includes('technologue')) return 'Technologue'
   return 'Hybride'
 }
 

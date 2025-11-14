@@ -9,7 +9,7 @@ levels:
         type_requirement: "A.Type[altération]: 2"
         mixed_requirement: "A.École[magnétique] + A.Type[altération]: 3"
     conditions:
-      intelligence_required: 16
+      perception_required: 16
       flux_cost: 4
     effects:
       - "Si la cible a un exosquelette: -1 aux jets d'attaques"
@@ -17,4 +17,4 @@ levels:
       - Désactive les communications à distance des ennemies
     duration: 1d4 tours
 school: magnétique
-type: altération
+type: alteration

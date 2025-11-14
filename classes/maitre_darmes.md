@@ -23,7 +23,7 @@ Les maîtres d'armes incarnent le fer-de-lance de l'armée impériale. Étant un
 - **A. Dist :** 0
 - **A. CAC :** 8
 - **A.École[martial] :** 6
-- **A.École[arcane] :** 2
+- **A.École[quantique] :** 2
 - **A.Type[arme] :** 6
 - **A.Type[amélioration] :** 2
 

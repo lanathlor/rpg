@@ -1,7 +1,7 @@
 name: "Cristal de mana"
 category: "Consommable"
-subcategory: "magique"
+subcategory: "quantotechnique"
 effect:
   spell_enhancement: "Annule le temps de recharge du prochain sort joué"
   usage: "action simple"
-description: "Cette gemme synthetique d'un bleu électrique pulse régulièrement d'énergie arcanique concentrée. Créée dans les laboratoires impériaux par cristallisation de flux magique pur, elle emmagasine suffisamment de mana pour court-circuiter instantanément les contraintes temporelles normalement imposées par l'invocation de sorts. Son utilisation provoque une brève surcharge énergétique qui permet au lanceur d'ignorer les temps de recharge habituels."
+description: "Cette gemme synthetique d'un bleu électrique pulse régulièrement d'énergie quantique concentrée. Créée dans les laboratoires impériaux par cristallisation de flux quantotechnique pur, elle emmagasine suffisamment de mana pour court-circuiter instantanément les contraintes temporelles normalement imposées par l'invocation de sorts. Son utilisation provoque une brève surcharge énergétique qui permet au lanceur d'ignorer les temps de recharge habituels."

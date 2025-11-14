@@ -5,8 +5,8 @@
 spell_series: "Spell Name"
 description_base: "Brief description of what the spell does and its visual/thematic effects."
 
-# Magic system classification (REQUIRED at root level)
-school: "school_name"  # Options: feu, givre, arcane, biomagie, balistique, etc.
+# Système de Quantotechnique classification (REQUIRED at root level)
+school: "school_name"  # Options: feu, givre, quantique, bioquantotechnique, balistique, etc.
 type: "type_name"      # Options: destruction, alteration, amelioration, deplacement, arme, protection, affliction
 
 # Spell levels (array - spells can have multiple levels)
@@ -28,7 +28,7 @@ levels:
     # Conditions (STANDARDIZED FIELD NAMES)
     conditions:
       # Stat requirements (use appropriate one)
-      intelligence_required: 16    # For magical spells
+      intelligence_required: 16    # For quantotechnique spells
       perception_required: 14      # For precision/targeting spells
 
       # Resource costs
@@ -45,7 +45,11 @@ levels:
       area_damage: "1d4 fire"      # Area damage if different
 
       # Special effects
-      special: "Special effect description"  # Debuffs, status effects, etc.
+      special: "Single special effect description"  # Single special effect
+      specials:                    # For spells with multiple special effects
+        - "First special effect description"
+        - "Second special effect description"
+        - "Third special effect description"
 
       # Area/targeting (if applicable)
       area: "Description of area of effect"

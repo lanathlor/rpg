@@ -1,0 +1,38 @@
+spell_series: Accélération temporelle
+description_base: Accélère le flux temporel personnel pour agir plus rapidement.
+levels:
+  - level: "1"
+    name: Accélération temporelle
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[chronodynamique]: 3"
+        type_requirement: "A.Type[amelioration]: 2"
+        mixed_requirement: "A.École[chronodynamique] + A.Type[amelioration]: 4"
+    conditions:
+      intelligence_required: 18
+      flux_cost: 6
+    effects:
+      specials:
+        - "+1 action supplémentaire ce tour"
+        - "+3 à l'initiative pendant la durée"
+        - "Double la vitesse de déplacement"
+    duration: 2 tours
+  - level: "2"
+    name: Accélération temporelle majeure
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[chronodynamique]: 4"
+        type_requirement: "A.Type[amelioration]: 3"
+        mixed_requirement: "A.École[chronodynamique] + A.Type[amelioration]: 6"
+    conditions:
+      intelligence_required: 20
+      flux_cost: 10
+    effects:
+      specials:
+        - "+2 actions supplémentaires ce tour"
+        - "+5 à l'initiative pendant la durée"
+        - "Triple la vitesse de déplacement"
+        - "Peut esquiver automatiquement la première attaque chaque tour"
+    duration: 3 tours
+school: chronodynamique
+type: amelioration

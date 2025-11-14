@@ -1,14 +1,14 @@
-# Mage de combat
+# Quantotechnicien de combat
 
 ## Histoire
 
-Lors de la guerre contre les Acéras, il devenait évidant que la guérilla est la clé du succès. Les mages, puissant lors des batailles a grande envergure, devait se prendre un nouveau rôle. Les mages de combat sont la réponse. Efficace contre des groupes de soldat d'infanterie, les mages de combat sont capables de bouger vite et de déplacer le champ de batail sur des points stratégique. Leur férocité et leur indépendance leurs ont valu une place unique au sein de l'armée.
+Lors de la guerre contre les Acéras, il devenait évidant que la guérilla est la clé du succès. Les Quantotechniciens, puissant lors des batailles a grande envergure, devait se prendre un nouveau rôle. Les Quantotechniciens de combat sont la réponse. Efficace contre des groupes de soldat d'infanterie, les Quantotechniciens de combat sont capables de bouger vite et de déplacer le champ de batail sur des points stratégique. Leur férocité et leur indépendance leurs ont valu une place unique au sein de l'armée.
 
 **Image :** https://i.pinimg.com/736x/2b/95/af/2b95af02e170eb88efd9b7c4afbe8ba0.jpg
 
 ## Caractéristiques
 
-**Classe :** mage de combat
+**Classe :** Quantotechnicien de combat
 
 ### Statistiques de base
 - **Vie :** 50
@@ -50,7 +50,7 @@ Lors de la guerre contre les Acéras, il devenait évidant que la guérilla est 
 
 ### Compétences
 - **Champ électromagnétique**
-- **Vue des arcanes**
+- **Vue des quantiques**
 
 ## Sorts
 - Éclaire
@@ -65,7 +65,7 @@ Lors de la guerre contre les Acéras, il devenait évidant que la guérilla est 
 - **Kit de soins :** rends 15 PV
 - **Cristal de mana :** annule le temps de recharge du prochain sort jouer
 - **Champ électromagnétique :** +2 scores de protection à distance
-- **Vue des arcanes :** augmente les chances de voir des éléments liés à la magie
+- **Vue des quantiques :** augmente les chances de voir des éléments liés à la quantotechnique
 
 ### Exosquelette de combat
 - **Famille :** Armure → exosquelette
@@ -82,4 +82,4 @@ Lors de la guerre contre les Acéras, il devenait évidant que la guérilla est 
 
 
 ## Comment jouer
-Le mage de combat est pensé pour éliminer rapidement de multiples unités fragiles. Mais le mage de combat, par sa fragilité, peut être en danger lors des combats plus longs. Il faudra alors faire preuve de patience et laisser la première ligne a vos alliés plus résistants.
+Le Quantotechnicien de combat est pensé pour éliminer rapidement de multiples unités fragiles. Mais le Quantotechnicien de combat, par sa fragilité, peut être en danger lors des combats plus longs. Il faudra alors faire preuve de patience et laisser la première ligne a vos alliés plus résistants.

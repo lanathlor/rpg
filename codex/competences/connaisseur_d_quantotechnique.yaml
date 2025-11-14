@@ -1,0 +1,7 @@
+name: "Connaisseur de quantotechnique"
+category: "Compétence"
+subcategory: "connaissance"
+effect:
+  detection_bonus: "Augmente les chances de voir des éléments liés à la quantotechnique"
+  spell_recognition: "Permet de reconnaître les sorts incantés grâce à une manœuvre"
+description: "Connaissance approfondie de la théorie quantotechnique permettant d'identifier et de comprendre les phénomènes quantotechniques."

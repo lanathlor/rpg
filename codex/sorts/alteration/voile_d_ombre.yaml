@@ -1,0 +1,38 @@
+spell_series: Voile d'ombre
+description_base: Enveloppe la cible dans l'obscurité, perturbant sa perception.
+levels:
+  - level: "1"
+    name: Voile d'ombre
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[ombre]: 2"
+        type_requirement: "A.Type[alteration]: 2"
+        mixed_requirement: "A.École[ombre] + A.Type[alteration]: 3"
+    conditions:
+      intelligence_required: 15
+      flux_cost: 3
+    effects:
+      specials:
+        - "-2 aux jets d'attaque de la cible"
+        - "-2 à la détection et perception de la cible"
+        - "La cible devient partiellement invisible aux capteurs optiques"
+    duration: 2d4 tours
+  - level: "2"
+    name: Voile d'ombre majeur
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[ombre]: 3"
+        type_requirement: "A.Type[alteration]: 3"
+        mixed_requirement: "A.École[ombre] + A.Type[alteration]: 5"
+    conditions:
+      intelligence_required: 17
+      flux_cost: 6
+    effects:
+      specials:
+        - "-3 aux jets d'attaque de la cible"
+        - "-3 à la détection et perception de la cible"
+        - "La cible devient invisible aux capteurs optiques"
+        - "Peut affecter jusqu'à 3 cibles"
+    duration: 3d4 tours
+school: ombre
+type: alteration

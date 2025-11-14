@@ -29,7 +29,7 @@ const navigationItems = [
     name: 'Sorts',
     href: '/sorts',
     icon: Sparkles,
-    description: 'Magie et sortilèges',
+    description: 'Quantotechnique et sortilèges',
   },
   {
     name: 'Armes',
@@ -38,10 +38,10 @@ const navigationItems = [
     description: 'Armes de corps à corps et à distance',
   },
   {
-    name: 'Armures',
-    href: '/armures',
+    name: 'Équipements',
+    href: '/equipements',
     icon: Shield,
-    description: 'Protections et équipements défensifs',
+    description: 'Armures, implants et équipements tactiques',
   },
   {
     name: 'Classes',

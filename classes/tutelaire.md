@@ -2,7 +2,7 @@
 
 ## Histoire
 
-Les tutélaires constituent la première ligne de l'armée impériale. Protecteurs des autres soldats, ils permettent à l'armée de prendre position sous les feux ennemis les plus intenses. En plus petits groupes, ils offrent l'occasion de ne jamais reculer devant l'agresseur. Grâce à leur magie de lumières solide, les tutélaires incarnent les phares menant les unités perdues au cœur de la bataille.
+Les tutélaires constituent la première ligne de l'armée impériale. Protecteurs des autres soldats, ils permettent à l'armée de prendre position sous les feux ennemis les plus intenses. En plus petits groupes, ils offrent l'occasion de ne jamais reculer devant l'agresseur. Grâce à leur quantotechnique de lumières solide, les tutélaires incarnent les phares menant les unités perdues au cœur de la bataille.
 
 **Image :** https://www.pinterest.fr/pin/404549979018902762/
 

@@ -11,7 +11,7 @@ levels:
       competences:
         - Hackeur
     conditions:
-      intelligence_required: 15
+      perception_required: 15
       flux_cost: 4
     effects:
       information: >-
@@ -27,11 +27,11 @@ levels:
       competences:
         - Hackeur
     conditions:
-      intelligence_required: 15
+      perception_required: 15
       flux_cost: 7
     effects:
       information: >-
         Récupère des informations partielles sur la cible. Un meilleur jet augmente le nombre d'informations. Des jets
         sur la même cible révèlent de nouvelles informations. Ce sort est plus efficace que « Vol de données ».
 school: illusion
-type: altération
+type: alteration

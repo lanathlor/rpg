@@ -3,7 +3,7 @@ import { Layout } from '@/components/layout/Layout'
 import { HomePage } from '@/pages/HomePage'
 import { SpellsPage } from '@/pages/SpellsPage'
 import { WeaponsPage } from '@/pages/WeaponsPage'
-import { ArmorsPage } from '@/pages/ArmorsPage'
+import { EquipmentsPage } from '@/pages/EquipmentsPage'
 import { SkillsPage } from '@/pages/SkillsPage'
 import { ConsumablesPage } from '@/pages/ConsumablesPage'
 import { ClassesPage } from '@/pages/ClassesPage'
@@ -30,8 +30,8 @@ export const router = createBrowserRouter([
         element: <WeaponsPage />,
       },
       {
-        path: 'armures',
-        element: <ArmorsPage />,
+        path: 'equipements',
+        element: <EquipmentsPage />,
       },
       {
         path: 'classes',

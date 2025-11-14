@@ -1,0 +1,36 @@
+spell_series: Annulation quantotechnique
+description_base: Disperse ou annule les effets quantotechniques actifs.
+levels:
+  - level: "1"
+    name: Annulation quantotechnique
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[pure]: 2"
+        type_requirement: "A.Type[protection]: 2"
+        mixed_requirement: "A.École[pure] + A.Type[protection]: 3"
+    conditions:
+      intelligence_required: 17
+      flux_cost: 5
+    effects:
+      special: "Annule un effet quantotechnique actif sur une cible"
+      specials:
+        - "Restaure 1d4 points de flux au lanceur"
+        - "+2 à la résistance quantotechnique pendant 3 tours"
+  - level: "2"
+    name: Annulation quantotechnique majeure
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[pure]: 4"
+        type_requirement: "A.Type[protection]: 3"
+        mixed_requirement: "A.École[pure] + A.Type[protection]: 6"
+    conditions:
+      intelligence_required: 19
+      flux_cost: 8
+    effects:
+      special: "Annule tous les effets quantotechniques sur la cible"
+      specials:
+        - "Restaure 2d4 points de flux au lanceur"
+        - "+3 à la résistance quantotechnique pendant 5 tours"
+        - "Créé une zone anti-quantotechnique de 3m de rayon pendant 2 tours"
+school: pure
+type: protection

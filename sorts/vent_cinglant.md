@@ -8,7 +8,7 @@ Projette un vent glacial sur une distance de 25 mètres.
 
 ## Prérequis
 
-**A. mag :** 6
+**A. arc :** 6
 **A. givre :** 2
 **Condition :** 18 INT
 **Incantation :** instantané

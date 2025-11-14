@@ -32,9 +32,9 @@ export interface Spell extends BaseItem {
 export type SpellSchool =
   | 'feu'
   | 'givre'
-  | 'biomagie'
+  | 'bio-quantotechnique'
   | 'electricite'
-  | 'arcane'
+  | 'quantique'
 
 export type SpellType =
   | 'destruction'

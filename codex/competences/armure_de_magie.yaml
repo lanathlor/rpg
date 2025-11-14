@@ -1,6 +1,0 @@
-name: "Armure de magie"
-category: "Compétence"
-subcategory: "défensive"
-effect:
-  protection_bonus: "+2 score de protection magique"
-description: "Technique de concentration permettant de créer une protection passive contre les attaques magiques."

@@ -19,7 +19,7 @@ Chaque personnage possède quatre grandes catégories de valeurs :
 
 - **Statistiques** : les capacités principales de votre personnage.
 - **Compétences** : talents acquis au fil de son expérience.
-- **Affinités** : relation entre le personnage et certains types d’armes ou de magie.
+- **Affinités** : relation entre le personnage et certains types d'armes ou de quantotechnique.
 - **Modifiables** : points de vie, armes, armures, sorts et vitesse.
 
 Les modifiables peuvent évoluer pendant la partie selon les équipements, les buffs et les blessures.
@@ -60,7 +60,7 @@ Chaque compétence sera décrite dans les sections dédiées aux classes qui la 
 
 ## 5. Affinités
 
-Les affinités définissent la capacité d’un personnage à manier certaines armes ou formes de magie.
+Les affinités définissent la capacité d'un personnage à manier certaines armes ou formes de quantotechnique.
 Elles déterminent **quelles options de combat** sont disponibles.
 
 Les armes et sorts possèdent un **prérequis d’affinité** : un personnage doit atteindre ce seuil pour les utiliser efficacement.
@@ -69,7 +69,7 @@ Les armes et sorts possèdent un **prérequis d’affinité** : un personnage do
 
 - **Armes de mêlée (A.CAC)** : armes blanches — épées, haches, etc.
 - **Armes à distance (A.Dist)** : armes à feu, fusils, arcs.
-- **Magie (A.Mag)** : capacité à manier les sorts.
+- **Quantotechnique (A.Arc)** : capacité à manier les sorts.
 
 Certaines classes disposent d’affinités **particulières**, par exemple “affinité avec les épées” ou “affinité avec les snipers”.
 Elles s’ajoutent parfois à une affinité de base, mais ne se cumulent pas entre elles.
@@ -78,12 +78,12 @@ Elles s’ajoutent parfois à une affinité de base, mais ne se cumulent pas ent
 
 | Niveau | Maîtrise  | Description                                                  |
 | ------ | --------- | ------------------------------------------------------------ |
-| 0      | Aucune    | Le personnage n’a jamais manié ce type d’arme ou de magie.   |
+| 0      | Aucune    | Le personnage n'a jamais manié ce type d'arme ou de quantotechnique.   |
 | 1      | Basique   | Formation initiale, gestes connus mais imprécis.             |
-| 2      | Entraîné  | Capable d’utiliser l’arme ou la magie efficacement.          |
+| 2      | Entraîné  | Capable d'utiliser l'arme ou la quantotechnique efficacement.          |
 | 3      | Compétent | Maîtrise assurée, capable de s’adapter aux conditions.       |
 | 4      | Expert    | Technique affinée, peut exploiter les forces du matériel.    |
-| 5      | Maître    | L’arme ou la magie est une extension du corps du personnage. |
+| 5      | Maître    | L'arme ou la quantotechnique est une extension du corps du personnage. |
 
 ### Exemple de combinaison :
 

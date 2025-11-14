@@ -18,6 +18,13 @@ export class YamlLoader {
   private yamlCache = new Map<string, any>()
   private failedLoads = new Set<string>()
 
+  // Method to clear cache - useful for development
+  clearCache() {
+    this.yamlCache.clear()
+    this.failedLoads.clear()
+    this.codexData = null
+  }
+
   static getInstance(): YamlLoader {
     if (!YamlLoader.instance) {
       YamlLoader.instance = new YamlLoader()
@@ -26,6 +33,13 @@ export class YamlLoader {
   }
 
   async loadCodexData(): Promise<CodexData> {
+    // Clear cache in development to ensure fresh data
+    if (import.meta.env.DEV) {
+      this.codexData = null
+      this.yamlCache.clear()
+      this.failedLoads.clear()
+    }
+
     if (this.codexData) {
       return this.codexData
     }
@@ -56,7 +70,7 @@ export class YamlLoader {
       const categories: CodexCategory[] = [
         'sorts',
         'armes',
-        'armures',
+        'equipements',
         'competences',
         'consommables',
         'classes',
@@ -71,7 +85,7 @@ export class YamlLoader {
           case 'armes':
             codexData.weapons = items as Weapon[]
             break
-          case 'armures':
+          case 'equipements':
             codexData.armor = items as Armor[]
             break
           case 'competences':
@@ -183,7 +197,7 @@ export class YamlLoader {
         'arme/fendre.yaml',
         'arme/lame_de_foudre.yaml',
         'arme/lame_fantome.yaml',
-        'arme/lame_fantome_arcane.yaml',
+        'arme/lame_fantome_quantique.yaml',
         'arme/plombs_a_haute_velocite.yaml',
         'arme/plombs_a_haute_velocite_tech.yaml',
         'arme/tir_a_la_tete.yaml',
@@ -201,6 +215,15 @@ export class YamlLoader {
         'alteration/froid_mordant.yaml',
         'deplacement/un_avec_le_froid.yaml',
         'affliction/gelure.yaml',
+        'alteration/voile_d_ombre.yaml',
+        'affliction/drain_vital.yaml',
+        'protection/annulation_quantotechnique.yaml',
+        'deplacement/tornade.yaml',
+        'alteration/maree.yaml',
+        'destruction/onde_de_choc.yaml',
+        'amelioration/acceleration_temporelle.yaml',
+        'alteration/distorsion_gravitationnelle.yaml',
+        'destruction/poigne_de_force.yaml',
       ],
       armes: [
         'baton.yaml',
@@ -212,7 +235,7 @@ export class YamlLoader {
         'fusil_mitrailleur.yaml',
         'pistolet.yaml',
       ],
-      armures: [
+      equipements: [
         'armure_de_plate_legere.yaml',
         'armure_de_plate_lourde.yaml',
         'bouclier.yaml',
@@ -227,11 +250,11 @@ export class YamlLoader {
       ],
       competences: [
         'a_laffut.yaml',
-        'armure_de_magie.yaml',
+        'armure_d_quantotechnique.yaml',
         'champ_electromagnetique.yaml',
         'charismatique.yaml',
         'comprehension_de_la_nature.yaml',
-        'connaisseur_de_magie.yaml',
+        'connaisseur_d_quantotechnique.yaml',
         'course.yaml',
         'expert_des_terrains.yaml',
         'guerrier.yaml',
@@ -243,27 +266,27 @@ export class YamlLoader {
         'tacticien.yaml',
         'traque.yaml',
         'veteran.yaml',
-        'vue_des_arcanes.yaml',
+        'vue_des_quantiques.yaml',
       ],
       consommables: [
         'bombe_iem.yaml',
         'cristal_de_mana.yaml',
         'flash.yaml',
-        'flechette_anti_magie.yaml',
+        'flechette_anti_quantotechnique.yaml',
         'grenade.yaml',
         'kit_de_soins.yaml',
       ],
       classes: [
         'chasseur.yaml',
         'horion.yaml',
-        'mage.yaml',
-        'mage_de_combat.yaml',
-        'magus.yaml',
+        'quantotechnicien.yaml',
+        'quantotechnicien_de_combat.yaml',
+        'quantotechnologue.yaml',
         'maitre_darmes.yaml',
         'sentinelle.yaml',
         'spectre.yaml',
         'taliste.yaml',
-        'technomancien.yaml',
+        'technologue.yaml',
         'tutelaire.yaml',
       ],
     }

@@ -28,4 +28,4 @@ levels:
       emp: Désactive les bonus des exosquelettes et stop tous les appareils électriques de 2 cibles
     duration: 1 tour
 school: magnétique
-type: altération
+type: alteration

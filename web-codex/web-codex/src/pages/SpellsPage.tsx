@@ -11,75 +11,10 @@ import {
   DialogTitle,
 } from '@/components/ui/dialog'
 import { SpellDetail } from '@/components/SpellDetail'
-import { Flame, Zap, Shield, Sparkles, Sword, ArrowRight, Users, Skull, Search, Filter } from 'lucide-react'
+import { Search, Filter } from 'lucide-react'
+import { getSchoolIcon, getSchoolColor, getTypeIcon, getTypeColor } from '@/lib/schoolUtils'
 import type { Spell } from '@/types'
 
-const getSchoolIcon = (school: string) => {
-  switch (school) {
-    case 'feu':
-      return <Flame className="h-4 w-4" />
-    case 'electricite':
-      return <Zap className="h-4 w-4" />
-    case 'biomagie':
-      return <Users className="h-4 w-4" />
-    case 'arcane':
-    default:
-      return <Sparkles className="h-4 w-4" />
-  }
-}
-
-const getTypeIcon = (type: string) => {
-  switch (type) {
-    case 'destruction':
-      return <Skull className="h-4 w-4" />
-    case 'protection':
-      return <Shield className="h-4 w-4" />
-    case 'arme':
-      return <Sword className="h-4 w-4" />
-    case 'deplacement':
-      return <ArrowRight className="h-4 w-4" />
-    case 'alteration':
-    case 'amelioration':
-    case 'affliction':
-    default:
-      return <Sparkles className="h-4 w-4" />
-  }
-}
-
-const getSchoolColor = (school: string) => {
-  switch (school) {
-    case 'feu':
-      return 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300'
-    case 'electricite':
-      return 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300'
-    case 'biomagie':
-      return 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300'
-    case 'arcane':
-    default:
-      return 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300'
-  }
-}
-
-const getTypeColor = (type: string) => {
-  switch (type) {
-    case 'destruction':
-      return 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300'
-    case 'protection':
-      return 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300'
-    case 'alteration':
-      return 'bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300'
-    case 'amelioration':
-      return 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300'
-    case 'deplacement':
-      return 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300'
-    case 'arme':
-      return 'bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-300'
-    case 'affliction':
-      return 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300'
-    default:
-      return 'bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-300'
-  }
-}
 
 export function SpellsPage() {
   const { spells, loading } = useSpells()
@@ -189,9 +124,9 @@ export function SpellsPage() {
 
       {/* Spells Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {filteredSpells.map((spell) => (
+        {filteredSpells.map((spell, index) => (
           <Card
-            key={spell.name}
+            key={`${spell.name}-${spell.school}-${index}`}
             className="hover:shadow-lg transition-shadow cursor-pointer"
             onClick={() => openSpellDetail(spell)}
           >
@@ -259,7 +194,7 @@ export function SpellsPage() {
                     {spell.levels[0].effects?.attack_bonus && (
                       <div><strong className="text-yellow-600">Attaque:</strong> {spell.levels[0].effects.attack_bonus.slice(0, 40)}...</div>
                     )}
-                    {/* Show special only if no other major effects */}
+                    {/* Show special only if no other major effects and no specials array */}
                     {spell.levels[0].effects?.special &&
                      !spell.levels[0].effects?.damage &&
                      !spell.levels[0].effects?.area_damage &&
@@ -269,8 +204,24 @@ export function SpellsPage() {
                      !spell.levels[0].effects?.debuff &&
                      !spell.levels[0].effects?.status &&
                      !spell.levels[0].effects?.protection &&
-                     !spell.levels[0].effects?.attack_bonus && (
+                     !spell.levels[0].effects?.attack_bonus &&
+                     !spell.levels[0].effects?.specials &&
+                     !Array.isArray(spell.levels[0].effects) && (
                       <div><strong className="text-teal-600">Effet:</strong> {spell.levels[0].effects.special.slice(0, 50)}...</div>
+                    )}
+
+                    {/* Show effects.specials array after other specific effects */}
+                    {spell.levels[0].effects?.specials && Array.isArray(spell.levels[0].effects.specials) && spell.levels[0].effects.specials.length > 0 && (
+                      <div><strong className="text-teal-600">Effets:</strong> {spell.levels[0].effects.specials[0].slice(0, 50)}...
+                        {spell.levels[0].effects.specials.length > 1 && <span className="text-xs text-muted-foreground"> (+{spell.levels[0].effects.specials.length - 1} autres)</span>}
+                      </div>
+                    )}
+
+                    {/* Show array effects after other specific effects */}
+                    {Array.isArray(spell.levels[0].effects) && spell.levels[0].effects.length > 0 && (
+                      <div><strong className="text-teal-600">Effets:</strong> {spell.levels[0].effects[0].slice(0, 50)}...
+                        {spell.levels[0].effects.length > 1 && <span className="text-xs text-muted-foreground"> (+{spell.levels[0].effects.length - 1} autres)</span>}
+                      </div>
                     )}
                   </div>
                 )}

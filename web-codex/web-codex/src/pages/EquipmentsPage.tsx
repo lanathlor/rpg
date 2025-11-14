@@ -11,7 +11,7 @@ import {
   DialogTitle,
 } from '@/components/ui/dialog'
 import { ArmorDetail } from '@/components/ArmorDetail'
-import { Shield, Shirt, HardHat, Users, Zap, Cog, Search, Filter } from 'lucide-react'
+import { Shield, Shirt, HardHat, Users, Zap, Cog, Search, Filter, Brain, Bot, Cpu, FlaskConical, Target, Gauge } from 'lucide-react'
 import type { Armor } from '@/types'
 
 const getCategoryIcon = (category: string) => {
@@ -24,30 +24,41 @@ const getCategoryIcon = (category: string) => {
       return <HardHat className="h-4 w-4" />
     case 'exosquelette':
       return <Users className="h-4 w-4" />
+    case 'augmentation':
+      return <Brain className="h-4 w-4" />
     case 'implant':
-      return <Zap className="h-4 w-4" />
+      return <Cpu className="h-4 w-4" />
     case 'drone':
-      return <Cog className="h-4 w-4" />
+      return <Bot className="h-4 w-4" />
     default:
       return <Shield className="h-4 w-4" />
   }
 }
 
-const getTypeIcon = (type: string) => {
-  switch (type.toLowerCase()) {
-    case 'légère':
-    case 'légere':
-      return <Shirt className="h-4 w-4" />
-    case 'lourde':
+const getSubcategoryIcon = (subcategory: string) => {
+  switch (subcategory.toLowerCase()) {
+    case 'plate':
       return <Shield className="h-4 w-4" />
+    case 'tunique':
+      return <Shirt className="h-4 w-4" />
     case 'bouclier':
       return <Shield className="h-4 w-4" />
-    case 'combat':
+    case 'exosquelette':
       return <Users className="h-4 w-4" />
+    case 'drone':
+      return <Bot className="h-4 w-4" />
+    case 'neural':
+      return <Brain className="h-4 w-4" />
+    case 'implant':
+      return <Cpu className="h-4 w-4" />
+    case 'combat':
+      return <Target className="h-4 w-4" />
     case 'vitesse':
-      return <Zap className="h-4 w-4" />
-    case 'militaire':
-      return <HardHat className="h-4 w-4" />
+      return <Gauge className="h-4 w-4" />
+    case 'traque':
+      return <FlaskConical className="h-4 w-4" />
+    case 'stabilisateur':
+      return <Shield className="h-4 w-4" />
     default:
       return <Shield className="h-4 w-4" />
   }
@@ -56,15 +67,17 @@ const getTypeIcon = (type: string) => {
 const getCategoryColor = (category: string) => {
   switch (category.toLowerCase()) {
     case 'armure':
-      return 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300'
+      return 'bg-stone-100 text-stone-800 dark:bg-stone-900 dark:text-stone-300'
     case 'vêtement':
-      return 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300'
+      return 'bg-teal-100 text-teal-800 dark:bg-teal-900 dark:text-teal-300'
     case 'casque':
       return 'bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300'
     case 'exosquelette':
-      return 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300'
+      return 'bg-violet-100 text-violet-800 dark:bg-violet-900 dark:text-violet-300'
+    case 'augmentation':
+      return 'bg-fuchsia-100 text-fuchsia-800 dark:bg-fuchsia-900 dark:text-fuchsia-300'
     case 'implant':
-      return 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300'
+      return 'bg-cyan-100 text-cyan-800 dark:bg-cyan-900 dark:text-cyan-300'
     case 'drone':
       return 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300'
     default:
@@ -72,40 +85,50 @@ const getCategoryColor = (category: string) => {
   }
 }
 
-const getTypeColor = (type: string) => {
-  switch (type.toLowerCase()) {
-    case 'légère':
-    case 'légere':
-      return 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300'
-    case 'lourde':
-      return 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300'
-    case 'bouclier':
+const getSubcategoryColor = (subcategory: string) => {
+  switch (subcategory.toLowerCase()) {
+    case 'plate':
       return 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300'
-    case 'combat':
+    case 'legere':
+    case 'cuir':
+      return 'bg-lime-100 text-lime-800 dark:bg-lime-900 dark:text-lime-300'
+    case 'tissue':
+      return 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300'
+    case 'tunique':
+      return 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300'
+    case 'bouclier':
+      return 'bg-sky-100 text-sky-800 dark:bg-sky-900 dark:text-sky-300'
+    case 'exosquelette':
       return 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300'
+    case 'drone':
+      return 'bg-zinc-100 text-zinc-800 dark:bg-zinc-900 dark:text-zinc-300'
+    case 'neural':
+      return 'bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-300'
+    case 'implant':
+      return 'bg-cyan-100 text-cyan-800 dark:bg-cyan-900 dark:text-cyan-300'
+    case 'combat':
+      return 'bg-rose-100 text-rose-800 dark:bg-rose-900 dark:text-rose-300'
     case 'vitesse':
-      return 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300'
-    case 'militaire':
-      return 'bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300'
+      return 'bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-300'
+    case 'traque':
+      return 'bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-300'
     case 'stabilisateur':
       return 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300'
-    case 'traque':
-      return 'bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-300'
     default:
       return 'bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-300'
   }
 }
 
-export function ArmorsPage() {
+export function EquipmentsPage() {
   const { armors, loading } = useArmors()
   const [selectedArmor, setSelectedArmor] = useState<Armor | null>(null)
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedCategory, setSelectedCategory] = useState<string>('')
-  const [selectedType, setSelectedType] = useState<string>('')
+  const [selectedSubcategory, setSelectedSubcategory] = useState<string>('')
 
-  // Get unique categories and types for filters
+  // Get unique categories and subcategories for filters
   const categories = [...new Set(armors.map(armor => armor.category).filter(Boolean))].sort()
-  const types = [...new Set(armors.map(armor => armor.type).filter(Boolean))].sort()
+  const subcategories = [...new Set(armors.map(armor => armor.subcategory).filter(Boolean))].sort()
 
   // Filter armors
   const filteredArmors = armors.filter((armor) => {
@@ -113,9 +136,9 @@ export function ArmorsPage() {
       armor.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       (armor.description || '').toLowerCase().includes(searchQuery.toLowerCase())
     const matchesCategory = !selectedCategory || armor.category === selectedCategory
-    const matchesType = !selectedType || armor.type === selectedType
+    const matchesSubcategory = !selectedSubcategory || armor.subcategory === selectedSubcategory
 
-    return matchesSearch && matchesCategory && matchesType
+    return matchesSearch && matchesCategory && matchesSubcategory
   })
 
   const openArmorDetail = (armor: Armor) => {
@@ -129,7 +152,7 @@ export function ArmorsPage() {
   if (loading) {
     return (
       <div className="flex items-center justify-center h-64">
-        <div className="text-lg">Chargement des armures...</div>
+        <div className="text-lg">Chargement des équipements...</div>
       </div>
     )
   }
@@ -137,9 +160,9 @@ export function ArmorsPage() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-3xl font-bold tracking-tight">Armures</h1>
+        <h1 className="text-3xl font-bold tracking-tight">Équipements</h1>
         <p className="text-lg text-muted-foreground">
-          {filteredArmors.length} sur {armors.length} {armors.length === 1 ? 'armure' : 'armures'}
+          {filteredArmors.length} sur {armors.length} {armors.length === 1 ? 'équipement' : 'équipements'}
         </p>
       </div>
 
@@ -148,7 +171,7 @@ export function ArmorsPage() {
         <div className="relative flex-1">
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
           <Input
-            placeholder="Rechercher une armure..."
+            placeholder="Rechercher un équipement..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             className="pl-10"
@@ -174,25 +197,25 @@ export function ArmorsPage() {
 
           <div className="flex items-center gap-2">
             <select
-              value={selectedType}
-              onChange={(e) => setSelectedType(e.target.value)}
+              value={selectedSubcategory}
+              onChange={(e) => setSelectedSubcategory(e.target.value)}
               className="border rounded px-3 py-2 bg-background"
             >
-              <option value="">Tous les types</option>
-              {types.map((type) => (
-                <option key={type} value={type}>
-                  {type ? type.charAt(0).toUpperCase() + type.slice(1) : ''}
+              <option value="">Toutes les sous-catégories</option>
+              {subcategories.map((subcategory) => (
+                <option key={subcategory} value={subcategory}>
+                  {subcategory ? subcategory.charAt(0).toUpperCase() + subcategory.slice(1) : ''}
                 </option>
               ))}
             </select>
           </div>
 
-          {(selectedCategory || selectedType || searchQuery) && (
+          {(selectedCategory || selectedSubcategory || searchQuery) && (
             <Button
               variant="outline"
               onClick={() => {
                 setSelectedCategory('')
-                setSelectedType('')
+                setSelectedSubcategory('')
                 setSearchQuery('')
               }}
             >
@@ -218,10 +241,10 @@ export function ArmorsPage() {
                     {getCategoryIcon(armor.category || '')}
                     <span className="ml-1">{armor.category}</span>
                   </Badge>
-                  {armor.type && (
-                    <Badge className={getTypeColor(armor.type)}>
-                      {getTypeIcon(armor.type)}
-                      <span className="ml-1">{armor.type}</span>
+                  {armor.subcategory && (
+                    <Badge className={getSubcategoryColor(armor.subcategory)}>
+                      {getSubcategoryIcon(armor.subcategory)}
+                      <span className="ml-1">{armor.subcategory}</span>
                     </Badge>
                   )}
                 </div>
@@ -238,14 +261,17 @@ export function ArmorsPage() {
                   </div>
                 )}
                 <div className="text-sm space-y-1">
-                  {armor.stats.armor_value && (
-                    <div><strong>Valeur d'armure:</strong> {armor.stats.armor_value}</div>
+                  {(armor.stats as any).protection_bonus && (
+                    <div><strong>Bonus de protection:</strong> {(armor.stats as any).protection_bonus}</div>
                   )}
                   {armor.stats.defense_bonus && (
                     <div><strong>Bonus de défense:</strong> {armor.stats.defense_bonus}</div>
                   )}
-                  {armor.stats.stat_bonus && (
-                    <div><strong>Bonus de stat:</strong> {armor.stats.stat_bonus}</div>
+                  {((armor.stats as any).stat_modifier || armor.stats.stat_bonus) && (
+                    <div><strong>Modification de stat:</strong> {(armor.stats as any).stat_modifier || armor.stats.stat_bonus}</div>
+                  )}
+                  {armor.stats.armor_value && (
+                    <div><strong>Valeur d'armure:</strong> {armor.stats.armor_value}</div>
                   )}
                 </div>
               </div>
@@ -257,9 +283,9 @@ export function ArmorsPage() {
       {filteredArmors.length === 0 && (
         <div className="text-center py-12">
           <p className="text-muted-foreground">
-            {searchQuery || selectedCategory || selectedType
-              ? 'Aucune armure ne correspond aux critères de recherche.'
-              : 'Aucune armure trouvée.'}
+            {searchQuery || selectedCategory || selectedSubcategory
+              ? 'Aucun équipement ne correspond aux critères de recherche.'
+              : 'Aucun équipement trouvé.'}
           </p>
         </div>
       )}
@@ -268,7 +294,7 @@ export function ArmorsPage() {
       <Dialog open={!!selectedArmor} onOpenChange={closeArmorDetail}>
         <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
           <DialogHeader>
-            <DialogTitle>Détails de l'armure</DialogTitle>
+            <DialogTitle>Détails de l'équipement</DialogTitle>
           </DialogHeader>
           {selectedArmor && <ArmorDetail armor={selectedArmor} />}
         </DialogContent>

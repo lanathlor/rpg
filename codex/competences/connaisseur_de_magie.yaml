@@ -1,7 +1,0 @@
-name: "Connaisseur de magie"
-category: "Compétence"
-subcategory: "connaissance"
-effect:
-  detection_bonus: "Augmente les chances de voir des éléments liés à la magie"
-  spell_recognition: "Permet de reconnaître les sorts incantés grâce à une manœuvre"
-description: "Connaissance approfondie de la théorie magique permettant d'identifier et de comprendre les phénomènes magiques."

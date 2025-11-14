@@ -2,78 +2,12 @@ import { Badge } from '@/components/ui/badge'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Separator } from '@/components/ui/separator'
 import type { Spell, SpellLevel } from '@/types'
-import { Flame, Zap, Shield, Sparkles, Sword, ArrowRight, Users, Skull } from 'lucide-react'
+import { getSchoolIcon, getSchoolColor, getTypeIcon, getTypeColor } from '@/lib/schoolUtils'
 
 interface SpellDetailProps {
   spell: Spell
 }
 
-const getSchoolIcon = (school: string) => {
-  switch (school) {
-    case 'feu':
-      return <Flame className="h-4 w-4" />
-    case 'electricite':
-      return <Zap className="h-4 w-4" />
-    case 'biomagie':
-      return <Users className="h-4 w-4" />
-    case 'arcane':
-    default:
-      return <Sparkles className="h-4 w-4" />
-  }
-}
-
-const getTypeIcon = (type: string) => {
-  switch (type) {
-    case 'destruction':
-      return <Skull className="h-4 w-4" />
-    case 'protection':
-      return <Shield className="h-4 w-4" />
-    case 'arme':
-      return <Sword className="h-4 w-4" />
-    case 'deplacement':
-      return <ArrowRight className="h-4 w-4" />
-    case 'alteration':
-    case 'amelioration':
-    case 'affliction':
-    default:
-      return <Sparkles className="h-4 w-4" />
-  }
-}
-
-const getSchoolColor = (school: string) => {
-  switch (school) {
-    case 'feu':
-      return 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300'
-    case 'electricite':
-      return 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300'
-    case 'biomagie':
-      return 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300'
-    case 'arcane':
-    default:
-      return 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300'
-  }
-}
-
-const getTypeColor = (type: string) => {
-  switch (type) {
-    case 'destruction':
-      return 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300'
-    case 'protection':
-      return 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300'
-    case 'alteration':
-      return 'bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300'
-    case 'amelioration':
-      return 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300'
-    case 'deplacement':
-      return 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300'
-    case 'arme':
-      return 'bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-300'
-    case 'affliction':
-      return 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300'
-    default:
-      return 'bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-300'
-  }
-}
 
 function SpellLevelDetail({ level }: { level: SpellLevel }) {
   return (
@@ -159,6 +93,13 @@ function SpellLevelDetail({ level }: { level: SpellLevel }) {
         <div>
           <h4 className="font-semibold text-sm mb-2">Effets</h4>
           <div className="space-y-1 text-sm">
+            {/* Handle array effects */}
+            {Array.isArray(level.effects) && level.effects.map((effect, index) => (
+              <div key={index}>
+                <span className="font-medium text-teal-600 dark:text-teal-400">•</span> {effect}
+              </div>
+            ))}
+
             {/* Damage Category - Red */}
             {level.effects?.damage && (
               <div>
@@ -288,6 +229,7 @@ function SpellLevelDetail({ level }: { level: SpellLevel }) {
               </div>
             )}
 
+
             {/* Special Category - Teal (kept last as catch-all) */}
             {level.effects?.special && (
               <div>
@@ -299,6 +241,12 @@ function SpellLevelDetail({ level }: { level: SpellLevel }) {
                 <span className="font-medium text-teal-600 dark:text-teal-400">Amélioration:</span> {level.effects.spell_enhancement}
               </div>
             )}
+            {/* Handle effects.specials array */}
+            {level.effects?.specials && Array.isArray(level.effects.specials) && level.effects.specials.map((special, index) => (
+              <div key={index}>
+                <span className="font-medium text-teal-600 dark:text-teal-400">•</span> {special}
+              </div>
+            ))}
           </div>
         </div>
 

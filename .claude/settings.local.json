@@ -35,7 +35,19 @@
       "Bash(curl:*)",
       "Bash(readlink:*)",
       "Bash(npm run lint:*)",
-      "Read(//home/lanath/Work/masterMonkey/rpg/**)"
+      "Read(//home/lanath/Work/masterMonkey/rpg/**)",
+      "Bash(do if grep -q \"magie\" \"$file\")",
+      "Bash(then echo \"Processing: $file\")",
+      "Bash(do if grep -qi \"Magie\" \"$file\")",
+      "Bash(then echo \"Processing uppercase in: $file\")",
+      "Bash(do sed -i -e 's/la magie/l''''quantotechnique/g' -e 's/de magie/d''''quantotechnique/g' -e 's/École de magie/École d''''quantotechnique/g' -e 's/ecoles_de_magie/ecoles_d_quantotechnique/g' \"$file\")",
+      "Bash(do sed -i -e 's/Magie/Quantotechnique/g' -e 's/MAGIE/QUANTOTECHNIQUE/g' \"$file\")",
+      "Bash(do if [ -f \"$file\" ])",
+      "Bash(then sed -i -e 's/magie/quantotechnique/gi' \"$file\")",
+      "Bash(rg:*)",
+      "Bash(files=\"/home/lanath/Work/masterMonkey/rpg/rpg/rules/08_histoire.md /home/lanath/Work/masterMonkey/rpg/rpg/rules/06_systeme_de_mana.md /home/lanath/Work/masterMonkey/rpg/rpg/rules/00_introduction.md /home/lanath/Work/masterMonkey/rpg/rpg/rules/02_combat.md /home/lanath/Work/masterMonkey/rpg/rpg/rules/09_lexique.md /home/lanath/Work/masterMonkey/rpg/rpg/CLAUDE.md\")",
+      "Bash(do echo \"=== Processing $file ===\")",
+      "Bash(echo:*)"
     ],
     "deny": [],
     "ask": []

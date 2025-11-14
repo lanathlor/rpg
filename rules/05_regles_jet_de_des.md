@@ -2,7 +2,7 @@
 
 ## ⚙️ Principe général
 
-Toutes les actions, qu’elles soient physiques, magiques ou sociales, utilisent la même mécanique de jet :
+Toutes les actions, qu’elles soient physiques, quantotechniques ou sociales, utilisent la même mécanique de jet :
 
 > **d20 + modificateurs ≥ Degré de Difficulté (DD)**
 
@@ -37,7 +37,7 @@ Ce système unique s’applique à tout : attaque, compétence, sauvegarde, perc
 
 - **Forcer une porte** → d20 + Force + Compétence (Athlétisme)
 - **Convaincre un garde** → d20 + Charisme + Compétence (Persuasion)
-- **Lancer un sort complexe** → d20 + Intelligence + Affinité magique
+- **Lancer un sort complexe** → d20 + Intelligence + Affinité quantotechnique
 
 ---
 

@@ -1,0 +1,38 @@
+spell_series: Tornade
+description_base: Génère un puissant tourbillon d'air contrôlé.
+levels:
+  - level: "1"
+    name: Tornade
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[aérocinétique]: 2"
+        type_requirement: "A.Type[deplacement]: 2"
+        mixed_requirement: "A.École[aérocinétique] + A.Type[deplacement]: 3"
+    conditions:
+      intelligence_required: 15
+      flux_cost: 4
+    effects:
+      specials:
+        - "Repousse tous les ennemis dans un rayon de 4m"
+        - "Dévie automatiquement les projectiles pendant 2 tours"
+        - "Permet de se déplacer de 10m supplémentaires ce tour"
+    duration: 2 tours
+  - level: "2"
+    name: Tornade destructrice
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[aérocinétique]: 3"
+        type_requirement: "A.Type[deplacement]: 3"
+        mixed_requirement: "A.École[aérocinétique] + A.Type[deplacement]: 5"
+    conditions:
+      intelligence_required: 17
+      flux_cost: 7
+    effects:
+      specials:
+        - "Repousse et inflige 1d6 dégâts à tous les ennemis dans un rayon de 6m"
+        - "Dévie automatiquement tous les projectiles pendant 4 tours"
+        - "Permet de se déplacer de 15m supplémentaires ce tour"
+        - "Crée un terrain difficile pour les ennemis"
+    duration: 3 tours
+school: aérocinétique
+type: deplacement

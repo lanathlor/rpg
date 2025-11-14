@@ -22,8 +22,8 @@ Les talistes constitue une unité très particulière de l'armée. Ce sont les s
 ### Affinités
 - **A. Dist :** 2
 - **A. CAC :** 0
-- **A.École[biomagie] :** 4
-- **A.École[arcane] :** 3
+- **A.École[bioquantotechnique] :** 4
+- **A.École[quantique] :** 3
 - **A.Type[altération] :** 4
 - **A.Type[amélioration] :** 3
 

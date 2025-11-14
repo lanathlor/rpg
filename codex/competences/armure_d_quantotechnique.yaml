@@ -1,0 +1,6 @@
+name: "Armure de quantotechnique"
+category: "Compétence"
+subcategory: "défensive"
+effect:
+  protection_bonus: "+2 score de protection quantotechnique"
+description: "Technique de concentration permettant de créer une protection passive contre les attaques quantotechniques."

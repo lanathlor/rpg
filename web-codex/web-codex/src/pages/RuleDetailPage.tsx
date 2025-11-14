@@ -12,7 +12,7 @@ const ruleSections = [
   { id: '01_bases_des_regles', title: 'Bases des règles' },
   { id: '02_combat', title: 'Combat' },
   { id: '03_systeme_affinites_et_types', title: 'Système d\'affinités et types' },
-  { id: '04_ecoles_de_magie', title: 'Écoles de magie' },
+  { id: '04_ecoles_d_quantotechnique', title: 'Écoles d\'quantotechnique' },
   { id: '05_regles_jet_de_des', title: 'Règles de jet de dés' },
   { id: '06_systeme_de_mana', title: 'Système de mana' },
   { id: '09_lexique', title: 'Lexique' }

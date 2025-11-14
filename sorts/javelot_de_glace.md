@@ -8,7 +8,7 @@ Lance un javelot de glace à la cible et la gèle.
 
 ## Prérequis
 
-**A. mag :** 6
+**A. arc :** 6
 **Condition :** 16 INT
 **Incantation :** instantané
 **Recharge :** 40 sec

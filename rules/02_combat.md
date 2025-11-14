@@ -1,7 +1,7 @@
 # Règles de Combat
 
 Cette section présente les règles de combat mises à jour selon le système de défense et de protection introduit dans la dernière version du manuel.
-L’objectif est de proposer un cadre clair, fluide et cohérent entre les attaques physiques, magiques et à distance.
+L’objectif est de proposer un cadre clair, fluide et cohérent entre les attaques physiques, quantotechniques et à distance.
 
 ---
 
@@ -60,7 +60,7 @@ SD = 10 + (stat de défense / 2) + bonus d’armure
 | **Attaque lourde / 2 mains** | Force (FOR)                         | Armure lourde, bouclier             |
 | **Attaque légère / 1 main**  | Dextérité (DEX)                     | Armure moyenne, exosquelette léger  |
 | **Attaque à distance**       | Précision (PRE) ou Perception (PER) | Armure moyenne, couvert             |
-| **Attaque magique**          | Intelligence (INT)                  | Armure magique, résistances arcanes |
+| **Attaque quantotechnique**          | Intelligence (INT)                  | Armure quantotechnique, résistances quantiques |
 
 L’attaquant doit obtenir un résultat **≥ au SD** de la cible pour que son attaque touche.
 Les bonus d’armure, boucliers et couvertures s’ajoutent à la valeur finale.
@@ -83,7 +83,7 @@ SP = bonus d’armure + (stat secondaire / 4)
 | ---------------------------- | ------------------ | --------------------------- | ------------------------------- |
 | **Physique (corps à corps)** | Force (FOR)        | Protection Physique (PP)    | Armure lourde : PP = 3          |
 | **Distance (projectile)**    | Dextérité (DEX)    | Protection à Distance (PD)  | Exosquelette de combat : PD = 2 |
-| **Magique (sorts)**          | Intelligence (INT) | Protection Magique (PM)     | Armure de magie : PM = 2        |
+| **Quantotechnique (sorts)**          | Intelligence (INT) | Protection Quantotechnique (PA)     | Armure de quantotechnique : PA = 2        |
 
 #### Application
 
@@ -94,7 +94,7 @@ Dégâts finaux = Dégâts bruts - SP (selon le type)
 ```
 
 Les dégâts ne peuvent jamais être réduits en dessous de 0.
-Certaines attaques (magiques ou explosives) peuvent ignorer partiellement ou totalement la protection.
+Certaines attaques (quantotechniques ou explosives) peuvent ignorer partiellement ou totalement la protection.
 
 ---
 
@@ -119,7 +119,7 @@ Une attaque se déroule en deux étapes : **jet d’attaque**, puis **jet de dé
 ### 2. Jet de dégâts
 
 - Lancer les dés indiqués sur l’arme ou le sort.
-- Soustraire la protection correspondante (PP, PD ou PM).
+- Soustraire la protection correspondante (PP, PD ou PA).
 - Appliquer le résultat aux points de vie de la cible.
 - Si la cible est réduite à 0 PV → elle est mise hors combat.
 
@@ -134,7 +134,7 @@ Ces actions offrent des bonus temporaires au Score de Défense ou de Protection.
 | ----------------------- | --------------------------------------------------------------------------------------------------------------- | ---------------------- |
 | **Parade**              | Effectuer un **jet opposé de FOR ou DEX** contre l’attaque physique. En cas de réussite, l’attaque est bloquée. | Instantané             |
 | **Esquive**             | Lance **d20 + DEX** contre le jet d’attaque de l’adversaire. En cas de réussite, l’attaque rate.                | Instantané             |
-| **Se mettre à couvert** | +2 à la Défense à distance et magique.                                                                          | Jusqu’au prochain tour |
+| **Se mettre à couvert** | +2 à la Défense à distance et quantotechnique.                                                                          | Jusqu’au prochain tour |
 | **Tenir la ligne**      | Si adjacent à un allié, +1 à votre Défense et à celle de cet allié.                                             | Jusqu’à la fin du tour |
 
 ---
@@ -150,12 +150,56 @@ Lorsqu’un ennemi quitte votre zone d’engagement (corps à corps), vous pouve
 
 ## 🧩 Manœuvres
 
-Les manœuvres regroupent toutes les actions non offensives : utilisation d’objets, environnement, interactions spéciales, etc.
+Les manœuvres regroupent toutes les actions non offensives : utilisation d'objets, environnement, interactions spéciales, etc.
 
 > Jet associé : **d20 + Stat appropriée (souvent DEX, INT ou PER)**.
-> Le MJ fixe la difficulté selon le contexte (voir section “Jets de dés”).
+> Le MJ fixe la difficulté selon le contexte (voir section "Jets de dés").
 
 Les personnages avec la compétence **Stratège** peuvent effectuer **deux manœuvres par tour**.
+
+### 📋 Exemples de Manœuvres par Statistique
+
+#### **Manœuvres basées sur le Charisme (CHA)**
+- **Intimidation** : Démoraliser un ennemi (jet CHA) → -2 aux attaques de la cible pendant 2 tours
+- **Rallier** : Encourager les alliés (jet CHA) → +1 au prochain jet d'un allié dans un rayon de 10m
+- **Négociation express** : Convaincre un ennemi de changer de camp temporairement (jet CHA, très difficile)
+- **Commandement tactique** : Coordonner les mouvements (jet CHA) → un allié peut se déplacer gratuitement
+
+#### **Manœuvres basées sur la Perception (PER)**
+- **Analyse tactique** : Repérer les faiblesses ennemies (jet PER) → révèle les bonus de défense de la cible
+- **Détection d'embuscade** : Anticiper une attaque surprise (jet PER) → +2 à l'initiative du groupe
+- **Surveillance du champ de bataille** : Localiser les menaces (jet PER) → alerte sur les ennemis cachés
+- **Lecture des intentions** : Prédire la prochaine action ennemie (jet PER) → bonus de défense contre cette attaque
+
+#### **Manœuvres basées sur l'Intelligence (INT)**
+- **Analyse technique** : Identifier les points faibles d'un équipement (jet INT) → -2 aux bonus d'armure de la cible
+- **Calcul balistique** : Optimiser un tir de groupe (jet INT) → +2 aux attaques à distance alliées ce tour
+- **Piratage rapide** : Désactiver temporairement un système ennemi (jet INT) → malus aux exosquelettes
+- **Stratégie adaptative** : Réorganiser la formation (jet INT) → +1 défense à tous les alliés
+
+#### **Manœuvres basées sur la Constitution (CON)**
+- **Second souffle** : Récupérer de l'endurance (jet CON) → regagne 2d4 PV (une fois par combat)
+- **Résistance héroïque** : Ignorer la douleur (jet CON) → immunité aux malus de blessure pendant 3 tours
+- **Endurance au combat** : Maintenir l'effort (jet CON) → peut effectuer une action supplémentaire
+- **Récupération rapide** : Se remettre d'un effet (jet CON) → terminer prématurément un debuff
+
+#### **Manœuvres basées sur la Force (FOR)**
+- **Charge destructrice** : Briser des obstacles (jet FOR) → détruit couvertures et barrières légères
+- **Projection** : Repousser violemment un ennemi (jet FOR) → la cible recule de 3 mètres
+- **Soulever** : Utiliser l'environnement comme arme (jet FOR) → improvise une arme lourde
+- **Maintien** : Immobiliser un adversaire (jet FOR opposé) → empêche les déplacements
+
+#### **Manœuvres basées sur la Dextérité (DEX)**
+- **Acrobatie** : Traverser un terrain difficile (jet DEX) → ignore les malus de terrain ce tour
+- **Désarmement** : Retirer l'arme d'un ennemi (jet DEX opposé) → l'ennemi perd son arme
+- **Esquive spectaculaire** : Éviter complètement une attaque (jet DEX) → immunité à une attaque ciblée
+- **Repositionnement** : Se déplacer sans déclencher d'attaques d'opportunité (jet DEX)
+
+#### **Manœuvres basées sur la Précision (PRE)**
+- **Tir de précision** : Viser un point spécifique (jet PRE) → ignore partiellement l'armure
+- **Tir de suppression** : Contraindre les ennemis à se mettre à couvert (jet PRE) → -2 aux actions ennemies
+- **Ricochet** : Faire rebondir un tir (jet PRE) → touche une cible en couverture
+- **Tir désarmant** : Viser l'équipement ennemi (jet PRE) → désactive temporairement un objet
 
 ---
 
@@ -189,7 +233,7 @@ Après le combat, les joueurs peuvent :
 
 Les priorités du système :
 
-- Unification des mécaniques physiques et magiques.
+- Unification des mécaniques physiques et quantotechniques.
 - Défenses claires et mesurables.
 - Progression naturelle par équipement et statistiques.
 - Fluidité de lecture pour le MJ et les joueurs.

@@ -1,5 +1,5 @@
 name: "Taliste"
-description: "Véritables maîtres des territoires sauvages, les talistes sont les yeux et les oreilles de l'Empire dans les régions inexplorées. Formés dès l'enfance à lire les signes de la nature et à communier avec les écosystèmes les plus hostiles, ils possèdent une compréhension intuitive du monde vivant que peu peuvent égaler. Leurs sens affinés leur permettent de détecter les moindres indices de présence ennemie, tandis que leur magie bio-arcanique leur offre la capacité de se fondre dans leur environnement. Éclaireurs incomparables et guides infaillibles, ils ouvrent la voie à la conquête impériale des nouveaux mondes."
+description: "Véritables maîtres des territoires sauvages, les talistes sont les yeux et les oreilles de l'Empire dans les régions inexplorées. Formés dès l'enfance à lire les signes de la nature et à communier avec les écosystèmes les plus hostiles, ils possèdent une compréhension intuitive du monde vivant que peu peuvent égaler. Leurs sens affinés leur permettent de détecter les moindres indices de présence ennemie, tandis que leur quantotechnique bio-quantique leur offre la capacité de se fondre dans leur environnement. Éclaireurs incomparables et guides infaillibles, ils ouvrent la voie à la conquête impériale des nouveaux mondes."
 
 image: "https://www.pinterest.fr/pin/taliste-image/"
 
@@ -19,8 +19,8 @@ affinities:
   distance: 2
   melee: 0
   schools:
-    biomagie: 4
-    arcane: 3
+    bioquantotechnique: 4
+    quantique: 3
   types:
     alteration: 4
     amelioration: 3

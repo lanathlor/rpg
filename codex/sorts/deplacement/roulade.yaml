@@ -28,4 +28,4 @@ levels:
       movement: Déplacement de 1d8 + vitesse dans n'importe quelle direction
       special: Ne déclenche pas de jet d'opportunité. Ce sort est considéré comme un déplacement
 school: martial
-type: altération
+type: alteration

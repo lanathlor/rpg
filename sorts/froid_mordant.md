@@ -8,7 +8,7 @@ Refroidit intensément une cible.
 
 ## Prérequis
 
-**A. mag :** 4
+**A. arc :** 4
 **A. givre :** 4
 **Condition :** 16 INT
 **Incantation :** instantané

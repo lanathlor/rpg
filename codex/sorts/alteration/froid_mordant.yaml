@@ -2,7 +2,7 @@ spell_series: "Froid mordant"
 description_base: "Refroidit intensément une cible, pénétrant ses défenses pour la plonger dans un froid surnaturel qui ralentit ses mouvements."
 
 school: givre
-type: altération
+type: alteration
 
 levels:
   - level: "1"

@@ -1,0 +1,36 @@
+spell_series: Onde de choc
+description_base: Génère une puissante onde sonique destructrice.
+levels:
+  - level: "1"
+    name: Onde de choc
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[sonique]: 2"
+        type_requirement: "A.Type[destruction]: 2"
+        mixed_requirement: "A.École[sonique] + A.Type[destruction]: 3"
+    conditions:
+      intelligence_required: 15
+      flux_cost: 5
+    effects:
+      damage: 2d4 dans un cône de 8m
+      special: "Traverse les armures légères (ignore 2 points de protection)"
+      specials:
+        - "Les cibles subissent -2 aux jets de perception pendant 3 tours"
+  - level: "2"
+    name: Onde de choc devastatrice
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[sonique]: 3"
+        type_requirement: "A.Type[destruction]: 3"
+        mixed_requirement: "A.École[sonique] + A.Type[destruction]: 5"
+    conditions:
+      intelligence_required: 17
+      flux_cost: 8
+    effects:
+      damage: 3d6 dans un cône de 12m
+      special: "Traverse les armures moyennes (ignore 4 points de protection)"
+      specials:
+        - "Les cibles subissent -3 aux jets de perception et attaques pendant 4 tours"
+        - "Peut briser les objets fragiles et vitres dans la zone"
+school: sonique
+type: destruction

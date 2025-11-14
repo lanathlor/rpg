@@ -5,14 +5,14 @@ levels:
     name: Assoupissement
     prerequisites:
       affinities:
-        école_requirement: "A.École[arcane]: 4"
+        école_requirement: "A.École[quantique]: 4"
         type_requirement: "A.Type[altération]: 4"
-        mixed_requirement: "A.École[arcane] + A.Type[altération]: 6"
+        mixed_requirement: "A.École[quantique] + A.Type[altération]: 6"
     conditions:
-      intelligence_required: 18
+      charisma_required: 18
       flux_cost: 10
     effects:
       status: La cible est incapacitée
     duration: 1d4
-school: arcane
-type: altération
+school: quantique
+type: alteration
