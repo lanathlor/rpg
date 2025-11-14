@@ -30,10 +30,13 @@ import {
   BookOpen,
   Activity,
   Star,
-  Hand
+  Hand,
+  FileText
 } from 'lucide-react'
 import { useClasses, useSpells, useWeapons, useArmors, useSkills, useConsumables } from '@/lib/dataProvider'
 import { getSchoolIcon, getSchoolColor, getTypeIcon } from '@/lib/schoolUtils'
+import { checkSpellSeriesAccess, checkWeaponAccess, checkArmorAccess, checkSkillAccess, checkConsumableAccess, getAccessDescription, getDetailedAccessInfo } from '@/lib/accessUtils'
+import { filterCharacterContent, exportCharacterToPDF } from '@/lib/pdfExport'
 import { SpellDetail } from '@/components/SpellDetail'
 import { WeaponDetail } from '@/components/WeaponDetail'
 import { ArmorDetail } from '@/components/ArmorDetail'
@@ -161,6 +164,26 @@ export function ClassDetailPage() {
     setSelectedConsumable(null)
   }
 
+  // Handle PDF export
+  const handleExportPDF = () => {
+    if (!characterClass) return
+
+    try {
+      const filteredData = filterCharacterContent(
+        characterClass,
+        spells,
+        weapons,
+        armors,
+        skills,
+        consumables
+      )
+      exportCharacterToPDF(filteredData)
+    } catch (error) {
+      console.error('Error exporting PDF:', error)
+      // You could add a toast notification here in the future
+    }
+  }
+
 
   if (loading) {
     return (
@@ -204,11 +227,17 @@ export function ClassDetailPage() {
         <span className="text-foreground font-medium">{characterClass.name}</span>
       </nav>
 
-      {/* Back Button */}
-      <Button variant="outline" onClick={() => navigate('/classes')}>
-        <ArrowLeft className="h-4 w-4 mr-2" />
-        Retour aux classes
-      </Button>
+      {/* Action Buttons */}
+      <div className="flex gap-3">
+        <Button variant="outline" onClick={() => navigate('/classes')}>
+          <ArrowLeft className="h-4 w-4 mr-2" />
+          Retour aux classes
+        </Button>
+        <Button variant="outline" onClick={handleExportPDF}>
+          <FileText className="h-4 w-4 mr-2" />
+          Exporter PDF
+        </Button>
+      </div>
 
       {/* Header */}
       <div className="space-y-4">
@@ -384,15 +413,36 @@ export function ClassDetailPage() {
                   Armes
                 </h4>
                 <div className="space-y-2">
-                  {characterClass.equipment.weapons.map((weapon, index) => (
-                    <div
-                      key={index}
-                      onClick={() => openWeaponDetail(weapon)}
-                      className="block p-2 rounded-md border hover:bg-muted transition-colors cursor-pointer"
-                    >
-                      <span className="text-sm">{weapon}</span>
-                    </div>
-                  ))}
+                  {characterClass.equipment.weapons.map((weapon, index) => {
+                    const weaponData = findWeaponByName(weapon)
+                    const accessResult = weaponData ? checkWeaponAccess(weaponData, characterClass) : { hasAccess: true }
+                    const hasAccess = accessResult.hasAccess
+
+                    return (
+                      <div
+                        key={index}
+                        onClick={() => openWeaponDetail(weapon)}
+                        className={`block p-2 rounded-md border hover:bg-muted transition-colors cursor-pointer relative ${
+                          !hasAccess ? 'border-red-500 border-2 bg-red-50 dark:bg-red-950/20' : ''
+                        }`}
+                        title={!hasAccess ? getDetailedAccessInfo(accessResult) : undefined}
+                      >
+                        <div className="flex items-center justify-between">
+                          <span className="text-sm">{weapon}</span>
+                          {!hasAccess && (
+                            <Badge variant="outline" className="text-xs bg-red-100 text-red-800 border-red-300 dark:bg-red-900 dark:text-red-200 dark:border-red-700">
+                              ✗
+                            </Badge>
+                          )}
+                        </div>
+                        {!hasAccess && accessResult.reason && (
+                          <div className="text-xs text-red-600 dark:text-red-400 mt-1">
+                            {accessResult.reason}
+                          </div>
+                        )}
+                      </div>
+                    )
+                  })}
                 </div>
               </div>
             )}
@@ -405,15 +455,36 @@ export function ClassDetailPage() {
                   Armures
                 </h4>
                 <div className="space-y-2">
-                  {characterClass.equipment.armor.map((armor, index) => (
-                    <div
-                      key={index}
-                      onClick={() => openArmorDetail(armor)}
-                      className="block p-2 rounded-md border hover:bg-muted transition-colors cursor-pointer"
-                    >
-                      <span className="text-sm">{armor}</span>
-                    </div>
-                  ))}
+                  {characterClass.equipment.armor.map((armor, index) => {
+                    const armorData = findArmorByName(armor)
+                    const accessResult = armorData ? checkArmorAccess(armorData, characterClass) : { hasAccess: true }
+                    const hasAccess = accessResult.hasAccess
+
+                    return (
+                      <div
+                        key={index}
+                        onClick={() => openArmorDetail(armor)}
+                        className={`block p-2 rounded-md border hover:bg-muted transition-colors cursor-pointer relative ${
+                          !hasAccess ? 'border-red-500 border-2 bg-red-50 dark:bg-red-950/20' : ''
+                        }`}
+                        title={!hasAccess ? getDetailedAccessInfo(accessResult) : undefined}
+                      >
+                        <div className="flex items-center justify-between">
+                          <span className="text-sm">{armor}</span>
+                          {!hasAccess && (
+                            <Badge variant="outline" className="text-xs bg-red-100 text-red-800 border-red-300 dark:bg-red-900 dark:text-red-200 dark:border-red-700">
+                              ✗
+                            </Badge>
+                          )}
+                        </div>
+                        {!hasAccess && accessResult.reason && (
+                          <div className="text-xs text-red-600 dark:text-red-400 mt-1">
+                            {accessResult.reason}
+                          </div>
+                        )}
+                      </div>
+                    )
+                  })}
                 </div>
               </div>
             )}
@@ -426,20 +497,41 @@ export function ClassDetailPage() {
                   Consommables
                 </h4>
                 <div className="space-y-2">
-                  {characterClass.equipment.consumables.map((consumable, index) => (
-                    <div
-                      key={index}
-                      onClick={() => openConsumableDetail(consumable.name)}
-                      className="block p-2 rounded-md border hover:bg-muted transition-colors cursor-pointer"
-                    >
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm">{consumable.name}</span>
-                        <Badge variant="outline" className="text-xs">
-                          {consumable.quantity}
-                        </Badge>
+                  {characterClass.equipment.consumables.map((consumable, index) => {
+                    const consumableData = findConsumableByName(consumable.name)
+                    const accessResult = consumableData ? checkConsumableAccess(consumableData, characterClass) : { hasAccess: true }
+                    const hasAccess = accessResult.hasAccess
+
+                    return (
+                      <div
+                        key={index}
+                        onClick={() => openConsumableDetail(consumable.name)}
+                        className={`block p-2 rounded-md border hover:bg-muted transition-colors cursor-pointer relative ${
+                          !hasAccess ? 'border-red-500 border-2 bg-red-50 dark:bg-red-950/20' : ''
+                        }`}
+                        title={!hasAccess ? getDetailedAccessInfo(accessResult) : undefined}
+                      >
+                        <div className="flex items-center justify-between">
+                          <span className="text-sm">{consumable.name}</span>
+                          <div className="flex items-center gap-2">
+                            <Badge variant="outline" className="text-xs">
+                              {consumable.quantity}
+                            </Badge>
+                            {!hasAccess && (
+                              <Badge variant="outline" className="text-xs bg-red-100 text-red-800 border-red-300 dark:bg-red-900 dark:text-red-200 dark:border-red-700">
+                                ✗
+                              </Badge>
+                            )}
+                          </div>
+                        </div>
+                        {!hasAccess && accessResult.reason && (
+                          <div className="text-xs text-red-600 dark:text-red-400 mt-1">
+                            {accessResult.reason}
+                          </div>
+                        )}
                       </div>
-                    </div>
-                  ))}
+                    )
+                  })}
                 </div>
               </div>
             )}
@@ -460,15 +552,36 @@ export function ClassDetailPage() {
             </CardHeader>
             <CardContent>
               <div className="space-y-2">
-                {characterClass.skills.map((skill, index) => (
-                  <div
-                    key={index}
-                    onClick={() => openSkillDetail(skill)}
-                    className="block p-2 rounded-md border hover:bg-muted transition-colors cursor-pointer"
-                  >
-                    <span className="text-sm">{skill}</span>
-                  </div>
-                ))}
+                {characterClass.skills.map((skill, index) => {
+                  const skillData = findSkillByName(skill)
+                  const accessResult = skillData ? checkSkillAccess(skillData, characterClass) : { hasAccess: true }
+                  const hasAccess = accessResult.hasAccess
+
+                  return (
+                    <div
+                      key={index}
+                      onClick={() => openSkillDetail(skill)}
+                      className={`block p-2 rounded-md border hover:bg-muted transition-colors cursor-pointer relative ${
+                        !hasAccess ? 'border-red-500 border-2 bg-red-50 dark:bg-red-950/20' : ''
+                      }`}
+                      title={!hasAccess ? getDetailedAccessInfo(accessResult) : undefined}
+                    >
+                      <div className="flex items-center justify-between">
+                        <span className="text-sm">{skill}</span>
+                        {!hasAccess && (
+                          <Badge variant="outline" className="text-xs bg-red-100 text-red-800 border-red-300 dark:bg-red-900 dark:text-red-200 dark:border-red-700">
+                            ✗
+                          </Badge>
+                        )}
+                      </div>
+                      {!hasAccess && accessResult.reason && (
+                        <div className="text-xs text-red-600 dark:text-red-400 mt-1">
+                          {accessResult.reason}
+                        </div>
+                      )}
+                    </div>
+                  )
+                })}
               </div>
             </CardContent>
           </Card>
@@ -485,15 +598,43 @@ export function ClassDetailPage() {
             </CardHeader>
             <CardContent>
               <div className="space-y-2">
-                {characterClass.spells.map((spell, index) => (
-                  <div
-                    key={index}
-                    onClick={() => openSpellDetail(spell)}
-                    className="block p-2 rounded-md border hover:bg-muted transition-colors cursor-pointer"
-                  >
-                    <span className="text-sm">{spell}</span>
-                  </div>
-                ))}
+                {characterClass.spells.map((spell, index) => {
+                  const spellData = findSpellByName(spell)
+                  const accessResult = spellData ? checkSpellSeriesAccess(spellData, characterClass.affinities) : { hasAccess: true }
+                  const hasAccess = accessResult.hasAccess
+
+                  return (
+                    <div
+                      key={index}
+                      onClick={() => openSpellDetail(spell)}
+                      className={`block p-2 rounded-md border hover:bg-muted transition-colors cursor-pointer relative ${
+                        !hasAccess ? 'border-red-500 border-2 bg-red-50 dark:bg-red-950/20' : ''
+                      }`}
+                      title={!hasAccess ? getDetailedAccessInfo(accessResult) : undefined}
+                    >
+                      <div className="flex items-center justify-between">
+                        <span className="text-sm">{spell}</span>
+                        <div className="flex items-center gap-2">
+                          {!hasAccess && (
+                            <Badge variant="outline" className="text-xs bg-red-100 text-red-800 border-red-300 dark:bg-red-900 dark:text-red-200 dark:border-red-700">
+                              ✗ Restreint
+                            </Badge>
+                          )}
+                          {hasAccess && (
+                            <Badge variant="outline" className="text-xs bg-green-100 text-green-800 border-green-300 dark:bg-green-900 dark:text-green-200 dark:border-green-700">
+                              ✓ Accessible
+                            </Badge>
+                          )}
+                        </div>
+                      </div>
+                      {!hasAccess && accessResult.reason && (
+                        <div className="text-xs text-red-600 dark:text-red-400 mt-1">
+                          {accessResult.reason}
+                        </div>
+                      )}
+                    </div>
+                  )
+                })}
               </div>
             </CardContent>
           </Card>

@@ -19,4 +19,3 @@ levels:
       damage: "1d12+1d8 givre"
       special: "Inflige 2x 'Gelure' aux personnes touchées"
       area: "Zone linéaire de 25 mètres"
-    recharge_time: "50 sec"

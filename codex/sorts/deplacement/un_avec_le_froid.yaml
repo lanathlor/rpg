@@ -18,4 +18,3 @@ levels:
     effects:
       movement: "Déplacement de 20 mètres librement, écartant les obstacles légers"
       special: "N'active pas les jets d'opportunité. Inflige 2x 'Gelure' au lanceur"
-    recharge_time: "instantané"

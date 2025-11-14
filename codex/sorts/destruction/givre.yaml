@@ -18,4 +18,3 @@ levels:
     effects:
       damage: "1d4+4 givre"
       special: "Rafraîchit les effets 'Gelure' sur la cible"
-    recharge_time: "instantané"

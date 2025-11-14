@@ -17,4 +17,3 @@ levels:
       flux_cost: 6
     effects:
       special: "Inflige 4x 'Gelure' à la cible"
-    recharge_time: "20 sec"

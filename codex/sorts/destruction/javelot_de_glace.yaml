@@ -18,4 +18,3 @@ levels:
     effects:
       damage: "2d12+4 givre"
       special: "Inflige 'Gelure' à la cible"
-    recharge_time: "40 sec"
