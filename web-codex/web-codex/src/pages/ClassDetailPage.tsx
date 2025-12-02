@@ -332,7 +332,7 @@ export function ClassDetailPage() {
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <Sparkles className="h-5 w-5 text-purple-500" />
-            Affinités quantotechniques
+            Affinités arcanotechniques
           </CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
@@ -359,7 +359,7 @@ export function ClassDetailPage() {
             {/* Schools */}
             {characterClass.affinities.schools && (
               <div>
-                <h4 className="font-medium text-sm mb-3">Écoles de quantotechnique</h4>
+                <h4 className="font-medium text-sm mb-3">Écoles d'arcanotechnie</h4>
                 <div className="space-y-2">
                   {Object.entries(characterClass.affinities.schools).map(([school, level]) => (
                     <div key={school} className="flex items-center justify-between">
@@ -377,7 +377,7 @@ export function ClassDetailPage() {
             {/* Types */}
             {characterClass.affinities.types && (
               <div>
-                <h4 className="font-medium text-sm mb-3">Types de quantotechnique</h4>
+                <h4 className="font-medium text-sm mb-3">Types d'arcanotechnie</h4>
                 <div className="space-y-2">
                   {Object.entries(characterClass.affinities.types).map(([type, level]) => (
                     <div key={type} className="flex items-center justify-between">

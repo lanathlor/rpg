@@ -1,4 +1,4 @@
-# Système d'affinités quantotechniques
+# Système d'affinités arcanotechniques
 
 ## 🎯 Principe général
 
@@ -29,7 +29,7 @@ Un sort est utilisable si le personnage remplit **au moins une** des conditions 
 - `A.Type ≥ ReqType`
 - `A.École + A.Type ≥ ReqMixte`
 
-Cela signifie qu’un Quantotechnicien peut accéder à un sort :
+Cela signifie qu’un Arcanotechnicien peut accéder à un sort :
 
 - en se spécialisant dans une **école** (ex : Givre pur),
 - en se spécialisant dans un **type** (ex : Destruction pur),
@@ -46,15 +46,15 @@ Cela signifie qu’un Quantotechnicien peut accéder à un sort :
 | Build            | Givre | Destruction | Accès ? | Commentaire                   |
 | ---------------- | ----- | ----------- | ------- | ----------------------------- |
 | Cryomancien pur  | 4     | 0           | ✅      | Spécialiste d’école           |
-| Quantotechnicien destructeur | 0     | 4           | ✅      | Spécialiste de type           |
+| Arcanotechnicien destructeur | 0     | 4           | ✅      | Spécialiste de type           |
 | Généraliste      | 2     | 2           | ✅      | Mixte équilibré               |
 | Débutant         | 1     | 1           | ❌      | Pas assez d’affinité combinée |
 
 ---
 
-## 🔹 Liste des Types d'Quantotechnique
+## 🔹 Liste des Types d'Arcanotechnie
 
-Les **Types** représentent la manière dont un Quantotechnicien transforme le mana en énergie.
+Les **Types** représentent la manière dont un Arcanotechnicien transforme le mana en énergie.
 Ils reflètent la _vitesse, la stabilité et la complexité_ de cette conversion.
 
 ---
@@ -67,7 +67,7 @@ Ils reflètent la _vitesse, la stabilité et la complexité_ de cette conversion
 
 **Caractéristiques :**
 
-- Libération instantanée du flux quantotechnique.
+- Libération instantanée du flux arcanotechnique.
 - Rendement énergétique modéré.
 - Peu de contrôle, grande stabilité.
 
@@ -79,7 +79,7 @@ Trait de feu, Éclair, Onde de choc.
 ### 💥 Annihilation
 
 **Nature :** Compression et libération explosive du mana.
-**Principe :** le Quantotechnicien concentre le flux avant de le libérer brutalement, augmentant sa densité énergétique.
+**Principe :** le Arcanotechnicien concentre le flux avant de le libérer brutalement, augmentant sa densité énergétique.
 **Profil :** rapide, violent, instable.
 
 **Caractéristiques :**
@@ -95,8 +95,8 @@ Lance quantique, Implosion lumineuse, Décharge critique.
 
 ### 🌋 Cataclysme
 
-**Nature :** Accumulation lente et massive d’énergie quantotechnique.
-**Principe :** le Quantotechnicien canalise le mana sur une longue durée avant sa libération.
+**Nature :** Accumulation lente et massive d’énergie arcanotechnique.
+**Principe :** le Arcanotechnicien canalise le mana sur une longue durée avant sa libération.
 **Profil :** lent, stable, dévastateur.
 
 **Caractéristiques :**
@@ -113,7 +113,7 @@ Tempête de feu, Séisme, Voile glaciaire.
 ### 🧬 Altération
 
 **Nature :** Transformation subtile et ciblée.
-**Principe :** manipulation fine du flux pour modifier une propriété physique, quantotechnique ou biologique.
+**Principe :** manipulation fine du flux pour modifier une propriété physique, arcanotechnique ou biologique.
 **Profil :** précis, méthodique, stable.
 
 **Caractéristiques :**
@@ -130,7 +130,7 @@ Gel affaiblissant, Drain vital, Distorsion de phase.
 ### 🧠 Amélioration
 
 **Nature :** Conversion harmonique et interne.
-**Principe :** le Quantotechnicien réinjecte le mana dans un système existant pour le renforcer ou le stabiliser.
+**Principe :** le Arcanotechnicien réinjecte le mana dans un système existant pour le renforcer ou le stabiliser.
 **Profil :** stable, équilibré, endurant.
 
 **Caractéristiques :**
@@ -146,14 +146,14 @@ Bénédiction, Accélération lumineuse, Renforcement kinesthésique.
 
 ### ⚔️ Arme
 
-**Nature :** Canalisation d'énergie quantotechnique à travers les armes physiques.
-**Principe :** le Quantotechnicien infuse ses armes avec du mana pour augmenter leur efficacité au combat.
+**Nature :** Canalisation d'énergie arcanotechnique à travers les armes physiques.
+**Principe :** le Arcanotechnicien infuse ses armes avec du mana pour augmenter leur efficacité au combat.
 **Profil :** tactique, polyvalent, orienté combat.
 
 **Caractéristiques :**
 
 - Amélioration des capacités d'armement.
-- Synergie entre quantotechnique et combat physique.
+- Synergie entre arcanotechnique et combat physique.
 - Efficacité accrue selon l'arme utilisée.
 
 **Exemples :**
@@ -174,9 +174,9 @@ Tir surchargé, Plombs à haute vélocité, Tir à la tête.
 
 ---
 
-## 🛡️ Types d'Quantotechnique et Résistances
+## 🛡️ Types d'Arcanotechnie et Résistances
 
-Le Type et l'École d'un sort déterminent **quelle résistance** s'applique contre lui. Ce n'est pas le fait qu'il soit "quantotechnique" qui compte, mais **la nature physique de l'effet produit**.
+Le Type et l'École d'un sort déterminent **quelle résistance** s'applique contre lui. Ce n'est pas le fait qu'il soit "arcanotechnique" qui compte, mais **la nature physique de l'effet produit**.
 
 > Pour une compréhension complète du système de résistances, consultez [Système de Résistances](07_systeme_de_resistances.md).
 
@@ -221,9 +221,9 @@ Le Type et l'École d'un sort déterminent **quelle résistance** s'applique con
 
 ## 💡 Philosophie du système
 
-> Le **Type** reflète la capacité mentale et physique du Quantotechnicien à transformer le mana.
-> Il définit son _style énergétique_ et sa _relation au flux quantotechnique_, pas sa puissance brute.
-> Deux Quantotechniciens de même école peuvent être radicalement différents selon leur type :
+> Le **Type** reflète la capacité mentale et physique du Arcanotechnicien à transformer le mana.
+> Il définit son _style énergétique_ et sa _relation au flux arcanotechnique_, pas sa puissance brute.
+> Deux Arcanotechniciens de même école peuvent être radicalement différents selon leur type :
 >
 > - L'un décharge brutalement son énergie (Destruction)
 > - L'autre l'accumule lentement (Cataclysme)

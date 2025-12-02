@@ -2,5 +2,5 @@ name: "Vue des quantiques"
 category: "Compétence"
 subcategory: "perception"
 effect:
-  detection_bonus: "Augmente les chances de voir des éléments liés à la quantotechnique"
-description: "Capacité à percevoir les flux quantotechniques et à identifier les objets, créatures ou phénomènes d'origine quantotechnique."
+  detection_bonus: "Augmente les chances de voir des éléments liés à l'arcanotechnie"
+description: "Capacité à percevoir les flux arcanotechniques et à identifier les objets, créatures ou phénomènes d'origine arcanotechnique."

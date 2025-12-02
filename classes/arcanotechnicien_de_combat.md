@@ -1,14 +1,14 @@
-# Quantotechnicien de combat
+# Arcanotechnicien de combat
 
 ## Histoire
 
-Lors de la guerre contre les Acéras, il devenait évidant que la guérilla est la clé du succès. Les Quantotechniciens, puissant lors des batailles a grande envergure, devait se prendre un nouveau rôle. Les Quantotechniciens de combat sont la réponse. Efficace contre des groupes de soldat d'infanterie, les Quantotechniciens de combat sont capables de bouger vite et de déplacer le champ de batail sur des points stratégique. Leur férocité et leur indépendance leurs ont valu une place unique au sein de l'armée.
+Lors de la guerre contre les Acéras, il devenait évidant que la guérilla est la clé du succès. Les Arcanotechniciens, puissant lors des batailles a grande envergure, devait se prendre un nouveau rôle. Les Arcanotechniciens de combat sont la réponse. Efficace contre des groupes de soldat d'infanterie, les Arcanotechniciens de combat sont capables de bouger vite et de déplacer le champ de batail sur des points stratégique. Leur férocité et leur indépendance leurs ont valu une place unique au sein de l'armée.
 
 **Image :** https://i.pinimg.com/736x/2b/95/af/2b95af02e170eb88efd9b7c4afbe8ba0.jpg
 
 ## Caractéristiques
 
-**Classe :** Quantotechnicien de combat
+**Classe :** Arcanotechnicien de combat
 
 ### Statistiques de base
 - **Vie :** 50
@@ -65,7 +65,7 @@ Lors de la guerre contre les Acéras, il devenait évidant que la guérilla est 
 - **Kit de soins :** rends 15 PV
 - **Cristal de mana :** annule le temps de recharge du prochain sort jouer
 - **Champ électromagnétique :** +2 scores de protection à distance
-- **Vue des quantiques :** augmente les chances de voir des éléments liés à la quantotechnique
+- **Vue des quantiques :** augmente les chances de voir des éléments liés à l'arcanotechnie
 
 ### Exosquelette de combat
 - **Famille :** Armure → exosquelette
@@ -82,4 +82,4 @@ Lors de la guerre contre les Acéras, il devenait évidant que la guérilla est 
 
 
 ## Comment jouer
-Le Quantotechnicien de combat est pensé pour éliminer rapidement de multiples unités fragiles. Mais le Quantotechnicien de combat, par sa fragilité, peut être en danger lors des combats plus longs. Il faudra alors faire preuve de patience et laisser la première ligne a vos alliés plus résistants.
+Le Arcanotechnicien de combat est pensé pour éliminer rapidement de multiples unités fragiles. Mais le Arcanotechnicien de combat, par sa fragilité, peut être en danger lors des combats plus longs. Il faudra alors faire preuve de patience et laisser la première ligne a vos alliés plus résistants.

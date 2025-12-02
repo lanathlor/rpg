@@ -2,7 +2,7 @@
 
 ## 🎯 Objectif
 
-Cette analyse recalcule tous les coûts point buy en utilisant la nouvelle structure de coûts d'affinités pour équilibrer les classes similaires comme Quantotechnicien et Quantotechnologue.
+Cette analyse recalcule tous les coûts point buy en utilisant la nouvelle structure de coûts d'affinités pour équilibrer les classes similaires comme Arcanotechnicien et Arcanotechnologue.
 
 ---
 
@@ -15,7 +15,7 @@ Cette analyse recalcule tous les coûts point buy en utilisant la nouvelle struc
 | **Pure** | 8 pts/niveau | Pure |
 | **Quantique** | 7 pts/niveau | Quantique |
 | **Complexes** | 6 pts/niveau | Chronodynamique, Gravitonique |
-| **Avancées** | 5 pts/niveau | Biométabolique, Bioquantotechnique, Magnétique, Kinesthésique |
+| **Avancées** | 5 pts/niveau | Biométabolique, Bioarcanotechnie, Magnétique, Kinesthésique |
 | **Standard** | 3 pts/niveau | Feu, Givre, Électricité, Lumière, Ombre, Aérocinétique, Hydrodynamique, Sonique, Illusion, Martial, Balistique |
 
 ### **Types et Autres Affinités**
@@ -150,13 +150,13 @@ Cette analyse recalcule tous les coûts point buy en utilisant la nouvelle struc
 
 | **Rang** | **Classe** | **Base** | **Affinités** | **Compétences** | **Équipement** | **TOTAL** | **Δ vs Précédent** |
 |----------|------------|----------|---------------|-----------------|----------------|-----------|-------------------|
-| 1 | **Quantotechnologue** | 49 | 79 | 17 | 15 | **160** | -4 ⬇️ |
-| 2 | **Quantotechnicien** | 43 | 101 | 23 | 15 | **182** | -10 ⬇️ |
+| 1 | **Arcanotechnologue** | 49 | 79 | 17 | 15 | **160** | -4 ⬇️ |
+| 2 | **Arcanotechnicien** | 43 | 101 | 23 | 15 | **182** | -10 ⬇️ |
 | 3 | **Taliste** | 56 | 84 | 19 | 24 | **183** | +6 ⬆️ |
 | 4 | **Chasseur** | 46 | 70 | 23 | 47 | **186** | -12 ⬇️ |
 | 5 | **Technologue** | 44 | 50 | 25 | 76 | **195** | -8 ⬇️ |
 | 6 | **Horion** | 71 | 92 | 14 | 44 | **221** | +9 ⬆️ |
-| 7 | **Quantotechnicien de combat** | 63 | 83 | 26 | 37 | **209** | -8 ⬇️ |
+| 7 | **Arcanotechnicien de combat** | 63 | 83 | 26 | 37 | **209** | -8 ⬇️ |
 | 8 | **Spectre** | 32 | 120 | 20 | 63 | **235** | -8 ⬇️ |
 | 9 | **Sentinelle** | 67 | 96 | 22 | 52 | **237** | -4 ⬇️ |
 | 10 | **Tutélaire** | 68 | 98 | 27 | 51 | **244** | -16 ⬇️ |
@@ -168,24 +168,24 @@ Cette analyse recalcule tous les coûts point buy en utilisant la nouvelle struc
 
 ## 🎯 Analyse des Résultats
 
-### **Objectif Atteint : Classes Quantotechniques Équilibrées ✅**
+### **Objectif Atteint : Classes Arcanotechnies Équilibrées ✅**
 
-1. **Quantotechnologue** : 160 points
-2. **Quantotechnicien** : 182 points
+1. **Arcanotechnologue** : 160 points
+2. **Arcanotechnicien** : 182 points
 3. **Taliste** : 183 points
 
-La différence entre Quantotechnicien et Quantotechnologue est maintenant de seulement **22 points** (vs 28 précédents), montrant un meilleur équilibre.
+La différence entre Arcanotechnicien et Arcanotechnologue est maintenant de seulement **22 points** (vs 28 précédents), montrant un meilleur équilibre.
 
 ### **Classes Bien Équilibrées (160-195 points)**
-- **Quantotechnologue** : 160 points ⭐
-- **Quantotechnicien** : 182 points ⭐
+- **Arcanotechnologue** : 160 points ⭐
+- **Arcanotechnicien** : 182 points ⭐
 - **Taliste** : 183 points ⭐
 - **Chasseur** : 186 points ⭐
 - **Technologue** : 195 points ⭐
 
 ### **Classes Nécessitant Ajustements (200+ points)**
 - **Horion** : 221 points (+9 vs cible)
-- **Quantotechnicien de combat** : 209 points (limite acceptable)
+- **Arcanotechnicien de combat** : 209 points (limite acceptable)
 - **Spectre** : 235 points (-45 pts requis)
 - **Sentinelle** : 237 points (-47 pts requis)
 - **Tutélaire** : 244 points (-54 pts requis)
@@ -195,7 +195,7 @@ La différence entre Quantotechnicien et Quantotechnologue est maintenant de seu
 - **Réduction générale** : -8 points en moyenne
 - **Écoles standard** réduites à 3 pts (vs 5) = -40% de coût
 - **Distribution resserrée** : 160-246 points (86 pts écart vs 96 précédent)
-- **Classes quantotechniques** mieux équilibrées
+- **Classes arcanotechniques** mieux équilibrées
 
 ---
 
@@ -205,13 +205,13 @@ La différence entre Quantotechnicien et Quantotechnologue est maintenant de seu
 La distribution naturelle avec les nouveaux coûts suggère 190 points comme cible optimale.
 
 ### **Classes Modèles à Maintenir**
-1. **Quantotechnologue** (160) - Spécialiste recherche/soutien parfait
-2. **Quantotechnicien** (182) - Mage de combat équilibré
+1. **Arcanotechnologue** (160) - Spécialiste recherche/soutien parfait
+2. **Arcanotechnicien** (182) - Mage de combat équilibré
 3. **Chasseur** (186) - Anti-mage spécialisé
 4. **Technologue** (195) - High-tech viable
 
 ### **Ajustements Mineurs Requis**
-- **Quantotechnicien de combat** (209) : Acceptable comme hybride premium
+- **Arcanotechnicien de combat** (209) : Acceptable comme hybride premium
 - **Horion** (221) : Réduction légère nécessaire (-15-20 pts)
 
 ### **Rééquilibrage Majeur Requis**
@@ -222,7 +222,7 @@ La distribution naturelle avec les nouveaux coûts suggère 190 points comme cib
 ## ✅ Succès de la Révision
 
 Cette révision a réussi à :
-1. **Équilibrer les classes quantotechniques** (écart réduit de 28 à 22 points)
+1. **Équilibrer les classes arcanotechniques** (écart réduit de 28 à 22 points)
 2. **Réduire l'écart général** entre toutes les classes (86 vs 96 points)
 3. **Créer 5 classes bien équilibrées** dans la zone cible 160-195
 4. **Maintenir la cohérence** des coûts d'affinités par complexité

@@ -5,9 +5,9 @@ levels:
     name: Confusion
     prerequisites:
       affinities:
-        école_requirement: "A.École[bioquantotechnique]: 3"
+        école_requirement: "A.École[bioarcanotechnique]: 3"
         type_requirement: "A.Type[altération]: 3"
-        mixed_requirement: "A.École[bioquantotechnique] + A.Type[altération]: 5"
+        mixed_requirement: "A.École[bioarcanotechnique] + A.Type[altération]: 5"
     conditions:
       charisma_required: 16
       flux_cost: 6
@@ -19,9 +19,9 @@ levels:
     name: Confusion II
     prerequisites:
       affinities:
-        école_requirement: "A.École[bioquantotechnique]: 4"
+        école_requirement: "A.École[bioarcanotechnique]: 4"
         type_requirement: "A.Type[altération]: 4"
-        mixed_requirement: "A.École[bioquantotechnique] + A.Type[altération]: 6"
+        mixed_requirement: "A.École[bioarcanotechnique] + A.Type[altération]: 6"
     conditions:
       charisma_required: 16
       flux_cost: 8
@@ -29,5 +29,5 @@ levels:
       debuff: "-2 au jet d'attaque de 1d4+1 cibles"
       resistance: RINT
     duration: 2 tours
-school: bioquantotechnique
+school: bioarcanotechnique
 type: alteration

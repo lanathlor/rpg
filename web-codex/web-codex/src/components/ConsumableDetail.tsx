@@ -14,7 +14,7 @@ const getSubcategoryIcon = (subcategory: string) => {
       return <Heart className="h-4 w-4" />
     case 'explosive':
       return <Bomb className="h-4 w-4" />
-    case 'quantotechnique':
+    case 'arcanotechnique':
       return <Sparkles className="h-4 w-4" />
     case 'tactique':
       return <Eye className="h-4 w-4" />
@@ -31,7 +31,7 @@ const getSubcategoryColor = (subcategory: string) => {
       return 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300'
     case 'explosive':
       return 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300'
-    case 'quantotechnique':
+    case 'arcanotechnique':
       return 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300'
     case 'tactique':
       return 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300'
@@ -135,7 +135,7 @@ export function ConsumableDetail({ consumable }: ConsumableDetailProps) {
           )}
           {consumable.effect.spell_enhancement && (
             <div>
-              <span className="font-medium text-sm text-purple-600 dark:text-purple-400">Amélioration quantotechnique:</span>
+              <span className="font-medium text-sm text-purple-600 dark:text-purple-400">Amélioration arcanotechnique:</span>
               <div className="text-sm text-muted-foreground mt-1">
                 {consumable.effect.spell_enhancement}
               </div>

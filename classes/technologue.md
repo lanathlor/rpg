@@ -2,7 +2,7 @@
 
 ## Histoire
 
-Les Technologues sont des ingénieurs formés à la fois à la quantotechnique et aux technologies. Avant tout utile lors de crises naturelles, d'accident majeur ou pour accélérer le processus de colonisation. Leur double diplôme leur permet d'opérer sur de nombreux terrain. Si bien même que certains décident d'aller au front, où leur aide peut être d'une grande utilité pour stopper l'adversaire dans son élan. Ils contribuent aussi, plus discrètement, à la destruction et sécurisation des informations. Les technologues sont toujours un élément de surprise, faisant regretter de ne pas les avoir pris en compte.
+Les Technologues sont des ingénieurs formés à la fois à l'arcanotechnie et aux technologies. Avant tout utile lors de crises naturelles, d'accident majeur ou pour accélérer le processus de colonisation. Leur double diplôme leur permet d'opérer sur de nombreux terrain. Si bien même que certains décident d'aller au front, où leur aide peut être d'une grande utilité pour stopper l'adversaire dans son élan. Ils contribuent aussi, plus discrètement, à la destruction et sécurisation des informations. Les technologues sont toujours un élément de surprise, faisant regretter de ne pas les avoir pris en compte.
 
 **Image:** https://www.pinterest.fr/pin/492299802990469266/?lp=true
 

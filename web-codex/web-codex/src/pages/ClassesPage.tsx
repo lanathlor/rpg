@@ -27,7 +27,7 @@ import type { CharacterClass } from '@/types'
 
 const getClassIcon = (className: string) => {
   const name = className.toLowerCase()
-  if (name.includes('Quantotechnicien') || name.includes('quantotechnologue')) return <Sparkles className="h-5 w-5" />
+  if (name.includes('Arcanotechnicien') || name.includes('arcanotechnologue')) return <Sparkles className="h-5 w-5" />
   if (name.includes('chasseur')) return <Target className="h-5 w-5" />
   if (name.includes('horion') || name.includes('maitre')) return <Sword className="h-5 w-5" />
   if (name.includes('sentinelle') || name.includes('tutelaire')) return <Shield className="h-5 w-5" />
@@ -39,7 +39,7 @@ const getClassIcon = (className: string) => {
 
 const getClassColor = (className: string) => {
   const name = className.toLowerCase()
-  if (name.includes('Quantotechnicien') || name.includes('quantotechnologue')) return 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300'
+  if (name.includes('Arcanotechnicien') || name.includes('arcanotechnologue')) return 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300'
   if (name.includes('chasseur')) return 'bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300'
   if (name.includes('horion') || name.includes('maitre')) return 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300'
   if (name.includes('sentinelle') || name.includes('tutelaire')) return 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300'

@@ -25,7 +25,7 @@ export interface AffinityStats {
   schools?: {
     feu?: number
     givre?: number
-    'bio-quantotechnique'?: number
+    'bio-arcanotechnie'?: number
     electricite?: number
     quantique?: number
   }

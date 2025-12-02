@@ -93,7 +93,7 @@ Affinité avec les armes à distances (A. dist)
 
 ●
 
-Affinité avec la quantotechnique (A. arc)
+Affinité avec l'arcanotechnie (A. arc)
 
 7
 
@@ -179,13 +179,13 @@ CLASSE
 
 ○
 
-Quantotechnicien
+Arcanotechnicien
 
 15
 
 ○
 
-Quantotechnicien de combat
+Arcanotechnicien de combat
 
 22
 
@@ -221,7 +221,7 @@ Chasseur
 
 ○
 
-Quantotechnologue
+Arcanotechnologue
 
 54
 
@@ -291,7 +291,7 @@ Contexte économique et technologique
 
 ●
 
-quantotechnique
+arcanotechnique
 
 68
 
@@ -318,7 +318,7 @@ sorts) seront développées dans le futur et après avoir eu des tests satisfais
 les éléments en présence. Notez que certaines classes sont plus orientées pour le
 combat que d’autres et ont donc de meilleures attaques. Des incohérences entre le
 lore et les statistiques pures peuvent aussi être présentes, si des classes ne
-semblent pas incarner leur background au niveau de leurs statistiques (un Quantotechnicien
+semblent pas incarner leur background au niveau de leurs statistiques (un Arcanotechnicien
 avec plus de force que d’intelligence), cela relève d’une incohérence. Vous pouvez
 aussi proposer de nouvelles classes ou des modifications des classes existantes.
 
@@ -453,8 +453,8 @@ Capacité de votre personnage à manier les armes blanches : épée, hache...
 Affinité avec les armes à distances (A. dist)
 Capacité de votre personnage à manier les armes à feu : pistolets, fusils…
 
-Affinité avec la quantotechnique (A. arc)
-Capacité de votre personnage à manier la quantotechnique.
+Affinité avec l'arcanotechnie (A. arc)
+Capacité de votre personnage à manier l'arcanotechnie.
 D’autres affinités sont considérées comme particulières et ne seront
 présentées que sur les personnages disposant de celle-ci (affinité avec les épées,
 affinité avec les snipers). Elles peuvent être ajoutées à l’affinité basique
@@ -599,7 +599,7 @@ Score de protection
 Le score de protection réduit les dégâts subis par le
 personnage. Le jet de protection est calculé en fonction de la
 source de dégât :
-Quantotechnique
+Arcanotechnie
 Physique
 Distance
 Les sorts sont des outils puissants, mais la plupart ont un temps de
@@ -739,17 +739,17 @@ brouiller les pistes entre vraies et fausses informations.
 14
 
 CLASSE
-Quantotechnicien
+Arcanotechnicien
 Histoire
 
 1
 
-Seuls les enfants dotés d’une capacité à l’utilisation de la quantotechnique dès leur plus jeune âge
-peuvent aspirer à devenir Quantotechnicien. Et les études qui suivent sont longues et compliquées. Mais une fois leur
-entrainement terminé, les Quantotechniciens deviennent des armes de destruction incroyable. Souvent utiliser dans les
+Seuls les enfants dotés d’une capacité à l’utilisation de l'arcanotechnie dès leur plus jeune âge
+peuvent aspirer à devenir Arcanotechnicien. Et les études qui suivent sont longues et compliquées. Mais une fois leur
+entrainement terminé, les Arcanotechniciens deviennent des armes de destruction incroyable. Souvent utiliser dans les
 guerres de position ou les batailles rangées. Ils sont capables, en alliant leur force, de faire pleuvoir les enfers
 sur les ennemies. Ils savent aussi briller par leur capacité à réduire en cendre des escouades seule lors de
-guérilla. Plus puissant avec d’autres Quantotechniciens, les sous-estimer quand ils sont seuls peut tout de même changer
+guérilla. Plus puissant avec d’autres Arcanotechniciens, les sous-estimer quand ils sont seuls peut tout de même changer
 l’issue une bataille.
 
 1
@@ -761,7 +761,7 @@ Image : https://i.pinimg.com/originals/97/f8/4e/97f84e45444c38e3759f66d9471e7888
 Caractéristique
 Nom :
 
-Classe : Quantotechnicien
+Classe : Arcanotechnicien
 Vie
 
 40
@@ -826,7 +826,7 @@ Consommable
 1x kit de soins, 1x
 cristal de mana
 Compétences
-Armure de quantotechnique
+Armure d'arcanotechnie
 Vue des quantiques
 
 Sorts
@@ -844,9 +844,9 @@ Un avec le froid
 Description des objets et compétence
 Kit de soins : rends 15 PV
 Cristal de mana : annule le temps de recharge du prochain sort jouer
-Armure de quantotechnique : +2 score de protection quantotechnique.
+Armure d'arcanotechnie : +2 score de protection arcanotechnique.
 Vue des quantiques : augmente les chances de voir des éléments liés à la
-quantotechnique.
+arcanotechnique.
 
 Tunique
 Famille
@@ -1030,23 +1030,23 @@ N’active pas les jets d’opportunité.
 Effet
 
 Comment jouer
-Le Quantotechnicien est une classe infligeant beaucoup de dégât en peu de
+Le Arcanotechnicien est une classe infligeant beaucoup de dégât en peu de
 temps, mais ne les tient pas dans le temps. Il est plus efficient dans les
 combats de courte durée ou avec beaucoup d’ennemies proches grâce
 à colonnes de flamme. Sa capacité de survie est limitée. Les sorts et le
-positionnement du Quantotechnicien doivent être réfléchis prudemment.
+positionnement du Arcanotechnicien doivent être réfléchis prudemment.
 
 22
 
-Quantotechnicien de combat
+Arcanotechnicien de combat
 Histoire
 
 2
 
 Lors de la guerre contre les Acéras, il devenait évidant que la guérilla est la
-clé du succès. Les Quantotechniciens, puissant lors des batailles a grande envergure, devait se prendre un
-nouveau rôle. Les Quantotechniciens de combat sont la réponse. Efficace contre des groupes de soldat
-d’infanterie, les Quantotechniciens de combat sont capables de bouger vite et de déplacer le champ de
+clé du succès. Les Arcanotechniciens, puissant lors des batailles a grande envergure, devait se prendre un
+nouveau rôle. Les Arcanotechniciens de combat sont la réponse. Efficace contre des groupes de soldat
+d’infanterie, les Arcanotechniciens de combat sont capables de bouger vite et de déplacer le champ de
 batail sur des points stratégique. Leur férocité et leur indépendance leurs ont valu une place
 unique au sein de l’armée.
 
@@ -1059,7 +1059,7 @@ Image : https://i.pinimg.com/736x/2b/95/af/2b95af02e170eb88efd9b7c4afbe8ba0.jpg
 Caractéristiques
 Nom :
 
-Classe : Quantotechnicien de combat
+Classe : Arcanotechnicien de combat
 
 Vie
 
@@ -1146,7 +1146,7 @@ Kit de soins : rends 15 PV
 Cristal de mana : annule le temps de recharge du prochain sort jouer
 Champ électromagnétique : +2 scores de protection à distance.
 Vue des quantiques : augmente les chances de voir des éléments liés à la
-quantotechnique.
+arcanotechnique.
 Exosquelette de combat
 Famille
 
@@ -1253,7 +1253,7 @@ Votre attaque est suivie d’une décharge
 chargeant le personnage le plus proche.
 Vous lancez une attaque inévitable avec votre
 arme. Une autre cible subis la moitié des
-dégâts infligés sous forme quantotechnique (arrondie a
+dégâts infligés sous forme arcanotechnique (arrondie a
 l’inférieur). La cible est la personne la plus
 proche de vous (hors la cible de l’attaque
 initial).
@@ -1314,8 +1314,8 @@ contact.
 Effet
 
 Comment jouer
-Le Quantotechnicien de combat est pensé pour éliminer rapidement de multiples
-unités fragiles. Mais le Quantotechnicien de combat, par sa fragilité, peut être en
+Le Arcanotechnicien de combat est pensé pour éliminer rapidement de multiples
+unités fragiles. Mais le Arcanotechnicien de combat, par sa fragilité, peut être en
 danger lors des combats plus longs. Il faudra alors faire preuve de
 patience et laisser la première ligne a vos alliés plus résistants.
 
@@ -1564,7 +1564,7 @@ Histoire
 Les tutélaires constituent la première ligne de l’armée impériale.
 Protecteurs des autres soldats, ils permettent à l’armée de prendre position sous les feux
 ennemis les plus intenses. En plus petits groupes, ils offrent l’occasion de ne jamais reculer
-devant l’agresseur. Grâce à leur quantotechnique de lumières solide, les tutélaires incarnent les phares
+devant l’agresseur. Grâce à leur arcanotechnique de lumières solide, les tutélaires incarnent les phares
 menant les unités perdues au cœur de la bataille.
 
 4
@@ -2572,11 +2572,11 @@ Histoire
 
 8
 
-Les chasseurs se sont spécialisés dans la traque des unités quantotechniques. Leur
-entrainement consiste principalement au rudiment des armes à feu, ainsi que la quantotechnique afin
+Les chasseurs se sont spécialisés dans la traque des unités arcanotechniques. Leur
+entrainement consiste principalement au rudiment des armes à feu, ainsi que l'arcanotechnie afin
 de retourner ces armes contre leurs utilisateurs. Ils sont devenus une unité clé dans les
-combats de guérilla. Capables d’anéantir les Quantotechniciens sans prendre de risque, ils sont appelés
-en priorité lors de conflit impliquant de la quantotechnique.
+combats de guérilla. Capables d’anéantir les Arcanotechniciens sans prendre de risque, ils sont appelés
+en priorité lors de conflit impliquant de l'arcanotechnie.
 
 8
 
@@ -2653,9 +2653,9 @@ Exosquelette
 de
 traque
 1x kit de soins, 1x
-fléchette anti-quantotechnique
+fléchette anti-arcanotechnique
 Compétences
-Armure de quantotechnique
+Armure d'arcanotechnie
 Vue des quantiques
 
 Sorts
@@ -2671,11 +2671,11 @@ Roulade II
 
 Description des objets et compétence
 Kit de soins : rends 15 PV
-Fléchette anti-quantotechnique : empêche une cible de lancer des sorts (hors
+Fléchette anti-arcanotechnique : empêche une cible de lancer des sorts (hors
 amélioration d’attaque et attaque d’arme) pendant 2 tours.
-Armure de quantotechnique : +2 a la protection des sorts
+Armure d'arcanotechnie : +2 a la protection des sorts
 Vue des quantiques : augmente les chances de voir des éléments liés à la
-quantotechnique.
+arcanotechnique.
 
 Exosquelette de traque
 Famille
@@ -2822,19 +2822,19 @@ correctement sur le terrain.
 
 66
 
-Quantotechnologue
+Arcanotechnologue
 Histoire
 
 9
 
-Les quantotechnologues sont souvent assimilés à des Quantotechniciens par les civils. À vrai dire, les
-quantotechnologues sont des enfants ayant rêvés de devenir Quantotechnicien, mais qui n’ont développé leur affinité
-que plus tard. Mais les confondre avec des Quantotechniciens est une erreur. Les quantotechnologues se concentrent
-sur l’étude et la compréhension de la quantotechnique. Tels des ingénieurs, ils créent et perfectionnent
-les sorts, militaires comme industrielle. Tous les sorts utilisés par un Quantotechnicien sont créés par un
-quantotechnologue. Les sorts ne pouvant être adaptés au terrain par leurs utilisateurs, les quantotechnologues ont très
-tôt développé une branche combattante pour envoyer des quantotechnologues sur le terrain en support à
-l’utilisateur de quantotechnique. Les quantotechnologues sont capables de rendre toutes les batailles imprévisibles.
+Les arcanotechnologues sont souvent assimilés à des Arcanotechniciens par les civils. À vrai dire, les
+arcanotechnologues sont des enfants ayant rêvés de devenir Arcanotechnicien, mais qui n’ont développé leur affinité
+que plus tard. Mais les confondre avec des Arcanotechniciens est une erreur. Les arcanotechnologues se concentrent
+sur l’étude et la compréhension de l'arcanotechnie. Tels des ingénieurs, ils créent et perfectionnent
+les sorts, militaires comme industrielle. Tous les sorts utilisés par un Arcanotechnicien sont créés par un
+arcanotechnologue. Les sorts ne pouvant être adaptés au terrain par leurs utilisateurs, les arcanotechnologues ont très
+tôt développé une branche combattante pour envoyer des arcanotechnologues sur le terrain en support à
+l’utilisateur d'arcanotechnie. Les arcanotechnologues sont capables de rendre toutes les batailles imprévisibles.
 
 9
 
@@ -2845,7 +2845,7 @@ Image: https://i.pinimg.com/originals/af/0b/b1/af0bb197779b2a84c88d5f168274f75f.
 Caractéristiques
 Nom :
 
-Classe : quantotechnologue
+Classe : arcanotechnologue
 
 Affinités
 A. Dist
@@ -2911,7 +2911,7 @@ Consommable
 1x kit de soins, 1x
 cristal de mana
 Compétences
-Connaisseur de quantotechnique
+Connaisseur d'arcanotechnie
 Scientifique
 
 Sorts
@@ -2928,8 +2928,8 @@ Optimisation
 Description des objets et compétence
 Kit de soins : rends 15 PV
 Cristal de mana : annule le temps de recharge du prochain sort jouer
-Connaisseur de quantotechnique : augmente les chances de voir des éléments
-liés à la quantotechnique. Permets de reconnaître les sorts incantés grâce à une
+Connaisseur d'arcanotechnie : augmente les chances de voir des éléments
+liés à l'arcanotechnie. Permets de reconnaître les sorts incantés grâce à une
 manœuvre.
 Scientifique : peut tirer plus d’information d’un jet d’inspection
 Tunique
@@ -3028,7 +3028,7 @@ Recharge : 50 sec
 
 Description
 
-Optimise la consommation quantotechnique du
+Optimise la consommation arcanotechnique du
 prochain sort lancé par la cible.
 Le prochain sort lancé par la cible n’a pas de
 temps de recharge (hors attaque d’arme).
@@ -3058,7 +3058,7 @@ Vous
 partagez
 vos
 connaissances
-quantotechniquement, permettant à une cible de
+arcanotechniquement, permettant à une cible de
 profiter de celle-ci pour agir au mieux
 Rank-up le prochain dès utilisé par la cible
 (hors jet de dégât). (d20-> d20 + d12)
@@ -3066,7 +3066,7 @@ Rank-up le prochain dès utilisé par la cible
 Effet
 
 Comment jouer
-Le quantotechnologue est une classe de soutien, vous dépendez de vos alliés et eux
+Le arcanotechnologue est une classe de soutien, vous dépendez de vos alliés et eux
 de vous. La communication est la clé pour faire de cette classe un pilier solide de votre
 groupe. Votre perception élevée est un outil parfait pour naviguer correctement sans rater
 les détails importants, si vous regardez aux bons endroits.
@@ -3337,7 +3337,7 @@ Histoire
 
 11
 
-Les Technomancien sont des ingénieurs formés à la fois à la quantotechnique et aux
+Les Technomancien sont des ingénieurs formés à la fois à l'arcanotechnie et aux
 technologies. Avant tout utile lors de crises naturelles, d’accident majeur ou pour accélérer le
 processus de colonisation. Leur double diplôme leur permet d’opérer sur de nombreux
 terrain. Si bien même que certains décident d’aller au front, où leur aide peut être d’une
@@ -3557,7 +3557,7 @@ Famille
 Sort -> amélioration
 
 Prérequis
-A. quantotechnique
+A. arcanotechnique
 Armure de la cible
 
 4
@@ -3716,23 +3716,23 @@ dispose alors que de deux planètes-monde, dont une à l’empire. Ces planètes
 entièrement urbanisées et à l’environnement maitrisé, sont des joyaux précieux pour
 toute forme de civilisation rêvant de stabilité.
 
-● quantotechnique
-La quantotechnique, forme d’énergie présente en abondance à travers l’espace, est une
+● arcanotechnique
+La arcanotechnique, forme d’énergie présente en abondance à travers l’espace, est une
 ressource que l’humanité est encore en train d’apprendre à maitriser. Aidé par le
 conseil, l’Empire dispose d’une compréhension accrue de cette source intarissable de
 puissance. Disposant ainsi de systèmes industriels, équiper de cristaux de pouvoir,
-des cellules de quantotechnique solide capable de réaliser des tâches calculer sont réserve
+des cellules d'arcanotechnie solide capable de réaliser des tâches calculer sont réserve
 d’être alimenté. Cette technologie permet une fusion de l’informatique et de la
-quantotechnique, mêlant ainsi les deux sciences pour les faire avancer en même temps.
+arcanotechnique, mêlant ainsi les deux sciences pour les faire avancer en même temps.
 Très vite, les sorts deviennent eux aussi des programmes. Une technologie
 donnant la capacité d’apprendre aux humains des algorithmes, autrement dit des
-sorts, et leur permettant de les retenir parfaitement en mémoire. Les quantotechnologue,
-scientifique spécialiste de la quantotechnique, deviennent alors des informaticiens, codant des
-sorts pour les Quantotechniciens qui disposent des capacités à les lancer. Les Quantotechniciens, eux,
+sorts, et leur permettant de les retenir parfaitement en mémoire. Les arcanotechnologue,
+scientifique spécialiste de l'arcanotechnie, deviennent alors des informaticiens, codant des
+sorts pour les Arcanotechniciens qui disposent des capacités à les lancer. Les Arcanotechniciens, eux,
 deviennent alors des machines à lancer des sorts, entrainement juste leurs affinités
-aux différentes quantotechniques et, dans certain cas, leurs talents tactiques pour le combat
+aux différentes arcanotechniques et, dans certain cas, leurs talents tactiques pour le combat
 rapprocher.
-Dans ce contexte, les Quantotechniciens impériaux deviennent des outils des destructions
+Dans ce contexte, les Arcanotechniciens impériaux deviennent des outils des destructions
 plus redoutables encore que l’artillerie et changent le visage des champs de bataille.
 
 89

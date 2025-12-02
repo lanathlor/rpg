@@ -2,7 +2,7 @@
 
 ## Histoire
 
-Les chasseurs se sont spécialisés dans la traque des unités quantotechniques. Leur entrainement consiste principalement au rudiment des armes à feu, ainsi que la quantotechnique afin de retourner ces armes contre leurs utilisateurs. Ils sont devenus une unité clé dans les combats de guérilla. Capables d'anéantir les Quantotechniciens sans prendre de risque, ils sont appelés en priorité lors de conflit impliquant de la quantotechnique.
+Les chasseurs se sont spécialisés dans la traque des unités arcanotechniques. Leur entrainement consiste principalement au rudiment des armes à feu, ainsi que l'arcanotechnie afin de retourner ces armes contre leurs utilisateurs. Ils sont devenus une unité clé dans les combats de guérilla. Capables d'anéantir les Arcanotechniciens sans prendre de risque, ils sont appelés en priorité lors de conflit impliquant de l'arcanotechnie.
 
 **Image :** https://www.pinterest.fr/pin/AVGtAwJaNDiHoiFCQYfCDSG3myCVAaMxOfqaELv1GUtj7BxiUvZgjGI/
 
@@ -45,10 +45,10 @@ Les chasseurs se sont spécialisés dans la traque des unités quantotechniques.
 
 ### Consommables
 - 1x kit de soins
-- 1x fléchette anti-quantotechnique
+- 1x fléchette anti-arcanotechnique
 
 ### Compétences
-- **Armure de quantotechnique**
+- **Armure d'arcanotechnie**
 - **Vue des quantiques**
 
 ## Sorts
@@ -61,9 +61,9 @@ Les chasseurs se sont spécialisés dans la traque des unités quantotechniques.
 
 ### Objets
 - **Kit de soins :** rends 15 PV
-- **Fléchette anti-quantotechnique :** empêche une cible de lancer des sorts (hors amélioration d'attaque et attaque d'arme) pendant 2 tours
-- **Armure de quantotechnique :** +2 a la protection des sorts
-- **Vue des quantiques :** augmente les chances de voir des éléments liés à la quantotechnique
+- **Fléchette anti-arcanotechnique :** empêche une cible de lancer des sorts (hors amélioration d'attaque et attaque d'arme) pendant 2 tours
+- **Armure d'arcanotechnie :** +2 a la protection des sorts
+- **Vue des quantiques :** augmente les chances de voir des éléments liés à l'arcanotechnie
 
 ### Exosquelette de traque
 - **Famille :** Armure → exosquelette

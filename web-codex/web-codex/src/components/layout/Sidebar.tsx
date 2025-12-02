@@ -29,7 +29,7 @@ const navigationItems = [
     name: 'Sorts',
     href: '/sorts',
     icon: Sparkles,
-    description: 'Quantotechnique et sortilèges',
+    description: 'Arcanotechnie et sortilèges',
   },
   {
     name: 'Armes',

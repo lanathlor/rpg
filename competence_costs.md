@@ -23,18 +23,18 @@ Chaque compétence est évaluée selon 4 critères identiques à ceux des statis
 
 ### 🛡️ Compétences de Protection
 
-#### **Armure de quantotechnique**
-- **Classes :** Chasseur, Quantotechnicien
-- **Effet :** +2 score de protection quantotechnique
+#### **Armure d'arcanotechnie**
+- **Classes :** Chasseur, Arcanotechnicien
+- **Effet :** +2 score de protection arcanotechnique
 - **Évaluation :**
   - Impact Combat : 4/5 (protection spécialisée très importante)
   - Fréquence : 5/5 (protection permanente)
   - Polyvalence : 3/5 (protection spécialisée uniquement)
-  - Criticité : 4/5 (essentielle contre quantotechniciens)
+  - Criticité : 4/5 (essentielle contre arcanotechniciens)
 - **Score :** 24.0 → **Coût suggéré : 15 points**
 
 #### **Champ électromagnétique**
-- **Classes :** Quantotechnicien de combat
+- **Classes :** Arcanotechnicien de combat
 - **Effet :** +2 scores de protection à distance
 - **Évaluation :**
   - Impact Combat : 4/5 (protection importante contre attaques à distance)
@@ -48,17 +48,17 @@ Chaque compétence est évaluée selon 4 critères identiques à ceux des statis
 ### 👁️ Compétences de Perception et Détection
 
 #### **Vue des quantiques**
-- **Classes :** Chasseur, Quantotechnicien, Quantotechnicien de combat
-- **Effet :** Augmente les chances de voir des éléments liés à la quantotechnique
+- **Classes :** Chasseur, Arcanotechnicien, Arcanotechnicien de combat
+- **Effet :** Augmente les chances de voir des éléments liés à l'arcanotechnie
 - **Évaluation :**
   - Impact Combat : 3/5 (détection tactique utile)
   - Fréquence : 4/5 (utilisée régulièrement)
-  - Polyvalence : 3/5 (spécialisée quantotechnique)
+  - Polyvalence : 3/5 (spécialisée arcanotechnique)
   - Criticité : 3/5 (utile mais pas critique)
 - **Score :** 10.8 → **Coût suggéré : 8 points**
 
-#### **Connaisseur de quantotechnique**
-- **Classes :** Quantotechnologue
+#### **Connaisseur d'arcanotechnie**
+- **Classes :** Arcanotechnologue
 - **Effet :** Vue des quantiques + reconnaissance des sorts via manœuvre
 - **Évaluation :**
   - Impact Combat : 4/5 (détection + identification tactique)
@@ -88,7 +88,7 @@ Chaque compétence est évaluée selon 4 critères identiques à ceux des statis
 - **Score :** 13.5 → **Coût suggéré : 10 points**
 
 #### **Scientifique**
-- **Classes :** Quantotechnologue
+- **Classes :** Arcanotechnologue
 - **Effet :** Tire plus d'information des jets d'inspection
 - **Évaluation :**
   - Impact Combat : 2/5 (information supplémentaire)
@@ -230,22 +230,22 @@ Chaque compétence est évaluée selon 4 critères identiques à ceux des statis
 | **Compétence** | **Classes** | **Coût (Points)** | **Catégorie** |
 |---|---|---|---|
 | **Guerrier** | Maître d'armes | 35 | Combat |
-| **Champ électromagnétique** | Quantotechnicien de combat | 18 | Protection |
-| **Armure de quantotechnique** | Chasseur, Quantotechnicien | 15 | Protection |
+| **Champ électromagnétique** | Arcanotechnicien de combat | 18 | Protection |
+| **Armure d'arcanotechnie** | Chasseur, Arcanotechnicien | 15 | Protection |
 | **À l'affut** | Tutélaire | 15 | Combat |
 | **Ingénieur** | Technologue | 15 | Technique |
-| **Connaisseur de quantotechnique** | Quantotechnologue | 12 | Perception |
+| **Connaisseur d'arcanotechnie** | Arcanotechnologue | 12 | Perception |
 | **Course** | Sentinelle | 12 | Mobilité |
 | **Charismatique** | Tutélaire | 12 | Social |
 | **Œil d'aigle** | Spectre | 10 | Perception |
 | **Rôdeur** | Sentinelle, Spectre | 10 | Furtivité |
 | **Hackeur** | Technologue | 10 | Technique |
-| **Vue des quantiques** | Chasseur, Quantotechnicien, Quantotechnicien de combat | 8 | Perception |
+| **Vue des quantiques** | Chasseur, Arcanotechnicien, Arcanotechnicien de combat | 8 | Perception |
 | **Tacticien** | Horion, Maître d'armes | 8 | Combat |
 | **Expert des terrains** | Taliste | 8 | Environnemental |
 | **Vétéran** | Horion | 6 | Perception |
 | **Traque** | Taliste | 6 | Environnemental |
-| **Scientifique** | Quantotechnologue | 5 | Technique |
+| **Scientifique** | Arcanotechnologue | 5 | Technique |
 | **Compréhension de la nature** | Taliste | 5 | Environnemental |
 
 ---
@@ -255,12 +255,12 @@ Chaque compétence est évaluée selon 4 critères identiques à ceux des statis
 ### **Compétences de Haute Valeur (15+ points)**
 - **Guerrier** (35) - Capacité de combat absolument défnissante
 - **Champ électromagnétique** (18) - Protection permanente critique
-- **Armure de quantotechnique** (15) - Protection spécialisée importante
+- **Armure d'arcanotechnie** (15) - Protection spécialisée importante
 - **À l'affut** (15) - Avantage tactique majeur
 - **Ingénieur** (15) - Polyvalence technique élevée
 
 ### **Compétences de Valeur Moyenne (8-12 points)**
-- **Course**, **Charismatique**, **Connaisseur de quantotechnique** (12)
+- **Course**, **Charismatique**, **Connaisseur d'arcanotechnie** (12)
 - **Œil d'aigle**, **Rôdeur**, **Hackeur** (10)
 - **Vue des quantiques**, **Tacticien**, **Expert des terrains** (8)
 
@@ -295,7 +295,7 @@ Cette grille de coûts révèle que certaines classes possèdent des compétence
 
 **Classes avec compétences coûteuses :**
 - **Maître d'armes** : Guerrier (35) + Tacticien (8) = 43 points
-- **Quantotechnicien de combat** : Champ électromagnétique (18) + Vue des quantiques (8) = 26 points
+- **Arcanotechnicien de combat** : Champ électromagnétique (18) + Vue des quantiques (8) = 26 points
 - **Technologue** : Ingénieur (15) + Hackeur (10) = 25 points
 
 Ces écarts devront être pris en compte lors du recalcul final des classes pour maintenir l'équilibre global du système.

@@ -20,13 +20,13 @@ Ce document présente l'analyse complète de toutes les classes en intégrant le
 
 ## 🎭 Analyse Détaillée par Classe
 
-### 🧙 **Quantotechnologue** - 150 points
+### 🧙 **Arcanotechnologue** - 150 points
 **Le plus équilibré du nouveau système**
 
 #### Répartition des Coûts
 - **Points Base** : 119 points (stats + affinités + secondaires)
 - **Compétences** : 17 points
-  - Connaisseur de quantotechnique : 12 points
+  - Connaisseur d'arcanotechnie : 12 points
   - Scientifique : 5 points
 - **Équipement** : 14 points
   - Bâton : 5 points
@@ -42,13 +42,13 @@ Ce document présente l'analyse complète de toutes les classes en intégrant le
 
 ---
 
-### 🧙 **Quantotechnicien** - 157 points
+### 🧙 **Arcanotechnicien** - 157 points
 **Spécialiste pur légèrement au-dessus de l'optimal**
 
 #### Répartition des Coûts
 - **Points Base** : 119 points
 - **Compétences** : 23 points
-  - Armure de quantotechnique : 15 points
+  - Armure d'arcanotechnie : 15 points
   - Vue des quantiques : 8 points
 - **Équipement** : 15 points
   - Bâton : 5 points
@@ -85,18 +85,18 @@ Ce document présente l'analyse complète de toutes les classes en intégrant le
 ---
 
 ### 🎯 **Chasseur** - 180 points
-**Chasseur anti-quantotechnique efficace**
+**Chasseur anti-arcanotechnique efficace**
 
 #### Répartition des Coûts
 - **Points Base** : 110 points
 - **Compétences** : 23 points
-  - Armure de quantotechnique : 15 points
+  - Armure d'arcanotechnie : 15 points
   - Vue des quantiques : 8 points
 - **Équipement** : 47 points
   - Fusil à pompe surchargé : 25 points
   - Exosquelette de traque : 12 points
   - Kit de soins : 2 points
-  - Fléchette anti-quantotechnique : 8 points
+  - Fléchette anti-arcanotechnique : 8 points
 
 #### Analyse
 - Équipement coûteux mais spécialisé
@@ -118,7 +118,7 @@ Ce document présente l'analyse complète de toutes les classes en intégrant le
   - Exosquelette de combat : 18 points
   - Kit de soins : 2 points
   - Grenade : 6 points
-  - Armure de quantotechnique : 8 points (compétence-équipement)
+  - Armure d'arcanotechnie : 8 points (compétence-équipement)
 
 #### Forces
 - Équipement militaire lourd approprié au rôle
@@ -150,7 +150,7 @@ Ce document présente l'analyse complète de toutes les classes en intégrant le
 
 ---
 
-### ⚡ **Quantotechnicien de Combat** - 199 points
+### ⚡ **Arcanotechnicien de Combat** - 199 points
 **Hybride mage-guerrier équilibré**
 
 #### Répartition des Coûts
@@ -256,13 +256,13 @@ Ce document présente l'analyse complète de toutes les classes en intégrant le
 
 | **Classe** | **Points Base** | **Compétences** | **Équipement** | **TOTAL** | **Écart à 180** |
 |---|---|---|---|---|---|
-| **Quantotechnologue** | 119 | 17 | 14 | **150** | -30 |
-| **Quantotechnicien** | 119 | 23 | 15 | **157** | -23 |
+| **Arcanotechnologue** | 119 | 17 | 14 | **150** | -30 |
+| **Arcanotechnicien** | 119 | 23 | 15 | **157** | -23 |
 | **Taliste** | 122 | 19 | 24 | **165** | -15 |
 | **Chasseur** | 110 | 23 | 47 | **180** | ±0 |
 | **Horion** | 125 | 14 | 52 | **191** | +11 |
 | **Technologue** | 92 | 25 | 76 | **193** | +13 |
-| **Quantotechnicien de combat** | 136 | 26 | 37 | **199** | +19 |
+| **Arcanotechnicien de combat** | 136 | 26 | 37 | **199** | +19 |
 | **Spectre** | 125 | 20 | 57 | **202** | +22 |
 | **Sentinelle** | 125 | 22 | 70 | **217** | +37 |
 | **Maître d'armes** | 157 | 43 | 40 | **240** | +60 |
@@ -281,7 +281,7 @@ Ce document présente l'analyse complète de toutes les classes en intégrant le
 4. **Spectre** (+22 points) - Équipement spécialisé coûteux
 
 ### **Niveau 3 - Déséquilibres Légers**
-5. **Quantotechnicien de combat** (+19 points) - Acceptable pour hybride
+5. **Arcanotechnicien de combat** (+19 points) - Acceptable pour hybride
 6. **Technologue** (+13 points) - Justifié par équipement high-tech
 
 ---
@@ -321,14 +321,14 @@ Ce document présente l'analyse complète de toutes les classes en intégrant le
 ## 🎯 Classes Bien Équilibrées
 
 ### **Modèles à Suivre (150-180 points)**
-1. **Quantotechnologue** (150) - Excellent équilibre
-2. **Quantotechnicien** (157) - Spécialiste équilibré
+1. **Arcanotechnologue** (150) - Excellent équilibre
+2. **Arcanotechnicien** (157) - Spécialiste équilibré
 3. **Taliste** (165) - Polyvalent abordable
 4. **Chasseur** (180) - Cible parfaite
 
 ### **Acceptable avec Justification (180-200 points)**
 5. **Technologue** (193) - High-tech justifie surcoût
-6. **Quantotechnicien de combat** (199) - Hybride premium
+6. **Arcanotechnicien de combat** (199) - Hybride premium
 
 ---
 

@@ -1,7 +1,7 @@
 # Règles de Combat
 
 Cette section présente les règles de combat mises à jour selon le système de défense et de protection introduit dans la dernière version du manuel.
-L’objectif est de proposer un cadre clair, fluide et cohérent entre les attaques physiques, quantotechniques et à distance.
+L’objectif est de proposer un cadre clair, fluide et cohérent entre les attaques physiques, arcanotechniques et à distance.
 
 ---
 
@@ -62,7 +62,7 @@ SD = 10 + (stat de défense / 2) + bonus d’armure
 | **Attaque lourde / 2 mains** | Force (FOR)                         | Armure lourde, bouclier             |
 | **Attaque légère / 1 main**  | Dextérité (DEX)                     | Armure moyenne, exosquelette léger  |
 | **Attaque à distance**       | Précision (PRE) ou Perception (PER) | Armure moyenne, couvert             |
-| **Attaque quantotechnique**          | Intelligence (INT)                  | Armure quantotechnique, résistances quantiques |
+| **Attaque arcanotechnique**          | Intelligence (INT)                  | Armure arcanotechnique, résistances quantiques |
 
 L’attaquant doit obtenir un résultat **≥ au SD** de la cible pour que son attaque touche.
 Les bonus d’armure, boucliers et couvertures s’ajoutent à la valeur finale.
@@ -106,9 +106,9 @@ Dégâts finaux = Dégâts bruts - Résistance applicable
 ```
 
 **Important :** Ce n'est pas la source de l'attaque qui détermine la résistance, mais **sa nature physique**.
-- Une boule de feu quantotechnique → **RRAD** (chaleur)
-- Un projectile de roche quantotechnique → **RMEC** (impact)
-- Une nécrose quantotechnique → **RINT** (altération interne)
+- Une boule de feu arcanotechnique → **RRAD** (chaleur)
+- Un projectile de roche arcanotechnique → **RMEC** (impact)
+- Une nécrose arcanotechnique → **RINT** (altération interne)
 
 Les dégâts ne peuvent jamais être réduits en dessous de 0.
 Certaines attaques mixtes (comme les explosions) affectent plusieurs résistances : souffle (RMEC) + chaleur (RRAD).
@@ -263,6 +263,6 @@ Les priorités du système :
 - **Progression naturelle** : par équipement, statistiques et maîtrise du Flux.
 - **Fluidité de lecture** : pour le MJ et les joueurs.
 
-**Principe fondamental :** Ce n'est pas la source de l'attaque qui détermine la résistance applicable, mais la nature physique de l'effet produit. Une boule de feu quantotechnique inflige des dégâts radiatifs (RRAD), tout comme une flamme conventionnelle.
+**Principe fondamental :** Ce n'est pas la source de l'attaque qui détermine la résistance applicable, mais la nature physique de l'effet produit. Une boule de feu arcanotechnique inflige des dégâts radiatifs (RRAD), tout comme une flamme conventionnelle.
 
 ---

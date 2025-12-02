@@ -37,8 +37,8 @@ export const getSchoolIcon = (school: string) => {
     case 'magnétique':
     case 'magnetique':
       return <Magnet className="h-4 w-4" />
-    case 'bioquantotechnique':
-    case 'bio-quantotechnique':
+    case 'bioarcanotechnique':
+    case 'bio-arcanotechnie':
       return <Heart className="h-4 w-4" />
     case 'sonique':
       return <Volume2 className="h-4 w-4" />
@@ -90,8 +90,8 @@ export const getSchoolColor = (school: string) => {
     case 'magnétique':
     case 'magnetique':
       return 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300'
-    case 'bioquantotechnique':
-    case 'bio-quantotechnique':
+    case 'bioarcanotechnique':
+    case 'bio-arcanotechnie':
       return 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300'
     case 'sonique':
       return 'bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300'

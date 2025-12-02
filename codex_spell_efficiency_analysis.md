@@ -36,7 +36,7 @@ Score_DC = (Valeur_Effet × Multiplicateur_Spéciaux) / (Facteur_Flux × Facteur
 
 **Facteurs Pénalisants :**
 
-**🔮 Pour Sorts Quantotechniques (flux_cost) :**
+**🔮 Pour Sorts Arcanotechnies (flux_cost) :**
 
 - Coût flux : 3-5 flux = ÷1.1, 6-10 flux = ÷1.3, 11-15 flux = ÷1.5, 16+ flux = ÷1.7
 - Conditions INT : 16 = ÷1.1, 17 = ÷1.15, 18+ = ÷1.2
@@ -338,7 +338,7 @@ Score_DP = (Valeur_Effet × Multiplicateur_Spéciaux) / (Facteur_Affinité × Fa
 - **Score DC :** 14 × 1.0 / 1.3 = 10.8
 - **Score DP :** 14 × 1.0 / 2.0 × 1.0 = 7.0
 
-#### Annulation quantotechnique
+#### Annulation arcanotechnique
 
 - **Effet :** Immunité sorts 2 tours (valeur: 16)
 - **Prérequis :** École[pure]: 6 OU Type[protection]: 6
@@ -536,7 +536,7 @@ Score_DP = (Valeur_Effet × Multiplicateur_Spéciaux) / (Facteur_Affinité × Fa
 
 ### 🛠️ PATCH 1 : Double Pénalité Éliminée
 
-**Problème découvert :** Certains sorts quantotechniques avaient `flux_cost` ET `recharge_time`, les pénalisant doublement !
+**Problème découvert :** Certains sorts arcanotechniques avaient `flux_cost` ET `recharge_time`, les pénalisant doublement !
 
 **Sorts corrigés :**
 
@@ -583,7 +583,7 @@ Ces corrections **révolutionnent** les classements car ces sorts n'étaient plu
 
 L'analyse initiale contenait une **erreur méthodologique majeure** : confusion entre deux systèmes de coûts distincts :
 
-- **🔮 Sorts Quantotechniques** → Utilisent `flux_cost` (mana)
+- **🔮 Sorts Arcanotechnies** → Utilisent `flux_cost` (mana)
 - **⚔️ Sorts Martiaux/Arme** → Utilisent `recharge_time` (cooldown)
 
 ### Impact sur les Classements
@@ -607,7 +607,7 @@ Les **sorts martiaux gratuits** (pas de flux) sont **drastiquement sous-évalué
 ### Top 5 Sorts les Plus Efficaces (Score DC) ✅ TRIPLE CORRIGÉ
 
 1. **Tir de barrage** ⚔️ (14.4) - AoE martial sans flux
-2. **Boule de feu I** 🔮 (14.4) - AoE quantotechnique (égalité)
+2. **Boule de feu I** 🔮 (14.4) - AoE arcanotechnique (égalité)
 3. **Javelot de glace** 🔮 (14.2) - ✅ NOUVEAU PODIUM (était rang ~25)
 4. **Boule de feu II** 🔮 (12.8) - Évolution naturelle puissante
 5. **Froid mordant** 🔮 (12.1) - ✅ NOUVEAU TOP 5 (était rang 15)
@@ -634,7 +634,7 @@ L'école de feu monopolise le podium avec Boule de feu I & II. Les dégâts AoE 
 
 #### **Efficacité Martiale Sous-Estimée**
 
-- **Attaque multiple** (rang 4) dépasse de nombreux sorts quantotechniques
+- **Attaque multiple** (rang 4) dépasse de nombreux sorts arcanotechniques
 - **Roulade** (score DC parfait 10.0) sans coût de flux
 - **Intervention** offre une protection gratuite
 
@@ -646,7 +646,7 @@ L'école de feu monopolise le podium avec Boule de feu I & II. Les dégâts AoE 
 
 #### **École Pure = Piège à Noobs**
 
-Malgré leurs effets impressionnants, **Void** et **Annulation quantotechnique** sont handicapés par des prérequis prohibitifs.
+Malgré leurs effets impressionnants, **Void** et **Annulation arcanotechnique** sont handicapés par des prérequis prohibitifs.
 
 ### Méta-Game Révélé
 

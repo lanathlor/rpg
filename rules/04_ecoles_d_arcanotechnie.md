@@ -1,7 +1,7 @@
-# Écoles de Quantotechnique
+# Écoles d'Arcanotechnie
 
-La quantotechnique est une **énergie potentielle fondamentale**, présente dans toute matière. Les pratiquants — appelés _canalisateurs_ — apprennent à convertir cette énergie en différentes formes physiques mesurables : chaleur, lumière, champ électromagnétique, gravité, etc.
-Chaque école correspond à une **conversion spécifique** d'énergie quantotechnique en énergie physique, biologique ou informationnelle.
+L'arcanotechnie est une **énergie potentielle fondamentale**, présente dans toute matière. Les pratiquants — appelés _canalisateurs_ — apprennent à convertir cette énergie en différentes formes physiques mesurables : chaleur, lumière, champ électromagnétique, gravité, etc.
+Chaque école correspond à une **conversion spécifique** d'énergie arcanotechnique en énergie physique, biologique ou informationnelle.
 
 ---
 
@@ -79,7 +79,7 @@ Chaque école correspond à une **conversion spécifique** d'énergie quantotech
 
 ## ☀️ Lumière — Conversion photonique stabilisée
 
-**Principe :** Conversion du mana en flux photonique cohérent contenu dans un champ photoquantotechnique.
+**Principe :** Conversion du mana en flux photonique cohérent contenu dans un champ photoarcanotechnique.
 Permet la création de **murs de lumière solide** via confinement et rétro-alimentation énergétique.
 
 **Forces :**
@@ -91,7 +91,7 @@ Permet la création de **murs de lumière solide** via confinement et rétro-ali
 **Faiblesses :**
 
 - Consommation initiale élevée.
-- Vulnérable aux interférences quantotechniques (ombre, pure).
+- Vulnérable aux interférences arcanotechniques (ombre, pure).
 - Déphase sous surcharge énergétique.
 
 ---
@@ -128,7 +128,7 @@ Permet la création de **murs de lumière solide** via confinement et rétro-ali
 
 - Instabilité mentale de l’utilisateur.
 - Corruption progressive.
-- Contrecarrée par la quantotechnique de lumière.
+- Contrecarrée par l'arcanotechnie de lumière.
 
 ---
 
@@ -139,7 +139,7 @@ Permet la création de **murs de lumière solide** via confinement et rétro-ali
 **Forces :**
 
 - Téléportation, transmutation, altération de densité.
-- Interaction universelle avec toute autre quantotechnique.
+- Interaction universelle avec toute autre arcanotechnie.
 - Annule les effets physiques sans destruction.
 
 **Faiblesses :**
@@ -150,15 +150,15 @@ Permet la création de **murs de lumière solide** via confinement et rétro-ali
 
 ---
 
-## ⚪ Pure — Manipulation du flux quantotechnique
+## ⚪ Pure — Manipulation du flux arcanotechnique
 
-**Principe :** Action sur la quantotechnique elle-même : interruption, déviation, brûlure de mana, amplification.
+**Principe :** Action sur l'arcanotechnie elle-même : interruption, déviation, brûlure de mana, amplification.
 
 **Forces :**
 
-- Contre toute autre quantotechnique.
+- Contre toute autre arcanotechnie.
 - Neutralisation de sort.
-- Annulation de flux quantotechnique.
+- Annulation de flux arcanotechnique.
 
 **Faiblesses :**
 
@@ -219,7 +219,7 @@ Permet la création de **murs de lumière solide** via confinement et rétro-ali
 
 ---
 
-## 🧬 Bioquantotechnique — Conversion biologique
+## 🧬 Bioarcanotechnie — Conversion biologique
 
 **Principe :** Utilisation du mana pour influencer la croissance et la régénération cellulaire.
 
@@ -296,13 +296,13 @@ Permet la création de **murs de lumière solide** via confinement et rétro-ali
 **Faiblesses :**
 
 - Inefficace contre IA.
-- Dissipée par la quantotechnique pure.
+- Dissipée par l'arcanotechnie pure.
 
 ---
 
 ## ⚔️ Martial — Techniques de combat physique
 
-**Principe :** Techniques de combat rapproché développées par l'entraînement et l'expérience, n'impliquant aucune manipulation quantotechnique. Basées sur la maîtrise du corps, des armes de mêlée et de la stratégie.
+**Principe :** Techniques de combat rapproché développées par l'entraînement et l'expérience, n'impliquant aucune manipulation arcanotechnique. Basées sur la maîtrise du corps, des armes de mêlée et de la stratégie.
 
 **Forces :**
 
@@ -314,7 +314,7 @@ Permet la création de **murs de lumière solide** via confinement et rétro-ali
 
 - Limitées par les capacités physiques.
 - Nécessitent un entraînement long et rigoureux.
-- Inefficaces contre certaines protections quantotechniques.
+- Inefficaces contre certaines protections arcanotechniques.
 
 ---
 

@@ -79,7 +79,7 @@ export function HomePage() {
               Ce codex contient toutes les informations nécessaires pour jouer :
             </p>
             <ul className="text-sm space-y-2">
-              <li>• <strong>Sorts :</strong> Quantotechnique et sortilèges avec leurs écoles et types</li>
+              <li>• <strong>Sorts :</strong> Arcanotechnie et sortilèges avec leurs écoles et types</li>
               <li>• <strong>Armes :</strong> Équipements offensifs et leurs statistiques</li>
               <li>• <strong>Équipements :</strong> Armures, implants et équipements tactiques</li>
               <li>• <strong>Classes :</strong> Archétypes de personnages jouables</li>

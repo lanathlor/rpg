@@ -72,7 +72,7 @@ Chaque équipement est évalué pour son coût en point buy selon 4 critères :
 - **Score :** 40.0 → **Coût Point Buy : 20 points** | **Prix : 8 000 crédits**
 
 #### **Bâton**
-- **Classes :** Quantotechnicien, Quantotechnologue
+- **Classes :** Arcanotechnicien, Arcanotechnologue
 - **Stats :** 1d4, FOR vs FOR
 - **Prérequis :** A. CAC 1
 - **Évaluation :**
@@ -85,7 +85,7 @@ Chaque équipement est évalué pour son coût en point buy selon 4 critères :
 ### 🗡️ Armes de Mêlée - Une Main
 
 #### **Épée légère**
-- **Classes :** Quantotechnicien de combat, Sentinelle, Spectre, Tutélaire
+- **Classes :** Arcanotechnicien de combat, Sentinelle, Spectre, Tutélaire
 - **Stats :** 1d8 / 1d4 main faible, DEX vs DEX
 - **Prérequis :** A. CAC 4
 - **Évaluation :**
@@ -136,7 +136,7 @@ Chaque équipement est évalué pour son coût en point buy selon 4 critères :
 - **Score :** 3.0 → **Coût Point Buy : 12 points** | **Prix : 15 000 crédits**
 
 #### **Exosquelette de combat**
-- **Classes :** Horion, Quantotechnicien de combat
+- **Classes :** Horion, Arcanotechnicien de combat
 - **Bonus :** +2 protection physique, -1 DEX
 - **Prérequis :** FOR 12
 - **Évaluation :**
@@ -188,7 +188,7 @@ Chaque équipement est évalué pour son coût en point buy selon 4 critères :
 ### 🧥 Armures Légères
 
 #### **Tunique**
-- **Classes :** Quantotechnicien, Quantotechnologue
+- **Classes :** Arcanotechnicien, Arcanotechnologue
 - **Bonus :** Aucun
 - **Prérequis :** Aucun
 - **Évaluation :**
@@ -274,12 +274,12 @@ Chaque équipement est évalué pour son coût en point buy selon 4 critères :
 
 ### 💣 Offensifs
 
-#### **Fléchette anti-quantotechnique**
+#### **Fléchette anti-arcanotechnique**
 - **Classes :** Chasseur
 - **Effet :** Empêche sorts 2 tours (sauf amélioration attaque/arme)
 - **Évaluation :**
   - Puissance : 4/5 (neutralisation temporaire)
-  - Fréquence : 3/5 (vs quantotechniciens)
+  - Fréquence : 3/5 (vs arcanotechniciens)
   - Polyvalence : 2/5 (anti-magie uniquement)
   - Prérequis : 1/5 (aucun)
   - Rareté : 4/5 (technologie spécialisée)
@@ -321,7 +321,7 @@ Chaque équipement est évalué pour son coût en point buy selon 4 critères :
 ### ✨ Objets Magiques
 
 #### **Cristal de mana**
-- **Classes :** Quantotechnicien, Quantotechnologue
+- **Classes :** Arcanotechnicien, Arcanotechnologue
 - **Effet :** Annule temps de recharge du prochain sort
 - **Évaluation :**
   - Puissance : 4/5 (restauration flux significative)
@@ -345,7 +345,7 @@ Chaque équipement est évalué pour son coût en point buy selon 4 critères :
 | Fusil mitrailleur | Horion | 18 points | 7 200 |
 | Épée légère/courte | Multiple | 15 points | 6 000 |
 | Pistolet | Taliste, Technologue | 12 points | 4 800 |
-| Bâton | Quantotechnicien, Quantotechnologue | 5 points | 2 000 |
+| Bâton | Arcanotechnicien, Arcanotechnologue | 5 points | 2 000 |
 
 ### **ARMURES**
 
@@ -367,7 +367,7 @@ Chaque équipement est évalué pour son coût en point buy selon 4 critères :
 |---|---|---|---|
 | Bombe IEM | Technologue | 10 points | 4 000 |
 | Cristal de mana | Multiple | 8 points | 3 200 |
-| Fléchette anti-quantotechnique | Chasseur | 8 points | 3 200 |
+| Fléchette anti-arcanotechnique | Chasseur | 8 points | 3 200 |
 | Grenade | Horion | 6 points | 2 400 |
 | Flash | Spectre | 4 points | 1 600 |
 | Kit de soins | Toutes | 2 points | 800 |

@@ -20,7 +20,7 @@ const getSubcategoryIcon = (subcategory: string) => {
       return <Heart className="h-4 w-4" />
     case 'explosive':
       return <Bomb className="h-4 w-4" />
-    case 'quantotechnique':
+    case 'arcanotechnique':
       return <Sparkles className="h-4 w-4" />
     case 'tactique':
       return <Eye className="h-4 w-4" />
@@ -37,7 +37,7 @@ const getSubcategoryColor = (subcategory: string) => {
       return 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300'
     case 'explosive':
       return 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300'
-    case 'quantotechnique':
+    case 'arcanotechnique':
       return 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300'
     case 'tactique':
       return 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300'
@@ -82,8 +82,8 @@ export function ConsumablesPage() {
     if (consumable.effect.damage) effects.push(`Dégâts: ${consumable.effect.damage}`)
     if (consumable.effect.usage) effects.push(`Usage: ${consumable.effect.usage}`)
     if (consumable.effect.area || consumable.effect.area_effect) effects.push(`Zone: ${consumable.effect.area || consumable.effect.area_effect}`)
-    if (consumable.effect.spell_enhancement) effects.push('Amélioration quantotechnique')
-    if (consumable.effect.spell_block) effects.push('Anti-quantotechnique')
+    if (consumable.effect.spell_enhancement) effects.push('Amélioration arcanotechnique')
+    if (consumable.effect.spell_block) effects.push('Anti-arcanotechnique')
     if (consumable.effect.emp_effect) effects.push('IEM')
     if (consumable.effect.blind_effect) effects.push('Aveuglement')
 

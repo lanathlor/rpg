@@ -41,18 +41,18 @@ const rulesSections = [
   {
     id: '03_systeme_affinites_et_types',
     title: 'Système d\'affinités et types',
-    description: 'Affinités quantotechniques, types de sorts et système d\'accès',
+    description: 'Affinités arcanotechniques, types de sorts et système d\'accès',
     icon: <Sparkles className="h-5 w-5" />,
     color: 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300',
-    category: 'Quantotechnique'
+    category: 'Arcanotechnie'
   },
   {
-    id: '04_ecoles_d_quantotechnique',
-    title: 'Écoles d\'quantotechnique',
-    description: 'Présentation des différentes écoles d\'quantotechnique et leurs spécificités',
+    id: '04_ecoles_d_arcanotechnique',
+    title: 'Écoles d\'arcanotechnique',
+    description: 'Présentation des différentes écoles d\'arcanotechnique et leurs spécificités',
     icon: <Sparkles className="h-5 w-5" />,
     color: 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300',
-    category: 'Quantotechnique'
+    category: 'Arcanotechnie'
   },
   {
     id: '05_regles_jet_de_des',
@@ -65,10 +65,10 @@ const rulesSections = [
   {
     id: '06_systeme_de_mana',
     title: 'Système de mana',
-    description: 'Gestion des ressources quantotechniques et flux d\'énergie',
+    description: 'Gestion des ressources arcanotechniques et flux d\'énergie',
     icon: <Zap className="h-5 w-5" />,
     color: 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300',
-    category: 'Quantotechnique'
+    category: 'Arcanotechnie'
   },
   {
     id: '09_lexique',
@@ -88,7 +88,7 @@ const getCategoryIcon = (category: string) => {
       return <Target className="h-4 w-4" />
     case 'Combat':
       return <Swords className="h-4 w-4" />
-    case 'Quantotechnique':
+    case 'Arcanotechnie':
       return <Sparkles className="h-4 w-4" />
     case 'Référence':
       return <BookOpen className="h-4 w-4" />

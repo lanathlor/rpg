@@ -1,7 +1,7 @@
 # Système de Mana et Conversion du Flux
 
-L'quantotechnique dans cet univers repose sur la manipulation d'une énergie fondamentale : le **Flux**.
-Chaque sort, chaque effet quantotechnique et chaque altération reposent sur la capacité d’un personnage à **mobiliser**, **convertir**, puis **stabiliser** cette énergie.
+L'arcanotechnie dans cet univers repose sur la manipulation d'une énergie fondamentale : le **Flux**.
+Chaque sort, chaque effet arcanotechnique et chaque altération reposent sur la capacité d'un personnage à **mobiliser**, **convertir**, puis **stabiliser** cette énergie.
 
 Ce document décrit le fonctionnement complet de cette ressource.
 
@@ -9,7 +9,7 @@ Ce document décrit le fonctionnement complet de cette ressource.
 
 # 1. Réserve de Flux
 
-La **Réserve de Flux** est la quantité maximale d’énergie quantotechnique qu’un personnage peut contenir à un instant donné.
+La **Réserve de Flux** est la quantité maximale d'énergie arcanotechnique qu'un personnage peut contenir à un instant donné.
 
 - Elle représente la capacité du corps et du système nerveux à supporter la pression énergétique.
 - Lorsqu’elle tombe à 0, un personnage ne peut plus lancer de sorts tant qu’il n’a pas récupéré.
@@ -17,7 +17,7 @@ La **Réserve de Flux** est la quantité maximale d’énergie quantotechnique q
 **Notation :**
 
 ```
-Réserve de Flux = énergie quantotechnique maximale du personnage
+Réserve de Flux = énergie arcanotechnique maximale du personnage
 ```
 
 Chaque sort possède un **coût en Flux**.
@@ -71,9 +71,9 @@ Récupération Naturelle = flux regagné automatiquement à la fin du tour
 
 Elle représente :
 
-- la respiration quantotechnique,
-- l’équilibrage naturel des flux internes,
-- la resynchronisation avec l’environnement.
+- la respiration arcanotechnique,
+- l'équilibrage naturel des flux internes,
+- la resynchronisation avec l'environnement.
 
 La récupération ne peut jamais dépasser la Réserve de Flux maximale.
 
@@ -113,7 +113,7 @@ En cas d’interruption, le personnage perd **la moitié du flux accumulé**, ar
 
 # 5. Instabilité du Flux (Surcharge)
 
-Lorsque le flux manipulé dépasse les capacités naturelles du Quantotechnicien, une **Instabilité du Flux** apparaît.
+Lorsque le flux manipulé dépasse les capacités naturelles de l'Arcanotechnicien, une **Instabilité du Flux** apparaît.
 Cela survient lorsque :
 
 - le personnage dépasse son Afflux par Tour,
@@ -125,7 +125,7 @@ Cela survient lorsque :
 - Perte de 1d4 points de Réserve de Flux
 - Sort annulé
 - Dégâts internes (1d6)
-- Pulse quantotechnique mineur (effet RP décidé par le MJ)
+- Pulse arcanotechnique mineur (effet RP décidé par le MJ)
 
 La surcharge n’est jamais mortelle, mais elle limite l’abus de sorts lourds.
 
@@ -176,10 +176,10 @@ Voir le fichier : `03_systeme_affinites_et_types.md`.
 
 ### Vulnérabilités :
 - Les ennemis peuvent **interrompre la concentration** (dégâts, contrôle, déplacement forcé)
-- Les sorts longs créent une tension tactique : le Quantotechnicien doit être protégé
+- Les sorts longs créent une tension tactique : l'Arcanotechnicien doit être protégé
 - Seuls les sorts nécessitant concentration sont vulnérables à l'interruption
 
-Le système rend la quantotechnique puissante mais vulnérable au timing et au positionnement.
+Le système rend l'arcanotechnie puissante mais vulnérable au timing et au positionnement.
 
 ---
 
@@ -196,9 +196,9 @@ Hors combat, un personnage récupère l’intégralité de sa Réserve de Flux v
 
 | Élément                | Nom                     | Rôle                                          |
 | ---------------------- | ----------------------- | --------------------------------------------- |
-| Réserve de Flux        | Capacité maximale       | Détermine le total de quantotechnique disponible        |
-| Afflux par Tour        | Vitesse de mobilisation | Détermine la vitesse de préparation d’un sort |
-| Récupération Naturelle | Regain automatique      | Permet de maintenir le rythme quantotechnique         |
+| Réserve de Flux        | Capacité maximale       | Détermine le total d'arcanotechnie disponible        |
+| Afflux par Tour        | Vitesse de mobilisation | Détermine la vitesse de préparation d'un sort |
+| Récupération Naturelle | Regain automatique      | Permet de maintenir le rythme arcanotechnique         |
 | Instabilité du Flux    | Surcharge               | Limite l’abus de sorts lourds                 |
 | Coût du sort           | —                       | Flux à atteindre pour lancer un sort          |
 
@@ -215,7 +215,7 @@ Ce système met l’accent sur :
 - la **surcharge**,
 - et le **timing tactique**.
 
-Un Quantotechnicien puissant n’est pas celui qui a le plus de flux,
+Un Arcanotechnicien puissant n'est pas celui qui a le plus de flux,
 mais celui qui sait **le convertir au bon moment**.
 
 ---

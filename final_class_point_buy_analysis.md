@@ -26,13 +26,13 @@ Cette analyse présente le coût total en point buy de chaque classe en incluant
 
 | **Rang** | **Classe**                     | **Points Base** | **Compétences** | **Équipement** | **TOTAL** | **Écart Cible** |
 | -------- | ------------------------------ | --------------- | --------------- | -------------- | --------- | --------------- |
-| 1        | **Quantotechnicien**           | 119             | 23              | 15.0           | **157**   | -23             |
-| 2        | **Quantotechnologue**          | 132             | 17              | 15.0           | **164**   | -16             |
+| 1        | **Arcanotechnicien**           | 119             | 23              | 15.0           | **157**   | -23             |
+| 2        | **Arcanotechnologue**          | 132             | 17              | 15.0           | **164**   | -16             |
 | 3        | **Chasseur**                   | 110             | 23              | 47.0           | **180**   | ±0              |
 | 4        | **Taliste**                    | 122             | 19              | 24.0           | **165**   | -15             |
 | 5        | **Horion**                     | 131             | 14              | 44.0           | **189**   | +9              |
 | 6        | **Technologue**                | 92              | 25              | 76.0           | **193**   | +13             |
-| 7        | **Quantotechnicien de combat** | 136             | 26              | 37.0           | **199**   | +19             |
+| 7        | **Arcanotechnicien de combat** | 136             | 26              | 37.0           | **199**   | +19             |
 | 8        | **Sentinelle**                 | 151             | 22              | 52.0           | **225**   | +45             |
 | 9        | **Spectre**                    | 150             | 20              | 63.0           | **233**   | +53             |
 | 10       | **Maître d'armes**             | 157             | 43              | 40.0           | **240**   | +60             |
@@ -46,26 +46,26 @@ Cette analyse présente le coût total en point buy de chaque classe en incluant
 
 ### 🥇 **Classes Équilibrées (150-190 points)**
 
-#### **1. Quantotechnicien** - 157 points ⭐
+#### **1. Arcanotechnicien** - 157 points ⭐
 
-- **Base** : 119 pts (spécialiste quantotechnique pur)
-- **Compétences** : 23 pts (Armure quantotechnique 15 + Vue quantiques 8)
+- **Base** : 119 pts (spécialiste arcanotechnique pur)
+- **Compétences** : 23 pts (Armure arcanotechnique 15 + Vue quantiques 8)
 - **Équipement** : 15 pts (équipement basique : bâton, tunique, consommables)
 - **Analyse** : Parfait exemple d'équilibre classe simple/spécialisée
 
-#### **2. Quantotechnologue** - 164 points ⭐
+#### **2. Arcanotechnologue** - 164 points ⭐
 
 - **Base** : 132 pts (stats équilibrées, bonnes affinités)
-- **Compétences** : 17 pts (Connaisseur quantotechnique 12 + Scientifique 5)
-- **Équipement** : 15 pts (identique au Quantotechnicien)
+- **Compétences** : 17 pts (Connaisseur arcanotechnique 12 + Scientifique 5)
+- **Équipement** : 15 pts (identique au Arcanotechnicien)
 - **Analyse** : Excellent équilibre recherche/combat
 
 #### **3. Chasseur** - 180 points ⭐⭐ (CIBLE PARFAITE)
 
 - **Base** : 110 pts (stats physiques, affinités distance)
-- **Compétences** : 23 pts (Armure quantotechnique 15 + Vue quantiques 8)
+- **Compétences** : 23 pts (Armure arcanotechnique 15 + Vue quantiques 8)
 - **Équipement** : 47 pts (fusil pompe surchargé 25 + exosquelette traque 12 + consommables 10)
-- **Analyse** : Spécialiste anti-quantotechnique avec coût justifié
+- **Analyse** : Spécialiste anti-arcanotechnique avec coût justifié
 
 #### **4. Taliste** - 165 points ⭐
 
@@ -92,7 +92,7 @@ Cette analyse présente le coût total en point buy de chaque classe en incluant
 - **Équipement** : 76 pts (drone 30 + implant 22 + pistolet 12 + consommables 12)
 - **Analyse** : High-tech justify coût élevé, archétype valide
 
-#### **7. Quantotechnicien de combat** - 199 points 🟡
+#### **7. Arcanotechnicien de combat** - 199 points 🟡
 
 - **Base** : 136 pts (hybride mage-guerrier)
 - **Compétences** : 26 pts (Champ électromagnétique 18 + Vue quantiques 8)
@@ -198,7 +198,7 @@ Cette analyse présente le coût total en point buy de chaque classe en incluant
 #### **Classes Acceptables (Ajustements Mineurs)**
 
 **5. Technologue (193 points)** : Acceptable pour classe high-tech
-**6. Quantotechnicien de combat (199 points)** : Acceptable pour hybride
+**6. Arcanotechnicien de combat (199 points)** : Acceptable pour hybride
 
 ---
 
@@ -207,8 +207,8 @@ Cette analyse présente le coût total en point buy de chaque classe en incluant
 ### **Parfaitement Équilibrées**
 
 1. **Chasseur (180 points)** - Cible parfaite
-2. **Quantotechnicien (157 points)** - Spécialiste pur équilibré
-3. **Quantotechnologue (164 points)** - Recherche/combat optimal
+2. **Arcanotechnicien (157 points)** - Spécialiste pur équilibré
+3. **Arcanotechnologue (164 points)** - Recherche/combat optimal
 4. **Taliste (165 points)** - Polyvalent abordable
 
 ### **Archétypes Viables**
@@ -228,7 +228,7 @@ Si les joueurs commencent avec **0 crédit** et doivent acheter leur équipement
 
 | **Classe**       | **Coût Équipement** | **Points Économisés** | **Nouveau Total** |
 | ---------------- | ------------------- | --------------------- | ----------------- |
-| Quantotechnicien | 6 000 crédits       | 15 points             | 142 points        |
+| Arcanotechnicien | 6 000 crédits       | 15 points             | 142 points        |
 | Chasseur         | 18 800 crédits      | 47 points             | 133 points        |
 | Technologue      | 30 400 crédits      | 76 points             | 117 points        |
 | Tutélaire        | 20 400 crédits      | 51 points             | 197 points        |
@@ -241,7 +241,7 @@ Si les joueurs commencent avec **0 crédit** et doivent acheter leur équipement
 
 Cette analyse révèle que **36% des classes** sont significativement déséquilibrées lorsqu'on inclut la valeur de leur équipement. Le **Chasseur** émerge comme la classe la mieux équilibrée et devrait servir de référence pour ajuster les autres.
 
-**Les 4 classes modèles** (Chasseur, Quantotechnicien, Quantotechnologue, Taliste) démontrent qu'un équilibrage optimal est possible, avec des archétypes distincts mais équitables en coût total.
+**Les 4 classes modèles** (Chasseur, Arcanotechnicien, Arcanotechnologue, Taliste) démontrent qu'un équilibrage optimal est possible, avec des archétypes distincts mais équitables en coût total.
 
 **L'intégration équipement + compétences** dans le point buy révèle des déséquilibres cachés et permet une approche plus équitable de la création de personnage, où chaque point investi a une valeur comparable quelle que soit la classe choisie.
 

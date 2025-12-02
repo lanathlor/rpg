@@ -108,14 +108,14 @@ Chaque caractéristique est évaluée selon 4 critères :
 **Utilisation :**
 
 - Jet d'attaque pour sorts offensifs (réduit : certains sorts utilisent PER/CHA)
-- Score de Défense quantotechnique : `SD = 10 + (INT/2) + bonus`
-- Score de Protection quantotechnique : `PA = bonus d'armure + (INT/4)`
+- Score de Défense arcanotechnique : `SD = 10 + (INT/2) + bonus`
+- Score de Protection arcanotechnique : `PA = bonus d'armure + (INT/4)`
 - **4 manœuvres tactiques** : Analyse technique, Calcul balistique, Piratage rapide, Stratégie adaptative
 
 **Évaluation :**
 
-- Impact Combat : 4/5 (attaque quantotechnique + défense, mais concurrence PER/CHA)
-- Fréquence : 4/5 (Quantotechniciens + défense universelle + manœuvres)
+- Impact Combat : 4/5 (attaque arcanotechnique + défense, mais concurrence PER/CHA)
+- Fréquence : 4/5 (Arcanotechniciens + défense universelle + manœuvres)
 - Polyvalence : 5/5 (combat + résolution problèmes + technologie + manœuvres)
 - Criticité : 4/5 (importante mais alternatives existent pour certains sorts)
 
@@ -174,13 +174,13 @@ Les affinités fonctionnent comme des **seuils d'accès binaires** plutôt que d
 
 - **Haute** pour classes spécialisées (Chasseur, Maître d'armes)
 - **Moyenne** pour hybrides
-- **Faible** pour Quantotechniciens purs
+- **Faible** pour Arcanotechniciens purs
 
 **Coût suggéré :** 3-4 points par niveau selon la spécialisation de classe
 
 ### Affinités d'École (Feu, Givre, Électricité, etc.)
 
-**Valeur :** Très haute pour Quantotechniciens
+**Valeur :** Très haute pour Arcanotechniciens
 
 - Détermine l'accès aux sorts d'une école entière
 - Peut remplacer l'affinité de Type pour l'accès aux sorts
@@ -188,19 +188,19 @@ Les affinités fonctionnent comme des **seuils d'accès binaires** plutôt que d
 
 **Coût suggéré par difficulté :**
 
-**Écoles Complexes (6-7 points/niveau pour Quantotechniciens, 4-5 pour autres) :**
+**Écoles Complexes (6-7 points/niveau pour Arcanotechniciens, 4-5 pour autres) :**
 - **Pure** - Complexité extrême, maîtrise complète du flux requise
 - **Quantique** - Hautement instable, difficile à maîtriser
 - **Chronodynamique** - Risques de distorsion temporelle
 - **Gravitonique** - Instabilité de champ, risque d'implosion
 
-**Écoles Avancées (5-6 points/niveau pour Quantotechniciens, 3-4 pour autres) :**
+**Écoles Avancées (5-6 points/niveau pour Arcanotechniciens, 3-4 pour autres) :**
 - **Biométabolique** - Instabilité mentale, corruption progressive
-- **Bioquantotechnique** - Mutations incontrôlées, effets imprévisibles
+- **Bioarcanotechnie** - Mutations incontrôlées, effets imprévisibles
 - **Magnétique** - Instabilité de champ à haute intensité
 - **Kinesthésique** - Très coûteuse, réactions complexes
 
-**Écoles Standard (4-5 points/niveau pour Quantotechniciens, 2-3 pour autres) :**
+**Écoles Standard (4-5 points/niveau pour Arcanotechniciens, 2-3 pour autres) :**
 - **Feu**, **Givre**, **Électricité**, **Lumière**, **Ombre**
 - **Aérocinétique**, **Hydrodynamique**, **Sonique**, **Illusion**
 
@@ -209,23 +209,23 @@ Les affinités fonctionnent comme des **seuils d'accès binaires** plutôt que d
 
 #### Rationale des Difficultés d'École
 
-**Écoles Complexes** : Nécessitent une compréhension profonde des lois fondamentales de la quantotechnique. Ces écoles manipulent des énergies instables ou des concepts abstraits (temps, gravité, flux pur) qui demandent des années d'étude théorique et une maîtrise parfaite pour éviter les catastrophes.
+**Écoles Complexes** : Nécessitent une compréhension profonde des lois fondamentales de l'arcanotechnie. Ces écoles manipulent des énergies instables ou des concepts abstraits (temps, gravité, flux pur) qui demandent des années d'étude théorique et une maîtrise parfaite pour éviter les catastrophes.
 
-**Écoles Avancées** : Impliquent des risques significatifs pour l'utilisateur ou l'environnement. La biométabolique corrompt l'esprit, la bioquantotechnique peut causer des mutations, le magnétisme devient instable à haute puissance. Ces écoles demandent un entraînement spécialisé et des précautions constantes.
+**Écoles Avancées** : Impliquent des risques significatifs pour l'utilisateur ou l'environnement. La biométabolique corrompt l'esprit, la bioarcanotechnique peut causer des mutations, le magnétisme devient instable à haute puissance. Ces écoles demandent un entraînement spécialisé et des précautions constantes.
 
-**Écoles Standard** : Représentent les conversions quantotechniques les plus communes et maîtrisées. Bien qu'efficaces, elles suivent des principes physiques bien compris et prévisibles. L'apprentissage suit des méthodes éprouvées avec des risques contrôlés.
+**Écoles Standard** : Représentent les conversions arcanotechniques les plus communes et maîtrisées. Bien qu'efficaces, elles suivent des principes physiques bien compris et prévisibles. L'apprentissage suit des méthodes éprouvées avec des risques contrôlés.
 
-**Écoles Physiques** : Reposent sur l'entraînement du corps et l'expérience pratique plutôt que sur la théorie quantotechnique. Accessibles à tous mais nécessitent une discipline physique et un perfectionnement technique continu.
+**Écoles Physiques** : Reposent sur l'entraînement du corps et l'expérience pratique plutôt que sur la théorie arcanotechnique. Accessibles à tous mais nécessitent une discipline physique et un perfectionnement technique continu.
 
 ### Affinités de Type (Destruction, Altération, etc.)
 
-**Valeur :** Très haute pour Quantotechniciens
+**Valeur :** Très haute pour Arcanotechniciens
 
 - Détermine l'accès aux sorts selon le style de conversion
 - Plus polyvalent que les Écoles (fonctionne avec toutes les écoles)
 - Peut remplacer l'affinité d'École pour l'accès aux sorts
 
-**Coût suggéré :** 4-5 points par niveau (Quantotechniciens), 2-3 points (autres)
+**Coût suggéré :** 4-5 points par niveau (Arcanotechniciens), 2-3 points (autres)
 
 ---
 
@@ -295,13 +295,13 @@ Les affinités fonctionnent comme des **seuils d'accès binaires** plutôt que d
 | **Dextérité**    | 4 points        | Universelle + initiative + manœuvres      |
 | **Précision**    | 3 points        | Distance spécialisée + manœuvres de tir   |
 | **Constitution** | 3 points        | Survie + résistances + manœuvres          |
-| **Intelligence** | 4 points        | Quantotechnique + défense + manœuvres     |
+| **Intelligence** | 4 points        | Arcanotechnie + défense + manœuvres     |
 | **Perception**   | 4 points        | Défense + sorts + manœuvres               |
 | **Charisme**     | 3 points        | Sorts de contrôle + manœuvres leadership  |
 
 #### Affinités (selon la classe)
 
-**Pour Quantotechniciens :**
+**Pour Arcanotechniciens :**
 
 - École Complexe (Pure, Quantique, Chronodynamique, Gravitonique) : 6-7 points par niveau
 - École Avancée (Biométabolique, Bio, Magnétique, Kinesthésique) : 5-6 points par niveau
@@ -336,7 +336,7 @@ Les affinités fonctionnent comme des **seuils d'accès binaires** plutôt que d
 
 ## ⚖️ Exemples de Builds Équilibrées
 
-### Build Quantotechnicien Standard - École[Givre] (120 points)
+### Build Arcanotechnicien Standard - École[Givre] (120 points)
 
 - Intelligence 16 (6×4 = 24 points)
 - Constitution 12 (2×3 = 6 points)
@@ -348,7 +348,7 @@ Les affinités fonctionnent comme des **seuils d'accès binaires** plutôt que d
 - Autres stats (base + 7 points)
 - **Total : 120 points**
 
-### Build Quantotechnicien Avancé - École[Chronodynamique] (120 points)
+### Build Arcanotechnicien Avancé - École[Chronodynamique] (120 points)
 
 - Intelligence 18 (8×4 = 32 points)
 - Constitution 10 (0×3 = 0 points)
@@ -425,7 +425,7 @@ Pour chaque classe, nous calculons le coût total selon les barèmes établis :
 
 ### Résultats par Classe (Recalculées)
 
-#### 🧙 Quantotechnicien
+#### 🧙 Arcanotechnicien
 
 **Statistiques (base 10)**
 
@@ -442,7 +442,7 @@ Pour chaque classe, nous calculons le coût total selon les barèmes établis :
 
 - Vie 40 (base), Vitesse 3 (base), Flux 30/8/3 (base)
 
-**Total Quantotechnicien : 119 points**
+**Total Arcanotechnicien : 119 points**
 
 ---
 
@@ -497,7 +497,7 @@ Pour chaque classe, nous calculons le coût total selon les barèmes établis :
 **Affinités**
 
 - A.Dist 2 (2×2 = 4), A.CAC 0 (0×2 = 0)
-- École[Bioquantotechnique] 4 (4×5 = 20), École[Quantique] 3 (3×5 = 15)
+- École[Bioarcanotechnie] 4 (4×5 = 20), École[Quantique] 3 (3×5 = 15)
 - Type[Altération] 4 (4×5 = 20), Type[Amélioration] 3 (3×5 = 15)
 
 **Secondaires**
@@ -550,7 +550,7 @@ Pour chaque classe, nous calculons le coût total selon les barèmes établis :
 
 ---
 
-#### ⚡ Quantotechnicien de Combat
+#### ⚡ Arcanotechnicien de Combat
 
 **Statistiques**
 
@@ -567,7 +567,7 @@ Pour chaque classe, nous calculons le coût total selon les barèmes établis :
 
 - Vie 50 (+2×1 = 2), Vitesse 4 (+1×4 = 4), Flux 25/7/2 (élevé +6 pts)
 
-**Total Quantotechnicien de Combat : 136 points**
+**Total Arcanotechnicien de Combat : 136 points**
 
 ---
 
@@ -575,7 +575,7 @@ Pour chaque classe, nous calculons le coût total selon les barèmes établis :
 
 Tous les personnages ont **4 emplacements de base** (gratuits). Calcul des emplacements supplémentaires à 5 points chacun :
 
-#### 🧙 Quantotechnicien
+#### 🧙 Arcanotechnicien
 - **Sorts actuels** : 4 (Projectile quantique, Éclair, Drain de mana, Protection quantique)
 - **Emplacements supplémentaires** : 0 (exactement 4 = base)
 - **Coût emplacements** : 0 points
@@ -611,7 +611,7 @@ Tous les personnages ont **4 emplacements de base** (gratuits). Calcul des empla
 - **Coût emplacements** : 0 points
 - **Total avec emplacements : 157 + 0 = 157 points**
 
-#### ⚡ Quantotechnicien de Combat
+#### ⚡ Arcanotechnicien de Combat
 - **Sorts actuels** : 4 (Éclair, Projectile quantique, Lame électrifiée, Surcharge)
 - **Emplacements supplémentaires** : 0 (exactement 4 = base)
 - **Coût emplacements** : 0 points
@@ -625,9 +625,9 @@ Tous les personnages ont **4 emplacements de base** (gratuits). Calcul des empla
 | ------------------------------ | ----------- | ------------ | ----------- | ----------- | ------------------- |
 | **Technologue**              | 92          | +0           | 92          | -28         | 🟢 Équilibré        |
 | **Chasseur**                   | 110         | +0           | 110         | -10         | 🟢 Équilibré        |
-| **Quantotechnicien**           | 119         | +0           | 119         | -1          | 🟢 Parfait          |
+| **Arcanotechnicien**           | 119         | +0           | 119         | -1          | 🟢 Parfait          |
 | **Taliste**                    | 122         | +0           | 122         | +2          | 🟢 Très bon         |
-| **Quantotechnicien de Combat** | 136         | +0           | 136         | +16         | 🟡 Légèrement fort  |
+| **Arcanotechnicien de Combat** | 136         | +0           | 136         | +16         | 🟡 Légèrement fort  |
 | **Maître d'Armes**             | 157         | +0           | 157         | +37         | 🟠 Encore fort      |
 | **Tutélaire**                  | 170         | +0           | 170         | +50         | 🔴 Très fort        |
 
@@ -637,7 +637,7 @@ Tous les personnages ont **4 emplacements de base** (gratuits). Calcul des empla
 
 1. **Disparité réduite** : écart réduit de 90 à 78 points (12 points d'amélioration)
 2. **Coûts statistiques équilibrés** : toutes les stats entre 3-4 points (objectif atteint ✅)
-3. **Classes quantotechniques normalisées** : Quantotechnicien maintenant proche de la cible
+3. **Classes arcanotechniques normalisées** : Arcanotechnicien maintenant proche de la cible
 4. **Budget cible ajusté** : 120 points semble être la cible optimale
 
 **Problèmes restants :**
@@ -672,7 +672,7 @@ Tous les personnages ont **4 emplacements de base** (gratuits). Calcul des empla
 - Les emplacements additionnels donnent de la **flexibilité tactique** mais n'augmentent pas directement la puissance
 - Un personnage avec 8 sorts préparés reste limité par son flux et les cooldowns
 - Cost modéré pour encourager la diversification sans dominer le système
-- Permet aux classes quantotechniques d'investir dans plus d'options
+- Permet aux classes arcanotechniques d'investir dans plus d'options
 
 ---
 
@@ -718,11 +718,11 @@ Après corrections, toutes les classes seraient dans une fourchette de **92-136 
 
 ### Choix Stratégiques pour les Joueurs
 
-**Écoles Complexes** : Accessible principalement aux spécialistes quantotechniques avec un investissement massif en points. Ces écoles offrent des capacités uniques (manipulation du temps, de la gravité, du flux pur) mais limitent les autres options de build.
+**Écoles Complexes** : Accessible principalement aux spécialistes arcanotechniques avec un investissement massif en points. Ces écoles offrent des capacités uniques (manipulation du temps, de la gravité, du flux pur) mais limitent les autres options de build.
 
 **Écoles Avancées** : Équilibre entre puissance et accessibilité. Suffisamment coûteuses pour représenter leur dangerosité, mais permettent encore une diversification du personnage.
 
-**Écoles Standard** : Base solide pour la plupart des builds quantotechniques. Permettent d'investir dans d'autres aspects (statistiques, caractéristiques secondaires) tout en conservant une efficacité magique.
+**Écoles Standard** : Base solide pour la plupart des builds arcanotechniques. Permettent d'investir dans d'autres aspects (statistiques, caractéristiques secondaires) tout en conservant une efficacité magique.
 
 ### Conséquences sur l'Équilibrage
 
@@ -740,4 +740,4 @@ Après corrections, toutes les classes seraient dans une fourchette de **92-136 
 
 ---
 
-_Ce système assure un équilibrage entre les différents styles de jeu tout en préservant l'identité unique de chaque classe, et reflète fidèlement la complexité et les risques associés à chaque école de quantotechnique._
+_Ce système assure un équilibrage entre les différents styles de jeu tout en préservant l'identité unique de chaque classe, et reflète fidèlement la complexité et les risques associés à chaque école d'arcanotechnie._

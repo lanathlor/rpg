@@ -1,4 +1,4 @@
-name: "Fléchette anti-quantotechnique"
+name: "Fléchette anti-arcanotechnique"
 category: "Consommable"
 subcategory: "tactique"
 cost: "400 crédits"
@@ -7,4 +7,4 @@ effect:
   exception: "Hors amélioration d'attaque et attaque d'arme"
   duration: "2 tours"
   usage: "action d'attaque"
-description: "Fléchette spécialisée contenant des inhibiteurs quantotechniques pour neutraliser temporairement les lanceurs de sorts."
+description: "Fléchette spécialisée contenant des inhibiteurs arcanotechniques pour neutraliser temporairement les lanceurs de sorts."

@@ -75,7 +75,7 @@ Basé sur l'équipement de départ des classes, voici le budget équivalent en c
 
 #### **Classes High-Tech (Budget élevé)**
 - **Technologue** : ~60 000 crédits (implant neural + drone + équipement)
-- **Quantotechnicien de combat** : ~45 000 crédits (exosquelette combat + épée légère)
+- **Arcanotechnicien de combat** : ~45 000 crédits (exosquelette combat + épée légère)
 - **Horion** : ~35 000 crédits (fusil mitrailleur + exosquelette + grenade)
 
 #### **Classes Martiales (Budget moyen)**
@@ -84,7 +84,7 @@ Basé sur l'équipement de départ des classes, voici le budget équivalent en c
 - **Spectre** : ~30 000 crédits (fusil sniper + exosquelette stabilisateur)
 
 #### **Classes Simples (Budget faible)**
-- **Quantotechnicien** : ~1 500 crédits (bâton + tunique + consommables)
+- **Arcanotechnicien** : ~1 500 crédits (bâton + tunique + consommables)
 - **Tutélaire** : ~15 000 crédits (épée légère + armure plate + bouclier)
 - **Sentinelle** : ~22 000 crédits (épée légère + exosquelette vitesse)
 
@@ -93,14 +93,14 @@ Basé sur l'équipement de départ des classes, voici le budget équivalent en c
 | **Classe** | **Équipement Crédits** | **Monnaie de Départ** | **Total Budget** |
 |---|---|---|---|
 | **Technologue** | 24 000 | 8 000 | 32 000 |
-| **Quantotechnicien de combat** | 18 000 | 12 000 | 30 000 |
+| **Arcanotechnicien de combat** | 18 000 | 12 000 | 30 000 |
 | **Horion** | 14 000 | 16 000 | 30 000 |
 | **Spectre** | 20 000 | 10 000 | 30 000 |
 | **Chasseur** | 18 000 | 12 000 | 30 000 |
 | **Sentinelle** | 14 000 | 16 000 | 30 000 |
 | **Maître d'armes** | 14 000 | 16 000 | 30 000 |
 | **Tutélaire** | 17 000 | 13 000 | 30 000 |
-| **Quantotechnicien** | 5 000 | 25 000 | 30 000 |
+| **Arcanotechnicien** | 5 000 | 25 000 | 30 000 |
 
 ---
 
@@ -123,7 +123,7 @@ Basé sur l'équipement de départ des classes, voici le budget équivalent en c
 
 ### **Exemples de Conversion**
 
-#### **Quantotechnicien Riche**
+#### **Arcanotechnicien Riche**
 - Budget : 200 points
 - Statistiques : 90 points (intelligence réduite)
 - Affinités : 70 points (affinités réduites)

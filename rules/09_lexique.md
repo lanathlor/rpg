@@ -63,16 +63,16 @@ Il sert de référence rapide pour les joueurs et les maîtres du jeu.
 
 ---
 
-## Quantotechnique et mana
+## Arcanotechnie et mana
 
 | Terme               | Définition                                                                                   |
 | ------------------- | -------------------------------------------------------------------------------------------- |
-| **Mana**            | Énergie potentielle utilisée pour alimenter les sorts et manipuler les flux quantotechniques.        |
-| **Flux quantotechnique**    | Courant d’énergie reliant toutes les formes de mana. Peut être manipulé, bloqué ou amplifié. |
-| **École de quantotechnique**  | Catégorie représentant la nature de l'énergie quantotechnique (Feu, Givre, Lumière, etc.).           |
-| **Type de quantotechnique**   | Manière de transformer le mana (Destruction, Annihilation, Cataclysme, etc.).                |
+| **Mana**            | Énergie potentielle utilisée pour alimenter les sorts et manipuler les flux arcanotechniques.        |
+| **Flux arcanotechnique**    | Courant d’énergie reliant toutes les formes de mana. Peut être manipulé, bloqué ou amplifié. |
+| **École d'arcanotechnie**  | Catégorie représentant la nature de l'énergie arcanotechnique (Feu, Givre, Lumière, etc.).           |
+| **Type d'arcanotechnie**   | Manière de transformer le mana (Destruction, Annihilation, Cataclysme, etc.).                |
 | **Affinité**        | Mesure de la maîtrise d’une École ou d’un Type. Détermine les sorts accessibles.             |
-| **Sort**            | Expression concrète de la quantotechnique, définie par une École et un Type.                           |
+| **Sort**            | Expression concrète de l'arcanotechnie, définie par une École et un Type.                           |
 | **Cristal de mana** | Objet permettant de stocker ou restaurer de la mana.                                         |
 
 ---

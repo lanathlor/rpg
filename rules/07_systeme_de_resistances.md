@@ -2,7 +2,7 @@
 
 ## 🧬 Principe Fondamental
 
-Dans cet univers, il n'existe pas de "dégâts quantotechniques". Le Flux est une énergie potentielle qui se convertit en phénomènes physiques réels. Une fois la conversion effectuée, l'effet produit (feu, impact, radiation, etc.) obéit aux lois de la physique.
+Dans cet univers, il n'existe pas de "dégâts arcanotechniques". Le Flux est une énergie potentielle qui se convertit en phénomènes physiques réels. Une fois la conversion effectuée, l'effet produit (feu, impact, radiation, etc.) obéit aux lois de la physique.
 
 **Donc : une seule physique, un seul système de résistances.**
 
@@ -207,13 +207,13 @@ Le MJ choisit la méthode selon la complexité souhaitée.
 
 1. **Cohérence narrative** — Pas de distinction artificielle entre "physique" et "magique"
 2. **Clarté tactique** — Les joueurs comprennent intuitivement quel type de résistance protège contre quoi
-3. **Équilibre** — Les quantotechniciens ne contournent pas toute armure, mais peuvent cibler des faiblesses spécifiques
+3. **Équilibre** — Les arcanotechniciens ne contournent pas toute armure, mais peuvent cibler des faiblesses spécifiques
 4. **Profondeur stratégique** — Les ennemis ont des profils de résistance variés (tank RMEC faible RRAD, etc.)
 
 **Exemples d'application :**
 
 - Un guerrier lourdement blindé (RMEC élevé) résiste aux balles et aux épées, mais est vulnérable aux attaques de feu (RRAD faible)
-- Un quantotechnicien avec stabilité du Flux élevée (RINT fort) résiste aux drains et nécroses, mais reste fragile face aux attaques physiques
+- Un arcanotechnicien avec stabilité du Flux élevée (RINT fort) résiste aux drains et nécroses, mais reste fragile face aux attaques physiques
 - Une combinaison isolante protège contre les lasers et le feu (RRAD), mais pas contre les balles (RMEC)
 
 ---
@@ -229,7 +229,7 @@ Le MJ choisit la méthode selon la complexité souhaitée.
 ### Varier les défis
 
 - Forcer les joueurs à adapter leurs stratégies selon les résistances ennemies
-- Encourager la coopération (tank attire l'ennemi RMEC pendant que le quantotechnicien utilise RRAD/RINT)
+- Encourager la coopération (tank attire l'ennemi RMEC pendant que le arcanotechnicien utilise RRAD/RINT)
 - Récompenser la préparation (apporter l'équipement adapté à la mission)
 
 ---

@@ -1,7 +1,7 @@
 # Histoire
 
 Cette section présente le contexte historique et politique de l’univers du jeu.
-Elle sert de référence pour les joueurs et le MJ afin de situer les événements, les factions et la place de la quantotechnique dans le monde.
+Elle sert de référence pour les joueurs et le MJ afin de situer les événements, les factions et la place de l'arcanotechnie dans le monde.
 
 ---
 
@@ -133,7 +133,7 @@ Le **Conseil des Gardiens** constitue l'autorité suprême de l'Empire. Ces cinq
 
 - **Blanc** _(nom temporaire)_ : **Chef du Conseil en temps de guerre**. Stratège militaire et négociateur hors pair, il assume le leadership durant le conflit acéra grâce à son génie tactique et diplomatique.
 
-- **Le Scientifique** _(nom à définir)_ : **Recherche et Industrie**. Quantotechnologue de premier plan, il supervise l'innovation technologique et les processus industriels de l'Empire.
+- **Le Scientifique** _(nom à définir)_ : **Recherche et Industrie**. Arcanotechnologue de premier plan, il supervise l'innovation technologique et les processus industriels de l'Empire.
 
 - **L'Explorateur** _(nom à définir)_ : **Expansion et Renseignement**. Responsable de la colonisation de nouveaux mondes et des réseaux de renseignement impériaux.
 
@@ -141,7 +141,7 @@ Le **Conseil des Gardiens** constitue l'autorité suprême de l'Empire. Ces cinq
 
 - **L'Administrateur** _(nom à définir)_ : **Économie et Infrastructure**. Gestionnaire des ressources, du commerce et de l'ingénierie architecturale à l'échelle galactique.
 
-Ces êtres semi-divins maîtrisent parfaitement la quantotechnique et possèdent une intelligence largement supérieure à la moyenne humaine. Leur immortalité apparente et leurs capacités extraordinaires inspirent à la fois respect et mystère parmi la population.
+Ces êtres semi-divins maîtrisent parfaitement l'arcanotechnie et possèdent une intelligence largement supérieure à la moyenne humaine. Leur immortalité apparente et leurs capacités extraordinaires inspirent à la fois respect et mystère parmi la population.
 
 ### Structure gouvernementale
 
@@ -177,40 +177,40 @@ Les ressources restent toutefois rares, et leur extraction reste risquée.
 ### Production et société
 
 Les technologies impériales assurent la satisfaction des besoins primaires, sauf dans les colonies périphériques.
-L’économie repose sur la production industrielle lourde, la recherche quantotechnique et les ressources minières.
+L’économie repose sur la production industrielle lourde, la recherche arcanotechnique et les ressources minières.
 Malgré la centralisation autoritaire, le niveau de vie global reste élevé.
 
 ---
 
-## 🔮 Quantotechnique et technologie
+## 🔮 Arcanotechnie et technologie
 
-### Nature fondamentale de la quantotechnique
+### Nature fondamentale de l'arcanotechnie
 
-La quantotechnique constitue une **énergie potentielle fondamentale**, appelée **énergie primique**, omniprésente dans la structure même de l'univers. Intrinsèque à toute matière, elle imprègne chaque atome, chaque particule, formant le substrat énergétique de la réalité physique.
+La arcanotechnique constitue une **énergie potentielle fondamentale**, appelée **énergie primique**, omniprésente dans la structure même de l'univers. Intrinsèque à toute matière, elle imprègne chaque atome, chaque particule, formant le substrat énergétique de la réalité physique.
 
 Les pratiquants — appelés **canalisateurs** — ont appris à extraire et convertir cette énergie primique en différentes formes d'énergie mesurable : énergie thermique (chaleur), électromagnétique (lumière, électricité), mécanique (gravité, pression), ou encore biologique et informationnelle.
 
-Chaque **École de quantotechnique** correspond à une **conversion spécifique** d'énergie quantotechnique vers un type d'énergie physique particulier :
+Chaque **École d'arcanotechnie** correspond à une **conversion spécifique** d'énergie arcanotechnique vers un type d'énergie physique particulier :
 
 - Le **Feu** convertit le mana en énergie cinétique moléculaire
 - L'**Électricité** le transforme en champ électromagnétique ordonné
 - La **Lumière** génère un flux photonique cohérent et confiné
 - Le **Kinesthésique** produit un travail mécanique et gravitationnel
 
-Cette compréhension scientifique de la quantotechnique a révolutionné les approches technologiques de l'Empire.
+Cette compréhension scientifique de l'arcanotechnie a révolutionné les approches technologiques de l'Empire.
 
-### Révolution quantotechnique
+### Révolution arcanotechnique
 
-Grâce au Conseil des Gardiens, l'Empire a développé une maîtrise industrielle du **mana**. Les **cristaux de pouvoir** et **cellules de quantotechnique solide** permettent désormais de stocker, canaliser et convertir cette énergie universelle en puissance mécanique ou numérique, fusionnant définitivement science et sorcellerie.
+Grâce au Conseil des Gardiens, l'Empire a développé une maîtrise industrielle du **mana**. Les **cristaux de pouvoir** et **cellules d'arcanotechnie solide** permettent désormais de stocker, canaliser et convertir cette énergie universelle en puissance mécanique ou numérique, fusionnant définitivement science et sorcellerie.
 
-Les sorts sont devenus de véritables **programmes quantotechniques** : les **Quantotechnologue**, scientifiques spécialisés en théorie quantotechnique, conçoivent et codent ces séquences de conversion énergétique, tandis que les **Quantotechniciens** opérationnels les exécutent sur le terrain.
+Les sorts sont devenus de véritables **programmes arcanotechniques** : les **Arcanotechnologue**, scientifiques spécialisés en théorie arcanotechnique, conçoivent et codent ces séquences de conversion énergétique, tandis que les **Arcanotechniciens** opérationnels les exécutent sur le terrain.
 
-Ces **programmes quantotechniques** sont développés selon les mêmes principes que les logiciels informatiques contemporains, utilisant des **frameworks de conversion énergétique**, des **bibliothèques d'effets standardisés** et des **protocoles de sécurité** pour éviter les surcharges critiques. Les **canalisateurs** disposent d'**implants neuraux** spécialisés qui leur permettent de stocker ces programmes directement dans leur cortex cérébral et d'utiliser leur propre activité neurale pour déclencher les conversions d'énergie primique.
+Ces **programmes arcanotechniques** sont développés selon les mêmes principes que les logiciels informatiques contemporains, utilisant des **frameworks de conversion énergétique**, des **bibliothèques d'effets standardisés** et des **protocoles de sécurité** pour éviter les surcharges critiques. Les **canalisateurs** disposent d'**implants neuraux** spécialisés qui leur permettent de stocker ces programmes directement dans leur cortex cérébral et d'utiliser leur propre activité neurale pour déclencher les conversions d'énergie primique.
 
-Cette symbiose entre technologie et quantotechnique a transformé les champs de bataille modernes. Les Quantotechniciens impériaux sont désormais des armes de destruction comparables à l'artillerie lourde, capables de manipuler les forces fondamentales de la nature avec la précision d'un instrument scientifique.
+Cette symbiose entre technologie et arcanotechnique a transformé les champs de bataille modernes. Les Arcanotechniciens impériaux sont désormais des armes de destruction comparables à l'artillerie lourde, capables de manipuler les forces fondamentales de la nature avec la précision d'un instrument scientifique.
 
 > Dans ce contexte, la frontière entre ingénieur et sorcier a définitivement disparu.
 > L'Empire a bâti sa suprématie galactique sur cette union parfaite entre la compréhension scientifique du mana et sa maîtrise pratique.
-> L'quantotechnique n'est plus mystique — elle est devenue une science exacte.
+> L'arcanotechnie n'est plus mystique — elle est devenue une science exacte.
 
 ---

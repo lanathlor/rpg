@@ -21,7 +21,7 @@ export interface Consumable extends BaseItem {
 
 export type ConsumableCategory = 'Consommable'
 export type ConsumableSubcategory =
-  | 'quantotechnique'
+  | 'arcanotechnique'
   | 'médical'
   | 'explosive'
   | 'tactique'

@@ -9,7 +9,7 @@ Les règles et données (classes, monstres, sorts) seront développées dans le 
 Vous pouvez faire des retours sur tous les défauts rencontrés lors de la lecture de ce document.
 
 Des tests de combats ont été effectués pour assurer un semblant d’équilibre, mais certaines classes sont naturellement plus orientées vers le combat que d’autres et possèdent donc de meilleures attaques.
-Des incohérences entre le lore et les statistiques peuvent être présentes : si certaines classes ne semblent pas incarner leur background (ex : un Quantotechnicien avec plus de force que d’intelligence), il s’agit d’une anomalie.
+Des incohérences entre le lore et les statistiques peuvent être présentes : si certaines classes ne semblent pas incarner leur background (ex : un Arcanotechnicien avec plus de force que d'intelligence), il s'agit d'une anomalie.
 
 Vous pouvez également proposer de nouvelles classes ou des modifications (changement de sorts, ajustements de statistiques, etc.).
 
@@ -28,7 +28,7 @@ Toutefois, une présentation de l’univers, de quelques personnages clés et de
 ## Structure du Manuel et des Codex
 
 Ce document présente **les règles fondamentales** du système :
-caractéristiques, affinités, combat, quantotechnique et mécaniques de jeu.
+caractéristiques, affinités, combat, arcanotechnie et mécaniques de jeu.
 
 Les éléments chiffrés et techniques (armes, armures, sorts, objets, compétences, créatures, etc.)
 sont détaillés dans des documents séparés appelés **Codex** :

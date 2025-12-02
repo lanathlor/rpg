@@ -30,7 +30,7 @@ Cette analyse recalcule complètement les coûts point buy de toutes les classes
   - **Pure** : 8 pts/niveau
   - **Quantique** : 7 pts/niveau
   - **Complexes** (Chronodynamique, Gravitonique) : 6 pts/niveau
-  - **Avancées** (Biométabolique, Bioquantotechnique, Magnétique, Kinesthésique) : 5 pts/niveau
+  - **Avancées** (Biométabolique, Bioarcanotechnie, Magnétique, Kinesthésique) : 5 pts/niveau
   - **Standard** (Feu, Givre, Électricité, Lumière, Ombre, Aérocinétique, Hydrodynamique, Sonique, Illusion, Martial, Balistique) : 3 pts/niveau
 - **Types** : 5 points/niveau (Destruction, Altération, Amélioration, Arme, Déplacement)
 - **Affinités spéciales** : 4 points/niveau
@@ -60,7 +60,7 @@ Cette analyse recalcule complètement les coûts point buy de toutes les classes
 
 **Compétences:**
 
-- Armure de quantotechnique (15) + Vue des quantiques (8) = **23 points**
+- Armure d'arcanotechnie (15) + Vue des quantiques (8) = **23 points**
 
 **Équipement:**
 
@@ -155,7 +155,7 @@ Cette analyse recalcule complètement les coûts point buy de toutes les classes
 
 **Compétences:**
 
-- Armure quantotechnique (15) + Vue quantiques (8) = **23 points**
+- Armure arcanotechnique (15) + Vue quantiques (8) = **23 points**
 
 **Équipement:**
 
@@ -219,7 +219,7 @@ Cette analyse recalcule complètement les coûts point buy de toutes les classes
 
 **Compétences:**
 
-- Connaisseur quantotechnique (12) + Scientifique (5) = **17 points**
+- Connaisseur arcanotechnique (12) + Scientifique (5) = **17 points**
 
 **Équipement:**
 
@@ -393,12 +393,12 @@ Cette analyse recalcule complètement les coûts point buy de toutes les classes
 
 | **Rang** | **Classe**                     | **Base Révisée** | **Compétences** | **Équipement** | **TOTAL** | **Δ vs Ancienne** |
 | -------- | ------------------------------ | ---------------- | --------------- | -------------- | --------- | ------------------ |
-| 1        | **Quantotechnologue**          | 128              | 17              | 15             | **160**   | -4 ⬇️              |
-| 2        | **Quantotechnicien**           | 143              | 23              | 15             | **182**   | -10 ⬇️             |
+| 1        | **Arcanotechnologue**          | 128              | 17              | 15             | **160**   | -4 ⬇️              |
+| 2        | **Arcanotechnicien**           | 143              | 23              | 15             | **182**   | -10 ⬇️             |
 | 3        | **Taliste**                    | 140              | 19              | 24             | **183**   | +6 ⬆️              |
 | 4        | **Chasseur**                   | 116              | 23              | 47             | **186**   | -12 ⬇️             |
 | 5        | **Technologue**                | 94               | 25              | 76             | **195**   | -8 ⬇️              |
-| 6        | **Quantotechnicien de combat** | 146              | 26              | 37             | **209**   | -8 ⬇️              |
+| 6        | **Arcanotechnicien de combat** | 146              | 26              | 37             | **209**   | -8 ⬇️              |
 | 7        | **Horion**                     | 146              | 14              | 44             | **204**   | -8 ⬇️              |
 | 8        | **Spectre**                    | 152              | 20              | 63             | **235**   | -8 ⬇️              |
 | 9        | **Sentinelle**                 | 163              | 22              | 52             | **237**   | -4 ⬇️              |
@@ -411,25 +411,25 @@ Cette analyse recalcule complètement les coûts point buy de toutes les classes
 
 ## 🎯 Impact de la Révision des Coûts d'Affinités
 
-### **Objectif Atteint : Classes Quantotechniques Équilibrées ✅**
+### **Objectif Atteint : Classes Arcanotechnies Équilibrées ✅**
 
-1. **Quantotechnologue** : 160 points
-2. **Quantotechnicien** : 182 points
+1. **Arcanotechnologue** : 160 points
+2. **Arcanotechnicien** : 182 points
 3. **Taliste** : 183 points
 
-La différence entre Quantotechnicien et Quantotechnologue est maintenant de seulement **22 points**, montrant un meilleur équilibre.
+La différence entre Arcanotechnicien et Arcanotechnologue est maintenant de seulement **22 points**, montrant un meilleur équilibre.
 
 ### **Réduction Générale des Coûts**
 
 - **Réduction moyenne** : -8 points par classe
 - **Écoles standard** réduites à 3 pts/niveau (-40%)
 - **Distribution resserrée** : 160-246 points (86 pts écart)
-- **Classes quantotechniques** mieux équilibrées
+- **Classes arcanotechniques** mieux équilibrées
 
 ### **Classes Bien Équilibrées (160-195 points)**
 
-- **Quantotechnologue** : 160 points ⭐
-- **Quantotechnicien** : 182 points ⭐
+- **Arcanotechnologue** : 160 points ⭐
+- **Arcanotechnicien** : 182 points ⭐
 - **Taliste** : 183 points ⭐
 - **Chasseur** : 186 points ⭐
 - **Technologue** : 195 points ⭐
@@ -444,14 +444,14 @@ La distribution naturelle avec les nouveaux coûts suggère 190 points comme cib
 
 ### **Classes Modèles à Maintenir**
 
-1. **Quantotechnologue** (160) - Spécialiste recherche/soutien parfait
-2. **Quantotechnicien** (182) - Mage de combat équilibré
+1. **Arcanotechnologue** (160) - Spécialiste recherche/soutien parfait
+2. **Arcanotechnicien** (182) - Mage de combat équilibré
 3. **Chasseur** (186) - Anti-mage spécialisé
 4. **Technologue** (195) - High-tech viable
 
 ### **Ajustements Mineurs Requis**
 
-- **Quantotechnicien de combat** (209) : Acceptable comme hybride premium
+- **Arcanotechnicien de combat** (209) : Acceptable comme hybride premium
 - **Horion** (204) : Réduction légère nécessaire (-15-20 pts)
 
 ### **Rééquilibrage Majeur Requis**
@@ -465,7 +465,7 @@ La distribution naturelle avec les nouveaux coûts suggère 190 points comme cib
 ## ✅ Succès de la Révision
 
 Cette révision a réussi à :
-1. **Équilibrer les classes quantotechniques** (écart réduit de 28 à 22 points)
+1. **Équilibrer les classes arcanotechniques** (écart réduit de 28 à 22 points)
 2. **Réduire l'écart général** entre toutes les classes (86 vs 96 points)
 3. **Créer 5 classes bien équilibrées** dans la zone cible 160-195
 4. **Maintenir la cohérence** des coûts d'affinités par complexité

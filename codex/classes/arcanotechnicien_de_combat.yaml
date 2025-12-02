@@ -1,0 +1,63 @@
+name: "Arcanotechnicien de combat"
+description: "Lors de la guerre contre les Acéras, il devenait évidant que la guérilla est la clé du succès. Les Arcanotechniciens, puissant lors des batailles a grande envergure, devait se prendre un nouveau rôle. Les Arcanotechniciens de combat sont la réponse. Efficace contre des groupes de soldat d'infanterie, les Arcanotechniciens de combat sont capables de bouger vite et de déplacer le champ de batail sur des points stratégique. Leur férocité et leur indépendance leurs ont valu une place unique au sein de l'armée."
+
+image: "https://i.pinimg.com/736x/2b/95/af/2b95af02e170eb88efd9b7c4afbe8ba0.jpg"
+
+# Statistiques de base
+base_stats:
+  health: 50
+  speed: 4
+
+# Système de flux
+flux_system:
+  reserve: 25
+  per_turn: 7
+  recovery: 2
+
+# Affinités
+affinities:
+  distance: 0
+  melee: 4
+  schools:
+    electricite: 3
+    magnetique: 2
+  types:
+    arme: 3
+    destruction: 3
+    alteration: 2
+
+# Statistiques
+stats:
+  force: 12
+  dexterite: 15
+  constitution: 11
+  intelligence: 15
+  perception: 10
+  precision: 9
+  charisme: 11
+
+# Équipements
+equipment:
+  weapons:
+    - "Épée légère"
+  armor:
+    - "Exosquelette de combat"
+  consumables:
+    - name: "Kit de soins"
+      quantity: 2
+
+# Compétences
+skills:
+  - "Champ électromagnétique"
+  - "Vue des quantiques"
+
+# Sorts
+spells:
+  - "Éclaire"
+  - "Charge statique"
+  - "Lame de foudre"
+  - "Zap"
+  - "Magnétisation"
+
+# Guide de jeu
+gameplay_guide: "Le Arcanotechnicien de combat est pensé pour éliminer rapidement de multiples unités fragiles. Mais le Arcanotechnicien de combat, par sa fragilité, peut être en danger lors des combats plus longs. Il faudra alors faire preuve de patience et laisser la première ligne a vos alliés plus résistants."

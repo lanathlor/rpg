@@ -12,14 +12,14 @@ Cette analyse recalcule les coûts point buy de toutes les classes après réduc
 
 | **Classe** | **Affinités Réduites** | **Points Économisés** |
 |-----------|------------------------|----------------------|
-| **Quantotechnicien** | Destruction 5→4, Altération 3→2, Déplacement 3→2, Bio 3→2 | 20 points |
-| **Quantotechnicien de Combat** | Électricité 4→3, Arme 4→3 | 8 points |
+| **Arcanotechnicien** | Destruction 5→4, Altération 3→2, Déplacement 3→2, Bio 3→2 | 20 points |
+| **Arcanotechnicien de Combat** | Électricité 4→3, Arme 4→3 | 8 points |
 | **Chasseur** | Distance 4→3 | 4 points |
 | **Horion** | Distance 8→6 | 8 points |
 | **Spectre** | Distance 6→5 | 4 points |
 | **Sentinelle** | Arme 6→5 | 5 points |
 | **Maître d'armes** | Martial 6→5, Arme 6→5 | 8 points |
-| **Quantotechnologue** | Altération 4→3 | 5 points |
+| **Arcanotechnologue** | Altération 4→3 | 5 points |
 | **Taliste** | Bio 4→3, Altération 4→3 | 10 points |
 | **Technologue** | Électricité 4→3, Altération 4→3 | 6 points |
 | **Tutélaire** | Amélioration 5→4 | 5 points |
@@ -169,13 +169,13 @@ Cette analyse recalcule les coûts point buy de toutes les classes après réduc
 
 | **Rang** | **Classe**                     | **Base Révisée** | **Compétences** | **Équipement** | **TOTAL** | **Δ vs Précédent** |
 | -------- | ------------------------------ | ---------------- | --------------- | -------------- | --------- | ------------------- |
-| 1        | **Quantotechnologue**          | 123              | 17              | 15             | **155**   | -5 ⬇️               |
-| 2        | **Quantotechnicien**           | 124              | 23              | 15             | **162**   | -20 ⬇️              |
+| 1        | **Arcanotechnologue**          | 123              | 17              | 15             | **155**   | -5 ⬇️               |
+| 2        | **Arcanotechnicien**           | 124              | 23              | 15             | **162**   | -20 ⬇️              |
 | 3        | **Taliste**                    | 130              | 19              | 24             | **173**   | -10 ⬇️              |
 | 4        | **Chasseur**                   | 112              | 23              | 47             | **182**   | -4 ⬇️               |
 | 5        | **Technologue**                | 88               | 25              | 76             | **189**   | -6 ⬇️               |
 | 6        | **Horion**                     | 137              | 14              | 44             | **195**   | -9 ⬇️               |
-| 7        | **Quantotechnicien de combat** | 138              | 26              | 37             | **201**   | -8 ⬇️               |
+| 7        | **Arcanotechnicien de combat** | 138              | 26              | 37             | **201**   | -8 ⬇️               |
 | 8        | **Sentinelle**                 | 158              | 22              | 52             | **232**   | -5 ⬇️               |
 | 9        | **Spectre**                    | 148              | 20              | 63             | **231**   | -4 ⬇️               |
 | 10       | **Maître d'armes**             | 159              | 43              | 40             | **242**   | -4 ⬇️               |
@@ -193,15 +193,15 @@ Cette analyse recalcule les coûts point buy de toutes les classes après réduc
 - **Distribution resserrée** : 155-242 points (87 pts d'écart vs 86 précédent)
 
 ### **Classes Parfaitement Équilibrées (150-190 points)**
-1. **Quantotechnologue** : 155 points ⭐⭐
-2. **Quantotechnicien** : 162 points ⭐⭐
+1. **Arcanotechnologue** : 155 points ⭐⭐
+2. **Arcanotechnicien** : 162 points ⭐⭐
 3. **Taliste** : 173 points ⭐⭐
 4. **Chasseur** : 182 points ⭐
 5. **Technologue** : 189 points ⭐
 
 ### **Classes Acceptables (190-210 points)**
 6. **Horion** : 195 points ✅
-7. **Quantotechnicien de combat** : 201 points ✅
+7. **Arcanotechnicien de combat** : 201 points ✅
 
 ### **Classes Nécessitant Ajustements (220+ points)**
 - **Sentinelle** : 232 points (-42 pts requis)
