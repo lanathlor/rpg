@@ -20,9 +20,9 @@ affinities:
   melee: 0
   schools:
     bioarcanotechnique: 3
-    quantique: 3
+    quantique: 4
   types:
-    alteration: 3
+    alteration: 4
     amelioration: 3
 
 # Statistiques
@@ -40,7 +40,7 @@ equipment:
   weapons:
     - "Pistolet"
   armor:
-    - "Tenue de survie"
+    - "Exosquelette de traque"
   consumables:
     - name: "Kit de soins"
       quantity: 2
@@ -50,6 +50,7 @@ skills:
   - "Traque"
   - "Expert des terrains"
   - "Compréhension de la nature"
+  - "Vétéran"
 
 # Sorts
 spells:

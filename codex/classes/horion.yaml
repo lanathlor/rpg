@@ -19,9 +19,10 @@ affinities:
   distance: 6
   melee: 2
   schools:
-    balistique: 4
+    balistique: 8
+    martial: 4
   types:
-    arme: 6
+    arme: 8
     amelioration: 2
 
 # Statistiques

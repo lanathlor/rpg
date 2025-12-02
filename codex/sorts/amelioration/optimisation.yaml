@@ -1,0 +1,19 @@
+spell_series: Optimisation
+description_base: Optimise la consommation arcanotechnique du prochain sort lancé par la cible, permettant une efficacité maximale.
+school: bioarcanotechnique
+type: amelioration
+
+levels:
+  - level: "1"
+    name: Optimisation
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[bioarcanotechnique]: 4"
+        type_requirement: "A.Type[amélioration]: 2"
+        mixed_requirement: "A.École[bioarcanotechnique] + A.Type[amélioration]: 5"
+    conditions:
+      intelligence_required: 16
+      flux_cost: 5
+    effects:
+      special: "Le prochain sort lancé par la cible ne coûte pas de flux (hors attaque d'arme)"
+    duration: 1 tour

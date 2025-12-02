@@ -20,7 +20,7 @@ affinities:
   melee: 6
   arme_1_main: 2
   schools:
-    martial: 4
+    martial: 6
     quantique: 2
   types:
     arme: 5

@@ -20,11 +20,11 @@ affinities:
   melee: 4
   schools:
     electricite: 3
-    magnetique: 2
+    magnetique: 4
   types:
     arme: 3
     destruction: 3
-    alteration: 2
+    alteration: 4
 
 # Statistiques
 stats:

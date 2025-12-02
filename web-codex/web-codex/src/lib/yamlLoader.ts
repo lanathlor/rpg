@@ -66,7 +66,7 @@ export class YamlLoader {
         classes: [],
       }
 
-      // Load all categories
+      // Load all categories in parallel
       const categories: CodexCategory[] = [
         'sorts',
         'armes',
@@ -76,8 +76,15 @@ export class YamlLoader {
         'classes',
       ]
 
-      for (const category of categories) {
-        const items = await this.loadCategory(category)
+      // Load all categories concurrently
+      const categoryPromises = categories.map(category =>
+        this.loadCategory(category).then(items => ({ category, items }))
+      )
+
+      const categoryResults = await Promise.all(categoryPromises)
+
+      // Assign results to codexData
+      for (const { category, items } of categoryResults) {
         switch (category) {
           case 'sorts':
             codexData.spells = items as Spell[]
@@ -110,9 +117,9 @@ export class YamlLoader {
   private async loadCategory(category: CodexCategory): Promise<CodexItem[]> {
     try {
       const files = await this.getCategoryFiles(category)
-      const items: CodexItem[] = []
 
-      for (const file of files) {
+      // Load all files in parallel using Promise.allSettled
+      const loadPromises = files.map(async (file) => {
         try {
           const content = await this.loadYamlFile(`/codex/${category}/${file}`)
           if (content) {
@@ -120,12 +127,24 @@ export class YamlLoader {
             if (category === 'sorts' && (content as any).spell_series && !(content as any).name) {
               (content as any).name = (content as any).spell_series
             }
-            items.push(content as CodexItem)
+            return content as CodexItem
           }
+          return null
         } catch (error) {
           console.warn(`Failed to load ${file} from ${category}:`, error)
+          return null
         }
-      }
+      })
+
+      // Wait for all files to load in parallel
+      const results = await Promise.allSettled(loadPromises)
+
+      // Filter out failed loads and null values
+      const items: CodexItem[] = results
+        .filter((result): result is PromiseFulfilledResult<CodexItem> =>
+          result.status === 'fulfilled' && result.value !== null
+        )
+        .map(result => result.value)
 
       return items
     } catch (error) {
@@ -188,6 +207,8 @@ export class YamlLoader {
         'amelioration/camouflage.yaml',
         'amelioration/charge.yaml',
         'amelioration/lecture_des_mouvements.yaml',
+        'amelioration/optimisation.yaml',
+        'amelioration/partage_de_connaissance.yaml',
         'arme/attaque_de_force.yaml',
         'arme/attaque_des_points_sensibles.yaml',
         'arme/attaque_multiple.yaml',

@@ -20,6 +20,8 @@ affinities:
   melee: 0
   schools:
     electricite: 3
+    magnetique: 3
+    illusion: 2
   types:
     alteration: 3
     amelioration: 2
@@ -39,7 +41,7 @@ equipment:
   weapons:
     - "Pistolet"
   armor:
-    - "Implant neural militaire"
+    - "Exosquelette stabilisateur"
     - "Drone de combat"
   consumables:
     - name: "Kit de soins"

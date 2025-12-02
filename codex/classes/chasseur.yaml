@@ -20,9 +20,10 @@ affinities:
   melee: 0
   fusil_a_pompe: 4
   schools:
-    balistique: 6
+    balistique: 8
+    martial: 4
   types:
-    arme: 4
+    arme: 8
 
 # Statistiques
 stats:
