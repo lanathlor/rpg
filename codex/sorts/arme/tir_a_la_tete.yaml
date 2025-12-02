@@ -13,6 +13,7 @@ levels:
     recharge_time: "45 sec"
     effects:
       damage: +2d8+4 aux dégâts d'arme
+      resistance: RMEC
       special: Critique automatique si touché
 school: balistique
 type: arme

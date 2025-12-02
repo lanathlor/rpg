@@ -11,6 +11,7 @@ levels:
     recharge_time: "60 sec"
     effects:
       multiple_attack: Lance une copie de la prochaine attaque
+      resistance: RMEC
   - level: "2"
     name: Attaque multiple II
     prerequisites:
@@ -21,5 +22,6 @@ levels:
     recharge_time: "40 sec"
     effects:
       multiple_attack: Lance une copie de la prochaine attaque
+      resistance: RMEC
 school: martial
 type: arme

@@ -13,6 +13,7 @@ levels:
       flux_cost: 5
     effects:
       damage: 2d4 dans un cône de 8m
+      resistance: RMEC
       special: "Traverse les armures légères (ignore 2 points de protection)"
       specials:
         - "Les cibles subissent -2 aux jets de perception pendant 3 tours"
@@ -28,6 +29,7 @@ levels:
       flux_cost: 8
     effects:
       damage: 3d6 dans un cône de 12m
+      resistance: RMEC
       special: "Traverse les armures moyennes (ignore 4 points de protection)"
       specials:
         - "Les cibles subissent -3 aux jets de perception et attaques pendant 4 tours"

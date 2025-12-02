@@ -10,5 +10,6 @@ levels:
     recharge_time: "instantané"
     effects:
       damage: Dégâts d'arme maximum
+      resistance: RMEC
 school: martial
 type: arme

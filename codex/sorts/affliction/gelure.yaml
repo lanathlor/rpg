@@ -14,6 +14,7 @@ levels:
       flux_cost: 0
     effects:
       debuff: "-1 vitesse, -1 score de toucher par accumulation"
+      resistance: RRAD
       special: "Cumulable. Nouvelle application remet la durée à 0. 5 accumulations = 2d20+8 dégâts puis perte de 5 'Gelure'"
       duration: "2 tours"
     recharge_time: "instantané"

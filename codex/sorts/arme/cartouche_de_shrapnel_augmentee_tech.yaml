@@ -12,5 +12,6 @@ levels:
     recharge_time: "80 sec"
     effects:
       damage_bonus: Rajoutez 1d8 d4 à votre prochaine attaque
+      resistance: RMEC
 school: balistique
 type: arme

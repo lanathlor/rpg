@@ -13,6 +13,7 @@ levels:
       flux_cost: 6
     effects:
       damage: 1d8+2 électricité
+      resistance: RRAD
       special: Peut chaîner sur une cible proche
 school: électricité
 type: destruction

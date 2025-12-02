@@ -13,6 +13,7 @@ levels:
       flux_cost: 6
     effects:
       debuff: "-2 au jet d'attaque de 1d3+1 cibles"
+      resistance: RINT
     duration: 1 tour
   - level: "2"
     name: Confusion II
@@ -26,6 +27,7 @@ levels:
       flux_cost: 8
     effects:
       debuff: "-2 au jet d'attaque de 1d4+1 cibles"
+      resistance: RINT
     duration: 2 tours
 school: bioquantotechnique
 type: alteration

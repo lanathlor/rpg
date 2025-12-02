@@ -43,6 +43,7 @@ levels:
       # Damage (if applicable)
       damage: "2d6+4 fire"         # Format: "XdY+Z damage_type"
       area_damage: "1d4 fire"      # Area damage if different
+      resistance: "RRAD"           # Which resistance applies: RMEC (mechanical), RRAD (radiative), RINT (internal)
 
       # Special effects
       special: "Single special effect description"  # Single special effect
@@ -72,3 +73,8 @@ levels:
 # 5. Special effects go in effects.special, not scattered in other sections
 # 6. All levels are strings ("1", "2") not integers (1, 2)
 # 7. school and type are at root level, not inside levels
+# 8. RESISTANCE SYSTEM: Specify which resistance applies to damage:
+#    - RMEC (Résistance Mécanique): projectiles, impacts, pressure, shockwaves
+#    - RRAD (Résistance Radiative): fire, cold, light, electricity, radiation
+#    - RINT (Résistance Interne): drain, necrosis, corruption, internal effects
+#    See rules/07_systeme_de_resistances.md for complete reference

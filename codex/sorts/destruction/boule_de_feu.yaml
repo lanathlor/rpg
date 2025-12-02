@@ -13,6 +13,7 @@ levels:
       flux_cost: 8
     effects:
       damage: 2d6+3 feu
+      resistance: RRAD
       area_damage: 1d4 feu dans un rayon de 3m
       special: Zone d'effet
   - level: "2"
@@ -28,5 +29,6 @@ levels:
     description: "Version amplifiée et raffinée du sort de base, cette orbe enflammée pulse d'énergie destructrice avant de frapper sa cible. L'explosion résultante déploie des flammes si intenses qu'elles adhèrent à la chair et aux matériaux, continuant de consumer bien après l'impact initial."
     effects:
       damage: 2d8+4 feu et « brûlure II » à la cible
+      resistance: RRAD
 school: feu
 type: destruction

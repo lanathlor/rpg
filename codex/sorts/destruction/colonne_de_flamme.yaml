@@ -13,6 +13,7 @@ levels:
       flux_cost: 15
     effects:
       damage: 3d6+4 feu
+      resistance: RRAD
       area_effect: Colonne de 2m de rayon
       special: Traverse les armures légères
 school: feu

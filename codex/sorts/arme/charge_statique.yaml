@@ -12,5 +12,7 @@ levels:
       flux_cost: 4
     effects:
       damage_bonus: Votre prochaine attaque physique inflige 9 dégâts supplémentaire
+      resistance: RMEC + RRAD
+      special: Dégâts d'électricité additionnels
 school: électricité
 type: arme

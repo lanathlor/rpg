@@ -13,6 +13,7 @@ levels:
       flux_cost: 10
     effects:
       status: La cible est incapacitée
+      resistance: RINT
     duration: 1d4
 school: quantique
 type: alteration

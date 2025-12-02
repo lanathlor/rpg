@@ -37,12 +37,14 @@ Au début du combat, chaque participant lance **1d20 + DEX**.
 
 ---
 
-## 🛡️ Défense et Protection
+## 🛡️ Défense et Résistances
 
 Le système de défense repose sur deux valeurs fixes :
 
 - le **Score de Défense (SD)** : détermine si une attaque touche.
-- le **Score de Protection (SP)** : réduit les dégâts une fois l’attaque réussie.
+- les **Résistances** : réduisent les dégâts une fois l'attaque réussie.
+
+> Pour une compréhension complète du système de résistances, consultez [Système de Résistances](07_systeme_de_resistances.md).
 
 ### 1. Score de Défense (SD)
 
@@ -67,34 +69,49 @@ Les bonus d’armure, boucliers et couvertures s’ajoutent à la valeur finale.
 
 ---
 
-### 2. Score de Protection (SP)
+### 2. Résistances
 
-Une fois l’attaque réussie, le Score de Protection détermine **combien de dégâts sont absorbés** avant d’atteindre les points de vie.
+Une fois l'attaque réussie, les **Résistances** déterminent **combien de dégâts sont absorbés** avant d'atteindre les points de vie.
+
+Il existe **trois types de résistances** basées sur la nature physique de l'attaque :
+
+#### Les trois résistances
+
+| Résistance                        | Abréviation | Couvre                                          | Exemples                                |
+| --------------------------------- | ----------- | ----------------------------------------------- | --------------------------------------- |
+| **Résistance Mécanique**          | RMEC        | Impact, perforation, pression, onde de choc     | Épée, balle, projectile de roche        |
+| **Résistance Radiative**          | RRAD        | Chaleur, froid, lumière, électricité externe    | Feu, laser, foudre, givre de surface    |
+| **Résistance Interne**            | RINT        | Altération du Flux, combustion/gel interne      | Nécrose, drain de vie, corruption       |
 
 #### Formule générale
 
 ```
-SP = bonus d’armure + (stat secondaire / 4)
+Résistance = bonus d'armure + (stat secondaire / 4) + bonus spéciaux
 ```
 
-> La statistique secondaire dépend du type de dégât reçu.
+> La statistique secondaire et les bonus dépendent du type de résistance et de l'équipement.
 
-| Type de dégât                | Stat secondaire    | Score de Protection associé | Exemple                         |
-| ---------------------------- | ------------------ | --------------------------- | ------------------------------- |
-| **Physique (corps à corps)** | Force (FOR)        | Protection Physique (PP)    | Armure lourde : PP = 3          |
-| **Distance (projectile)**    | Dextérité (DEX)    | Protection à Distance (PD)  | Exosquelette de combat : PD = 2 |
-| **Quantotechnique (sorts)**          | Intelligence (INT) | Protection Quantotechnique (PA)     | Armure de quantotechnique : PA = 2        |
+| Résistance | Stat secondaire principale | Sources typiques de bonus                      |
+| ---------- | -------------------------- | ---------------------------------------------- |
+| **RMEC**   | Force (FOR)                | Armure lourde, exosquelette, bouclier          |
+| **RRAD**   | Constitution (CON)         | Combinaison isolante, bouclier énergétique     |
+| **RINT**   | Intelligence (INT)         | Stabilité du Flux, implants rares, méditation  |
 
 #### Application
 
-Lorsqu’une attaque réussit :
+Lorsqu'une attaque réussit :
 
 ```
-Dégâts finaux = Dégâts bruts - SP (selon le type)
+Dégâts finaux = Dégâts bruts - Résistance applicable
 ```
+
+**Important :** Ce n'est pas la source de l'attaque qui détermine la résistance, mais **sa nature physique**.
+- Une boule de feu quantotechnique → **RRAD** (chaleur)
+- Un projectile de roche quantotechnique → **RMEC** (impact)
+- Une nécrose quantotechnique → **RINT** (altération interne)
 
 Les dégâts ne peuvent jamais être réduits en dessous de 0.
-Certaines attaques (quantotechniques ou explosives) peuvent ignorer partiellement ou totalement la protection.
+Certaines attaques mixtes (comme les explosions) affectent plusieurs résistances : souffle (RMEC) + chaleur (RRAD).
 
 ---
 
@@ -118,24 +135,30 @@ Une attaque se déroule en deux étapes : **jet d’attaque**, puis **jet de dé
 
 ### 2. Jet de dégâts
 
-- Lancer les dés indiqués sur l’arme ou le sort.
-- Soustraire la protection correspondante (PP, PD ou PA).
+- Lancer les dés indiqués sur l'arme ou le sort.
+- Déterminer la nature physique de l'attaque (mécanique, radiative, ou interne).
+- Soustraire la résistance correspondante (RMEC, RRAD ou RINT).
 - Appliquer le résultat aux points de vie de la cible.
 - Si la cible est réduite à 0 PV → elle est mise hors combat.
+
+**Exemples de correspondance :**
+- Épée, balle, projectile → **RMEC**
+- Feu, laser, foudre → **RRAD**
+- Drain de vie, nécrose, corruption → **RINT**
 
 ---
 
 ## 🧠 Actions défensives actives
 
 Un personnage peut renoncer à attaquer pour se défendre activement.
-Ces actions offrent des bonus temporaires au Score de Défense ou de Protection.
+Ces actions offrent des bonus temporaires au Score de Défense ou aux Résistances.
 
 | Action                  | Effet                                                                                                           | Durée                  |
 | ----------------------- | --------------------------------------------------------------------------------------------------------------- | ---------------------- |
-| **Parade**              | Effectuer un **jet opposé de FOR ou DEX** contre l’attaque physique. En cas de réussite, l’attaque est bloquée. | Instantané             |
-| **Esquive**             | Lance **d20 + DEX** contre le jet d’attaque de l’adversaire. En cas de réussite, l’attaque rate.                | Instantané             |
-| **Se mettre à couvert** | +2 à la Défense à distance et quantotechnique.                                                                          | Jusqu’au prochain tour |
-| **Tenir la ligne**      | Si adjacent à un allié, +1 à votre Défense et à celle de cet allié.                                             | Jusqu’à la fin du tour |
+| **Parade**              | Effectuer un **jet opposé de FOR ou DEX** contre l'attaque physique. En cas de réussite, l'attaque est bloquée. | Instantané             |
+| **Esquive**             | Lance **d20 + DEX** contre le jet d'attaque de l'adversaire. En cas de réussite, l'attaque rate.                | Instantané             |
+| **Se mettre à couvert** | +2 à la Défense à distance et +1 à RMEC/RRAD.                                                                  | Jusqu'au prochain tour |
+| **Tenir la ligne**      | Si adjacent à un allié, +1 à votre Défense et à celle de cet allié.                                             | Jusqu'à la fin du tour |
 
 ---
 
@@ -228,14 +251,18 @@ Après le combat, les joueurs peuvent :
 ## 💡 Philosophie du système
 
 > Le combat repose sur deux principes : **simplicité de jet** et **clarté des valeurs**.
-> Le joueur ne lance qu’un seul dé pour attaquer, la cible ne lance rien pour se défendre.
-> Les valeurs fixes de Défense et de Protection rendent le système fluide, mais tactique.
+> Le joueur ne lance qu'un seul dé pour attaquer, la cible ne lance rien pour se défendre.
+> Les valeurs fixes de Défense et de Résistances rendent le système fluide, mais tactique.
 
 Les priorités du système :
 
-- Unification des mécaniques physiques et quantotechniques.
-- Défenses claires et mesurables.
-- Progression naturelle par équipement et statistiques.
-- Fluidité de lecture pour le MJ et les joueurs.
+- **Unification physique** : une seule réalité physique, pas de distinction "magique vs physique".
+- **Résistances basées sur la nature de l'attaque** : mécanique, radiative, ou interne.
+- **Cohérence narrative** : le Flux crée des phénomènes physiques réels qui suivent les lois de la physique.
+- **Défenses claires et mesurables** : RMEC, RRAD, RINT.
+- **Progression naturelle** : par équipement, statistiques et maîtrise du Flux.
+- **Fluidité de lecture** : pour le MJ et les joueurs.
+
+**Principe fondamental :** Ce n'est pas la source de l'attaque qui détermine la résistance applicable, mais la nature physique de l'effet produit. Une boule de feu quantotechnique inflige des dégâts radiatifs (RRAD), tout comme une flamme conventionnelle.
 
 ---

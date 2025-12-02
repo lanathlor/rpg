@@ -11,5 +11,6 @@ levels:
     recharge_time: "instantané"
     effects:
       damage: Vous vous déplacez jusqu'à la cible et lui infligez 1d4 dégâts
+      resistance: RMEC
 school: martial
 type: amelioration

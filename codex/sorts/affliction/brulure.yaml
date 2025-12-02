@@ -10,6 +10,7 @@ levels:
     recharge_time: "instantané"
     effects:
       damage: 1d4 à chaque tour
+      resistance: RRAD
       dice_rolled_once: true
     duration: 3 tours
   - level: "2"
@@ -21,6 +22,7 @@ levels:
     recharge_time: "instantané"
     effects:
       damage: 1d4 + 3 à chaque tour
+      resistance: RRAD
       dice_rolled_once: true
     duration: 3 tours
 school: feu

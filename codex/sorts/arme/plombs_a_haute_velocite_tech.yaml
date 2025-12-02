@@ -12,5 +12,6 @@ levels:
     recharge_time: "50 sec"
     effects:
       damage_bonus: +2 à chacun de vos dés lors de votre prochaine attaque avec un fusil à pompe
+      resistance: RMEC
 school: balistique
 type: arme

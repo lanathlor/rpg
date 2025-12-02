@@ -1,8 +1,13 @@
 import type { BaseItem, Prerequisites } from './common'
 
 export interface ArmorStats {
+  // New resistance system
+  RMEC?: string
+  RRAD?: string
+  RINT?: string
+
   // Current YAML field names
-  protection_bonus?: string
+  protection_bonus?: string  // Legacy - being phased out
   defense_bonus?: string
   stat_modifier?: string
   special_ability?: string

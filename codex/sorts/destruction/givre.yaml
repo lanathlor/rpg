@@ -17,4 +17,5 @@ levels:
       flux_cost: 4
     effects:
       damage: "1d4+4 givre"
+      resistance: RRAD
       special: "Rafraîchit les effets 'Gelure' sur la cible"

@@ -15,4 +15,5 @@ levels:
       flux_cost: 5
     effects:
       status: La cible est paralysée
+      resistance: RINT
     duration: 1 tour

@@ -11,6 +11,7 @@ levels:
     recharge_time: "40 sec"
     effects:
       damage: +2d6+4 aux dégâts d'arme
+      resistance: RMEC
       special: Frappe en ligne droite, peut toucher plusieurs cibles
 school: martial
 type: arme

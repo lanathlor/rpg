@@ -5,6 +5,7 @@ cost: "1200 crédits"
 prerequisites:
   stat: "FOR 14"
 stats:
-  protection_bonus: "+3 scores de protection à distance"
+  RMEC: "+3"
+  RRAD: "+1"
   inventory_bonus: "+1 emplacement de consommable"
-description: "Armure complète en plaques lourdes, offrant une protection maximale et des compartiments de stockage intégrés."
+description: "Armure complète en plaques lourdes, offrant une protection maximale contre les impacts et projectiles (RMEC), une protection limitée contre les effets thermiques (RRAD), et des compartiments de stockage intégrés."

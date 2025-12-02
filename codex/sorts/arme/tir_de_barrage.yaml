@@ -11,6 +11,7 @@ levels:
     recharge_time: "35 sec"
     effects:
       damage: +4d4+2 aux dégâts d'arme
+      resistance: RMEC
       special: Zone d'effet 3x3m
 school: balistique
 type: arme

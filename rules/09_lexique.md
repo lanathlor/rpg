@@ -51,14 +51,15 @@ Il sert de référence rapide pour les joueurs et les maîtres du jeu.
 | **Jet d’attaque**           | Lancer de dé visant à déterminer si une attaque touche sa cible.                           |
 | **Jet de dégâts**           | Lancer de dé pour déterminer la quantité de dégâts infligés.                               |
 | **Jet de sauvegarde**       | Lancer défensif pour résister à un effet néfaste (sort, poison, explosion, etc.).          |
-| **Jet d’opportunité**       | Attaque gratuite déclenchée lorsqu’un ennemi quitte une zone d’engagement.                 |
-| **Initiative**              | Jet déterminant l’ordre des tours en combat.                                               |
-| **DF (Défense Physique)**   | Valeur représentant la capacité à éviter ou encaisser les attaques physiques.              |
-| **RA (Résistance Quantotechnique)** | Valeur représentant la capacité à résister aux effets quantotechniques.                            |
-| **PA (Protection Quantotechnique)** | Valeur représentant la capacité à absorber les dégâts des attaques quantotechniques.               |
+| **Jet d'opportunité**       | Attaque gratuite déclenchée lorsqu'un ennemi quitte une zone d'engagement.                 |
+| **Initiative**              | Jet déterminant l'ordre des tours en combat.                                               |
+| **SD (Score de Défense)**   | Difficulté à toucher une cible. Détermine si une attaque réussit.                          |
+| **RMEC (Résistance Mécanique)** | Résistance aux dégâts cinétiques : impact, perforation, pression, projectiles.          |
+| **RRAD (Résistance Radiative)** | Résistance aux dégâts radiatifs : feu, froid, lumière, électricité, radiation.          |
+| **RINT (Résistance Interne)**   | Résistance aux altérations internes : drain, nécrose, corruption, effets métaboliques.  |
 | **Action Principale**       | Action majeure d'un tour : attaquer, lancer un sort, effectuer une manœuvre importante.    |
-| **Action Mineure**          | Action secondaire d’un tour : se déplacer, recharger, activer un objet.                    |
-| **Manœuvre**                | Action spéciale ou contexte (interaction, utilisation d’objet, action tactique).           |
+| **Action Mineure**          | Action secondaire d'un tour : se déplacer, recharger, activer un objet.                    |
+| **Manœuvre**                | Action spéciale ou contexte (interaction, utilisation d'objet, action tactique).           |
 
 ---
 

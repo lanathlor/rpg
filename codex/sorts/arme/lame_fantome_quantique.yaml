@@ -12,5 +12,6 @@ levels:
       flux_cost: 6
     effects:
       attack_bonus: La prochaine attaque physique est inévitable
+      resistance: RMEC
 school: quantique
 type: arme

@@ -13,6 +13,7 @@ levels:
       flux_cost: 4
     effects:
       status: La cible ne peut plus agir ni se défendre
+      resistance: RRAD
     duration: 1 tour
   - level: "2"
     name: Flash II
@@ -26,6 +27,7 @@ levels:
       flux_cost: 7
     effects:
       status: La cible ne peut plus agir ni se défendre
+      resistance: RRAD
     duration: 2 tours
 school: lumière
 type: alteration

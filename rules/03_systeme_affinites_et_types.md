@@ -174,14 +174,61 @@ Tir surchargé, Plombs à haute vélocité, Tir à la tête.
 
 ---
 
+## 🛡️ Types d'Quantotechnique et Résistances
+
+Le Type et l'École d'un sort déterminent **quelle résistance** s'applique contre lui. Ce n'est pas le fait qu'il soit "quantotechnique" qui compte, mais **la nature physique de l'effet produit**.
+
+> Pour une compréhension complète du système de résistances, consultez [Système de Résistances](07_systeme_de_resistances.md).
+
+### Correspondances générales
+
+| Type d'effet                      | Résistance applicable | Exemples                                    |
+| --------------------------------- | --------------------- | ------------------------------------------- |
+| **Projectile, impact, onde**      | RMEC                  | Projectile de roche, onde de choc           |
+| **Feu, froid, lumière, foudre**   | RRAD                  | Boule de feu, rayon de givre, éclair        |
+| **Drain, nécrose, corruption**    | RINT                  | Drain vital, nécrose, gel du sang           |
+
+### Exemples par Type
+
+**Destruction** → Principalement **RMEC** ou **RRAD** selon l'école
+- Trait de feu → RRAD
+- Projectile de force → RMEC
+- Éclair → RRAD
+
+**Annihilation** → Principalement **RMEC** (compression violente) ou **RRAD** (décharge)
+- Lance quantique → RMEC
+- Implosion lumineuse → RMEC + RRAD
+- Décharge critique → RRAD
+
+**Cataclysme** → Souvent **RMEC + RRAD** (effets à grande échelle)
+- Tempête de feu → RRAD
+- Séisme → RMEC
+- Voile glaciaire → RRAD
+
+**Altération** → Principalement **RINT** (transformation interne)
+- Gel affaiblissant → RINT
+- Drain vital → RINT
+- Distorsion de phase → RINT (ou spécial)
+
+**Amélioration** → Pas de résistance (effets bénéfiques)
+- Bénédiction, accélération, renforcement → N/A
+
+**Arme** → Dépend de l'arme infusée
+- Tir surchargé → RMEC (projectile) ou RRAD (énergie)
+- Lame enflammée → RMEC (tranchant) + RRAD (feu)
+
+---
+
 ## 💡 Philosophie du système
 
 > Le **Type** reflète la capacité mentale et physique du Quantotechnicien à transformer le mana.
 > Il définit son _style énergétique_ et sa _relation au flux quantotechnique_, pas sa puissance brute.
 > Deux Quantotechniciens de même école peuvent être radicalement différents selon leur type :
 >
-> - L’un décharge brutalement son énergie (Destruction)
-> - L’autre l’accumule lentement (Cataclysme)
+> - L'un décharge brutalement son énergie (Destruction)
+> - L'autre l'accumule lentement (Cataclysme)
 > - Un troisième la réinjecte pour renforcer (Amélioration)
+
+**Important :** Le système d'affinités détermine **quels sorts vous pouvez apprendre**. Les résistances déterminent **combien de dégâts vous encaissez**. Ces deux systèmes sont indépendants mais complémentaires.
 
 ---

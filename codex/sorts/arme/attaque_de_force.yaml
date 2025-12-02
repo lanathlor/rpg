@@ -11,6 +11,7 @@ levels:
     recharge_time: "30 sec"
     effects:
       damage_bonus: +1d8 a la prochaine attaque physique
+      resistance: RMEC
   - level: "2"
     name: Attaque de force II
     prerequisites:
@@ -21,5 +22,6 @@ levels:
     recharge_time: "30 sec"
     effects:
       damage_bonus: +1d8 + 4 a la prochaine attaque physique
+      resistance: RMEC
 school: martial
 type: arme

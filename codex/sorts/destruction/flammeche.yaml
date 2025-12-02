@@ -13,6 +13,7 @@ levels:
       flux_cost: 3
     effects:
       damage: 1d4+1 feu
+      resistance: RRAD
       burning_chance: 25% de chance d'enflammer (1d4 par tour, 2 tours)
 school: feu
 type: destruction

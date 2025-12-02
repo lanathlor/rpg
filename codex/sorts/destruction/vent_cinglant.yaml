@@ -17,5 +17,6 @@ levels:
       flux_cost: 10
     effects:
       damage: "1d12+1d8 givre"
+      resistance: RRAD
       special: "Inflige 2x 'Gelure' aux personnes touchées"
       area: "Zone linéaire de 25 mètres"

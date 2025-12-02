@@ -13,6 +13,7 @@ levels:
       flux_cost: 4
     effects:
       damage: 1d6
+      resistance: RINT
       special: "Le lanceur regagne la moitié des dégâts en PV"
       specials:
         - "La cible subit -1 à tous ses jets pendant 2 tours"
@@ -28,6 +29,7 @@ levels:
       flux_cost: 7
     effects:
       damage: 2d6
+      resistance: RINT
       special: "Le lanceur regagne tous les dégâts en PV"
       specials:
         - "La cible subit -2 à tous ses jets pendant 3 tours"

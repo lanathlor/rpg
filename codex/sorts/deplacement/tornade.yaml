@@ -28,6 +28,7 @@ levels:
       intelligence_required: 17
       flux_cost: 7
     effects:
+      resistance: RMEC
       specials:
         - "Repousse et inflige 1d6 dégâts à tous les ennemis dans un rayon de 6m"
         - "Dévie automatiquement tous les projectiles pendant 4 tours"

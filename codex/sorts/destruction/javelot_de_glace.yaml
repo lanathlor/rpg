@@ -17,4 +17,5 @@ levels:
       flux_cost: 8
     effects:
       damage: "2d12+4 givre"
+      resistance: RMEC
       special: "Inflige 'Gelure' à la cible"

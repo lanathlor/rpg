@@ -2,7 +2,7 @@ import { Badge } from '@/components/ui/badge'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Separator } from '@/components/ui/separator'
 import type { Armor } from '@/types'
-import { Shield, Shirt, HardHat, Users, Zap, Cog, Brain, Bot, Cpu, FlaskConical, Target, Gauge } from 'lucide-react'
+import { Shield, Shirt, HardHat, Users, Brain, Bot, Cpu, FlaskConical, Target, Gauge } from 'lucide-react'
 
 interface ArmorDetailProps {
   armor: Armor
@@ -203,10 +203,36 @@ export function ArmorDetail({ armor }: ArmorDetailProps) {
             <CardTitle className="text-lg">Statistiques</CardTitle>
           </CardHeader>
           <CardContent className="space-y-3">
-            {/* Protection bonus - main armor value */}
-            {armor.stats.protection_bonus && (
+            {/* New Resistance System */}
+            {(armor.stats.RMEC || armor.stats.RRAD || armor.stats.RINT) && (
               <div>
-                <span className="font-medium text-sm text-blue-600 dark:text-blue-400">Bonus de protection:</span>
+                <span className="font-medium text-sm mb-2 block">Résistances:</span>
+                <div className="flex flex-wrap gap-2">
+                  {armor.stats.RMEC && (
+                    <Badge variant="outline" className="bg-stone-50 dark:bg-stone-900">
+                      <span className="font-semibold">RMEC</span>
+                      <span className="ml-1">{armor.stats.RMEC}</span>
+                    </Badge>
+                  )}
+                  {armor.stats.RRAD && (
+                    <Badge variant="outline" className="bg-orange-50 dark:bg-orange-950">
+                      <span className="font-semibold">RRAD</span>
+                      <span className="ml-1">{armor.stats.RRAD}</span>
+                    </Badge>
+                  )}
+                  {armor.stats.RINT && (
+                    <Badge variant="outline" className="bg-purple-50 dark:bg-purple-950">
+                      <span className="font-semibold">RINT</span>
+                      <span className="ml-1">{armor.stats.RINT}</span>
+                    </Badge>
+                  )}
+                </div>
+              </div>
+            )}
+            {/* Legacy Protection bonus - kept for compatibility */}
+            {armor.stats.protection_bonus && !armor.stats.RMEC && !armor.stats.RRAD && !armor.stats.RINT && (
+              <div>
+                <span className="font-medium text-sm text-blue-600 dark:text-blue-400">Bonus de protection (ancien):</span>
                 <div className="text-sm text-muted-foreground mt-1">
                   {armor.stats.protection_bonus}
                 </div>

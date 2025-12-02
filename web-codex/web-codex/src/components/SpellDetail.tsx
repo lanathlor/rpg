@@ -111,6 +111,11 @@ function SpellLevelDetail({ level }: { level: SpellLevel }) {
                 <span className="font-medium text-red-600 dark:text-red-400">Dégâts de zone:</span> {level.effects.area_damage}
               </div>
             )}
+            {level.effects?.resistance && (
+              <div>
+                <span className="font-medium text-amber-600 dark:text-amber-400">Résistance:</span> <Badge variant="outline" className="ml-1">{level.effects.resistance}</Badge>
+              </div>
+            )}
             {level.effects?.damage_bonus && (
               <div>
                 <span className="font-medium text-red-600 dark:text-red-400">Bonus dégâts:</span> {level.effects.damage_bonus}

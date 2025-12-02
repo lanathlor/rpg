@@ -5,6 +5,7 @@ cost: "2500 crédits"
 prerequisites:
   stat: "FOR 12"
 stats:
-  protection_bonus: "+2 score de protection physique"
+  RMEC: "+3"
+  RRAD: "+1"
   stat_modifier: "-1 DEX"
-description: "Cette armure mécanique de pointe combine plaques balistiques renforcées et servomoteurs assistés pour transformer son porteur en forteresse ambulante. Les systèmes hydrauliques intégrés compensent partiellement le poids considérable de l'équipement, mais au prix d'une maniabilité réduite. Conçu pour les assauts frontaux et les positions défensives, cet exosquelette incarne la philosophie militaire impériale : la puissance avant la subtilité."
+description: "Cette armure mécanique de pointe combine plaques balistiques renforcées et servomoteurs assistés pour transformer son porteur en forteresse ambulante. Offre une excellente protection mécanique (RMEC) et une protection limitée radiative (RRAD). Les systèmes hydrauliques intégrés compensent partiellement le poids considérable de l'équipement, mais au prix d'une maniabilité réduite. Conçu pour les assauts frontaux et les positions défensives, cet exosquelette incarne la philosophie militaire impériale : la puissance avant la subtilité."

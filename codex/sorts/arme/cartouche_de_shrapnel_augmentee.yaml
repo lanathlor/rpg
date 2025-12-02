@@ -11,6 +11,7 @@ levels:
     recharge_time: "20 sec"
     effects:
       damage: 1d6+2 dans un rayon de 2m autour de l'impact
+      resistance: RMEC
       area_effect: true
 school: balistique
 type: arme
