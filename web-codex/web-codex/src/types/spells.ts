@@ -51,11 +51,11 @@ export interface SpellLevel {
 }
 
 export interface Spell extends BaseItem {
-  spell_series: string
-  school: string
-  type: string
-  description_base: string
-  levels: SpellLevel[]
+  spell_series?: string
+  school?: string
+  type?: string
+  description_base?: string
+  levels?: SpellLevel[]
 }
 
 export type SpellSchool =

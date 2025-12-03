@@ -124,8 +124,15 @@ export class YamlLoader {
           const content = await this.loadYamlFile(`/codex/${category}/${file}`)
           if (content) {
             // Add the name field to spells if using spell_series
-            if (category === 'sorts' && (content as any).spell_series && !(content as any).name) {
-              (content as any).name = (content as any).spell_series
+            if (category === 'sorts') {
+              if ((content as any).spell_series && !(content as any).name) {
+                (content as any).name = (content as any).spell_series
+              }
+              // Validate spell has minimum required fields
+              if (!(content as any).name && !(content as any).spell_series) {
+                console.warn(`Spell ${file} missing both name and spell_series, skipping`)
+                return null
+              }
             }
             return content as CodexItem
           }
@@ -248,7 +255,7 @@ export class YamlLoader {
     const lowerQuery = query.toLowerCase()
     return allItems.filter((item) => {
       return (
-        item.name.toLowerCase().includes(lowerQuery) ||
+        (item.name && item.name.toLowerCase().includes(lowerQuery)) ||
         (item.description && item.description.toLowerCase().includes(lowerQuery))
       )
     })

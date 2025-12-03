@@ -3,6 +3,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Separator } from '@/components/ui/separator'
 import type { Spell, SpellLevel } from '@/types'
 import { getSchoolIcon, getSchoolColor, getTypeIcon, getTypeColor } from '@/lib/schoolUtils'
+import { rateSpell } from '@/lib/spellRatingCalculator'
+import { Zap, Target, TrendingUp } from 'lucide-react'
 
 interface SpellDetailProps {
   spell: Spell
@@ -10,6 +12,8 @@ interface SpellDetailProps {
 
 
 function SpellLevelDetail({ level }: { level: SpellLevel }) {
+  const rating = rateSpell(level)
+
   return (
     <Card className="mb-4">
       <CardHeader>
@@ -26,6 +30,55 @@ function SpellLevelDetail({ level }: { level: SpellLevel }) {
         )}
       </CardHeader>
       <CardContent className="space-y-4">
+        {/* Spell Rating */}
+        <div className="bg-gradient-to-r from-purple-50 to-blue-50 dark:from-purple-950/20 dark:to-blue-950/20 rounded-lg p-4 border border-purple-200 dark:border-purple-800">
+          <div className="flex items-center justify-between mb-3">
+            <h4 className="font-semibold text-sm flex items-center gap-2">
+              <TrendingUp className="h-4 w-4" />
+              Évaluation du sort
+            </h4>
+            <Badge className={rating.tier.colorClass.replace('text-', 'bg-').replace('dark:text-', 'dark:bg-') + ' text-white'}>
+              {rating.tier.name}
+            </Badge>
+          </div>
+
+          <div className="grid grid-cols-3 gap-4 mb-2">
+            <div className="text-center">
+              <div className="flex items-center justify-center gap-1 mb-1">
+                <Zap className="h-4 w-4 text-amber-600 dark:text-amber-400" />
+                <span className="text-xs font-medium text-muted-foreground">Puissance</span>
+              </div>
+              <div className="text-2xl font-bold text-amber-600 dark:text-amber-400">
+                {rating.powerScore.toFixed(1)}
+              </div>
+            </div>
+
+            <div className="text-center">
+              <div className="flex items-center justify-center gap-1 mb-1">
+                <Target className="h-4 w-4 text-blue-600 dark:text-blue-400" />
+                <span className="text-xs font-medium text-muted-foreground">Accessibilité</span>
+              </div>
+              <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">
+                {rating.accessibilityScore.toFixed(1)}
+              </div>
+            </div>
+
+            <div className="text-center">
+              <div className="flex items-center justify-center gap-1 mb-1">
+                <TrendingUp className="h-4 w-4 text-green-600 dark:text-green-400" />
+                <span className="text-xs font-medium text-muted-foreground">Valeur</span>
+              </div>
+              <div className="text-2xl font-bold text-green-600 dark:text-green-400">
+                {rating.valueRating.toFixed(1)}
+              </div>
+            </div>
+          </div>
+
+          <div className="text-xs text-muted-foreground text-center pt-2 border-t">
+            {rating.tier.description} • Affinités min: {rating.bestAffinityPath.toFixed(1)}
+          </div>
+        </div>
+
         {/* Prerequisites */}
         <div>
           <h4 className="font-semibold text-sm mb-2">Prérequis</h4>

@@ -1,5 +1,5 @@
 export interface BaseItem {
-  name: string
+  name?: string
   description?: string
   category?: string
   subcategory?: string

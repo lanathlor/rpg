@@ -11,8 +11,9 @@ import {
   DialogTitle,
 } from '@/components/ui/dialog'
 import { SpellDetail } from '@/components/SpellDetail'
-import { Search, Filter } from 'lucide-react'
+import { Search, Filter, Zap, Target, TrendingUp } from 'lucide-react'
 import { getSchoolIcon, getSchoolColor, getTypeIcon, getTypeColor } from '@/lib/schoolUtils'
+import { rateSpell } from '@/lib/spellRatingCalculator'
 import type { Spell } from '@/types'
 
 
@@ -24,14 +25,14 @@ export function SpellsPage() {
   const [selectedType, setSelectedType] = useState<string>('')
 
   // Get unique schools and types for filters
-  const schools = [...new Set(spells.map(spell => spell.school))].sort()
-  const types = [...new Set(spells.map(spell => spell.type))].sort()
+  const schools = [...new Set(spells.map(spell => spell.school).filter(Boolean))].sort()
+  const types = [...new Set(spells.map(spell => spell.type).filter(Boolean))].sort()
 
   // Filter spells
   const filteredSpells = spells.filter((spell) => {
     const matchesSearch =
-      spell.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      spell.description_base.toLowerCase().includes(searchQuery.toLowerCase())
+      spell.name?.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      spell.description_base?.toLowerCase().includes(searchQuery.toLowerCase())
     const matchesSchool = !selectedSchool || spell.school === selectedSchool
     const matchesType = !selectedType || spell.type === selectedType
 
@@ -126,34 +127,63 @@ export function SpellsPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredSpells.map((spell, index) => (
           <Card
-            key={`${spell.name}-${spell.school}-${index}`}
+            key={`${spell.name || 'unknown'}-${spell.school || 'unknown'}-${index}`}
             className="hover:shadow-lg transition-shadow cursor-pointer"
             onClick={() => openSpellDetail(spell)}
           >
             <CardHeader>
               <div className="flex justify-between items-start">
-                <CardTitle className="text-lg">{spell.name}</CardTitle>
+                <CardTitle className="text-lg">{spell.name || 'Sort sans nom'}</CardTitle>
                 <div className="flex gap-2">
-                  <Badge className={getSchoolColor(spell.school)}>
-                    {getSchoolIcon(spell.school)}
-                    <span className="ml-1">{spell.school}</span>
-                  </Badge>
-                  <Badge className={getTypeColor(spell.type)}>
-                    {getTypeIcon(spell.type)}
-                    <span className="ml-1">{spell.type}</span>
-                  </Badge>
+                  {spell.school && (
+                    <Badge className={getSchoolColor(spell.school)}>
+                      {getSchoolIcon(spell.school)}
+                      <span className="ml-1">{spell.school}</span>
+                    </Badge>
+                  )}
+                  {spell.type && (
+                    <Badge className={getTypeColor(spell.type)}>
+                      {getTypeIcon(spell.type)}
+                      <span className="ml-1">{spell.type}</span>
+                    </Badge>
+                  )}
                 </div>
               </div>
               <CardDescription>
-                {spell.description_base.slice(0, 120)}...
+                {spell.description_base ? `${spell.description_base.slice(0, 120)}...` : 'Pas de description'}
               </CardDescription>
             </CardHeader>
             <CardContent>
               <div className="space-y-2">
                 <div className="text-sm">
-                  <strong>Niveaux disponibles:</strong> {spell.levels.length}
+                  <strong>Niveaux disponibles:</strong> {spell.levels?.length || 0}
                 </div>
-                {spell.levels[0] && (
+                {spell.levels && spell.levels[0] && (() => {
+                  const rating = rateSpell(spell.levels[0])
+                  return (
+                    <>
+                      {/* Rating Badges */}
+                      <div className="flex gap-2 py-2 flex-wrap">
+                        <Badge variant="outline" className="text-xs bg-amber-50 dark:bg-amber-950/20 border-amber-200 dark:border-amber-800">
+                          <Zap className="h-3 w-3 mr-1 text-amber-600 dark:text-amber-400" />
+                          <span className="font-semibold text-amber-600 dark:text-amber-400">{rating.powerScore.toFixed(0)}</span>
+                        </Badge>
+                        <Badge variant="outline" className="text-xs bg-blue-50 dark:bg-blue-950/20 border-blue-200 dark:border-blue-800">
+                          <Target className="h-3 w-3 mr-1 text-blue-600 dark:text-blue-400" />
+                          <span className="font-semibold text-blue-600 dark:text-blue-400">{rating.accessibilityScore.toFixed(0)}</span>
+                        </Badge>
+                        <Badge variant="outline" className="text-xs bg-green-50 dark:bg-green-950/20 border-green-200 dark:border-green-800">
+                          <TrendingUp className="h-3 w-3 mr-1 text-green-600 dark:text-green-400" />
+                          <span className="font-semibold text-green-600 dark:text-green-400">{rating.valueRating.toFixed(1)}</span>
+                        </Badge>
+                        <Badge className={rating.tier.colorClass.replace('text-', 'bg-').replace('dark:text-', 'dark:bg-') + ' text-white text-xs'}>
+                          {rating.tier.name}
+                        </Badge>
+                      </div>
+                    </>
+                  )
+                })()}
+                {spell.levels && spell.levels[0] && (
                   <div className="text-sm space-y-1">
                     {/* Show flux cost if available, otherwise show recharge time */}
                     {spell.levels[0].conditions?.flux_cost ? (
