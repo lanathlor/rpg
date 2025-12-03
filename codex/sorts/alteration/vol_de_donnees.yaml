@@ -6,8 +6,8 @@ levels:
     prerequisites:
       affinities:
         école_requirement: "A.École[illusion]: 2"
-        type_requirement: "A.Type[altération]: 2"
-        mixed_requirement: "A.École[illusion] + A.Type[altération]: 3"
+        type_requirement: "A.Type[alteration]: 2"
+        mixed_requirement: "A.École[illusion] + A.Type[alteration]: 6"
       competences:
         - Hackeur
     conditions:
@@ -22,8 +22,8 @@ levels:
     prerequisites:
       affinities:
         école_requirement: "A.École[illusion]: 3"
-        type_requirement: "A.Type[altération]: 3"
-        mixed_requirement: "A.École[illusion] + A.Type[altération]: 5"
+        type_requirement: "A.Type[alteration]: 3"
+        mixed_requirement: "A.École[illusion] + A.Type[alteration]: 9"
       competences:
         - Hackeur
     conditions:

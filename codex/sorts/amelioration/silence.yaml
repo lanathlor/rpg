@@ -9,6 +9,8 @@ levels:
     prerequisites:
       affinities:
         école_requirement: "A.École[martial]: 2"
+        type_requirement: "A.Type[amelioration]: 2"
+        mixed_requirement: "A.École[martial] + A.Type[amelioration]: 6"
     conditions:
       flux_cost: 4
     effects:

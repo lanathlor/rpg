@@ -20,7 +20,7 @@ affinities:
   distance: 2
   melee: 0
   schools:
-    bioarcanotechnique: 4
+    bioarcanotechnique: 2
     martial: 2
   types:
     amelioration: 3

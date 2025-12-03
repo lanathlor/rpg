@@ -5,7 +5,9 @@ levels:
     name: Charge
     prerequisites:
       affinities:
-        école_requirement: "A.École[martial]: 4"
+        école_requirement: "A.École[martial]: 2"
+        type_requirement: "A.Type[amelioration]: 2"
+        mixed_requirement: "A.École[martial] + A.Type[amelioration]: 6"
     conditions:
       target_range: cible à porter (1d8 + vitesse)
     recharge_time: "instantané"

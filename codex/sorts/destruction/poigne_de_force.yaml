@@ -7,7 +7,7 @@ levels:
       affinities:
         école_requirement: "A.École[kinesthésique]: 2"
         type_requirement: "A.Type[destruction]: 2"
-        mixed_requirement: "A.École[kinesthésique] + A.Type[destruction]: 3"
+        mixed_requirement: "A.École[kinesthésique] + A.Type[destruction]: 6"
     conditions:
       intelligence_required: 16
       flux_cost: 4
@@ -24,7 +24,7 @@ levels:
       affinities:
         école_requirement: "A.École[kinesthésique]: 3"
         type_requirement: "A.Type[destruction]: 3"
-        mixed_requirement: "A.École[kinesthésique] + A.Type[destruction]: 5"
+        mixed_requirement: "A.École[kinesthésique] + A.Type[destruction]: 9"
     conditions:
       intelligence_required: 18
       flux_cost: 7

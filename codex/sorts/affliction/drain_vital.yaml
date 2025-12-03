@@ -7,7 +7,7 @@ levels:
       affinities:
         école_requirement: "A.École[biométabolique]: 2"
         type_requirement: "A.Type[affliction]: 2"
-        mixed_requirement: "A.École[biométabolique] + A.Type[affliction]: 3"
+        mixed_requirement: "A.École[biométabolique] + A.Type[affliction]: 6"
     conditions:
       intelligence_required: 16
       flux_cost: 4
@@ -21,9 +21,9 @@ levels:
     name: Drain vital majeur
     prerequisites:
       affinities:
-        école_requirement: "A.École[biométabolique]: 4"
+        école_requirement: "A.École[biométabolique]: 3"
         type_requirement: "A.Type[affliction]: 3"
-        mixed_requirement: "A.École[biométabolique] + A.Type[affliction]: 6"
+        mixed_requirement: "A.École[biométabolique] + A.Type[affliction]: 9"
     conditions:
       intelligence_required: 18
       flux_cost: 7

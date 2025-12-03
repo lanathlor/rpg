@@ -6,6 +6,8 @@ levels:
     prerequisites:
       affinities:
         école_requirement: "A.École[balistique]: 2"
+        type_requirement: "A.Type[arme]: 2"
+        mixed_requirement: "A.École[balistique] + A.Type[arme]: 6"
       equipment:
         - Fusil à pompe
     conditions:

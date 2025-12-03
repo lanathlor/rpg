@@ -6,8 +6,8 @@ levels:
     prerequisites:
       affinities:
         école_requirement: "A.École[martial]: 2"
-        type_requirement: "A.Type[arme]: 3"
-        mixed_requirement: "A.École[martial] + A.Type[arme]: 4"
+        type_requirement: "A.Type[arme]: 2"
+        mixed_requirement: "A.École[martial] + A.Type[arme]: 6"
     conditions:
       special: aucune
     recharge_time: "30 sec"

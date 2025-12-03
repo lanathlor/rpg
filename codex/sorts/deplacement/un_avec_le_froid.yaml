@@ -9,9 +9,9 @@ levels:
     name: "Un avec le froid"
     prerequisites:
       affinities:
-        école_requirement: "A.École[givre]: 4"
-        type_requirement: "A.Type[déplacement]: 3"
-        mixed_requirement: "A.École[givre] + A.Type[déplacement]: 6"
+        école_requirement: "A.École[givre]: 3"
+        type_requirement: "A.Type[deplacement]: 3"
+        mixed_requirement: "A.École[givre] + A.Type[deplacement]: 9"
     conditions:
       intelligence_required: 14
       flux_cost: 5

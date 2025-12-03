@@ -5,7 +5,9 @@ levels:
     name: Attaque multiple
     prerequisites:
       affinities:
-        école_requirement: "A.École[martial]: 6"
+        école_requirement: "A.École[martial]: 3"
+        type_requirement: "A.Type[arme]: 3"
+        mixed_requirement: "A.École[martial] + A.Type[arme]: 9"
     conditions:
       dexterity_required: 16
     recharge_time: "60 sec"
@@ -16,7 +18,9 @@ levels:
     name: Attaque multiple II
     prerequisites:
       affinities:
-        école_requirement: "A.École[martial]: 8"
+        école_requirement: "A.École[martial]: 4"
+        type_requirement: "A.Type[arme]: 4"
+        mixed_requirement: "A.École[martial] + A.Type[arme]: 12"
     conditions:
       dexterity_required: 16
     recharge_time: "40 sec"

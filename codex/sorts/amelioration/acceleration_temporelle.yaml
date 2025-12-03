@@ -5,9 +5,9 @@ levels:
     name: Accélération temporelle
     prerequisites:
       affinities:
-        école_requirement: "A.École[chronodynamique]: 3"
+        école_requirement: "A.École[chronodynamique]: 2"
         type_requirement: "A.Type[amelioration]: 2"
-        mixed_requirement: "A.École[chronodynamique] + A.Type[amelioration]: 4"
+        mixed_requirement: "A.École[chronodynamique] + A.Type[amelioration]: 6"
     conditions:
       intelligence_required: 18
       flux_cost: 6
@@ -21,9 +21,9 @@ levels:
     name: Accélération temporelle majeure
     prerequisites:
       affinities:
-        école_requirement: "A.École[chronodynamique]: 4"
+        école_requirement: "A.École[chronodynamique]: 3"
         type_requirement: "A.Type[amelioration]: 3"
-        mixed_requirement: "A.École[chronodynamique] + A.Type[amelioration]: 6"
+        mixed_requirement: "A.École[chronodynamique] + A.Type[amelioration]: 9"
     conditions:
       intelligence_required: 20
       flux_cost: 10

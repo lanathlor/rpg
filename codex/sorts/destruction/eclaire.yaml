@@ -5,9 +5,9 @@ levels:
     name: Éclaire
     prerequisites:
       affinities:
-        école_requirement: "A.École[électricité]: 3"
-        type_requirement: "A.Type[destruction]: 3"
-        mixed_requirement: "A.École[électricité] + A.Type[destruction]: 4"
+        école_requirement: "A.École[électricité]: 2"
+        type_requirement: "A.Type[destruction]: 2"
+        mixed_requirement: "A.École[électricité] + A.Type[destruction]: 6"
     conditions:
       special: aucune
       flux_cost: 6

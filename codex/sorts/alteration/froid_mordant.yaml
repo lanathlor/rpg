@@ -9,9 +9,9 @@ levels:
     name: "Froid mordant"
     prerequisites:
       affinities:
-        école_requirement: "A.École[givre]: 4"
-        type_requirement: "A.Type[altération]: 3"
-        mixed_requirement: "A.École[givre] + A.Type[altération]: 6"
+        école_requirement: "A.École[givre]: 3"
+        type_requirement: "A.Type[alteration]: 3"
+        mixed_requirement: "A.École[givre] + A.Type[alteration]: 9"
     conditions:
       intelligence_required: 16
       flux_cost: 6

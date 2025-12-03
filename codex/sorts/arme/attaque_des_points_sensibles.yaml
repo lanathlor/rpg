@@ -5,7 +5,9 @@ levels:
     name: Attaque des points sensibles
     prerequisites:
       affinities:
-        école_requirement: "A.École[martial]: 6"
+        école_requirement: "A.École[martial]: 3"
+        type_requirement: "A.Type[arme]: 3"
+        mixed_requirement: "A.École[martial] + A.Type[arme]: 9"
     conditions:
       dexterity_required: 14
     recharge_time: "30 sec"
@@ -18,6 +20,8 @@ levels:
     prerequisites:
       affinities:
         école_requirement: "A.École[martial]: 4"
+        type_requirement: "A.Type[arme]: 4"
+        mixed_requirement: "A.École[martial] + A.Type[arme]: 12"
     conditions:
       perception_required: 18
     recharge_time: "120 sec"

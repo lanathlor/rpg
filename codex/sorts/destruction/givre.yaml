@@ -9,9 +9,9 @@ levels:
     name: "Givre"
     prerequisites:
       affinities:
-        école_requirement: "A.École[givre]: 3"
-        type_requirement: "A.Type[destruction]: 3"
-        mixed_requirement: "A.École[givre] + A.Type[destruction]: 5"
+        école_requirement: "A.École[givre]: 2"
+        type_requirement: "A.Type[destruction]: 2"
+        mixed_requirement: "A.École[givre] + A.Type[destruction]: 6"
     conditions:
       intelligence_required: 16
       flux_cost: 4

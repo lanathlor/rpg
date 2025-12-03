@@ -5,9 +5,9 @@ levels:
     name: Bouclier de lumière solide
     prerequisites:
       affinities:
-        école_requirement: "A.École[lumière]: 4"
-        type_requirement: "A.Type[amélioration]: 4"
-        mixed_requirement: "A.École[lumière] + A.Type[amélioration]: 6"
+        école_requirement: "A.École[lumière]: 3"
+        type_requirement: "A.Type[protection]: 3"
+        mixed_requirement: "A.École[lumière] + A.Type[protection]: 9"
     conditions:
       special: aucune
       flux_cost: 8

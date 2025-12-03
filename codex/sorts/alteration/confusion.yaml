@@ -5,9 +5,9 @@ levels:
     name: Confusion
     prerequisites:
       affinities:
-        école_requirement: "A.École[bioarcanotechnique]: 3"
-        type_requirement: "A.Type[altération]: 3"
-        mixed_requirement: "A.École[bioarcanotechnique] + A.Type[altération]: 5"
+        école_requirement: "A.École[bioarcanotechnique]: 2"
+        type_requirement: "A.Type[alteration]: 2"
+        mixed_requirement: "A.École[bioarcanotechnique] + A.Type[alteration]: 6"
     conditions:
       charisma_required: 16
       flux_cost: 6
@@ -19,9 +19,9 @@ levels:
     name: Confusion II
     prerequisites:
       affinities:
-        école_requirement: "A.École[bioarcanotechnique]: 4"
-        type_requirement: "A.Type[altération]: 4"
-        mixed_requirement: "A.École[bioarcanotechnique] + A.Type[altération]: 6"
+        école_requirement: "A.École[bioarcanotechnique]: 3"
+        type_requirement: "A.Type[alteration]: 3"
+        mixed_requirement: "A.École[bioarcanotechnique] + A.Type[alteration]: 9"
     conditions:
       charisma_required: 16
       flux_cost: 8

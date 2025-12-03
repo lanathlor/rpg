@@ -7,11 +7,11 @@ levels:
       affinities:
         école_requirement: "A.École[électricité]: 2"
         type_requirement: "A.Type[arme]: 2"
-        mixed_requirement: "A.École[électricité] + A.Type[arme]: 3"
+        mixed_requirement: "A.École[électricité] + A.Type[arme]: 6"
     conditions:
       flux_cost: 4
     effects:
-      damage_bonus: Votre prochaine attaque physique inflige 9 dégâts supplémentaire
+      damage_bonus: Votre prochaine attaque physique inflige 6 dégâts supplémentaire
       resistance: RMEC + RRAD
       special: Dégâts d'électricité additionnels
 school: électricité

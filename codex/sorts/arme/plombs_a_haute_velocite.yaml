@@ -5,7 +5,9 @@ levels:
     name: Plombs à haute vélocité
     prerequisites:
       affinities:
-        école_requirement: "A.École[balistique]: 4"
+        école_requirement: "A.École[balistique]: 3"
+        type_requirement: "A.Type[arme]: 3"
+        mixed_requirement: "A.École[balistique] + A.Type[arme]: 9"
     conditions:
       special: aucune
     recharge_time: "20 sec"

@@ -21,7 +21,7 @@ Chaque personnage possède des valeurs d’affinité :
 
 Les affinités vont de **0 à 5**.
 
-### 🔑 Règle d’accès à un sort
+### 🔑 Règle d'accès à un sort
 
 Un sort est utilisable si le personnage remplit **au moins une** des conditions suivantes :
 
@@ -29,26 +29,88 @@ Un sort est utilisable si le personnage remplit **au moins une** des conditions 
 - `A.Type ≥ ReqType`
 - `A.École + A.Type ≥ ReqMixte`
 
-Cela signifie qu’un Arcanotechnicien peut accéder à un sort :
+Cela signifie qu'un Arcanotechnicien peut accéder à un sort :
 
 - en se spécialisant dans une **école** (ex : Givre pur),
 - en se spécialisant dans un **type** (ex : Destruction pur),
 - ou en répartissant ses affinités sur les deux (ex : un peu Givre + un peu Destruction).
 
+### 💰 Pénalité de spécialisation (50%)
+
+**Les spécialistes paient un coût en affinité supplémentaire.**
+
+Le système encourage l'équilibre entre École et Type, mais permet la spécialisation pure moyennant un investissement plus important. La formule appliquée est :
+
+```
+ReqMixte = (ReqÉcole + ReqType) × 1.5
+```
+
+**Pourquoi cette pénalité ?**
+
+Un personnage équilibré développe ses affinités de manière naturelle et complémentaire. Un spécialiste pur doit "forcer" l'accès au sort en compensant l'absence de maîtrise de l'autre axe, ce qui demande plus d'effort et d'investissement.
+
+**Exemple concret :**
+
+Un sort nécessitant `École 4, Type 4` a un `ReqMixte = 12` (4+4 × 1.5)
+
+- **Build équilibré** : École 4 + Type 4 = **8 points investis** → Accès ✅
+- **Build spécialisé** : École 12 + Type 0 = **12 points investis** → Accès ✅ (mais 4 points de plus)
+
+La spécialisation pure est viable mais moins efficiente.
+
+### 📊 Progression standard des sorts
+
+| Niveau de Sort | ReqÉcole | ReqType | ReqMixte | Points (équilibré) | Points (spécialisé) |
+|----------------|----------|---------|----------|-------------------|---------------------|
+| Niveau 1       | 2        | 2       | 6        | 4                 | 6 (+50%)           |
+| Niveau 2       | 3        | 3       | 9        | 6                 | 9 (+50%)           |
+| Niveau 3       | 4        | 4       | 12       | 8                 | 12 (+50%)          |
+| Niveau 4       | 5        | 5       | 15       | 10                | 15 (+50%)          |
+| Niveau 5       | 6        | 6       | 18       | 12                | 18 (+50%)          |
+
+**Note importante :** Ces valeurs sont des **lignes directrices**, pas des règles absolues.
+
+### 🎯 Sorts signature vs sorts de niche
+
+**Le niveau d'un sort ne détermine PAS ses exigences d'affinité.**
+
+Le "niveau" (1-5) représente la **progression au sein d'une série de sorts** (Boule de feu 1 → 5), pas son accessibilité. Les exigences dépendent du **rôle du sort dans l'archétype** :
+
+**Sorts signature** (bas coût d'entrée) :
+- Définissent l'identité de l'archétype
+- Accessibles tôt pour que la classe fonctionne
+- Exemple : *Boule de feu niveau 1* pour un pyromancien → école 2, type 2
+
+**Sorts de niche** (haut coût d'entrée) :
+- Techniques avancées ou spécialisées
+- Réservés aux maîtres de l'école
+- Exemple : *Tir surchargé niveau 2* pour un sniper → école 5, type 5
+
+Un sort **niveau 1** peut avoir des exigences **école 8** s'il représente une technique de maître.
+Un sort **niveau 5** peut avoir des exigences **école 3** s'il est une amélioration naturelle d'un sort signature.
+
+**Principe de design :**
+- Sorts **signature** : Permettent à l'archétype de fonctionner → exigences basses
+- Sorts **polyvalents** : Utilisables par plusieurs archétypes → exigences moyennes
+- Sorts **de niche** : Techniques avancées ou spécialisées → exigences élevées
+
 ### 🧊 Exemple
 
-**Sort : Lance de Givre**
+**Sort : Lance de Givre (Niveau 2)**
 
 - École : Givre
 - Type : Destruction
-- Conditions : `Givre ≥ 3` ou `Destruction ≥ 3` ou `(Givre + Destruction) ≥ 4`
+- Conditions : `Givre ≥ 3` ou `Destruction ≥ 3` ou `(Givre + Destruction) ≥ 9`
 
-| Build            | Givre | Destruction | Accès ? | Commentaire                   |
-| ---------------- | ----- | ----------- | ------- | ----------------------------- |
-| Cryomancien pur  | 4     | 0           | ✅      | Spécialiste d’école           |
-| Arcanotechnicien destructeur | 0     | 4           | ✅      | Spécialiste de type           |
-| Généraliste      | 2     | 2           | ✅      | Mixte équilibré               |
-| Débutant         | 1     | 1           | ❌      | Pas assez d’affinité combinée |
+| Build                        | Givre | Destruction | Total | Accès ? | Coût en points |
+| ---------------------------- | ----- | ----------- | ----- | ------- | -------------- |
+| Cryomancien pur              | 9     | 0           | 9     | ✅      | 9 (spécialisé) |
+| Destructeur pur              | 0     | 9           | 9     | ✅      | 9 (spécialisé) |
+| Généraliste équilibré        | 3     | 3           | 6     | ✅      | 6 (équilibré)  |
+| Hybride léger                | 4     | 2           | 6     | ✅      | 6              |
+| Débutant                     | 2     | 2           | 4     | ❌      | N/A            |
+
+Le généraliste accède au sort avec **3 points de moins** que le spécialiste pur.
 
 ---
 

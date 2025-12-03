@@ -9,6 +9,8 @@ levels:
     prerequisites:
       affinities:
         école_requirement: "A.École[bioarcanotechnique]: 2"
+        type_requirement: "A.Type[amelioration]: 2"
+        mixed_requirement: "A.École[bioarcanotechnique] + A.Type[amelioration]: 6"
       special: "Connaissance de la cible"
     conditions:
       flux_cost: 8

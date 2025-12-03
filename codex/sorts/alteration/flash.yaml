@@ -6,8 +6,8 @@ levels:
     prerequisites:
       affinities:
         école_requirement: "A.École[lumière]: 2"
-        type_requirement: "A.Type[altération]: 2"
-        mixed_requirement: "A.École[lumière] + A.Type[altération]: 3"
+        type_requirement: "A.Type[alteration]: 2"
+        mixed_requirement: "A.École[lumière] + A.Type[alteration]: 6"
     conditions:
       intelligence_required: 14
       flux_cost: 4
@@ -20,8 +20,8 @@ levels:
     prerequisites:
       affinities:
         école_requirement: "A.École[lumière]: 3"
-        type_requirement: "A.Type[altération]: 3"
-        mixed_requirement: "A.École[lumière] + A.Type[altération]: 5"
+        type_requirement: "A.Type[alteration]: 3"
+        mixed_requirement: "A.École[lumière] + A.Type[alteration]: 9"
     conditions:
       intelligence_required: 14
       flux_cost: 7

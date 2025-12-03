@@ -7,10 +7,10 @@ levels:
       affinities:
         école_requirement: "A.École[ombre]: 2"
         type_requirement: "A.Type[alteration]: 2"
-        mixed_requirement: "A.École[ombre] + A.Type[alteration]: 3"
+        mixed_requirement: "A.École[ombre] + A.Type[alteration]: 6"
     conditions:
       intelligence_required: 15
-      flux_cost: 3
+      flux_cost: 5
     effects:
       specials:
         - "-2 aux jets d'attaque de la cible"
@@ -23,7 +23,7 @@ levels:
       affinities:
         école_requirement: "A.École[ombre]: 3"
         type_requirement: "A.Type[alteration]: 3"
-        mixed_requirement: "A.École[ombre] + A.Type[alteration]: 5"
+        mixed_requirement: "A.École[ombre] + A.Type[alteration]: 9"
     conditions:
       intelligence_required: 17
       flux_cost: 6

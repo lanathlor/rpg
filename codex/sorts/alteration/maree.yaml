@@ -7,7 +7,7 @@ levels:
       affinities:
         école_requirement: "A.École[hydrodynamique]: 2"
         type_requirement: "A.Type[alteration]: 2"
-        mixed_requirement: "A.École[hydrodynamique] + A.Type[alteration]: 3"
+        mixed_requirement: "A.École[hydrodynamique] + A.Type[alteration]: 6"
     conditions:
       intelligence_required: 15
       flux_cost: 4
@@ -23,7 +23,7 @@ levels:
       affinities:
         école_requirement: "A.École[hydrodynamique]: 3"
         type_requirement: "A.Type[alteration]: 3"
-        mixed_requirement: "A.École[hydrodynamique] + A.Type[alteration]: 5"
+        mixed_requirement: "A.École[hydrodynamique] + A.Type[alteration]: 9"
     conditions:
       intelligence_required: 17
       flux_cost: 7

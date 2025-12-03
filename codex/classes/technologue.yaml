@@ -22,7 +22,8 @@ affinities:
   schools:
     electricite: 3
     magnetique: 3
-    illusion: 2
+    illusion: 3
+    bioarcanotechnique: 2
   types:
     alteration: 3
     amelioration: 2

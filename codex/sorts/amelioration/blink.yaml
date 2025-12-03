@@ -5,9 +5,9 @@ levels:
     name: Blink
     prerequisites:
       affinities:
-        école_requirement: "A.École[quantique]: 3"
-        type_requirement: "A.Type[amélioration]: 3"
-        mixed_requirement: "A.École[quantique] + A.Type[amélioration]: 5"
+        école_requirement: "A.École[quantique]: 2"
+        type_requirement: "A.Type[amelioration]: 2"
+        mixed_requirement: "A.École[quantique] + A.Type[amelioration]: 6"
     conditions:
       intelligence_required: 18
       flux_cost: 8
@@ -17,9 +17,9 @@ levels:
     name: Blink II
     prerequisites:
       affinities:
-        école_requirement: "A.École[quantique]: 4"
-        type_requirement: "A.Type[amélioration]: 4"
-        mixed_requirement: "A.École[quantique] + A.Type[amélioration]: 6"
+        école_requirement: "A.École[quantique]: 3"
+        type_requirement: "A.Type[amelioration]: 3"
+        mixed_requirement: "A.École[quantique] + A.Type[amelioration]: 9"
     conditions:
       intelligence_required: 16
       flux_cost: 10

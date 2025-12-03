@@ -8,7 +8,9 @@ levels:
     name: Overclock
     prerequisites:
       affinities:
-        école_requirement: "A.École[bioarcanotechnique]: 4"
+        école_requirement: "A.École[bioarcanotechnique]: 2"
+        type_requirement: "A.Type[amelioration]: 2"
+        mixed_requirement: "A.École[bioarcanotechnique] + A.Type[amelioration]: 6"
       special: "La cible doit porter un exosquelette"
     conditions:
       intelligence_required: 16

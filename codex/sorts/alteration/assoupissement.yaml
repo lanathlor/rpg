@@ -5,9 +5,9 @@ levels:
     name: Assoupissement
     prerequisites:
       affinities:
-        école_requirement: "A.École[quantique]: 4"
-        type_requirement: "A.Type[altération]: 4"
-        mixed_requirement: "A.École[quantique] + A.Type[altération]: 6"
+        école_requirement: "A.École[quantique]: 3"
+        type_requirement: "A.Type[alteration]: 3"
+        mixed_requirement: "A.École[quantique] + A.Type[alteration]: 9"
     conditions:
       charisma_required: 18
       flux_cost: 10

@@ -4,6 +4,10 @@ levels:
   - level: "1"
     name: Camouflage
     prerequisites:
+      affinities:
+        école_requirement: "A.École[électricité]: 2"
+        type_requirement: "A.Type[amelioration]: 2"
+        mixed_requirement: "A.École[électricité] + A.Type[amelioration]: 6"
       armure: Exosquelette
       competences:
         - Rôdeur

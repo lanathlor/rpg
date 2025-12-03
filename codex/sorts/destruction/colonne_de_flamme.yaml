@@ -1,13 +1,13 @@
 spell_series: Colonne de flamme
 description_base: Fait jaillir une colonne de flammes du sol.
 levels:
-  - level: "2"
+  - level: "1"
     name: Colonne de flamme
     prerequisites:
       affinities:
-        école_requirement: "A.École[feu]: 5"
-        type_requirement: "A.Type[destruction]: 5"
-        mixed_requirement: "A.École[feu] + A.Type[destruction]: 8"
+        école_requirement: "A.École[feu]: 4"
+        type_requirement: "A.Type[destruction]: 4"
+        mixed_requirement: "A.École[feu] + A.Type[destruction]: 12"
     conditions:
       intelligence_required: 16
       flux_cost: 15

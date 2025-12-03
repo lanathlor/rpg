@@ -4,6 +4,10 @@ levels:
   - level: "1"
     name: Attaque de force
     prerequisites:
+      affinities:
+        école_requirement: "A.École[martial]: 2"
+        type_requirement: "A.Type[arme]: 2"
+        mixed_requirement: "A.École[martial] + A.Type[arme]: 6"
       stats:
         - "FOR: 14"
     conditions:
@@ -15,6 +19,10 @@ levels:
   - level: "2"
     name: Attaque de force II
     prerequisites:
+      affinities:
+        école_requirement: "A.École[martial]: 3"
+        type_requirement: "A.Type[arme]: 3"
+        mixed_requirement: "A.École[martial] + A.Type[arme]: 9"
       stats:
         - "FOR: 18"
     conditions:

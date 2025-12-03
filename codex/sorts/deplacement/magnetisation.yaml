@@ -5,9 +5,9 @@ levels:
     name: Magnétisation
     prerequisites:
       affinities:
-        école_requirement: "A.École[magnétique]: 4"
-        type_requirement: "A.Type[altération]: 4"
-        mixed_requirement: "A.École[magnétique] + A.Type[altération]: 6"
+        école_requirement: "A.École[magnétique]: 3"
+        type_requirement: "A.Type[deplacement]: 3"
+        mixed_requirement: "A.École[magnétique] + A.Type[deplacement]: 9"
     conditions:
       special: aucune
       flux_cost: 7

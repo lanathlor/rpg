@@ -1,11 +1,13 @@
 spell_series: Fendre
 description_base: Porte un coup puissant qui peut traverser plusieurs ennemis alignés.
 levels:
-  - level: "2"
+  - level: "1"
     name: Fendre
     prerequisites:
       affinities:
-        école_requirement: "A.École[martial]: 8"
+        école_requirement: "A.École[martial]: 4"
+        type_requirement: "A.Type[arme]: 4"
+        mixed_requirement: "A.École[martial] + A.Type[arme]: 12"
     conditions:
       strength_required: 16
     recharge_time: "40 sec"

@@ -8,9 +8,9 @@ levels:
     name: Optimisation
     prerequisites:
       affinities:
-        école_requirement: "A.École[bioarcanotechnique]: 4"
-        type_requirement: "A.Type[amélioration]: 2"
-        mixed_requirement: "A.École[bioarcanotechnique] + A.Type[amélioration]: 5"
+        école_requirement: "A.École[bioarcanotechnique]: 2"
+        type_requirement: "A.Type[amelioration]: 2"
+        mixed_requirement: "A.École[bioarcanotechnique] + A.Type[amelioration]: 6"
     conditions:
       intelligence_required: 16
       flux_cost: 5

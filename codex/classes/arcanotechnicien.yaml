@@ -20,7 +20,7 @@ affinities:
   distance: 2
   melee: 2
   schools:
-    givre: 5
+    givre: 3
     bioarcanotechnique: 2
   types:
     destruction: 4

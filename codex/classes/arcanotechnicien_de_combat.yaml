@@ -20,8 +20,8 @@ affinities:
   distance: 0
   melee: 4
   schools:
-    electricite: 3
-    magnetique: 4
+    electricite: 2
+    magnetique: 3
   types:
     arme: 3
     destruction: 3

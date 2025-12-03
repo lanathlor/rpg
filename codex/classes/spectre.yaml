@@ -21,7 +21,7 @@ affinities:
   melee: 4
   sniper: 2
   schools:
-    balistique: 10
+    balistique: 5
     electricite: 2
     martial: 2
   types:

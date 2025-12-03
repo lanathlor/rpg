@@ -9,13 +9,13 @@ levels:
     name: "Javelot de glace"
     prerequisites:
       affinities:
-        école_requirement: "A.École[givre]: 4"
+        école_requirement: "A.École[givre]: 5"
         type_requirement: "A.Type[destruction]: 4"
-        mixed_requirement: "A.École[givre] + A.Type[destruction]: 6"
+        mixed_requirement: "A.École[givre] + A.Type[destruction]: 14"
     conditions:
       intelligence_required: 16
       flux_cost: 8
     effects:
-      damage: "2d12+4 givre"
+      damage: "3d6+3 givre"
       resistance: RMEC
       special: "Inflige 'Gelure' à la cible"

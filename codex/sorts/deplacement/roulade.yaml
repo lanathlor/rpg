@@ -5,7 +5,9 @@ levels:
     name: Roulade
     prerequisites:
       affinities:
-        école_requirement: "A.École[martial]: 4"
+        école_requirement: "A.École[martial]: 2"
+        type_requirement: "A.Type[deplacement]: 2"
+        mixed_requirement: "A.École[martial] + A.Type[deplacement]: 6"
     conditions:
       dexterity_required: 14
     recharge_time: "20 sec"
@@ -16,6 +18,10 @@ levels:
   - level: "2"
     name: Roulade II
     prerequisites:
+      affinities:
+        école_requirement: "A.École[martial]: 3"
+        type_requirement: "A.Type[deplacement]: 3"
+        mixed_requirement: "A.École[martial] + A.Type[deplacement]: 9"
       equipment:
         - Exosquelette
     conditions:

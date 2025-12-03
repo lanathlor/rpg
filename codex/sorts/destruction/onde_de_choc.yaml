@@ -7,7 +7,7 @@ levels:
       affinities:
         école_requirement: "A.École[sonique]: 2"
         type_requirement: "A.Type[destruction]: 2"
-        mixed_requirement: "A.École[sonique] + A.Type[destruction]: 3"
+        mixed_requirement: "A.École[sonique] + A.Type[destruction]: 6"
     conditions:
       intelligence_required: 15
       flux_cost: 5
@@ -23,7 +23,7 @@ levels:
       affinities:
         école_requirement: "A.École[sonique]: 3"
         type_requirement: "A.Type[destruction]: 3"
-        mixed_requirement: "A.École[sonique] + A.Type[destruction]: 5"
+        mixed_requirement: "A.École[sonique] + A.Type[destruction]: 9"
     conditions:
       intelligence_required: 17
       flux_cost: 8

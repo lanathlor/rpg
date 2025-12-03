@@ -1,13 +1,13 @@
 spell_series: Tir à la tête
 description_base: Vise précisément la tête de l'adversaire pour un tir critique.
 levels:
-  - level: "2"
+  - level: "1"
     name: Tir à la tête
     prerequisites:
       affinities:
-        école_requirement: "A.École[balistique]: 8"
-        type_requirement: "A.Type[arme]: 8"
-        mixed_requirement: "A.École[balistique] + A.Type[arme]: 10"
+        école_requirement: "A.École[balistique]: 4"
+        type_requirement: "A.Type[arme]: 4"
+        mixed_requirement: "A.École[balistique] + A.Type[arme]: 12"
     conditions:
       perception_required: 16
     recharge_time: "45 sec"

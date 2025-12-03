@@ -20,7 +20,7 @@ affinities:
   distance: 0
   melee: 8
   schools:
-    martial: 5
+    martial: 4
   types:
     arme: 5
     amelioration: 2

@@ -6,8 +6,8 @@ levels:
     prerequisites:
       affinities:
         école_requirement: "A.École[magnétique]: 2"
-        type_requirement: "A.Type[altération]: 2"
-        mixed_requirement: "A.École[magnétique] + A.Type[altération]: 3"
+        type_requirement: "A.Type[alteration]: 2"
+        mixed_requirement: "A.École[magnétique] + A.Type[alteration]: 6"
     conditions:
       perception_required: 16
       flux_cost: 4
