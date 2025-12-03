@@ -21,7 +21,6 @@ affinities:
   arme_1_main: 2
   schools:
     martial: 6
-    quantique: 2
   types:
     arme: 5
 
@@ -55,7 +54,7 @@ skills:
 spells:
   - "Attaque multiple"
   - "Fendre"
-  - "Lame fantôme"
+  - "Frappe précise"
   - "Attaque des points sensibles"
 
 # Guide de jeu

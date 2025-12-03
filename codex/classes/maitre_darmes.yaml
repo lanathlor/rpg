@@ -20,7 +20,6 @@ affinities:
   melee: 8
   schools:
     martial: 5
-    quantique: 2
   types:
     arme: 5
     amelioration: 2
@@ -54,7 +53,7 @@ skills:
 spells:
   - "Attaque de force"
   - "Fendre"
-  - "Lame fantôme"
+  - "Frappe précise"
   - "Charge"
 
 # Guide de jeu

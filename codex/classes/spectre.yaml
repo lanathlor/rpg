@@ -22,7 +22,7 @@ affinities:
   schools:
     balistique: 10
     electricite: 2
-    quantique: 3
+    martial: 2
   types:
     arme: 6
     amelioration: 2
@@ -59,7 +59,7 @@ skills:
 spells:
   - "Tir à la tête"
   - "Tir surchargé"
-  - "Lame fantôme"
+  - "Frappe précise"
   - "Camouflage"
 
 # Guide de jeu

@@ -1,0 +1,18 @@
+spell_series: Frappe précise
+description_base: Vous analysez les mouvements de votre adversaire pour frapper avec une précision chirurgicale là où sa défense est la plus faible.
+levels:
+  - level: "1"
+    name: Frappe précise
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[martial]: 2"
+        type_requirement: "A.Type[arme]: 3"
+        mixed_requirement: "A.École[martial] + A.Type[arme]: 4"
+    conditions:
+      special: aucune
+    recharge_time: "30 sec"
+    effects:
+      attack_bonus: "+5 au jet d'attaque de la prochaine attaque physique"
+      resistance: RMEC
+school: martial
+type: arme
