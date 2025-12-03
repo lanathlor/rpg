@@ -55,18 +55,7 @@ const getClassColor = (className: string) => {
 }
 
 const getClassArchetype = (characterClass: CharacterClass) => {
-  const name = characterClass.name.toLowerCase()
-  const hasSpells = characterClass.spells && characterClass.spells.length > 0
-  const hasHighIntelligence = characterClass.stats.intelligence > 12
-  const hasHighForce = characterClass.stats.force > 12
-  const hasHighSpeed = characterClass.base_stats.speed > 4
-
-  if (hasSpells && hasHighIntelligence) return 'Lanceur de sorts'
-  if (hasHighForce && !hasSpells) return 'Combattant'
-  if (hasHighSpeed && name.includes('chasseur')) return 'Tireur d\'élite'
-  if (name.includes('sentinelle') || name.includes('tutelaire')) return 'Défenseur'
-  if (name.includes('technologue')) return 'Technologue'
-  return 'Hybride'
+  return characterClass.type || 'Non défini'
 }
 
 const getHighestStat = (characterClass: CharacterClass) => {
@@ -115,6 +104,7 @@ export function ClassesPage() {
   const { consumables } = useConsumables()
   const [searchQuery, setSearchQuery] = useState('')
   const [sortBy, setSortBy] = useState<string>('name-asc')
+  const [selectedArchetype, setSelectedArchetype] = useState<string>('all')
 
   // Calculate min/max point values from all classes
   const pointValues = classes.map(c => calculateTotalPointBuy(c, weapons, armors, skills, consumables).total)
@@ -137,6 +127,9 @@ export function ClassesPage() {
     setMaxInputValue(String(maxPoints))
   }, [maxPoints])
 
+  // Get unique archetypes for filter
+  const uniqueArchetypes = Array.from(new Set(classes.map(c => getClassArchetype(c)))).sort()
+
   // Filter and sort classes
   const filteredClasses = classes.filter((characterClass) => {
     const matchesSearch =
@@ -148,7 +141,10 @@ export function ClassesPage() {
     const pointBuy = calculateTotalPointBuy(characterClass, weapons, armors, skills, consumables)
     const matchesPoints = pointBuy.total >= minPoints && pointBuy.total <= maxPoints
 
-    return matchesSearch && matchesPoints
+    // Archetype filter
+    const matchesArchetype = selectedArchetype === 'all' || getClassArchetype(characterClass) === selectedArchetype
+
+    return matchesSearch && matchesPoints && matchesArchetype
   }).sort((a, b) => {
     switch (sortBy) {
       case 'name-asc':
@@ -215,6 +211,21 @@ export function ClassesPage() {
 
         {/* Filters Row */}
         <div className="flex gap-4 flex-wrap items-end">
+          {/* Archetype Filter */}
+          <div className="flex items-center gap-2">
+            <Filter className="h-4 w-4 flex-shrink-0" />
+            <select
+              value={selectedArchetype}
+              onChange={(e) => setSelectedArchetype(e.target.value)}
+              className="border rounded px-3 py-2 bg-background min-w-[150px]"
+            >
+              <option value="all">Tous les types</option>
+              {uniqueArchetypes.map(archetype => (
+                <option key={archetype} value={archetype}>{archetype}</option>
+              ))}
+            </select>
+          </div>
+
           {/* Point Range Filter */}
           <div className="flex items-center gap-3 flex-1 min-w-[300px]">
             <Filter className="h-4 w-4 flex-shrink-0" />
@@ -315,8 +326,9 @@ export function ClassesPage() {
               setSearchQuery('')
               setMinPoints(absoluteMin)
               setMaxPoints(absoluteMax)
+              setSelectedArchetype('all')
             }}
-            disabled={!searchQuery && minPoints === absoluteMin && maxPoints === absoluteMax}
+            disabled={!searchQuery && minPoints === absoluteMin && maxPoints === absoluteMax && selectedArchetype === 'all'}
           >
             Réinitialiser
           </Button>

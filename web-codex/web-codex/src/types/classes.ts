@@ -31,6 +31,7 @@ export interface Equipment {
 }
 
 export interface CharacterClass extends BaseItem {
+  type?: string
   image?: string
   base_stats: BaseStats
   flux_system?: FluxSystem
