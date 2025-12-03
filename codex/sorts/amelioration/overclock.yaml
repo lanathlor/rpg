@@ -13,7 +13,7 @@ levels:
         mixed_requirement: "A.École[bioarcanotechnique] + A.Type[amelioration]: 6"
       special: "La cible doit porter un exosquelette"
     conditions:
-      intelligence_required: 16
+      intelligence_required: 14
       flux_cost: 5
     effects:
       special: "+1d4 à une statistique de la cible choisie par le lanceur"

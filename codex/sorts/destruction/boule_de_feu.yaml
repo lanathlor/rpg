@@ -20,9 +20,9 @@ levels:
     name: Boule de feu II
     prerequisites:
       affinities:
-        école_requirement: "A.École[feu]: 3"
-        type_requirement: "A.Type[destruction]: 3"
-        mixed_requirement: "A.École[feu] + A.Type[destruction]: 9"
+        école_requirement: "A.École[feu]: 5"
+        type_requirement: "A.Type[destruction]: 5"
+        mixed_requirement: "A.École[feu] + A.Type[destruction]: 15"
     conditions:
       intelligence_required: 17
       flux_cost: 12

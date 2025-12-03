@@ -12,7 +12,7 @@ levels:
         type_requirement: "A.Type[amelioration]: 2"
         mixed_requirement: "A.École[bioarcanotechnique] + A.Type[amelioration]: 6"
     conditions:
-      intelligence_required: 16
+      intelligence_required: 14
       flux_cost: 5
     effects:
       special: "Le prochain sort lancé par la cible ne coûte pas de flux (hors attaque d'arme)"

@@ -12,7 +12,7 @@ levels:
         type_requirement: "A.Type[amelioration]: 3"
         mixed_requirement: "A.École[bioarcanotechnique] + A.Type[amelioration]: 9"
     conditions:
-      intelligence_required: 17
+      intelligence_required: 15
       flux_cost: 6
     effects:
       special: "Rank-up le prochain dé utilisé par la cible (hors jet de dégât) selon la hiérarchie: d4→d6→d8→d10→d12→d20→d20+d8"

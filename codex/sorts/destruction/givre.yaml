@@ -13,7 +13,7 @@ levels:
         type_requirement: "A.Type[destruction]: 2"
         mixed_requirement: "A.École[givre] + A.Type[destruction]: 6"
     conditions:
-      intelligence_required: 16
+      intelligence_required: 14
       flux_cost: 4
     effects:
       damage: "1d4+4 givre"

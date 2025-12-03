@@ -11,7 +11,7 @@ levels:
         type_requirement: "A.Type[alteration]: 2"
         mixed_requirement: "A.École[électricité] + A.Type[alteration]: 6"
     conditions:
-      intelligence_required: 16
+      intelligence_required: 15
       flux_cost: 5
     effects:
       status: La cible est paralysée

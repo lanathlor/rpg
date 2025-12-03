@@ -13,7 +13,7 @@ levels:
         type_requirement: "A.Type[alteration]: 3"
         mixed_requirement: "A.École[givre] + A.Type[alteration]: 9"
     conditions:
-      intelligence_required: 16
+      intelligence_required: 14
       flux_cost: 6
     effects:
       special: "Inflige 4x 'Gelure' à la cible"

@@ -9,7 +9,7 @@ levels:
         type_requirement: "A.Type[alteration]: 2"
         mixed_requirement: "A.École[magnétique] + A.Type[alteration]: 6"
     conditions:
-      intelligence_required: 16
+      intelligence_required: 14
       flux_cost: 4
     effects:
       emp: Désactive les bonus des exosquelettes et stop tous les appareils électriques d'une cible
@@ -22,7 +22,7 @@ levels:
         type_requirement: "A.Type[alteration]: 3"
         mixed_requirement: "A.École[magnétique] + A.Type[alteration]: 9"
     conditions:
-      intelligence_required: 16
+      intelligence_required: 14
       flux_cost: 6
     effects:
       emp: Désactive les bonus des exosquelettes et stop tous les appareils électriques de 2 cibles

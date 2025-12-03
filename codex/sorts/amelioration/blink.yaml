@@ -21,7 +21,7 @@ levels:
         type_requirement: "A.Type[amelioration]: 3"
         mixed_requirement: "A.École[quantique] + A.Type[amelioration]: 9"
     conditions:
-      intelligence_required: 16
+      intelligence_required: 18
       flux_cost: 10
     effects:
       teleport: Téléport a 1d4 + 2 + vitesse mètre
