@@ -133,6 +133,22 @@ export function ConsumableDetail({ consumable }: ConsumableDetailProps) {
               </div>
             </div>
           )}
+          {consumable.effect.flux_restoration && (
+            <div>
+              <span className="font-medium text-sm text-cyan-600 dark:text-cyan-400">Restauration de flux:</span>
+              <div className="text-sm text-muted-foreground mt-1">
+                {consumable.effect.flux_restoration}
+              </div>
+            </div>
+          )}
+          {consumable.effect.recharge_reduction && (
+            <div>
+              <span className="font-medium text-sm text-indigo-600 dark:text-indigo-400">Réduction de recharge:</span>
+              <div className="text-sm text-muted-foreground mt-1">
+                {consumable.effect.recharge_reduction}
+              </div>
+            </div>
+          )}
           {consumable.effect.spell_enhancement && (
             <div>
               <span className="font-medium text-sm text-purple-600 dark:text-purple-400">Amélioration arcanotechnique:</span>
