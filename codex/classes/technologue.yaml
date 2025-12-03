@@ -58,8 +58,8 @@ skills:
 spells:
   - "Brouillage"
   - "Void"
+  - "Overclock"
   - "Vol de données"
-  - "Camouflage"
 
 # Guide de jeu
 gameplay_guide: "Le technologue est une classe de support pouvant réduire la force de combat des cibles et casser les tactiques mises en place pendant que vous utilisez la vôtre. Le technologue a une efficacité incontestable hors des combats, pouvant ouvrir de nouvelles routes et limiter les risques de glissade du groupe. Gardez à l'esprit vos sorts, même en dehors des combats."

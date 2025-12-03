@@ -19,10 +19,9 @@ affinities:
   distance: 2
   melee: 0
   schools:
-    bioarcanotechnique: 3
-    quantique: 4
+    bioarcanotechnique: 4
+    martial: 2
   types:
-    alteration: 4
     amelioration: 3
 
 # Statistiques
@@ -40,7 +39,7 @@ equipment:
   weapons:
     - "Pistolet"
   armor:
-    - "Exosquelette de traque"
+    - "Tenue de survie"
   consumables:
     - name: "Kit de soins"
       quantity: 2
@@ -50,14 +49,13 @@ skills:
   - "Traque"
   - "Expert des terrains"
   - "Compréhension de la nature"
-  - "Vétéran"
 
 # Sorts
 spells:
-  - "Lecture des mouvements"
-  - "Assoupissement"
-  - "Blink"
-  - "Camouflage"
+  - "Poursuite"
+  - "Révélation"
+  - "Sens à l'affut"
+  - "Silence"
 
 # Guide de jeu
 gameplay_guide: "Le taliste est la classe de support ayant la plus grande versatilité mais le moins d'efficacité en combat. Il est donc nécessaire pour lui d'être bien entourer et d'éviter les combats. Un taliste attentif au roleplay pourra être d'une grande utilité pour son groupe."

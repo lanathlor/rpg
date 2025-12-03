@@ -1,0 +1,19 @@
+spell_series: Sens à l'affut
+description_base: Vos sens sont temporairement plus aiguisés, rien ne vous échappe.
+school: bioarcanotechnique
+type: amelioration
+
+levels:
+  - level: "1"
+    name: Sens à l'affut
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[bioarcanotechnique]: 4"
+    conditions:
+      flux_cost: 5
+    effects:
+      specials:
+        - "+2 à la perception"
+        - "+1 au jet de sauvegarde"
+        - "+1 à l'initiative"
+    duration: 30 sec

@@ -1,0 +1,16 @@
+spell_series: Silence
+description_base: Vous vous déplacez sans aucun bruit, réduisant les chances d'être détecté lors de mouvements.
+school: martial
+type: amelioration
+
+levels:
+  - level: "1"
+    name: Silence
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[martial]: 2"
+    conditions:
+      flux_cost: 4
+    effects:
+      special: "Réduit les chances d'être détecté lors de mouvements"
+    duration: 1 min

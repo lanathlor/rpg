@@ -1,0 +1,18 @@
+spell_series: Overclock
+description_base: Overclock l'exosquelette de la cible, augmentant ses capacités temporairement.
+school: bioarcanotechnique
+type: amelioration
+
+levels:
+  - level: "1"
+    name: Overclock
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[bioarcanotechnique]: 4"
+      special: "La cible doit porter un exosquelette"
+    conditions:
+      intelligence_required: 16
+      flux_cost: 5
+    effects:
+      special: "+1d4 à une statistique de la cible choisie par le lanceur"
+    duration: 1 tour

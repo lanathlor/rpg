@@ -1,0 +1,16 @@
+spell_series: Révélation
+description_base: Vos connaissances topographiques vous donnent l'aptitude de révéler le terrain devant vous d'un coup d'œil.
+school: bioarcanotechnique
+type: amelioration
+
+levels:
+  - level: "1"
+    name: Révélation
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[bioarcanotechnique]: 2"
+    conditions:
+      perception_required: 18
+      flux_cost: 4
+    effects:
+      special: "Révèle une parcelle de terrain de 20m² à une distance maximale de 100 mètres. Révèle les pièges et les personnages approximativement"

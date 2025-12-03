@@ -1,0 +1,17 @@
+spell_series: Poursuite
+description_base: Votre connexion aux éléments vous permet de localiser n'importe qui sur la planète.
+school: bioarcanotechnique
+type: amelioration
+
+levels:
+  - level: "1"
+    name: Poursuite
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[bioarcanotechnique]: 2"
+      special: "Connaissance de la cible"
+    conditions:
+      flux_cost: 8
+    effects:
+      special: "Vous savez précisément où se trouve votre cible"
+    duration: 1 heure
