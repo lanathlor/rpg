@@ -1,6 +1,7 @@
 name: "Expert des terrains"
 category: "Compétence"
 subcategory: "survie"
+point_cost: 5
 effect:
   terrain_bonus: "Moins handicapé sur les terrains complexes et accidentés"
   movement_bonus: "Handicaps aux jets de déplacement réduits de 2"

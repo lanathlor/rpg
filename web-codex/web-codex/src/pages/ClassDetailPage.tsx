@@ -31,12 +31,15 @@ import {
   Activity,
   Star,
   Hand,
-  FileText
+  FileText,
+  Trophy,
+  Calculator
 } from 'lucide-react'
 import { useClasses, useSpells, useWeapons, useArmors, useSkills, useConsumables } from '@/lib/dataProvider'
 import { getSchoolIcon, getSchoolColor, getTypeIcon } from '@/lib/schoolUtils'
 import { checkSpellSeriesAccess, checkWeaponAccess, checkArmorAccess, checkSkillAccess, checkConsumableAccess, getAccessDescription, getDetailedAccessInfo } from '@/lib/accessUtils'
 import { filterCharacterContent, exportCharacterToPDF } from '@/lib/pdfExport'
+import { calculateTotalPointBuy } from '@/lib/pointBuyCalculator'
 import { SpellDetail } from '@/components/SpellDetail'
 import { WeaponDetail } from '@/components/WeaponDetail'
 import { ArmorDetail } from '@/components/ArmorDetail'
@@ -326,6 +329,62 @@ export function ClassDetailPage() {
           </CardContent>
         </Card>
       </div>
+
+      {/* Point Buy Breakdown */}
+      {(() => {
+        const pointBuy = calculateTotalPointBuy(characterClass, weapons, armors, skills, consumables)
+
+        return (
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Calculator className="h-5 w-5 text-amber-500" />
+                Calcul de points
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-4">
+                {/* Total - Prominent Display */}
+                <div className="flex items-center p-4 bg-muted rounded-lg">
+                  <div className="flex items-center gap-3">
+                    <Trophy className="h-6 w-6 text-amber-500" />
+                    <div>
+                      <div className="text-sm text-muted-foreground">Total</div>
+                      <div className="text-2xl font-bold">
+                        {pointBuy.total} points
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Breakdown */}
+                <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
+                  <div className="p-3 border rounded-md">
+                    <div className="text-xs text-muted-foreground mb-1">Caractéristiques</div>
+                    <div className="text-lg font-semibold">{pointBuy.stats} pts</div>
+                  </div>
+                  <div className="p-3 border rounded-md">
+                    <div className="text-xs text-muted-foreground mb-1">Affinités</div>
+                    <div className="text-lg font-semibold">{pointBuy.affinities} pts</div>
+                  </div>
+                  <div className="p-3 border rounded-md">
+                    <div className="text-xs text-muted-foreground mb-1">Flux</div>
+                    <div className="text-lg font-semibold">{pointBuy.flux} pts</div>
+                  </div>
+                  <div className="p-3 border rounded-md">
+                    <div className="text-xs text-muted-foreground mb-1">Équipement</div>
+                    <div className="text-lg font-semibold">{pointBuy.equipment} pts</div>
+                  </div>
+                  <div className="p-3 border rounded-md">
+                    <div className="text-xs text-muted-foreground mb-1">Compétences</div>
+                    <div className="text-lg font-semibold">{pointBuy.competences} pts</div>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        )
+      })()}
 
       {/* Affinities */}
       <Card>

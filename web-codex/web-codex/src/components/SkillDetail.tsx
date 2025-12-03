@@ -2,7 +2,8 @@ import { Badge } from '@/components/ui/badge'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Separator } from '@/components/ui/separator'
 import type { Skill } from '@/types'
-import { Sword, Shield, Book, Wrench, Target, Zap } from 'lucide-react'
+import { Sword, Shield, Book, Wrench, Target, Zap, Trophy } from 'lucide-react'
+import { getCompetenceTier } from '@/lib/pointBuyCalculator'
 
 interface SkillDetailProps {
   skill: Skill
@@ -180,6 +181,48 @@ export function SkillDetail({ skill }: SkillDetailProps) {
           )}
         </CardContent>
       </Card>
+
+      {/* Point Cost */}
+      {skill.point_cost !== undefined && (() => {
+        const tier = getCompetenceTier(skill.point_cost)
+        return (
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-lg flex items-center gap-2">
+                <Trophy className="h-5 w-5 text-amber-500" />
+                Coût en points
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="flex items-center justify-between p-4 bg-muted rounded-lg">
+                <div className="flex items-center gap-3">
+                  <Trophy className={`h-6 w-6 ${tier.colorClass}`} />
+                  <div>
+                    <div className="text-sm text-muted-foreground">Coût</div>
+                    <div className={`text-2xl font-bold ${tier.colorClass}`}>
+                      {skill.point_cost} points
+                    </div>
+                  </div>
+                </div>
+                <Badge variant="outline" className={`${tier.colorClass} text-lg px-3 py-1`}>
+                  Tier {tier.tier}
+                </Badge>
+              </div>
+              <div className="mt-3 text-sm text-muted-foreground">
+                <p>
+                  Cette compétence appartient au tier <strong>{tier.tier}</strong> de puissance.
+                  {tier.tier === 'S' && ' Les compétences de tier S (18 pts) sont les plus puissantes et offrent des avantages majeurs comme les attaques multiples.'}
+                  {tier.tier === 'A' && ' Les compétences de tier A (15 pts) offrent des capacités défensives ou de mobilité très puissantes.'}
+                  {tier.tier === 'B' && ' Les compétences de tier B (12 pts) confèrent des avantages tactiques significatifs.'}
+                  {tier.tier === 'C' && ' Les compétences de tier C (10 pts) donnent des bonus de statistiques utiles.'}
+                  {tier.tier === 'D' && ' Les compétences de tier D (8 pts) offrent des capacités utilitaires pratiques.'}
+                  {tier.tier === 'E' && ' Les compétences de tier E (5 pts) confèrent des bonus mineurs ou des connaissances spécialisées.'}
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+        )
+      })()}
     </div>
   )
 }

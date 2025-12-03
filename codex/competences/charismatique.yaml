@@ -1,6 +1,7 @@
 name: "Charismatique"
 category: "Compétence"
 subcategory: "social"
+point_cost: 10
 effect:
   stat_bonus: "+1 CHA"
   threat_attraction: "Augmente les chances d'être pris pour cible"

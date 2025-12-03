@@ -1,6 +1,7 @@
 name: "Champ électromagnétique"
 category: "Compétence"
 subcategory: "défensive"
+point_cost: 15
 effect:
   protection_bonus: "+2 scores de protection à distance"
 description: "Capacité à générer un champ électromagnétique défensif déviant les projectiles et énergies dirigées."

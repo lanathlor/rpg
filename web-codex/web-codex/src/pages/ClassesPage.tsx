@@ -1,10 +1,11 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { useClasses } from '@/lib/dataProvider'
+import { useClasses, useWeapons, useArmors, useSkills, useConsumables } from '@/lib/dataProvider'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
+import { Slider } from '@/components/ui/slider'
 import {
   Users,
   Sparkles,
@@ -21,9 +22,13 @@ import {
   Zap,
   Hand,
   Activity,
-  Star
+  Star,
+  Trophy,
+  Filter,
+  ArrowUpDown
 } from 'lucide-react'
 import type { CharacterClass } from '@/types'
+import { calculateTotalPointBuy } from '@/lib/pointBuyCalculator'
 
 const getClassIcon = (className: string) => {
   const name = className.toLowerCase()
@@ -104,16 +109,65 @@ const getStatIcon = (statKey: string) => {
 
 export function ClassesPage() {
   const { classes, loading } = useClasses()
+  const { weapons } = useWeapons()
+  const { armors } = useArmors()
+  const { skills } = useSkills()
+  const { consumables } = useConsumables()
   const [searchQuery, setSearchQuery] = useState('')
+  const [sortBy, setSortBy] = useState<string>('name-asc')
 
-  // Filter classes
+  // Calculate min/max point values from all classes
+  const pointValues = classes.map(c => calculateTotalPointBuy(c, weapons, armors, skills, consumables).total)
+  const absoluteMin = pointValues.length > 0 ? Math.min(...pointValues) : 0
+  const absoluteMax = pointValues.length > 0 ? Math.max(...pointValues) : 1000
+
+  const [minPoints, setMinPoints] = useState<number>(absoluteMin)
+  const [maxPoints, setMaxPoints] = useState<number>(absoluteMax)
+
+  // Local string state for input display (allows empty during editing)
+  const [minInputValue, setMinInputValue] = useState<string>(String(absoluteMin))
+  const [maxInputValue, setMaxInputValue] = useState<string>(String(absoluteMax))
+
+  // Sync display values when filter state changes (e.g., from slider)
+  useEffect(() => {
+    setMinInputValue(String(minPoints))
+  }, [minPoints])
+
+  useEffect(() => {
+    setMaxInputValue(String(maxPoints))
+  }, [maxPoints])
+
+  // Filter and sort classes
   const filteredClasses = classes.filter((characterClass) => {
     const matchesSearch =
       characterClass.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       (characterClass.description || '').toLowerCase().includes(searchQuery.toLowerCase()) ||
       getClassArchetype(characterClass).toLowerCase().includes(searchQuery.toLowerCase())
 
-    return matchesSearch
+    // Point range filter
+    const pointBuy = calculateTotalPointBuy(characterClass, weapons, armors, skills, consumables)
+    const matchesPoints = pointBuy.total >= minPoints && pointBuy.total <= maxPoints
+
+    return matchesSearch && matchesPoints
+  }).sort((a, b) => {
+    switch (sortBy) {
+      case 'name-asc':
+        return a.name.localeCompare(b.name)
+      case 'name-desc':
+        return b.name.localeCompare(a.name)
+      case 'points-asc': {
+        const pointsA = calculateTotalPointBuy(a, weapons, armors, skills, consumables).total
+        const pointsB = calculateTotalPointBuy(b, weapons, armors, skills, consumables).total
+        return pointsA - pointsB
+      }
+      case 'points-desc': {
+        const pointsA = calculateTotalPointBuy(a, weapons, armors, skills, consumables).total
+        const pointsB = calculateTotalPointBuy(b, weapons, armors, skills, consumables).total
+        return pointsB - pointsA
+      }
+      default:
+        return 0
+    }
   })
 
   // Create URL-friendly class name
@@ -146,9 +200,10 @@ export function ClassesPage() {
         </p>
       </div>
 
-      {/* Search */}
-      <div className="flex flex-col sm:flex-row gap-4">
-        <div className="relative flex-1">
+      {/* Search and Filters */}
+      <div className="space-y-4">
+        {/* Search Bar */}
+        <div className="relative">
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
           <Input
             placeholder="Rechercher une classe..."
@@ -158,14 +213,114 @@ export function ClassesPage() {
           />
         </div>
 
-        {searchQuery && (
+        {/* Filters Row */}
+        <div className="flex gap-4 flex-wrap items-end">
+          {/* Point Range Filter */}
+          <div className="flex items-center gap-3 flex-1 min-w-[300px]">
+            <Filter className="h-4 w-4 flex-shrink-0" />
+            <div className="flex-1 space-y-3">
+              <Slider
+                min={absoluteMin}
+                max={absoluteMax}
+                step={1}
+                value={[minPoints, maxPoints]}
+                onValueChange={([min, max]) => {
+                  setMinPoints(min)
+                  setMaxPoints(max)
+                }}
+                className="w-full"
+              />
+              <div className="flex gap-2 items-center text-sm">
+                <Input
+                  type="number"
+                  min={absoluteMin}
+                  max={maxPoints}
+                  value={minInputValue}
+                  onChange={(e) => {
+                    const value = e.target.value
+                    setMinInputValue(value) // Update display immediately
+
+                    // Update filter state only if valid
+                    if (value !== '' && !isNaN(Number(value))) {
+                      const numValue = Number(value)
+                      setMinPoints(Math.max(absoluteMin, Math.min(numValue, maxPoints)))
+                    }
+                  }}
+                  onBlur={() => {
+                    // Validate and clamp on blur
+                    if (minInputValue === '' || isNaN(Number(minInputValue))) {
+                      setMinPoints(absoluteMin)
+                      setMinInputValue(String(absoluteMin))
+                    } else {
+                      const clamped = Math.max(absoluteMin, Math.min(Number(minInputValue), maxPoints))
+                      setMinPoints(clamped)
+                      setMinInputValue(String(clamped))
+                    }
+                  }}
+                  className="w-20 h-9 px-2 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                />
+                <span>-</span>
+                <Input
+                  type="number"
+                  min={minPoints}
+                  max={absoluteMax}
+                  value={maxInputValue}
+                  onChange={(e) => {
+                    const value = e.target.value
+                    setMaxInputValue(value) // Update display immediately
+
+                    // Update filter state only if valid
+                    if (value !== '' && !isNaN(Number(value))) {
+                      const numValue = Number(value)
+                      setMaxPoints(Math.min(absoluteMax, Math.max(numValue, minPoints)))
+                    }
+                  }}
+                  onBlur={() => {
+                    // Validate and clamp on blur
+                    if (maxInputValue === '' || isNaN(Number(maxInputValue))) {
+                      setMaxPoints(absoluteMax)
+                      setMaxInputValue(String(absoluteMax))
+                    } else {
+                      const clamped = Math.min(absoluteMax, Math.max(Number(maxInputValue), minPoints))
+                      setMaxPoints(clamped)
+                      setMaxInputValue(String(clamped))
+                    }
+                  }}
+                  className="w-20 h-9 px-2 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                />
+                <span className="text-muted-foreground">points</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Sort Dropdown */}
+          <div className="flex items-center gap-2">
+            <ArrowUpDown className="h-4 w-4 flex-shrink-0" />
+            <select
+              value={sortBy}
+              onChange={(e) => setSortBy(e.target.value)}
+              className="border rounded px-3 py-2 bg-background"
+            >
+              <option value="name-asc">Nom (A-Z)</option>
+              <option value="name-desc">Nom (Z-A)</option>
+              <option value="points-asc">Points (croissant)</option>
+              <option value="points-desc">Points (décroissant)</option>
+            </select>
+          </div>
+
+          {/* Reset Button - Always visible to prevent layout shift */}
           <Button
             variant="outline"
-            onClick={() => setSearchQuery('')}
+            onClick={() => {
+              setSearchQuery('')
+              setMinPoints(absoluteMin)
+              setMaxPoints(absoluteMax)
+            }}
+            disabled={!searchQuery && minPoints === absoluteMin && maxPoints === absoluteMax}
           >
             Réinitialiser
           </Button>
-        )}
+        </div>
       </div>
 
       {/* Classes Grid */}
@@ -199,7 +354,7 @@ export function ClassesPage() {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="grid grid-cols-3 gap-4 text-sm">
+                <div className="grid grid-cols-2 gap-3 text-sm">
                   <div className="flex items-center gap-2">
                     <Heart className="h-4 w-4 text-red-500" />
                     <span className="font-medium">{characterClass.base_stats.health} PV</span>
@@ -212,6 +367,15 @@ export function ClassesPage() {
                     {getStatIcon(getHighestStat(characterClass).key)}
                     <span className="font-medium">{getHighestStat(characterClass).value} {getHighestStat(characterClass).name.slice(0, 3).toUpperCase()}</span>
                   </div>
+                  {(() => {
+                    const pointBuy = calculateTotalPointBuy(characterClass, weapons, armors, skills, consumables)
+                    return (
+                      <div className="flex items-center gap-2">
+                        <Trophy className="h-4 w-4 text-amber-500" />
+                        <span className="font-medium">{pointBuy.total} pts</span>
+                      </div>
+                    )
+                  })()}
                 </div>
 
                 {/* Preview of abilities */}

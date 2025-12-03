@@ -16,6 +16,7 @@ export interface SkillEffect {
 
 export interface Skill extends BaseItem {
   effect: SkillEffect
+  point_cost?: number
 }
 
 export type SkillCategory = 'Compétence'

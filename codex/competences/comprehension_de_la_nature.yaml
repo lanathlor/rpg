@@ -1,6 +1,7 @@
 name: "Compréhension de la nature"
 category: "Compétence"
 subcategory: "survie"
+point_cost: 5
 effect:
   identification_bonus: "Identification des plantes et animaux plus simple"
   animal_communication: "Peut communiquer de manière primaire avec certains animaux"

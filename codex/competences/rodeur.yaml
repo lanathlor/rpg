@@ -1,6 +1,7 @@
 name: "Rôdeur"
 category: "Compétence"
 subcategory: "furtivité"
+point_cost: 8
 effect:
   stealth_ability: "Peut éviter d'entrer en combat et rester camouflé"
   stat_check: "Jet de DEX requis"

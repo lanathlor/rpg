@@ -1,6 +1,7 @@
 name: "Hackeur"
 category: "Compétence"
 subcategory: "technique"
+point_cost: 8
 effect:
   tech_bonus: "Permet d'utiliser les technologies avec une plus grande chance de succès"
   repair_ability: "Permet de réparer les dégâts électriques légers"

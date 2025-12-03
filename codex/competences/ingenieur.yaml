@@ -1,6 +1,7 @@
 name: "Ingénieur"
 category: "Compétence"
 subcategory: "technique"
+point_cost: 8
 effect:
   repair_ability: "Permet de réparer les dégâts mécaniques et électriques"
   construction_ability: "Permet de construire des objets"

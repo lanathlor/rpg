@@ -51,7 +51,9 @@
       "Bash(python:*)",
       "Bash(kill:*)",
       "Bash(git mv:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(python3:*)",
+      "Bash(npm ls:*)"
     ],
     "deny": [],
     "ask": []

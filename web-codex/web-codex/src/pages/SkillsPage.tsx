@@ -11,8 +11,9 @@ import {
   DialogTitle,
 } from '@/components/ui/dialog'
 import { SkillDetail } from '@/components/SkillDetail'
-import { Book, Sword, Shield, Wrench, Target, Zap, Search, Filter } from 'lucide-react'
+import { Book, Sword, Shield, Wrench, Target, Zap, Search, Filter, Trophy, ArrowUpDown } from 'lucide-react'
 import type { Skill } from '@/types'
+import { getCompetenceTier } from '@/lib/pointBuyCalculator'
 
 const getSubcategoryIcon = (subcategory: string) => {
   switch (subcategory.toLowerCase()) {
@@ -57,18 +58,49 @@ export function SkillsPage() {
   const [selectedSkill, setSelectedSkill] = useState<Skill | null>(null)
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedSubcategory, setSelectedSubcategory] = useState<string>('')
+  const [selectedTiers, setSelectedTiers] = useState<string[]>([])
+  const [sortBy, setSortBy] = useState<string>('name-asc')
 
   // Get unique subcategories for filters
   const subcategories = [...new Set(skills.map(skill => skill.subcategory).filter(Boolean))].sort()
 
-  // Filter skills
+  // Toggle tier filter
+  const toggleTier = (tier: string) => {
+    setSelectedTiers(prev =>
+      prev.includes(tier)
+        ? prev.filter(t => t !== tier)
+        : [...prev, tier]
+    )
+  }
+
+  // Filter and sort skills
   const filteredSkills = skills.filter((skill) => {
     const matchesSearch =
       skill.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       (skill.description || '').toLowerCase().includes(searchQuery.toLowerCase())
     const matchesSubcategory = !selectedSubcategory || skill.subcategory === selectedSubcategory
 
-    return matchesSearch && matchesSubcategory
+    // Point tier filter
+    let matchesTier = true
+    if (selectedTiers.length > 0 && skill.point_cost !== undefined) {
+      const tier = getCompetenceTier(skill.point_cost)
+      matchesTier = selectedTiers.includes(tier.tier)
+    }
+
+    return matchesSearch && matchesSubcategory && matchesTier
+  }).sort((a, b) => {
+    switch (sortBy) {
+      case 'name-asc':
+        return a.name.localeCompare(b.name)
+      case 'name-desc':
+        return b.name.localeCompare(a.name)
+      case 'points-asc':
+        return (a.point_cost || 0) - (b.point_cost || 0)
+      case 'points-desc':
+        return (b.point_cost || 0) - (a.point_cost || 0)
+      default:
+        return 0
+    }
   })
 
   const openSkillDetail = (skill: Skill) => {
@@ -110,45 +142,82 @@ export function SkillsPage() {
       </div>
 
       {/* Search and Filters */}
-      <div className="flex flex-col sm:flex-row gap-4">
-        <div className="relative flex-1">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-          <Input
-            placeholder="Rechercher une compétence..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="pl-10"
-          />
-        </div>
-
-        <div className="flex gap-2">
-          <div className="flex items-center gap-2">
-            <Filter className="h-4 w-4" />
-            <select
-              value={selectedSubcategory}
-              onChange={(e) => setSelectedSubcategory(e.target.value)}
-              className="border rounded px-3 py-2 bg-background"
-            >
-              <option value="">Toutes les sous-catégories</option>
-              {subcategories.map((subcategory) => (
-                <option key={subcategory} value={subcategory}>
-                  {subcategory ? subcategory.charAt(0).toUpperCase() + subcategory.slice(1) : ''}
-                </option>
-              ))}
-            </select>
+      <div className="space-y-4">
+        <div className="flex flex-col sm:flex-row gap-4">
+          <div className="relative flex-1">
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+            <Input
+              placeholder="Rechercher une compétence..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="pl-10"
+            />
           </div>
 
-          {(selectedSubcategory || searchQuery) && (
-            <Button
-              variant="outline"
-              onClick={() => {
-                setSelectedSubcategory('')
-                setSearchQuery('')
-              }}
-            >
-              Réinitialiser
-            </Button>
-          )}
+          <div className="flex gap-2 flex-wrap">
+            <div className="flex items-center gap-2">
+              <Filter className="h-4 w-4" />
+              <select
+                value={selectedSubcategory}
+                onChange={(e) => setSelectedSubcategory(e.target.value)}
+                className="border rounded px-3 py-2 bg-background"
+              >
+                <option value="">Toutes les sous-catégories</option>
+                {subcategories.map((subcategory) => (
+                  <option key={subcategory} value={subcategory}>
+                    {subcategory ? subcategory.charAt(0).toUpperCase() + subcategory.slice(1) : ''}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <div className="flex items-center gap-2">
+              <ArrowUpDown className="h-4 w-4" />
+              <select
+                value={sortBy}
+                onChange={(e) => setSortBy(e.target.value)}
+                className="border rounded px-3 py-2 bg-background"
+              >
+                <option value="name-asc">Nom (A-Z)</option>
+                <option value="name-desc">Nom (Z-A)</option>
+                <option value="points-asc">Points (croissant)</option>
+                <option value="points-desc">Points (décroissant)</option>
+              </select>
+            </div>
+
+            {(selectedSubcategory || searchQuery || selectedTiers.length > 0) && (
+              <Button
+                variant="outline"
+                onClick={() => {
+                  setSelectedSubcategory('')
+                  setSearchQuery('')
+                  setSelectedTiers([])
+                }}
+              >
+                Réinitialiser
+              </Button>
+            )}
+          </div>
+        </div>
+
+        {/* Tier Filters */}
+        <div className="flex items-center gap-2 flex-wrap">
+          <span className="text-sm font-medium">Tiers:</span>
+          {['S', 'A', 'B', 'C', 'D', 'E'].map((tier) => {
+            const isSelected = selectedTiers.includes(tier)
+            const tierInfo = getCompetenceTier(tier === 'S' ? 18 : tier === 'A' ? 15 : tier === 'B' ? 12 : tier === 'C' ? 10 : tier === 'D' ? 8 : 5)
+            return (
+              <Badge
+                key={tier}
+                variant={isSelected ? "default" : "outline"}
+                className={`cursor-pointer ${isSelected ? tierInfo.colorClass : ''}`}
+                onClick={() => toggleTier(tier)}
+              >
+                <Trophy className="h-3 w-3 mr-1" />
+                Tier {tier}
+              </Badge>
+            )
+          })}
         </div>
       </div>
 
@@ -161,22 +230,29 @@ export function SkillsPage() {
             onClick={() => openSkillDetail(skill)}
           >
             <CardHeader>
-              <div className="flex justify-between items-start">
+              <div className="flex justify-between items-start gap-2">
                 <CardTitle className="text-lg">{skill.name}</CardTitle>
-                <div className="flex gap-2">
-                  <Badge className="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300">
-                    <Book className="h-4 w-4" />
-                    <span className="ml-1">{skill.category}</span>
-                  </Badge>
-                  {skill.subcategory && (
-                    <Badge className={getSubcategoryColor(skill.subcategory)}>
-                      {getSubcategoryIcon(skill.subcategory)}
-                      <span className="ml-1">{skill.subcategory}</span>
+                {skill.point_cost !== undefined && (() => {
+                  const tier = getCompetenceTier(skill.point_cost)
+                  return (
+                    <Badge variant="outline" className={`flex items-center gap-1 ${tier.colorClass}`}>
+                      <Trophy className="h-3 w-3" />
+                      <span className="font-semibold">Tier {tier.tier}</span>
                     </Badge>
-                  )}
-                </div>
+                  )
+                })()}
               </div>
-              <CardDescription>
+              <div className="flex gap-2 mt-2">
+                <Badge className="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300 text-xs">
+                  {skill.category}
+                </Badge>
+                {skill.subcategory && (
+                  <Badge className={`${getSubcategoryColor(skill.subcategory)} text-xs`}>
+                    {skill.subcategory}
+                  </Badge>
+                )}
+              </div>
+              <CardDescription className="mt-2">
                 {(skill.description || 'Aucune description disponible').slice(0, 120)}...
               </CardDescription>
             </CardHeader>
@@ -185,6 +261,12 @@ export function SkillsPage() {
                 <div className="text-sm">
                   <strong>Effets:</strong> {getEffectPreview(skill)}
                 </div>
+                {skill.point_cost !== undefined && (
+                  <div className="flex items-center gap-2 text-sm pt-2 border-t">
+                    <Trophy className="h-4 w-4 text-amber-500" />
+                    <span className="font-medium">{skill.point_cost} points</span>
+                  </div>
+                )}
               </div>
             </CardContent>
           </Card>
