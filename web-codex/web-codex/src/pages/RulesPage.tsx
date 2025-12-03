@@ -71,6 +71,22 @@ const rulesSections = [
     category: 'Arcanotechnie'
   },
   {
+    id: '07_systeme_de_resistances',
+    title: 'Système de résistances',
+    description: 'Résistances physiques RMEC, RRAD et RINT',
+    icon: <Shield className="h-5 w-5" />,
+    color: 'bg-stone-100 text-stone-800 dark:bg-stone-900 dark:text-stone-300',
+    category: 'Combat'
+  },
+  {
+    id: '10_creation_personnage',
+    title: 'Création de personnage',
+    description: 'Système de Point Buy pour créer des personnages équilibrés',
+    icon: <Users className="h-5 w-5" />,
+    color: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300',
+    category: 'Fondamentaux'
+  },
+  {
     id: '09_lexique',
     title: 'Lexique',
     description: 'Définitions et terminologie du système de jeu',
