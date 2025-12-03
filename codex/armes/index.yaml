@@ -1,0 +1,9 @@
+files:
+  - baton.yaml
+  - epee_courte.yaml
+  - epee_legere.yaml
+  - epee_lourde.yaml
+  - fusil_a_pompe_surcharge.yaml
+  - fusil_de_sniper.yaml
+  - fusil_mitrailleur.yaml
+  - pistolet.yaml

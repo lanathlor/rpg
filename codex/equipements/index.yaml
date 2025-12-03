@@ -1,0 +1,12 @@
+files:
+  - armure_de_plate_legere.yaml
+  - armure_de_plate_lourde.yaml
+  - bouclier.yaml
+  - drone_de_combat.yaml
+  - exosquelette_de_combat.yaml
+  - exosquelette_de_traque.yaml
+  - exosquelette_de_vitesse.yaml
+  - exosquelette_stabilisateur.yaml
+  - implant_neural_militaire.yaml
+  - tenue_de_survie.yaml
+  - tunique.yaml

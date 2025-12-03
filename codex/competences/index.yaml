@@ -1,0 +1,19 @@
+files:
+  - a_laffut.yaml
+  - armure_d_arcanotechnie.yaml
+  - champ_electromagnetique.yaml
+  - charismatique.yaml
+  - comprehension_de_la_nature.yaml
+  - connaisseur_d_arcanotechnie.yaml
+  - course.yaml
+  - expert_des_terrains.yaml
+  - guerrier.yaml
+  - hackeur.yaml
+  - ingenieur.yaml
+  - oeil_daigle.yaml
+  - rodeur.yaml
+  - scientifique.yaml
+  - tacticien.yaml
+  - traque.yaml
+  - veteran.yaml
+  - vue_des_quantiques.yaml
