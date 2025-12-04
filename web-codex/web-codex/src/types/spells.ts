@@ -55,6 +55,7 @@ export interface Spell extends BaseItem {
   school?: string
   type?: string
   description_base?: string
+  player_castable?: boolean
   levels?: SpellLevel[]
 }
 

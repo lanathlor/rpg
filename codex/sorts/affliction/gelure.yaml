@@ -1,5 +1,6 @@
 spell_series: "Gelure"
 description_base: "La cible est victime de gelure, perturbant ses sens. Effect de gel cumulatif qui ralentit et affaiblit progressivement la victime."
+player_castable: false
 
 school: givre
 type: affliction

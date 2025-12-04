@@ -14,6 +14,12 @@ export interface ArmorStats {
   inventory_bonus?: string
   special_abilities?: string[]
 
+  // Bonus stats
+  speed_bonus?: string
+  hacking_bonus?: string
+  saving_throw_bonus?: string
+  conditional_bonus?: string
+
   // Drone-specific stats
   health?: string
   speed?: string

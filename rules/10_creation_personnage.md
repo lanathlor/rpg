@@ -10,6 +10,7 @@ Le système de Point Buy permet de construire des personnages équilibrés en at
 
 Le Point Buy évalue la puissance d'un personnage en calculant le coût total de ses capacités. Chaque élément du personnage a un coût en points :
 
+-   **Statistiques de base** : Points de Vie (PV), Vitesse de déplacement
 -   **Statistiques** : Force, Dextérité, Constitution, Intelligence, Perception, Précision, Charisme
 -   **Affinités** : Combat (mêlée/distance), écoles d'arcanotechnie, types de sorts, armes spéciales
 -   **Système de Flux** : Réserve, régénération par tour, récupération
@@ -22,7 +23,83 @@ Le MJ déterminera le budget de points approprié pour la campagne.
 
 ---
 
-## 2. Coût des Statistiques
+## 2. Coût des Statistiques de Base (PV et Vitesse)
+
+Les statistiques de base représentent les capacités physiques fondamentales de votre personnage : ses **Points de Vie (PV)** et sa **Vitesse** de déplacement.
+
+### Points de Vie (PV)
+
+Les Points de Vie déterminent la résistance de votre personnage aux dégâts.
+
+| PV     | Coût            | Description               |
+| ------ | --------------- | ------------------------- |
+| 30     | 0 pts (gratuit) | Base de référence         |
+| 31-33  | 1 pt            | Légèrement plus résistant |
+| 34-60  | 2-10 pts        | Progression normale       |
+| 61-90  | 11-20 pts       | Très résistant            |
+| 91-120 | 21-30 pts       | Extrêmement durable       |
+
+**Formule : 1 point par tranche de 3 PV au-dessus de 30 (arrondi au supérieur)**
+
+#### Exemples
+
+-   **PV 30** : 0 pts (base gratuite)
+-   **PV 45** : 5 pts ((45-30)÷3 = 5)
+-   **PV 60** : 10 pts ((60-30)÷3 = 10)
+-   **PV 90** : 20 pts ((90-30)÷3 = 20)
+-   **PV 100** : 24 pts ((100-30)÷3 = 23.33, arrondi à 24)
+
+### Vitesse de Déplacement
+
+La Vitesse détermine combien de mètres votre personnage peut se déplacer en un tour.
+
+| Vitesse | Coût            | Description                     |
+| ------- | --------------- | ------------------------------- |
+| 3 m     | 0 pts (gratuit) | Vitesse de base (humain normal) |
+| 4 m     | 5 pts           | Plus rapide que la moyenne      |
+| 5 m     | 10 pts          | Rapide                          |
+| 6 m     | 15 pts          | Très rapide                     |
+| 7 m     | 20 pts          | Extrêmement rapide              |
+| 8 m+    | 25+ pts         | Vitesse surhumaine              |
+
+**Formule : 5 points par point de Vitesse au-dessus de 3**
+
+#### Exemples
+
+-   **Vitesse 3** : 0 pts (base gratuite)
+-   **Vitesse 5** : 10 pts ((5-3)×5 = 10)
+-   **Vitesse 6** : 15 pts ((6-3)×5 = 15)
+-   **Vitesse 8** : 25 pts ((8-3)×5 = 25)
+
+### Conseil de construction
+
+**Stats de base typiques :**
+
+-   **Lanceur de sorts** : PV 60 (10 pts) + Vitesse 5 (10 pts) = **20 points**
+
+    -   Privilégie la mobilité pour garder ses distances
+
+-   **Combattant équilibré** : PV 90 (20 pts) + Vitesse 5 (10 pts) = **30 points**
+
+    -   Bon équilibre entre résistance et mobilité
+
+-   **Tank lourd** : PV 120 (30 pts) + Vitesse 4 (5 pts) = **35 points**
+
+    -   Maximise la survie au détriment de la vitesse
+
+-   **Assassin agile** : PV 60 (10 pts) + Vitesse 7 (20 pts) = **30 points**
+    -   Privilégie la mobilité et l'évasion
+
+**Fourchette typique : 15-35 points en stats de base**
+
+### Rationale des coûts
+
+-   **PV** : Le coût augmente linéairement mais reste modéré (1 pt/3 PV). Doubler ses PV de 30 à 60 ne coûte que 10 points.
+-   **Vitesse** : Coût élevé (5 pts/point) car la mobilité tactique est très puissante au combat. +1 m de déplacement peut être décisif.
+
+---
+
+## 3. Coût des Statistiques de Personnage
 
 Chaque statistique commence à **8 gratuitement**. Augmenter une statistique au-delà coûte des points selon la progression suivante :
 
@@ -52,7 +129,7 @@ Un personnage typique avec 7 statistiques :
 
 ---
 
-## 3. Coût des Affinités
+## 4. Coût des Affinités
 
 Les affinités déterminent quelles armes et sorts un personnage peut utiliser efficacement.
 
@@ -105,7 +182,7 @@ Un mage spécialisé en glace :
 
 ---
 
-## 4. Coût du Système de Flux
+## 5. Coût du Système de Flux
 
 Le Flux représente l'énergie arcanotechnique disponible pour lancer des sorts. C'est un facteur majeur de puissance pour les lanceurs de sorts.
 
@@ -139,7 +216,7 @@ Le Flux représente l'énergie arcanotechnique disponible pour lancer des sorts.
 
 ---
 
-## 5. Coût de l'Équipement
+## 6. Coût de l'Équipement
 
 L'équipement se convertit en points selon sa valeur en crédits :
 
@@ -169,7 +246,7 @@ Un personnage typique dépense **4-15 points en équipement** selon son style :
 
 ---
 
-## 6. Coût des Compétences
+## 7. Coût des Compétences
 
 Les compétences sont classées par paliers selon leur puissance et utilité :
 
@@ -194,7 +271,7 @@ Un personnage possède généralement **2-4 compétences**, pour un total de **1
 
 ---
 
-## 7. Exemple Complet : Création d'un Mage de Glace
+## 8. Exemple Complet : Création d'un Mage de Glace
 
 Créons un arcanotechnicien spécialisé dans l'école du Givre.
 
@@ -202,7 +279,16 @@ Créons un arcanotechnicien spécialisé dans l'école du Givre.
 
 Un lanceur de sorts spécialisé en contrôle de zone et dégâts de glace, avec une défense arcanotechnique.
 
-### Statistiques (49 points)
+### Statistiques de Base (20 points)
+
+-   **PV : 60** → 10 pts ((60-30)÷3 = 10)
+-   **Vitesse : 5 m** → 10 pts ((5-3)×5 = 10)
+
+**Total : 20 points**
+
+Un profil typique de lanceur de sorts : survivabilité correcte avec bonne mobilité pour se repositionner.
+
+### Statistiques de Personnage (49 points)
 
 | Stat | Valeur | Coût |
 | ---- | ------ | ---- | ------------------------ |
@@ -254,41 +340,45 @@ Un lanceur de sorts spécialisé en contrôle de zone et dégâts de glace, avec
 
 ### Récapitulatif
 
-| Catégorie    | Points  | % du total |
-| ------------ | ------- | ---------- |
-| Statistiques | 49      | 23%        |
-| Affinités    | 81      | 38%        |
-| Flux         | 60      | 28%        |
-| Équipement   | 4       | 2%         |
-| Compétences  | 20      | 9%         |
-| **TOTAL**    | **214** | **100%**   |
+| Catégorie                  | Points  | % du total |
+| -------------------------- | ------- | ---------- |
+| Stats de base (PV/Vitesse) | 20      | 9%         |
+| Statistiques               | 49      | 21%        |
+| Affinités                  | 81      | 35%        |
+| Flux                       | 60      | 26%        |
+| Équipement                 | 4       | 2%         |
+| Compétences                | 20      | 9%         |
+| **TOTAL**                  | **234** | **100%**   |
 
 Ce personnage se situe dans le palier **Moyen-Élevé**, avec une forte capacité de lancement de sorts grâce à son Flux élevé et ses affinités arcanotechniques.
 
 ---
 
-## 8. Conseils de Construction
+## 9. Conseils de Construction
 
 ### Répartition Typique par Archétype
 
-**Lanceur de sorts pur** (200-220 points) :
+**Lanceur de sorts pur** (220-240 points) :
 
+-   Stats de base : 15-25 pts (PV moyens, Vitesse élevée)
 -   Stats : 45-55 pts (INT élevé)
 -   Affinités : 70-90 pts (écoles et types variés)
 -   Flux : 50-65 pts (réserve et régénération élevées)
 -   Équipement : 4-8 pts (équipement léger)
 -   Compétences : 15-25 pts (2-3 compétences magiques)
 
-**Combattant martial** (185-200 points) :
+**Combattant martial** (205-220 points) :
 
+-   Stats de base : 25-35 pts (PV élevés, Vitesse moyenne)
 -   Stats : 55-65 pts (FOR/DEX/CON élevés)
 -   Affinités : 80-100 pts (combat + armes spéciales)
 -   Flux : 15-25 pts (sorts mineurs uniquement)
 -   Équipement : 6-14 pts (armure et armes de qualité)
 -   Compétences : 20-30 pts (compétences de combat)
 
-**Hybride combat/magie** (220-235 points) :
+**Hybride combat/magie** (240-255 points) :
 
+-   Stats de base : 20-30 pts (équilibre PV/Vitesse)
 -   Stats : 55-60 pts (plusieurs stats élevées)
 -   Affinités : 90-110 pts (combat ET arcanotechnie)
 -   Flux : 40-55 pts (capacité de sorts modérée)
@@ -310,7 +400,7 @@ Un personnage "sous-optimisé" avec un concept intéressant sera souvent plus m�
 
 ---
 
-## 9. Validation avec le MJ
+## 10. Validation avec le MJ
 
 Avant de finaliser votre personnage :
 
@@ -323,7 +413,7 @@ Le MJ peut autoriser des ajustements mineurs pour respecter le concept du person
 
 ---
 
-## 10. Progression et Expérience
+## 11. Progression et Expérience
 
 Le système de Point Buy sert principalement à la création initiale. La progression du personnage en cours de campagne sera gérée par le système d'expérience défini par le MJ.
 

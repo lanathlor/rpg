@@ -137,13 +137,19 @@ export function SpellsPage() {
                 <div className="flex gap-2">
                   {spell.school && (
                     <Badge className={getSchoolColor(spell.school)}>
-                      {getSchoolIcon(spell.school)}
+                      {(() => {
+                        const Icon = getSchoolIcon(spell.school)
+                        return <Icon className="h-4 w-4" />
+                      })()}
                       <span className="ml-1">{spell.school}</span>
                     </Badge>
                   )}
                   {spell.type && (
                     <Badge className={getTypeColor(spell.type)}>
-                      {getTypeIcon(spell.type)}
+                      {(() => {
+                        const Icon = getTypeIcon(spell.type)
+                        return <Icon className="h-4 w-4" />
+                      })()}
                       <span className="ml-1">{spell.type}</span>
                     </Badge>
                   )}

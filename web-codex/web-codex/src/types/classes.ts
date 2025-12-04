@@ -41,6 +41,7 @@ export interface CharacterClass extends BaseItem {
   skills: string[]
   spells?: string[]
   gameplay_guide: string
+  starting_credits?: number  // Starting money budget (default: 0)
 }
 
 export type ClassCategory = 'Classe de personnage'

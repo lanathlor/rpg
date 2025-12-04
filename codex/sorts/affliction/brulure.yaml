@@ -1,5 +1,6 @@
 spell_series: Brûlure
 description_base: Brule la chair de la personne touchée.
+player_castable: false
 levels:
   - level: "1"
     name: Brûlure

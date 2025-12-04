@@ -11,6 +11,9 @@ export interface Prerequisites {
   stat?: string
   special?: string
   equipment?: string  // For drone/proxy items
+  skill?: string  // Legacy format: "Compétence Hackeur ou Ingénieur"
+  skill_any_of?: string[]  // New format: ["Hackeur", "Ingénieur"]
+  skill_all_of?: string[]  // For future use: all skills required
   affinities?: {
     école_requirement?: string
     type_requirement?: string

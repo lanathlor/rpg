@@ -4,7 +4,9 @@ subcategory: "implant"
 type: "neural"
 cost: "4000 crédits"
 prerequisites:
-  skill: "Compétence Hackeur ou Ingénieur"
+  skill_any_of:
+    - "Hackeur"
+    - "Ingénieur"
 stats:
   hacking_bonus: "+2 au jet de piratage"
   special: "Réduit les chances de deadlock des mainframes"

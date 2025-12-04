@@ -274,6 +274,42 @@ export function ArmorDetail({ armor }: ArmorDetailProps) {
                 </div>
               </div>
             )}
+            {/* Speed bonus */}
+            {armor.stats.speed_bonus && (
+              <div>
+                <span className="font-medium text-sm text-amber-600 dark:text-amber-400">Bonus de vitesse:</span>
+                <div className="text-sm text-muted-foreground mt-1">
+                  {armor.stats.speed_bonus}
+                </div>
+              </div>
+            )}
+            {/* Hacking bonus */}
+            {armor.stats.hacking_bonus && (
+              <div>
+                <span className="font-medium text-sm text-cyan-600 dark:text-cyan-400">Bonus de piratage:</span>
+                <div className="text-sm text-muted-foreground mt-1">
+                  {armor.stats.hacking_bonus}
+                </div>
+              </div>
+            )}
+            {/* Saving throw bonus */}
+            {armor.stats.saving_throw_bonus && (
+              <div>
+                <span className="font-medium text-sm text-emerald-600 dark:text-emerald-400">Bonus de sauvegarde:</span>
+                <div className="text-sm text-muted-foreground mt-1">
+                  {armor.stats.saving_throw_bonus}
+                </div>
+              </div>
+            )}
+            {/* Conditional bonus */}
+            {armor.stats.conditional_bonus && (
+              <div>
+                <span className="font-medium text-sm text-violet-600 dark:text-violet-400">Bonus conditionnel:</span>
+                <div className="text-sm text-muted-foreground mt-1">
+                  {armor.stats.conditional_bonus}
+                </div>
+              </div>
+            )}
             {/* Legacy fields for backward compatibility */}
             {armor.stats.armor_value && (
               <div>

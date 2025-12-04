@@ -7,53 +7,53 @@ import {
 export const getSchoolIcon = (school: string) => {
   switch (school) {
     case 'feu':
-      return <Flame className="h-4 w-4" />
+      return Flame
     case 'givre':
-      return <Snowflake className="h-4 w-4" />
+      return Snowflake
     case 'électricité':
     case 'electricite':
-      return <Zap className="h-4 w-4" />
+      return Zap
     case 'kinesthésique':
     case 'kinestesique':
-      return <Gauge className="h-4 w-4" />
+      return Gauge
     case 'lumière':
     case 'lumiere':
-      return <Sun className="h-4 w-4" />
+      return Sun
     case 'ombre':
-      return <Moon className="h-4 w-4" />
+      return Moon
     case 'biométabolique':
     case 'biométabolique':
-      return <Skull className="h-4 w-4" />
+      return Skull
     case 'quantique':
-      return <Sparkles className="h-4 w-4" />
+      return Sparkles
     case 'pure':
-      return <CircleDot className="h-4 w-4" />
+      return CircleDot
     case 'aérocinétique':
     case 'aerocinétique':
     case 'aerocinétique':
-      return <Wind className="h-4 w-4" />
+      return Wind
     case 'hydrodynamique':
-      return <Droplets className="h-4 w-4" />
+      return Droplets
     case 'magnétique':
     case 'magnetique':
-      return <Magnet className="h-4 w-4" />
+      return Magnet
     case 'bioarcanotechnique':
     case 'bio-arcanotechnie':
-      return <Heart className="h-4 w-4" />
+      return Heart
     case 'sonique':
-      return <Volume2 className="h-4 w-4" />
+      return Volume2
     case 'chronodynamique':
-      return <Clock className="h-4 w-4" />
+      return Clock
     case 'gravitonique':
-      return <Waves className="h-4 w-4" />
+      return Waves
     case 'illusion':
-      return <Eye className="h-4 w-4" />
+      return Eye
     case 'martial':
-      return <Sword className="h-4 w-4" />
+      return Sword
     case 'balistique':
-      return <Target className="h-4 w-4" />
+      return Target
     default:
-      return <Sparkles className="h-4 w-4" />
+      return Sparkles
   }
 }
 
@@ -113,23 +113,23 @@ export const getSchoolColor = (school: string) => {
 export const getTypeIcon = (type: string) => {
   switch (type) {
     case 'destruction':
-      return <Skull className="h-4 w-4" />
+      return Skull
     case 'protection':
-      return <Shield className="h-4 w-4" />
+      return Shield
     case 'arme':
-      return <Sword className="h-4 w-4" />
+      return Sword
     case 'deplacement':
     case 'déplacement':
-      return <ArrowRight className="h-4 w-4" />
+      return ArrowRight
     case 'alteration':
     case 'altération':
-      return <Sparkles className="h-4 w-4" />
+      return Sparkles
     case 'amelioration':
     case 'amélioration':
-      return <Users className="h-4 w-4" />
+      return Users
     case 'affliction':
     default:
-      return <Sparkles className="h-4 w-4" />
+      return Sparkles
   }
 }
 

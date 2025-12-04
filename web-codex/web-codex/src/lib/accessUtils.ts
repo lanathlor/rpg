@@ -139,6 +139,14 @@ export function checkSpellAccess(spellLevel: SpellLevel, characterAffinities: Af
 
 // Check if character can access a spell (checks all levels and returns access to any level)
 export function checkSpellSeriesAccess(spell: Spell, characterAffinities: AffinityStats): AccessResult {
+  // Check if spell is player-castable (defaults to true if not specified)
+  if (spell.player_castable === false) {
+    return {
+      hasAccess: false,
+      requirements: ['Ce sort ne peut pas être lancé directement par un joueur']
+    }
+  }
+
   // Check if character can access any level of the spell
   for (const level of spell.levels) {
     const access = checkSpellAccess(level, characterAffinities)
@@ -199,15 +207,128 @@ export function checkWeaponAccess(weapon: Weapon, character: CharacterClass): Ac
     }
   }
 
-  // If we can't parse the requirement, assume it's accessible
-  return { hasAccess: true }
+  // Handle special weapon affinities: "A. fusil à pompe 2", "A. sniper 1", etc.
+  const specialWeaponMatch = affinityReq.match(/A\.\s*(.+?)\s+(\d+)/)
+  if (specialWeaponMatch) {
+    const weaponType = specialWeaponMatch[1].trim()
+    const requiredLevel = parseInt(specialWeaponMatch[2])
+
+    // Normalize weapon type name for lookup (e.g., "fusil à pompe" -> "fusil_a_pompe")
+    const normalizedType = weaponType
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '') // Remove diacritics
+      .replace(/\s+/g, '_')
+      .replace(/'/g, '')
+
+    const currentLevel = (character.affinities as any)[normalizedType] || 0
+
+    if (currentLevel >= requiredLevel) {
+      return { hasAccess: true }
+    }
+
+    return {
+      hasAccess: false,
+      reason: `Requires ${weaponType} affinity ≥ ${requiredLevel}`,
+      requirements: [`${weaponType} affinity ≥ ${requiredLevel}`],
+      current: [`${weaponType} affinity: ${currentLevel}`]
+    }
+  }
+
+  // If we can't parse the requirement, deny access (safer default)
+  return {
+    hasAccess: false,
+    reason: `Unknown affinity requirement: ${affinityReq}`,
+    requirements: [affinityReq]
+  }
 }
 
 // Check armor access based on stat requirements
 export function checkArmorAccess(armor: Armor, character: CharacterClass): AccessResult {
   const { prerequisites } = armor
 
-  if (!prerequisites?.stat) {
+  // If no prerequisites at all, allow access
+  if (!prerequisites) {
+    return { hasAccess: true }
+  }
+
+  // If explicitly has no requirements
+  if (prerequisites.none === true) {
+    return { hasAccess: true }
+  }
+
+  // Check equipment prerequisite (e.g., "Implant neural")
+  if (prerequisites.equipment) {
+    const requiredEquipment = prerequisites.equipment
+    // Check if character has the required equipment
+    const hasEquipment = character.equipment?.armor?.includes(requiredEquipment) ||
+                        character.equipment?.weapons?.includes(requiredEquipment)
+
+    if (!hasEquipment) {
+      return {
+        hasAccess: false,
+        reason: `Requires equipment: ${requiredEquipment}`,
+        requirements: [`Equipment: ${requiredEquipment}`]
+      }
+    }
+  }
+
+  // Check skill prerequisites (new structured format)
+  if (prerequisites.skill_any_of) {
+    // Character must have at least one of the listed skills
+    const hasRequiredSkill = prerequisites.skill_any_of.some(skillName =>
+      character.skills?.includes(skillName)
+    )
+
+    if (!hasRequiredSkill) {
+      return {
+        hasAccess: false,
+        reason: `Requires one of: ${prerequisites.skill_any_of.join(' or ')}`,
+        requirements: [`Skill: ${prerequisites.skill_any_of.join(' or ')}`]
+      }
+    }
+  }
+
+  if (prerequisites.skill_all_of) {
+    // Character must have all of the listed skills
+    const hasAllSkills = prerequisites.skill_all_of.every(skillName =>
+      character.skills?.includes(skillName)
+    )
+
+    if (!hasAllSkills) {
+      return {
+        hasAccess: false,
+        reason: `Requires all of: ${prerequisites.skill_all_of.join(' and ')}`,
+        requirements: [`Skills: ${prerequisites.skill_all_of.join(' and ')}`]
+      }
+    }
+  }
+
+  // Legacy skill prerequisite format (e.g., "Compétence Hackeur ou Ingénieur")
+  if (prerequisites.skill) {
+    const requiredSkill = prerequisites.skill
+
+    // Parse skills separated by "ou" (or)
+    const skillOptions = requiredSkill
+      .replace(/Compétence\s+/gi, '')
+      .split(/\s+ou\s+/i)
+      .map(s => s.trim())
+
+    const hasRequiredSkill = skillOptions.some(skillName =>
+      character.skills?.includes(skillName)
+    )
+
+    if (!hasRequiredSkill) {
+      return {
+        hasAccess: false,
+        reason: `Requires skill: ${requiredSkill}`,
+        requirements: [requiredSkill]
+      }
+    }
+  }
+
+  // If no stat requirement, allow access
+  if (!prerequisites.stat) {
     return { hasAccess: true }
   }
 
@@ -340,8 +461,12 @@ export function checkArmorAccess(armor: Armor, character: CharacterClass): Acces
     }
   }
 
-  // If we can't parse the requirement, assume it's accessible
-  return { hasAccess: true }
+  // If we can't parse the requirement, deny access (safer default)
+  return {
+    hasAccess: false,
+    reason: `Unknown stat requirement: ${statReq}`,
+    requirements: [statReq]
+  }
 }
 
 // Check skill access (placeholder - may depend on stats or prerequisites)
@@ -390,4 +515,33 @@ export function getDetailedAccessInfo(accessResult: AccessResult): string {
   }
 
   return info.trim()
+}
+
+// Wrapper functions for simpler boolean checks in components
+export function hasAccessToSpell(spell: Spell, affinities: AffinityStats): boolean {
+  return checkSpellSeriesAccess(spell, affinities).hasAccess
+}
+
+export function hasAccessToWeapon(weapon: Weapon, affinities: AffinityStats, stats: any): boolean {
+  // Create a minimal character object for the check
+  const character: CharacterClass = {
+    affinities,
+    stats,
+    base_stats: { health: 0, speed: 0 },
+    equipment: {},
+    skills: [],
+  }
+  return checkWeaponAccess(weapon, character).hasAccess
+}
+
+export function hasAccessToArmor(armor: Armor, affinities: AffinityStats, stats: any): boolean {
+  // Create a minimal character object for the check
+  const character: CharacterClass = {
+    affinities,
+    stats,
+    base_stats: { health: 0, speed: 0 },
+    equipment: {},
+    skills: [],
+  }
+  return checkArmorAccess(armor, character).hasAccess
 }

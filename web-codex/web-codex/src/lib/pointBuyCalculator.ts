@@ -3,11 +3,14 @@ import type { Weapon } from '@/types/weapons'
 import type { Armor } from '@/types/armor'
 import type { Skill } from '@/types/skills'
 import type { Consumable } from '@/types/consumables'
+import type { Spell } from '@/types/spells'
+import { checkSpellSeriesAccess, checkWeaponAccess, checkArmorAccess } from './accessUtils'
 
 /**
  * Point Buy Calculator
  *
  * Calculates point buy costs for character classes based on:
+ * - Base Stats (health: 1pt per 3 PV above 30, speed: 5pts per point above 3)
  * - Stats (with 1.5x multiplier, rounded up)
  * - Affinities (tiered system by school rarity)
  * - Flux system (reserve, per_turn, recovery)
@@ -111,6 +114,42 @@ export function calculateStatsCost(stats: {
 }
 
 /**
+ * Calculate cost for health (PV)
+ * Base 30 is free
+ * 1 pt per 3 PV above baseline (rounded up)
+ */
+export function calculateHealthCost(health: number): number {
+  const baseline = 30
+  if (health <= baseline) return 0
+
+  const above = health - baseline
+  return Math.ceil(above / 3)
+}
+
+/**
+ * Calculate cost for speed (vitesse)
+ * Base 3 is free
+ * 5 pts per speed point above baseline
+ */
+export function calculateSpeedCost(speed: number): number {
+  const baseline = 3
+  if (speed <= baseline) return 0
+
+  const above = speed - baseline
+  return above * 5
+}
+
+/**
+ * Calculate total base stats cost (health + speed)
+ */
+export function calculateBaseStatsCost(baseStats: {
+  health: number
+  speed: number
+}): number {
+  return calculateHealthCost(baseStats.health) + calculateSpeedCost(baseStats.speed)
+}
+
+/**
  * Calculate cost for a single affinity (school, type, or combat)
  */
 export function calculateAffinityCost(affinityType: string, level: number): number {
@@ -210,9 +249,9 @@ export function parseEquipmentCost(costString?: string): number {
 }
 
 /**
- * Calculate equipment point cost (credits / 400, rounded up)
+ * Calculate total credits spent on equipment
  */
-export function calculateEquipmentCost(
+export function calculateTotalCreditsSpent(
   equipment: {
     weapons?: string[]
     armor?: string[]
@@ -255,6 +294,29 @@ export function calculateEquipmentCost(
     })
   }
 
+  return totalCredits
+}
+
+/**
+ * Calculate equipment point cost (credits / 400, rounded up)
+ */
+export function calculateEquipmentCost(
+  equipment: {
+    weapons?: string[]
+    armor?: string[]
+    consumables?: Array<{ name: string; quantity?: number }>
+  },
+  allWeapons: Weapon[],
+  allArmor: Armor[],
+  allConsumables: Consumable[]
+): number {
+  const totalCredits = calculateTotalCreditsSpent(
+    equipment,
+    allWeapons,
+    allArmor,
+    allConsumables
+  )
+
   // Convert credits to points (divide by 400, round up)
   return Math.ceil(totalCredits / 400)
 }
@@ -276,6 +338,7 @@ export function calculateCompetenceCost(
  * Main calculation function - returns breakdown and total
  */
 export interface PointBuyBreakdown {
+  baseStats: number
   stats: number
   affinities: number
   flux: number
@@ -291,6 +354,7 @@ export function calculateTotalPointBuy(
   allSkills: Skill[],
   allConsumables: Consumable[]
 ): PointBuyBreakdown {
+  const baseStats = calculateBaseStatsCost(characterClass.base_stats)
   const stats = calculateStatsCost(characterClass.stats)
   const affinities = calculateAffinitiesCost(characterClass.affinities)
   const flux = calculateFluxCost(characterClass.flux_system)
@@ -306,12 +370,13 @@ export function calculateTotalPointBuy(
   )
 
   return {
+    baseStats,
     stats,
     affinities,
     flux,
     equipment,
     competences,
-    total: stats + affinities + flux + equipment + competences,
+    total: baseStats + stats + affinities + flux + equipment + competences,
   }
 }
 
@@ -352,5 +417,85 @@ export function getCompetenceTier(pointCost: number): {
     return { tier: 'D', colorClass: 'text-blue-600' }
   } else {
     return { tier: 'E', colorClass: 'text-gray-600' }
+  }
+}
+
+/**
+ * Calculate total points for character (shorthand for calculateTotalPointBuy().total)
+ */
+export function calculateTotalPoints(
+  character: any,
+  allWeapons: Weapon[],
+  allArmor: Armor[],
+  allSkills: Skill[],
+  allConsumables: Consumable[]
+): number {
+  const breakdown = calculateTotalPointBuy(character, allWeapons, allArmor, allSkills, allConsumables)
+  return breakdown.total
+}
+
+/**
+ * Check if character is legal (can use all equipped items/spells)
+ * A character is illegal if they have items/spells with unmet prerequisites
+ */
+export function isCharacterLegal(
+  character: any,
+  allWeapons: Weapon[],
+  allArmors: Armor[],
+  allSkills: Skill[],
+  allConsumables: Consumable[],
+  allSpells: Spell[]
+): { isLegal: boolean; issues: string[] } {
+  const issues: string[] = []
+
+  // Check budget limit
+  const creditsSpent = calculateTotalCreditsSpent(character.equipment, allWeapons, allArmors, allConsumables)
+  const budget = character.starting_credits || 0
+  if (creditsSpent > budget) {
+    issues.push(`Budget dépassé: ${creditsSpent.toLocaleString()}/${budget.toLocaleString()} crédits`)
+  }
+
+  // Check spells
+  if (character.spells && Array.isArray(character.spells)) {
+    character.spells.forEach((spellName: string) => {
+      const spell = allSpells.find(s => s.spell_series === spellName || s.name === spellName)
+      if (spell) {
+        const accessResult = checkSpellSeriesAccess(spell, character.affinities)
+        if (!accessResult.hasAccess) {
+          issues.push(`Sort "${spellName}": prérequis non remplis`)
+        }
+      }
+    })
+  }
+
+  // Check weapons
+  if (character.equipment?.weapons && Array.isArray(character.equipment.weapons)) {
+    character.equipment.weapons.forEach((weaponName: string) => {
+      const weapon = allWeapons.find(w => w.name === weaponName)
+      if (weapon) {
+        const accessResult = checkWeaponAccess(weapon, character)
+        if (!accessResult.hasAccess) {
+          issues.push(`Arme "${weaponName}": prérequis non remplis`)
+        }
+      }
+    })
+  }
+
+  // Check armor
+  if (character.equipment?.armor && Array.isArray(character.equipment.armor)) {
+    character.equipment.armor.forEach((armorName: string) => {
+      const armor = allArmors.find(a => a.name === armorName)
+      if (armor) {
+        const accessResult = checkArmorAccess(armor, character)
+        if (!accessResult.hasAccess) {
+          issues.push(`Armure "${armorName}": prérequis non remplis`)
+        }
+      }
+    })
+  }
+
+  return {
+    isLegal: issues.length === 0,
+    issues
   }
 }

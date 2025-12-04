@@ -338,11 +338,17 @@ export function SpellDetail({ spell }: SpellDetailProps) {
           </div>
           <div className="flex gap-2">
             <Badge className={getSchoolColor(spell.school)}>
-              {getSchoolIcon(spell.school)}
+              {(() => {
+                const Icon = getSchoolIcon(spell.school)
+                return <Icon className="h-4 w-4" />
+              })()}
               <span className="ml-1 capitalize">{spell.school}</span>
             </Badge>
             <Badge className={getTypeColor(spell.type)}>
-              {getTypeIcon(spell.type)}
+              {(() => {
+                const Icon = getTypeIcon(spell.type)
+                return <Icon className="h-4 w-4" />
+              })()}
               <span className="ml-1 capitalize">{spell.type}</span>
             </Badge>
           </div>

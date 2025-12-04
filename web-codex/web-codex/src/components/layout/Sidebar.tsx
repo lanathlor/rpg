@@ -5,6 +5,7 @@ import {
   Shield,
   Sparkles,
   Users,
+  User,
   Zap,
   Package,
   Search,
@@ -48,6 +49,12 @@ const navigationItems = [
     href: '/classes',
     icon: Users,
     description: 'Classes de personnages',
+  },
+  {
+    name: 'Personnages',
+    href: '/personnages',
+    icon: User,
+    description: 'Créer et gérer vos personnages',
   },
   {
     name: 'Compétences',
