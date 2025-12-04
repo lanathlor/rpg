@@ -93,6 +93,14 @@ const rulesSections = [
     icon: <BookOpen className="h-5 w-5" />,
     color: 'bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300',
     category: 'Référence'
+  },
+  {
+    id: '11_comment_contribuer',
+    title: 'Comment contribuer',
+    description: 'Guide pour participer au développement du jeu et créer du contenu',
+    icon: <Users className="h-5 w-5" />,
+    color: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300',
+    category: 'Référence'
   }
 ]
 
