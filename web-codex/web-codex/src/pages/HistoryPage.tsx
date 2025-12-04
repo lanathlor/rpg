@@ -1,185 +1,136 @@
-import { useState, useEffect } from 'react'
-import ReactMarkdown from 'react-markdown'
-import remarkGfm from 'remark-gfm'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Link } from 'react-router-dom'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
-import { BookOpen, Calendar, Scroll } from 'lucide-react'
+import {
+  Clock,
+  BookOpen,
+  Shield,
+  Users,
+  TrendingUp,
+  Sparkles,
+  ArrowRight,
+} from 'lucide-react'
+
+const historySections = [
+  {
+    id: 'introduction',
+    title: 'Introduction',
+    description: 'Vue d\'ensemble de l\'histoire et chronologie des périodes clés',
+    icon: <Clock className="h-5 w-5" />,
+    color: 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300',
+    category: 'Chronologie'
+  },
+  {
+    id: 'resume_historique',
+    title: 'Résumé historique',
+    description: 'Fondation de l\'Empire, expansion et guerre avec les Acéras',
+    icon: <BookOpen className="h-5 w-5" />,
+    color: 'bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-300',
+    category: 'Chronologie'
+  },
+  {
+    id: 'contexte_militaire',
+    title: 'Contexte militaire',
+    description: 'Structure de l\'armée impériale et catégories d\'unités',
+    icon: <Shield className="h-5 w-5" />,
+    color: 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300',
+    category: 'Contexte'
+  },
+  {
+    id: 'contexte_politique',
+    title: 'Contexte politique',
+    description: 'Le Conseil des Gardiens et la structure gouvernementale de l\'Empire',
+    icon: <Users className="h-5 w-5" />,
+    color: 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300',
+    category: 'Contexte'
+  },
+  {
+    id: 'contexte_economique',
+    title: 'Contexte économique',
+    description: 'Économie, technologie de voyage et production industrielle',
+    icon: <TrendingUp className="h-5 w-5" />,
+    color: 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300',
+    category: 'Contexte'
+  },
+  {
+    id: 'arcanotechnie',
+    title: 'Arcanotechnie et technologie',
+    description: 'Nature fondamentale de l\'arcanotechnie et révolution technologique',
+    icon: <Sparkles className="h-5 w-5" />,
+    color: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300',
+    category: 'Technologie'
+  }
+]
+
+const categories = [...new Set(historySections.map(section => section.category))].sort()
+
+const getCategoryIcon = (category: string) => {
+  switch (category) {
+    case 'Chronologie':
+      return <Clock className="h-4 w-4" />
+    case 'Contexte':
+      return <BookOpen className="h-4 w-4" />
+    case 'Technologie':
+      return <Sparkles className="h-4 w-4" />
+    default:
+      return <BookOpen className="h-4 w-4" />
+  }
+}
 
 export function HistoryPage() {
-  const [content, setContent] = useState<string>('')
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState<string | null>(null)
-
-  useEffect(() => {
-    const fetchContent = async () => {
-      try {
-        setLoading(true)
-        setError(null)
-
-        const response = await fetch('/rules/08_histoire.md')
-
-        if (!response.ok) {
-          throw new Error(`Erreur lors du chargement: ${response.status}`)
-        }
-
-        const text = await response.text()
-        setContent(text)
-      } catch (err) {
-        setError(err instanceof Error ? err.message : 'Erreur de chargement')
-      } finally {
-        setLoading(false)
-      }
-    }
-
-    fetchContent()
-  }, [])
-
-  if (loading) {
-    return (
-      <div className="flex items-center justify-center h-64">
-        <div className="text-lg">Chargement de l'histoire...</div>
-      </div>
-    )
-  }
-
-  if (error) {
-    return (
-      <div className="space-y-6">
-        <div className="text-center py-12">
-          <h1 className="text-2xl font-bold text-red-600">Erreur de chargement</h1>
-          <p className="text-muted-foreground mt-2">{error}</p>
-          <Button
-            variant="outline"
-            className="mt-4"
-            onClick={() => window.location.reload()}
-          >
-            Réessayer
-          </Button>
-        </div>
-      </div>
-    )
-  }
-
   return (
     <div className="space-y-6">
-      <div className="flex items-center justify-between">
-        <div>
-          <h1 className="text-3xl font-bold tracking-tight flex items-center gap-3">
-            <Scroll className="h-8 w-8" />
-            Histoire du monde
-          </h1>
-          <p className="text-lg text-muted-foreground mt-2">
-            Chroniques et légendes de l'univers de jeu
-          </p>
-        </div>
-
-        <Badge variant="outline" className="flex items-center gap-2">
-          <Calendar className="h-3 w-3" />
-          Chroniques
-        </Badge>
+      <div>
+        <h1 className="text-3xl font-bold tracking-tight">Histoire du monde</h1>
+        <p className="text-lg text-muted-foreground">
+          Chroniques, contexte et légendes de l'univers de jeu
+        </p>
       </div>
 
-      <Card>
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <BookOpen className="h-5 w-5" />
-            Récit historique
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="prose prose-slate dark:prose-invert max-w-none">
-            <ReactMarkdown
-              remarkPlugins={[remarkGfm]}
-              components={{
-                h1: ({ children }) => (
-                  <h1 className="text-2xl font-bold mb-4 mt-8 first:mt-0 border-b border-border pb-2">
-                    {children}
-                  </h1>
-                ),
-                h2: ({ children }) => (
-                  <h2 className="text-xl font-semibold mb-3 mt-6 text-primary">
-                    {children}
-                  </h2>
-                ),
-                h3: ({ children }) => (
-                  <h3 className="text-lg font-semibold mb-2 mt-4">{children}</h3>
-                ),
-                p: ({ children }) => (
-                  <p className="mb-4 leading-relaxed text-justify">{children}</p>
-                ),
-                ul: ({ children }) => (
-                  <ul className="list-disc list-inside mb-4 space-y-2">{children}</ul>
-                ),
-                ol: ({ children }) => (
-                  <ol className="list-decimal list-inside mb-4 space-y-2">{children}</ol>
-                ),
-                li: ({ children }) => (
-                  <li className="leading-relaxed">{children}</li>
-                ),
-                strong: ({ children }) => (
-                  <strong className="font-semibold text-foreground">{children}</strong>
-                ),
-                em: ({ children }) => (
-                  <em className="italic text-muted-foreground">{children}</em>
-                ),
-                code: ({ children }) => (
-                  <code className="bg-muted px-1.5 py-0.5 rounded text-sm font-mono">
-                    {children}
-                  </code>
-                ),
-                pre: ({ children }) => (
-                  <pre className="bg-muted p-4 rounded-lg overflow-x-auto mb-4">
-                    {children}
-                  </pre>
-                ),
-                blockquote: ({ children }) => (
-                  <blockquote className="border-l-4 border-primary/50 pl-4 italic my-4 bg-muted/30 py-2 rounded-r">
-                    {children}
-                  </blockquote>
-                ),
-                table: ({ children }) => (
-                  <div className="overflow-x-auto mb-6">
-                    <table className="w-full border-collapse border border-border rounded-lg overflow-hidden">
-                      {children}
-                    </table>
-                  </div>
-                ),
-                thead: ({ children }) => (
-                  <thead className="bg-muted/70">
-                    {children}
-                  </thead>
-                ),
-                tbody: ({ children }) => (
-                  <tbody className="divide-y divide-border">
-                    {children}
-                  </tbody>
-                ),
-                th: ({ children }) => (
-                  <th className="border-r border-border last:border-r-0 px-4 py-3 text-left font-semibold text-sm">
-                    {children}
-                  </th>
-                ),
-                td: ({ children }) => (
-                  <td className="border-r border-border last:border-r-0 px-4 py-3 text-sm">
-                    {children}
-                  </td>
-                ),
-                tr: ({ children }) => (
-                  <tr className="hover:bg-muted/30 transition-colors">
-                    {children}
-                  </tr>
-                ),
-                hr: () => (
-                  <hr className="my-8 border-border" />
-                ),
-              }}
-            >
-              {content}
-            </ReactMarkdown>
+      {categories.map((category) => (
+        <div key={category} className="space-y-4">
+          <div className="flex items-center gap-2">
+            {getCategoryIcon(category)}
+            <h2 className="text-xl font-semibold">{category}</h2>
+            <Badge variant="outline">
+              {historySections.filter(section => section.category === category).length} section{historySections.filter(section => section.category === category).length > 1 ? 's' : ''}
+            </Badge>
           </div>
-        </CardContent>
-      </Card>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {historySections
+              .filter(section => section.category === category)
+              .map((section) => (
+                <Link
+                  key={section.id}
+                  to={`/histoire/${section.id}`}
+                  className="block"
+                >
+                  <Card className="hover:shadow-lg transition-all cursor-pointer group h-full">
+                    <CardHeader>
+                      <div className="flex justify-between items-start">
+                        <div className="flex items-center gap-3">
+                          <div className={`p-2 rounded-lg ${section.color.replace('text-', 'bg-').replace('bg-', 'bg-opacity-20 text-')}`}>
+                            {section.icon}
+                          </div>
+                          <div>
+                            <CardTitle className="text-lg group-hover:text-primary transition-colors">
+                              {section.title}
+                            </CardTitle>
+                          </div>
+                        </div>
+                        <ArrowRight className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
+                      </div>
+                      <CardDescription className="line-clamp-3">
+                        {section.description}
+                      </CardDescription>
+                    </CardHeader>
+                  </Card>
+                </Link>
+              ))}
+          </div>
+        </div>
+      ))}
     </div>
   )
 }

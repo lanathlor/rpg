@@ -14,6 +14,7 @@ import { CharacterCreatorPage } from '@/pages/CharacterCreatorPage'
 import { RulesPage } from '@/pages/RulesPage'
 import { RuleDetailPage } from '@/pages/RuleDetailPage'
 import { HistoryPage } from '@/pages/HistoryPage'
+import { HistoryDetailPage } from '@/pages/HistoryDetailPage'
 
 export const router = createBrowserRouter([
   {
@@ -83,6 +84,10 @@ export const router = createBrowserRouter([
       {
         path: 'histoire',
         element: <HistoryPage />,
+      },
+      {
+        path: 'histoire/:section',
+        element: <HistoryDetailPage />,
       },
       {
         path: 'search',
