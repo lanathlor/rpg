@@ -387,7 +387,23 @@ Fix type errors by:
 
 ## License
 
-[Add license information]
+This project uses a **dual-license** approach:
+
+- **Game Content** (rules, spells, equipment, etc.): [Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/)
+- **Software Code** (web application, tools, etc.): [MIT License](https://opensource.org/licenses/MIT)
+
+This means:
+- ✅ You can use, modify, and distribute the game content freely (even commercially) as long as you provide attribution and share your modifications under the same license
+- ✅ You can use, modify, and distribute the software code freely (even commercially) with minimal restrictions
+- ✅ You can create your own games based on this system
+- ✅ You can run commercial campaigns using these rules
+- ✅ You can publish adventures and supplements
+
+See [LICENSE.md](LICENSE.md) for full details and attribution guidelines.
+
+### Contributing
+
+By contributing to this project, you agree that your contributions will be licensed under the same terms (CC BY-SA 4.0 for game content, MIT for code).
 
 ## Contact
 

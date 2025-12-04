@@ -17,7 +17,8 @@ const ruleSections = [
   { id: '06_systeme_de_mana', title: 'Système de mana' },
   { id: '07_systeme_de_resistances', title: 'Système de résistances' },
   { id: '10_creation_personnage', title: 'Création de personnage' },
-  { id: '09_lexique', title: 'Lexique' }
+  { id: '09_lexique', title: 'Lexique' },
+  { id: '11_comment_contribuer', title: 'Comment contribuer' }
 ]
 
 export function RuleDetailPage() {

@@ -312,6 +312,60 @@ Quand vous créez des sorts ou de l'équipement :
 -   **Lexique :** `/rules/09_lexique.md`
 -   **Sorts existants :** Parcourez `/codex/sorts/` pour voir des exemples
 
+## Licence et Droits d'Auteur
+
+Ce projet utilise une **double licence** pour permettre la plus grande liberté possible :
+
+### Contenu du Jeu (Licence Creative Commons)
+
+Tout le contenu du jeu (règles, sorts, équipement, etc.) est publié sous **licence Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)**.
+
+**Ce que cela signifie pour vous :**
+
+✅ **Vous pouvez :**
+- Utiliser ces règles pour vos parties (même commerciales)
+- Créer vos propres jeux basés sur ce système
+- Publier des aventures et suppléments (même payants)
+- Modifier et adapter le contenu
+- Traduire dans d'autres langues
+
+✅ **À condition de :**
+- Mentionner ce projet comme source (attribution)
+- Partager vos modifications sous la même licence (partage à l'identique)
+- Indiquer clairement ce que vous avez modifié
+
+**Exemple d'attribution :**
+```
+Basé sur [Nom du Projet], disponible sur [URL du dépôt]
+Publié sous licence CC BY-SA 4.0
+```
+
+### Code Source (Licence MIT)
+
+Le code de l'application web et des outils est publié sous **licence MIT**, ce qui vous donne une liberté maximale pour l'utiliser et le modifier.
+
+### En Contribuant
+
+En participant à ce projet, vous acceptez que :
+
+1. Vos contributions au **contenu du jeu** seront publiées sous licence CC BY-SA 4.0
+2. Vos contributions au **code logiciel** seront publiées sous licence MIT
+3. Vous avez le droit de soumettre ce contenu sous ces licences
+4. Vos contributions resteront disponibles publiquement sous ces licences
+
+**Important :** Vous conservez vos droits d'auteur sur vos contributions, mais vous les partagez généreusement avec la communauté.
+
+### Pourquoi Cette Licence ?
+
+La licence CC BY-SA 4.0 est le standard pour les jeux de rôle open source. Elle garantit que :
+
+- Le jeu reste libre et accessible à tous
+- Les améliorations profitent à toute la communauté
+- Personne ne peut "fermer" le système en créant une version propriétaire
+- Les créateurs peuvent gagner de l'argent avec leurs suppléments tout en partageant leurs innovations
+
+Pour plus de détails, consultez le fichier `LICENSE.md` à la racine du projet.
+
 ## Contact
 
 valentin@viviersoft.com
@@ -319,3 +373,5 @@ valentin@viviersoft.com
 ---
 
 **Merci de contribuer à ce projet ! Chaque sort, chaque pièce d'équipement, chaque amélioration des règles rend le jeu meilleur pour tout le monde.**
+
+**En partageant votre travail sous licence libre, vous participez à construire un jeu que tout le monde peut utiliser, modifier et améliorer. C'est l'esprit de l'open source !**
