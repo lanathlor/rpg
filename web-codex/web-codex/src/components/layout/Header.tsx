@@ -2,14 +2,17 @@ import { Input } from '@/components/ui/input'
 import { Search } from 'lucide-react'
 import { useState } from 'react'
 import { ThemeToggle } from '@/components/theme-toggle'
+import { useNavigate } from 'react-router-dom'
 
 export function Header() {
   const [searchQuery, setSearchQuery] = useState('')
+  const navigate = useNavigate()
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault()
-    // TODO: Implement search functionality
-    console.log('Search:', searchQuery)
+    if (searchQuery.trim()) {
+      navigate(`/search?q=${encodeURIComponent(searchQuery)}`)
+    }
   }
 
   return (

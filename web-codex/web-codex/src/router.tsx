@@ -15,6 +15,7 @@ import { RulesPage } from '@/pages/RulesPage'
 import { RuleDetailPage } from '@/pages/RuleDetailPage'
 import { HistoryPage } from '@/pages/HistoryPage'
 import { HistoryDetailPage } from '@/pages/HistoryDetailPage'
+import { SearchPage } from '@/pages/SearchPage'
 
 export const router = createBrowserRouter([
   {
@@ -91,7 +92,7 @@ export const router = createBrowserRouter([
       },
       {
         path: 'search',
-        element: <div>Search page (à implémenter)</div>,
+        element: <SearchPage />,
       },
     ],
   },
