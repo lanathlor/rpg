@@ -51,6 +51,17 @@ Après plus de deux siècles de guerre positionnelle et d'usure, le conflit entr
 - **État des forces** : Parité technologique maintenue, mais ressources s'amenuisant des deux côtés
 - **Stratégie** : Transition vers une guerre "totale" où tous les moyens sont mobilisés
 - **Enjeu** : Chaque camp sait qu'il s'agit de la dernière chance de victoire décisive
+- **Mobilisation** : 3 à 5% de la population impériale est enrôlée, un taux exceptionnel reflétant l'urgence de la situation
+
+### Tensions politiques internes
+
+Cette escalade finale génère des débats intenses à l'**Assemblée Impériale**. Trois courants majeurs s'affrontent :
+
+- Certains soutiennent la stratégie de Blanc, convaincus qu'une dernière offensive décisive apportera la victoire
+- D'autres réclament l'ouverture de négociations de paix, estimant le coût humain déjà trop élevé
+- Un troisième groupe accepte de poursuivre le conflit à condition d'obtenir des garanties sur la durée et les pertes
+
+Le Conseil, mené par Blanc, maintient le cap sur la victoire militaire en s'appuyant sur son crédit politique et sa capacité à naviguer les divisions parlementaires. Blanc promet à l'Assemblée que la guerre se terminera dans les neuf années à venir — une prédiction qui s'avérera exacte avec la signature de la paix en 5764.
 
 ### Missions des Héros
 

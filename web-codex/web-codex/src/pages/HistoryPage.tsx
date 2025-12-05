@@ -13,6 +13,22 @@ import {
 
 const historySections = [
   {
+    id: 'jour_dans_empire',
+    title: 'Un jour dans l\'Empire',
+    description: 'Suivez Lyra, citoyenne de Prime, dans sa vie quotidienne en 5755',
+    icon: <Clock className="h-5 w-5" />,
+    color: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300',
+    category: 'Introduction narrative'
+  },
+  {
+    id: 'guide_citoyen',
+    title: 'Guide du Citoyen',
+    description: 'Document officiel de bienvenue pour nouveaux citoyens impériaux',
+    icon: <BookOpen className="h-5 w-5" />,
+    color: 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300',
+    category: 'Introduction narrative'
+  },
+  {
     id: 'introduction',
     title: 'Introduction',
     description: 'Vue d\'ensemble de l\'histoire et chronologie des périodes clés',
@@ -59,6 +75,14 @@ const historySections = [
     icon: <Sparkles className="h-5 w-5" />,
     color: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300',
     category: 'Technologie'
+  },
+  {
+    id: 'contexte_social',
+    title: 'Contexte social et culturel',
+    description: 'Éducation, divertissement, normes sociales et vie quotidienne dans l\'Empire',
+    icon: <Users className="h-5 w-5" />,
+    color: 'bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-300',
+    category: 'Contexte'
   }
 ]
 

@@ -8,12 +8,15 @@ import { Badge } from '@/components/ui/badge'
 import { ChevronLeft, FileText, BookOpen } from 'lucide-react'
 
 const historySections = [
+  { id: 'jour_dans_empire', title: 'Un jour dans l\'Empire' },
+  { id: 'guide_citoyen', title: 'Guide du Citoyen' },
   { id: 'introduction', title: 'Introduction' },
   { id: 'resume_historique', title: 'Résumé historique' },
   { id: 'contexte_militaire', title: 'Contexte militaire' },
   { id: 'contexte_politique', title: 'Contexte politique' },
   { id: 'contexte_economique', title: 'Contexte économique' },
-  { id: 'arcanotechnie', title: 'Arcanotechnie et technologie' }
+  { id: 'arcanotechnie', title: 'Arcanotechnie et technologie' },
+  { id: 'contexte_social', title: 'Contexte social et culturel' }
 ]
 
 export function HistoryDetailPage() {
