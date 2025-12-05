@@ -27,6 +27,12 @@ const navigationItems = [
     description: 'Système de jeu et mécaniques',
   },
   {
+    name: 'Histoire',
+    href: '/histoire',
+    icon: Scroll,
+    description: 'Chroniques du monde',
+  },
+  {
     name: 'Sorts',
     href: '/sorts',
     icon: Sparkles,
@@ -45,18 +51,6 @@ const navigationItems = [
     description: 'Armures, implants et équipements tactiques',
   },
   {
-    name: 'Classes',
-    href: '/classes',
-    icon: Users,
-    description: 'Classes de personnages',
-  },
-  {
-    name: 'Personnages',
-    href: '/personnages',
-    icon: User,
-    description: 'Créer et gérer vos personnages',
-  },
-  {
     name: 'Compétences',
     href: '/competences',
     icon: Zap,
@@ -69,10 +63,16 @@ const navigationItems = [
     description: 'Objets utilisables',
   },
   {
-    name: 'Histoire',
-    href: '/histoire',
-    icon: Scroll,
-    description: 'Chroniques du monde',
+    name: 'Classes',
+    href: '/classes',
+    icon: Users,
+    description: 'Classes de personnages',
+  },
+  {
+    name: 'Personnages',
+    href: '/personnages',
+    icon: User,
+    description: 'Créer et gérer vos personnages',
   },
   {
     name: 'Rechercher',
