@@ -23,17 +23,15 @@ Les affinités vont de **0 à 5**.
 
 ### 🔑 Règle d'accès à un sort
 
-Un sort est utilisable si le personnage remplit **au moins une** des conditions suivantes :
+Un sort est utilisable si le personnage remplit **une** des conditions suivantes :
 
-- `A.École ≥ ReqÉcole`
-- `A.Type ≥ ReqType`
+- `(A.École ≥ ReqÉcole ET A.Type ≥ ReqType)`
 - `A.École + A.Type ≥ ReqMixte`
 
 Cela signifie qu'un Arcanotechnicien peut accéder à un sort :
 
-- en se spécialisant dans une **école** (ex : Givre pur),
-- en se spécialisant dans un **type** (ex : Destruction pur),
-- ou en répartissant ses affinités sur les deux (ex : un peu Givre + un peu Destruction).
+- en développant **les deux affinités** requises (école ET type),
+- ou en compensant par un investissement total plus élevé (spécialisation avec pénalité).
 
 ### 💰 Pénalité de spécialisation (50%)
 
