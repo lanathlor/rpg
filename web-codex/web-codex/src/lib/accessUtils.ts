@@ -76,45 +76,98 @@ export function checkSpellAccess(spellLevel: SpellLevel, characterAffinities: Af
 
   const requirements: string[] = []
   const current: string[] = []
-  let hasAccess = false
+  let schoolMet = false
+  let typeMet = false
+  let mixedMet = false
+  let hasSchoolReq = false
+  let hasTypeReq = false
+  let hasMixedReq = false
 
   // Check school requirement
   if (schoolReq && schoolReq.school) {
+    hasSchoolReq = true
     const normalizedSchoolName = normalizeAffinityName(schoolReq.school)
     const schoolValue = characterAffinities.schools?.[normalizedSchoolName as keyof typeof characterAffinities.schools] || 0
-    requirements.push(`École ${schoolReq.school} ≥ ${schoolReq.value}`)
     current.push(`École ${schoolReq.school}: ${schoolValue}`)
 
     if (schoolValue >= schoolReq.value) {
-      hasAccess = true
+      schoolMet = true
     }
   }
 
   // Check type requirement
   if (typeReq && typeReq.typeKey) {
+    hasTypeReq = true
     const normalizedTypeName = normalizeAffinityName(typeReq.typeKey)
     const typeValue = characterAffinities.types?.[normalizedTypeName as keyof typeof characterAffinities.types] || 0
-    requirements.push(`Type ${typeReq.typeKey} ≥ ${typeReq.value}`)
     current.push(`Type ${typeReq.typeKey}: ${typeValue}`)
 
     if (typeValue >= typeReq.value) {
-      hasAccess = true
+      typeMet = true
     }
   }
 
   // Check mixed requirement
   if (mixedReq && mixedReq.school && mixedReq.typeKey) {
+    hasMixedReq = true
     const normalizedSchoolName = normalizeAffinityName(mixedReq.school)
     const normalizedTypeName = normalizeAffinityName(mixedReq.typeKey)
     const schoolValue = characterAffinities.schools?.[normalizedSchoolName as keyof typeof characterAffinities.schools] || 0
     const typeValue = characterAffinities.types?.[normalizedTypeName as keyof typeof characterAffinities.types] || 0
     const combinedValue = schoolValue + typeValue
 
-    requirements.push(`${mixedReq.school} + ${mixedReq.typeKey} ≥ ${mixedReq.value}`)
     current.push(`${mixedReq.school} (${schoolValue}) + ${mixedReq.typeKey} (${typeValue}) = ${combinedValue}`)
 
     if (combinedValue >= mixedReq.value) {
-      hasAccess = true
+      mixedMet = true
+    }
+  }
+
+  // Determine access based on (École AND Type) OR Mixte logic from the rulebook
+  // A spell is accessible if the character meets:
+  // - BOTH school AND type requirements
+  // - OR the mixed requirement (with 1.5x penalty for specialization)
+  let hasAccess = false
+
+  if (hasSchoolReq && hasTypeReq) {
+    // Must meet BOTH individual requirements, OR the mixed requirement
+    const bothMet = schoolMet && typeMet
+    hasAccess = bothMet || (hasMixedReq && mixedMet)
+
+    // If no explicit mixed requirement, calculate implicit mixed with penalty
+    if (!hasMixedReq && schoolReq && typeReq) {
+      const schoolValue = characterAffinities.schools?.[normalizeAffinityName(schoolReq.school) as keyof typeof characterAffinities.schools] || 0
+      const typeValue = characterAffinities.types?.[normalizeAffinityName(typeReq.typeKey) as keyof typeof characterAffinities.types] || 0
+      const combinedValue = schoolValue + typeValue
+      const implicitMixedReq = Math.ceil((schoolReq.value + typeReq.value) * 1.5)
+      const implicitMixedMet = combinedValue >= implicitMixedReq
+      hasAccess = bothMet || implicitMixedMet
+    }
+
+    // Build requirements string for (École AND Type) OR Mixte logic
+    if (schoolReq && typeReq) {
+      const individualReqs = `(École ${schoolReq.school} ≥ ${schoolReq.value} ET Type ${typeReq.typeKey} ≥ ${typeReq.value})`
+      if (hasMixedReq && mixedReq) {
+        requirements.push(`${individualReqs} OU (${mixedReq.school} + ${mixedReq.typeKey} ≥ ${mixedReq.value})`)
+      } else {
+        // If no explicit mixed requirement, calculate it with 1.5x penalty
+        const calculatedMixed = Math.ceil((schoolReq.value + typeReq.value) * 1.5)
+        requirements.push(`${individualReqs} OU (École + Type ≥ ${calculatedMixed})`)
+      }
+    }
+  } else {
+    // Only one individual requirement exists - use OR logic
+    hasAccess = schoolMet || typeMet || (hasMixedReq && mixedMet)
+
+    // Build requirements string for OR logic
+    if (schoolReq && schoolReq.school) {
+      requirements.push(`École ${schoolReq.school} ≥ ${schoolReq.value}`)
+    }
+    if (typeReq && typeReq.typeKey) {
+      requirements.push(`Type ${typeReq.typeKey} ≥ ${typeReq.value}`)
+    }
+    if (hasMixedReq && mixedReq && mixedReq.school && mixedReq.typeKey) {
+      requirements.push(`${mixedReq.school} + ${mixedReq.typeKey} ≥ ${mixedReq.value}`)
     }
   }
 
@@ -125,7 +178,9 @@ export function checkSpellAccess(spellLevel: SpellLevel, characterAffinities: Af
   }
 
   if (!hasAccess) {
-    const reason = `Requires: ${requirements.join(' OR ')}`
+    const reason = hasSchoolReq && hasTypeReq
+      ? `Requires: ${requirements.join('')}`
+      : `Requires: ${requirements.join(' OU ')}`
     return {
       hasAccess: false,
       reason,

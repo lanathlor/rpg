@@ -11,7 +11,6 @@ import { WeaponDetail } from '@/components/WeaponDetail'
 import { ArmorDetail } from '@/components/ArmorDetail'
 import { SkillDetail } from '@/components/SkillDetail'
 import { ConsumableDetail } from '@/components/ConsumableDetail'
-import { ClassDetail } from '@/components/ClassDetail'
 import type { CodexItem, Spell, Weapon, Armor, Skill, Consumable } from '@/types'
 import type { CharacterClass } from '@/types/classes'
 

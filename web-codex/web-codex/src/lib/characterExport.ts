@@ -245,6 +245,42 @@ export function exportToPDF(character: Character): void {
       headStyles: { fillColor: [168, 85, 247] },
       margin: { left: 15, right: 15 },
     })
+    yPos = (doc as any).lastAutoTable.finalY + 8
+  }
+
+  // Spells
+  if (character.spells && character.spells.length > 0) {
+    // Check if we need a new page
+    if (yPos > 240) {
+      doc.addPage()
+      yPos = 15
+    }
+
+    doc.setFontSize(14)
+    doc.setFont('helvetica', 'bold')
+    doc.text('Sorts', 15, yPos)
+    yPos += 8
+
+    // Handle both legacy string[] and new SelectedSpell[] formats
+    const spellRows = character.spells.map((spell: any, idx: number) => {
+      if (typeof spell === 'string') {
+        // Legacy format
+        return [`${idx + 1}`, spell, 'N/A']
+      } else if (spell && typeof spell === 'object' && 'series' in spell) {
+        // New format with level
+        return [`${idx + 1}`, spell.series, `Niveau ${spell.level}`]
+      }
+      return [`${idx + 1}`, 'Sort inconnu', 'N/A']
+    })
+
+    autoTable(doc, {
+      startY: yPos,
+      head: [['#', 'Nom du sort', 'Niveau']],
+      body: spellRows,
+      theme: 'striped',
+      headStyles: { fillColor: [251, 146, 60] },
+      margin: { left: 15, right: 15 },
+    })
   }
 
   // Save PDF

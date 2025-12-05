@@ -455,14 +455,44 @@ export function isCharacterLegal(
     issues.push(`Budget dépassé: ${creditsSpent.toLocaleString()}/${budget.toLocaleString()} crédits`)
   }
 
-  // Check spells
+  // Check spells (supports both legacy string[] and new SelectedSpell[] format)
   if (character.spells && Array.isArray(character.spells)) {
-    character.spells.forEach((spellName: string) => {
+    character.spells.forEach((spellEntry: any) => {
+      let spellName: string
+      let spellLevel: string | undefined
+
+      // Handle both legacy string format and new SelectedSpell format
+      if (typeof spellEntry === 'string') {
+        spellName = spellEntry
+        spellLevel = undefined // Will check general series access
+      } else if (spellEntry && typeof spellEntry === 'object' && 'series' in spellEntry) {
+        spellName = spellEntry.series
+        spellLevel = spellEntry.level
+      } else {
+        return // Skip invalid entries
+      }
+
       const spell = allSpells.find(s => s.spell_series === spellName || s.name === spellName)
       if (spell) {
-        const accessResult = checkSpellSeriesAccess(spell, character.affinities)
-        if (!accessResult.hasAccess) {
-          issues.push(`Sort "${spellName}": prérequis non remplis`)
+        if (spellLevel) {
+          // Check access for specific level
+          const level = spell.levels?.find(l => l.level === spellLevel)
+          if (level) {
+            // Create a spell object with just this level for validation
+            const levelSpecificSpell = { ...spell, levels: [level] }
+            const accessResult = checkSpellSeriesAccess(levelSpecificSpell, character.affinities)
+            if (!accessResult.hasAccess) {
+              issues.push(`Sort "${spellName}" (Niveau ${spellLevel}): prérequis non remplis`)
+            }
+          } else {
+            issues.push(`Sort "${spellName}": niveau ${spellLevel} introuvable`)
+          }
+        } else {
+          // Legacy: check general series access
+          const accessResult = checkSpellSeriesAccess(spell, character.affinities)
+          if (!accessResult.hasAccess) {
+            issues.push(`Sort "${spellName}": prérequis non remplis`)
+          }
         }
       }
     })

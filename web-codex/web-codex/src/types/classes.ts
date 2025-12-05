@@ -30,6 +30,11 @@ export interface Equipment {
   }>
 }
 
+export interface SelectedSpell {
+  series: string  // The spell series name (e.g., "Boule de feu")
+  level: string   // The selected level (e.g., "1", "2")
+}
+
 export interface CharacterClass extends BaseItem {
   type?: string
   image?: string
@@ -39,7 +44,7 @@ export interface CharacterClass extends BaseItem {
   stats: CharacterStats
   equipment: Equipment
   skills: string[]
-  spells?: string[]
+  spells?: SelectedSpell[] | string[]  // Support both formats for backward compatibility
   gameplay_guide: string
   starting_credits?: number  // Starting money budget (default: 0)
 }

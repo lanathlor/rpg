@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { Input } from '@/components/ui/input'
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import {
   Tooltip,
   TooltipContent,
@@ -16,17 +17,18 @@ import {
   DialogHeader,
   DialogTitle,
 } from '@/components/ui/dialog'
-import { Sparkles, Plus, X, Search, Lock, Eye, AlertTriangle } from 'lucide-react'
+import { Sparkles, Plus, X, Search, Lock, Eye, AlertTriangle, CheckCircle } from 'lucide-react'
 import { useSpells } from '@/lib/dataProvider'
-import { hasAccessToSpell, checkSpellSeriesAccess, getDetailedAccessInfo } from '@/lib/accessUtils'
+import { hasAccessToSpell, checkSpellSeriesAccess, checkSpellAccess, getDetailedAccessInfo } from '@/lib/accessUtils'
 import { SpellDetail } from '@/components/SpellDetail'
 import type { AffinityStats } from '@/types/common'
 import type { Spell } from '@/types'
+import type { SelectedSpell } from '@/types/classes'
 
 interface SpellsManagerProps {
-  spells: string[]
+  spells: (SelectedSpell | string)[]  // Support both formats for backward compatibility
   affinities: AffinityStats
-  onUpdate: (spells: string[]) => void
+  onUpdate: (spells: SelectedSpell[]) => void
 }
 
 export function SpellsManager({ spells, affinities, onUpdate }: SpellsManagerProps) {
@@ -34,7 +36,16 @@ export function SpellsManager({ spells, affinities, onUpdate }: SpellsManagerPro
   const [selectorOpen, setSelectorOpen] = useState(false)
   const [searchQuery, setSearchQuery] = useState('')
   const [previewSpell, setPreviewSpell] = useState<Spell | null>(null)
+  const [selectedLevel, setSelectedLevel] = useState<string>('1')
   const [detailSpell, setDetailSpell] = useState<Spell | null>(null)
+
+  // Convert legacy string[] format to SelectedSpell[] format
+  const normalizedSpells: SelectedSpell[] = spells.map(spell => {
+    if (typeof spell === 'string') {
+      return { series: spell, level: '1' }  // Default to level 1 for migration
+    }
+    return spell
+  })
 
   // Filter accessible spells
   const accessibleSpells = allSpells.filter((spell) =>
@@ -47,32 +58,121 @@ export function SpellsManager({ spells, affinities, onUpdate }: SpellsManagerPro
     spell.name?.toLowerCase().includes(searchQuery.toLowerCase())
   )
 
-  const addSpell = (spellName: string) => {
-    if (!spells.includes(spellName)) {
-      onUpdate([...spells, spellName])
+  const addSpell = (spellName: string, level: string) => {
+    const exists = normalizedSpells.some(s => s.series === spellName && s.level === level)
+    if (!exists) {
+      onUpdate([...normalizedSpells, { series: spellName, level }])
     }
   }
 
   const addPreviewedSpell = () => {
-    if (previewSpell) {
+    if (previewSpell && selectedLevel) {
       const spellName = previewSpell.spell_series || previewSpell.name || ''
-      addSpell(spellName)
+      addSpell(spellName, selectedLevel)
       setPreviewSpell(null)
+      setSelectedLevel('1')  // Reset to level 1 for next spell
     }
   }
 
-  const removeSpell = (spellName: string) => {
-    onUpdate(spells.filter((s) => s !== spellName))
+  const removeSpell = (spellSeries: string, level: string) => {
+    onUpdate(normalizedSpells.filter((s) => !(s.series === spellSeries && s.level === level)))
+  }
+
+  // Check if a character meets prerequisites for a specific spell level
+  const checkLevelAccess = (spell: Spell, level: string): boolean => {
+    const spellLevel = spell.levels?.find(l => l.level === level)
+    if (!spellLevel) return false
+
+    // First check explicit affinity prerequisites for the specific level
+    const accessResult = checkSpellAccess(spellLevel, affinities)
+
+    // If the level has explicit prerequisites, use them
+    if (spellLevel.prerequisites?.affinities) {
+      return accessResult.hasAccess
+    }
+
+    // If the level doesn't have explicit prerequisites, infer them from spell school/type
+    // This prevents accessing higher levels without proper affinities
+    if (spell.school) {
+      // Normalize school name for lookup
+      const schoolName = spell.school.toLowerCase()
+        .replace(/[àáâãäå]/g, 'a')
+        .replace(/[èéêë]/g, 'e')
+        .replace(/[ìíîï]/g, 'i')
+        .replace(/[òóôõö]/g, 'o')
+        .replace(/[ùúûü]/g, 'u')
+        .replace(/[ç]/g, 'c')
+        .replace(/[ñ]/g, 'n')
+
+      const schoolAffinity = (affinities.schools as any)?.[schoolName] || 0
+      const typeAffinity = spell.type ? ((affinities.types as any)?.[spell.type] || 0) : 0
+
+      // Use the official rulebook requirements (from /rules/03_systeme_affinites_et_types.md)
+      // Level 1: École 2, Type 2, Mixte 6
+      // Level 2: École 3, Type 3, Mixte 9
+      // Level 3: École 4, Type 4, Mixte 12
+      // Level 4: École 5, Type 5, Mixte 15
+      // Level 5: École 6, Type 6, Mixte 18
+      const levelNum = parseInt(level)
+      let minSchoolRequired = 2 // Level 1 default
+      let minTypeRequired = 2   // Level 1 default
+      let minMixedRequired = 6  // Level 1 default
+
+      if (levelNum === 2) {
+        minSchoolRequired = 3
+        minTypeRequired = 3
+        minMixedRequired = 9
+      } else if (levelNum === 3) {
+        minSchoolRequired = 4
+        minTypeRequired = 4
+        minMixedRequired = 12
+      } else if (levelNum === 4) {
+        minSchoolRequired = 5
+        minTypeRequired = 5
+        minMixedRequired = 15
+      } else if (levelNum >= 5) {
+        minSchoolRequired = 6
+        minTypeRequired = 6
+        minMixedRequired = 18
+      }
+
+      // Apply (École AND Type) OR Mixte logic from the rulebook
+      if (spell.type) {
+        // If spell has both school and type requirements
+        const hasSchoolAccess = schoolAffinity >= minSchoolRequired
+        const hasTypeAccess = typeAffinity >= minTypeRequired
+        const bothMet = hasSchoolAccess && hasTypeAccess
+
+        // Check mixed requirement (with 1.5x penalty for specialization)
+        const combinedAffinity = schoolAffinity + typeAffinity
+        const hasMixedAccess = combinedAffinity >= minMixedRequired
+
+        return bothMet || hasMixedAccess
+      } else {
+        // If spell only has school requirement (no type)
+        return schoolAffinity >= minSchoolRequired
+      }
+    }
+
+    // If no school/type info, fall back to the explicit check result
+    return accessResult.hasAccess
   }
 
   const handleSpellClick = (spell: Spell) => {
     setPreviewSpell(spell)
+    // Reset selected level to first available level when changing spells
+    if (spell.levels && spell.levels.length > 0) {
+      setSelectedLevel(spell.levels[0].level)
+    } else {
+      setSelectedLevel('1')
+    }
   }
 
   const closeSelector = () => {
     setSelectorOpen(false)
     setSearchQuery('')
     setPreviewSpell(null)
+    setSelectedLevel('1')  // Reset level selection
   }
 
   return (
@@ -91,36 +191,33 @@ export function SpellsManager({ spells, affinities, onUpdate }: SpellsManagerPro
           </div>
         </CardHeader>
         <CardContent>
-          {spells.length === 0 ? (
+          {normalizedSpells.length === 0 ? (
             <p className="text-sm text-muted-foreground text-center py-8">
               Aucun sort sélectionné. Cliquez sur "Ajouter" pour choisir des sorts.
             </p>
           ) : (
             <TooltipProvider>
               <div className="space-y-2">
-                {spells.map((spellName) => {
+                {normalizedSpells.map((selectedSpell, index) => {
                   // Find the spell and check access
                   const spell = allSpells.find(
-                    (s) => s.spell_series === spellName || s.name === spellName
+                    (s) => s.spell_series === selectedSpell.series || s.name === selectedSpell.series
                   )
-                  const accessResult = spell
-                    ? checkSpellSeriesAccess(spell, affinities)
-                    : { hasAccess: true }
-                  const hasAccess = accessResult.hasAccess
+                  const spellLevel = spell?.levels?.find(l => l.level === selectedSpell.level)
+                  const hasAccess = spell ? checkLevelAccess(spell, selectedSpell.level) : false
 
-                  // Generate tooltip summary
+                  // Generate tooltip summary for the selected level
                   const summary = []
-                  if (spell) {
-                    const firstLevel = spell.levels?.[0]
-                    if (firstLevel?.effects?.damage) summary.push(`Dégâts: ${firstLevel.effects.damage}`)
-                    if (firstLevel?.conditions?.flux_cost) summary.push(`Coût: ${firstLevel.conditions.flux_cost} Flux`)
-                    if (firstLevel?.effects?.defense) summary.push(`Défense: ${firstLevel.effects.defense}`)
-                    if (firstLevel?.effects?.protection) summary.push(`Protection: ${firstLevel.effects.protection}`)
-                    if (spell.description_base) summary.push(spell.description_base)
+                  if (spellLevel) {
+                    if (spellLevel.effects?.damage) summary.push(`Dégâts: ${spellLevel.effects.damage}`)
+                    if (spellLevel.conditions?.flux_cost) summary.push(`Coût: ${spellLevel.conditions.flux_cost} Flux`)
+                    if (spellLevel.effects?.defense) summary.push(`Défense: ${spellLevel.effects.defense}`)
+                    if (spellLevel.effects?.protection) summary.push(`Protection: ${spellLevel.effects.protection}`)
+                    if (spellLevel.description) summary.push(spellLevel.description)
                   }
 
                   return (
-                    <Tooltip key={spellName}>
+                    <Tooltip key={`${selectedSpell.series}-${selectedSpell.level}-${index}`}>
                       <TooltipTrigger asChild>
                         <div
                           className={`flex items-center justify-between p-3 border rounded-lg hover:bg-accent cursor-pointer ${
@@ -128,7 +225,11 @@ export function SpellsManager({ spells, affinities, onUpdate }: SpellsManagerPro
                               ? 'border-red-500 bg-red-50 dark:bg-red-950'
                               : ''
                           }`}
-                          onClick={() => {
+                          onClick={(e) => {
+                            // Don't open detail if clicking on the select
+                            if ((e.target as HTMLElement).closest('[data-radix-select-trigger]')) {
+                              return
+                            }
                             if (spell) setDetailSpell(spell)
                           }}
                         >
@@ -136,7 +237,42 @@ export function SpellsManager({ spells, affinities, onUpdate }: SpellsManagerPro
                             {!hasAccess && (
                               <AlertTriangle className="h-4 w-4 text-red-500" />
                             )}
-                            <span className="font-medium">{spellName}</span>
+                            <span className="font-medium">{selectedSpell.series}</span>
+
+                            {/* Level selector dropdown */}
+                            <div onClick={(e) => e.stopPropagation()}>
+                              <Select
+                                value={selectedSpell.level}
+                                onValueChange={(newLevel) => {
+                                  const updatedSpells = normalizedSpells.map(s =>
+                                    s.series === selectedSpell.series
+                                      ? { ...s, level: newLevel }
+                                      : s
+                                  )
+                                  onUpdate(updatedSpells)
+                                }}
+                              >
+                                <SelectTrigger className="w-[90px] h-7 text-xs" data-radix-select-trigger>
+                                  <SelectValue>Niv. {selectedSpell.level}</SelectValue>
+                                </SelectTrigger>
+                                <SelectContent>
+                                  {spell?.levels?.map(level => {
+                                    const levelHasAccess = checkLevelAccess(spell, level.level)
+                                    return (
+                                      <SelectItem
+                                        key={level.level}
+                                        value={level.level}
+                                        disabled={!levelHasAccess}
+                                        className={levelHasAccess ? '' : 'opacity-50'}
+                                      >
+                                        Niveau {level.level} {!levelHasAccess && '🔒'}
+                                      </SelectItem>
+                                    )
+                                  })}
+                                </SelectContent>
+                              </Select>
+                            </div>
+
                             {!hasAccess && (
                               <Badge variant="destructive" className="text-xs">
                                 Prérequis non remplis
@@ -148,7 +284,7 @@ export function SpellsManager({ spells, affinities, onUpdate }: SpellsManagerPro
                             variant="ghost"
                             onClick={(e) => {
                               e.stopPropagation()
-                              removeSpell(spellName)
+                              removeSpell(selectedSpell.series, selectedSpell.level)
                             }}
                           >
                             <X className="h-4 w-4 text-red-500" />
@@ -159,10 +295,7 @@ export function SpellsManager({ spells, affinities, onUpdate }: SpellsManagerPro
                         <div className="text-sm space-y-1">
                           {!hasAccess && (
                             <div className="text-red-400 font-medium mb-2 pb-2 border-b">
-                              ⚠️ Prérequis non remplis
-                              <div className="text-xs mt-1 whitespace-pre-line">
-                                {getDetailedAccessInfo(accessResult)}
-                              </div>
+                              ⚠️ Prérequis non remplis pour le niveau {selectedSpell.level}
                             </div>
                           )}
                           {summary.length > 0 && summary.map((line, i) => (
@@ -220,7 +353,10 @@ export function SpellsManager({ spells, affinities, onUpdate }: SpellsManagerPro
               ) : (
                 filteredSpells.map((spell) => {
                   const spellName = spell.spell_series || spell.name || ''
-                  const isSelected = spells.includes(spellName)
+                  const selectedLevels = normalizedSpells
+                    .filter(s => s.series === spellName)
+                    .map(s => s.level)
+                  const hasSelectedSpell = selectedLevels.length > 0
                   const isPreviewed = previewSpell?.name === spell.name
 
                   // Generate tooltip summary
@@ -264,10 +400,14 @@ export function SpellsManager({ spells, affinities, onUpdate }: SpellsManagerPro
                             </div>
                           </div>
                           <div className="flex items-center gap-2 ml-2">
-                            {isSelected && (
-                              <Badge className="bg-green-100 text-green-800 dark:bg-green-900">
-                                Ajouté
-                              </Badge>
+                            {hasSelectedSpell && (
+                              <div className="flex gap-1">
+                                {selectedLevels.map(level => (
+                                  <Badge key={level} className="bg-green-100 text-green-800 dark:bg-green-900 text-xs">
+                                    Niv. {level}
+                                  </Badge>
+                                ))}
+                              </div>
                             )}
                             <Eye className="h-4 w-4 text-muted-foreground" />
                           </div>
@@ -294,17 +434,110 @@ export function SpellsManager({ spells, affinities, onUpdate }: SpellsManagerPro
               {previewSpell ? (
                 <div className="space-y-4">
                   <SpellDetail spell={previewSpell} />
+
+                  {/* Level Selection */}
+                  {previewSpell.levels && previewSpell.levels.length > 0 && selectedLevel && (
+                    <div className="space-y-3 p-4 border rounded-lg bg-secondary/10">
+                      <h4 className="font-semibold text-sm">Sélectionner le niveau</h4>
+                      <Select
+                        value={selectedLevel}
+                        onValueChange={setSelectedLevel}
+                      >
+                        <SelectTrigger className="w-full">
+                          <SelectValue placeholder="Sélectionner un niveau" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          {previewSpell.levels.map((level) => {
+                            const hasAccess = checkLevelAccess(previewSpell, level.level)
+                            const spellName = previewSpell.spell_series || previewSpell.name || ''
+                            const isAlreadyAdded = normalizedSpells.some(
+                              s => s.series === spellName && s.level === level.level
+                            )
+
+                            return (
+                              <SelectItem
+                                key={level.level}
+                                value={level.level}
+                                disabled={!hasAccess || isAlreadyAdded}
+                              >
+                                <div className="flex items-center gap-2">
+                                  <span>Niveau {level.level}</span>
+                                  {level.name && level.name !== previewSpell.spell_series && (
+                                    <span className="text-sm text-muted-foreground">- {level.name}</span>
+                                  )}
+                                  {isAlreadyAdded && (
+                                    <Badge className="bg-green-100 text-green-800 dark:bg-green-900 text-xs ml-2">
+                                      <CheckCircle className="h-3 w-3 mr-1" />
+                                      Déjà ajouté
+                                    </Badge>
+                                  )}
+                                  {!hasAccess && (
+                                    <Badge variant="destructive" className="text-xs ml-2">
+                                      <AlertTriangle className="h-3 w-3 mr-1" />
+                                      Prérequis non remplis
+                                    </Badge>
+                                  )}
+                                </div>
+                              </SelectItem>
+                            )
+                          })}
+                        </SelectContent>
+                      </Select>
+
+                      {/* Display selected level details */}
+                      {selectedLevel && previewSpell.levels && (
+                        <div className="mt-3 p-3 bg-secondary/20 rounded-lg">
+                          {(() => {
+                            const level = previewSpell.levels.find(l => l.level === selectedLevel)
+                            if (!level) return null
+                            return (
+                              <div className="space-y-2 text-sm">
+                                <div className="font-medium">Niveau {level.level} - Détails:</div>
+                                {level.effects?.damage && (
+                                  <div className="text-muted-foreground">
+                                    • Dégâts: {level.effects.damage}
+                                  </div>
+                                )}
+                                {level.conditions?.flux_cost && (
+                                  <div className="text-muted-foreground">
+                                    • Coût: {level.conditions.flux_cost} Flux
+                                  </div>
+                                )}
+                                {level.duration && (
+                                  <div className="text-muted-foreground">
+                                    • Durée: {level.duration}
+                                  </div>
+                                )}
+                                {level.description && (
+                                  <div className="text-muted-foreground mt-2">
+                                    {level.description}
+                                  </div>
+                                )}
+                              </div>
+                            )
+                          })()}
+                        </div>
+                      )}
+                    </div>
+                  )}
+
                   <div className="sticky bottom-0 bg-background pt-4 border-t">
                     <Button
                       className="w-full"
                       onClick={addPreviewedSpell}
-                      disabled={spells.includes(
-                        previewSpell.spell_series || previewSpell.name || ''
-                      )}
+                      disabled={
+                        !selectedLevel ||
+                        !checkLevelAccess(previewSpell, selectedLevel) ||
+                        normalizedSpells.some(
+                          s => s.series === (previewSpell.spell_series || previewSpell.name || '') && s.level === selectedLevel
+                        )
+                      }
                     >
-                      {spells.includes(previewSpell.spell_series || previewSpell.name || '')
-                        ? 'Déjà ajouté'
-                        : 'Ajouter ce sort'}
+                      {normalizedSpells.some(
+                        s => s.series === (previewSpell.spell_series || previewSpell.name || '') && s.level === selectedLevel
+                      )
+                        ? `Niveau ${selectedLevel} déjà ajouté`
+                        : `Ajouter ce sort (Niveau ${selectedLevel})`}
                     </Button>
                   </div>
                 </div>
