@@ -47,6 +47,7 @@ export interface CharacterClass extends BaseItem {
   spells?: SelectedSpell[] | string[]  // Support both formats for backward compatibility
   gameplay_guide: string
   starting_credits?: number  // Starting money budget (default: 0)
+  bonus_spell_slots?: number  // Extra spell slots granted by the MJ
 }
 
 export type ClassCategory = 'Classe de personnage'

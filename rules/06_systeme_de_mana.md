@@ -160,11 +160,28 @@ Voir le fichier : `03_systeme_affinites_et_types.md`.
 
 **Accès au codex :** Un personnage peut utiliser **n'importe quel sort du codex** s'il remplit les conditions d'affinité requises. Il n'y a pas de coût d'apprentissage ni de restriction de disponibilité au-delà des affinités.
 
-**Emplacements de sorts :** Chaque personnage dispose de **4 emplacements de sorts** de base. Ces emplacements déterminent combien de sorts peuvent être "préparés" et disponibles pour usage immédiat.
+**Emplacements de sorts :** Chaque personnage dispose de **2 emplacements de sorts** de base. Ces emplacements déterminent combien de sorts peuvent être "préparés" et disponibles pour usage immédiat.
+
+**Bonus d'Intelligence :** L'Intelligence améliore la capacité à mémoriser et préparer des sorts. **Tous les 5 points d'Intelligence, le personnage gagne 1 emplacement de sort** :
+- Base : 2 emplacements + (Intelligence / 5)
+- **Minimum : 4 emplacements** (ne peut jamais descendre en dessous)
+
+Exemples :
+- Intelligence 0-9 : 4 emplacements (minimum garanti)
+- Intelligence 10-14 : 4 emplacements (2 base + 2 = 4)
+- Intelligence 15-19 : 5 emplacements (2 base + 3 = 5)
+- Intelligence 20-24 : 6 emplacements (2 base + 4 = 6)
 
 **Changement de sorts :** En zone de repos sécurisée, un personnage peut librement échanger ses sorts préparés contre d'autres sorts du codex, tant qu'il possède les affinités requises.
 
-**Emplacements supplémentaires :** Des emplacements de sorts additionnels peuvent être débloqués au cours du jeu par l'expérience, l'équipement ou des récompenses de mission.
+**Emplacements supplémentaires (Bonus MJ) :** Le Maître de Jeu peut accorder des emplacements de sorts supplémentaires comme récompenses :
+- Récompenses de quête importantes
+- Objets magiques ou artefacts
+- Bénédictions divines ou pactes
+- Entraînement spécialisé
+- Événements narratifs exceptionnels
+
+Ces bonus s'ajoutent au calcul de base (2 + Intelligence/5, minimum 4) et sont permanents sauf indication contraire du MJ.
 
 ---
 

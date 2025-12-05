@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
@@ -28,16 +28,33 @@ import type { SelectedSpell } from '@/types/classes'
 interface SpellsManagerProps {
   spells: (SelectedSpell | string)[]  // Support both formats for backward compatibility
   affinities: AffinityStats
+  intelligence?: number  // Character's intelligence stat
+  bonusSlots?: number  // Extra spell slots granted by MJ
   onUpdate: (spells: SelectedSpell[]) => void
+  onBonusSlotsUpdate?: (bonus: number) => void  // Callback to update bonus slots
 }
 
-export function SpellsManager({ spells, affinities, onUpdate }: SpellsManagerProps) {
+export function SpellsManager({ spells, affinities, intelligence = 0, bonusSlots = 0, onUpdate, onBonusSlotsUpdate }: SpellsManagerProps) {
   const { spells: allSpells } = useSpells()
   const [selectorOpen, setSelectorOpen] = useState(false)
   const [searchQuery, setSearchQuery] = useState('')
   const [previewSpell, setPreviewSpell] = useState<Spell | null>(null)
   const [selectedLevel, setSelectedLevel] = useState<string>('1')
   const [detailSpell, setDetailSpell] = useState<Spell | null>(null)
+  const [editingBonus, setEditingBonus] = useState(false)
+  const [tempBonus, setTempBonus] = useState(bonusSlots.toString())
+
+  // Sync tempBonus with bonusSlots when it changes
+  useEffect(() => {
+    setTempBonus(bonusSlots.toString())
+  }, [bonusSlots])
+
+  // Calculate maximum spell slots based on Intelligence and MJ bonus
+  const baseSlots = 2
+  const intelligenceBonus = Math.floor(intelligence / 5)
+  const calculatedSlots = baseSlots + intelligenceBonus
+  const baseTotal = Math.max(4, calculatedSlots) // Minimum of 4 slots
+  const maxSpellSlots = baseTotal + bonusSlots // Add MJ bonus on top
 
   // Convert legacy string[] format to SelectedSpell[] format
   const normalizedSpells: SelectedSpell[] = spells.map(spell => {
@@ -61,6 +78,11 @@ export function SpellsManager({ spells, affinities, onUpdate }: SpellsManagerPro
   const addSpell = (spellName: string, level: string) => {
     const exists = normalizedSpells.some(s => s.series === spellName && s.level === level)
     if (!exists) {
+      // Check if we've reached the maximum spell slots
+      if (normalizedSpells.length >= maxSpellSlots) {
+        // Don't add if we're at the limit
+        return
+      }
       onUpdate([...normalizedSpells, { series: spellName, level }])
     }
   }
@@ -180,11 +202,74 @@ export function SpellsManager({ spells, affinities, onUpdate }: SpellsManagerPro
       <Card>
         <CardHeader>
           <div className="flex justify-between items-center">
-            <CardTitle className="flex items-center gap-2">
-              <Sparkles className="h-5 w-5 text-orange-500" />
-              Sorts ({spells.length})
-            </CardTitle>
-            <Button onClick={() => setSelectorOpen(true)}>
+            <div>
+              <CardTitle className="flex items-center gap-2">
+                <Sparkles className="h-5 w-5 text-orange-500" />
+                Sorts ({normalizedSpells.length}/{maxSpellSlots})
+              </CardTitle>
+              <div className="text-xs text-muted-foreground mt-1 space-y-1">
+                <p>
+                  {calculatedSlots < 4
+                    ? `Base: 2 + ${intelligenceBonus} (Int) = ${calculatedSlots} → 4 (minimum)`
+                    : calculatedSlots === 4
+                    ? `Base: 2 + ${intelligenceBonus} (Int) = 4`
+                    : `Base: 2 + ${intelligenceBonus} (Int) = ${baseTotal}`
+                  }
+                </p>
+                {onBonusSlotsUpdate && (
+                  <div className="flex items-center gap-2">
+                    <span>Bonus MJ:</span>
+                    {editingBonus ? (
+                      <div className="flex items-center gap-1">
+                        <Input
+                          type="number"
+                          value={tempBonus}
+                          onChange={(e) => setTempBonus(e.target.value)}
+                          className="h-5 w-16 text-xs"
+                          min="0"
+                          max="10"
+                        />
+                        <Button
+                          size="sm"
+                          variant="ghost"
+                          className="h-5 w-5 p-0"
+                          onClick={() => {
+                            const value = Math.max(0, Math.min(10, parseInt(tempBonus) || 0))
+                            onBonusSlotsUpdate(value)
+                            setEditingBonus(false)
+                          }}
+                        >
+                          ✓
+                        </Button>
+                        <Button
+                          size="sm"
+                          variant="ghost"
+                          className="h-5 w-5 p-0"
+                          onClick={() => {
+                            setTempBonus(bonusSlots.toString())
+                            setEditingBonus(false)
+                          }}
+                        >
+                          ✗
+                        </Button>
+                      </div>
+                    ) : (
+                      <button
+                        onClick={() => setEditingBonus(true)}
+                        className="font-semibold hover:underline"
+                      >
+                        +{bonusSlots}
+                      </button>
+                    )}
+                    {bonusSlots > 0 && ` = ${maxSpellSlots} total`}
+                  </div>
+                )}
+              </div>
+            </div>
+            <Button
+              onClick={() => setSelectorOpen(true)}
+              disabled={normalizedSpells.length >= maxSpellSlots}
+            >
               <Plus className="h-4 w-4 mr-2" />
               Ajouter
             </Button>
@@ -530,10 +615,13 @@ export function SpellsManager({ spells, affinities, onUpdate }: SpellsManagerPro
                         !checkLevelAccess(previewSpell, selectedLevel) ||
                         normalizedSpells.some(
                           s => s.series === (previewSpell.spell_series || previewSpell.name || '') && s.level === selectedLevel
-                        )
+                        ) ||
+                        normalizedSpells.length >= maxSpellSlots
                       }
                     >
-                      {normalizedSpells.some(
+                      {normalizedSpells.length >= maxSpellSlots ? (
+                        'Limite de sorts atteinte'
+                      ) : normalizedSpells.some(
                         s => s.series === (previewSpell.spell_series || previewSpell.name || '') && s.level === selectedLevel
                       )
                         ? `Niveau ${selectedLevel} déjà ajouté`

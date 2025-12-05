@@ -370,7 +370,10 @@ export function CharacterCreatorPage() {
           <SpellsManager
             spells={character.spells || []}
             affinities={character.affinities}
+            intelligence={character.stats?.intelligence || 0}
+            bonusSlots={character.bonus_spell_slots || 0}
             onUpdate={(spells) => updateCharacter({ spells })}
+            onBonusSlotsUpdate={(bonus) => updateCharacter({ bonus_spell_slots: bonus })}
           />
         </TabsContent>
 
