@@ -5,6 +5,9 @@ import path from 'path'
 
 // https://vite.dev/config/
 export default defineConfig({
+  // Set base for GitHub Pages deployment
+  // Update this to match your repository name if deploying to a project site
+  base: process.env.GITHUB_ACTIONS ? '/rpg/' : '/',
   plugins: [react()],
   resolve: {
     alias: {
