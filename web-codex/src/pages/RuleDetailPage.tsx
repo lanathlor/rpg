@@ -41,7 +41,7 @@ export function RuleDetailPage() {
         setLoading(true)
         setError(null)
 
-        const response = await fetch(`/rules/${section}.md`)
+        const response = await fetch(`${import.meta.env.BASE_URL}rules/${section}.md`)
 
         if (!response.ok) {
           throw new Error(`Erreur lors du chargement: ${response.status}`)

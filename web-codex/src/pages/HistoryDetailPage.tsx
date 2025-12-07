@@ -39,7 +39,7 @@ export function HistoryDetailPage() {
         setLoading(true)
         setError(null)
 
-        const response = await fetch(`/history/${section}.md`)
+        const response = await fetch(`${import.meta.env.BASE_URL}history/${section}.md`)
 
         if (!response.ok) {
           throw new Error(`Erreur lors du chargement: ${response.status}`)

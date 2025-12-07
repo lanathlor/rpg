@@ -121,7 +121,7 @@ export class YamlLoader {
       // Load all files in parallel using Promise.allSettled
       const loadPromises = files.map(async (file) => {
         try {
-          const content = await this.loadYamlFile(`/codex/${category}/${file}`)
+          const content = await this.loadYamlFile(`${import.meta.env.BASE_URL}codex/${category}/${file}`)
           if (content) {
             // Add the name field to spells if using spell_series
             if (category === 'sorts') {
@@ -196,7 +196,7 @@ export class YamlLoader {
 
   // Get file list for a category from index.yaml
   private async getCategoryFiles(category: CodexCategory): Promise<string[]> {
-    const indexPath = `/codex/${category}/index.yaml`
+    const indexPath = `${import.meta.env.BASE_URL}codex/${category}/index.yaml`
     try {
       const data = await this.loadYamlFile(indexPath)
       if (data && typeof data === 'object' && 'files' in data) {
