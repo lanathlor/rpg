@@ -1,21 +1,41 @@
+import { lazy, Suspense } from 'react'
 import { createBrowserRouter } from 'react-router-dom'
 import { Layout } from '@/components/layout/Layout'
 import { ErrorBoundary } from '@/components/ErrorBoundary'
-import { HomePage } from '@/pages/HomePage'
-import { SpellsPage } from '@/pages/SpellsPage'
-import { WeaponsPage } from '@/pages/WeaponsPage'
-import { EquipmentsPage } from '@/pages/EquipmentsPage'
-import { SkillsPage } from '@/pages/SkillsPage'
-import { ConsumablesPage } from '@/pages/ConsumablesPage'
-import { ClassesPage } from '@/pages/ClassesPage'
-import { ClassDetailPage } from '@/pages/ClassDetailPage'
-import { CharactersPage } from '@/pages/CharactersPage'
-import { CharacterCreatorPage } from '@/pages/CharacterCreatorPage'
-import { RulesPage } from '@/pages/RulesPage'
-import { RuleDetailPage } from '@/pages/RuleDetailPage'
-import { HistoryPage } from '@/pages/HistoryPage'
-import { HistoryDetailPage } from '@/pages/HistoryDetailPage'
-import { SearchPage } from '@/pages/SearchPage'
+
+// Lazy load all page components for code splitting
+const HomePage = lazy(() => import('@/pages/HomePage').then(m => ({ default: m.HomePage })))
+const SpellsPage = lazy(() => import('@/pages/SpellsPage').then(m => ({ default: m.SpellsPage })))
+const WeaponsPage = lazy(() => import('@/pages/WeaponsPage').then(m => ({ default: m.WeaponsPage })))
+const EquipmentsPage = lazy(() => import('@/pages/EquipmentsPage').then(m => ({ default: m.EquipmentsPage })))
+const SkillsPage = lazy(() => import('@/pages/SkillsPage').then(m => ({ default: m.SkillsPage })))
+const ConsumablesPage = lazy(() => import('@/pages/ConsumablesPage').then(m => ({ default: m.ConsumablesPage })))
+const ClassesPage = lazy(() => import('@/pages/ClassesPage').then(m => ({ default: m.ClassesPage })))
+const ClassDetailPage = lazy(() => import('@/pages/ClassDetailPage').then(m => ({ default: m.ClassDetailPage })))
+const CharactersPage = lazy(() => import('@/pages/CharactersPage').then(m => ({ default: m.CharactersPage })))
+const CharacterCreatorPage = lazy(() => import('@/pages/CharacterCreatorPage').then(m => ({ default: m.CharacterCreatorPage })))
+const RulesPage = lazy(() => import('@/pages/RulesPage').then(m => ({ default: m.RulesPage })))
+const RuleDetailPage = lazy(() => import('@/pages/RuleDetailPage').then(m => ({ default: m.RuleDetailPage })))
+const HistoryPage = lazy(() => import('@/pages/HistoryPage').then(m => ({ default: m.HistoryPage })))
+const HistoryDetailPage = lazy(() => import('@/pages/HistoryDetailPage').then(m => ({ default: m.HistoryDetailPage })))
+const SearchPage = lazy(() => import('@/pages/SearchPage').then(m => ({ default: m.SearchPage })))
+
+// Loading fallback component
+const LoadingFallback = () => (
+  <div className="flex items-center justify-center h-[50vh]">
+    <div className="text-center space-y-4">
+      <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto"></div>
+      <p className="text-muted-foreground">Chargement...</p>
+    </div>
+  </div>
+)
+
+// Wrapper to add Suspense to lazy-loaded components
+const withSuspense = (Component: React.LazyExoticComponent<React.ComponentType>) => (
+  <Suspense fallback={<LoadingFallback />}>
+    <Component />
+  </Suspense>
+)
 
 export const router = createBrowserRouter([
   {
@@ -24,37 +44,37 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <HomePage />,
+        element: withSuspense(HomePage),
       },
       {
         path: 'sorts',
-        element: <SpellsPage />,
+        element: withSuspense(SpellsPage),
       },
       {
         path: 'armes',
-        element: <WeaponsPage />,
+        element: withSuspense(WeaponsPage),
       },
       {
         path: 'equipements',
-        element: <EquipmentsPage />,
+        element: withSuspense(EquipmentsPage),
       },
       {
         path: 'classes',
-        element: <ClassesPage />,
+        element: withSuspense(ClassesPage),
       },
       {
         path: 'classes/:className',
-        element: <ClassDetailPage />,
+        element: withSuspense(ClassDetailPage),
       },
       {
         path: 'personnages',
-        element: <CharactersPage />,
+        element: withSuspense(CharactersPage),
       },
       {
         path: 'personnages/nouveau',
         element: (
           <ErrorBoundary>
-            <CharacterCreatorPage />
+            {withSuspense(CharacterCreatorPage)}
           </ErrorBoundary>
         ),
       },
@@ -62,37 +82,37 @@ export const router = createBrowserRouter([
         path: 'personnages/:characterId',
         element: (
           <ErrorBoundary>
-            <CharacterCreatorPage />
+            {withSuspense(CharacterCreatorPage)}
           </ErrorBoundary>
         ),
       },
       {
         path: 'competences',
-        element: <SkillsPage />,
+        element: withSuspense(SkillsPage),
       },
       {
         path: 'consommables',
-        element: <ConsumablesPage />,
+        element: withSuspense(ConsumablesPage),
       },
       {
         path: 'regles',
-        element: <RulesPage />,
+        element: withSuspense(RulesPage),
       },
       {
         path: 'regles/:section',
-        element: <RuleDetailPage />,
+        element: withSuspense(RuleDetailPage),
       },
       {
         path: 'histoire',
-        element: <HistoryPage />,
+        element: withSuspense(HistoryPage),
       },
       {
         path: 'histoire/:section',
-        element: <HistoryDetailPage />,
+        element: withSuspense(HistoryDetailPage),
       },
       {
         path: 'search',
-        element: <SearchPage />,
+        element: withSuspense(SearchPage),
       },
     ],
   },
