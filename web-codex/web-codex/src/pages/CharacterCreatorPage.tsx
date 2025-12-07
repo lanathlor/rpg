@@ -19,7 +19,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select'
-import { ArrowLeft, Save, Download, FileDown, Check } from 'lucide-react'
+import { ArrowLeft, Download, FileDown, Check } from 'lucide-react'
 import {
   getCharacter,
   createCharacter,
@@ -66,7 +66,6 @@ export function CharacterCreatorPage() {
 
   const [character, setCharacter] = useState<Character | null>(null)
   const [showClassChoice, setShowClassChoice] = useState(false)
-  const [lastSaved, setLastSaved] = useState<number>(Date.now())
   const [saveIndicator, setSaveIndicator] = useState(false)
 
   // Load or create character
@@ -102,7 +101,6 @@ export function CharacterCreatorPage() {
     (char) => {
       if (char) {
         saveCharacter(char)
-        setLastSaved(Date.now())
         setSaveIndicator(true)
         setTimeout(() => setSaveIndicator(false), 2000)
       }

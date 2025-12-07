@@ -11,7 +11,7 @@ export function useAutoSave<T>(
   onSave: (data: T) => void,
   delay: number = 500
 ) {
-  const timeoutRef = useRef<NodeJS.Timeout | null>(null)
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const previousDataRef = useRef<string | null>(null)
   const isMountedRef = useRef(false)
 

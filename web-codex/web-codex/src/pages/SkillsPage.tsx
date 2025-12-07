@@ -11,28 +11,9 @@ import {
   DialogTitle,
 } from '@/components/ui/dialog'
 import { SkillDetail } from '@/components/SkillDetail'
-import { Book, Sword, Shield, Wrench, Target, Zap, Search, Filter, Trophy, ArrowUpDown } from 'lucide-react'
+import { Search, Filter, Trophy, ArrowUpDown } from 'lucide-react'
 import type { Skill } from '@/types'
 import { getCompetenceTier } from '@/lib/pointBuyCalculator'
-
-const getSubcategoryIcon = (subcategory: string) => {
-  switch (subcategory.toLowerCase()) {
-    case 'combat':
-      return <Sword className="h-4 w-4" />
-    case 'défensive':
-      return <Shield className="h-4 w-4" />
-    case 'connaissance':
-      return <Book className="h-4 w-4" />
-    case 'technique':
-      return <Wrench className="h-4 w-4" />
-    case 'précision':
-      return <Target className="h-4 w-4" />
-    case 'mobilité':
-      return <Zap className="h-4 w-4" />
-    default:
-      return <Book className="h-4 w-4" />
-  }
-}
 
 const getSubcategoryColor = (subcategory: string) => {
   switch (subcategory.toLowerCase()) {
@@ -76,7 +57,7 @@ export function SkillsPage() {
   // Filter and sort skills
   const filteredSkills = skills.filter((skill) => {
     const matchesSearch =
-      skill.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      (skill.name || '').toLowerCase().includes(searchQuery.toLowerCase()) ||
       (skill.description || '').toLowerCase().includes(searchQuery.toLowerCase())
     const matchesSubcategory = !selectedSubcategory || skill.subcategory === selectedSubcategory
 
@@ -91,9 +72,9 @@ export function SkillsPage() {
   }).sort((a, b) => {
     switch (sortBy) {
       case 'name-asc':
-        return a.name.localeCompare(b.name)
+        return (a.name || '').localeCompare(b.name || '')
       case 'name-desc':
-        return b.name.localeCompare(a.name)
+        return (b.name || '').localeCompare(a.name || '')
       case 'points-asc':
         return (a.point_cost || 0) - (b.point_cost || 0)
       case 'points-desc':

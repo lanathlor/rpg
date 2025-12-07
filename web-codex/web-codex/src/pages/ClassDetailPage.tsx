@@ -14,14 +14,12 @@ import {
   ArrowLeft,
   Home,
   ChevronRight,
-  Users,
   Heart,
   Gauge,
   Brain,
   Eye,
   Target,
   Sparkles,
-  Flame,
   Zap,
   Shield,
   Sword,
@@ -36,8 +34,8 @@ import {
   Calculator
 } from 'lucide-react'
 import { useClasses, useSpells, useWeapons, useArmors, useSkills, useConsumables } from '@/lib/dataProvider'
-import { getSchoolIcon, getSchoolColor, getTypeIcon } from '@/lib/schoolUtils'
-import { checkSpellSeriesAccess, checkWeaponAccess, checkArmorAccess, checkSkillAccess, checkConsumableAccess, getAccessDescription, getDetailedAccessInfo } from '@/lib/accessUtils'
+import { getSchoolIcon, getTypeIcon } from '@/lib/schoolUtils'
+import { checkSpellSeriesAccess, checkWeaponAccess, checkArmorAccess, checkSkillAccess, checkConsumableAccess, getDetailedAccessInfo } from '@/lib/accessUtils'
 import { filterCharacterContent, exportCharacterToPDF } from '@/lib/pdfExport'
 import { calculateTotalPointBuy } from '@/lib/pointBuyCalculator'
 import { SpellDetail } from '@/components/SpellDetail'
@@ -92,7 +90,7 @@ export function ClassDetailPage() {
   const characterClass = useMemo(() => {
     if (loading || !className) return null
     return classes.find(c => {
-      const slug = c.name.toLowerCase()
+      const slug = (c.name || '').toLowerCase()
         .replace(/\s+/g, '-')
         .replace(/[àáâãäå]/g, 'a')
         .replace(/[èéêë]/g, 'e')
@@ -664,21 +662,23 @@ export function ClassDetailPage() {
             <CardContent>
               <div className="space-y-2">
                 {characterClass.spells.map((spell, index) => {
-                  const spellData = findSpellByName(spell)
+                  const spellName = typeof spell === 'string' ? spell : spell.series
+                  const spellData = findSpellByName(spellName)
                   const accessResult = spellData ? checkSpellSeriesAccess(spellData, characterClass.affinities) : { hasAccess: true }
                   const hasAccess = accessResult.hasAccess
+                  const displayName = typeof spell === 'string' ? spell : `${spell.series} (Niveau ${spell.level})`
 
                   return (
                     <div
                       key={index}
-                      onClick={() => openSpellDetail(spell)}
+                      onClick={() => openSpellDetail(spellName)}
                       className={`block p-2 rounded-md border hover:bg-muted transition-colors cursor-pointer relative ${
                         !hasAccess ? 'border-red-500 border-2 bg-red-50 dark:bg-red-950/20' : ''
                       }`}
                       title={!hasAccess ? getDetailedAccessInfo(accessResult) : undefined}
                     >
                       <div className="flex items-center justify-between">
-                        <span className="text-sm">{spell}</span>
+                        <span className="text-sm">{displayName}</span>
                         <div className="flex items-center gap-2">
                           {!hasAccess && (
                             <Badge variant="outline" className="text-xs bg-red-100 text-red-800 border-red-300 dark:bg-red-900 dark:text-red-200 dark:border-red-700">

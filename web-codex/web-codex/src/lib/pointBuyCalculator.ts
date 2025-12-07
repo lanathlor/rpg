@@ -4,6 +4,7 @@ import type { Armor } from '@/types/armor'
 import type { Skill } from '@/types/skills'
 import type { Consumable } from '@/types/consumables'
 import type { Spell } from '@/types/spells'
+import type { AffinityStats } from '@/types/common'
 import { checkSpellSeriesAccess, checkWeaponAccess, checkArmorAccess } from './accessUtils'
 
 /**
@@ -175,11 +176,7 @@ export function calculateAffinityCost(affinityType: string, level: number): numb
 /**
  * Calculate total affinities cost
  */
-export function calculateAffinitiesCost(affinities: {
-  distance?: number
-  melee?: number
-  [key: string]: number | { [key: string]: number } | undefined
-}): number {
+export function calculateAffinitiesCost(affinities: AffinityStats): number {
   let total = 0
 
   // Process combat affinities
@@ -189,13 +186,6 @@ export function calculateAffinitiesCost(affinities: {
   if (affinities.melee) {
     total += calculateAffinityCost('melee', affinities.melee)
   }
-
-  // Process special weapon affinities
-  SPECIAL_WEAPONS.forEach(weapon => {
-    if (affinities[weapon] && typeof affinities[weapon] === 'number') {
-      total += calculateAffinityCost(weapon, affinities[weapon] as number)
-    }
-  })
 
   // Process schools
   if (affinities.schools && typeof affinities.schools === 'object') {
@@ -208,7 +198,7 @@ export function calculateAffinitiesCost(affinities: {
 
   // Process types
   if (affinities.types && typeof affinities.types === 'object') {
-    Object.entries(affinities.types).forEach(([type, level]) => {
+    Object.entries(affinities.types).forEach(([_type, level]) => {
       if (typeof level === 'number') {
         total += TYPE_COST * level
       }
@@ -442,7 +432,7 @@ export function isCharacterLegal(
   character: any,
   allWeapons: Weapon[],
   allArmors: Armor[],
-  allSkills: Skill[],
+  _allSkills: Skill[],
   allConsumables: Consumable[],
   allSpells: Spell[]
 ): { isLegal: boolean; issues: string[] } {

@@ -25,8 +25,8 @@ export function SpellsPage() {
   const [selectedType, setSelectedType] = useState<string>('')
 
   // Get unique schools and types for filters
-  const schools = [...new Set(spells.map(spell => spell.school).filter(Boolean))].sort()
-  const types = [...new Set(spells.map(spell => spell.type).filter(Boolean))].sort()
+  const schools = [...new Set(spells.map(spell => spell.school).filter((s): s is string => Boolean(s)))].sort()
+  const types = [...new Set(spells.map(spell => spell.type).filter((t): t is string => Boolean(t)))].sort()
 
   // Filter spells
   const filteredSpells = spells.filter((spell) => {

@@ -16,7 +16,6 @@ import {
   Star,
   Hand,
   Gauge,
-  Flame,
   Swords,
 } from 'lucide-react'
 

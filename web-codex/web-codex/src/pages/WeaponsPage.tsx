@@ -108,7 +108,7 @@ export function WeaponsPage() {
   // Filter weapons
   const filteredWeapons = weapons.filter((weapon) => {
     const matchesSearch =
-      weapon.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      (weapon.name || '').toLowerCase().includes(searchQuery.toLowerCase()) ||
       (weapon.description || '').toLowerCase().includes(searchQuery.toLowerCase())
     const matchesCategory = !selectedCategory || weapon.category === selectedCategory
     const matchesType = !selectedType || weapon.type === selectedType

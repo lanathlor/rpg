@@ -1,8 +1,8 @@
-import { describe, it, expect, vi, beforeEach, Mock } from 'vitest'
+import { describe, it, expect, vi, beforeEach, type Mock } from 'vitest'
 import { render, screen, waitFor } from '@/test/utils'
 import userEvent from '@testing-library/user-event'
 import { CharacterCreatorPage } from '../CharacterCreatorPage'
-import { createMockCharacter, createMockClass, createMockClasses, createMageClass, createWarriorClass } from '@/test/factories'
+import { createMockCharacter, createMockClasses, createMageClass, createWarriorClass } from '@/test/factories'
 import * as characterStorage from '@/lib/characterStorage'
 import * as dataProvider from '@/lib/dataProvider'
 import * as characterExport from '@/lib/characterExport'
@@ -35,8 +35,8 @@ describe('CharacterCreatorPage', () => {
     localStorage.clear()
 
     // Setup default mocks
-    ;(useParams as Mock).mockReturnValue({ characterId: 'nouveau' })
-    ;(useNavigate as Mock).mockReturnValue(mockNavigate)
+    ;(routerDom.useParams as Mock).mockReturnValue({ characterId: 'nouveau' })
+    ;(routerDom.useNavigate as Mock).mockReturnValue(mockNavigate)
 
     const classes = [createWarriorClass(), createMageClass(), ...mockClasses]
     ;(dataProvider.useClasses as Mock).mockReturnValue({
@@ -176,8 +176,7 @@ describe('CharacterCreatorPage', () => {
       const mockChar = createMockCharacter({ name: 'Existing Character' })
       ;(characterStorage.getCharacter as Mock).mockReturnValue(mockChar)
 
-      (routerDom.useParams as Mock)
-      ;(useParams as Mock).mockReturnValue({ characterId: mockChar.id })
+      ;(routerDom.useParams as Mock).mockReturnValue({ characterId: mockChar.id })
     })
 
     it('should load and display existing character', async () => {
@@ -241,8 +240,7 @@ describe('CharacterCreatorPage', () => {
       mockChar = createMockCharacter({ name: 'Test Hero', type: 'Aventurier' })
       ;(characterStorage.getCharacter as Mock).mockReturnValue(mockChar)
 
-      (routerDom.useParams as Mock)
-      ;(useParams as Mock).mockReturnValue({ characterId: mockChar.id })
+      ;(routerDom.useParams as Mock).mockReturnValue({ characterId: mockChar.id })
     })
 
     it('should allow editing character name', async () => {
@@ -311,8 +309,7 @@ describe('CharacterCreatorPage', () => {
       mockChar = createMockCharacter()
       ;(characterStorage.getCharacter as Mock).mockReturnValue(mockChar)
 
-      (routerDom.useParams as Mock)
-      ;(useParams as Mock).mockReturnValue({ characterId: mockChar.id })
+      ;(routerDom.useParams as Mock).mockReturnValue({ characterId: mockChar.id })
 
       ;(characterExport.exportToYAML as Mock).mockImplementation(() => {})
       ;(characterExport.exportToPDF as Mock).mockImplementation(() => {})
@@ -351,8 +348,7 @@ describe('CharacterCreatorPage', () => {
 
   describe('Error Handling', () => {
     it('should redirect to characters list when character not found', async () => {
-      (routerDom.useParams as Mock)
-      ;(useParams as Mock).mockReturnValue({ characterId: 'non-existent-id' })
+      ;(routerDom.useParams as Mock).mockReturnValue({ characterId: 'non-existent-id' })
       ;(characterStorage.getCharacter as Mock).mockReturnValue(null)
 
       render(<CharacterCreatorPage />)
@@ -363,8 +359,7 @@ describe('CharacterCreatorPage', () => {
     })
 
     it('should display loading spinner when character is not yet loaded', async () => {
-      (routerDom.useParams as Mock)
-      ;(useParams as Mock).mockReturnValue({ characterId: 'loading-id' })
+      ;(routerDom.useParams as Mock).mockReturnValue({ characterId: 'loading-id' })
       ;(characterStorage.getCharacter as Mock).mockReturnValue(null)
 
       // Don't trigger the useEffect redirect immediately
@@ -385,8 +380,7 @@ describe('CharacterCreatorPage', () => {
       mockChar = createMockCharacter()
       ;(characterStorage.getCharacter as Mock).mockReturnValue(mockChar)
 
-      (routerDom.useParams as Mock)
-      ;(useParams as Mock).mockReturnValue({ characterId: mockChar.id })
+      ;(routerDom.useParams as Mock).mockReturnValue({ characterId: mockChar.id })
     })
 
     it('should switch to Flux tab when clicked', async () => {
@@ -422,8 +416,7 @@ describe('CharacterCreatorPage', () => {
       const mockChar = createMockCharacter({ sourceClass: 'Guerrier' })
       ;(characterStorage.getCharacter as Mock).mockReturnValue(mockChar)
 
-      (routerDom.useParams as Mock)
-      ;(useParams as Mock).mockReturnValue({ characterId: mockChar.id })
+      ;(routerDom.useParams as Mock).mockReturnValue({ characterId: mockChar.id })
 
       render(<CharacterCreatorPage />)
 
@@ -436,8 +429,7 @@ describe('CharacterCreatorPage', () => {
       const mockChar = createMockCharacter({ sourceClass: undefined })
       ;(characterStorage.getCharacter as Mock).mockReturnValue(mockChar)
 
-      (routerDom.useParams as Mock)
-      ;(useParams as Mock).mockReturnValue({ characterId: mockChar.id })
+      ;(routerDom.useParams as Mock).mockReturnValue({ characterId: mockChar.id })
 
       render(<CharacterCreatorPage />)
 
@@ -454,8 +446,7 @@ describe('CharacterCreatorPage', () => {
       const mockChar = createMockCharacter()
       ;(characterStorage.getCharacter as Mock).mockReturnValue(mockChar)
 
-      (routerDom.useParams as Mock)
-      ;(useParams as Mock).mockReturnValue({ characterId: mockChar.id })
+      ;(routerDom.useParams as Mock).mockReturnValue({ characterId: mockChar.id })
 
       render(<CharacterCreatorPage />)
 

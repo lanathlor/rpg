@@ -1,7 +1,7 @@
 import {
   Flame, Zap, Shield, Sparkles, Sword, ArrowRight, Users, Skull,
   Snowflake, Eye, Wind, Droplets, Magnet, Heart, Volume2, Clock, Waves,
-  Moon, Gauge, Sun, CircleDot, Target, Crosshair
+  Moon, Gauge, Sun, CircleDot, Target
 } from 'lucide-react'
 
 export const getSchoolIcon = (school: string) => {
@@ -22,14 +22,12 @@ export const getSchoolIcon = (school: string) => {
     case 'ombre':
       return Moon
     case 'biométabolique':
-    case 'biométabolique':
       return Skull
     case 'quantique':
       return Sparkles
     case 'pure':
       return CircleDot
     case 'aérocinétique':
-    case 'aerocinétique':
     case 'aerocinétique':
       return Wind
     case 'hydrodynamique':
@@ -75,14 +73,12 @@ export const getSchoolColor = (school: string) => {
     case 'ombre':
       return 'bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-300'
     case 'biométabolique':
-    case 'biométabolique':
       return 'bg-violet-100 text-violet-800 dark:bg-violet-900 dark:text-violet-300'
     case 'quantique':
       return 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300'
     case 'pure':
       return 'bg-white text-gray-800 dark:bg-gray-200 dark:text-gray-800 border border-gray-300'
     case 'aérocinétique':
-    case 'aerocinétique':
     case 'aerocinétique':
       return 'bg-sky-100 text-sky-800 dark:bg-sky-900 dark:text-sky-300'
     case 'hydrodynamique':

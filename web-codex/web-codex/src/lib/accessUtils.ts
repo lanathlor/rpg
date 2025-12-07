@@ -203,16 +203,20 @@ export function checkSpellSeriesAccess(spell: Spell, characterAffinities: Affini
   }
 
   // Check if character can access any level of the spell
-  for (const level of spell.levels) {
-    const access = checkSpellAccess(level, characterAffinities)
-    if (access.hasAccess) {
-      return { hasAccess: true }
+  if (spell.levels) {
+    for (const level of spell.levels) {
+      const access = checkSpellAccess(level, characterAffinities)
+      if (access.hasAccess) {
+        return { hasAccess: true }
+      }
     }
+
+    // If no level is accessible, return the access result for the first level
+    // as it usually has the lowest requirements
+    return checkSpellAccess(spell.levels[0], characterAffinities)
   }
 
-  // If no level is accessible, return the access result for the first level
-  // as it usually has the lowest requirements
-  return checkSpellAccess(spell.levels[0], characterAffinities)
+  return { hasAccess: false, requirements: ['No spell levels available'] }
 }
 
 // Check weapon access based on affinity requirements
@@ -304,11 +308,6 @@ export function checkArmorAccess(armor: Armor, character: CharacterClass): Acces
 
   // If no prerequisites at all, allow access
   if (!prerequisites) {
-    return { hasAccess: true }
-  }
-
-  // If explicitly has no requirements
-  if (prerequisites.none === true) {
     return { hasAccess: true }
   }
 
@@ -525,14 +524,14 @@ export function checkArmorAccess(armor: Armor, character: CharacterClass): Acces
 }
 
 // Check skill access (placeholder - may depend on stats or prerequisites)
-export function checkSkillAccess(skill: Skill, character: CharacterClass): AccessResult {
+export function checkSkillAccess(_skill: Skill, _character: CharacterClass): AccessResult {
   // For now, assume all skills are accessible
   // This can be expanded based on stat requirements or other rules
   return { hasAccess: true }
 }
 
 // Check consumable access (placeholder)
-export function checkConsumableAccess(consumable: Consumable, character: CharacterClass): AccessResult {
+export function checkConsumableAccess(_consumable: Consumable, _character: CharacterClass): AccessResult {
   // For now, assume all consumables are accessible
   return { hasAccess: true }
 }
@@ -585,6 +584,7 @@ export function hasAccessToWeapon(weapon: Weapon, affinities: AffinityStats, sta
     base_stats: { health: 0, speed: 0 },
     equipment: {},
     skills: [],
+    gameplay_guide: '',
   }
   return checkWeaponAccess(weapon, character).hasAccess
 }
@@ -597,6 +597,7 @@ export function hasAccessToArmor(armor: Armor, affinities: AffinityStats, stats:
     base_stats: { health: 0, speed: 0 },
     equipment: {},
     skills: [],
+    gameplay_guide: '',
   }
   return checkArmorAccess(armor, character).hasAccess
 }

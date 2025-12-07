@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
@@ -20,14 +20,13 @@ import {
   Zap,
   Trash2,
   Edit,
-  Download,
   Upload,
   FileText,
   Clock,
   Check,
 } from 'lucide-react'
 import { getCharacterList, deleteCharacter, importCharacter, getCharacter } from '@/lib/characterStorage'
-import { importFromYAML, exportToYAML, exportToPDF } from '@/lib/characterExport'
+import { importFromYAML } from '@/lib/characterExport'
 import { isCharacterLegal } from '@/lib/pointBuyCalculator'
 import { useWeapons, useArmors, useSkills, useConsumables, useSpells } from '@/lib/dataProvider'
 import type { CharacterListItem } from '@/types/character'

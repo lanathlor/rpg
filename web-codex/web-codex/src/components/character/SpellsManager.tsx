@@ -19,7 +19,7 @@ import {
 } from '@/components/ui/dialog'
 import { Sparkles, Plus, X, Search, Lock, Eye, AlertTriangle, CheckCircle } from 'lucide-react'
 import { useSpells } from '@/lib/dataProvider'
-import { hasAccessToSpell, checkSpellSeriesAccess, checkSpellAccess, getDetailedAccessInfo } from '@/lib/accessUtils'
+import { hasAccessToSpell, checkSpellAccess } from '@/lib/accessUtils'
 import { SpellDetail } from '@/components/SpellDetail'
 import type { AffinityStats } from '@/types/common'
 import type { Spell } from '@/types'

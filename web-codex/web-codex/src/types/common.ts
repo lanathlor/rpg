@@ -26,6 +26,7 @@ export interface AffinityStats {
   distance?: number
   melee?: number
   schools?: {
+    [key: string]: number | undefined
     feu?: number
     givre?: number
     'bio-arcanotechnie'?: number
@@ -33,6 +34,7 @@ export interface AffinityStats {
     quantique?: number
   }
   types?: {
+    [key: string]: number | undefined
     destruction?: number
     alteration?: number
     amelioration?: number

@@ -170,7 +170,10 @@ export function exportToPDF(character: Character): void {
     doc.text('Sorts', 15, yPos)
     yPos += 8
 
-    const spellRows = character.spells.map((spell, idx) => [`${idx + 1}`, spell])
+    const spellRows = character.spells.map((spell, idx) => [
+      `${idx + 1}`,
+      typeof spell === 'string' ? spell : `${spell.series} (Niveau ${spell.level})`
+    ])
     autoTable(doc, {
       startY: yPos,
       head: [['#', 'Nom du sort']],

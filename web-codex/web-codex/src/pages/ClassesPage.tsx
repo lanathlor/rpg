@@ -133,7 +133,7 @@ export function ClassesPage() {
   // Filter and sort classes
   const filteredClasses = classes.filter((characterClass) => {
     const matchesSearch =
-      characterClass.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      (characterClass.name || '').toLowerCase().includes(searchQuery.toLowerCase()) ||
       (characterClass.description || '').toLowerCase().includes(searchQuery.toLowerCase()) ||
       getClassArchetype(characterClass).toLowerCase().includes(searchQuery.toLowerCase())
 
@@ -148,9 +148,9 @@ export function ClassesPage() {
   }).sort((a, b) => {
     switch (sortBy) {
       case 'name-asc':
-        return a.name.localeCompare(b.name)
+        return (a.name || '').localeCompare(b.name || '')
       case 'name-desc':
-        return b.name.localeCompare(a.name)
+        return (b.name || '').localeCompare(a.name || '')
       case 'points-asc': {
         const pointsA = calculateTotalPointBuy(a, weapons, armors, skills, consumables).total
         const pointsB = calculateTotalPointBuy(b, weapons, armors, skills, consumables).total
@@ -340,15 +340,15 @@ export function ClassesPage() {
         {filteredClasses.map((characterClass) => (
           <Link
             key={characterClass.name}
-            to={`/classes/${getClassSlug(characterClass.name)}`}
+            to={`/classes/${getClassSlug(characterClass.name || '')}`}
             className="block"
           >
             <Card className="hover:shadow-lg transition-all cursor-pointer group h-full">
               <CardHeader>
                 <div className="flex justify-between items-start">
                   <div className="flex items-center gap-3">
-                    <div className={`p-2 rounded-lg ${getClassColor(characterClass.name).replace('text-', 'bg-').replace('bg-', 'bg-opacity-20 text-')}`}>
-                      {getClassIcon(characterClass.name)}
+                    <div className={`p-2 rounded-lg ${getClassColor(characterClass.name || '').replace('text-', 'bg-').replace('bg-', 'bg-opacity-20 text-')}`}>
+                      {getClassIcon(characterClass.name || '')}
                     </div>
                     <div>
                       <CardTitle className="text-lg group-hover:text-primary transition-colors">

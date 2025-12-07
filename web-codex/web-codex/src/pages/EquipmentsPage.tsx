@@ -11,7 +11,7 @@ import {
   DialogTitle,
 } from '@/components/ui/dialog'
 import { ArmorDetail } from '@/components/ArmorDetail'
-import { Shield, Shirt, HardHat, Users, Zap, Cog, Search, Filter, Brain, Bot, Cpu, FlaskConical, Target, Gauge } from 'lucide-react'
+import { Shield, Shirt, HardHat, Users, Search, Filter, Brain, Bot, Cpu, FlaskConical, Target, Gauge } from 'lucide-react'
 import type { Armor } from '@/types'
 
 const getCategoryIcon = (category: string) => {
@@ -133,7 +133,7 @@ export function EquipmentsPage() {
   // Filter armors
   const filteredArmors = armors.filter((armor) => {
     const matchesSearch =
-      armor.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      (armor.name || '').toLowerCase().includes(searchQuery.toLowerCase()) ||
       (armor.description || '').toLowerCase().includes(searchQuery.toLowerCase())
     const matchesCategory = !selectedCategory || armor.category === selectedCategory
     const matchesSubcategory = !selectedSubcategory || armor.subcategory === selectedSubcategory

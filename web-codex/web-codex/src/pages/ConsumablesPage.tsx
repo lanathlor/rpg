@@ -60,7 +60,7 @@ export function ConsumablesPage() {
   // Filter consumables
   const filteredConsumables = consumables.filter((consumable) => {
     const matchesSearch =
-      consumable.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      (consumable.name || '').toLowerCase().includes(searchQuery.toLowerCase()) ||
       (consumable.description || '').toLowerCase().includes(searchQuery.toLowerCase())
     const matchesSubcategory = !selectedSubcategory || consumable.subcategory === selectedSubcategory
 

@@ -9,7 +9,6 @@ import {
   SCHOOLS,
   TYPES,
   COMBAT_AFFINITIES,
-  calculateAffinityCost,
   getSchoolCost,
   TYPE_COST,
   COMBAT_AFFINITY_COST,

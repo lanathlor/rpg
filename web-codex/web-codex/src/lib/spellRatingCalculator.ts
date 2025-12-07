@@ -260,8 +260,8 @@ export function calculatePowerScore(spellLevel: SpellLevel): PowerScoreBreakdown
   }
 
   // 4. Duration Bonus
-  if (effects?.duration || spellLevel.duration) {
-    const durationStr = effects.duration || spellLevel.duration
+  if (spellLevel.duration) {
+    const durationStr = spellLevel.duration
     const turns = parseDuration(durationStr)
     durationBonus = turns * 8
   }
@@ -464,6 +464,7 @@ export interface SpellWithRating {
  * Rate all levels of a spell
  */
 export function rateAllSpellLevels(spell: Spell): SpellWithRating[] {
+  if (!spell.levels) return []
   return spell.levels.map((level, index) => ({
     spell,
     levelIndex: index,

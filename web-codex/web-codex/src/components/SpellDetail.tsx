@@ -337,20 +337,24 @@ export function SpellDetail({ spell }: SpellDetailProps) {
             <p className="text-lg text-muted-foreground mt-1">{spell.spell_series}</p>
           </div>
           <div className="flex gap-2">
-            <Badge className={getSchoolColor(spell.school)}>
-              {(() => {
-                const Icon = getSchoolIcon(spell.school)
-                return <Icon className="h-4 w-4" />
-              })()}
-              <span className="ml-1 capitalize">{spell.school}</span>
-            </Badge>
-            <Badge className={getTypeColor(spell.type)}>
-              {(() => {
-                const Icon = getTypeIcon(spell.type)
-                return <Icon className="h-4 w-4" />
-              })()}
-              <span className="ml-1 capitalize">{spell.type}</span>
-            </Badge>
+            {spell.school && (
+              <Badge className={getSchoolColor(spell.school)}>
+                {(() => {
+                  const Icon = getSchoolIcon(spell.school!)
+                  return <Icon className="h-4 w-4" />
+                })()}
+                <span className="ml-1 capitalize">{spell.school}</span>
+              </Badge>
+            )}
+            {spell.type && (
+              <Badge className={getTypeColor(spell.type)}>
+                {(() => {
+                  const Icon = getTypeIcon(spell.type!)
+                  return <Icon className="h-4 w-4" />
+                })()}
+                <span className="ml-1 capitalize">{spell.type}</span>
+              </Badge>
+            )}
           </div>
         </div>
 
@@ -365,16 +369,18 @@ export function SpellDetail({ spell }: SpellDetailProps) {
       <Separator />
 
       {/* Levels */}
-      <div>
-        <h2 className="text-xl font-semibold mb-4">
-          Niveaux disponibles ({spell.levels.length})
-        </h2>
-        <div className="space-y-4">
-          {spell.levels.map((level, index) => (
-            <SpellLevelDetail key={`${level.level}-${index}`} level={level} />
-          ))}
+      {spell.levels && spell.levels.length > 0 && (
+        <div>
+          <h2 className="text-xl font-semibold mb-4">
+            Niveaux disponibles ({spell.levels.length})
+          </h2>
+          <div className="space-y-4">
+            {spell.levels.map((level, index) => (
+              <SpellLevelDetail key={`${level.level}-${index}`} level={level} />
+            ))}
+          </div>
         </div>
-      </div>
+      )}
     </div>
   )
 }

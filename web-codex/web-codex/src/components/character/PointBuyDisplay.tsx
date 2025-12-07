@@ -33,18 +33,6 @@ export function PointBuyDisplay({
     consumables
   )
 
-  // Calculate money spent
-  const creditsSpent = calculateTotalCreditsSpent(
-    character.equipment,
-    weapons,
-    armors,
-    consumables
-  )
-
-  const startingCredits = character.starting_credits || 0
-  const creditsRemaining = startingCredits - creditsSpent
-  const budgetPointCost = Math.ceil(startingCredits / 400)
-
   const tier = getPointTier(breakdown.total)
 
   return (
@@ -74,7 +62,7 @@ export function PointBuyDisplay({
         <div className="flex items-center gap-3 mb-3">
           <div className="text-2xl font-bold">{breakdown.total}</div>
           <Badge className={tier.colorClass}>
-            Tier {tier.tier}
+            {tier.name}
           </Badge>
         </div>
 

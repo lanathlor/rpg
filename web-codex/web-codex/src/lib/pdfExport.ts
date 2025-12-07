@@ -38,7 +38,7 @@ export function filterCharacterContent(
       // Use the SAME logic as the UI: checkSpellSeriesAccess
       const seriesAccess = checkSpellSeriesAccess(spell, character.affinities)
 
-      if (seriesAccess.hasAccess) {
+      if (seriesAccess.hasAccess && spell.levels) {
         // Find the highest accessible level for this spell
         let highestAccessibleLevel = 0
         let levelData = null
@@ -163,7 +163,7 @@ export function exportCharacterToPDF(filteredData: FilteredCharacterData): void 
   }
 
   // Document title
-  addText(character.name, 16, true)
+  addText(character.name || 'Personnage sans nom', 16, true)
   yPosition += 5
 
   // Character description
@@ -232,20 +232,17 @@ export function exportCharacterToPDF(filteredData: FilteredCharacterData): void 
       if (weapon.stats.range) addText(`Portée: ${weapon.stats.range}`, 9, false, 10)
       if (weapon.stats.attack_type) addText(`Type d'attaque: ${weapon.stats.attack_type}`, 9, false, 10)
       if (weapon.stats.defense_type) addText(`Type de défense: ${weapon.stats.defense_type}`, 9, false, 10)
-      if (weapon.stats.reload_time) addText(`Temps de rechargement: ${weapon.stats.reload_time}`, 9, false, 10)
-      if (weapon.stats.ammunition) addText(`Munitions: ${weapon.stats.ammunition}`, 9, false, 10)
-      if (weapon.stats.weight) addText(`Poids: ${weapon.stats.weight}`, 9, false, 10)
+      if (weapon.stats.special) addText(`Spécial: ${weapon.stats.special}`, 9, false, 10)
 
       // Requirements
-      if (weapon.prerequisites?.affinities || weapon.prerequisites?.stats) {
+      if (weapon.prerequisites?.affinity || weapon.prerequisites?.stat) {
         let reqText = 'Prérequis: '
-        if (weapon.prerequisites.stats) {
-          reqText += weapon.prerequisites.stats.join(', ')
+        if (weapon.prerequisites.stat) {
+          reqText += weapon.prerequisites.stat
         }
-        if (weapon.prerequisites.affinities) {
-          if (weapon.prerequisites.stats) reqText += ', '
-          if (weapon.prerequisites.affinities.distance) reqText += `A.Dist ${weapon.prerequisites.affinities.distance}`
-          if (weapon.prerequisites.affinities.melee) reqText += `A.CAC ${weapon.prerequisites.affinities.melee}`
+        if (weapon.prerequisites.affinity) {
+          if (weapon.prerequisites.stat) reqText += ', '
+          reqText += weapon.prerequisites.affinity
         }
         addText(reqText, 9, false, 10)
       }
@@ -310,9 +307,6 @@ export function exportCharacterToPDF(filteredData: FilteredCharacterData): void 
       // Requirements
       if (armor.prerequisites?.stat) {
         addText(`Prérequis: ${armor.prerequisites.stat}`, 9, false, 10)
-      }
-      if (armor.prerequisites?.stats) {
-        addText(`Prérequis: ${armor.prerequisites.stats.join(', ')}`, 9, false, 10)
       }
       if ((armor.prerequisites as any)?.skill) {
         addText(`Compétence requise: ${(armor.prerequisites as any).skill}`, 9, false, 10)
@@ -450,6 +444,6 @@ export function exportCharacterToPDF(filteredData: FilteredCharacterData): void 
   }
 
   // Generate filename and download
-  const filename = `${character.name.replace(/[^a-zA-Z0-9]/g, '-')}-Character-Sheet.pdf`
+  const filename = `${(character.name || 'Character').replace(/[^a-zA-Z0-9]/g, '-')}-Character-Sheet.pdf`
   doc.save(filename)
 }

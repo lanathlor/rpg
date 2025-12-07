@@ -26,7 +26,7 @@ Object.defineProperty(window, 'matchMedia', {
 })
 
 // Mock IntersectionObserver
-global.IntersectionObserver = class IntersectionObserver {
+globalThis.IntersectionObserver = class IntersectionObserver {
   constructor() {}
   disconnect() {}
   observe() {}
@@ -37,7 +37,7 @@ global.IntersectionObserver = class IntersectionObserver {
 } as any
 
 // Mock ResizeObserver
-global.ResizeObserver = class ResizeObserver {
+globalThis.ResizeObserver = class ResizeObserver {
   constructor() {}
   disconnect() {}
   observe() {}
@@ -48,5 +48,5 @@ global.ResizeObserver = class ResizeObserver {
 Element.prototype.scrollIntoView = vi.fn()
 
 // Mock window.URL.createObjectURL
-global.URL.createObjectURL = vi.fn(() => 'mock-url')
-global.URL.revokeObjectURL = vi.fn()
+globalThis.URL.createObjectURL = vi.fn(() => 'mock-url')
+globalThis.URL.revokeObjectURL = vi.fn()

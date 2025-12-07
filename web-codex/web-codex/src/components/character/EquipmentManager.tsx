@@ -207,15 +207,22 @@ export function EquipmentManager({
                     // Find the weapon and check access
                     const weapon = allWeapons.find((w) => w.name === weaponName)
                     const accessResult = weapon
-                      ? checkWeaponAccess(weapon, { affinities, stats, equipment, skills: [] })
+                      ? checkWeaponAccess(weapon, {
+                          affinities,
+                          stats,
+                          equipment,
+                          skills: [],
+                          base_stats: { health: 0, speed: 0 },
+                          gameplay_guide: ''
+                        })
                       : { hasAccess: true }
                     const hasAccess = accessResult.hasAccess
 
                     // Generate tooltip summary
                     const summary = []
                     if (weapon) {
-                      if (weapon.damage) summary.push(`Dégâts: ${weapon.damage}`)
-                      if (weapon.range) summary.push(`Portée: ${weapon.range}`)
+                      if (weapon.stats?.damage) summary.push(`Dégâts: ${weapon.stats.damage}`)
+                      if (weapon.stats?.range) summary.push(`Portée: ${weapon.stats.range}`)
                       if (weapon.description) summary.push(weapon.description)
                     }
 
@@ -308,7 +315,14 @@ export function EquipmentManager({
                     // Find the armor and check access
                     const armor = allArmors.find((a) => a.name === armorName)
                     const accessResult = armor
-                      ? checkArmorAccess(armor, { affinities, stats, equipment, skills: [] })
+                      ? checkArmorAccess(armor, {
+                          affinities,
+                          stats,
+                          equipment,
+                          skills: [],
+                          base_stats: { health: 0, speed: 0 },
+                          gameplay_guide: ''
+                        })
                       : { hasAccess: true }
                     const hasAccess = accessResult.hasAccess
 
