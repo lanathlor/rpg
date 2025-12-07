@@ -14,7 +14,7 @@ export default defineConfig({
   server: {
     fs: {
       // Allow serving files from outside the root directory
-      allow: ['..']
+      allow: ['..', '../..']
     }
   },
   assetsInclude: ['**/*.yaml', '**/*.yml'],

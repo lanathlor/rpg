@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><title>Test</title></head>
+<body>
+<h1>Testing Rules Access</h1>
+<div id="content"></div>
+<script>
+fetch('/rules/00_introduction.md')
+  .then(r => r.text())
+  .then(t => {
+    document.getElementById('content').textContent = t.substring(0, 200);
+  })
+  .catch(e => {
+    document.getElementById('content').textContent = 'Error: ' + e;
+  });
+</script>
+</body>
+</html>
