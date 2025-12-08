@@ -63,7 +63,7 @@ Lors de la guerre contre les Acéras, il devenait évidant que la guérilla est 
 
 ### Objets
 - **Kit de soins :** rends 15 PV
-- **Cristal de mana :** annule le temps de recharge du prochain sort jouer
+- **Cristal de Flux :** annule le temps de recharge du prochain sort jouer
 - **Champ électromagnétique :** +2 scores de protection à distance
 - **Vue des quantiques :** augmente les chances de voir des éléments liés à l'arcanotechnie
 

@@ -327,7 +327,7 @@ Un profil typique de lanceur de sorts : survivabilité correcte avec bonne mobil
 -   Bâton arcanotechnique : 50 crédits → **1 pt**
 -   Tunique arcanotechnique : 50 crédits → **1 pt**
 -   Kit de soins : 100 crédits → **1 pt**
--   Cristal de mana : 200 crédits → **1 pt**
+-   Cristal de Flux : 200 crédits → **1 pt**
 
 **Total : 4 points (400 crédits)**
 

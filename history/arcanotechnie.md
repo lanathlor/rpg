@@ -8,16 +8,16 @@ Les pratiquants — appelés **canalisateurs** — ont appris à extraire et con
 
 Chaque **École d'arcanotechnie** correspond à une **conversion spécifique** d'énergie arcanotechnique vers un type d'énergie physique particulier :
 
-- Le **Feu** convertit le mana en énergie cinétique moléculaire
-- L'**Électricité** le transforme en champ électromagnétique ordonné
-- La **Lumière** génère un flux photonique cohérent et confiné
-- Le **Kinesthésique** produit un travail mécanique et gravitationnel
+- L'école du **Feu** permet de convertir le Flux en énergie cinétique moléculaire (chaleur)
+- L'école de l'**Électricité** permet de le transformer en champ électromagnétique ordonné
+- L'école de la **Lumière** permet de générer un flux photonique cohérent et confiné
+- L'école **Kinesthésique** permet de produire un travail mécanique et gravitationnel
 
 Cette compréhension scientifique de l'arcanotechnie a révolutionné les approches technologiques de l'Empire.
 
 ## Révolution arcanotechnique
 
-Grâce au Conseil des Gardiens, l'Empire a développé une maîtrise industrielle du **mana**. Les **cristaux de pouvoir** et **cellules d'arcanotechnie solide** permettent désormais de stocker, canaliser et convertir cette énergie universelle en puissance mécanique ou numérique, fusionnant définitivement science et sorcellerie.
+Grâce au Conseil des Gardiens, l'Empire a développé une maîtrise industrielle du **Flux**. Les **cristaux de pouvoir** et **cellules d'arcanotechnie solide** permettent désormais de stocker, canaliser et convertir cette énergie universelle en puissance mécanique ou numérique, fusionnant définitivement science et sorcellerie.
 
 Les sorts sont devenus de véritables **programmes arcanotechniques** : les **Arcanotechnologue**, scientifiques spécialisés en théorie arcanotechnique, conçoivent et codent ces séquences de conversion énergétique, tandis que les **Arcanotechniciens** opérationnels les exécutent sur le terrain.
 
@@ -26,7 +26,7 @@ Ces **programmes arcanotechniques** sont développés selon les mêmes principes
 Cette symbiose entre technologie et arcanotechnique a transformé les champs de bataille modernes. Les Arcanotechniciens impériaux sont désormais des armes de destruction comparables à l'artillerie lourde, capables de manipuler les forces fondamentales de la nature avec la précision d'un instrument scientifique.
 
 > Dans ce contexte, la frontière entre ingénieur et sorcier a définitivement disparu.
-> L'Empire a bâti sa suprématie galactique sur cette union parfaite entre la compréhension scientifique du mana et sa maîtrise pratique.
+> L'Empire a bâti sa suprématie galactique sur cette union parfaite entre la compréhension scientifique du Flux et sa maîtrise pratique.
 > L'arcanotechnie n'est plus mystique — elle est devenue une science exacte.
 
 ## Applications industrielles

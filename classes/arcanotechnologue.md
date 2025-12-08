@@ -47,7 +47,7 @@ Les arcanotechnologues sont souvent assimilés à des Arcanotechniciens par les 
 
 ### Consommables
 - 1x kit de soins
-- 1x cristal de mana
+- 1x Cristal de Flux
 
 ### Compétences
 - **Connaisseur d'arcanotechnie**
@@ -63,7 +63,7 @@ Les arcanotechnologues sont souvent assimilés à des Arcanotechniciens par les 
 
 ### Objets
 - **Kit de soins :** rends 15 PV
-- **Cristal de mana :** annule le temps de recharge du prochain sort jouer
+- **Cristal de Flux :** annule le temps de recharge du prochain sort jouer
 - **Connaisseur d'arcanotechnie :** augmente les chances de voir des éléments liés à l'arcanotechnie. Permets de reconnaître les sorts incantés grâce à une manœuvre
 - **Scientifique :** peut tirer plus d'information d'un jet d'inspection
 

@@ -46,7 +46,7 @@ equipment:
     consumables:
         - name: 'Kit de soins'
           quantity: 1
-        - name: 'Cristal de mana'
+        - name: 'Cristal de Flux'
           quantity: 1
 
 # Compétences

@@ -1,0 +1,9 @@
+name: "Cristal de Flux"
+category: "Consommable"
+subcategory: "arcanotechnique"
+cost: "800 crédits"
+effect:
+  flux_restoration: "Restaure 12 flux"
+  recharge_reduction: "Réduit jusqu'à 60 secondes de temps de recharge sur un sort au choix"
+  usage: "action simple"
+description: "Cette gemme synthétique d'un bleu électrique pulse régulièrement d'énergie quantique concentrée. Créée dans les laboratoires impériaux par cristallisation de Flux arcanotechnique pur, elle emmagasine une réserve d'énergie utilisable pour court-circuiter les contraintes normalement imposées par l'invocation de sorts. Son utilisation restaure immédiatement les réserves de Flux du lanceur et accélère la récupération d'un sort en recharge."

@@ -47,7 +47,7 @@ Seuls les enfants dotés d'une capacité à l'utilisation de l'arcanotechnie dè
 
 ### Consommables
 - 1x kit de soins
-- 1x cristal de mana
+- 1x Cristal de Flux
 
 ### Compétences
 
@@ -68,7 +68,7 @@ Seuls les enfants dotés d'une capacité à l'utilisation de l'arcanotechnie dè
 
 Rends 15 PV
 
-### Cristal de mana
+### Cristal de Flux
 
 Annule le temps de recharge du prochain sort jouer
 
