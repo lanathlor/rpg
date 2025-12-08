@@ -11,7 +11,7 @@ Chaque **École d'arcanotechnie** correspond à une **conversion spécifique** d
 - L'école du **Feu** permet de convertir le Flux en énergie cinétique moléculaire (chaleur)
 - L'école de l'**Électricité** permet de le transformer en champ électromagnétique ordonné
 - L'école de la **Lumière** permet de générer un flux photonique cohérent et confiné
-- L'école **Kinesthésique** permet de produire un travail mécanique et gravitationnel
+- L'école **Kinesthésique** permet de produire un travail mécanique
 
 Cette compréhension scientifique de l'arcanotechnie a révolutionné les approches technologiques de l'Empire.
 
