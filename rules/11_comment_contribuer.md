@@ -2,6 +2,8 @@
 
 Bienvenue ! Ce document explique comment vous pouvez participer au développement de ce jeu de rôle, même sans connaissances techniques en programmation.
 
+**Dépôt GitHub :** https://github.com/lanathlor/rpg
+
 ## Vue d'ensemble du projet
 
 Ce projet est un système de jeu de rôle sur table où la "magie" (appelée Flux ou Arcanotechnique) crée des phénomènes physiques réels. Le système utilise un mécanisme de résistances unifié basé sur la physique plutôt que des types de dégâts magiques séparés.
@@ -204,7 +206,7 @@ Si vous trouvez :
 -   Des bugs dans l'application web
 -   Des sorts mal équilibrés
 
-Signalez-les en créant une "issue" sur le dépôt Git ou en contactant l'équipe.
+Signalez-les en créant une "issue" sur le dépôt GitHub : https://github.com/lanathlor/rpg/issues
 
 ## Outils Recommandés
 
@@ -239,10 +241,13 @@ Pour vérifier que votre YAML est correct :
 
 Si vous êtes à l'aise avec Git :
 
-1. Clonez le dépôt
+1. Clonez le dépôt :
+   ```bash
+   git clone https://github.com/lanathlor/rpg.git
+   ```
 2. Créez une branche pour vos modifications
 3. Ajoutez vos fichiers
-4. Créez un "pull request"
+4. Créez un "pull request" sur https://github.com/lanathlor/rpg/pulls
 5. Attendez la révision
 
 ## Conseils pour Créer du Contenu
@@ -336,7 +341,7 @@ Tout le contenu du jeu (règles, sorts, équipement, etc.) est publié sous **li
 
 **Exemple d'attribution :**
 ```
-Basé sur [Nom du Projet], disponible sur [URL du dépôt]
+Basé sur [Nom du Projet RPG], disponible sur https://github.com/lanathlor/rpg
 Publié sous licence CC BY-SA 4.0
 ```
 
