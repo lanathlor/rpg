@@ -159,17 +159,17 @@ export function ConsumablesPage() {
             onClick={() => openConsumableDetail(consumable)}
           >
             <CardHeader>
-              <div className="flex justify-between items-start">
-                <CardTitle className="text-lg">{consumable.name}</CardTitle>
-                <div className="flex gap-2">
+              <div className="flex justify-between items-start gap-2">
+                <CardTitle className="text-lg flex-1 min-w-0">{consumable.name}</CardTitle>
+                <div className="flex gap-2 flex-wrap flex-shrink-0">
                   <Badge className="bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-300">
                     <Package className="h-4 w-4" />
-                    <span className="ml-1">{consumable.category}</span>
+                    <span className="ml-1 capitalize">{consumable.category}</span>
                   </Badge>
                   {consumable.subcategory && (
                     <Badge className={getSubcategoryColor(consumable.subcategory)}>
                       {getSubcategoryIcon(consumable.subcategory)}
-                      <span className="ml-1">{consumable.subcategory}</span>
+                      <span className="ml-1 capitalize">{consumable.subcategory}</span>
                     </Badge>
                   )}
                 </div>

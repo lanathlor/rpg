@@ -234,17 +234,17 @@ export function EquipmentsPage() {
             onClick={() => openArmorDetail(armor)}
           >
             <CardHeader>
-              <div className="flex justify-between items-start">
-                <CardTitle className="text-lg">{armor.name}</CardTitle>
-                <div className="flex gap-2">
+              <div className="flex justify-between items-start gap-2">
+                <CardTitle className="text-lg flex-1 min-w-0">{armor.name}</CardTitle>
+                <div className="flex gap-2 flex-wrap flex-shrink-0">
                   <Badge className={getCategoryColor(armor.category || '')}>
                     {getCategoryIcon(armor.category || '')}
-                    <span className="ml-1">{armor.category}</span>
+                    <span className="ml-1 capitalize">{armor.category}</span>
                   </Badge>
                   {armor.subcategory && (
                     <Badge className={getSubcategoryColor(armor.subcategory)}>
                       {getSubcategoryIcon(armor.subcategory)}
-                      <span className="ml-1">{armor.subcategory}</span>
+                      <span className="ml-1 capitalize">{armor.subcategory}</span>
                     </Badge>
                   )}
                 </div>

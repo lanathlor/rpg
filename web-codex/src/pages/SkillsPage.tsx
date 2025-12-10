@@ -212,24 +212,26 @@ export function SkillsPage() {
           >
             <CardHeader>
               <div className="flex justify-between items-start gap-2">
-                <CardTitle className="text-lg">{skill.name}</CardTitle>
-                {skill.point_cost !== undefined && (() => {
-                  const tier = getCompetenceTier(skill.point_cost)
-                  return (
-                    <Badge variant="outline" className={`flex items-center gap-1 ${tier.colorClass}`}>
-                      <Trophy className="h-3 w-3" />
-                      <span className="font-semibold">Tier {tier.tier}</span>
-                    </Badge>
-                  )
-                })()}
+                <CardTitle className="text-lg flex-1 min-w-0">{skill.name}</CardTitle>
+                <div className="flex-shrink-0">
+                  {skill.point_cost !== undefined && (() => {
+                    const tier = getCompetenceTier(skill.point_cost)
+                    return (
+                      <Badge variant="outline" className={`flex items-center gap-1 ${tier.colorClass}`}>
+                        <Trophy className="h-3 w-3" />
+                        <span className="font-semibold">Tier {tier.tier}</span>
+                      </Badge>
+                    )
+                  })()}
+                </div>
               </div>
-              <div className="flex gap-2 mt-2">
+              <div className="flex gap-2 mt-2 flex-wrap">
                 <Badge className="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300 text-xs">
-                  {skill.category}
+                  <span className="capitalize">{skill.category}</span>
                 </Badge>
                 {skill.subcategory && (
                   <Badge className={`${getSubcategoryColor(skill.subcategory)} text-xs`}>
-                    {skill.subcategory}
+                    <span className="capitalize">{skill.subcategory}</span>
                   </Badge>
                 )}
               </div>

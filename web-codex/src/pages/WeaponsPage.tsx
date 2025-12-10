@@ -209,16 +209,16 @@ export function WeaponsPage() {
             onClick={() => openWeaponDetail(weapon)}
           >
             <CardHeader>
-              <div className="flex justify-between items-start">
-                <CardTitle className="text-lg">{weapon.name}</CardTitle>
-                <div className="flex gap-2">
+              <div className="flex justify-between items-start gap-2">
+                <CardTitle className="text-lg flex-1 min-w-0">{weapon.name}</CardTitle>
+                <div className="flex gap-2 flex-wrap flex-shrink-0">
                   <Badge className={getCategoryColor(weapon.category || '')}>
                     {getCategoryIcon(weapon.category || '')}
-                    <span className="ml-1">{weapon.category}</span>
+                    <span className="ml-1 capitalize">{weapon.category}</span>
                   </Badge>
                   <Badge className={getTypeColor(weapon.type)}>
                     {getTypeIcon(weapon.type)}
-                    <span className="ml-1">{weapon.type}</span>
+                    <span className="ml-1 capitalize">{weapon.type}</span>
                   </Badge>
                 </div>
               </div>
