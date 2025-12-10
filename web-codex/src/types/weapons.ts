@@ -15,6 +15,7 @@ export interface Weapon extends BaseItem {
   stats: WeaponStats
   properties?: string[]
   cost?: string
+  image?: string
 }
 
 export type WeaponCategory = 'Arme de corps à corps' | 'Arme à distance'

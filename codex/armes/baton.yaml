@@ -3,6 +3,7 @@ category: "Arme de corps à corps"
 subcategory: "2 mains"
 type: "bâton"
 cost: "50 crédits"
+image: "images/weapons/baton_flux.png"
 prerequisites:
   affinity: "A. CAC 1"
 stats:

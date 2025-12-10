@@ -1,6 +1,6 @@
 name: "Implant neural militaire"
 category: "Augmentation"
-subcategory: "implant"
+subcategory: "implant neural"
 type: "neural"
 cost: "4000 crédits"
 prerequisites:

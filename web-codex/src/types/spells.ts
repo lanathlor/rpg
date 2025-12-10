@@ -56,6 +56,7 @@ export interface Spell extends BaseItem {
   type?: string
   description_base?: string
   player_castable?: boolean
+  image?: string
   levels?: SpellLevel[]
 }
 

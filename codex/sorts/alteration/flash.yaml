@@ -1,5 +1,6 @@
 spell_series: Flash
 description_base: Crée une sphère de lumière aveugle une cible.
+image: "images/spells/flash.png"
 levels:
   - level: "1"
     name: Flash

@@ -1,5 +1,6 @@
 spell_series: "Javelot de glace"
 description_base: "Lance un javelot de glace à la cible et la gèle, créant une lance de glace pure qui transperce et glace sa victime à l'impact."
+image: "images/spells/javelot_de_glace.png"
 
 school: givre
 type: destruction

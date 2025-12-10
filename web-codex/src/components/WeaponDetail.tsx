@@ -118,6 +118,18 @@ export function WeaponDetail({ weapon }: WeaponDetailProps) {
             {weapon.description || 'Aucune description disponible'}
           </p>
         </div>
+
+        {/* Hero Image */}
+        {weapon.image && (
+          <div className="mt-6">
+            <img
+              src={`${import.meta.env.BASE_URL}${weapon.image}`}
+              alt={weapon.name}
+              className="rounded-lg w-full max-w-2xl mx-auto shadow-lg"
+              loading="lazy"
+            />
+          </div>
+        )}
       </div>
 
       <Separator />

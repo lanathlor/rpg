@@ -2,7 +2,7 @@ name: "Technologue"
 type: "Tacticien"
 description: "Pont entre l'quantique et la technologie, les technologues représentent l'évolution ultime de l'ingénierie impériale. Formés dans les prestigieux instituts doubles de l'Empire, ils maîtrisent autant les circuits électriques que les flux arcanotechniques, créant des synergies impossibles pour un esprit non initié. Leurs implants neuraux leur permettent d'interfacer directement avec les systèmes informatiques, tandis que leur compréhension des énergies quantiques transforme chaque équipement en instrument de guerre. Sur le terrain, ils sement la confusion dans les rangs ennemis, corromptent les données hostiles et retournent les technologies adverses contre leurs anciens maîtres. Imprévisibles et polyvalents, ils incarnent la supériorité technologique de l'Empire."
 
-image: "https://www.pinterest.fr/pin/492299802990469266/?lp=true"
+image: "images/classes/technologue.png"
 
 # Statistiques de base
 base_stats:
@@ -43,6 +43,7 @@ equipment:
   weapons:
     - "Pistolet"
   armor:
+    - "Implant neural militaire"
     - "Exosquelette stabilisateur"
     - "Drone de combat"
   consumables:

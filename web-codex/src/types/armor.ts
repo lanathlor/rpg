@@ -40,6 +40,7 @@ export interface Armor extends BaseItem {
   properties?: string[]
   resistances?: string[]
   cost?: string
+  image?: string
 }
 
 export type ArmorCategory = 'Armure' | 'Proxy' | 'Bouclier' | 'Exosquelette' | 'Augmentation' | 'Implant' | 'Vêtement' | 'Drone'

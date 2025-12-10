@@ -248,6 +248,18 @@ export function ClassDetailPage() {
             {characterClass.description}
           </p>
         </div>
+
+        {/* Hero Image */}
+        {characterClass.image && (
+          <div className="mt-6">
+            <img
+              src={`${import.meta.env.BASE_URL}${characterClass.image}`}
+              alt={characterClass.name}
+              className="rounded-lg w-full max-w-2xl mx-auto shadow-lg"
+              loading="lazy"
+            />
+          </div>
+        )}
       </div>
 
       <Separator />

@@ -2,7 +2,7 @@ name: 'Arcanotechnologue'
 type: 'Tacticien'
 description: "Bien que souvent confondus avec les Arcanotechniciens par les civils, les arcanotechnologues suivent une voie radicalement différente. Ce sont d'anciens aspirants Arcanotechniciens dont l'affinité arcanotechnique s'est révélée tardivement, les orientant vers l'étude théorique plutôt que la pratique pure. Véritables ingénieurs de l'quantique, ils conçoivent et perfectionnent les sorts utilisés par l'Empire, que ce soit pour les applications militaires ou industrielles. Chaque sort lancé par un Arcanotechnicien provient des recherches d'un arcanotechnologue. Face à l'impossibilité d'adapter leurs créations depuis leurs laboratoires, une branche combattante s'est développée pour déployer des arcanotechnologues directement sur le terrain. Leur présence rend chaque bataille imprévisible, leurs innovations tactiques bouleversant les stratégies établies."
 
-image: 'https://i.pinimg.com/originals/af/0b/b1/af0bb197779b2a84c88d5f168274f75f.jpg'
+image: 'images/classes/arcanotechnologue.png'
 
 # Statistiques de base
 base_stats:

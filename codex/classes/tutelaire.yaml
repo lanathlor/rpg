@@ -2,7 +2,7 @@ name: "Tutélaire"
 type: "Protecteur"
 description: "Pilliers inébranlables de l'Empire, les tutélaires forment l'avant-garde de chaque bataille rangée. Maîtres de l'arcanotechnie de lumière solide, ils transforment l'énergie pure en remparts impénétrables et en armes étincelantes. Leur présence sur le champ de bataille inspire confiance aux troupes alliées et sème la terreur chez les ennemis. Véritables phares dans l'obscurité du conflit, ils permettent aux unités impériales de maintenir leurs positions face aux assauts les plus féroces. Leur dévouement absolu à la protection de leurs camarades fait d'eux les gardiens légendaires de l'Empire."
 
-image: "https://www.pinterest.fr/pin/404549979018902762/"
+image: "images/classes/tutelaire.png"
 
 # Statistiques de base
 base_stats:
@@ -26,6 +26,7 @@ affinities:
     amelioration: 4
     arme: 3
     alteration: 2
+    protection: 3
 
 # Statistiques
 stats:

@@ -311,7 +311,7 @@ export function checkArmorAccess(armor: Armor, character: CharacterClass): Acces
     return { hasAccess: true }
   }
 
-  // Check equipment prerequisite (e.g., "Implant neural")
+  // Check equipment prerequisite (e.g., "Implant neural militaire")
   if (prerequisites.equipment) {
     const requiredEquipment = prerequisites.equipment
     // Check if character has the required equipment
@@ -323,6 +323,34 @@ export function checkArmorAccess(armor: Armor, character: CharacterClass): Acces
         hasAccess: false,
         reason: `Requires equipment: ${requiredEquipment}`,
         requirements: [`Equipment: ${requiredEquipment}`]
+      }
+    }
+  }
+
+  // Check equipment subcategory prerequisite (e.g., "implant neural")
+  // This allows any equipment of a certain subcategory (more flexible than exact name match)
+  if ((prerequisites as any).equipment_subcategory) {
+    const requiredSubcategory = (prerequisites as any).equipment_subcategory
+    // For now, we'll do a simple name-based check
+    // A proper implementation would require loading equipment data to check actual subcategories
+    // As a workaround, check if any equipment name contains the subcategory
+    const allEquipment = [
+      ...(character.equipment?.armor || []),
+      ...(character.equipment?.weapons || [])
+    ]
+
+    const hasEquipmentWithSubcategory = allEquipment.some(equipName =>
+      equipName.toLowerCase().includes(requiredSubcategory.toLowerCase()) ||
+      // Handle specific subcategory mappings
+      (requiredSubcategory.toLowerCase() === 'implant neural' &&
+       equipName.toLowerCase().includes('implant neural'))
+    )
+
+    if (!hasEquipmentWithSubcategory) {
+      return {
+        hasAccess: false,
+        reason: `Requires equipment with subcategory: ${requiredSubcategory}`,
+        requirements: [`Equipment subcategory: ${requiredSubcategory}`]
       }
     }
   }
@@ -512,6 +540,54 @@ export function checkArmorAccess(armor: Armor, character: CharacterClass): Acces
       reason: `Requires Charisma ≥ ${requiredLevel}`,
       requirements: [`Charisma ≥ ${requiredLevel}`],
       current: [`Charisma: ${currentLevel}`]
+    }
+  }
+
+  // Handle Health requirement with comparison operators: "health <= 35", "health >= 40", etc.
+  const healthMatch = statReq.match(/health\s*([<>=]+)\s*(\d+)/)
+  if (healthMatch) {
+    const operator = healthMatch[1]
+    const requiredLevel = parseInt(healthMatch[2])
+    const currentLevel = character.base_stats?.health || 0
+
+    let meetsRequirement = false
+    let operatorText = ''
+
+    switch (operator) {
+      case '<=':
+        meetsRequirement = currentLevel <= requiredLevel
+        operatorText = '≤'
+        break
+      case '>=':
+        meetsRequirement = currentLevel >= requiredLevel
+        operatorText = '≥'
+        break
+      case '<':
+        meetsRequirement = currentLevel < requiredLevel
+        operatorText = '<'
+        break
+      case '>':
+        meetsRequirement = currentLevel > requiredLevel
+        operatorText = '>'
+        break
+      case '==':
+      case '=':
+        meetsRequirement = currentLevel === requiredLevel
+        operatorText = '='
+        break
+      default:
+        meetsRequirement = false
+    }
+
+    if (meetsRequirement) {
+      return { hasAccess: true }
+    }
+
+    return {
+      hasAccess: false,
+      reason: `Requires Health ${operatorText} ${requiredLevel}`,
+      requirements: [`Health ${operatorText} ${requiredLevel}`],
+      current: [`Health: ${currentLevel}`]
     }
   }
 

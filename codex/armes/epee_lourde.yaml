@@ -3,6 +3,7 @@ category: "Arme de corps à corps"
 subcategory: "2 mains"
 type: "épées"
 cost: "800 crédits"
+image: "images/weapons/epee_lourde_flux.png"
 prerequisites:
   affinity: "A. CAC 6"
 stats:

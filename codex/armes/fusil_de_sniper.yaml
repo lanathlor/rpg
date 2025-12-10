@@ -3,6 +3,7 @@ category: "Arme à distance"
 subcategory: "arme à deux mains"
 type: "sniper"
 cost: "2200 crédits"
+image: "images/weapons/fusil_sniper_quantique.png"
 prerequisites:
   affinity: "A. sniper 1"
 stats:

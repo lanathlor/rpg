@@ -6,6 +6,8 @@ Lyra s'éveille naturellement vers 10h30, son implant neural ayant filtré les n
 
 Son appartement sur Prime est modeste, seulement 45 mètres carrés. L'espace est précieux sur une planète-monde de 1.9 trillion d'habitants, même avec l'architecture verticale qui s'étend sur des kilomètres de hauteur. Mais c'est gratuit, fourni par l'État comme tous les logements de base. Si elle voulait plus grand, il faudrait contribuer davantage à l'Empire. Ou s'installer sur une planète plus excentrée, mais qui voudrait quitter le cœur battant de la civilisation ?
 
+![Vie civile sur Prime](images/world/prime_civilian_life.png)
+
 ## Matinée : Loisir et création
 
 Après un petit-déjeuner synthétisé mais parfaitement nutritif, Lyra décide de travailler sur sa dernière composition musicale. Les lois de copyright étant quasi inexistantes, elle remix librement une mélodie populaire acéra capturée pendant la guerre. Un acte de "rébellion culturelle" très à la mode. Son vêtement adaptatif pulse doucement au rythme de la musique, passant du bleu au violet. De la haute couture arcanotechnique qu'elle s'est offerte après six mois d'économies.

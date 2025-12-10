@@ -48,6 +48,7 @@ See `/rules/07_systeme_de_resistances.md` for complete reference.
 -   Text editor (VSCode recommended)
 
 **Install pnpm:**
+
 ```bash
 npm install -g pnpm
 ```
@@ -84,6 +85,20 @@ npm install -g pnpm
     ```
 
 ## Contributing to Game Content
+
+### Images and Assets
+
+**⚠️ AI-Generated Images Disclaimer:**
+
+Currently, the images in this project are **generated using AI tools** (such as DALL-E, Midjourney, or similar). The project maintainer is not a visual artist and cannot create these illustrations independently.
+
+This is a **temporary solution**. We are actively seeking:
+
+-   **Volunteer artists** to replace AI-generated images with original artwork
+-   **Commissioned artwork** as resources become available
+-   **Community contributions** from skilled artists who share our vision
+
+If you are an artist interested in contributing original artwork to this project, please reach out! We would love to collaborate and replace AI-generated content with authentic human-created art.
 
 ### YAML Data Structure
 
@@ -389,15 +404,16 @@ Fix type errors by:
 
 This project uses a **dual-license** approach:
 
-- **Game Content** (rules, spells, equipment, etc.): [Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/)
-- **Software Code** (web application, tools, etc.): [MIT License](https://opensource.org/licenses/MIT)
+-   **Game Content** (rules, spells, equipment, etc.): [Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/)
+-   **Software Code** (web application, tools, etc.): [MIT License](https://opensource.org/licenses/MIT)
 
 This means:
-- ✅ You can use, modify, and distribute the game content freely (even commercially) as long as you provide attribution and share your modifications under the same license
-- ✅ You can use, modify, and distribute the software code freely (even commercially) with minimal restrictions
-- ✅ You can create your own games based on this system
-- ✅ You can run commercial campaigns using these rules
-- ✅ You can publish adventures and supplements
+
+-   ✅ You can use, modify, and distribute the game content freely (even commercially) as long as you provide attribution and share your modifications under the same license
+-   ✅ You can use, modify, and distribute the software code freely (even commercially) with minimal restrictions
+-   ✅ You can create your own games based on this system
+-   ✅ You can run commercial campaigns using these rules
+-   ✅ You can publish adventures and supplements
 
 See [LICENSE.md](LICENSE.md) for full details and attribution guidelines.
 
@@ -405,6 +421,7 @@ See [LICENSE.md](LICENSE.md) for full details and attribution guidelines.
 
 By contributing to this project, you agree that your contributions will be licensed under the same terms (CC BY-SA 4.0 for game content, MIT for code).
 
-## Contact
+**Note on AI-Generated Images:**
+Current images are AI-generated as a temporary measure. We welcome contributions from artists to replace these with original artwork. If you're interested in contributing illustrations, please reach out to discuss collaboration opportunities.
 
-[Add contact information or Discord/forum links]
+## Contact

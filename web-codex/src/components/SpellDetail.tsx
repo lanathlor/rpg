@@ -364,6 +364,18 @@ export function SpellDetail({ spell }: SpellDetailProps) {
             {spell.description_base}
           </p>
         </div>
+
+        {/* Hero Image */}
+        {spell.image && (
+          <div className="mt-6">
+            <img
+              src={`${import.meta.env.BASE_URL}${spell.image}`}
+              alt={spell.name}
+              className="rounded-lg w-full max-w-2xl mx-auto shadow-lg"
+              loading="lazy"
+            />
+          </div>
+        )}
       </div>
 
       <Separator />

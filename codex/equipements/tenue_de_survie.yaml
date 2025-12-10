@@ -3,7 +3,7 @@ category: "Armure légère"
 subcategory: "cuir"
 cost: "400 crédits"
 prerequisites:
-  stat: "Vie <= 35"
+  stat: "health <= 35"
 stats:
   saving_throw_bonus: "+2 au jet de sauvegarde contre les altérations"
 description: "Équipement de protection spécialisé pour les environnements hostiles, offrant une résistance aux effets d'altération."

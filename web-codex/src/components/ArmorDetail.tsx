@@ -145,6 +145,18 @@ export function ArmorDetail({ armor }: ArmorDetailProps) {
             {armor.description || 'Aucune description disponible'}
           </p>
         </div>
+
+        {/* Hero Image */}
+        {armor.image && (
+          <div className="mt-6">
+            <img
+              src={`${import.meta.env.BASE_URL}${armor.image}`}
+              alt={armor.name}
+              className="rounded-lg w-full max-w-2xl mx-auto shadow-lg"
+              loading="lazy"
+            />
+          </div>
+        )}
       </div>
 
       <Separator />

@@ -2,7 +2,7 @@ name: "Horion"
 type: "Tireur d'élite"
 description: "Ayant fait les meilleures écoles militaires, les horions sont de redoutables combattants. Entrainés à affronter tout type d'ennemies sur une grande variété de terrain, ils sont spécialisés dans les guérillas. Avec leurs techniques remarquables et leur stratégie de « drop & go », ils sont capables de reprendre le contrôle des zones même écrasé par le nombre. Souvent confondus avec les soldats d'infanterie, c'est une erreur rarement commise deux fois, si toutefois ils vous laissent cette occasion."
 
-image: "https://www.pinterest.fr/pin/398005685813511461/"
+image: "images/classes/horion.png"
 
 # Statistiques de base
 base_stats:
@@ -25,6 +25,7 @@ affinities:
   types:
     arme: 8
     amelioration: 2
+    deplacement: 2
 
 # Statistiques
 stats:

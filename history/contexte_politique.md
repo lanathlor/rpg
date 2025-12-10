@@ -18,6 +18,8 @@ Le **Conseil des Gardiens** constitue l'autorité suprême de l'Empire. Ces cinq
 
 Ces êtres semi-divins maîtrisent parfaitement l'arcanotechnie et possèdent une intelligence largement supérieure à la moyenne humaine. Leur immortalité apparente et leurs capacités extraordinaires inspirent à la fois respect et mystère parmi la population.
 
+![Le Conseil des Gardiens en session](images/world/conseil_des_gardiens2.png)
+
 ## Structure gouvernementale
 
 Le Conseil est secondé par les **Seigneurs de Guerre**, des humains s'étant illustrés tant par leur capacité de commandement que par leur puissance militaire.

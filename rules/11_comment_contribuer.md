@@ -24,6 +24,20 @@ Tous les dégâts dans le jeu sont résistés par l'une des trois résistances s
 -   Un javelot de glace magique → RMEC (projectile cinétique)
 -   Un drain de vie → RINT (effet interne)
 
+## Images et Ressources Visuelles
+
+**⚠️ Avertissement concernant les images générées par IA :**
+
+Actuellement, les images présentes dans ce projet sont **générées à l'aide d'outils d'intelligence artificielle** (tels que DALL-E, Midjourney ou similaires). Le créateur du projet n'est pas un artiste visuel et ne peut pas créer ces illustrations de manière indépendante.
+
+Il s'agit d'une **solution temporaire**. Nous recherchons activement :
+
+-   **Des artistes bénévoles** pour remplacer les images générées par IA par des créations originales
+-   **Des commandes artistiques** dès que les ressources seront disponibles
+-   **Des contributions de la communauté** de la part d'artistes talentueux qui partagent notre vision
+
+Si vous êtes un artiste intéressé par la création d'illustrations originales pour ce projet, n'hésitez pas à nous contacter ! Nous serions ravis de collaborer et de remplacer le contenu généré par IA par de véritables créations humaines.
+
 ## Comment contribuer
 
 Il existe plusieurs façons de participer au projet, selon vos intérêts et compétences.
@@ -359,6 +373,9 @@ En participant à ce projet, vous acceptez que :
 4. Vos contributions resteront disponibles publiquement sous ces licences
 
 **Important :** Vous conservez vos droits d'auteur sur vos contributions, mais vous les partagez généreusement avec la communauté.
+
+**Note sur les images générées par IA :**
+Les images actuelles sont générées par IA à titre temporaire. Nous accueillons avec plaisir les contributions d'artistes pour les remplacer par des créations originales. Si vous souhaitez contribuer des illustrations, contactez-nous pour discuter des opportunités de collaboration.
 
 ### Pourquoi Cette Licence ?
 

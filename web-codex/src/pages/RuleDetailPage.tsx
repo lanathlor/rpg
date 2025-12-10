@@ -229,6 +229,14 @@ export function RuleDetailPage() {
                     {children}
                   </tr>
                 ),
+                img: ({ src, alt }) => (
+                  <img
+                    src={src?.startsWith('http') ? src : `${import.meta.env.BASE_URL}${src}`}
+                    alt={alt || ''}
+                    className="rounded-lg my-6 max-w-full h-auto shadow-lg"
+                    loading="lazy"
+                  />
+                ),
               }}
             >
               {content}

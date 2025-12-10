@@ -1,5 +1,6 @@
 spell_series: Onde de choc
 description_base: Génère une puissante onde sonique destructrice.
+image: "images/spells/onde_de_choc.png"
 levels:
   - level: "1"
     name: Onde de choc

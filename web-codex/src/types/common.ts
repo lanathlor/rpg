@@ -10,7 +10,8 @@ export interface Prerequisites {
   affinity?: string
   stat?: string
   special?: string
-  equipment?: string  // For drone/proxy items
+  equipment?: string  // Specific equipment name required
+  equipment_subcategory?: string  // Any equipment of this subcategory (e.g., "implant neural")
   skill?: string  // Legacy format: "Compétence Hackeur ou Ingénieur"
   skill_any_of?: string[]  // New format: ["Hackeur", "Ingénieur"]
   skill_all_of?: string[]  // For future use: all skills required
