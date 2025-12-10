@@ -231,7 +231,7 @@ export function HistoryDetailPage() {
                   <img
                     src={src?.startsWith('http') ? src : `${import.meta.env.BASE_URL}${src}`}
                     alt={alt || ''}
-                    className="rounded-lg my-6 max-w-full h-auto shadow-lg"
+                    className="rounded-lg my-6 max-w-lg h-auto shadow-lg mx-auto"
                     loading="lazy"
                   />
                 ),
