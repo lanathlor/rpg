@@ -208,7 +208,7 @@ export function CharacterCreatorPage() {
   return (
     <div className="space-y-6">
       {/* Header */}
-      <div className="flex justify-between items-start">
+      <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
         <div className="flex items-center gap-4">
           <Button variant="ghost" size="icon" onClick={() => navigate('/personnages')}>
             <ArrowLeft className="h-4 w-4" />
@@ -266,7 +266,7 @@ export function CharacterCreatorPage() {
           </div>
         </div>
 
-        <div className="flex items-center gap-3">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
           {/* Save Indicator */}
           {saveIndicator && (
             <div className="flex items-center gap-2 text-sm text-green-600">
@@ -294,22 +294,24 @@ export function CharacterCreatorPage() {
           />
 
           {/* Export Buttons */}
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={() => exportToYAML(character)}
-          >
-            <FileDown className="h-4 w-4 mr-2" />
-            YAML
-          </Button>
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={() => exportToPDF(character)}
-          >
-            <Download className="h-4 w-4 mr-2" />
-            PDF
-          </Button>
+          <div className="flex gap-2">
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => exportToYAML(character)}
+            >
+              <FileDown className="h-4 w-4 mr-2" />
+              YAML
+            </Button>
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => exportToPDF(character)}
+            >
+              <Download className="h-4 w-4 mr-2" />
+              PDF
+            </Button>
+          </div>
         </div>
       </div>
 
@@ -326,7 +328,7 @@ export function CharacterCreatorPage() {
 
       {/* Tabbed Editor */}
       <Tabs defaultValue="stats" className="w-full">
-        <TabsList className="grid w-full grid-cols-6">
+        <TabsList className="grid w-full grid-cols-3 md:grid-cols-6">
           <TabsTrigger value="stats">Statistiques</TabsTrigger>
           <TabsTrigger value="flux">Flux</TabsTrigger>
           <TabsTrigger value="affinities">Affinités</TabsTrigger>

@@ -527,7 +527,7 @@ export function EquipmentManager({
 
       {/* Item Selector Dialog with Preview */}
       <Dialog open={selectorOpen} onOpenChange={closeSelector}>
-        <DialogContent className="max-w-7xl max-h-[85vh] overflow-hidden flex flex-col">
+        <DialogContent className="max-w-full sm:max-w-7xl max-h-[85vh] overflow-hidden flex flex-col p-4 sm:p-6">
           <DialogHeader>
             <DialogTitle>
               {selectorType === 'weapon' && 'Sélectionner une arme'}
@@ -552,7 +552,7 @@ export function EquipmentManager({
           </div>
 
           {/* Two-Column Layout */}
-          <div className="flex-1 overflow-hidden flex gap-4 min-h-0">
+          <div className="flex-1 overflow-hidden flex flex-col md:flex-row gap-4 min-h-0">
             {/* Left: Item List */}
             <TooltipProvider>
               <div className="flex-1 overflow-y-auto space-y-2 pr-2">
@@ -631,7 +631,7 @@ export function EquipmentManager({
             </TooltipProvider>
 
             {/* Right: Preview Pane */}
-            <div className="w-[45%] border-l pl-4 overflow-y-auto">
+            <div className="w-full md:w-[45%] md:border-l md:pl-4 overflow-y-auto">
               {previewItem ? (
                 <div className="space-y-4">
                   {selectorType === 'weapon' && <WeaponDetail weapon={previewItem as Weapon} />}

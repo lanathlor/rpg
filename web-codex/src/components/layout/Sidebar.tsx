@@ -82,7 +82,11 @@ const navigationItems = [
   },
 ]
 
-export function Sidebar() {
+interface SidebarProps {
+  onNavigate?: () => void
+}
+
+export function Sidebar({ onNavigate }: SidebarProps = {}) {
   const location = useLocation()
 
   return (
@@ -99,6 +103,7 @@ export function Sidebar() {
                 <Link
                   key={item.name}
                   to={item.href}
+                  onClick={onNavigate}
                   className={cn(
                     'flex items-center rounded-lg px-3 py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground transition-colors',
                     isActive

@@ -39,7 +39,7 @@ export function StatsEditor({
           </div>
         </CardHeader>
         <CardContent>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <label className="text-sm font-medium flex items-center gap-2 mb-2">
                 <Heart className="h-4 w-4 text-red-500" />
@@ -55,6 +55,7 @@ export function StatsEditor({
                   })
                 }
                 min={1}
+                className="h-11"
               />
               <p className="text-xs text-muted-foreground mt-1">
                 Baseline: 30 PV (gratuit), +1 pt par 3 PV
@@ -75,6 +76,7 @@ export function StatsEditor({
                   })
                 }
                 min={1}
+                className="h-11"
               />
               <p className="text-xs text-muted-foreground mt-1">
                 Baseline: 3 (gratuit), +5 pts par point
