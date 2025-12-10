@@ -234,9 +234,9 @@ export function EquipmentsPage() {
             onClick={() => openArmorDetail(armor)}
           >
             <CardHeader>
-              <div className="flex justify-between items-start gap-2">
-                <CardTitle className="text-lg flex-1 min-w-0">{armor.name}</CardTitle>
-                <div className="flex gap-2 flex-wrap flex-shrink-0">
+              <div>
+                <CardTitle className="text-lg">{armor.name}</CardTitle>
+                <div className="flex gap-2 flex-wrap mt-2">
                   <Badge className={getCategoryColor(armor.category || '')}>
                     {getCategoryIcon(armor.category || '')}
                     <span className="ml-1 capitalize">{armor.category}</span>

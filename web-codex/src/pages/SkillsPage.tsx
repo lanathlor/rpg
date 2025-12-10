@@ -211,9 +211,9 @@ export function SkillsPage() {
             onClick={() => openSkillDetail(skill)}
           >
             <CardHeader>
-              <div className="flex justify-between items-start gap-2">
-                <CardTitle className="text-lg flex-1 min-w-0">{skill.name}</CardTitle>
-                <div className="flex-shrink-0">
+              <div>
+                <CardTitle className="text-lg">{skill.name}</CardTitle>
+                <div className="flex gap-2 mt-2 flex-wrap">
                   {skill.point_cost !== undefined && (() => {
                     const tier = getCompetenceTier(skill.point_cost)
                     return (
@@ -223,17 +223,15 @@ export function SkillsPage() {
                       </Badge>
                     )
                   })()}
-                </div>
-              </div>
-              <div className="flex gap-2 mt-2 flex-wrap">
-                <Badge className="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300 text-xs">
-                  <span className="capitalize">{skill.category}</span>
-                </Badge>
-                {skill.subcategory && (
-                  <Badge className={`${getSubcategoryColor(skill.subcategory)} text-xs`}>
-                    <span className="capitalize">{skill.subcategory}</span>
+                  <Badge className="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300 text-xs">
+                    <span className="capitalize">{skill.category}</span>
                   </Badge>
-                )}
+                  {skill.subcategory && (
+                    <Badge className={`${getSubcategoryColor(skill.subcategory)} text-xs`}>
+                      <span className="capitalize">{skill.subcategory}</span>
+                    </Badge>
+                  )}
+                </div>
               </div>
               <CardDescription className="mt-2">
                 {(skill.description || 'Aucune description disponible').slice(0, 120)}...

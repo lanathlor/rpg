@@ -209,9 +209,9 @@ export function WeaponsPage() {
             onClick={() => openWeaponDetail(weapon)}
           >
             <CardHeader>
-              <div className="flex justify-between items-start gap-2">
-                <CardTitle className="text-lg flex-1 min-w-0">{weapon.name}</CardTitle>
-                <div className="flex gap-2 flex-wrap flex-shrink-0">
+              <div>
+                <CardTitle className="text-lg">{weapon.name}</CardTitle>
+                <div className="flex gap-2 flex-wrap mt-2">
                   <Badge className={getCategoryColor(weapon.category || '')}>
                     {getCategoryIcon(weapon.category || '')}
                     <span className="ml-1 capitalize">{weapon.category}</span>

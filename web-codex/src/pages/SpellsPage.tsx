@@ -132,9 +132,9 @@ export function SpellsPage() {
             onClick={() => openSpellDetail(spell)}
           >
             <CardHeader>
-              <div className="flex justify-between items-start gap-2">
-                <CardTitle className="text-lg flex-1 min-w-0">{spell.name || 'Sort sans nom'}</CardTitle>
-                <div className="flex gap-2 flex-wrap flex-shrink-0">
+              <div>
+                <CardTitle className="text-lg">{spell.name || 'Sort sans nom'}</CardTitle>
+                <div className="flex gap-2 flex-wrap mt-2">
                   {spell.school && (
                     <Badge className={getSchoolColor(spell.school)}>
                       {(() => {
