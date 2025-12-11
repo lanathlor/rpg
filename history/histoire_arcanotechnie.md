@@ -183,7 +183,7 @@ L'univers entier conserve toujours son énergie :
 -   Énergie après : Flux (basse énergie potentielle) + matière environnante + énergie convertie
 -   Bilan : ΔE_Flux = -ΔE_convertie (conservation parfaite)
 
-La "magie" n'est pas une création d'énergie, mais une **conversion d'énergie de champ** en formes plus conventionnelles.
+L'arcanotechnie n'est pas une création d'énergie, mais une **conversion d'énergie de champ** en formes plus conventionnelles.
 
 ```
 État métastable : Flux (haute énergie potentielle, basse entropie)

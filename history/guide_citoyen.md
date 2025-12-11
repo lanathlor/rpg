@@ -26,9 +26,9 @@ Nos cinq Gardiens immortels guident l'humanité depuis 5755 ans avec une sagesse
 
 Leur vision à long terme - impossible pour nous, mortels - assure la stabilité et la prospérité continues de l'Empire.
 
-## L'Arcanotechnie : La Magie Devenue Science
+## L'Arcanotechnie : Science du Flux
 
-Oubliez les superstitions ! L'arcanotechnie est une **science exacte** qui convertit l'énergie primique en forces utilisables. Vos implants neuraux, les warpgates permettant le voyage instantané (pour les missions prioritaires), et même vos vêtements adaptatifs - tout utilise cette technologie révolutionnaire.
+Oubliez les superstitions d'autrefois ! L'arcanotechnie est une **science exacte** qui convertit l'énergie primique en forces utilisables. Vos implants neuraux, les warpgates permettant le voyage instantané (pour les missions prioritaires), et même vos vêtements adaptatifs - tout utilise cette technologie révolutionnaire.
 
 **Fait amusant :** Saviez-vous que notre production industrielle arcanotechnique a un coût énergétique quasi nul ? C'est pourquoi nous pouvons nous permettre la post-scarcité !
 
