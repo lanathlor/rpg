@@ -69,12 +69,28 @@ const historySections = [
     category: 'Contexte'
   },
   {
-    id: 'arcanotechnie',
-    title: 'Arcanotechnie et technologie',
-    description: 'Nature fondamentale de l\'arcanotechnie et révolution technologique',
+    id: 'histoire_arcanotechnie',
+    title: 'Histoire de l\'Arcanotechnie',
+    description: 'Découverte du Flux, mécanisme de couplage électron-Flux et origine cosmologique',
     icon: <Sparkles className="h-5 w-5" />,
     color: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300',
-    category: 'Technologie'
+    category: 'Arcanotechnie'
+  },
+  {
+    id: 'ecoles_arcanotechniques',
+    title: 'Les Écoles Arcanotechniques',
+    description: 'Classification complète des 19 écoles et leurs modes de conversion du Flux',
+    icon: <Sparkles className="h-5 w-5" />,
+    color: 'bg-violet-100 text-violet-800 dark:bg-violet-900 dark:text-violet-300',
+    category: 'Arcanotechnie'
+  },
+  {
+    id: 'systemes_automatises',
+    title: 'Systèmes Arcanotechniques Automatisés',
+    description: 'Cristaux de mana, modulateurs, applications industrielles et limitations',
+    icon: <Sparkles className="h-5 w-5" />,
+    color: 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300',
+    category: 'Arcanotechnie'
   },
   {
     id: 'contexte_social',
@@ -86,15 +102,21 @@ const historySections = [
   }
 ]
 
-const categories = [...new Set(historySections.map(section => section.category))].sort()
+// Define custom category order
+const categoryOrder = ['Chronologie', 'Contexte', 'Arcanotechnie', 'Introduction narrative']
+const categories = categoryOrder.filter(cat =>
+  historySections.some(section => section.category === cat)
+)
 
 const getCategoryIcon = (category: string) => {
   switch (category) {
+    case 'Introduction narrative':
+      return <Users className="h-4 w-4" />
     case 'Chronologie':
       return <Clock className="h-4 w-4" />
     case 'Contexte':
       return <BookOpen className="h-4 w-4" />
-    case 'Technologie':
+    case 'Arcanotechnie':
       return <Sparkles className="h-4 w-4" />
     default:
       return <BookOpen className="h-4 w-4" />

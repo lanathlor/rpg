@@ -169,7 +169,7 @@ export function SkillsManager({ skills, onUpdate }: SkillsManagerProps) {
           </div>
 
           {/* Two-Column Layout */}
-          <div className="flex-1 overflow-hidden flex gap-4 min-h-0">
+          <div className="flex-1 overflow-hidden flex flex-col lg:flex-row gap-4 min-h-0">
             {/* Left: Skill List */}
             <TooltipProvider>
               <div className="flex-1 overflow-y-auto space-y-2 pr-2">
@@ -253,7 +253,7 @@ export function SkillsManager({ skills, onUpdate }: SkillsManagerProps) {
             </TooltipProvider>
 
             {/* Right: Preview Pane */}
-            <div className="w-[45%] border-l pl-4 overflow-y-auto">
+            <div className="w-full lg:w-[45%] lg:border-l lg:pl-4 overflow-y-auto">
               {previewSkill ? (
                 <div className="space-y-4">
                   <SkillDetail skill={previewSkill} />

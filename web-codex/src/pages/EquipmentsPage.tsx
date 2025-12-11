@@ -199,13 +199,13 @@ export function EquipmentsPage() {
           />
         </div>
 
-        <div className="flex gap-2">
+        <div className="flex flex-col sm:flex-row gap-2 flex-wrap">
           <div className="flex items-center gap-2">
             <Filter className="h-4 w-4" />
             <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-              className="border rounded px-3 py-2 bg-background"
+              className="border rounded px-3 py-2 bg-background flex-1 sm:flex-initial"
             >
               <option value="">Toutes les catégories</option>
               {categories.map((category) => (
@@ -220,7 +220,7 @@ export function EquipmentsPage() {
             <select
               value={selectedSubcategory}
               onChange={(e) => setSelectedSubcategory(e.target.value)}
-              className="border rounded px-3 py-2 bg-background"
+              className="border rounded px-3 py-2 bg-background flex-1 sm:flex-initial"
             >
               <option value="">Toutes les sous-catégories</option>
               {subcategories.map((subcategory) => (
@@ -236,7 +236,7 @@ export function EquipmentsPage() {
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value)}
-              className="border rounded px-3 py-2 bg-background"
+              className="border rounded px-3 py-2 bg-background flex-1 sm:flex-initial"
             >
               <option value="name-asc">Nom (A-Z)</option>
               <option value="name-desc">Nom (Z-A)</option>
@@ -253,6 +253,7 @@ export function EquipmentsPage() {
                 setSelectedSubcategory('')
                 setSearchQuery('')
               }}
+              className="w-full sm:w-auto"
             >
               Réinitialiser
             </Button>

@@ -106,13 +106,13 @@ export function SpellsPage() {
           />
         </div>
 
-        <div className="flex gap-2">
+        <div className="flex flex-col sm:flex-row gap-2 flex-wrap">
           <div className="flex items-center gap-2">
             <Filter className="h-4 w-4" />
             <select
               value={selectedSchool}
               onChange={(e) => setSelectedSchool(e.target.value)}
-              className="border rounded px-3 py-2 bg-background"
+              className="border rounded px-3 py-2 bg-background flex-1 sm:flex-initial"
             >
               <option value="">Toutes les écoles</option>
               {schools.map((school) => (
@@ -127,7 +127,7 @@ export function SpellsPage() {
             <select
               value={selectedType}
               onChange={(e) => setSelectedType(e.target.value)}
-              className="border rounded px-3 py-2 bg-background"
+              className="border rounded px-3 py-2 bg-background flex-1 sm:flex-initial"
             >
               <option value="">Tous les types</option>
               {types.map((type) => (
@@ -143,7 +143,7 @@ export function SpellsPage() {
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value)}
-              className="border rounded px-3 py-2 bg-background"
+              className="border rounded px-3 py-2 bg-background flex-1 sm:flex-initial"
             >
               <option value="name-asc">Nom (A-Z)</option>
               <option value="name-desc">Nom (Z-A)</option>
@@ -162,6 +162,7 @@ export function SpellsPage() {
                 setSelectedType('')
                 setSearchQuery('')
               }}
+              className="w-full sm:w-auto"
             >
               Réinitialiser
             </Button>

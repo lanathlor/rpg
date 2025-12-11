@@ -210,14 +210,14 @@ export function ClassesPage() {
         </div>
 
         {/* Filters Row */}
-        <div className="flex gap-4 flex-wrap items-end">
+        <div className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-end">
           {/* Archetype Filter */}
           <div className="flex items-center gap-2">
             <Filter className="h-4 w-4 flex-shrink-0" />
             <select
               value={selectedArchetype}
               onChange={(e) => setSelectedArchetype(e.target.value)}
-              className="border rounded px-3 py-2 bg-background min-w-[150px]"
+              className="border rounded px-3 py-2 bg-background flex-1 sm:flex-initial sm:min-w-[150px]"
             >
               <option value="all">Tous les types</option>
               {uniqueArchetypes.map(archetype => (
@@ -227,7 +227,7 @@ export function ClassesPage() {
           </div>
 
           {/* Point Range Filter */}
-          <div className="flex items-center gap-3 flex-1 min-w-[300px]">
+          <div className="flex items-center gap-3 flex-1 sm:min-w-[300px]">
             <Filter className="h-4 w-4 flex-shrink-0" />
             <div className="flex-1 space-y-3">
               <Slider
@@ -310,7 +310,7 @@ export function ClassesPage() {
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value)}
-              className="border rounded px-3 py-2 bg-background"
+              className="border rounded px-3 py-2 bg-background flex-1 sm:flex-initial"
             >
               <option value="name-asc">Nom (A-Z)</option>
               <option value="name-desc">Nom (Z-A)</option>
@@ -329,6 +329,7 @@ export function ClassesPage() {
               setSelectedArchetype('all')
             }}
             disabled={!searchQuery && minPoints === absoluteMin && maxPoints === absoluteMax && selectedArchetype === 'all'}
+            className="w-full sm:w-auto"
           >
             Réinitialiser
           </Button>

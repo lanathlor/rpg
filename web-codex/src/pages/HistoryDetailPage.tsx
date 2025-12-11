@@ -15,7 +15,9 @@ const historySections = [
   { id: 'contexte_militaire', title: 'Contexte militaire' },
   { id: 'contexte_politique', title: 'Contexte politique' },
   { id: 'contexte_economique', title: 'Contexte économique' },
-  { id: 'arcanotechnie', title: 'Arcanotechnie et technologie' },
+  { id: 'histoire_arcanotechnie', title: 'Histoire de l\'Arcanotechnie' },
+  { id: 'ecoles_arcanotechniques', title: 'Les Écoles Arcanotechniques' },
+  { id: 'systemes_automatises', title: 'Systèmes Arcanotechniques Automatisés' },
   { id: 'contexte_social', title: 'Contexte social et culturel' }
 ]
 
