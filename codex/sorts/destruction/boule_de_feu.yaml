@@ -8,7 +8,7 @@ levels:
       affinities:
         école_requirement: "A.École[feu]: 4"
         type_requirement: "A.Type[destruction]: 4"
-        mixed_requirement: "A.École[feu] + A.Type[destruction]: 6"
+        mixed_requirement: "A.École[feu] + A.Type[destruction]: 12"
     conditions:
       special: aucune
       flux_cost: 8
@@ -26,10 +26,12 @@ levels:
         mixed_requirement: "A.École[feu] + A.Type[destruction]: 15"
     conditions:
       intelligence_required: 17
-      flux_cost: 12
+      flux_cost: 10
     description: "Version amplifiée et raffinée du sort de base, cette orbe enflammée pulse d'énergie destructrice avant de frapper sa cible. L'explosion résultante déploie des flammes si intenses qu'elles adhèrent à la chair et aux matériaux, continuant de consumer bien après l'impact initial."
     effects:
       damage: 2d8+4 feu et « brûlure II » à la cible
       resistance: RRAD
+      area_damage: 1d8 feu dans un rayon de 3m
+      special: Zone d'effet
 school: feu
 type: destruction
