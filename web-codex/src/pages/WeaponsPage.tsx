@@ -11,7 +11,7 @@ import {
   DialogTitle,
 } from '@/components/ui/dialog'
 import { WeaponDetail } from '@/components/WeaponDetail'
-import { Sword, Target, Shield, Zap, Crosshair, Search, Filter } from 'lucide-react'
+import { Sword, Target, Shield, Zap, Crosshair, Search, Filter, ArrowUpDown } from 'lucide-react'
 import type { Weapon } from '@/types'
 
 const getCategoryIcon = (category: string) => {
@@ -94,18 +94,26 @@ const getTypeColor = (type: string) => {
   }
 }
 
+// Helper function to parse cost from string like "500 cr" to number
+const parseCost = (cost: string | undefined): number => {
+  if (!cost) return 0
+  const match = cost.match(/(\d+)/)
+  return match ? parseInt(match[1], 10) : 0
+}
+
 export function WeaponsPage() {
   const { weapons, loading } = useWeapons()
   const [selectedWeapon, setSelectedWeapon] = useState<Weapon | null>(null)
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedCategory, setSelectedCategory] = useState<string>('')
   const [selectedType, setSelectedType] = useState<string>('')
+  const [sortBy, setSortBy] = useState<string>('name-asc')
 
   // Get unique categories and types for filters
   const categories = [...new Set(weapons.map(weapon => weapon.category))].sort()
   const types = [...new Set(weapons.map(weapon => weapon.type))].sort()
 
-  // Filter weapons
+  // Filter and sort weapons
   const filteredWeapons = weapons.filter((weapon) => {
     const matchesSearch =
       (weapon.name || '').toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -114,6 +122,19 @@ export function WeaponsPage() {
     const matchesType = !selectedType || weapon.type === selectedType
 
     return matchesSearch && matchesCategory && matchesType
+  }).sort((a, b) => {
+    switch (sortBy) {
+      case 'name-asc':
+        return (a.name || '').localeCompare(b.name || '')
+      case 'name-desc':
+        return (b.name || '').localeCompare(a.name || '')
+      case 'cost-asc':
+        return parseCost(a.cost) - parseCost(b.cost)
+      case 'cost-desc':
+        return parseCost(b.cost) - parseCost(a.cost)
+      default:
+        return 0
+    }
   })
 
   const openWeaponDetail = (weapon: Weapon) => {
@@ -182,6 +203,20 @@ export function WeaponsPage() {
                   {type.charAt(0).toUpperCase() + type.slice(1)}
                 </option>
               ))}
+            </select>
+          </div>
+
+          <div className="flex items-center gap-2">
+            <ArrowUpDown className="h-4 w-4" />
+            <select
+              value={sortBy}
+              onChange={(e) => setSortBy(e.target.value)}
+              className="border rounded px-3 py-2 bg-background"
+            >
+              <option value="name-asc">Nom (A-Z)</option>
+              <option value="name-desc">Nom (Z-A)</option>
+              <option value="cost-desc">Coût (décroissant)</option>
+              <option value="cost-asc">Coût (croissant)</option>
             </select>
           </div>
 

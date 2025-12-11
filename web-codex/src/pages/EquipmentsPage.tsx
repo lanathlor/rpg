@@ -11,7 +11,7 @@ import {
   DialogTitle,
 } from '@/components/ui/dialog'
 import { ArmorDetail } from '@/components/ArmorDetail'
-import { Shield, Shirt, HardHat, Users, Search, Filter, Brain, Bot, Cpu, FlaskConical, Target, Gauge } from 'lucide-react'
+import { Shield, Shirt, HardHat, Users, Search, Filter, Brain, Bot, Cpu, FlaskConical, Target, Gauge, ArrowUpDown } from 'lucide-react'
 import type { Armor } from '@/types'
 
 const getCategoryIcon = (category: string) => {
@@ -119,18 +119,26 @@ const getSubcategoryColor = (subcategory: string) => {
   }
 }
 
+// Helper function to parse cost from string like "500 cr" to number
+const parseCost = (cost: string | undefined): number => {
+  if (!cost) return 0
+  const match = cost.match(/(\d+)/)
+  return match ? parseInt(match[1], 10) : 0
+}
+
 export function EquipmentsPage() {
   const { armors, loading } = useArmors()
   const [selectedArmor, setSelectedArmor] = useState<Armor | null>(null)
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedCategory, setSelectedCategory] = useState<string>('')
   const [selectedSubcategory, setSelectedSubcategory] = useState<string>('')
+  const [sortBy, setSortBy] = useState<string>('name-asc')
 
   // Get unique categories and subcategories for filters
   const categories = [...new Set(armors.map(armor => armor.category).filter(Boolean))].sort()
   const subcategories = [...new Set(armors.map(armor => armor.subcategory).filter(Boolean))].sort()
 
-  // Filter armors
+  // Filter and sort armors
   const filteredArmors = armors.filter((armor) => {
     const matchesSearch =
       (armor.name || '').toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -139,6 +147,19 @@ export function EquipmentsPage() {
     const matchesSubcategory = !selectedSubcategory || armor.subcategory === selectedSubcategory
 
     return matchesSearch && matchesCategory && matchesSubcategory
+  }).sort((a, b) => {
+    switch (sortBy) {
+      case 'name-asc':
+        return (a.name || '').localeCompare(b.name || '')
+      case 'name-desc':
+        return (b.name || '').localeCompare(a.name || '')
+      case 'cost-asc':
+        return parseCost(a.cost) - parseCost(b.cost)
+      case 'cost-desc':
+        return parseCost(b.cost) - parseCost(a.cost)
+      default:
+        return 0
+    }
   })
 
   const openArmorDetail = (armor: Armor) => {
@@ -207,6 +228,20 @@ export function EquipmentsPage() {
                   {subcategory ? subcategory.charAt(0).toUpperCase() + subcategory.slice(1) : ''}
                 </option>
               ))}
+            </select>
+          </div>
+
+          <div className="flex items-center gap-2">
+            <ArrowUpDown className="h-4 w-4" />
+            <select
+              value={sortBy}
+              onChange={(e) => setSortBy(e.target.value)}
+              className="border rounded px-3 py-2 bg-background"
+            >
+              <option value="name-asc">Nom (A-Z)</option>
+              <option value="name-desc">Nom (Z-A)</option>
+              <option value="cost-desc">Coût (décroissant)</option>
+              <option value="cost-asc">Coût (croissant)</option>
             </select>
           </div>
 

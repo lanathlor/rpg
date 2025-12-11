@@ -11,7 +11,7 @@ import {
   DialogTitle,
 } from '@/components/ui/dialog'
 import { SpellDetail } from '@/components/SpellDetail'
-import { Search, Filter, Zap, Target, TrendingUp } from 'lucide-react'
+import { Search, Filter, Zap, Target, TrendingUp, ArrowUpDown } from 'lucide-react'
 import { getSchoolIcon, getSchoolColor, getTypeIcon, getTypeColor } from '@/lib/schoolUtils'
 import { rateSpell } from '@/lib/spellRatingCalculator'
 import type { Spell } from '@/types'
@@ -23,12 +23,13 @@ export function SpellsPage() {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedSchool, setSelectedSchool] = useState<string>('')
   const [selectedType, setSelectedType] = useState<string>('')
+  const [sortBy, setSortBy] = useState<string>('name-asc')
 
   // Get unique schools and types for filters
   const schools = [...new Set(spells.map(spell => spell.school).filter((s): s is string => Boolean(s)))].sort()
   const types = [...new Set(spells.map(spell => spell.type).filter((t): t is string => Boolean(t)))].sort()
 
-  // Filter spells
+  // Filter and sort spells
   const filteredSpells = spells.filter((spell) => {
     const matchesSearch =
       spell.name?.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -37,6 +38,35 @@ export function SpellsPage() {
     const matchesType = !selectedType || spell.type === selectedType
 
     return matchesSearch && matchesSchool && matchesType
+  }).sort((a, b) => {
+    switch (sortBy) {
+      case 'name-asc':
+        return (a.name || '').localeCompare(b.name || '')
+      case 'name-desc':
+        return (b.name || '').localeCompare(a.name || '')
+      case 'power-asc': {
+        const ratingA = a.levels?.[0] ? rateSpell(a.levels[0]).powerScore : 0
+        const ratingB = b.levels?.[0] ? rateSpell(b.levels[0]).powerScore : 0
+        return ratingA - ratingB
+      }
+      case 'power-desc': {
+        const ratingA = a.levels?.[0] ? rateSpell(a.levels[0]).powerScore : 0
+        const ratingB = b.levels?.[0] ? rateSpell(b.levels[0]).powerScore : 0
+        return ratingB - ratingA
+      }
+      case 'value-asc': {
+        const ratingA = a.levels?.[0] ? rateSpell(a.levels[0]).valueRating : 0
+        const ratingB = b.levels?.[0] ? rateSpell(b.levels[0]).valueRating : 0
+        return ratingA - ratingB
+      }
+      case 'value-desc': {
+        const ratingA = a.levels?.[0] ? rateSpell(a.levels[0]).valueRating : 0
+        const ratingB = b.levels?.[0] ? rateSpell(b.levels[0]).valueRating : 0
+        return ratingB - ratingA
+      }
+      default:
+        return 0
+    }
   })
 
   const openSpellDetail = (spell: Spell) => {
@@ -105,6 +135,22 @@ export function SpellsPage() {
                   {type.charAt(0).toUpperCase() + type.slice(1)}
                 </option>
               ))}
+            </select>
+          </div>
+
+          <div className="flex items-center gap-2">
+            <ArrowUpDown className="h-4 w-4" />
+            <select
+              value={sortBy}
+              onChange={(e) => setSortBy(e.target.value)}
+              className="border rounded px-3 py-2 bg-background"
+            >
+              <option value="name-asc">Nom (A-Z)</option>
+              <option value="name-desc">Nom (Z-A)</option>
+              <option value="power-desc">Puissance (décroissant)</option>
+              <option value="power-asc">Puissance (croissant)</option>
+              <option value="value-desc">Valeur (décroissant)</option>
+              <option value="value-asc">Valeur (croissant)</option>
             </select>
           </div>
 
