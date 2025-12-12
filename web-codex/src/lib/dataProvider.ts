@@ -8,6 +8,7 @@ import {
   type Skill,
   type Consumable,
   type CharacterClass,
+  type Scenario,
 } from '@/types'
 import { YamlLoader } from './yamlLoader'
 
@@ -178,6 +179,29 @@ export function useClasses() {
   }, [])
 
   return { classes, loading, error }
+}
+
+export function useScenarios() {
+  const [scenarios, setScenarios] = useState<Scenario[]>([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
+
+  useEffect(() => {
+    async function loadScenarios() {
+      try {
+        setError(null)
+        const data = await yamlLoader.getScenarios()
+        setScenarios(data)
+      } catch (err) {
+        setError(err instanceof Error ? err.message : 'Failed to load scenarios')
+      } finally {
+        setLoading(false)
+      }
+    }
+    loadScenarios()
+  }, [])
+
+  return { scenarios, loading, error }
 }
 
 // Search functionality

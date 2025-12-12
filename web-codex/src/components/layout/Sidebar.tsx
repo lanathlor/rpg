@@ -12,6 +12,7 @@ import {
   Home,
   BookOpen,
   Scroll,
+  Map,
 } from 'lucide-react'
 
 const navigationItems = [
@@ -31,6 +32,12 @@ const navigationItems = [
     href: '/histoire',
     icon: Scroll,
     description: 'Chroniques du monde',
+  },
+  {
+    name: 'Scénarios',
+    href: '/scenarios',
+    icon: Map,
+    description: 'Aventures one-shot et campagnes',
   },
   {
     name: 'Sorts',

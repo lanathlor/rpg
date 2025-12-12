@@ -1,0 +1,335 @@
+# Meurtre à la Parade - Scénario One-Shot
+
+name: 'Meurtre à la Parade'
+
+description: 'Un homme est retrouvé mort dans des entrepôts la veille de la grande parade impériale. Une simple affaire criminelle... ou un complot contre l''Empire ?'
+
+description_long: |
+    La planète Kethara a été récemment conquise par l'Empire. Dans quelques heures aura lieu la Grande Parade Impériale célébrant cette victoire. Les préparatifs battent leur plein quand un corps est découvert dans les entrepôts où est stocké le matériel de la parade.
+
+    La victime : Jax Morell, un homme au chômage sans antécédents criminels. Aucun mobile apparent. La police locale, déjà débordée par la sécurité de la parade, se montre peu coopérative avec les enquêteurs impériaux.
+
+    Les joueurs, agents de la Sécurité Impériale, doivent enquêter rapidement. Mais au fil de leur investigation, ils découvrent qu'il ne s'agit pas d'un simple meurtre : Jax était mêlé à un complot anti-impérial qui pourrait transformer la parade en bain de sang.
+
+    Une course contre la montre commence. Trouveront-ils les saboteurs à temps ? Ou l'attentat deviendra-t-il le premier acte de résistance d'une planète qui refuse d'être conquise ?
+
+image: 'images/scenarios/meurtre_a_la_parade.png'
+
+category: 'one-shot'
+theme: 'investigation'
+difficulty: 'intermediate'
+setting: 'urban'
+
+session_info:
+    duration: '3-4 heures'
+    player_count: '3-5'
+    recommended_points: '200-220 points'
+
+gm_notes:
+    preparation_time: '30 minutes'
+    complexity: 'medium'
+    tone: 'Enquête policière avec pression temporelle - thriller politique'
+
+requirements:
+    required_rules:
+        - 'Combat de base'
+        - 'Système de résistances'
+    recommended_classes:
+        - 'Taliste'
+        - 'Chasseur'
+        - 'Spectre'
+        - 'Sentinelle'
+    required_npcs: 5
+    maps_included: false
+    handouts_included: true
+
+synopsis: |
+    Jax Morell, un chômeur désespéré, a été recruté par une cellule de résistance anti-impériale déguisée en "entreprise de sécurité privée". Le groupe prévoyait de saboter la parade impériale avec un explosif caché dans la tribune d'honneur.
+
+    Mais Jax a eu des remords à la dernière minute et a voulu se retirer. Les saboteurs l'ont tué pour l'empêcher de parler et ont caché son corps dans les entrepôts.
+
+    INFORMATION MJ IMPORTANTE : Ce scénario est conçu pour être DIFFICILE. Les joueurs ont environ 6-8 heures en temps de jeu (2-3 heures réelles) avant la parade. Ils doivent :
+    1. Comprendre que c'est un meurtre lié à un complot
+    2. Identifier la fausse entreprise de sécurité
+    3. Localiser les saboteurs ou la bombe
+    4. Arrêter l'attentat
+
+    ISSUE ATTENDUE : Dans la plupart des parties, les joueurs NE STOPPENT PAS l'attentat à temps. La bombe explose, tuant plusieurs hauts officiers impériaux. C'est un ÉCHEC PARTIEL qui crée des conséquences narratives importantes :
+    - Les joueurs peuvent quand même arrêter les saboteurs après coup
+    - Cela déclenche une répression impériale sur la planète
+    - Les personnages portent le poids de cet échec
+
+    Cependant, si les joueurs sont efficaces et perspicaces, ils PEUVENT réussir. Laissez-leur cette possibilité.
+
+acts:
+    - act: '1'
+      title: 'Le Corps dans l''Entrepôt'
+      description: 'Découverte du meurtre et premières investigations'
+      key_scenes:
+          - 'Briefing : corps découvert, parade dans 6 heures, police locale non-coopérative'
+          - 'Scène de crime : entrepôts de la parade, indices à collecter'
+          - 'Autopsie rapide : mort il y a 12-18h, strangulation, traces de lutte'
+          - 'Fouille de l''appartement de Jax : lettre de motivation, CV, photos de son ex'
+          - 'Premier contact avec la police locale : tension, révèlent a minima qu''il a une ex-compagne'
+      estimated_duration: '45-60 minutes'
+
+    - act: '2'
+      title: 'Fils Rouges'
+      description: 'Enquête sur l''entourage de la victime et découverte du complot'
+      key_scenes:
+          - 'Interrogatoire de l''ex-compagne Lyra : révèle qu''il avait "trouvé un boulot"'
+          - 'Investigation sur "SecurKeth Solutions" - l''entreprise n''existe pas officiellement'
+          - 'Découverte : c''est une façade pour un groupe de résistance'
+          - 'Analyse des communications de Jax : dernier appel vers Lyra, messages cryptés'
+          - 'Identification d''un contact : Kael Theron, "recruteur" pour SecurKeth'
+          - 'Course contre la montre : la parade approche (3-4h restantes)'
+      estimated_duration: '60-90 minutes'
+
+    - act: '3'
+      title: 'Compte à Rebours'
+      description: 'Traque des saboteurs et tentative de stopper l''attentat'
+      key_scenes:
+          - 'Localisation de la planque des saboteurs OU de la bombe'
+          - 'Confrontation avec les saboteurs - combat ou négociation'
+          - 'Recherche frénétique de la bombe dans la tribune (si pas trouvée avant)'
+          - 'POINT DE BASCULE : arrêt de l''attentat OU explosion'
+          - 'Épilogue succès : parade sécurisée, saboteurs capturés, reconnaissance impériale'
+          - 'Épilogue échec : explosion, morts, représailles impériales, culpabilité des joueurs'
+      estimated_duration: '60-90 minutes'
+
+npcs:
+    - name: 'Jax Morell'
+      role: 'Victime / Point de départ de l''enquête'
+      description: 'Homme de 32 ans, au chômage depuis 8 mois. Visage fatigué, vêtements usés. Retrouvé mort par strangulation dans les entrepôts.'
+      stats_reference: 'Civil (sans capacités de combat)'
+      motivations: 'Était : Trouver un emploi pour reconquérir son ex. Avait accepté de rejoindre les saboteurs par désespoir financier mais a eu des remords.'
+
+    - name: 'Lyra Kessan'
+      role: 'Ex-compagne de la victime / Témoin clé'
+      description: 'Femme de 29 ans, employée dans un café. Fatiguée émotionnellement. A quitté Jax il y a 1 mois à cause de son comportement dépressif lié au chômage.'
+      stats_reference: 'Civil'
+      motivations: 'N''est plus amoureuse de Jax mais culpabilise de ne pas avoir répondu à son dernier appel. Veut aider à comprendre ce qui s''est passé.'
+
+    - name: 'Lieutenant Harven Koss'
+      role: 'Contact police locale / Obstacle bureaucratique'
+      description: 'Officier de police locale (38 ans), fatigué et cynique. Ressent l''occupation impériale comme une humiliation. Très peu coopératif avec les agents impériaux.'
+      stats_reference: 'Chasseur (~200 points)'
+      motivations: 'Protéger sa juridiction. Ne veut pas que les Impériaux prennent le contrôle de "son" enquête. Cache des informations par principe.'
+
+    - name: 'Kael Theron'
+      role: 'Recruteur des saboteurs / Antagoniste secondaire'
+      description: 'Homme de 42 ans, ancien militaire de Kethara. Charisme froid, cicatrices de guerre. Coordinateur logistique de la cellule de résistance.'
+      stats_reference: 'Chasseur (~215 points) - équipement discret'
+      motivations: 'Venger la défaite de Kethara. Recruter des désespérés pour la cause. Éliminer les traîtres potentiels comme Jax.'
+
+    - name: 'Commandante Mira Sarros'
+      role: 'Leader des saboteurs / Antagoniste principal'
+      description: 'Ancienne officière de l''armée de Kethara (45 ans), brillante tacticienne. Refuse d''accepter la défaite. Prête à tout pour frapper l''Empire.'
+      stats_reference: 'Chasseur (~230 points) - équipement militaire'
+      motivations: 'Diriger la résistance contre l''Empire. L''attentat est un acte symbolique pour rallier la population. Les morts sont un "sacrifice nécessaire".'
+
+encounters:
+    - name: 'Scène de Crime'
+      type: 'exploration'
+      difficulty: 'medium'
+      location: 'Entrepôts de la parade - Niveau 2'
+      description: 'Le corps de Jax Morell est caché derrière des caisses de matériel de parade. Les joueurs doivent collecter des indices.'
+      challenges:
+          - 'Perception 14 : trouver des fibres textiles sous les ongles de la victime'
+          - 'Intelligence 15 ou Médecine : déterminer l''heure de la mort (12-18h)'
+          - 'Perception 16 : traces de pas menant vers la sortie de service'
+          - 'Investigation 15 : téléphone portable de Jax (besoin de Hacker pour déverrouiller)'
+      rewards:
+          - 'CV et lettre de motivation pour "SecurKeth Solutions"'
+          - 'Téléphone avec dernier appel vers Lyra et messages cryptés'
+          - 'Photo de Lyra dans son portefeuille'
+          - 'Badge d''accès temporaire aux entrepôts (suspect : comment l''a-t-il eu ?)'
+
+    - name: 'Interrogatoire de Lyra'
+      type: 'social'
+      difficulty: 'low'
+      location: 'Café "Le Conquis" - Centre-ville'
+      description: 'Lyra est bouleversée d''apprendre la mort de Jax. Elle veut aider mais ne sait pas grand-chose.'
+      success_conditions:
+          - 'Jet de Charisme (Empathie) difficulté 13 : elle se confie librement'
+          - 'Jet de Charisme (Persuasion) difficulté 15 : elle révèle des détails embarrassants'
+      rewards:
+          - 'Information : Jax avait "trouvé un boulot" il y a quelques jours'
+          - 'Information : Il l''a appelée hier soir, semblait paniqué, mais elle n''a pas répondu'
+          - 'Information : Il était devenu dépressif à cause du chômage, le couple n''avait plus d''avenir'
+          - 'Alibi solide : elle était au travail au moment du meurtre'
+
+    - name: 'Confrontation avec la Police Locale'
+      type: 'social'
+      difficulty: 'hard'
+      location: 'Commissariat de Kethara-Ville'
+      description: 'Le Lieutenant Koss refuse de coopérer pleinement. Tension entre autorité locale et impériale.'
+      success_conditions:
+          - 'Jet de Charisme (Intimidation) difficulté 17 : imposer l''autorité impériale (risque de dégradation diplomatique)'
+          - 'Jet de Charisme (Persuasion) difficulté 16 : appel au professionnalisme'
+          - 'Montrer une preuve concrète du complot : il coopère par devoir'
+      failure_consequence: 'Koss bloque l''accès aux ressources locales, ralentit l''enquête (-1h de temps de jeu)'
+      rewards:
+          - 'Accès aux fichiers de police sur Jax (confirme : aucun antécédent)'
+          - 'Information sur "SecurKeth Solutions" : aucune licence commerciale enregistrée'
+          - 'Liste des entreprises de sécurité légitimes pour la parade (SecurKeth n''y figure pas)'
+
+    - name: 'Traque de Kael Theron'
+      type: 'mixed'
+      difficulty: 'hard'
+      location: 'Quartier industriel - Planque clandestine'
+      description: 'Les joueurs ont localisé Kael Theron. Il peut être interrogé, capturé ou tué.'
+      challenges:
+          - 'Infiltration (Discrétion 16) ou Assaut frontal'
+          - 'Kael tentera de fuir si repéré'
+          - 'Combat si acculé (lui + 2 saboteurs armés)'
+      enemies:
+          - name: 'Kael Theron'
+            count: 1
+            stats_reference: 'Chasseur (~215 points)'
+          - name: 'Saboteur armé'
+            count: 2
+            stats_reference: 'Chasseur (~190 points)'
+      tactics: 'Kael tente de fuir en premier. Ses hommes couvrent sa retraite. Si capturé vivant, il peut révéler l''emplacement de la bombe sous torture/persuasion (diff. 18).'
+      rewards:
+          - 'Plans partiels de la tribune d''honneur'
+          - 'Codes de communication de la cellule (permet de localiser Vess Narun)'
+          - 'Si interrogé avec succès : emplacement de la bombe (tribune, 3e pilier ouest)'
+
+    - name: 'Fouille de la Tribune - Contre la Montre'
+      type: 'exploration'
+      difficulty: 'extreme'
+      location: 'Tribune d''honneur - Place de la Victoire'
+      description: 'TEMPS LIMITÉ : La parade commence dans 30 minutes (temps réel : 10-15 min). Les joueurs doivent trouver la bombe cachée dans une structure massive.'
+      challenges:
+          - 'Perception 18 : localiser la bombe cachée dans le 3e pilier ouest'
+          - 'Intelligence 17 ou Explosifs : désamorcer sans plans'
+          - 'Intelligence 15 ou Explosifs : désamorcer avec les plans de Kael'
+          - 'Chaque jet raté fait perdre 5 minutes de temps de jeu'
+      failure_consequence: 'La bombe explose pendant la parade. 12 morts dont 4 généraux impériaux. Échec de la mission.'
+      rewards:
+          - 'Si succès : Attentat déjoué, parade sécurisée, reconnaissance impériale majeure'
+          - 'Bombe récupérée peut être analysée pour identifier les fabricants'
+
+    - name: 'Confrontation Finale avec Mira Sarros'
+      type: 'combat'
+      difficulty: 'hard'
+      location: 'Point d''observation secret - Toit immeuble adjacent'
+      description: 'La Commandante Mira Sarros observe la tribune pour déclencher la bombe à distance. Combat inévitable si les joueurs la trouvent.'
+      enemies:
+          - name: 'Commandante Mira Sarros'
+            count: 1
+            stats_reference: |
+                Chasseur (~230 points)
+                PV: 70, Vitesse: 4, SD: 16
+                RMEC: +6, RRAD: +3, RINT: +4
+
+                Équipement : Fusil de précision, armure légère tactique, détonateur à distance
+
+                Capacités spéciales :
+                - Tacticienne : +2 en Initiative, peut coordonner des alliés
+                - Tir de précision : +3 aux jets de Précision
+                - Détonateur : peut tenter de déclencher la bombe à tout moment (Action)
+          - name: 'Garde du corps résistant'
+            count: 2
+            stats_reference: 'Chasseur (~210 points)'
+      tactics: 'Mira reste en arrière, tire avec son fusil. Ses gardes protègent sa position. Si en danger, elle tente de déclencher le détonateur en dernier recours.'
+      special_mechanic: 'Si Mira presse le détonateur et que la bombe n''a pas été désamorcée : EXPLOSION. Les joueurs ont 1 tour pour l''en empêcher (tir de désarmement, charge, etc.).'
+      rewards:
+          - 'Capture de Mira : informations sur le réseau de résistance complet'
+          - 'Détonateur récupéré : preuve du complot'
+          - 'Réputation impériale majeure si parade sécurisée'
+          - 'Équipement militaire de Kethara (armure tactique, fusil de précision)'
+
+rewards:
+    points: '8-12 points par joueur selon performance (échec = 5 points)'
+    credits: '2000 cr par joueur si succès / 1000 cr si échec partiel'
+    items:
+        - 'Badge de Sécurité Impériale niveau 3 (accès élargi)'
+        - 'Arme arcanotechnique confisquée aux saboteurs (au choix)'
+        - 'Équipement tactique militaire (récupéré sur Mira)'
+    special: |
+        Selon l'issue :
+        - SUCCÈS TOTAL (attentat déjoué, saboteurs capturés) : Réputation +5 avec l'Empire, promotion, médaille impériale, confiance totale des supérieurs
+        - SUCCÈS PARTIEL (attentat déjoué MAIS saboteurs en fuite) : Réputation +3, reconnaissance officielle mais enquête continue
+        - ÉCHEC PARTIEL (attentat réussi MAIS saboteurs capturés après) : Réputation +1, blâme officiel tempéré par l'arrestation
+        - ÉCHEC TOTAL (attentat réussi, saboteurs en fuite) : Réputation -2, enquête interne, possible rétrogradation, trauma psychologique
+
+variants:
+    - name: 'Version Enquête Complexe'
+      description: |
+          Pour groupes aimant l'investigation poussée :
+          - Ajouter plus de fausses pistes (suspects innocents, red herrings)
+          - Complexifier la structure de la cellule de résistance (3-4 niveaux)
+          - Ajouter des indices cryptographiques à déchiffrer
+          - Permettre d'infiltrer la cellule en se faisant passer pour des recrues
+
+    - name: 'Version Action'
+      description: |
+          Pour groupes aimant le combat :
+          - Réduire la phase d'enquête (Cipher donne des raccourcis)
+          - Multiplier les confrontations armées avec des cellules de saboteurs
+          - Ajouter une poursuite en véhicule dans les rues de Kethara-Ville
+          - Combat final épique sur la tribune pendant que la parade commence
+
+    - name: 'Version Rapide (2h)'
+      description: |
+          Pour sessions courtes :
+          - Lyra donne directement le nom de "SecurKeth Solutions"
+          - Kael est facile à localiser et parle rapidement
+          - Réduire le temps de parade à 4 heures (1h30 réelle)
+          - Simplifier la fouille de la tribune (Perception 15)
+
+related_content:
+    spells_used:
+        - 'Révélation'
+        - 'Détection des mensonges'
+        - 'Camouflage'
+        - 'Communication'
+    equipment_used:
+        - 'Kit d''investigation'
+        - 'Analyseur arcanotechnique'
+        - 'Armure tactique légère'
+        - 'Fusil de précision'
+    locations:
+        - 'Kethara-Ville (planète récemment conquise)'
+        - 'Entrepôts de la Parade'
+        - 'Place de la Victoire - Tribune d''honneur'
+        - 'Quartier industriel - Planques clandestines'
+
+tags:
+    - 'investigation'
+    - 'political'
+    - 'time-pressure'
+    - 'urban'
+    - 'mystery'
+    - 'terrorism'
+    - 'resistance'
+    - 'intermediate'
+
+author: 'Lanathlor'
+last_updated: '2025-12-11'
+playtested: false
+
+gm_tips: |
+    CONSEILS DE MAÎTRISE :
+
+    1. PRESSION TEMPORELLE : Le temps est l'ennemi principal. Utilisez un compte à rebours visible. Chaque fausse piste, chaque interrogatoire raté = temps perdu.
+
+    2. L'ÉCHEC EST UNE OPTION : Ce scénario est CONÇU pour être difficile. Ne facilitez pas artificiellement. Si les joueurs échouent, l'attentat a lieu. C'est narrativement puissant.
+
+    3. CONSÉQUENCES DE L'EXPLOSION : Si la bombe explose, décrivez l'horreur. Morts, blessés, cris. Les joueurs doivent RESSENTIR l'échec. Mais ils peuvent encore capturer les saboteurs et limiter les dégâts.
+
+    4. POLICE LOCALE : Harven Koss n'est pas un méchant. Il est frustré, humilié par l'occupation. Jouez cette tension. Les joueurs peuvent le rallier s'ils le respectent.
+
+    5. LYRA : Elle est un témoin innocent et vulnérable. Ne la transformez pas en suspecte sauf si les joueurs sont vraiment paranoïaques. Elle peut devenir un point d'ancrage émotionnel.
+
+    6. MIRA SARROS : C'est une fanatique mais pas stupide. Elle croit sincèrement que l'Empire est un oppresseur. Donnez-lui de la profondeur dans ses dialogues si capturée.
+
+    7. INDICES PROGRESSIFS : Si les joueurs bloquent, donnez des indices subtils (appel anonyme, témoin qui se manifeste). Mais ne leur donnez PAS la solution.
+
+    8. AMBIANCE : Tension croissante. Musique de compte à rebours. Descriptions de la ville en fête qui ignore le danger. Contraste entre la parade colorée et le complot sombre.
+
+    9. RÉPRESSION IMPÉRIALE : Si l'attentat réussit, l'Empire réagira fermement mais méthodiquement. Loi martiale temporaire, quadrillage sécuritaire renforcé, enquêtes intensives et arrestations ciblées des suspects. Pression politique sur le gouvernement local pour avoir "échoué à maintenir l'ordre". Les joueurs assistent aux conséquences de leur échec et à la montée des tensions.
+
+    10. SUITE POSSIBLE : Ce scénario peut lancer une campagne. Si l'attentat réussit, la résistance s'embrase. Les joueurs doivent démanteler le réseau complet. Si déjoué, Mira devient une martyre, ralliant plus de recrues.

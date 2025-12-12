@@ -1,0 +1,278 @@
+# ============================================
+# SCÉNARIO TEMPLATE - One-Shot Adventures
+# ============================================
+# Ce fichier sert de modèle pour créer de nouveaux scénarios one-shot.
+# Copiez ce fichier et remplissez les champs selon votre aventure.
+
+# ========== INFORMATIONS DE BASE ==========
+
+# Nom du scénario (requis)
+name: 'Nom du Scénario'
+
+# Description courte (1-2 phrases) - apparaît dans la carte de preview
+description: 'Accroche rapide du scénario qui donne envie aux joueurs.'
+
+# Description longue - contexte complet et mise en place
+description_long: |
+    Description détaillée du scénario incluant :
+    - Le contexte de l'univers
+    - La situation initiale
+    - Les enjeux principaux
+    - L'ambiance recherchée
+
+# Image du scénario (optionnel)
+image: 'images/scenarios/scenario_name.png'
+
+# ========== CLASSIFICATION ==========
+
+# Catégorie du scénario
+category: 'one-shot' # Options: one-shot, campaign-start, side-quest, tournament
+
+# Thème principal
+theme: 'investigation' # Options: combat, investigation, social, exploration, horror, heist, mixed
+
+# Niveau de difficulté
+difficulty: 'intermediate' # Options: beginner, intermediate, advanced, expert
+
+# Cadre/Setting
+setting: 'urban' # Options: urban, wilderness, dungeon, space-station, derelict-ship, colony, etc.
+
+# ========== INFORMATIONS DE SESSION ==========
+
+session_info:
+    # Durée estimée
+    duration: '3-4 heures'
+
+    # Nombre de joueurs recommandé
+    player_count: '3-5'
+
+    # Points recommandés pour les personnages (point buy)
+    recommended_points: '195-220 points'
+
+# ========== NOTES POUR LE MJ ==========
+
+gm_notes:
+    # Temps de préparation pour le MJ
+    preparation_time: '30 minutes'
+
+    # Complexité pour le MJ
+    complexity: 'medium' # Options: low, medium, high
+
+    # Ton/Ambiance du scénario
+    tone: 'tech-noir investigation with action'
+
+# ========== PRÉREQUIS ==========
+
+requirements:
+    # Règles nécessaires
+    required_rules:
+        - 'Combat de base'
+        - 'Système de résistances'
+
+    # Classes recommandées (non obligatoire)
+    recommended_classes:
+        - 'Chasseur'
+        - 'Arcanotechnicien'
+        - 'Spectre'
+
+    # Nombre de PNJ importants
+    required_npcs: 5
+
+    # Cartes incluses
+    maps_included: true
+
+    # Documents à distribuer
+    handouts_included: false
+
+# ========== SYNOPSIS (MJ SEULEMENT - NE PAS LIRE AUX JOUEURS) ==========
+
+synopsis: |
+    Résumé complet de l'intrigue pour le MJ, incluant :
+    - L'événement déclencheur
+    - Les révélations principales
+    - Le climax
+    - Les issues possibles
+
+# ========== STRUCTURE EN ACTES ==========
+
+acts:
+    # Acte 1 : Introduction
+    - act: '1'
+      title: 'Le Déclencheur'
+      description: 'Mise en place et accroche des joueurs'
+      key_scenes:
+          - "Scène d'introduction - rencontre avec le donneur de quête"
+          - "Découverte de l'indice initial"
+          - 'Premier obstacle ou mystère'
+      estimated_duration: '30-45 minutes'
+
+    # Acte 2 : Développement
+    - act: '2'
+      title: "L'Investigation"
+      description: "Corps principal de l'aventure"
+      key_scenes:
+          - 'Exploration de la première zone'
+          - 'Rencontre avec témoin/informateur'
+          - 'Révélation partielle'
+          - 'Confrontation mineure'
+      estimated_duration: '90-120 minutes'
+
+    # Acte 3 : Climax
+    - act: '3'
+      title: 'La Résolution'
+      description: 'Confrontation finale et dénouement'
+      key_scenes:
+          - 'Découverte du lieu final'
+          - 'Affrontement ou négociation finale'
+          - 'Résolution et conséquences'
+      estimated_duration: '60-90 minutes'
+
+# ========== PERSONNAGES NON-JOUEURS ==========
+
+npcs:
+    # Exemple de PNJ majeur
+    - name: 'Commandant Sarah Chen'
+      role: 'Donneuse de quête'
+      description: 'Officier de sécurité corporative, pragmatique et directe'
+      stats_reference: 'Chasseur (~200 points)' # Référence vers une classe ou profil custom
+      motivations: "Résoudre l'affaire avant le scandale public"
+
+    # Exemple de PNJ antagoniste
+    - name: 'Dr. Viktor Kuznetsov'
+      role: 'Antagoniste principal'
+      description: 'Arcanotechnicien brillant mais instable'
+      stats_reference: 'Arcanotechnicien (~220 points)'
+      motivations: 'Protéger sa recherche interdite'
+
+# ========== RENCONTRES ==========
+
+encounters:
+    # Rencontre de combat
+    - name: 'Patrouille de Sécurité Corrompue'
+      type: 'combat'
+      difficulty: 'medium'
+      location: 'Entrepôt abandonné - Zone industrielle'
+      enemies:
+          - name: 'Garde de sécurité (corrompu)'
+            count: 3
+            stats_reference: 'Chasseur (~190 points)'
+          - name: 'Drone de combat léger'
+            count: 2
+            stats_reference: 'Drone militaire (~100 points)'
+      tactics: 'Les gardes se mettent à couvert, les drones flanquent'
+      rewards:
+          - "Cartes d'accès niveau 2"
+          - '300 cr en équipement'
+
+    # Rencontre sociale
+    - name: "Négociation avec l'Informateur"
+      type: 'social'
+      difficulty: 'medium'
+      location: 'Bar clandestin - Sous-secteur 7'
+      description: 'Convaincre un hacker de partager des données sensibles'
+      success_conditions:
+          - 'Jet de Charisme (Persuasion) difficulté 16'
+          - 'Ou payer 500 cr'
+          - 'Ou promettre une faveur future'
+      rewards:
+          - "Logs d'accès du laboratoire"
+          - 'Schémas des systèmes de sécurité'
+
+    # Rencontre d'exploration
+    - name: 'Laboratoire Abandonné'
+      type: 'exploration'
+      difficulty: 'low'
+      description: 'Fouille du laboratoire secret pour indices'
+      challenges:
+          - 'Systèmes de sécurité dormants (Perception 14 pour détecter)'
+          - 'Données chiffrées (Intelligence 16 ou compétence Hacker)'
+      rewards:
+          - 'Notes de recherche du Dr. Kuznetsov'
+          - 'Cristal de Flux expérimental'
+
+# ========== RÉCOMPENSES GLOBALES ==========
+
+rewards:
+    # Points (pour progresser dans le point buy)
+    points: '5-10 points par joueur selon performance'
+
+    # Crédits
+    credits: '1000 cr par joueur + bonus de performance'
+
+    # Objets
+    items:
+        - 'Implant neural amélioré'
+        - 'Arme arcanotechnique (au choix)'
+        - 'Kit de soins militaire x2'
+
+    # Récompense spéciale/narrative
+    special: 'Réputation +2 avec MegaCorp Security / Accès aux contrats niveau 2'
+
+# ========== VARIANTES ==========
+
+variants:
+    # Variante orientée combat
+    - name: 'Version Combat Intense'
+      description: |
+          Réduire les scènes d'investigation, ajouter :
+          - +2 rencontres de combat
+          - Limiter le temps d'exploration
+          - Antagoniste plus agressif
+
+    # Variante furtive
+    - name: 'Version Infiltration'
+      description: |
+          Permettre une approche furtive complète :
+          - Chemins alternatifs
+          - Récompenses pour éviter le combat
+          - Plus d'options sociales
+
+# ========== CONTENU ASSOCIÉ ==========
+
+related_content:
+    # Sorts utilisés dans le scénario
+    spells_used:
+        - 'Camouflage'
+        - 'Flash'
+        - 'Annulation arcanotechnique'
+
+    # Équipement recommandé
+    equipment_used:
+        - 'Exosquelette de combat'
+        - "Fusil d'assaut"
+        - 'Kit de hacking'
+
+    # Lieux importants
+    locations:
+        - 'Zone Industrielle Secteur 7'
+        - 'Tour MegaCorp'
+        - 'Laboratoire Souterrain Alpha-9'
+
+# ========== MÉTADONNÉES ==========
+
+# Tags de recherche
+tags:
+    - 'investigation'
+    - 'corporate'
+    - 'tech-noir'
+    - 'beginner-friendly'
+    - 'urban'
+    - 'mystery'
+
+# Auteur du scénario
+author: 'Nom du MJ'
+
+# Dernière mise à jour
+last_updated: '2025-12-11'
+
+# Testé en partie réelle ?
+playtested: false
+
+# ========== NOTES ADDITIONNELLES ==========
+
+# Conseils du MJ, astuces, pièges à éviter, etc.
+gm_tips: |
+    - Laissez les joueurs explorer plusieurs pistes en parallèle
+    - Préparez des PNJ de secours si les joueurs improvisent
+    - Le timing est flexible - ajustez selon le rythme de la table
+    - Ayez une scène de combat de repli si les joueurs s'ennuient

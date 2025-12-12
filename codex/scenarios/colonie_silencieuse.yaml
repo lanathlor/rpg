@@ -1,0 +1,364 @@
+# Colonie Silencieuse - Scénario One-Shot
+
+name: 'Colonie Silencieuse'
+
+description: 'Une colonie récente ne répond plus. Une première équipe a disparu. Les joueurs doivent enquêter sur place et découvrir ce qui hante cette ville morte.'
+
+description_long: |
+    Une colonie récente, protégée par une magnétosphère active, a cessé toute communication il y a 72 h. Sans l'antenne au sol, impossible de contacter les colons. Il y a 48 h, une première équipe de soldats a été envoyée. La communication a été brièvement rétablie pendant 1 minute avant d'être coupée à nouveau.
+
+    La planète étant trop éloignée, aucun renfort ne peut arriver avant 96 h. Les joueurs sont la dernière chance de l'Empire de comprendre ce qui se passe. Dès leur atterrissage à la lisière de la colonie, le contact avec leur vaisseau est perdu.
+
+    Cadavres mutilés, barricades improvisées, traces de luttes désespérées... La colonie est un charnier. Mais quand l'antenne se rallume, les morts se relèvent. Lents mais implacables, ils n'ont qu'un seul objectif : éteindre l'antenne. Et au cœur de la forêt, quelque chose d'ancien et de puissant attend dans les racines d'un arbre colossal.
+
+image: 'images/scenarios/colonie_silencieuse.png'
+
+category: 'one-shot'
+theme: 'horror'
+difficulty: 'advanced'
+setting: 'colony'
+
+session_info:
+    duration: '4-5 heures'
+    player_count: '3-5'
+    recommended_points: '210-230 points'
+
+gm_notes:
+    preparation_time: '45 minutes'
+    complexity: 'high'
+    tone: 'Horror survival avec mystère cosmique - ambiance oppressante, révélations progressives'
+
+requirements:
+    required_rules:
+        - 'Combat de base'
+        - 'Système de résistances'
+        - 'Flux et arcanotechnique'
+        - 'Bioarcanotechnique'
+    recommended_classes:
+        - 'Chasseur'
+        - 'Arcanotechnicien'
+        - 'Horion'
+        - 'Sentinelle'
+    required_npcs: 3
+    maps_included: true
+    handouts_included: false
+
+synopsis: |
+    Un cristal de Flux extrêmement puissant se trouve au cœur d'un arbre ancien dans la forêt. L'Empire avait construit une installation secrète pour l'étudier et le récupérer, mais l'expérience a dérapé. Le cristal possède une conscience rudimentaire et a pris contrôle des cadavres de la colonie via son influence sur le Flux local.
+
+    La créature arcanotechnicienne qui protège le cristal utilise la bioarcanotechnique et la biométabolique. Elle a également pris contrôle mental des soldats de la première équipe, les utilisant comme appâts.
+
+    INFORMATION MJ IMPORTANTE : Les Opales et Blancs étaient DÉJÀ en route vers la colonie avant même que l'antenne ne soit coupée. C'est une mission secrète classifiée. L'Empire savait quelque chose à propos de ce cristal. Les joueurs ne reçoivent PAS cette information dans leur briefing - ils pensent être l'unique équipe de secours. Les Opales et Blancs arriveront quelques heures après que les joueurs aient géré la situation (succès ou échec), car ils voyageaient déjà vers cette colonie.
+
+    Les joueurs doivent :
+    1. Comprendre le mécanisme de l'antenne (les morts s'animent quand elle est active)
+    2. Choisir entre deux chemins : forêt (direct) ou installation (informations)
+    3. Affronter une créature extrêmement puissante
+    4. Récupérer ou détruire le cristal
+
+    Issues possibles :
+    - Récupération : Les Opales et Blancs arrivent et prennent le cristal (fin "normale")
+    - Destruction : Le cristal est détruit, coupant toute influence - Les Opales et Blancs arrivent trop tard et sont mécontents (fin "héroïque" mais tensions)
+    - Échec : Les joueurs meurent ou fuient - Les Opales et Blancs terminent la mission sans eux (fin "sombre")
+    - Corruption : Un joueur tente de garder le cristal - Les Opales et Blancs le traquent (conséquences catastrophiques)
+
+acts:
+    - act: '1'
+      title: 'La Ville Morte'
+      description: "Arrivée dans la colonie et découverte de l'horreur"
+      key_scenes:
+          - 'Atterrissage à la lisière - perte de contact avec le vaisseau'
+          - 'Traversée de la colonie - cadavres, barricades, traces de panique'
+          - "Découverte de l'antenne et du soldat mort"
+          - "Première activation : les morts se relèvent et attaquent l'antenne"
+          - 'Défense désespérée pendant que le vaisseau transmet des données'
+          - "L'antenne s'éteint - les zombies attaquent brièvement puis s'effondrent"
+      estimated_duration: '60-75 minutes'
+
+    - act: '2'
+      title: 'Entre Deux Chemins'
+      description: 'Exploration et choix stratégique'
+      key_scenes:
+          - "Analyse des données du vaisseau : source de Flux à l'ouest, porte blindée au nord"
+          - 'Chemin OUEST : Rencontre avec les soldats "normaux" - ils mentent sur ce qui leur est arrivé'
+          - "Chemin NORD : Découverte de l'installation impériale secrète"
+          - 'Révélation progressive : le cristal, la créature, le contrôle mental'
+          - "L'arbre colossal visible au loin - présence oppressante du Flux"
+          - 'La nuit tombe progressivement - la présence devient BEAUCOUP plus forte et oppressante'
+      estimated_duration: '90-120 minutes'
+
+    - act: '3'
+      title: "Le Cœur de l'Arbre"
+      description: 'Confrontation finale dans les profondeurs'
+      key_scenes:
+          - "Descente vers le cœur de l'arbre (par la forêt ou par l'installation)"
+          - 'Les soldats corrompus révèlent leur vraie nature - embuscade'
+          - 'Face à face avec la créature arcanotechnicienne gardienne'
+          - 'Combat épique dans la chambre du cristal'
+          - 'APRÈS LE COMBAT : Le cristal parle aux joueurs sensibles à l''arcanotechnique (voix incompréhensible, langue ancienne)'
+          - 'Le cristal rend malades ceux qui le touchent ou restent trop près (nausées, fièvre, hallucinations)'
+          - 'Décision finale : récupérer ou détruire le cristal (attention aux effets)'
+          - 'Épilogue : arrivée des Opales et Blancs quelques heures plus tard (qu''il soit récupéré ou détruit)'
+      estimated_duration: '90-120 minutes'
+
+npcs:
+    - name: 'Commandant Zex Kaine'
+      role: 'Leader de la première équipe / Ennemi corrompu'
+      description: 'Vétéran impérial (42 ans), implants de combat visibles. Semble normal mais regard étrangement vide. Sous contrôle mental total du cristal.'
+      stats_reference: 'Chasseur (~220 points) - exosquelette militaire'
+      motivations: "Servir le cristal. Attirer les joueurs à l'arbre. Empêcher la destruction du cristal."
+
+    - name: 'Dr. Velena Korr'
+      role: "Scientifique de l'installation (si découverte)"
+      description: "Cadavre retrouvé dans l'installation. Logs audio révèlent qu'elle dirigeait l'équipe de recherche. Morte en essayant de contenir la créature."
+      stats_reference: 'Civil (scientifique)'
+      motivations: 'Morte - mais ses logs sont essentiels pour comprendre la situation'
+
+    - name: 'Le Gardien'
+      role: 'Boss final - Créature arcanotechnicienne'
+      description: 'Entité hybride végétal/chair créée (ou transformée) par le cristal. Forme humanoïde de 3m de haut, racines et chair fusionnées. Yeux luminescents verts. Capacités bioarcanotechniques et biométaboliques avancées.'
+      stats_reference: 'Boss (~500 points) - Bioarcanotechnique/Biométabolique - Proper point-buy'
+      motivations: "Protéger le cristal à tout prix. Étendre l'influence du cristal. Corrompre les vivants."
+
+encounters:
+    - name: "Défense de l'Antenne"
+      type: 'combat'
+      difficulty: 'hard'
+      location: 'Station de communication - Acte 1'
+      description: "Dès que l'antenne s'allume, tous les cadavres de la colonie se relèvent et convergent pour l'éteindre. Les joueurs doivent tenir 3 minutes."
+      enemies:
+          - name: 'Zombies du Flux (vague 1)'
+            count: 20
+            stats_reference: |
+                PV: 15, Vitesse: 2, Flux: 0
+                RMEC +2, RRAD +0, RINT +6
+                Stats: FOR 4, DEX 2, CON 8, INT 1, PER 4, PRE 2, CHA 1
+                SD dérivé: vs Heavy 12, vs Light 11, vs Ranged 11, vs Arcano 10
+                Attaque: Corps à corps 1d6 RMEC (FOR+arme)
+          - name: 'Zombies du Flux (vagues suivantes)'
+            count: '30 par minute'
+            stats_reference: 'Mêmes stats - arrivent par vagues continues'
+      tactics: "Les zombies ignorent les joueurs et vont directement vers l'antenne. Si empêchés, ils attaquent l'obstacle (joueur ou barricade). Lents mais implacables."
+      success_conditions:
+          - "Tenir 3 minutes (18 tours) jusqu'à la fin de transmission"
+          - "Protéger le commutateur de l'antenne"
+      alternative: "Éteindre l'antenne volontairement coupe la transmission mais provoque une attaque finale"
+      special_mechanic: "IMPORTANT - Une fois l'antenne éteinte (volontairement ou par les zombies), tous les zombies attaquent frénétiquement les joueurs pendant exactement 20 secondes (3-4 tours de combat) puis s'effondrent définitivement. C'est leur dernier sursaut d'énergie avant que le signal du cristal ne se dissipe."
+      rewards:
+          - 'Données du vaisseau : carte avec source de Flux et installation'
+          - 'Compréhension du mécanisme : antenne ON = zombies actifs'
+
+    - name: 'Embuscade des Soldats Corrompus'
+      type: 'combat'
+      difficulty: 'hard'
+      location: "Lisière de la zone de l'arbre - Acte 2/3"
+      description: |
+          Les 4 soldats survivants semblent d'abord normaux et expliquent aux joueurs : "Il y a quelque chose qui vit dans la forêt. Cet arbre immense là-bas... c'est la source d'énergie. Quand on s'est approchés, on a été attaqués. Certains ne sont pas revenus."
+
+          Mais c'est un mensonge. Ils sont sous contrôle mental total et attirent les joueurs vers l'arbre. Les joueurs perspicaces peuvent remarquer des incohérences dans leurs récits, leur regard vide, ou leurs mouvements légèrement désynchronisés.
+
+          Au moment critique (près de l'arbre ou si les joueurs deviennent trop suspicieux), ils révèlent leur vraie nature et attaquent en coordination.
+      enemies:
+          - name: 'Commandant Zex Kaine'
+            count: 1
+            stats_reference: 'Chasseur (~220 points)'
+          - name: 'Soldat corrompu'
+            count: 3
+            stats_reference: 'Chasseur (~200 points chacun)'
+      tactics: 'Formation militaire. Kaine coordonne. Utilisent couverture et feu de suppression. Ne cherchent pas à tuer, mais à capturer ou ralentir les joueurs.'
+      alternative: "Si les joueurs ont découvert l'installation, ils savent comment briser le contrôle mental (détruire les implants de communication que le cristal utilise)"
+      rewards:
+          - 'Équipement militaire de qualité'
+          - 'Implants de communication corrompus (indices sur le contrôle mental)'
+
+    - name: "Le Gardien de l'Arbre"
+      type: 'combat'
+      difficulty: 'extreme'
+      location: "Chambre du cristal - Cœur de l'arbre - Acte 3"
+      description: 'Boss final. La créature défend le cristal avec toute sa puissance. Combat dans un espace confiné, racines vivantes partout, lueur verte oppressante.'
+      enemies:
+          - name: 'Le Gardien'
+            count: 1
+            stats_reference: |
+                BOSS (~500 points) - Proper point-buy calculation
+                PV: 230, Vitesse: 5, Flux: 30 (régén 9/tour)
+                RMEC: +9, RRAD: +5, RINT: +14
+
+                SD (varie selon type d'attaque, dérivé des stats):
+                - vs Lourde/2 mains (FOR): 19
+                - vs Légère/1 main (DEX): 17-18
+                - vs Distance (PRE): 17
+                - vs Arcanotechnique (INT): 17
+
+                Statistiques :
+                Force: 18, Dextérité: 15, Constitution: 18, Intelligence: 14, Perception: 17, Précision: 14, Charisme: 10
+
+                Affinités : A.CAC 6, École Bioarcanotechnique 8, Type Altération 3, Affliction 2, Amélioration 3
+
+                Compétences :
+                - Guerrier (S-tier) : Peut attaquer DEUX FOIS par tour avec racines
+                - Régénération (A-tier custom) : 10 PV/tour si connecté aux racines
+                - Contrôle végétal (A-tier custom) : Commande racines et vignes dans 10m
+                - Vétéran : Résiste aux effets de contrôle
+                - Armure vivante (A-tier custom) : Sacrifie racines pour bloquer attaques
+                - Résistance toxique : Immunité poison/maladie
+
+                Capacités arcanotechniques (utilise Flux) :
+                - Drain de vie (8 Flux) : 3d8 RINT, récupère moitié en PV
+                - Spores hallucinogènes (10 Flux) : CON save 17 ou hallucinations
+                - Mur de racines (12 Flux) : Crée barrière vivante
+                - Croissance accélérée (6 Flux) : Régénère racines endommagées
+                - Corruption du Flux (15 Flux) : Tentative contrôle mental
+
+                Attaques :
+                - Racines/tentacules : 2d10+5 RMEC, portée 3m (×2 avec Guerrier)
+                - Drain de vie : 3d8 RINT, heal moitié
+                - Spores : Zone 5m, CON save 17
+
+                Phases de combat :
+                - Phase 1 (230-150 PV) : Distance, racines et spores, régénération active
+                - Phase 2 (150-75 PV) : Agressif, drain de vie, contrôle mental
+                - Phase 3 (<75 PV) : Berserk, sacrifie défense pour dégâts, double attaques
+      tactics: |
+          Phase 1 (230-150 PV) : Attaques à distance via racines et spores, régénération active
+          Phase 2 (150-75 PV) : Corps à corps agressif + drain de vie, utilise contrôle mental
+          Phase 3 (<75 PV) : Berserk, sacrifie défense pour dégâts massifs, double attaques (Guerrier)
+      challenges:
+          - 'Détruire les racines principales pour empêcher la régénération'
+          - 'Résister aux spores hallucinogènes'
+          - "Éviter les attaques de zone dans l'espace confiné"
+      success_conditions:
+          - 'Réduire Le Gardien à 0 PV'
+          - 'Ou couper sa connexion au cristal (Intelligence 18 ou Arcanotechnie)'
+      rewards:
+          - 'Accès au cristal de Flux'
+          - 'Tissus organiques rares (matériel de recherche bioarcanotechnique)'
+          - "Graines de l'arbre ancien (artefact rare)"
+
+    - name: "Exploration de l'Installation"
+      type: 'exploration'
+      difficulty: 'medium'
+      location: 'Installation impériale secrète - Acte 2'
+      description: |
+          L'installation abandonnée est impressionnante et inquiétante. Aucun cadavre visible - tous ont fui ou été emportés. Des traces d'unité secrète partout : logos impériaux classifiés, équipement militaire de pointe abandonné, zones de haute sécurité.
+
+          Au centre de l'installation se trouve un GIGANTESQUE OUTIL D'EXCAVATION - une foreuse arcanotechnique de taille industrielle, capable de percer des kilomètres de roche. Elle a creusé un tunnel descendant directement jusqu'au cœur de l'arbre ancien.
+
+          L'installation contient des informations cruciales sur le cristal et la créature dans les terminaux et logs audio.
+      challenges:
+          - 'Déchiffrer les logs scientifiques (Intelligence 15 ou compétence Scientifique)'
+          - "Naviguer dans l'installation sombre et partiellement effondrée (Perception 14)"
+          - 'Accéder aux terminaux sécurisés (Intelligence 16 ou Hacker)'
+      rewards:
+          - "Connaissance complète de l'expérience et de ses conséquences"
+          - "Schémas de l'arbre et de la chambre du cristal"
+          - 'Faiblesse du Gardien : détruire les racines coupe la régénération'
+          - 'Méthode pour briser le contrôle mental des soldats'
+          - "Accès direct au cœur de l'arbre par le tunnel d'excavation"
+
+rewards:
+    points: '8-12 points par joueur selon performance et choix'
+    credits: '2000 cr par joueur + équipement récupéré'
+    items:
+        - "Cristal de Flux mineur (récupéré des débris de l'arbre)"
+        - "Armure biométabolique expérimentale (prototype trouvé dans l'installation)"
+        - 'Arme arcanotechnique militaire (des soldats corrompus)'
+        - 'Kit de soins militaire x4'
+    special: |
+        Selon l'issue :
+        - Cristal remis aux Opales et Blancs : +5 Réputation Empire, accès missions secrètes, reconnaissance officielle
+        - Cristal détruit : +3 Réputation Empire, conscience tranquille, mais questionnements sur ce qui a été perdu
+        - Échec (fuite) : -2 Réputation Empire, traumatisme mental, enquête interne
+        - Tentative de garder le cristal : Corruption progressive, traqué par l'Empire, consequences catastrophiques
+
+variants:
+    - name: 'Version Horreur Intense'
+      description: |
+          Pour maximiser l'horreur :
+          - Ajouter des hallucinations visuelles/auditives causées par le cristal
+          - Les zombies sont plus nombreux et agressifs
+          - Le Gardien peut créer des copies illusoires de soldats morts
+          - Ambiance nocturne forcée (vision limitée)
+          - Sons étranges venant de l'arbre
+
+    - name: 'Version Investigation'
+      description: |
+          Pour groupes aimant l'enquête :
+          - Réduire le nombre de combats
+          - Ajouter plus de logs, journaux personnels des colons
+          - Permettre de sauver certains soldats du contrôle mental
+          - Découvrir l'histoire complète de la colonie
+          - Option diplomatique avec Le Gardien (très difficile)
+
+    - name: 'Version Rapide (3h)'
+      description: |
+          Pour sessions courtes :
+          - Supprimer l'exploration de l'installation
+          - Soldats corrompus révélés immédiatement
+          - Raccourcir la défense de l'antenne (1 minute au lieu de 3)
+          - Le Gardien a moins de PV (150 au lieu de 230)
+
+related_content:
+    spells_used:
+        - 'Drain de vie'
+        - 'Contrôle végétal'
+        - 'Spores toxiques'
+        - 'Régénération'
+        - 'Barrière vivante'
+    equipment_used:
+        - 'Exosquelette militaire'
+        - "Fusil d'assaut"
+        - 'Implant de communication'
+        - 'Détecteur de Flux'
+    locations:
+        - 'Colonie Perdue Delta-7'
+        - 'Installation de Recherche Classifiée IR-449'
+        - "L'Arbre Ancien"
+        - 'Chambre du Cristal'
+
+tags:
+    - 'horror'
+    - 'survival'
+    - 'mystery'
+    - 'boss-fight'
+    - 'moral-choice'
+    - 'urban'
+    - 'cosmic-horror'
+    - 'advanced'
+
+author: 'Lanathlor'
+last_updated: '2025-12-11'
+playtested: false
+
+gm_tips: |
+    1. AMBIANCE : C'est un scénario d'horreur. Utilisez descriptions sensorielles, sons étranges, silence oppressant. La colonie doit être effrayante.
+
+    2. ZOMBIES : Ils ne sont pas "morts-vivants" classiques. C'est le cristal qui anime les cadavres via le Flux. Quand l'antenne amplifie le signal, ils s'activent. Quand elle s'éteint, ils s'effondrent.
+
+    3. CONTRÔLE MENTAL : Les soldats sont sous emprise totale près du cristal. Ils semblent normaux mais "un peu bizarres". Laissez les joueurs être suspicieux. Ne révélez la trahison qu'au moment dramatique.
+
+    4. LE GARDIEN : C'est un boss DIFFICILE (~400 points pour un groupe ~230). Il doit être un vrai challenge. Utilisez l'environnement, la régénération, les attaques de zone. Les joueurs doivent tactiquement gérer ce combat.
+
+    5. DEUX CHEMINS : Installation = informations et avantages tactiques. Forêt = direct mais sans préparation. Les deux mènent au même endroit mais avec différents niveaux de préparation.
+
+    6. LE CRISTAL : Il est EXTRÊMEMENT PUISSANT et possède une conscience rudimentaire.
+       - Les joueurs sensibles au Flux le sentent de loin (migraines, malaise)
+       - IMPORTANT : Après avoir vaincu Le Gardien, le cristal PARLE aux joueurs sensibles à l'arcanotechnique. C'est une voix mentale, dans une langue inconnue et incompréhensible. Personne ne peut traduire. C'est profondément dérangeant.
+       - Toucher le cristal ou rester près de lui rend MALADE : nausées, fièvre, hallucinations visuelles/auditives, faiblesse. Plus on reste, pire c'est.
+       - S'ils tentent de le garder : corruption progressive, folie, changements physiques, et traque impériale. Conséquences CATASTROPHIQUES.
+
+    7. OPALES ET BLANCS - TIMING IMPORTANT :
+       - Ils étaient DÉJÀ EN ROUTE avant que l'antenne ne soit coupée. Mission secrète classifiée.
+       - L'Empire SAVAIT quelque chose à propos de ce cristal. L'installation n'était pas un accident découvert récemment.
+       - Les joueurs NE SAVENT PAS ceci. Dans leur briefing, ils pensent être la seule équipe de secours.
+       - Les Opales et Blancs arrivent quelques heures après la résolution, qu'elle soit réussie ou non.
+       - Arrivée impressionnante : deux soldats d'élite en armure blanche avec symboles opales. Courtois mais fermes.
+       - Si cristal intact : ils le prennent, remercient brièvement, repartent sans explications.
+       - Si cristal détruit : ils arrivent trop tard, visiblement mécontents mais professionnels. Questionnent les joueurs sur ce qui s'est passé.
+       - Mystère pour les joueurs : Pourquoi l'Empire a-t-il envoyé ses meilleurs soldats ? Que savaient-ils ?
+
+    8. RYTHME : Acte 1 = tension/horreur, Acte 2 = mystère/exploration, Acte 3 = action/boss fight. Variez le rythme.
+
+    9. ÉCHEC POSSIBLE : Les joueurs peuvent échouer et fuir. C'est OK. L'Empire enverra une force plus importante. Mais les joueurs vivront avec cet échec.
+
+    10. RÉCOMPENSES NARRATIVES : Au-delà des points/crédits, offrez des indices sur l'univers. Que sont ces cristaux ? Pourquoi l'Empire les garde secrets ? Plantez des graines pour futures aventures.

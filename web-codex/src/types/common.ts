@@ -52,3 +52,4 @@ export type CodexCategory =
   | 'classes'
   | 'competences'
   | 'consommables'
+  | 'scenarios'

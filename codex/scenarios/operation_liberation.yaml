@@ -1,0 +1,401 @@
+# Opération Libération - Scénario One-Shot
+
+name: 'Opération Libération'
+
+description: 'Une planète humaine sous occupation Aceras. Une mission commando pour éliminer le capitaine ennemi et libérer le secteur.'
+
+description_long: |
+    La planète Helion-IV, colonie humaine prospère, est tombée sous occupation Aceras il y a 3 mois. Les envahisseurs aliens ont établi un contrôle militaire strict sur le secteur Nord, commandé par le Capitaine Vex'kral, un tacticien impitoyable.
+
+    L'armée impériale prépare une offensive majeure pour reprendre la planète. Mais le Secteur Nord est la clé stratégique : tant que Vex'kral coordonne les défenses Aceras depuis son bunker de commandement, l'offensive est vouée à l'échec.
+
+    Les joueurs sont une escouade d'élite chargée d'une mission commando : infiltrer le secteur, éliminer le Capitaine Aceras et semer le chaos dans les lignes ennemies. Une fois Vex'kral neutralisé, l'armée impériale pourra lancer son assaut final.
+
+    Équipement lourd, tactiques militaires et combat intense. C'est une mission de guerre. Certains ne reviendront peut-être pas.
+
+image: 'images/scenarios/operation_liberation.png'
+
+category: 'one-shot'
+theme: 'combat'
+difficulty: 'advanced'
+setting: 'warzone'
+
+session_info:
+    duration: '3-4 heures'
+    player_count: '3-5'
+    recommended_points: '220-240 points'
+
+gm_notes:
+    preparation_time: '30 minutes'
+    complexity: 'medium'
+    tone: 'Action militaire intense - guerre sci-fi avec boss fight épique'
+
+requirements:
+    required_rules:
+        - 'Combat de base'
+        - 'Système de résistances'
+        - 'Combat tactique avancé'
+    recommended_classes:
+        - 'Chasseur'
+        - 'Sentinelle'
+        - 'Horion'
+        - 'Arcanotechnicien'
+    required_npcs: 4
+    maps_included: true
+    handouts_included: false
+
+synopsis: |
+    Les Aceras ont conquis Helion-IV grâce à une stratégie coordonnée dirigée par le Capitaine Vex'kral. Ce dernier est un vétéran de guerre Aceras, brillant tacticien, basé dans un bunker fortifié au cœur du Secteur Nord.
+
+    L'Empire prépare une contre-offensive massive, mais tant que Vex'kral coordonne les défenses, les pertes seraient catastrophiques. La mission des joueurs : opération commando pour décapiter le commandement ennemi.
+
+    STRUCTURE DE LA MISSION :
+    1. Insertion derrière les lignes ennemies (dropship ou infiltration)
+    2. Traversée du territoire occupé - combats contre patrouilles Aceras
+    3. Attaque d'une installation secondaire pour affaiblir les défenses
+    4. Assaut du bunker de commandement
+    5. Confrontation avec le Capitaine Vex'kral (boss fight)
+    6. Extraction sous le feu ennemi pendant que l'armée impériale lance l'offensive
+
+    ISSUE ATTENDUE : Les joueurs réussissent généralement à éliminer Vex'kral mais subissent des pertes (blessures graves, équipement détruit). C'est une victoire coûteuse mais stratégiquement cruciale.
+
+acts:
+    - act: '1'
+      title: 'Insertion'
+      description: 'Déploiement dans la zone de guerre et premiers combats'
+      key_scenes:
+          - "Briefing militaire : objectif Vex'kral, carte du secteur, équipement distribué"
+          - 'Insertion en dropship sous le feu anti-aérien Aceras'
+          - 'Atterrissage en zone hostile - contact immédiat avec patrouille ennemie'
+          - 'Traversée des ruines de la ville occupée'
+          - "Premier contact avec les civils terrifiés - réalité de l'occupation"
+      estimated_duration: '45-60 minutes'
+
+    - act: '2'
+      title: 'Derrière les Lignes'
+      description: "Progression vers l'objectif et affaiblissement des défenses"
+      key_scenes:
+          - "Embuscade d'une patrouille Aceras motorisée"
+          - "Découverte d'un camp de prisonniers humains - choix tactique : libérer ou contourner"
+          - "Sabotage d'une station de communication Aceras (objectif secondaire)"
+          - "Combat contre escouade d'élite Aceras en armure lourde"
+          - 'Approche du bunker de commandement - reconnaissance du terrain'
+      estimated_duration: '60-90 minutes'
+
+    - act: '3'
+      title: 'Assaut Final'
+      description: "Infiltration du bunker et confrontation avec Vex'kral"
+      key_scenes:
+          - 'Infiltration ou assaut frontal du bunker (choix tactique des joueurs)'
+          - "Combats dans les couloirs - gardes d'élite et systèmes de défense automatisés"
+          - 'Désactivation des boucliers de la salle de commandement'
+          - "BOSS FIGHT : Capitaine Vex'kral en armure de combat lourde"
+          - "Extraction d'urgence - l'armée impériale lance l'offensive"
+          - 'Épilogue : victoire impériale, libération de Helion-IV'
+      estimated_duration: '60-90 minutes'
+
+npcs:
+    - name: 'Colonel Dax Varen'
+      role: 'Commandant impérial / Donneur de mission'
+      description: "Officier vétéran (52 ans), cicatrices de guerre, regard dur. Coordonne l'offensive depuis le vaisseau de commandement en orbite."
+      stats_reference: 'Chasseur (~240 points) - Ne participe pas au combat terrain'
+      motivations: "Reprendre Helion-IV avec un minimum de pertes. Compte sur l'escouade pour éliminer Vex'kral et permettre l'offensive."
+
+    - name: 'Sergent Kira Thale'
+      role: 'Spécialiste démolition / Allié temporaire'
+      description: "Soldate impériale (28 ans), experte en explosifs. Peut rejoindre l'escouade pour le sabotage de la station de communication."
+      stats_reference: 'Chasseur (~220 points) - Spécialisation explosifs'
+      motivations: "Faire sauter des trucs. Venger les civils d'Helion-IV. Professionnalisme militaire absolu."
+
+    - name: 'Dr. Elara Morell'
+      role: "Civile prisonnière / Témoin de l'occupation"
+      description: 'Médecin locale (34 ans), retenue dans le camp de prisonniers. Peut fournir des informations sur les mouvements Aceras si libérée.'
+      stats_reference: 'Civil (compétences médicales)'
+      motivations: 'Survivre. Aider la résistance locale. Soigner les blessés des deux camps (idéalisme médical).'
+
+    - name: "Capitaine Vex'kral"
+      role: 'Boss final / Commandant Aceras'
+      description: "Officier Aceras (équivalent 45 ans humains), exosquelette lourd, multiples augmentations cybernétiques. Tacticien brillant et combattant redoutable. Méprise les humains qu'il considère comme faibles."
+      stats_reference: 'Boss Aceras (~280 points) - Armure lourde, armes intégrées'
+      motivations: "Maintenir l'occupation d'Helion-IV. Prouver la supériorité militaire Aceras. Éliminer les forces impériales avec efficacité brutale."
+
+encounters:
+    - name: 'Insertion Hostile'
+      type: 'combat'
+      difficulty: 'medium'
+      location: "Zone d'atterrissage - Périphérie de la ville"
+      description: 'Le dropship est touché par des tirs anti-aériens. Atterrissage brutal. Une patrouille Aceras arrive immédiatement.'
+      enemies:
+          - name: 'Soldat Aceras'
+            count: 6
+            stats_reference: 'Chasseur (~200 points) - Fusil à plasma, armure moyenne'
+          - name: 'Drone de reconnaissance Aceras'
+            count: 2
+            stats_reference: 'Drone (~90 points) - Arme légère, vision thermique'
+      tactics: 'Les Aceras avancent en formation. Les drones flanquent et repèrent. Combattants disciplinés mais prévisibles.'
+      rewards:
+          - 'Armes Aceras récupérables (fusils à plasma)'
+          - 'Données tactiques (communications interceptées)'
+          - 'Accès à la ville occupée'
+
+    - name: 'Embuscade Motorisée'
+      type: 'combat'
+      difficulty: 'hard'
+      location: 'Route principale - Secteur Nord'
+      description: 'Un convoi Aceras patrouille la zone. Véhicule blindé léger + escorte à pied.'
+      enemies:
+          - name: 'Transport blindé Aceras'
+            count: 1
+            stats_reference: |
+                Véhicule (~250 points structure)
+                Blindage lourd, canon à plasma monté
+                Peut transporter 8 soldats
+          - name: "Soldat Aceras d'élite"
+            count: 4
+            stats_reference: 'Chasseur (~210 points) - Armure renforcée'
+      challenges:
+          - 'Le véhicule a un blindage lourd (RMEC +10)'
+          - 'Canon à plasma dangereux (3d8 dégâts RRAD, zone)'
+          - 'Embuscade nécessite positionnement tactique'
+      tactics: 'Détruire le véhicule en premier (explosifs ou tirs ciblés sur les systèmes). Les soldats se mettent à couvert.'
+      rewards:
+          - 'Véhicule récupérable (pour transport rapide)'
+          - 'Munitions Aceras'
+          - 'Carte tactique du secteur'
+
+    - name: 'Libération du Camp de Prisonniers'
+      type: 'mixed'
+      difficulty: 'medium'
+      location: 'Camp de détention - Entrepôt converti'
+      description: 'Objectif secondaire optionnel. 20+ civils prisonniers, gardés par une garnison Aceras.'
+      enemies:
+          - name: 'Gardien Aceras'
+            count: 4
+            stats_reference: 'Chasseur (~190 points)'
+          - name: 'Tourelle automatique'
+            count: 2
+            stats_reference: 'Système défensif (~120 points) - Vision à 360°'
+      challenges:
+          - 'Libérer les prisonniers sans les tuer (feu croisé dangereux)'
+          - 'Désactiver les tourelles (Hacker ou destruction ciblée)'
+          - 'Évacuation des civils (ralentit la progression)'
+      success_conditions:
+          - 'Éliminer tous les gardiens'
+          - 'Désactiver les systèmes de sécurité'
+          - 'Au moins 15 civils survivent'
+      rewards:
+          - 'Information de Dr. Elara Morell : trajet secret vers le bunker'
+          - 'Réputation avec la population locale'
+          - "Renforts civils (résistants armés légers) pour l'assaut final"
+
+    - name: 'Sabotage de la Station de Communication'
+      type: 'exploration'
+      difficulty: 'hard'
+      location: 'Relais de communication Aceras - Tour en ruine'
+      description: "Détruire l'antenne de communication pour couper Vex'kral de ses renforts. Sergent Thale peut aider."
+      challenges:
+          - 'Infiltration de la tour (Discrétion 16 ou assaut frontal)'
+          - 'Désactiver les systèmes de sécurité (Intelligence 17 ou Hacker)'
+          - 'Placer les explosifs au bon endroit (Explosifs ou Dextérité 15)'
+          - 'Évacuation avant détonation (2 minutes = 12 tours)'
+      enemies:
+          - name: 'Technicien Aceras'
+            count: 2
+            stats_reference: 'Civil armé (~150 points)'
+          - name: "Garde d'élite"
+            count: 3
+            stats_reference: 'Chasseur (~210 points)'
+      rewards:
+          - "Communications Aceras coupées (Vex'kral ne peut appeler de renforts)"
+          - "Confusion dans les rangs ennemis (-2 Initiative pour les Aceras lors de l'assaut final)"
+          - "Sergent Thale peut rejoindre pour l'assaut du bunker"
+
+    - name: 'Assaut du Bunker'
+      type: 'combat'
+      difficulty: 'extreme'
+      location: 'Bunker de commandement - Niveau de surface'
+      description: "Le bunker est lourdement défendu. Porte blindée, tourelles, gardes d'élite. Approche tactique nécessaire."
+      enemies:
+          - name: 'Garde royal Aceras'
+            count: 6
+            stats_reference: 'Chasseur (~230 points) - Armure lourde, armes énergétiques'
+          - name: 'Tourelle défensive lourde'
+            count: 3
+            stats_reference: 'Système défensif (~150 points) - Canon rotatif'
+          - name: 'Drone de combat lourd'
+            count: 2
+            stats_reference: 'Drone militaire (~130 points) - Bouclier énergétique'
+      challenges:
+          - 'Désactiver le bouclier de la porte (Hacker diff. 18 ou explosifs lourds)'
+          - 'Neutraliser les tourelles (tirs ciblés sur générateurs ou EMP)'
+          - 'Les gardes sont disciplinés et coordonnés (tactiques de groupe)'
+      tactics: |
+          Phase 1 : Éliminer les tourelles (priorité haute, sinon feu de suppression constant)
+          Phase 2 : Drones fournissent couverture aux gardes
+          Phase 3 : Assaut des gardes en formation serrée
+      alternative: 'Si Dr. Elara libérée : trajet secret par les égouts (évite les tourelles, réduit les gardes à 3)'
+      rewards:
+          - 'Accès au bunker de commandement'
+          - 'Armement Aceras lourd récupérable'
+
+    - name: "BOSS : Capitaine Vex'kral"
+      type: 'combat'
+      difficulty: 'extreme'
+      location: 'Salle de commandement - Bunker souterrain'
+      description: "Vex'kral est en armure de combat lourde Aceras, armé d'armes intégrées. C'est un combattant d'élite augmenté et un tacticien brillant. Combat difficile dans une salle fermée."
+      enemies:
+          - name: "Capitaine Vex'kral"
+            count: 1
+            stats_reference: |
+                BOSS ACERAS (~500 points) - Proper point-buy calculation
+                PV: 180, Vitesse: 5, Flux: 25 (régén 7/tour)
+                RMEC: +8, RRAD: +6, RINT: +4
+
+                SD (varie selon type d'attaque, dérivé des stats):
+                - vs Lourde/2 mains (FOR): 19
+                - vs Légère/1 main (DEX): 18
+                - vs Distance (PRE): 17-18
+                - vs Arcanotechnique (INT): 18
+
+                Statistiques :
+                Force: 18, Dextérité: 16, Constitution: 18, Intelligence: 16, Perception: 16, Précision: 15, Charisme: 13
+
+                Affinités : A.CAC 8, A.Distance 8, École Bioarcanotechnique 4, Type Amélioration 4, Protection 3
+
+                Équipement : Exosquelette de guerre Aceras, Canon à plasma lourd, Lames énergétiques jumelles, Bouclier énergétique régénérant, Systèmes de ciblage
+
+                Compétences :
+                - Guerrier (S-tier) : Peut attaquer DEUX FOIS par tour au corps à corps
+                - Course (A-tier) : Déplacement ×2 (10m par tour)
+                - Tacticien (enhanced) : +2 Initiative, 1/combat impose Désavantage à un jet ennemi
+                - Vétéran : Résiste aux effets de contrôle, +1 jets de sauvegarde
+
+                Capacités arcanotechniques (utilise Flux) :
+                - Régénération protocolaire (8 Flux) : Soigne 25 PV
+                - Surcharge plasma (10 Flux) : +3d6 dégâts à la prochaine attaque
+                - Analyse tactique (6 Flux) : Révèle les faiblesses ennemies
+                - Bouclier renforcé (12 Flux) : +5 toutes résistances pendant 3 tours
+
+                Attaques :
+                - Canon à plasma : 3d8+4 RRAD, portée moyenne, recharge 2 tours
+                - Lames énergétiques : 2d8+5 RMEC, corps à corps (×2 avec Guerrier)
+
+                Phases de combat :
+                - Phase 1 (180-90 PV) : Distance, canon à plasma, mobilité tactique
+                - Phase 2 (90-50 PV) : Mixte, alterne tirs et mêlée selon situation
+                - Phase 3 (<50 PV) : Corps à corps agressif, double attaques, utilise régénération
+
+          - name: "Garde d'honneur Aceras"
+            count: 2
+            stats_reference: "Chasseur (~230 points) - Protègent Vex'kral au début"
+
+      tactics: |
+          PHASE 1 (180-90 PV) : Vex'kral reste à distance, utilise canon à plasma et mobilité. Les gardes protègent ses flancs. Analyse les joueurs.
+          PHASE 2 (90-50 PV) : Les gardes tombés, Vex'kral devient agressif. Alterne tirs (plasma surchargé) et mêlée. Utilise bouclier renforcé si focus.
+          PHASE 3 (<50 PV) : Corps à corps total. Double attaques (Guerrier), régénération active, désespoir tactique. TRÈS DANGEREUX.
+
+      special_mechanic: |
+          ENVIRONNEMENT TACTIQUE :
+          - Consoles de commandement : peuvent être sabotées pour désactiver le bouclier de Vex'kral (Intelligence 16 ou Hacker)
+          - Colonnes structurelles : offrent couverture lourde
+          - Générateur d'énergie : peut être surchargé pour exploser (3d10 RRAD en zone, inclut Vex'kral)
+
+      rewards:
+          - "Armure de Vex'kral (très endommagée mais analysable - technologie Aceras)"
+          - 'Données de commandement Aceras (intelligence stratégique majeure)'
+          - "Libération d'Helion-IV"
+          - 'Reconnaissance militaire impériale exceptionnelle'
+
+rewards:
+    points: '12-15 points par joueur'
+    credits: '3000 cr par joueur + bonus militaire de 1000 cr'
+    items:
+        - 'Armement Aceras lourd (fusil à plasma, canon énergétique - au choix)'
+        - 'Armure tactique militaire renforcée (récupérée sur les gardes)'
+        - 'Médailles impériales de bravoure (reconnaissance officielle)'
+        - 'Exosquelette léger Aceras (prototype récupéré)'
+    special: |
+        - Réputation +5 avec l'Armée Impériale
+        - Rang militaire honorifique (Capitaine honoraire ou équivalent)
+        - Accès à contrats militaires de haut niveau
+        - Possibilité de rejoindre une unité d'élite impériale (campagne future)
+        - Les survivants d'Helion-IV reconnaissent les joueurs comme héros
+
+variants:
+    - name: 'Version Infiltration'
+      description: |
+          Pour groupes aimant la discrétion :
+          - Permettre une approche furtive complète du bunker
+          - Réduire les combats obligatoires (patrouilles évitables)
+          - Ajouter des chemins secrets et conduits de ventilation
+          - Possibilité d'assassiner Vex'kral sans combat frontal (très difficile)
+
+    - name: 'Version All-Out War'
+      description: |
+          Pour groupes aimant l'action totale :
+          - Doubler les ennemis dans chaque rencontre
+          - Ajouter des véhicules de combat lourds
+          - Combat aérien (dropships vs chasseurs Aceras)
+          - Vex'kral a des gardes d'honneur supplémentaires (4 au lieu de 2)
+
+    - name: 'Version Rapide (2h)'
+      description: |
+          Pour sessions courtes :
+          - Supprimer le camp de prisonniers et la station de communication
+          - Insertion directe près du bunker
+          - Réduire l'assaut du bunker (3 gardes au lieu de 6)
+          - Vex'kral sans gardes d'honneur
+
+related_content:
+    spells_used:
+        - 'Bouclier'
+        - 'Frappe précise'
+        - 'Camouflage'
+        - 'Explosion contrôlée'
+    equipment_used:
+        - 'Exosquelette de combat'
+        - 'Fusil à plasma'
+        - 'Armure lourde tactique'
+        - 'Explosifs militaires'
+    locations:
+        - 'Helion-IV (planète occupée)'
+        - 'Secteur Nord - Zone de guerre'
+        - 'Bunker de commandement Aceras'
+        - 'Camp de prisonniers'
+
+tags:
+    - 'combat'
+    - 'military'
+    - 'war'
+    - 'boss-fight'
+    - 'aliens'
+    - 'liberation'
+    - 'tactical'
+    - 'advanced'
+
+author: 'Lanathlor'
+last_updated: '2025-12-11'
+playtested: false
+
+gm_tips: |
+    CONSEILS DE MAÎTRISE :
+
+    1. C'EST UN SCÉNARIO DE GUERRE : L'ambiance doit être intense. Explosions, tirs, cris. Décrivez le chaos de la bataille.
+
+    2. VEX'KRAL EST UN VRAI BOSS : Ne le sous-estimez pas. C'est un combattant redoutable (~350 points vs groupe ~230). Les joueurs doivent utiliser tactiques, environnement et travail d'équipe.
+
+    3. PERTES POSSIBLES : Dans une guerre, les gens meurent. Si un joueur tombe à 0 PV, c'est grave. Blessures permanentes possibles. Le danger doit être réel.
+
+    4. OBJECTIFS SECONDAIRES : Camp de prisonniers et station de communication sont optionnels mais donnent des avantages tactiques. Les joueurs doivent choisir : temps vs bénéfices.
+
+    5. SERGENT THALE : Si les joueurs font le sabotage, elle peut les rejoindre. C'est un PNJ allié compétent mais pas invincible. Elle peut mourir héroïquement si nécessaire.
+
+    6. ACERAS : Aliens disciplinés, tacticiens, technologie avancée. Pas des monstres stupides. Ils communiquent, coordonnent, adaptent leurs tactiques.
+
+    7. BOSS FIGHT TACTIQUE : La salle de commandement a des éléments interactifs. Encouragez les joueurs à utiliser l'environnement (sabotage, explosions, couverture).
+
+    8. EXTRACTION : Après avoir tué Vex'kral, l'offensive impériale commence. Décrivez les vaisseaux en orbite qui bombardent, les troupes qui débarquent. C'est épique.
+
+    9. VICTOIRE COÛTEUSE : Même en cas de succès, les joueurs devraient être épuisés, blessés, à court de munitions. La victoire militaire a un prix.
+
+    10. SUITE POSSIBLE : Ce scénario peut lancer une campagne de guerre contre les Aceras. Helion-IV libérée, mais d'autres planètes sont occupées. Les joueurs deviennent une escouade d'élite pour des missions similaires.

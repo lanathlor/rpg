@@ -8,6 +8,7 @@ import {
   type Skill,
   type Consumable,
   type CharacterClass,
+  type Scenario,
   type CodexCategory,
 } from '@/types'
 
@@ -64,6 +65,7 @@ export class YamlLoader {
         skills: [],
         consumables: [],
         classes: [],
+        scenarios: [],
       }
 
       // Load all categories in parallel
@@ -74,6 +76,7 @@ export class YamlLoader {
         'competences',
         'consommables',
         'classes',
+        'scenarios',
       ]
 
       // Load all categories concurrently
@@ -103,6 +106,9 @@ export class YamlLoader {
             break
           case 'classes':
             codexData.classes = items as CharacterClass[]
+            break
+          case 'scenarios':
+            codexData.scenarios = items as Scenario[]
             break
         }
       }
@@ -240,6 +246,11 @@ export class YamlLoader {
     return data.classes
   }
 
+  async getScenarios(): Promise<Scenario[]> {
+    const data = await this.loadCodexData()
+    return data.scenarios
+  }
+
   // Search functionality
   async searchAll(query: string): Promise<CodexItem[]> {
     const data = await this.loadCodexData()
@@ -250,6 +261,7 @@ export class YamlLoader {
       ...data.skills,
       ...data.consumables,
       ...data.classes,
+      ...data.scenarios,
     ]
 
     const lowerQuery = query.toLowerCase()

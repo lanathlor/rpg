@@ -5,6 +5,7 @@ export * from './armor'
 export * from './skills'
 export * from './consumables'
 export * from './classes'
+export * from './scenarios'
 
 import type { Spell } from './spells'
 import type { Weapon } from './weapons'
@@ -12,8 +13,9 @@ import type { Armor } from './armor'
 import type { Skill } from './skills'
 import type { Consumable } from './consumables'
 import type { CharacterClass } from './classes'
+import type { Scenario } from './scenarios'
 
-export type CodexItem = Spell | Weapon | Armor | Skill | Consumable | CharacterClass
+export type CodexItem = Spell | Weapon | Armor | Skill | Consumable | CharacterClass | Scenario
 
 export interface CodexData {
   spells: Spell[]
@@ -22,6 +24,7 @@ export interface CodexData {
   skills: Skill[]
   consumables: Consumable[]
   classes: CharacterClass[]
+  scenarios: Scenario[]
 }
 
 export interface ParsedCodexFile {

@@ -1,0 +1,307 @@
+# Enquête au Secteur 7 - Scénario One-Shot
+
+name: 'Enquête au Secteur 7'
+
+description: 'Un arcanotechnicien de renom a disparu dans la zone industrielle. Les joueurs doivent découvrir ce qui se cache derrière cette disparition avant que la situation ne dégénère.'
+
+description_long: |
+    Le Docteur Kaela Vex, une brillante arcanotechnicienne spécialisée dans les cristaux de mana, a mystérieusement disparu il y a 48 heures. Sa dernière position connue : le Secteur 7, une zone industrielle décrépite en bordure de la ville de Prime.
+
+    Le Bureau Impérial de Recherche Arcanotechnique (BIRA), son employeur, veut récupérer discrètement ses recherches avant qu'elles ne tombent entre de mauvaises mains. Mais la vérité est bien plus sombre : le Dr. Vex avait découvert une application interdite du Flux et fuyait pour protéger sa découverte.
+
+    Les joueurs, engagés comme enquêteurs indépendants, vont plonger dans un réseau de corruption, de recherche illégale et de trahison bureaucratique. Entre les gangs locaux, les agents de sécurité impériaux corrompus et les expériences dangereuses, ils devront naviguer prudemment pour survivre.
+
+image: 'images/scenarios/enquete_sector_7.png'
+
+category: 'one-shot'
+theme: 'investigation'
+difficulty: 'intermediate'
+setting: 'urban'
+
+session_info:
+    duration: '3-4 heures'
+    player_count: '3-5'
+    recommended_points: '195-220 points'
+
+gm_notes:
+    preparation_time: '30 minutes'
+    complexity: 'medium'
+    tone: 'Tech-noir investigation avec action - ambiance cyberpunk sombre'
+
+requirements:
+    required_rules:
+        - 'Combat de base'
+        - 'Système de résistances'
+        - 'Systèmes arcanotechniques automatisés'
+    recommended_classes:
+        - 'Chasseur'
+        - 'Spectre'
+        - 'Arcanotechnicien'
+        - 'Taliste'
+    required_npcs: 6
+    maps_included: true
+    handouts_included: false
+
+synopsis: |
+    Le Dr. Kaela Vex a découvert un moyen de créer des cristaux de mana à affinité multiple - une technologie révolutionnaire mais dangereuse. Réalisant que le BIRA voudrait militariser sa découverte, elle a fui avec son prototype.
+
+    Elle s'est réfugiée dans son ancien laboratoire clandestin au Secteur 7, mais le Commandant de Sécurité Marcus Kane, corrompu et opportuniste, a découvert sa cachette et tente de voler le prototype pour le vendre à des puissances étrangères hostiles à l'Empire.
+
+    Les joueurs devront :
+    1. Enquêter sur la disparition et découvrir les derniers mouvements de Vex
+    2. Naviguer entre la population méfiante du Secteur 7, les informateurs clandestins et les agents impériaux corrompus
+    3. Trouver le laboratoire secret avant Kane
+    4. Décider du sort du prototype : le rendre au BIRA, le détruire, ou aider Vex à s'échapper
+
+    Issues possibles :
+    - Héroïque : Aider Vex à fuir avec son prototype
+    - Loyale : Rendre le prototype au BIRA (+récompense impériale, -morale)
+    - Pragmatique : Détruire le prototype pour éviter la catastrophe
+    - Criminelle : Voler le prototype et le revendre (trahison envers l'Empire - très dangereux!)
+
+acts:
+    - act: '1'
+      title: 'Le Contrat'
+      description: 'Engagement par le BIRA et premières investigations'
+      key_scenes:
+          - 'Rencontre avec Elena Voss, directrice de recherche BIRA - briefing initial'
+          - "Visite de l'appartement de Vex - découverte de notes cryptées"
+          - 'Premier contact avec les habitants du Secteur 7 - témoins du passage de Vex'
+          - 'Embuscade par des agents de sécurité corrompus qui veulent éliminer les témoins'
+      estimated_duration: '45-60 minutes'
+
+    - act: '2'
+      title: 'Dans les Profondeurs'
+      description: 'Exploration du Secteur 7 et découverte de la conspiration'
+      key_scenes:
+          - 'Négociation ou intimidation des informateurs locaux pour obtenir des informations'
+          - "Découverte de l'entrepôt 12-B - scène de crime récente"
+          - 'Rencontre avec Cipher, hacker informateur - révèle la corruption de Kane'
+          - 'Infiltration des archives du BIRA pour accéder aux fichiers de sécurité'
+          - 'Poursuite dans les tunnels industriels'
+      estimated_duration: '90-120 minutes'
+
+    - act: '3'
+      title: 'Le Laboratoire Secret'
+      description: 'Confrontation finale et choix moral'
+      key_scenes:
+          - "Découverte du laboratoire caché sous l'ancienne fonderie"
+          - 'Rencontre avec le Dr. Vex - elle explique sa découverte et ses craintes'
+          - 'Arrivée de Kane et son équipe commando - siège du laboratoire'
+          - 'Combat tactique ou négociation à trois parties (joueurs, Vex, Kane)'
+          - 'Décision finale sur le sort du prototype'
+          - 'Épilogue : conséquences des choix des joueurs'
+      estimated_duration: '60-90 minutes'
+
+npcs:
+    - name: 'Dr. Kaela Vex'
+      role: 'Objectif de la mission / Allié potentiel'
+      description: 'Arcanotechnicienne brillante (35 ans), idéaliste. Implants oculaires améliorés et porte toujours un cristal de Flux à la main. Effrayée mais déterminée.'
+      stats_reference: 'Arcanotechnicien (~215 points) - École Pure'
+      motivations: "Protéger sa découverte de la militarisation, prouver que la science doit servir l'humanité et non la guerre"
+
+    - name: 'Elena Voss'
+      role: 'Donneuse de quête (apparente)'
+      description: 'Directrice de recherche du BIRA (42 ans), froide et calculatrice. Costume impeccable, insignes impériaux discrets, implants neuraux visibles, peau pâle.'
+      stats_reference: 'Civil (compétences sociales élevées)'
+      motivations: "Récupérer la recherche de Vex pour l'Empire et sa propre carrière bureaucratique. Ignore l'agenda de Kane."
+
+    - name: 'Commandant Marcus Kane'
+      role: 'Antagoniste principal'
+      description: 'Commandant de Sécurité du BIRA (48 ans), vétéran militaire corrompu. Imposant, cybernétiques militaires visibles, cicatrice au plasma sur le visage.'
+      stats_reference: 'Chasseur (~230 points) - équipement militaire lourd'
+      motivations: 'Voler le prototype pour le vendre à des puissances étrangères hostiles à l''Empire. Traître prêt à éliminer tous les témoins.'
+
+    - name: 'Vex-7 "Le Contremaître"'
+      role: "Ancien contremaître d'usine / Informateur local / Source d'information"
+      description: "Ex-contremaître devenu figure respectée des ouvriers du Secteur 7 (31 ans). Couvert de tatouages bioluminescents et de cicatrices d'augmentations industrielles suite à des accidents de travail. Méfiant envers les autorités mais pragmatique."
+      stats_reference: 'Combattant de rue (~200 points)'
+      motivations: 'Protéger les travailleurs du secteur contre les abus. Survie et solidarité ouvrière. Peut devenir allié si payé ou si les joueurs montrent du respect pour la population locale.'
+
+    - name: 'Cipher'
+      role: 'Informateur / Hacker neutre'
+      description: "Hacker indépendant (24 ans), nerveux mais compétent. Vit dans un appartement clandestin rempli d'écrans et de câbles. Lunettes à réalité augmentée constamment actives."
+      stats_reference: 'Civil (compétence Hacker niveau expert)'
+      motivations: "L'argent et la survie. Vendra des informations aux plus offrants mais préfère éviter la violence et les autorités impériales."
+
+    - name: 'Lieutenant Kess Varn'
+      role: 'Forces de sécurité impériales (intervention possible)'
+      description: 'Officier de la Sécurité Impériale incorruptible (29 ans), fatiguée de la corruption bureaucratique mais idéaliste. Armure de patrouille usée mais bien entretenue.'
+      stats_reference: 'Chasseur (~210 points)'
+      motivations: "Arrêter les traîtres et corrompus au sein de l'Empire. Peut aider les joueurs s'ils prouvent la trahison de Kane."
+
+encounters:
+    - name: 'Embuscade de la Sécurité Corrompue'
+      type: 'combat'
+      difficulty: 'medium'
+      location: 'Ruelle du Secteur 7 - Acte 1'
+      enemies:
+          - name: 'Agent de sécurité impérial corrompu'
+            count: 3
+            stats_reference: 'Chasseur (~190 points)'
+          - name: 'Drone de reconnaissance armé'
+            count: 1
+            stats_reference: 'Drone léger (~80 points)'
+      tactics: 'Embuscade depuis les toits. Le drone flanque pendant que les agents tirent depuis des positions couvertes.'
+      rewards:
+          - "Cartes d'accès BIRA niveau 1"
+          - '400 cr en équipement récupéré'
+          - 'Preuve de corruption (logs de communication révélant les ordres de Kane)'
+
+    - name: 'Négociation avec les Habitants du Secteur 7'
+      type: 'social'
+      difficulty: 'medium'
+      location: 'Bar ouvrier "Le Secteur" - Entrepôt 7'
+      description: "Convaincre Vex-7 et les ouvriers locaux de partager ce qu'ils savent sur le passage de la scientifique. Les habitants du secteur ont vu Vex mais se méfient des agents impériaux et des bureaucrates du BIRA."
+      success_conditions:
+          - "Jet de Charisme (Persuasion) difficulté 15 - montrer qu'on ne travaille pas vraiment pour le BIRA ou qu'on cherche à aider Vex"
+          - 'Jet de Force (Intimidation) difficulté 17 - démonstration de force (mais risque de fermer toute coopération future)'
+          - 'Payer 800 cr (pot-de-vin collectif)'
+          - 'Promettre de débarrasser le secteur de Kane et ses hommes corrompus'
+          - "Montrer du respect pour les conditions de travail difficiles et la solidarité ouvrière"
+      failure_consequence: 'Combat défensif avec 6 ouvriers armés (~190-200 points chacun) - ils protègent leur communauté'
+      rewards:
+          - "Information : Vex vue entrant dans l'ancienne fonderie, niveau -2"
+          - 'Carte des tunnels du Secteur 7 (passages de maintenance connus des ouvriers)'
+          - "Allié potentiel pour l'acte 3"
+
+    - name: 'Infiltration des Archives du BIRA'
+      type: 'exploration'
+      difficulty: 'hard'
+      description: 'Pénétrer dans les archives sécurisées du BIRA pour accéder aux fichiers de surveillance montrant les mouvements de Kane et prouver sa trahison.'
+      challenges:
+          - 'Systèmes de sécurité impériaux avancés (Perception 16 pour détecter, Intelligence 17 ou Hacker pour désactiver)'
+          - 'Patrouilles de gardes impériaux (Discrétion 15 pour éviter)'
+          - 'Terminal militaire sécurisé (Intelligence 18 ou Hacker pour accéder aux logs classifiés)'
+      failure_consequence: 'Alarme déclenchée - renfort de 4 gardes impériaux arrive en 3 tours'
+      rewards:
+          - 'Logs de communication révélant la trahison de Kane et ses contacts avec des puissances étrangères'
+          - 'Schéma complet du Secteur 7 avec le laboratoire marqué'
+          - "Codes d'accès temporaires niveau 3"
+
+    - name: 'Poursuite dans les Tunnels'
+      type: 'mixed'
+      difficulty: 'medium'
+      description: 'Les joueurs sont repérés et poursuivis par une équipe de Kane à travers les tunnels industriels.'
+      challenges:
+          - "Course-poursuite (jets d'Agilité opposés)"
+          - 'Obstacles environnementaux (tuyaux de vapeur, plateformes instables)'
+          - 'Combat en mouvement si rattrapés'
+      enemies:
+          - name: "Agent d'élite de Kane"
+            count: 2
+            stats_reference: 'Chasseur (~210 points) - exosquelette'
+      rewards:
+          - "Échapper à la poursuite permet de garder l'avantage tactique pour l'acte 3"
+
+    - name: 'Siège du Laboratoire'
+      type: 'combat'
+      difficulty: 'hard'
+      location: 'Laboratoire souterrain - Acte 3'
+      description: 'Kane et son équipe commando attaquent le laboratoire. Les joueurs doivent protéger Vex et le prototype.'
+      enemies:
+          - name: 'Marcus Kane'
+            count: 1
+            stats_reference: 'Chasseur (~230 points) - armure lourde, fusil arcanotechnique'
+          - name: "Commando d'élite"
+            count: 4
+            stats_reference: 'Chasseur (~210 points)'
+          - name: 'Drone de combat lourd'
+            count: 2
+            stats_reference: 'Drone militaire (~120 points)'
+      tactics: "Kane coordonne l'assaut. Les commandos avancent en formation, les drones fournissent un appui feu. Kane vise le prototype."
+      alternative: 'Peut être résolue par négociation si les joueurs ont suffisamment de preuves contre Kane ou peuvent le menacer politiquement'
+      rewards:
+          - 'Défaite de Kane : équipement militaire de qualité'
+          - 'Négociation réussie : Kane arrêté, réputation avec la police'
+
+rewards:
+    points: '5-10 points par joueur selon les choix et résolutions'
+    credits: "1500 cr par joueur + bonus de 500 cr selon l'issue"
+    items:
+        - 'Cristal de mana expérimental (affinité double - très rare)'
+        - 'Implant neural de combat (au choix)'
+        - 'Arme arcanotechnique améliorée (au choix)'
+        - 'Kit de soins militaire x3'
+    special: |
+        Selon l'issue choisie :
+        - Allié avec Vex : Contact scientifique de haut niveau, accès à recherche de pointe (clandestine)
+        - Rendu au BIRA : Réputation +3 avec l'Empire, contrats impériaux lucratifs, reconnaissance officielle
+        - Détruit le prototype : Réputation +2 avec forces de sécurité impériales, conscience tranquille
+        - Vendu au marché noir : 5000 cr supplémentaires mais traqué par l'Empire comme traître - TRÈS dangereux
+
+variants:
+    - name: 'Version Combat Intense'
+      description: |
+          Pour les groupes aimant l'action :
+          - Ajouter une rencontre de combat à l'Acte 1 (ouvriers hostiles d'office, conflit social)
+          - Rendre l'infiltration des archives impossible - forcer un assaut frontal
+          - Doubler les ennemis lors du siège final
+          - Kane fuit si battu, créant une nemesis récurrente traquée par l'Empire
+
+    - name: 'Version Enquête Pure'
+      description: |
+          Pour les groupes aimant l'investigation :
+          - Remplacer l'embuscade de l'Acte 1 par plus d'indices et de PNJ
+          - Ajouter des puzzles techniques (déchiffrage, analyse de cristaux)
+          - Permettre de retourner Kane ou ses hommes par la preuve
+          - Issue possible sans combat du tout
+
+    - name: 'Version Rapide (2h)'
+      description: |
+          Pour sessions courtes :
+          - Supprimer l'infiltration des archives
+          - Cipher donne directement l'emplacement du laboratoire
+          - Combiner les Actes 2 et 3
+          - Simplifier le siège final (3 ennemis au lieu de 7)
+
+related_content:
+    spells_used:
+        - 'Camouflage'
+        - 'Flash'
+        - 'Annulation arcanotechnique'
+        - 'Révélation'
+        - 'Frappe précise'
+    equipment_used:
+        - 'Exosquelette de combat'
+        - "Fusil d'assaut"
+        - 'Implant neural'
+        - 'Cristal de mana'
+    locations:
+        - 'Secteur 7 - Zone Industrielle Abandonnée'
+        - 'Complexe du BIRA - Archives Impériales'
+        - 'Laboratoire Souterrain Alpha-9 (clandestin)'
+        - 'Tunnels industriels abandonnés'
+
+tags:
+    - 'investigation'
+    - 'imperial-corruption'
+    - 'tech-noir'
+    - 'urban'
+    - 'mystery'
+    - 'moral-choice'
+    - 'espionage'
+    - 'beginner-friendly'
+
+author: 'Lanathlor'
+last_updated: '2025-12-11' # Updated for Imperial lore coherence
+playtested: false
+
+gm_tips: |
+    CONSEILS DE MAÎTRISE :
+
+    1. FLEXIBILITÉ : Les joueurs peuvent approcher le scénario de multiples façons. Préparez-vous à improviser.
+
+    2. RYTHME : Si l'Acte 2 s'éternise, Cipher peut révéler directement la localisation pour accélérer.
+
+    3. KANE : C'est un antagoniste pragmatique, pas un fanatique. Il peut se rendre ou fuir si la situation tourne mal.
+
+    4. VEX : Elle n'est pas une damsel in distress. Elle peut se défendre et a préparé des défenses dans son labo.
+
+    5. CHOIX MORAL : Ne forcez pas une "bonne" réponse. Toutes les issues ont des conséquences intéressantes.
+
+    6. AMBIANCE : Utilisez des descriptions de néons, pluie acide, quartiers décrépits pour renforcer le tech-noir.
+
+    7. SAUVEGARDES : Préparez des PNJ de secours (ex: témoin supplémentaire) si les joueurs bloquent sur l'enquête.
+
+    8. COMBAT TACTIQUE : Le Secteur 7 offre beaucoup de couverture et de hauteur. Utilisez l'environnement.

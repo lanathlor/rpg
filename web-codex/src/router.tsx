@@ -18,6 +18,7 @@ const RulesPage = lazy(() => import('@/pages/RulesPage').then(m => ({ default: m
 const RuleDetailPage = lazy(() => import('@/pages/RuleDetailPage').then(m => ({ default: m.RuleDetailPage })))
 const HistoryPage = lazy(() => import('@/pages/HistoryPage').then(m => ({ default: m.HistoryPage })))
 const HistoryDetailPage = lazy(() => import('@/pages/HistoryDetailPage').then(m => ({ default: m.HistoryDetailPage })))
+const ScenariosPage = lazy(() => import('@/pages/ScenariosPage').then(m => ({ default: m.ScenariosPage })))
 const SearchPage = lazy(() => import('@/pages/SearchPage').then(m => ({ default: m.SearchPage })))
 
 // Loading fallback component
@@ -109,6 +110,10 @@ export const router = createBrowserRouter([
       {
         path: 'histoire/:section',
         element: withSuspense(HistoryDetailPage),
+      },
+      {
+        path: 'scenarios',
+        element: withSuspense(ScenariosPage),
       },
       {
         path: 'search',
