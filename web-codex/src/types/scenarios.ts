@@ -43,6 +43,12 @@ export interface Enemy {
   count: number
   stats_reference?: string  // Deprecated: use entity_base instead
   entity_base?: string
+  notes?: string  // Additional notes or modifications for this enemy instance
+}
+
+export interface FailureConsequence {
+  description?: string
+  enemies?: Enemy[]
 }
 
 export interface Encounter {
@@ -55,7 +61,7 @@ export interface Encounter {
   tactics?: string
   challenges?: string[]
   success_conditions?: string[]
-  failure_consequence?: string
+  failure_consequence?: string | FailureConsequence
   alternative?: string
   rewards?: string[]
 }
