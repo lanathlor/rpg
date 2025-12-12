@@ -151,6 +151,26 @@ export function calculateBaseStatsCost(baseStats: {
 }
 
 /**
+ * Calculate innate resistances cost
+ * RMEC: 3 pts per point (most common, equipment provides much)
+ * RRAD: 4 pts per point (medium, equipment provides some)
+ * RINT: 6 pts per point (most expensive, very rare on equipment/spells)
+ */
+export function calculateResistancesCost(resistances?: {
+  RMEC?: number
+  RRAD?: number
+  RINT?: number
+}): number {
+  if (!resistances) return 0
+
+  const rmecCost = (resistances.RMEC || 0) * 3
+  const rradCost = (resistances.RRAD || 0) * 4
+  const rintCost = (resistances.RINT || 0) * 6
+
+  return rmecCost + rradCost + rintCost
+}
+
+/**
  * Calculate cost for a single affinity (school, type, or combat)
  */
 export function calculateAffinityCost(affinityType: string, level: number): number {
@@ -329,6 +349,7 @@ export function calculateCompetenceCost(
  */
 export interface PointBuyBreakdown {
   baseStats: number
+  resistances: number
   stats: number
   affinities: number
   flux: number
@@ -345,6 +366,7 @@ export function calculateTotalPointBuy(
   allConsumables: Consumable[]
 ): PointBuyBreakdown {
   const baseStats = calculateBaseStatsCost(characterClass.base_stats)
+  const resistances = calculateResistancesCost(characterClass.innate_resistances)
   const stats = calculateStatsCost(characterClass.stats)
   const affinities = calculateAffinitiesCost(characterClass.affinities)
   const flux = calculateFluxCost(characterClass.flux_system)
@@ -361,12 +383,13 @@ export function calculateTotalPointBuy(
 
   return {
     baseStats,
+    resistances,
     stats,
     affinities,
     flux,
     equipment,
     competences,
-    total: baseStats + stats + affinities + flux + equipment + competences,
+    total: baseStats + resistances + stats + affinities + flux + equipment + competences,
   }
 }
 

@@ -340,10 +340,14 @@ export function CharacterCreatorPage() {
         <TabsContent value="stats" className="space-y-4">
           <StatsEditor
             baseStats={character.base_stats}
+            innateResistances={character.innate_resistances}
             primaryStats={character.stats}
             startingCredits={character.starting_credits}
             onUpdateBaseStats={(stats) =>
               updateCharacter({ base_stats: stats })
+            }
+            onUpdateInnateResistances={(resistances) =>
+              updateCharacter({ innate_resistances: resistances })
             }
             onUpdatePrimaryStats={(stats) => updateCharacter({ stats })}
             onUpdateStartingCredits={(credits) =>

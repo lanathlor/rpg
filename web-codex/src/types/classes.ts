@@ -5,6 +5,12 @@ export interface BaseStats {
   speed: number
 }
 
+export interface InnateResistances {
+  RMEC: number
+  RRAD: number
+  RINT: number
+}
+
 export interface FluxSystem {
   reserve: number
   per_turn: number
@@ -39,6 +45,7 @@ export interface CharacterClass extends BaseItem {
   type?: string
   image?: string
   base_stats: BaseStats
+  innate_resistances?: InnateResistances  // Innate resistances (RMEC/RRAD/RINT)
   flux_system?: FluxSystem
   affinities: AffinityStats
   stats: CharacterStats

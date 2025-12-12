@@ -99,6 +99,33 @@ export function ClassDetail({ characterClass }: ClassDetailProps) {
                   </div>
                 </div>
               )}
+
+              <div>
+                <h4 className="font-medium text-sm mb-2">Résistances innées</h4>
+                <div className="grid grid-cols-3 gap-2 text-sm">
+                  <div>
+                    <span className="text-muted-foreground flex items-center gap-1">
+                      <Shield className="h-3 w-3 text-stone-500" />
+                      RMEC:
+                    </span>
+                    <div className="font-semibold">{characterClass.innate_resistances?.RMEC ?? 0}</div>
+                  </div>
+                  <div>
+                    <span className="text-muted-foreground flex items-center gap-1">
+                      <Shield className="h-3 w-3 text-orange-500" />
+                      RRAD:
+                    </span>
+                    <div className="font-semibold">{characterClass.innate_resistances?.RRAD ?? 0}</div>
+                  </div>
+                  <div>
+                    <span className="text-muted-foreground flex items-center gap-1">
+                      <Shield className="h-3 w-3 text-purple-500" />
+                      RINT:
+                    </span>
+                    <div className="font-semibold">{characterClass.innate_resistances?.RINT ?? 0}</div>
+                  </div>
+                </div>
+              </div>
             </CardContent>
           </Card>
         )}

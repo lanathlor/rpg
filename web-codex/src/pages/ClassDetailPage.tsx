@@ -311,6 +311,33 @@ export function ClassDetailPage() {
                 </div>
               </div>
             )}
+
+            <div>
+              <h4 className="font-medium text-sm mb-2">Résistances innées</h4>
+              <div className="grid grid-cols-3 gap-2 text-sm">
+                <div>
+                  <span className="text-muted-foreground flex items-center gap-1">
+                    <Shield className="h-3 w-3 text-stone-500" />
+                    RMEC:
+                  </span>
+                  <div className="font-semibold">{characterClass.innate_resistances?.RMEC ?? 0}</div>
+                </div>
+                <div>
+                  <span className="text-muted-foreground flex items-center gap-1">
+                    <Shield className="h-3 w-3 text-orange-500" />
+                    RRAD:
+                  </span>
+                  <div className="font-semibold">{characterClass.innate_resistances?.RRAD ?? 0}</div>
+                </div>
+                <div>
+                  <span className="text-muted-foreground flex items-center gap-1">
+                    <Shield className="h-3 w-3 text-purple-500" />
+                    RINT:
+                  </span>
+                  <div className="font-semibold">{characterClass.innate_resistances?.RINT ?? 0}</div>
+                </div>
+              </div>
+            </div>
           </CardContent>
         </Card>
 
@@ -368,7 +395,15 @@ export function ClassDetailPage() {
                 </div>
 
                 {/* Breakdown */}
-                <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+                  <div className="p-3 border rounded-md">
+                    <div className="text-xs text-muted-foreground mb-1">Stats de base</div>
+                    <div className="text-lg font-semibold">{pointBuy.baseStats} pts</div>
+                  </div>
+                  <div className="p-3 border rounded-md">
+                    <div className="text-xs text-muted-foreground mb-1">Résistances</div>
+                    <div className="text-lg font-semibold">{pointBuy.resistances} pts</div>
+                  </div>
                   <div className="p-3 border rounded-md">
                     <div className="text-xs text-muted-foreground mb-1">Caractéristiques</div>
                     <div className="text-lg font-semibold">{pointBuy.stats} pts</div>

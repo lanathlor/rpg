@@ -99,6 +99,60 @@ La Vitesse détermine combien de mètres votre personnage peut se déplacer en u
 
 ---
 
+## 2.5. Coût des Résistances Innées
+
+Les résistances représentent votre capacité naturelle à résister aux différents types de dégâts, indépendamment de votre équipement.
+
+### Les trois résistances
+
+| Résistance | Abréviation | Coût par point | Description |
+| ---------- | ----------- | -------------- | ----------- |
+| Résistance Mécanique | RMEC | **3 points** | Résistance aux impacts, projectiles, pressions, ondes de choc |
+| Résistance Radiative | RRAD | **4 points** | Résistance au feu, froid, électricité, lumière, radiation |
+| Résistance Interne | RINT | **6 points** | Résistance aux drains de vie, nécroses, corruption, attaques internes |
+
+**Base :** Tous les personnages commencent avec RMEC 0, RRAD 0, RINT 0 (gratuit)
+
+### Formule
+
+```
+Coût total = (RMEC × 3) + (RRAD × 4) + (RINT × 6)
+```
+
+### Exemples
+
+-   **RMEC +2, RRAD +1, RINT +1** (build tank) : (2×3) + (1×4) + (1×6) = **16 points**
+-   **RMEC +1, RRAD +1, RINT +1** (build équilibré) : (1×3) + (1×4) + (1×6) = **13 points**
+-   **RMEC +0, RRAD +2, RINT +2** (arcaniste anti-Flux) : (0×3) + (2×4) + (2×6) = **20 points**
+-   **RMEC +3, RRAD +0, RINT +0** (guerrier physique) : (3×3) + (0×4) + (0×6) = **9 points**
+
+### Conseil de construction
+
+Les résistances innées représentent votre résistance **naturelle** (entraînement, constitution, maîtrise du Flux). Elles se **cumulent** avec les résistances fournies par l'équipement (armures, boucliers).
+
+**Builds typiques :**
+
+-   **Lanceur de sorts léger** : RMEC +0, RRAD +1, RINT +2 = **14 points**
+    -   Compte sur l'équipement pour RMEC, investit dans RINT (rare à trouver)
+-   **Guerrier équilibré** : RMEC +1, RRAD +1, RINT +1 = **13 points**
+    -   Base solide, complétée par armure lourde
+-   **Tank spécialisé** : RMEC +3, RRAD +1, RINT +1 = **19 points**
+    -   Maximise RMEC pour être quasi-imperméable aux armes physiques
+-   **Aucune résistance** : RMEC +0, RRAD +0, RINT +0 = **0 points**
+    -   Dépend entièrement de l'équipement (approche économique)
+
+**Fourchette typique : 0-20 points en résistances innées**
+
+### Rationale des coûts
+
+-   **RMEC** (3 pts) : Le moins cher car c'est le type de dégât le plus commun et l'équipement fournit déjà beaucoup de RMEC
+-   **RRAD** (4 pts) : Coût intermédiaire, les dégâts élémentaires sont fréquents mais l'équipement fournit moins de protection
+-   **RINT** (6 pts) : Le plus cher car intentionnellement rare et difficile à augmenter. Très peu d'équipements et de sorts fournissent de la RINT, rendant les résistances innées particulièrement précieuses
+
+**Important :** Les résistances innées se cumulent avec celles de l'équipement. Un personnage avec RMEC +2 innée et une armure RMEC +3 aura **RMEC +5 total**.
+
+---
+
 ## 3. Coût des Statistiques de Personnage
 
 Chaque statistique commence à **8 gratuitement**. Augmenter une statistique au-delà coûte des points selon la progression suivante :
@@ -288,6 +342,16 @@ Un lanceur de sorts spécialisé en contrôle de zone et dégâts de glace, avec
 
 Un profil typique de lanceur de sorts : survivabilité correcte avec bonne mobilité pour se repositionner.
 
+### Résistances Innées (14 points)
+
+-   **RMEC : 0** → 0 pts (compte sur l'équipement pour la protection physique)
+-   **RRAD : 1** → 4 pts ((1×4) = 4)
+-   **RINT : 2** → 12 pts ((2×6) = 12)
+
+**Total : 14 points**
+
+Investissement dans RINT (très rare sur l'équipement) et un peu de RRAD pour résister aux sorts élémentaires. Pas de RMEC car la tunique ne fournit aucune protection de toute façon.
+
 ### Statistiques de Personnage (49 points)
 
 | Stat | Valeur | Coût |
@@ -342,15 +406,16 @@ Un profil typique de lanceur de sorts : survivabilité correcte avec bonne mobil
 
 | Catégorie                  | Points  | % du total |
 | -------------------------- | ------- | ---------- |
-| Stats de base (PV/Vitesse) | 20      | 9%         |
-| Statistiques               | 49      | 21%        |
-| Affinités                  | 81      | 35%        |
-| Flux                       | 60      | 26%        |
+| Stats de base (PV/Vitesse) | 20      | 8%         |
+| Résistances innées         | 14      | 6%         |
+| Statistiques               | 49      | 20%        |
+| Affinités                  | 81      | 33%        |
+| Flux                       | 60      | 24%        |
 | Équipement                 | 4       | 2%         |
-| Compétences                | 20      | 9%         |
-| **TOTAL**                  | **234** | **100%**   |
+| Compétences                | 20      | 8%         |
+| **TOTAL**                  | **248** | **100%**   |
 
-Ce personnage se situe dans le palier **Moyen-Élevé**, avec une forte capacité de lancement de sorts grâce à son Flux élevé et ses affinités arcanotechniques.
+Ce personnage se situe dans le palier **Moyen-Élevé**, avec une forte capacité de lancement de sorts grâce à son Flux élevé et ses affinités arcanotechniques. L'investissement en RINT (résistance interne) lui permet de mieux résister aux drains de vie et à la corruption du Flux.
 
 ---
 
@@ -358,27 +423,30 @@ Ce personnage se situe dans le palier **Moyen-Élevé**, avec une forte capacit�
 
 ### Répartition Typique par Archétype
 
-**Lanceur de sorts pur** (220-240 points) :
+**Lanceur de sorts pur** (235-260 points) :
 
 -   Stats de base : 15-25 pts (PV moyens, Vitesse élevée)
+-   Résistances innées : 10-20 pts (RINT prioritaire, un peu de RRAD)
 -   Stats : 45-55 pts (INT élevé)
 -   Affinités : 70-90 pts (écoles et types variés)
 -   Flux : 50-65 pts (réserve et régénération élevées)
 -   Équipement : 4-8 pts (équipement léger)
 -   Compétences : 15-25 pts (2-3 compétences magiques)
 
-**Combattant martial** (205-220 points) :
+**Combattant martial** (215-235 points) :
 
 -   Stats de base : 25-35 pts (PV élevés, Vitesse moyenne)
+-   Résistances innées : 5-15 pts (RMEC/RRAD équilibrés)
 -   Stats : 55-65 pts (FOR/DEX/CON élevés)
 -   Affinités : 80-100 pts (combat + armes spéciales)
 -   Flux : 15-25 pts (sorts mineurs uniquement)
--   Équipement : 6-14 pts (armure et armes de qualité)
+-   Équipement : 6-14 pts (armure et armes de qualité, stacke avec innées)
 -   Compétences : 20-30 pts (compétences de combat)
 
-**Hybride combat/magie** (240-255 points) :
+**Hybride combat/magie** (255-275 points) :
 
 -   Stats de base : 20-30 pts (équilibre PV/Vitesse)
+-   Résistances innées : 10-20 pts (équilibrées ou spécialisées selon concept)
 -   Stats : 55-60 pts (plusieurs stats élevées)
 -   Affinités : 90-110 pts (combat ET arcanotechnie)
 -   Flux : 40-55 pts (capacité de sorts modérée)
@@ -391,6 +459,8 @@ Ce personnage se situe dans le palier **Moyen-Élevé**, avec une forte capacit�
 2. **Négliger le Flux sur un lanceur de sorts** : Le Flux détermine votre capacité à lancer des sorts en combat
 3. **Sur-investir dans l'équipement** : L'équipement peut être trouvé/acheté en jeu, contrairement aux stats et affinités
 4. **Oublier les compétences** : Certaines compétences (Guerrier, Course) transforment complètement le style de jeu
+5. **Ignorer RINT** : La résistance interne est **extrêmement rare** sur l'équipement. Si vous n'investissez pas en résistances innées, il sera très difficile d'en obtenir
+6. **Surinvestir en RMEC** : L'équipement fournit déjà beaucoup de RMEC. Mieux vaut investir dans RRAD/RINT
 
 ### Optimisation vs Roleplay
 

@@ -69,6 +69,12 @@ export function createCharacter(
       speed: 5,
     },
 
+    innate_resistances: baseData?.innate_resistances || {
+      RMEC: 0,
+      RRAD: 0,
+      RINT: 0,
+    },
+
     flux_system: baseData?.flux_system || {
       reserve: 0,
       per_turn: 0,

@@ -9,6 +9,12 @@ base_stats:
   health: 50
   speed: 6
 
+# Résistances innées
+innate_resistances:
+  RMEC: 0
+  RRAD: 0
+  RINT: 0
+
 # Système de flux
 flux_system:
   reserve: 5

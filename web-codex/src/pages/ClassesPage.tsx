@@ -391,6 +391,30 @@ export function ClassesPage() {
                   })()}
                 </div>
 
+                {/* Resistances - show if any non-zero */}
+                {characterClass.innate_resistances &&
+                  (characterClass.innate_resistances.RMEC > 0 ||
+                   characterClass.innate_resistances.RRAD > 0 ||
+                   characterClass.innate_resistances.RINT > 0) && (
+                  <div className="mt-3 pt-3 border-t">
+                    <div className="flex items-center gap-3 text-xs">
+                      <span className="text-muted-foreground">Résist:</span>
+                      <div className="flex items-center gap-1">
+                        <Shield className="h-3 w-3 text-stone-500" />
+                        <span className="font-medium">{characterClass.innate_resistances.RMEC}</span>
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <Shield className="h-3 w-3 text-orange-500" />
+                        <span className="font-medium">{characterClass.innate_resistances.RRAD}</span>
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <Shield className="h-3 w-3 text-purple-500" />
+                        <span className="font-medium">{characterClass.innate_resistances.RINT}</span>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
                 {/* Preview of abilities */}
                 <div className="mt-4 flex flex-wrap gap-2">
                   {characterClass.spells && characterClass.spells.length > 0 && (

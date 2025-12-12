@@ -74,6 +74,10 @@ export function PointBuyDisplay({
               <span className="font-medium">{breakdown.baseStats} pts</span>
             </div>
             <div className="flex justify-between items-center py-1 border-t">
+              <span className="text-muted-foreground">Résistances innées</span>
+              <span className="font-medium">{breakdown.resistances} pts</span>
+            </div>
+            <div className="flex justify-between items-center py-1 border-t">
               <span className="text-muted-foreground">Statistiques</span>
               <span className="font-medium">{breakdown.stats} pts</span>
             </div>
@@ -103,7 +107,7 @@ export function PointBuyDisplay({
         {/* Compact View */}
         {!expanded && (
           <div className="text-xs text-muted-foreground">
-            Base: {breakdown.baseStats} • Stats: {breakdown.stats} • Affinités: {breakdown.affinities} • Flux: {breakdown.flux}
+            Base: {breakdown.baseStats} • Résist: {breakdown.resistances} • Stats: {breakdown.stats} • Affinités: {breakdown.affinities} • Flux: {breakdown.flux}
           </div>
         )}
       </CardContent>
