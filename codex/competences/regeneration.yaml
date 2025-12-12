@@ -1,0 +1,7 @@
+name: "Régénération"
+category: "Compétence"
+subcategory: "défense"
+point_cost: 15
+effect:
+  healing: "Régénère 10 PV par tour si connecté à une source (racines, terrain favorable, etc.)"
+description: "Capacité biologique ou arcanotechnique de régénération rapide. Le personnage peut récupérer des points de vie chaque tour tant qu'il reste en contact avec sa source de pouvoir (racines pour créatures végétales, terrain de Flux pour créatures corrompues, etc.)."

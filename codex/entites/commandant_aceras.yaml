@@ -1,0 +1,92 @@
+name: "Commandant Aceras"
+type: "Commandant / Boss"
+faction: "Aceras"
+alignement: "hostile"
+description: "Commandant Aceras d'élite en armure de combat lourde, avec augmentations cybernétiques. Tacticien brillant et combattant redoutable avec armes énergétiques avancées et capacités arcanotechniques."
+
+# Base statistics
+base_stats:
+  health: 180
+  speed: 5
+
+# Innate resistances
+innate_resistances:
+  RMEC: 8
+  RRAD: 6
+  RINT: 4
+
+# Flux system (for spell casting)
+flux_system:
+  reserve: 45
+  per_turn: 8
+  recovery: 6
+
+# Affinities (uses both weapons and spells)
+affinities:
+  distance: 9
+  melee: 9
+  schools:
+    bioarcanotechnique: 3
+    feu: 2
+    lumiere: 4
+  types:
+    amelioration: 4
+
+# Character stats
+stats:
+  force: 18
+  dexterite: 16
+  constitution: 18
+  intelligence: 16
+  perception: 16
+  precision: 15
+  charisme: 13
+
+# Equipment (references to codex items)
+equipment:
+  weapons:
+    - "Canon à plasma"
+    - "Lames énergétiques"
+  armor:
+    - "Exosquelette de combat"
+  consumables:
+    - name: "Kit de soins"
+      quantity: 3
+
+# Skills (references to codex)
+skills:
+  - "Guerrier"
+  - "Tacticien"
+  - "Vétéran"
+  - "Course"
+
+# Spells
+spells:
+  - "Régénération protocolaire"
+  - "Surcharge plasma"
+  - "Analyse tactique"
+  - "Bouclier renforcé"
+
+# Gameplay guidance
+gameplay_guide: |
+  BOSS FIGHT - Commandant Aceras
+
+  Commandant Aceras d'élite avec exosquelette de guerre, armes énergétiques intégrées et capacités arcanotechniques.
+
+  PHASES DE COMBAT:
+  - Phase 1 (180-90 PV): Combat à distance avec canon à plasma, mobilité tactique, les gardes protègent ses flancs
+  - Phase 2 (90-50 PV): Combat mixte, alterne tirs et mêlée, devient plus agressif
+  - Phase 3 (<50 PV): Corps à corps total, double attaques (Guerrier), combat désespéré - TRÈS DANGEREUX
+
+  CAPACITÉS ARCANOTECHNIQUES:
+  Le commandant possède 4 sorts d'amélioration qui renforcent ses capacités de combat:
+  - Régénération protocolaire: Soigne 25 PV instantanément (Flux: 8)
+  - Surcharge plasma: +3d6 RRAD sur la prochaine attaque à distance (Flux: 10)
+  - Analyse tactique: Révèle faiblesses ennemies, donne Avantage aux alliés (Flux: 6)
+  - Bouclier renforcé: +5 à toutes résistances pendant 3 tours (Flux: 12)
+
+  ATTAQUES:
+  - Canon à plasma: 3d8+4 RRAD, portée moyenne, recharge 2 tours
+  - Lames énergétiques: 2d8+5 / 1d8+2 RMEC (main + seconde main), corps à corps (×2 avec Guerrier)
+
+  C'est un adversaire de niveau boss (~500 points total avec capacités). Groupe recommandé: 3-5 joueurs ~220-240 points chacun.

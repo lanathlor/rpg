@@ -1,0 +1,16 @@
+name: "Mitraillette de drone légère"
+category: "Arme à distance"
+subcategory: "arme montée"
+type: "mitraillette automatique"
+cost: "800 crédits"
+prerequisites:
+  affinity: "A. dist 4"
+stats:
+  damage: "1d6+2"
+  attack_type: "tir à distance (PRE)"
+  defense_type: "esquive (DEX)"
+special_effects:
+  - "Arme montée sur drone"
+  - "Cadence rapide automatique"
+  - "Dégâts de type RMEC (cinétique)"
+description: "Mitraillette légère montée sur drone de reconnaissance Aceras. Système de stabilisation gyroscopique pour tir en mouvement. Cadence de tir élevée compensant la faible puissance."

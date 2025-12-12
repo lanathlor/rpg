@@ -97,37 +97,41 @@ npcs:
     - name: 'Dr. Kaela Vex'
       role: 'Objectif de la mission / Allié potentiel'
       description: 'Arcanotechnicienne brillante (35 ans), idéaliste. Implants oculaires améliorés et porte toujours un cristal de Flux à la main. Effrayée mais déterminée.'
-      stats_reference: 'Arcanotechnicien (~215 points) - École Pure'
+      entity_base: 'arcanotechnicien'
+      notes: 'École Pure, expertise cristaux de mana'
       motivations: "Protéger sa découverte de la militarisation, prouver que la science doit servir l'humanité et non la guerre"
 
     - name: 'Elena Voss'
       role: 'Donneuse de quête (apparente)'
       description: 'Directrice de recherche du BIRA (42 ans), froide et calculatrice. Costume impeccable, insignes impériaux discrets, implants neuraux visibles, peau pâle.'
-      stats_reference: 'Civil (compétences sociales élevées)'
+      entity_base: 'civil'
+      notes: 'Compétences sociales élevées'
       motivations: "Récupérer la recherche de Vex pour l'Empire et sa propre carrière bureaucratique. Ignore l'agenda de Kane."
 
     - name: 'Commandant Marcus Kane'
       role: 'Antagoniste principal'
       description: 'Commandant de Sécurité du BIRA (48 ans), vétéran militaire corrompu. Imposant, cybernétiques militaires visibles, cicatrice au plasma sur le visage.'
-      stats_reference: 'Chasseur (~230 points) - équipement militaire lourd'
+      entity_base: 'soldat_imperial'
+      notes: 'Équipement militaire lourd, fusil arcanotechnique'
       motivations: 'Voler le prototype pour le vendre à des puissances étrangères hostiles à l''Empire. Traître prêt à éliminer tous les témoins.'
 
     - name: 'Vex-7 "Le Contremaître"'
       role: "Ancien contremaître d'usine / Informateur local / Source d'information"
       description: "Ex-contremaître devenu figure respectée des ouvriers du Secteur 7 (31 ans). Couvert de tatouages bioluminescents et de cicatrices d'augmentations industrielles suite à des accidents de travail. Méfiant envers les autorités mais pragmatique."
-      stats_reference: 'Combattant de rue (~200 points)'
+      entity_base: 'combattant_de_rue'
       motivations: 'Protéger les travailleurs du secteur contre les abus. Survie et solidarité ouvrière. Peut devenir allié si payé ou si les joueurs montrent du respect pour la population locale.'
 
     - name: 'Cipher'
       role: 'Informateur / Hacker neutre'
       description: "Hacker indépendant (24 ans), nerveux mais compétent. Vit dans un appartement clandestin rempli d'écrans et de câbles. Lunettes à réalité augmentée constamment actives."
-      stats_reference: 'Civil (compétence Hacker niveau expert)'
+      entity_base: 'civil'
+      notes: 'Compétence Hacker niveau expert'
       motivations: "L'argent et la survie. Vendra des informations aux plus offrants mais préfère éviter la violence et les autorités impériales."
 
     - name: 'Lieutenant Kess Varn'
       role: 'Forces de sécurité impériales (intervention possible)'
       description: 'Officier de la Sécurité Impériale incorruptible (29 ans), fatiguée de la corruption bureaucratique mais idéaliste. Armure de patrouille usée mais bien entretenue.'
-      stats_reference: 'Chasseur (~210 points)'
+      entity_base: 'soldat_imperial'
       motivations: "Arrêter les traîtres et corrompus au sein de l'Empire. Peut aider les joueurs s'ils prouvent la trahison de Kane."
 
 encounters:
@@ -138,10 +142,10 @@ encounters:
       enemies:
           - name: 'Agent de sécurité impérial corrompu'
             count: 3
-            stats_reference: 'Chasseur (~190 points)'
+            entity_base: 'soldat_imperial'
           - name: 'Drone de reconnaissance armé'
             count: 1
-            stats_reference: 'Drone léger (~80 points)'
+            entity_base: 'drone_leger'
       tactics: 'Embuscade depuis les toits. Le drone flanque pendant que les agents tirent depuis des positions couvertes.'
       rewards:
           - "Cartes d'accès BIRA niveau 1"
@@ -159,7 +163,13 @@ encounters:
           - 'Payer 800 cr (pot-de-vin collectif)'
           - 'Promettre de débarrasser le secteur de Kane et ses hommes corrompus'
           - "Montrer du respect pour les conditions de travail difficiles et la solidarité ouvrière"
-      failure_consequence: 'Combat défensif avec 6 ouvriers armés (~190-200 points chacun) - ils protègent leur communauté'
+      failure_consequence:
+          type: 'combat'
+          description: 'Combat défensif - les ouvriers protègent leur communauté'
+          enemies:
+              - name: 'Ouvrier armé'
+                count: 6
+                entity_base: 'ouvrier_arme'
       rewards:
           - "Information : Vex vue entrant dans l'ancienne fonderie, niveau -2"
           - 'Carte des tunnels du Secteur 7 (passages de maintenance connus des ouvriers)'
@@ -190,7 +200,7 @@ encounters:
       enemies:
           - name: "Agent d'élite de Kane"
             count: 2
-            stats_reference: 'Chasseur (~210 points) - exosquelette'
+            entity_base: 'soldat_imperial'
       rewards:
           - "Échapper à la poursuite permet de garder l'avantage tactique pour l'acte 3"
 
@@ -202,13 +212,13 @@ encounters:
       enemies:
           - name: 'Marcus Kane'
             count: 1
-            stats_reference: 'Chasseur (~230 points) - armure lourde, fusil arcanotechnique'
+            entity_base: 'soldat_imperial'
           - name: "Commando d'élite"
             count: 4
-            stats_reference: 'Chasseur (~210 points)'
+            entity_base: 'soldat_imperial'
           - name: 'Drone de combat lourd'
             count: 2
-            stats_reference: 'Drone militaire (~120 points)'
+            entity_base: 'drone_militaire'
       tactics: "Kane coordonne l'assaut. Les commandos avancent en formation, les drones fournissent un appui feu. Kane vise le prototype."
       alternative: 'Peut être résolue par négociation si les joueurs ont suffisamment de preuves contre Kane ou peuvent le menacer politiquement'
       rewards:

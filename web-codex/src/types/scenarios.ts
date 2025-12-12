@@ -32,14 +32,17 @@ export interface NPC {
   name: string
   role: string
   description?: string
-  stats_reference?: string
+  stats_reference?: string  // Deprecated: use entity_base + notes instead
+  entity_base?: string
+  notes?: string
   motivations?: string
 }
 
 export interface Enemy {
   name: string
   count: number
-  stats_reference?: string
+  stats_reference?: string  // Deprecated: use entity_base instead
+  entity_base?: string
 }
 
 export interface Encounter {

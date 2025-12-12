@@ -134,14 +134,16 @@ npcs:
     - name: 'Commandant Sarah Chen'
       role: 'Donneuse de quête'
       description: 'Officier de sécurité corporative, pragmatique et directe'
-      stats_reference: 'Chasseur (~200 points)' # Référence vers une classe ou profil custom
+      entity_base: 'chasseur' # Référence vers le fichier entity/class (sans .yaml)
+      notes: 'Ajustements: +10 points en Charisme et compétence Leadership'
       motivations: "Résoudre l'affaire avant le scandale public"
 
     # Exemple de PNJ antagoniste
     - name: 'Dr. Viktor Kuznetsov'
       role: 'Antagoniste principal'
       description: 'Arcanotechnicien brillant mais instable'
-      stats_reference: 'Arcanotechnicien (~220 points)'
+      entity_base: 'arcanotechnicien'
+      notes: 'Spécialisation: recherche interdite, équipement expérimental'
       motivations: 'Protéger sa recherche interdite'
 
 # ========== RENCONTRES ==========
@@ -155,10 +157,10 @@ encounters:
       enemies:
           - name: 'Garde de sécurité (corrompu)'
             count: 3
-            stats_reference: 'Chasseur (~190 points)'
+            entity_base: 'chasseur' # Référence vers le fichier entity/class (sans .yaml)
           - name: 'Drone de combat léger'
             count: 2
-            stats_reference: 'Drone militaire (~100 points)'
+            entity_base: 'drone_de_combat' # Nom du fichier entity sans .yaml
       tactics: 'Les gardes se mettent à couvert, les drones flanquent'
       rewards:
           - "Cartes d'accès niveau 2"

@@ -1,0 +1,60 @@
+name: "Veteran Aceras"
+type: "Vétéran"
+faction: "Aceras"
+alignement: "hostile"
+description: "Vétéran de guerre Aceras, combattant expérimenté et tacticien compétent. Équipé d'armure lourde et d'armement avancé."
+
+# Base statistics
+base_stats:
+  health: 60
+  speed: 5
+
+# Innate resistances
+innate_resistances:
+  RMEC: 3
+  RRAD: 2
+  RINT: 1
+
+# Flux system
+flux_system:
+  reserve: 0
+  per_turn: 0
+  recovery: 0
+
+# Affinities (fusil mitrailleur = distance weapon)
+affinities:
+  distance: 9
+  melee: 3
+  schools: {}
+  types: {}
+
+# Character stats
+stats:
+  force: 15
+  dexterite: 14
+  constitution: 16
+  intelligence: 14
+  perception: 15
+  precision: 16
+  charisme: 14
+
+# Equipment (references to codex items)
+equipment:
+  weapons:
+    - "Fusil mitrailleur"
+  armor:
+    - "Armure de plate lourde"
+  consumables:
+    - name: "Kit de soins"
+      quantity: 2
+
+# Skills (references to codex)
+skills:
+  - "Tacticien"
+  - "Vétéran"
+
+# Spells (if any)
+spells: []
+
+# Gameplay guidance
+gameplay_guide: "Veteran Aceras avec expérience au combat et capacités tactiques. Bien protégé par une armure de plate lourde, équipé d'un fusil mitrailleur polyvalent. Combattant discipliné qui exploite les faiblesses ennemies et coordonne avec son unité. Efficace au combat à moyenne portée."

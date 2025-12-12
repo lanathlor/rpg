@@ -1,0 +1,25 @@
+spell_series: "Bouclier renforcé"
+description_base: "Activation d'un bouclier énergétique multi-couches généré par l'exosquelette. Lueur défensive scintillante autour du lanceur."
+
+school: lumiere
+type: amelioration
+
+levels:
+  - level: "1"
+    name: "Bouclier renforcé"
+
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[lumiere]: 3"
+        type_requirement: "A.Type[amelioration]: 4"
+
+    conditions:
+      intelligence_required: 15
+      flux_cost: 12
+
+    effects:
+      special: "+5 à toutes les résistances (RMEC, RRAD, RINT) pour le lanceur. Bouclier énergétique visible."
+
+    duration: "3 tours"
+
+    recharge_time: "4 sec"

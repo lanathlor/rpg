@@ -1,0 +1,55 @@
+name: "Drone de reconnaissance Aceras"
+type: "Drone léger"
+faction: "Aceras"
+alignement: "hostile"
+description: "Drone de reconnaissance autonome Aceras équipé de capteurs thermiques et d'une mitraillette légère. Unité de surveillance rapide et mobile."
+
+# Base statistics
+base_stats:
+  health: 25
+  speed: 9
+
+# Innate resistances
+innate_resistances:
+  RMEC: 0
+  RRAD: 0
+  RINT: 3
+
+# Flux system
+flux_system:
+  reserve: 0
+  per_turn: 0
+  recovery: 0
+
+# Affinities
+affinities:
+  distance: 4
+  melee: 0
+  schools: {}
+  types: {}
+
+# Character stats
+stats:
+  force: 6
+  dexterite: 14
+  constitution: 8
+  intelligence: 10
+  perception: 15
+  precision: 12
+  charisme: 5
+
+# Equipment
+equipment:
+  weapons:
+    - "Mitraillette de drone légère"
+  armor: []
+  consumables: []
+
+# Skills
+skills: []
+
+# Spells
+spells: []
+
+# Gameplay guidance
+gameplay_guide: "Drone de reconnaissance rapide et fragile. Excellente perception pour repérer les ennemis. Vol lui permet d'ignorer le terrain difficile. Faible en combat direct mais efficace pour soutien tactique et flanquement. Cible prioritaire facile à éliminer."

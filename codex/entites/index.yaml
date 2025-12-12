@@ -1,4 +1,28 @@
 # Index file for entities (NPCs)
 # Add entity YAML files here as they are created
 files:
+  - agent_de_securite.yaml
+  - arcanotechnicien.yaml
+  - chasseur.yaml
+  - civil.yaml
+  - colosse_du_flux.yaml
+  - combattant_de_rue.yaml
+  - commandant_aceras.yaml
+  - commandante_resistance.yaml
+  - drone_combat_lourd_aceras.yaml
+  - drone_leger.yaml
+  - drone_militaire.yaml
+  - drone_reconnaissance_aceras.yaml
   - garde_de_l_empire.yaml
+  - garde_du_corps.yaml
+  - gardien_sentinelle.yaml
+  - ouvrier_arme.yaml
+  - saboteur_arme.yaml
+  - soldat_aceras.yaml
+  - soldat_elite_aceras.yaml
+  - soldat_imperial.yaml
+  - technicien_aceras.yaml
+  - tourelle_automatique_legere.yaml
+  - tourelle_defensive_lourde.yaml
+  - transport_blinde_leger_aceras.yaml
+  - zombie_du_flux.yaml

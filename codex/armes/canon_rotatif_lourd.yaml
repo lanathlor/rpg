@@ -1,0 +1,17 @@
+name: "Canon rotatif lourd"
+category: "Arme à distance"
+subcategory: "arme montée"
+type: "canon rotatif"
+cost: "2800 crédits"
+prerequisites:
+  affinity: "A. dist 7"
+stats:
+  damage: "3d6"
+  attack_type: "tir à distance (PRE)"
+  defense_type: "esquive (DEX)"
+special_effects:
+  - "Tir de suppression : peut attaquer plusieurs cibles dans un arc de 90°"
+  - "Cadence massive : -2 au SD des cibles dans la zone supprimée"
+  - "Dégâts de type RMEC (cinétique)"
+  - "Surchauffe après 3 tours de tir continu"
+description: "Canon rotatif multi-tubes monté sur tourelles défensives lourdes. Capable de saturer une zone entière de projectiles, supprimant les mouvements ennemis. Système de refroidissement liquide nécessaire pour éviter la surchauffe."

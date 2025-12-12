@@ -1,0 +1,7 @@
+name: "Contrôle végétal"
+category: "Compétence"
+subcategory: "capacité spéciale"
+point_cost: 12
+effect:
+  control: "Commande et manipule racines, vignes et plantes dans un rayon de 10m"
+description: "Capacité bioarcanotechnique permettant de commander la végétation environnante. Peut faire pousser, déplacer et contrôler racines et vignes pour attaquer, entraver ou créer des barrières. Les plantes obéissent aux ordres mentaux du personnage."

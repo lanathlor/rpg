@@ -1,0 +1,54 @@
+name: "Zombie du Flux"
+type: "Mort-vivant animé / Cadavre contrôlé"
+faction: "Hostile"
+alignement: "hostile"
+description: "Cadavre animé par l'influence d'un cristal de Flux puissant. Lent mais implacable, résistant aux dommages internes mais vulnérable aux dégâts radiants. Ignore les vivants et cherche à éteindre les sources d'interférence électromagnétique."
+
+# Base statistics
+base_stats:
+  health: 15
+  speed: 2
+
+# Innate resistances
+innate_resistances:
+  RMEC: 2
+  RRAD: 0
+  RINT: 6
+
+# Flux system
+flux_system:
+  reserve: 0
+  per_turn: 0
+  recovery: 0
+
+# Affinities
+affinities:
+  distance: 0
+  melee: 2
+  schools: {}
+  types: {}
+
+# Character stats
+stats:
+  force: 4
+  dexterite: 2
+  constitution: 8
+  intelligence: 1
+  perception: 4
+  precision: 2
+  charisme: 1
+
+# Equipment
+equipment:
+  weapons: []
+  armor: []
+  consumables: []
+
+# Skills
+skills: []
+
+# Spells
+spells: []
+
+# Gameplay guidance
+gameplay_guide: "Zombie animé par le Flux. Ignore les joueurs et se dirige vers l'antenne de communication pour l'éteindre. Si empêché, attaque l'obstacle. Lent (Vitesse 2) mais nombreux. Haute résistance interne (RINT +6) car déjà mort. Vulnérable aux dégâts de zone et radiants. Combat corps à corps uniquement (1d6 RMEC)."

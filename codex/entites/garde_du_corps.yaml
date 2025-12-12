@@ -1,0 +1,60 @@
+name: "Garde du corps"
+type: "Protecteur professionnel"
+faction: "Variable"
+alignement: "variable"
+description: "Professionnel de la protection personnelle. Formation militaire ou policière approfondie, discipliné, loyal. Prêt à sacrifier sa vie pour protéger son employeur. Reste calme sous pression et évalue constamment les menaces."
+
+# Base statistics
+base_stats:
+  health: 50
+  speed: 5
+
+# Innate resistances
+innate_resistances:
+  RMEC: 2
+  RRAD: 1
+  RINT: 1
+
+# Flux system
+flux_system:
+  reserve: 0
+  per_turn: 0
+  recovery: 0
+
+# Affinities
+affinities:
+  distance: 5
+  melee: 3
+  schools: {}
+  types: {}
+
+# Character stats
+stats:
+  force: 13
+  dexterite: 14
+  constitution: 13
+  intelligence: 11
+  perception: 14
+  precision: 13
+  charisme: 11
+
+# Equipment
+equipment:
+  weapons:
+    - "Fusil mitrailleur"
+  armor:
+    - "Armure de plate légère"
+  consumables:
+    - name: "Kit de soins"
+      quantity: 1
+
+# Skills
+skills:
+  - "Tacticien"
+  - "Protecteur"
+
+# Spells
+spells: []
+
+# Gameplay guidance
+gameplay_guide: "Garde du corps professionnel. Priorité absolue: protéger son employeur. Se place toujours entre la menace et sa cible. Utilise couverture intelligemment et couvre les retraites. Combat discipliné et coordonné. Haute Perception pour détecter les dangers. Compétence Protecteur permet d'intercepter les attaques."

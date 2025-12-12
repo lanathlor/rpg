@@ -1,0 +1,16 @@
+name: "Canon à plasma"
+category: "Arme à distance"
+subcategory: "arme à deux mains"
+type: "canon énergétique"
+cost: "3500 crédits"
+prerequisites:
+  affinity: "A. dist 8"
+stats:
+  damage: "3d8+4"
+  attack_type: "tir à distance (PRE)"
+  defense_type: "esquive (DEX)"
+special_effects:
+  - "Portée moyenne"
+  - "Recharge 2 tours entre tirs"
+  - "Dégâts de type RRAD (thermique)"
+description: "Arme énergétique lourde Aceras tirant des projectiles de plasma surchauffé. Dégâts dévastateurs mais temps de recharge important entre les tirs."

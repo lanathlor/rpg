@@ -1,0 +1,55 @@
+name: "Drone léger"
+type: "Drone / Unité automatisée légère"
+faction: "Variable"
+alignement: "neutre"
+description: "Drone de reconnaissance ou de sécurité léger. Équipé de capteurs et d'armement basique. Utilisé pour la surveillance, l'éclairage ou l'appui tactique minimal."
+
+# Base statistics
+base_stats:
+  health: 35
+  speed: 6
+
+# Innate resistances
+innate_resistances:
+  RMEC: 1
+  RRAD: 2
+  RINT: 5
+
+# Flux system
+flux_system:
+  reserve: 0
+  per_turn: 0
+  recovery: 0
+
+# Affinities
+affinities:
+  distance: 3
+  melee: 1
+  schools: {}
+  types: {}
+
+# Character stats
+stats:
+  force: 6
+  dexterite: 14
+  constitution: 10
+  intelligence: 8
+  perception: 15
+  precision: 12
+  charisme: 1
+
+# Equipment
+equipment:
+  weapons:
+    - "Mitraillette légère"
+  armor: []
+  consumables: []
+
+# Skills
+skills: []
+
+# Spells
+spells: []
+
+# Gameplay guidance
+gameplay_guide: "Drone léger automatisé avec capacités de reconnaissance. Mobile et difficile à toucher mais fragile. Utilisé pour flanquer, éclairer ou harceler. Faible en combat direct mais utile en soutien."

@@ -1,0 +1,60 @@
+name: "Chasseur"
+type: "Combattant / Soldat polyvalent"
+faction: "Variable"
+alignement: "variable"
+description: "Combattant polyvalent et tactique. Formation militaire complète avec spécialisation en armes à distance et combat tactique. Archétype du soldat professionnel équilibré entre mobilité et puissance de feu."
+
+# Base statistics
+base_stats:
+  health: 50
+  speed: 5
+
+# Innate resistances
+innate_resistances:
+  RMEC: 2
+  RRAD: 1
+  RINT: 1
+
+# Flux system
+flux_system:
+  reserve: 0
+  per_turn: 0
+  recovery: 0
+
+# Affinities
+affinities:
+  distance: 6
+  melee: 3
+  schools: {}
+  types: {}
+
+# Character stats
+stats:
+  force: 13
+  dexterite: 14
+  constitution: 13
+  intelligence: 11
+  perception: 14
+  precision: 14
+  charisme: 11
+
+# Equipment
+equipment:
+  weapons:
+    - "Fusil d'assaut"
+  armor:
+    - "Armure de plate légère"
+  consumables:
+    - name: "Kit de soins"
+      quantity: 1
+
+# Skills
+skills:
+  - "Tacticien"
+  - "Vétéran"
+
+# Spells
+spells: []
+
+# Gameplay guidance
+gameplay_guide: "Chasseur polyvalent avec bon équilibre entre combat distance et corps-à-corps. Haute Perception et Précision pour combat à distance efficace. Compétences Tacticien et Vétéran donnent expertise tactique. Utilise couverture intelligemment et coordonne avec alliés. Représente soldat professionnel expérimenté."

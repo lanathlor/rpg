@@ -1,0 +1,17 @@
+name: "Fusil automatique de tourelle"
+category: "Arme à distance"
+subcategory: "arme montée"
+type: "fusil automatique"
+cost: "1200 crédits"
+prerequisites:
+  affinity: "A. dist 5"
+stats:
+  damage: "2d6"
+  attack_type: "tir à distance (PRE)"
+  defense_type: "esquive (DEX)"
+special_effects:
+  - "Système de visée automatisée"
+  - "Tir en rafales contrôlées"
+  - "Stabilisation gyroscopique"
+  - "Dégâts de type RMEC (cinétique)"
+description: "Fusil automatique intégré aux tourelles défensives Aceras. Système de visée assistée par IA permettant un tir précis et continu. Alimentation par bande de munitions pour tir soutenu."

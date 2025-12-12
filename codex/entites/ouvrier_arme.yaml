@@ -1,0 +1,57 @@
+name: "Ouvrier armé"
+type: "Civil / Combattant improvisé"
+faction: "Variable"
+alignement: "variable"
+description: "Travailleur industriel qui a pris les armes pour défendre sa communauté. Sans formation militaire formelle mais déterminé et connaît bien son territoire. Équipé d'armes de fortune ou récupérées."
+
+# Base statistics
+base_stats:
+  health: 45
+  speed: 5
+
+# Innate resistances
+innate_resistances:
+  RMEC: 1
+  RRAD: 0
+  RINT: 0
+
+# Flux system
+flux_system:
+  reserve: 0
+  per_turn: 0
+  recovery: 0
+
+# Affinities
+affinities:
+  distance: 4
+  melee: 4
+  schools: {}
+  types: {}
+
+# Character stats
+stats:
+  force: 13
+  dexterite: 12
+  constitution: 13
+  intelligence: 10
+  perception: 12
+  precision: 11
+  charisme: 10
+
+# Equipment
+equipment:
+  weapons:
+    - "Fusil d'assaut"
+  armor:
+    - "Armure de cuir renforcée"
+  consumables: []
+
+# Skills
+skills:
+  - "Combattant"
+
+# Spells
+spells: []
+
+# Gameplay guidance
+gameplay_guide: "Ouvrier qui défend sa communauté. Pas de formation militaire mais déterminé et connaît le terrain. Combat avec courage mais manque de discipline tactique. Dangereux en nombre et sur leur territoire. Utilisent couverture et positions défensives."

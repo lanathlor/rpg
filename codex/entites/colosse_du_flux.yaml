@@ -1,0 +1,109 @@
+name: "Colosse du Flux"
+type: "Boss / Créature arcanotechnique"
+faction: "Hostile"
+alignement: "Neutre (contrôlé par source de Flux)"
+description: "Entité hybride végétal/chair créée ou transformée par une source de Flux puissante. Forme humanoïde massive de 3 mètres de haut, racines et chair fusionnées de manière grotesque. Yeux luminescents verdâtres. Possède des capacités bioarcanotechniques et biométaboliques avancées. Gardien implacable de sa source de pouvoir."
+
+# Base statistics
+base_stats:
+  health: 230
+  speed: 5
+
+# Innate resistances
+innate_resistances:
+  RMEC: 9
+  RRAD: 5
+  RINT: 14
+
+# Flux system
+flux_system:
+  reserve: 30
+  per_turn: 9
+  recovery: 9
+
+# Affinities
+affinities:
+  distance: 0
+  melee: 6
+  schools:
+    bioarcanotechnique: 10
+    biometabolique: 8
+  types:
+    alteration: 5
+    affliction: 5
+    amelioration: 7
+
+# Character stats
+stats:
+  force: 18
+  dexterite: 15
+  constitution: 18
+  intelligence: 14
+  perception: 17
+  precision: 14
+  charisme: 10
+
+# Equipment
+equipment:
+  weapons: []
+  armor: []
+  consumables: []
+
+# Skills
+skills:
+  - "Guerrier"
+  - "Régénération"
+  - "Contrôle végétal"
+  - "Vétéran"
+  - "Armure vivante"
+  - "Résistance toxique"
+
+# Spells
+spells:
+  - series: "Drain vital"
+    level: "2"
+  - series: "Spores hallucinogènes"
+    level: "2"
+  - series: "Mur de racines"
+    level: "2"
+  - series: "Croissance accélérée"
+    level: "1"
+  - series: "Corruption du Flux"
+    level: "1"
+
+# Gameplay guidance
+gameplay_guide: |
+  BOSS EXTRÊME (~500 points) - Créature hybride végétal/chair massif
+
+  SD (varie selon type d'attaque) :
+  - vs Lourde/2 mains (FOR): 19
+  - vs Légère/1 main (DEX): 17-18
+  - vs Distance (PRE): 17
+  - vs Arcanotechnique (INT): 17
+
+  COMPÉTENCES SPÉCIALES :
+  - Guerrier (S-tier) : Peut attaquer DEUX FOIS par tour avec racines
+  - Régénération (A-tier) : 10 PV/tour si connecté aux racines
+  - Contrôle végétal (A-tier) : Commande racines et vignes dans 10m
+  - Vétéran : Résiste aux effets de contrôle
+  - Armure vivante (A-tier) : Sacrifie racines pour bloquer attaques
+  - Résistance toxique : Immunité poison/maladie
+
+  CAPACITÉS ARCANOTECHNIQUES :
+  - Drain de vie (8 Flux) : 3d8 RINT, récupère moitié en PV
+  - Spores hallucinogènes (10 Flux) : CON save 17 ou hallucinations
+  - Mur de racines (12 Flux) : Crée barrière vivante
+  - Croissance accélérée (6 Flux) : Régénère racines endommagées
+  - Corruption du Flux (15 Flux) : Tentative contrôle mental
+
+  ATTAQUES :
+  - Racines/tentacules : 2d10+5 RMEC, portée 3m (×2 avec Guerrier)
+  - Drain de vie : 3d8 RINT, heal moitié
+  - Spores : Zone 5m, CON save 17
+
+  PHASES DE COMBAT :
+  Phase 1 (230-150 PV) : Distance, racines et spores, régénération active
+  Phase 2 (150-75 PV) : Agressif, drain de vie, contrôle mental
+  Phase 3 (<75 PV) : Berserk, sacrifie défense pour dégâts, double attaques
+
+notes: "Boss majeur pour fin de scénario. Extrêmement puissant avec régénération, multiple attaques, et contrôle du terrain. Nécessite groupe coordonné niveau 3-4 minimum. Combat en phases avec tactiques changeantes. Immunité poison/maladie. Vulnérable au feu (sépare chair et végétal)."

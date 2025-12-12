@@ -1,0 +1,25 @@
+spell_series: "Analyse tactique"
+description_base: "Scan cybernétique des ennemis pour identifier leurs points faibles. Affichage holographique de données tactiques."
+
+school: lumiere
+type: amelioration
+
+levels:
+  - level: "1"
+    name: "Analyse tactique"
+
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[lumiere]: 2"
+        type_requirement: "A.Type[amelioration]: 2"
+
+    conditions:
+      intelligence_required: 14
+      flux_cost: 6
+
+    effects:
+      special: "Révèle les résistances et faiblesses d'une cible. Les alliés obtiennent Avantage sur leur prochain jet d'attaque contre cette cible."
+
+    duration: "3 tours"
+
+    recharge_time: "3 sec"

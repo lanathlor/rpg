@@ -1,0 +1,64 @@
+name: "Commandante de la Résistance"
+type: "Leader / Commandante"
+faction: "Résistance anti-impériale"
+alignement: "Variable (souvent chaotique)"
+description: "Commandante charismatique d'une cellule de résistance. Tacticienne brillante et tireuse d'élite. Leader expérimentée avec formation militaire complète. Prête à prendre des décisions difficiles pour la cause."
+
+# Base statistics
+base_stats:
+  health: 70
+  speed: 4
+
+# Innate resistances
+innate_resistances:
+  RMEC: 6
+  RRAD: 3
+  RINT: 4
+
+# Flux system
+flux_system:
+  reserve: 0
+  per_turn: 0
+  recovery: 0
+
+# Affinities
+affinities:
+  distance: 8
+  melee: 3
+  schools: {}
+  types: {}
+
+# Character stats
+stats:
+  force: 13
+  dexterite: 16
+  constitution: 16
+  intelligence: 14
+  perception: 15
+  precision: 16
+  charisme: 15
+
+# Equipment
+equipment:
+  weapons:
+    - "Fusil de précision"
+  armor:
+    - "Armure légère tactique"
+  consumables:
+    - name: "Kit de soins"
+      quantity: 1
+
+# Skills
+skills:
+  - "Tacticienne"
+  - "Tir de précision"
+  - "Vétéran"
+  - "Leadership"
+
+# Spells
+spells: []
+
+# Gameplay guidance
+gameplay_guide: "Commandante de résistance : leader tactique et tireuse d'élite. Tacticienne exceptionnelle avec +2 Initiative et capacité de coordonner alliés. Tir de précision donne +3 aux jets de Précision. Combat à distance, reste en arrière avec protection (gardes du corps). Haute Dextérité et Précision (16) pour tirs mortels. Leadership inspire les alliés. ~230 points."
+
+notes: "Archétype pour commandantes de la résistance. Peut être personnalisée avec nom, motivations et équipement spécial selon scénario (ex: détonateur, communicateur encrypté, etc.)."

@@ -8,39 +8,37 @@ image: "images/entites/garde_empire.png"
 
 # Base statistics
 base_stats:
-  health: 35
+  health: 48
   speed: 5
 
 # Innate resistances
 innate_resistances:
-  RMEC: 1
-  RRAD: 0
+  RMEC: 2
+  RRAD: 1
   RINT: 0
 
 # Flux system
 flux_system:
-  reserve: 2
-  per_turn: 1
-  recovery: 1
+  reserve: 0
+  per_turn: 0
+  recovery: 0
 
-# Affinities
+# Affinities (fusil mitrailleur = distance weapon)
 affinities:
-  distance: 6
+  distance: 8
   melee: 2
-  schools:
-    feu: 0
-  types:
-    destruction: 1
+  schools: {}
+  types: {}
 
 # Character stats
 stats:
-  force: 12
-  dexterite: 11
-  constitution: 13
-  intelligence: 10
-  perception: 11
-  precision: 13
-  charisme: 9
+  force: 14
+  dexterite: 13
+  constitution: 15
+  intelligence: 11
+  perception: 13
+  precision: 15
+  charisme: 10
 
 # Equipment (references to codex items)
 equipment:

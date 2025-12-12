@@ -1,0 +1,23 @@
+spell_series: "Régénération protocolaire"
+description_base: "Activation d'un protocole cybernétique de régénération cellulaire accélérée. Des nano-machines injectent des agents réparateurs dans le système sanguin."
+
+school: bioarcanotechnique
+type: amelioration
+
+levels:
+  - level: "1"
+    name: "Régénération protocolaire"
+
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[bioarcanotechnique]: 3"
+        type_requirement: "A.Type[amelioration]: 3"
+
+    conditions:
+      intelligence_required: 14
+      flux_cost: 8
+
+    effects:
+      special: "Soigne 25 PV immédiatement. Auto-ciblage uniquement."
+
+    recharge_time: "3 sec"

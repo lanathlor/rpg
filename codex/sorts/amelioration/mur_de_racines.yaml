@@ -1,0 +1,59 @@
+spell_series: "Mur de racines"
+description_base: "Fait surgir du sol un mur épais de racines vivantes et entrelacées, créant une barrière défensive."
+
+school: bioarcanotechnique
+type: amelioration
+
+levels:
+  - level: "1"
+    name: "Mur de racines"
+
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[bioarcanotechnique]: 5"
+        type_requirement: "A.Type[amelioration]: 4"
+        mixed_requirement: "A.École[bioarcanotechnique] + A.Type[amelioration]: 12"
+
+    conditions:
+      intelligence_required: 14
+      flux_cost: 12
+
+    effects:
+      barrier: "Crée un mur de racines de 5m de long et 3m de haut"
+      special: "Le mur possède 50 PV et bloque la ligne de vue"
+      specials:
+        - "RMEC +8 contre attaques traversant le mur"
+        - "Les racines peuvent agripper (jets de Force DD 15 pour passer)"
+        - "Le mur se régénère de 5 PV par tour si le lanceur est à proximité"
+
+    timing:
+      casting_time: "1 action"
+      duration: "5 tours ou jusqu'à destruction"
+      range: "10m"
+
+  - level: "2"
+    name: "Mur de racines renforcé"
+
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[bioarcanotechnique]: 8"
+        type_requirement: "A.Type[amelioration]: 6"
+        mixed_requirement: "A.École[bioarcanotechnique] + A.Type[amelioration]: 17"
+
+    conditions:
+      intelligence_required: 16
+      flux_cost: 18
+
+    effects:
+      barrier: "Crée un mur de racines de 10m de long et 5m de haut"
+      special: "Le mur possède 100 PV et bloque complètement la ligne de vue"
+      specials:
+        - "RMEC +12 contre attaques traversant le mur"
+        - "Les racines agrippent et retiennent (jets de Force DD 18 pour se libérer)"
+        - "Le mur se régénère de 10 PV par tour automatiquement"
+        - "Les racines peuvent attaquer (1d8+4 RMEC) les cibles adjacentes sur commande"
+
+    timing:
+      casting_time: "1 action"
+      duration: "8 tours ou jusqu'à destruction"
+      range: "15m"

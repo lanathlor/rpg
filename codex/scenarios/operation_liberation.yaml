@@ -98,25 +98,28 @@ npcs:
     - name: 'Colonel Dax Varen'
       role: 'Commandant impérial / Donneur de mission'
       description: "Officier vétéran (52 ans), cicatrices de guerre, regard dur. Coordonne l'offensive depuis le vaisseau de commandement en orbite."
-      stats_reference: 'Chasseur (~240 points) - Ne participe pas au combat terrain'
+      entity_base: 'chasseur'
+      notes: 'Ne participe pas au combat terrain'
       motivations: "Reprendre Helion-IV avec un minimum de pertes. Compte sur l'escouade pour éliminer Vex'kral et permettre l'offensive."
 
     - name: 'Sergent Kira Thale'
       role: 'Spécialiste démolition / Allié temporaire'
       description: "Soldate impériale (28 ans), experte en explosifs. Peut rejoindre l'escouade pour le sabotage de la station de communication."
-      stats_reference: 'Chasseur (~220 points) - Spécialisation explosifs'
+      entity_base: 'chasseur'
+      notes: 'Spécialisation explosifs'
       motivations: "Faire sauter des trucs. Venger les civils d'Helion-IV. Professionnalisme militaire absolu."
 
     - name: 'Dr. Elara Morell'
       role: "Civile prisonnière / Témoin de l'occupation"
       description: 'Médecin locale (34 ans), retenue dans le camp de prisonniers. Peut fournir des informations sur les mouvements Aceras si libérée.'
-      stats_reference: 'Civil (compétences médicales)'
+      entity_base: 'civil'
+      notes: 'Civil non-combattant avec compétences médicales'
       motivations: 'Survivre. Aider la résistance locale. Soigner les blessés des deux camps (idéalisme médical).'
 
     - name: "Capitaine Vex'kral"
       role: 'Boss final / Commandant Aceras'
       description: "Officier Aceras (équivalent 45 ans humains), exosquelette lourd, multiples augmentations cybernétiques. Tacticien brillant et combattant redoutable. Méprise les humains qu'il considère comme faibles."
-      stats_reference: 'Boss Aceras (~280 points) - Armure lourde, armes intégrées'
+      entity_base: 'commandant_aceras'
       motivations: "Maintenir l'occupation d'Helion-IV. Prouver la supériorité militaire Aceras. Éliminer les forces impériales avec efficacité brutale."
 
 encounters:
@@ -128,10 +131,10 @@ encounters:
       enemies:
           - name: 'Soldat Aceras'
             count: 6
-            stats_reference: 'Chasseur (~200 points) - Fusil à plasma, armure moyenne'
+            entity_base: 'soldat_aceras'
           - name: 'Drone de reconnaissance Aceras'
             count: 2
-            stats_reference: 'Drone (~90 points) - Arme légère, vision thermique'
+            entity_base: 'drone_reconnaissance_aceras'
       tactics: 'Les Aceras avancent en formation. Les drones flanquent et repèrent. Combattants disciplinés mais prévisibles.'
       rewards:
           - 'Armes Aceras récupérables (fusils à plasma)'
@@ -146,13 +149,10 @@ encounters:
       enemies:
           - name: 'Transport blindé Aceras'
             count: 1
-            stats_reference: |
-                Véhicule (~250 points structure)
-                Blindage lourd, canon à plasma monté
-                Peut transporter 8 soldats
-          - name: "Soldat Aceras d'élite"
+            entity_base: 'transport_blinde_leger_aceras'
+          - name: 'Veteran Aceras'
             count: 4
-            stats_reference: 'Chasseur (~210 points) - Armure renforcée'
+            entity_base: 'soldat_elite_aceras'
       challenges:
           - 'Le véhicule a un blindage lourd (RMEC +10)'
           - 'Canon à plasma dangereux (3d8 dégâts RRAD, zone)'
@@ -171,10 +171,10 @@ encounters:
       enemies:
           - name: 'Gardien Aceras'
             count: 4
-            stats_reference: 'Chasseur (~190 points)'
+            entity_base: 'soldat_aceras'
           - name: 'Tourelle automatique'
             count: 2
-            stats_reference: 'Système défensif (~120 points) - Vision à 360°'
+            entity_base: 'tourelle_automatique_legere'
       challenges:
           - 'Libérer les prisonniers sans les tuer (feu croisé dangereux)'
           - 'Désactiver les tourelles (Hacker ou destruction ciblée)'
@@ -201,10 +201,10 @@ encounters:
       enemies:
           - name: 'Technicien Aceras'
             count: 2
-            stats_reference: 'Civil armé (~150 points)'
+            entity_base: 'technicien_aceras'
           - name: "Garde d'élite"
             count: 3
-            stats_reference: 'Chasseur (~210 points)'
+            entity_base: 'soldat_elite_aceras'
       rewards:
           - "Communications Aceras coupées (Vex'kral ne peut appeler de renforts)"
           - "Confusion dans les rangs ennemis (-2 Initiative pour les Aceras lors de l'assaut final)"
@@ -218,13 +218,13 @@ encounters:
       enemies:
           - name: 'Garde royal Aceras'
             count: 6
-            stats_reference: 'Chasseur (~230 points) - Armure lourde, armes énergétiques'
+            entity_base: 'soldat_elite_aceras'
           - name: 'Tourelle défensive lourde'
             count: 3
-            stats_reference: 'Système défensif (~150 points) - Canon rotatif'
+            entity_base: 'tourelle_defensive_lourde'
           - name: 'Drone de combat lourd'
             count: 2
-            stats_reference: 'Drone militaire (~130 points) - Bouclier énergétique'
+            entity_base: 'drone_combat_lourd_aceras'
       challenges:
           - 'Désactiver le bouclier de la porte (Hacker diff. 18 ou explosifs lourds)'
           - 'Neutraliser les tourelles (tirs ciblés sur générateurs ou EMP)'
@@ -246,48 +246,11 @@ encounters:
       enemies:
           - name: "Capitaine Vex'kral"
             count: 1
-            stats_reference: |
-                BOSS ACERAS (~500 points) - Proper point-buy calculation
-                PV: 180, Vitesse: 5, Flux: 25 (régén 7/tour)
-                RMEC: +8, RRAD: +6, RINT: +4
-
-                SD (varie selon type d'attaque, dérivé des stats):
-                - vs Lourde/2 mains (FOR): 19
-                - vs Légère/1 main (DEX): 18
-                - vs Distance (PRE): 17-18
-                - vs Arcanotechnique (INT): 18
-
-                Statistiques :
-                Force: 18, Dextérité: 16, Constitution: 18, Intelligence: 16, Perception: 16, Précision: 15, Charisme: 13
-
-                Affinités : A.CAC 8, A.Distance 8, École Bioarcanotechnique 4, Type Amélioration 4, Protection 3
-
-                Équipement : Exosquelette de guerre Aceras, Canon à plasma lourd, Lames énergétiques jumelles, Bouclier énergétique régénérant, Systèmes de ciblage
-
-                Compétences :
-                - Guerrier (S-tier) : Peut attaquer DEUX FOIS par tour au corps à corps
-                - Course (A-tier) : Déplacement ×2 (10m par tour)
-                - Tacticien (enhanced) : +2 Initiative, 1/combat impose Désavantage à un jet ennemi
-                - Vétéran : Résiste aux effets de contrôle, +1 jets de sauvegarde
-
-                Capacités arcanotechniques (utilise Flux) :
-                - Régénération protocolaire (8 Flux) : Soigne 25 PV
-                - Surcharge plasma (10 Flux) : +3d6 dégâts à la prochaine attaque
-                - Analyse tactique (6 Flux) : Révèle les faiblesses ennemies
-                - Bouclier renforcé (12 Flux) : +5 toutes résistances pendant 3 tours
-
-                Attaques :
-                - Canon à plasma : 3d8+4 RRAD, portée moyenne, recharge 2 tours
-                - Lames énergétiques : 2d8+5 RMEC, corps à corps (×2 avec Guerrier)
-
-                Phases de combat :
-                - Phase 1 (180-90 PV) : Distance, canon à plasma, mobilité tactique
-                - Phase 2 (90-50 PV) : Mixte, alterne tirs et mêlée selon situation
-                - Phase 3 (<50 PV) : Corps à corps agressif, double attaques, utilise régénération
+            entity_base: 'commandant_aceras'
 
           - name: "Garde d'honneur Aceras"
             count: 2
-            stats_reference: "Chasseur (~230 points) - Protègent Vex'kral au début"
+            entity_base: 'soldat_elite_aceras'
 
       tactics: |
           PHASE 1 (180-90 PV) : Vex'kral reste à distance, utilise canon à plasma et mobilité. Les gardes protègent ses flancs. Analyse les joueurs.

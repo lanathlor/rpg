@@ -1,0 +1,17 @@
+name: "Fusil à plasma"
+category: "Arme à distance"
+subcategory: "arme à deux mains"
+type: "fusil énergétique"
+cost: "2400 crédits"
+prerequisites:
+  affinity: "A. dist 6"
+stats:
+  damage: "2d6+3"
+  attack_type: "tir à distance (PRE)"
+  defense_type: "esquive (DEX)"
+special_effects:
+  - "Projectiles de plasma ionisé"
+  - "Recharge 1 tour entre rafales"
+  - "Dégâts de type RRAD (thermique)"
+  - "Peut être monté sur drone de combat"
+description: "Fusil à plasma standard de l'armée Aceras. Tire des projectiles de plasma ionisé à haute température. Équilibre parfait entre puissance de feu et maniabilité. Fréquemment monté sur les drones de combat lourds."

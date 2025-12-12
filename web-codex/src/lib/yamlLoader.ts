@@ -146,6 +146,11 @@ export class YamlLoader {
                 return null
               }
             }
+            // Add id field to entities based on filename (without .yaml extension)
+            if (category === 'entites' || category === 'classes') {
+              const id = file.replace(/\.yaml$/, '')
+              ;(content as any).id = id
+            }
             return content as CodexItem
           }
           return null

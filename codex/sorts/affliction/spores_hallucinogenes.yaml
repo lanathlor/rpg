@@ -1,0 +1,57 @@
+spell_series: "Spores hallucinogènes"
+description_base: "Libère un nuage de spores bioarcanotechniques causant des hallucinations chez ceux qui les respirent."
+
+school: bioarcanotechnique
+type: affliction
+
+levels:
+  - level: "1"
+    name: "Spores hallucinogènes"
+
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[bioarcanotechnique]: 4"
+        type_requirement: "A.Type[affliction]: 3"
+        mixed_requirement: "A.École[bioarcanotechnique] + A.Type[affliction]: 10"
+
+    conditions:
+      intelligence_required: 14
+      flux_cost: 10
+
+    effects:
+      area: "Zone de 5m de rayon"
+      resistance: "RINT"
+      debuff: "-2 aux jets de Perception et d'attaque"
+      special: "Les cibles touchées subissent des hallucinations pendant 3 tours et peuvent attaquer des alliés"
+      duration: "3 tours"
+
+    timing:
+      casting_time: "1 action"
+      duration: "3 tours"
+      range: "15m"
+
+  - level: "2"
+    name: "Spores hallucinogènes majeures"
+
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[bioarcanotechnique]: 7"
+        type_requirement: "A.Type[affliction]: 5"
+        mixed_requirement: "A.École[bioarcanotechnique] + A.Type[affliction]: 15"
+
+    conditions:
+      intelligence_required: 16
+      flux_cost: 15
+
+    effects:
+      area: "Zone de 8m de rayon"
+      resistance: "RINT"
+      debuff: "-3 aux jets de Perception, d'attaque et tous les jets"
+      damage: "1d6 par tour"
+      special: "Les cibles touchées subissent des hallucinations violentes pendant 5 tours et doivent attaquer la créature la plus proche"
+      duration: "5 tours"
+
+    timing:
+      casting_time: "1 action"
+      duration: "5 tours"
+      range: "20m"

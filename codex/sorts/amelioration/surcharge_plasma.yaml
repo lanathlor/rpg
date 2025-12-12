@@ -1,0 +1,25 @@
+spell_series: "Surcharge plasma"
+description_base: "Surchauffe les systèmes d'arme énergétique pour augmenter drastiquement la puissance du prochain tir. Lueur intense et crépitement d'énergie."
+
+school: feu
+type: amelioration
+
+levels:
+  - level: "1"
+    name: "Surcharge plasma"
+
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[feu]: 2"
+        type_requirement: "A.Type[amelioration]: 3"
+
+    conditions:
+      intelligence_required: 13
+      flux_cost: 10
+
+    effects:
+      special: "La prochaine attaque à distance inflige +3d6 dégâts RRAD supplémentaires. Doit être utilisé dans les 2 tours suivants ou l'effet se dissipe."
+
+    duration: "2 tours (jusqu'à utilisation)"
+
+    recharge_time: "2 sec"

@@ -1,0 +1,17 @@
+name: "Lames énergétiques"
+category: "Arme de corps à corps"
+subcategory: "1 main"
+type: "lames jumelées"
+cost: "2800 crédits"
+prerequisites:
+  affinity: "A. CAC 8"
+stats:
+  damage: "2d8+5"
+  off_hand_damage: "1d8+2"
+  attack_type: "attaque rapide (DEX) ou attaque lourde (FOR)"
+  defense_type: "parade (FOR) ou esquive (DEX)"
+special_effects:
+  - "Paire de lames énergétiques"
+  - "Double attaque avec compétence Guerrier"
+  - "Dégâts de type RMEC (cinétique)"
+description: "Paire de lames à haute fréquence utilisées par les commandants Aceras d'élite. Extrêmement létales au corps à corps."

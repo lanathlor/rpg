@@ -1,0 +1,53 @@
+spell_series: "Corruption du Flux"
+description_base: "Tente de corrompre l'esprit d'une cible en infiltrant son réseau neural avec du Flux bioarcanotechnique corrompu, établissant un contrôle mental temporaire."
+
+school: bioarcanotechnique
+type: alteration
+
+levels:
+  - level: "1"
+    name: "Corruption du Flux"
+
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[bioarcanotechnique]: 7"
+        type_requirement: "A.Type[alteration]: 5"
+        mixed_requirement: "A.École[bioarcanotechnique] + A.Type[alteration]: 15"
+
+    conditions:
+      intelligence_required: 16
+      flux_cost: 15
+
+    effects:
+      resistance: "RINT"
+      special: "Contrôle mental d'une créature pendant 2 tours. La cible obéit aux ordres mentaux. Le contrôle se brise si la cible subit des dégâts. Moins efficace contre Intelligence élevée ou compétence Vétéran"
+      duration: "2 tours (concentration)"
+
+    timing:
+      casting_time: "1 action"
+      duration: "2 tours (concentration)"
+      range: "10m"
+
+  - level: "2"
+    name: "Corruption du Flux majeure"
+
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[bioarcanotechnique]: 10"
+        type_requirement: "A.Type[alteration]: 7"
+        mixed_requirement: "A.École[bioarcanotechnique] + A.Type[alteration]: 20"
+
+    conditions:
+      intelligence_required: 18
+      flux_cost: 22
+
+    effects:
+      resistance: "RINT"
+      targets: "Jusqu'à 2 créatures"
+      special: "Contrôle mental complet pendant 4 tours. Les cibles obéissent à tous ordres, même suicidaires. Le contrôle persiste malgré les dégâts. Ignore partiellement Vétéran"
+      duration: "4 tours (concentration)"
+
+    timing:
+      casting_time: "1 action"
+      duration: "4 tours (concentration)"
+      range: "15m"

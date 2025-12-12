@@ -1,0 +1,59 @@
+name: "Saboteur armé"
+type: "Combattant / Résistant"
+faction: "Résistance anti-impériale"
+alignement: "hostile"
+description: "Membre armé d'une cellule de résistance. Formation militaire basique, équipement léger, déterminé mais moins expérimenté que les soldats professionnels. Combat pour une cause idéologique contre l'Empire."
+
+# Base statistics
+base_stats:
+  health: 45
+  speed: 5
+
+# Innate resistances
+innate_resistances:
+  RMEC: 1
+  RRAD: 0
+  RINT: 1
+
+# Flux system
+flux_system:
+  reserve: 0
+  per_turn: 0
+  recovery: 0
+
+# Affinities
+affinities:
+  distance: 5
+  melee: 2
+  schools: {}
+  types: {}
+
+# Character stats
+stats:
+  force: 12
+  dexterite: 13
+  constitution: 12
+  intelligence: 10
+  perception: 12
+  precision: 13
+  charisme: 10
+
+# Equipment
+equipment:
+  weapons:
+    - "Fusil d'assaut"
+  armor:
+    - "Gilet pare-balles léger"
+  consumables:
+    - name: "Kit de soins"
+      quantity: 1
+
+# Skills
+skills:
+  - "Tacticien"
+
+# Spells
+spells: []
+
+# Gameplay guidance
+gameplay_guide: "Combattant de résistance avec formation militaire basique. Utilise couverture et tactiques de guérilla. Moins discipliné que les soldats impériaux mais motivé par sa cause. Préfère le combat à distance. Fuit si débordé ou isolé. Dangereux en groupe coordonné."

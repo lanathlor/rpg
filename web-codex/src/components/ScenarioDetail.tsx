@@ -1,7 +1,14 @@
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Separator } from '@/components/ui/separator'
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from '@/components/ui/dialog'
 import type { Scenario } from '@/types/scenarios'
+import type { Entity } from '@/types'
 import {
   Map,
   Clock,
@@ -21,6 +28,9 @@ import {
   CheckCircle,
 } from 'lucide-react'
 import { useState } from 'react'
+import { useEntities, useWeapons, useArmors, useSkills, useConsumables } from '@/lib/dataProvider'
+import { EntityDetail } from '@/components/EntityDetail'
+import { calculateTotalPointBuy } from '@/lib/pointBuyCalculator'
 
 interface ScenarioDetailProps {
   scenario: Scenario
@@ -57,8 +67,14 @@ const getEncounterTypeIcon = (type: string) => {
 }
 
 export function ScenarioDetail({ scenario }: ScenarioDetailProps) {
+  const { entities } = useEntities()
+  const { weapons } = useWeapons()
+  const { armors } = useArmors()
+  const { skills } = useSkills()
+  const { consumables } = useConsumables()
   const [expandedActs, setExpandedActs] = useState<Set<string>>(new Set())
   const [gmNotesExpanded, setGmNotesExpanded] = useState(false)
+  const [selectedEntity, setSelectedEntity] = useState<{entity: Entity, displayName: string} | null>(null)
 
   const toggleAct = (actId: string) => {
     const newExpanded = new Set(expandedActs)
@@ -68,6 +84,50 @@ export function ScenarioDetail({ scenario }: ScenarioDetailProps) {
       newExpanded.add(actId)
     }
     setExpandedActs(newExpanded)
+  }
+
+  // Find entity by base name
+  const findEntityByBase = (baseName: string) => {
+    return entities.find(entity => {
+      // First try to match by ID (filename without .yaml)
+      if (entity.id && entity.id === baseName) {
+        return true
+      }
+      // Fall back to slugified name matching for backward compatibility
+      const slug = (entity.name || '').toLowerCase()
+        .replace(/\s+/g, '_')
+        .replace(/[àáâãäå]/g, 'a')
+        .replace(/[èéêë]/g, 'e')
+        .replace(/[ìíîï]/g, 'i')
+        .replace(/[òóôõö]/g, 'o')
+        .replace(/[ùúûü]/g, 'u')
+        .replace(/[ç]/g, 'c')
+        .replace(/[^a-z0-9_]/g, '')
+      return slug === baseName || entity.name === baseName
+    })
+  }
+
+  // Calculate points for an entity
+  const getEntityPoints = (entityBase: string): number => {
+    const entity = findEntityByBase(entityBase)
+    if (!entity) return 0
+
+    const breakdown = calculateTotalPointBuy(
+      entity,
+      weapons,
+      armors,
+      skills,
+      consumables
+    )
+    return breakdown.total
+  }
+
+  // Open entity detail popup
+  const openEntityDetail = (entityBase: string, displayName: string) => {
+    const entity = findEntityByBase(entityBase)
+    if (entity) {
+      setSelectedEntity({ entity, displayName })
+    }
   }
 
   return (
@@ -253,14 +313,29 @@ export function ScenarioDetail({ scenario }: ScenarioDetailProps) {
             {scenario.npcs.map((npc, idx) => (
               <Card key={idx}>
                 <CardHeader>
-                  <CardTitle className="text-base">{npc.name}</CardTitle>
+                  {npc.entity_base ? (
+                    <CardTitle
+                      className="text-base underline cursor-pointer hover:text-primary transition-colors"
+                      onClick={() => openEntityDetail(npc.entity_base!, npc.name)}
+                    >
+                      {npc.name}
+                    </CardTitle>
+                  ) : (
+                    <CardTitle className="text-base">{npc.name}</CardTitle>
+                  )}
                   <CardDescription>{npc.role}</CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-2 text-sm">
                   {npc.description && (
                     <p className="text-muted-foreground">{npc.description}</p>
                   )}
-                  {npc.stats_reference && (
+                  {npc.notes && (
+                    <div className="flex items-start gap-2">
+                      <BookOpen className="h-4 w-4 mt-0.5" />
+                      <span className="text-muted-foreground italic">{npc.notes}</span>
+                    </div>
+                  )}
+                  {npc.stats_reference && !npc.entity_base && (
                     <div className="flex items-center gap-2">
                       <Shield className="h-4 w-4" />
                       <span className="font-medium">Stats : {npc.stats_reference}</span>
@@ -318,17 +393,47 @@ export function ScenarioDetail({ scenario }: ScenarioDetailProps) {
 
                   {encounter.enemies && encounter.enemies.length > 0 && (
                     <div>
-                      <h4 className="font-semibold mb-2">Ennemis :</h4>
+                      <div className="flex items-center justify-between mb-2">
+                        <h4 className="font-semibold">Ennemis :</h4>
+                        {encounter.enemies.some(e => e.entity_base) && (
+                          <span className="text-sm font-medium text-primary">
+                            Total: {encounter.enemies.reduce((sum, e) => {
+                              const points = e.entity_base ? getEntityPoints(e.entity_base) : 0
+                              return sum + points * e.count
+                            }, 0)} pts
+                          </span>
+                        )}
+                      </div>
                       <ul className="space-y-1">
-                        {encounter.enemies.map((enemy, eidx) => (
-                          <li key={eidx} className="flex items-center gap-2">
-                            <Shield className="h-3 w-3 text-muted-foreground" />
-                            <span>{enemy.count}x {enemy.name}</span>
-                            {enemy.stats_reference && (
-                              <span className="text-muted-foreground text-xs">({enemy.stats_reference})</span>
-                            )}
-                          </li>
-                        ))}
+                        {encounter.enemies.map((enemy, eidx) => {
+                          const enemyPoints = enemy.entity_base ? getEntityPoints(enemy.entity_base) : 0
+                          return (
+                            <li key={eidx} className="flex items-center gap-2">
+                              <Shield className="h-3 w-3 text-muted-foreground" />
+                              <span>
+                                {enemy.count}x{' '}
+                                {enemy.entity_base ? (
+                                  <span
+                                    className="underline cursor-pointer hover:text-primary transition-colors"
+                                    onClick={() => openEntityDetail(enemy.entity_base!, enemy.name)}
+                                  >
+                                    {enemy.name}
+                                  </span>
+                                ) : (
+                                  enemy.name
+                                )}
+                                {enemyPoints > 0 && (
+                                  <span className="text-muted-foreground text-xs ml-1">
+                                    ({enemyPoints} pts{enemy.count > 1 ? ` × ${enemy.count} = ${enemyPoints * enemy.count} pts` : ''})
+                                  </span>
+                                )}
+                              </span>
+                              {enemy.stats_reference && !enemy.entity_base && (
+                                <span className="text-muted-foreground text-xs">({enemy.stats_reference})</span>
+                              )}
+                            </li>
+                          )
+                        })}
                       </ul>
                     </div>
                   )}
@@ -374,7 +479,45 @@ export function ScenarioDetail({ scenario }: ScenarioDetailProps) {
                         <AlertCircle className="h-4 w-4" />
                         En cas d'échec :
                       </h4>
-                      <p className="text-muted-foreground">{encounter.failure_consequence}</p>
+                      {typeof encounter.failure_consequence === 'string' ? (
+                        <p className="text-muted-foreground">{encounter.failure_consequence}</p>
+                      ) : (
+                        <div className="space-y-2">
+                          {encounter.failure_consequence.description && (
+                            <p className="text-muted-foreground">{encounter.failure_consequence.description}</p>
+                          )}
+                          {encounter.failure_consequence.enemies && encounter.failure_consequence.enemies.length > 0 && (
+                            <ul className="space-y-1 mt-2">
+                              {encounter.failure_consequence.enemies.map((enemy: any, eidx: number) => {
+                                const enemyPoints = enemy.entity_base ? getEntityPoints(enemy.entity_base) : 0
+                                return (
+                                  <li key={eidx} className="flex items-center gap-2">
+                                    <Shield className="h-3 w-3 text-muted-foreground" />
+                                    <span>
+                                      {enemy.count}x{' '}
+                                      {enemy.entity_base ? (
+                                        <span
+                                          className="underline cursor-pointer hover:text-primary transition-colors"
+                                          onClick={() => openEntityDetail(enemy.entity_base!, enemy.name)}
+                                        >
+                                          {enemy.name}
+                                        </span>
+                                      ) : (
+                                        enemy.name
+                                      )}
+                                      {enemyPoints > 0 && (
+                                        <span className="text-muted-foreground text-xs ml-1">
+                                          ({enemyPoints} pts{enemy.count > 1 ? ` × ${enemy.count} = ${enemyPoints * enemy.count} pts` : ''})
+                                        </span>
+                                      )}
+                                    </span>
+                                  </li>
+                                )
+                              })}
+                            </ul>
+                          )}
+                        </div>
+                      )}
                     </div>
                   )}
 
@@ -541,6 +684,21 @@ export function ScenarioDetail({ scenario }: ScenarioDetailProps) {
           {scenario.last_updated && <div>Dernière mise à jour : {scenario.last_updated}</div>}
         </div>
       )}
+
+      {/* Entity Detail Modal */}
+      <Dialog open={!!selectedEntity} onOpenChange={() => setSelectedEntity(null)}>
+        <DialogContent className="max-w-6xl max-h-[90vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle>Détails de l'entité</DialogTitle>
+          </DialogHeader>
+          {selectedEntity && (
+            <EntityDetail
+              entity={selectedEntity.entity}
+              displayName={selectedEntity.displayName}
+            />
+          )}
+        </DialogContent>
+      </Dialog>
     </div>
   )
 }

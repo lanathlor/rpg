@@ -1,0 +1,60 @@
+name: "Gardien sentinelle"
+type: "Garde d'élite"
+faction: "Empire"
+alignement: "neutre"
+description: "Un garde d'élite spécialisé dans la surveillance et la protection d'installations stratégiques. Équipé de systèmes de détection avancés et d'un exosquelette de combat."
+
+# Base statistics
+base_stats:
+  health: 55
+  speed: 5
+
+# Innate resistances
+innate_resistances:
+  RMEC: 3
+  RRAD: 2
+  RINT: 1
+
+# Flux system
+flux_system:
+  reserve: 0
+  per_turn: 0
+  recovery: 0
+
+# Affinities (fusil mitrailleur = distance weapon)
+affinities:
+  distance: 9
+  melee: 2
+  schools: {}
+  types: {}
+
+# Character stats
+stats:
+  force: 14
+  dexterite: 13
+  constitution: 15
+  intelligence: 13
+  perception: 17
+  precision: 16
+  charisme: 11
+
+# Equipment (references to codex items)
+equipment:
+  weapons:
+    - "Fusil mitrailleur"
+  armor:
+    - "Exosquelette de combat"
+  consumables:
+    - name: "Kit de soins"
+      quantity: 2
+
+# Skills (references to codex)
+skills:
+  - "Guerrier"
+  - "À l'affût"
+
+# Spells (if any)
+spells: []
+
+# Gameplay guidance
+gameplay_guide: "Garde d'élite spécialisé dans la surveillance de zones sensibles et d'objets de haute valeur. Très haute perception et équipé pour détecter les intrusions à distance. L'exosquelette de combat offre une excellente protection tout en maintenant la mobilité. Préfère neutraliser les menaces à distance avant qu'elles n'approchent de sa zone de garde."

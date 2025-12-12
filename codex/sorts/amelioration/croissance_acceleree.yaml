@@ -1,0 +1,32 @@
+spell_series: "Croissance accélérée"
+description_base: "Accélère drastiquement la croissance végétale, permettant de régénérer des racines ou plantes endommagées en quelques secondes."
+
+school: bioarcanotechnique
+type: amelioration
+
+levels:
+  - level: "1"
+    name: "Croissance accélérée"
+
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[bioarcanotechnique]: 3"
+        type_requirement: "A.Type[amelioration]: 2"
+        mixed_requirement: "A.École[bioarcanotechnique] + A.Type[amelioration]: 6"
+
+    conditions:
+      intelligence_required: 12
+      flux_cost: 6
+
+    effects:
+      healing: "Régénère structures végétales endommagées"
+      special: "Restaure racines, vignes ou barrières végétales à pleine puissance"
+      specials:
+        - "Peut réparer des dégâts au terrain végétal"
+        - "Restaure les défenses organiques (Mur de racines, Armure vivante, etc.)"
+        - "Les plantes affectées repoussent instantanément"
+
+    timing:
+      casting_time: "1 action"
+      duration: "Instantané"
+      range: "Contact ou 5m"

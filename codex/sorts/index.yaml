@@ -2,9 +2,11 @@ files:
   - affliction/brulure.yaml
   - affliction/drain_vital.yaml
   - affliction/gelure.yaml
+  - affliction/spores_hallucinogenes.yaml
   - alteration/assoupissement.yaml
   - alteration/brouillage.yaml
   - alteration/confusion.yaml
+  - alteration/corruption_du_flux.yaml
   - alteration/distorsion_gravitationnelle.yaml
   - alteration/flash.yaml
   - alteration/froid_mordant.yaml
@@ -17,7 +19,9 @@ files:
   - amelioration/blink.yaml
   - amelioration/camouflage.yaml
   - amelioration/charge.yaml
+  - amelioration/croissance_acceleree.yaml
   - amelioration/lecture_des_mouvements.yaml
+  - amelioration/mur_de_racines.yaml
   - amelioration/optimisation.yaml
   - amelioration/overclock.yaml
   - amelioration/partage_de_connaissance.yaml
@@ -25,6 +29,10 @@ files:
   - amelioration/revelation.yaml
   - amelioration/sens_a_laffut.yaml
   - amelioration/silence.yaml
+  - amelioration/analyse_tactique.yaml
+  - amelioration/bouclier_renforce.yaml
+  - amelioration/regeneration_protocolaire.yaml
+  - amelioration/surcharge_plasma.yaml
   - arme/attaque_de_force.yaml
   - arme/attaque_des_points_sensibles.yaml
   - arme/attaque_multiple.yaml

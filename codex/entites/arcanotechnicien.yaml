@@ -1,0 +1,69 @@
+name: "Arcanotechnicien"
+type: "Scientifique / Praticien du Flux"
+faction: "Variable"
+alignement: "variable"
+description: "Scientifique spécialisé dans l'étude et la manipulation du Flux. Expert en cristaux de mana et systèmes arcanotechniques. Formation académique approfondie mais capacités de combat limitées. Préfère la recherche à l'affrontement."
+
+# Base statistics
+base_stats:
+  health: 40
+  speed: 4
+
+# Innate resistances
+innate_resistances:
+  RMEC: 0
+  RRAD: 1
+  RINT: 2
+
+# Flux system
+flux_system:
+  reserve: 25
+  per_turn: 6
+  recovery: 6
+
+# Affinities
+affinities:
+  distance: 2
+  melee: 1
+  schools:
+    pure: 6
+  types:
+    destruction: 3
+    alteration: 4
+    amelioration: 3
+
+# Character stats
+stats:
+  force: 9
+  dexterite: 11
+  constitution: 11
+  intelligence: 16
+  perception: 13
+  precision: 12
+  charisme: 12
+
+# Equipment
+equipment:
+  weapons:
+    - "Pistolet léger"
+  armor:
+    - "Tunique renforcée"
+  consumables:
+    - name: "Kit de soins"
+      quantity: 1
+    - name: "Cristal de mana"
+      quantity: 2
+
+# Skills
+skills:
+  - "Arcanotechnicien"
+  - "Scientifique"
+
+# Spells
+spells:
+  - "Projectile de Flux"
+  - "Bouclier arcanotechnique"
+  - "Analyse du Flux"
+
+# Gameplay guidance
+gameplay_guide: "Scientifique spécialisé en arcanotechnique. Haut Intelligence et bonnes réserves de Flux. Préfère utiliser sorts et analyse plutôt que combat direct. Vulnérable au corps à corps. Compétences Arcanotechnicien et Scientifique donnent expertise pour manipuler cristaux et systèmes. Peut désactiver ou pirater installations arcanotechniques."

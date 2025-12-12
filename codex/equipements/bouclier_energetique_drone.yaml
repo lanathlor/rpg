@@ -1,0 +1,12 @@
+name: "Bouclier énergétique de drone"
+category: "Equipement"
+subcategory: "système défensif"
+cost: "1800 crédits"
+prerequisites:
+  stat: "INT 12"
+stats:
+  RMEC: "+2"
+  RRAD: "+3"
+  RINT: "+0"
+  special: "Régénération du bouclier : 1 point de résistance par tour si non endommagé ce tour"
+description: "Générateur de champ de force miniaturisé pour unités autonomes. Crée un bouclier énergétique autour du drone qui absorbe les dégâts. Le système se régénère automatiquement entre les impacts. Particulièrement efficace contre les armes énergétiques (RRAD)."

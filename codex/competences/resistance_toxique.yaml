@@ -1,0 +1,7 @@
+name: "Résistance toxique"
+category: "Compétence"
+subcategory: "défense"
+point_cost: 8
+effect:
+  immunity: "Immunité complète aux poisons, maladies et toxines"
+description: "Constitution biologique ou modification arcanotechnique conférant une immunité totale aux substances toxiques, venins, poisons et maladies. Le système du personnage neutralise ou absorbe automatiquement ces menaces."

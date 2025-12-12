@@ -1,0 +1,73 @@
+name: "Tourelle automatique légère"
+type: "Installation défensive / Système automatisé"
+faction: "Aceras"
+alignement: "hostile"
+description: "Tourelle défensive automatisée équipée d'un fusil automatique et de capteurs à 360°. Système de défense périmétrique standard des installations Aceras."
+
+# Base statistics
+base_stats:
+  health: 80
+  speed: 0
+
+# Innate resistances
+innate_resistances:
+  RMEC: 3
+  RRAD: 1
+  RINT: 0
+
+# Flux system
+flux_system:
+  reserve: 0
+  per_turn: 0
+  recovery: 0
+
+# Affinities
+affinities:
+  distance: 5
+  melee: 0
+  schools: {}
+  types: {}
+
+# Character stats (automated system)
+stats:
+  force: 8
+  dexterite: 10
+  constitution: 12
+  intelligence: 8
+  perception: 14
+  precision: 13
+  charisme: 0
+
+# Equipment
+equipment:
+  weapons:
+    - "Fusil automatique de tourelle"
+  armor: []
+  consumables: []
+
+# Skills
+skills: []
+
+# Spells
+spells: []
+
+# Gameplay guidance
+gameplay_guide: |
+  Tourelle automatisée immobile avec vision à 360°. Ne peut pas se déplacer mais excellente couverture de zone.
+
+  CAPACITÉS:
+  - Vision à 360° : impossible de flanquer, détecte toutes les approches
+  - Tir automatique constant sans fatigue
+  - Réagit instantanément aux mouvements
+
+  FAIBLESSES:
+  - Immobile (vitesse 0)
+  - Peut être hackée (Intelligence 15 ou compétence Hacker)
+  - Sensible aux EMP et sorts d'altération électrique
+  - Points faibles: générateur d'énergie (arrière), capteurs (sommet)
+
+  TACTIQUE D'APPROCHE:
+  - Utiliser couverture pour approcher sans être détecté
+  - Hacker pour désactivation ou prise de contrôle
+  - Tirs ciblés sur générateur ou capteurs
+  - Explosifs pour destruction rapide

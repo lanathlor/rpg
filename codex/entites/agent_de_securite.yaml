@@ -1,0 +1,59 @@
+name: "Agent de sécurité"
+type: "Garde"
+faction: "Indépendant"
+alignement: "neutre"
+description: "Un agent de sécurité privé, généralement employé pour protéger des installations civiles ou commerciales."
+
+# Base statistics
+base_stats:
+  health: 42
+  speed: 5
+
+# Innate resistances
+innate_resistances:
+  RMEC: 1
+  RRAD: 1
+  RINT: 0
+
+# Flux system
+flux_system:
+  reserve: 0
+  per_turn: 0
+  recovery: 0
+
+# Affinities (pistolet = distance weapon)
+affinities:
+  distance: 7
+  melee: 2
+  schools: {}
+  types: {}
+
+# Character stats
+stats:
+  force: 13
+  dexterite: 13
+  constitution: 13
+  intelligence: 11
+  perception: 15
+  precision: 14
+  charisme: 11
+
+# Equipment (references to codex items)
+equipment:
+  weapons:
+    - "Pistolet"
+  armor:
+    - "Tenue de survie"
+  consumables:
+    - name: "Kit de soins"
+      quantity: 1
+
+# Skills (references to codex)
+skills:
+  - "Guerrier"
+
+# Spells (if any)
+spells: []
+
+# Gameplay guidance
+gameplay_guide: "Un agent de sécurité standard, équipé d'un pistolet et d'une tenue de survie basique. Plus vigilant que combatif, il excelle dans la détection des intrusions. Préfère alerter et ralentir plutôt que d'engager directement le combat."

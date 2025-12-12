@@ -1,0 +1,60 @@
+name: "Soldat impérial"
+type: "Soldat / Combattant"
+faction: "Empire"
+alignement: "variable"
+description: "Soldat impérial standard avec formation militaire complète. Équipé d'armement et d'une armure réglementaires. Représente le combattant de base des forces impériales."
+
+# Base statistics
+base_stats:
+  health: 50
+  speed: 5
+
+# Innate resistances
+innate_resistances:
+  RMEC: 2
+  RRAD: 1
+  RINT: 1
+
+# Flux system
+flux_system:
+  reserve: 0
+  per_turn: 0
+  recovery: 0
+
+# Affinities
+affinities:
+  distance: 6
+  melee: 3
+  schools: {}
+  types: {}
+
+# Character stats
+stats:
+  force: 13
+  dexterite: 14
+  constitution: 13
+  intelligence: 11
+  perception: 13
+  precision: 14
+  charisme: 11
+
+# Equipment
+equipment:
+  weapons:
+    - "Fusil mitrailleur"
+  armor:
+    - "Armure de plate légère"
+  consumables:
+    - name: "Kit de soins"
+      quantity: 1
+
+# Skills
+skills:
+  - "Tacticien"
+  - "Vétéran"
+
+# Spells
+spells: []
+
+# Gameplay guidance
+gameplay_guide: "Soldat impérial standard avec formation tactique. Combat discipliné et coordonné. Utilise couverture intelligemment et exploite les faiblesses ennemies. Peut être personnalisé avec des notes pour représenter des soldats plus légers (recrue) ou plus lourds (élite)."

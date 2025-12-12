@@ -1,0 +1,57 @@
+name: "Combattant de rue"
+type: "Voyou"
+faction: "Indépendant"
+alignement: "hostile"
+description: "Un combattant de rue aguerri, habitué aux bagarres et aux affrontements dans les zones urbaines. Agressif et imprévisible."
+
+# Base statistics
+base_stats:
+  health: 40
+  speed: 6
+
+# Innate resistances
+innate_resistances:
+  RMEC: 1
+  RRAD: 0
+  RINT: 1
+
+# Flux system
+flux_system:
+  reserve: 0
+  per_turn: 0
+  recovery: 0
+
+# Affinities (épée courte = melee weapon)
+affinities:
+  distance: 0
+  melee: 8
+  schools: {}
+  types: {}
+
+# Character stats
+stats:
+  force: 15
+  dexterite: 15
+  constitution: 14
+  intelligence: 9
+  perception: 12
+  precision: 11
+  charisme: 10
+
+# Equipment (references to codex items)
+equipment:
+  weapons:
+    - "Épée courte"
+  armor:
+    - "Tunique"
+  consumables: []
+
+# Skills (references to codex)
+skills:
+  - "Rôdeur"
+
+# Spells (if any)
+spells: []
+
+# Gameplay guidance
+gameplay_guide: "Un combattant de rue agressif qui privilégie le combat au corps à corps. Rapide et impulsif, il charge souvent sans stratégie. Faible en armure mais compense par sa mobilité et son expérience des combats de rue."

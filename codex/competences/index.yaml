@@ -1,16 +1,20 @@
 files:
   - a_laffut.yaml
   - armure_d_arcanotechnie.yaml
+  - armure_vivante.yaml
   - champ_electromagnetique.yaml
   - charismatique.yaml
   - comprehension_de_la_nature.yaml
   - connaisseur_d_arcanotechnie.yaml
+  - controle_vegetal.yaml
   - course.yaml
   - expert_des_terrains.yaml
   - guerrier.yaml
   - hackeur.yaml
   - ingenieur.yaml
   - oeil_daigle.yaml
+  - regeneration.yaml
+  - resistance_toxique.yaml
   - rodeur.yaml
   - scientifique.yaml
   - tacticien.yaml

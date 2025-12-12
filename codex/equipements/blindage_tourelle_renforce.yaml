@@ -1,0 +1,12 @@
+name: "Blindage de tourelle renforcé"
+category: "Armure"
+subcategory: "blindage fixe"
+cost: "2200 crédits"
+prerequisites:
+  special: "Installation fixe uniquement"
+stats:
+  RMEC: "+4"
+  RRAD: "+2"
+  RINT: "+1"
+  stat_modifier: "Vitesse: 0 (immobile)"
+description: "Plaques de blindage composite multi-couches pour installations défensives fixes. Combinaison d'alliages métalliques et de céramiques balistiques offrant une protection supérieure contre les projectiles cinétiques. Les cavités internes sont remplies de gel réactif pour dissiper l'énergie thermique."

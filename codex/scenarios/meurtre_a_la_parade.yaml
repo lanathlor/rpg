@@ -101,31 +101,33 @@ npcs:
     - name: 'Jax Morell'
       role: 'Victime / Point de départ de l''enquête'
       description: 'Homme de 32 ans, au chômage depuis 8 mois. Visage fatigué, vêtements usés. Retrouvé mort par strangulation dans les entrepôts.'
-      stats_reference: 'Civil (sans capacités de combat)'
+      entity_base: 'civil'
+      notes: 'Sans capacités de combat'
       motivations: 'Était : Trouver un emploi pour reconquérir son ex. Avait accepté de rejoindre les saboteurs par désespoir financier mais a eu des remords.'
 
     - name: 'Lyra Kessan'
       role: 'Ex-compagne de la victime / Témoin clé'
       description: 'Femme de 29 ans, employée dans un café. Fatiguée émotionnellement. A quitté Jax il y a 1 mois à cause de son comportement dépressif lié au chômage.'
-      stats_reference: 'Civil'
+      entity_base: 'civil'
       motivations: 'N''est plus amoureuse de Jax mais culpabilise de ne pas avoir répondu à son dernier appel. Veut aider à comprendre ce qui s''est passé.'
 
     - name: 'Lieutenant Harven Koss'
       role: 'Contact police locale / Obstacle bureaucratique'
       description: 'Officier de police locale (38 ans), fatigué et cynique. Ressent l''occupation impériale comme une humiliation. Très peu coopératif avec les agents impériaux.'
-      stats_reference: 'Chasseur (~200 points)'
+      entity_base: 'chasseur'
       motivations: 'Protéger sa juridiction. Ne veut pas que les Impériaux prennent le contrôle de "son" enquête. Cache des informations par principe.'
 
     - name: 'Kael Theron'
       role: 'Recruteur des saboteurs / Antagoniste secondaire'
       description: 'Homme de 42 ans, ancien militaire de Kethara. Charisme froid, cicatrices de guerre. Coordinateur logistique de la cellule de résistance.'
-      stats_reference: 'Chasseur (~215 points) - équipement discret'
+      entity_base: 'chasseur'
+      notes: 'Équipement discret, expérience militaire'
       motivations: 'Venger la défaite de Kethara. Recruter des désespérés pour la cause. Éliminer les traîtres potentiels comme Jax.'
 
     - name: 'Commandante Mira Sarros'
       role: 'Leader des saboteurs / Antagoniste principal'
       description: 'Ancienne officière de l''armée de Kethara (45 ans), brillante tacticienne. Refuse d''accepter la défaite. Prête à tout pour frapper l''Empire.'
-      stats_reference: 'Chasseur (~230 points) - équipement militaire'
+      entity_base: 'commandante_resistance'
       motivations: 'Diriger la résistance contre l''Empire. L''attentat est un acte symbolique pour rallier la population. Les morts sont un "sacrifice nécessaire".'
 
 encounters:
@@ -186,10 +188,10 @@ encounters:
       enemies:
           - name: 'Kael Theron'
             count: 1
-            stats_reference: 'Chasseur (~215 points)'
+            entity_base: 'chasseur'
           - name: 'Saboteur armé'
             count: 2
-            stats_reference: 'Chasseur (~190 points)'
+            entity_base: 'saboteur_arme'
       tactics: 'Kael tente de fuir en premier. Ses hommes couvrent sa retraite. Si capturé vivant, il peut révéler l''emplacement de la bombe sous torture/persuasion (diff. 18).'
       rewards:
           - 'Plans partiels de la tribune d''honneur'
@@ -219,20 +221,11 @@ encounters:
       enemies:
           - name: 'Commandante Mira Sarros'
             count: 1
-            stats_reference: |
-                Chasseur (~230 points)
-                PV: 70, Vitesse: 4, SD: 16
-                RMEC: +6, RRAD: +3, RINT: +4
-
-                Équipement : Fusil de précision, armure légère tactique, détonateur à distance
-
-                Capacités spéciales :
-                - Tacticienne : +2 en Initiative, peut coordonner des alliés
-                - Tir de précision : +3 aux jets de Précision
-                - Détonateur : peut tenter de déclencher la bombe à tout moment (Action)
+            entity_base: 'commandante_resistance'
+            notes: 'Possède un détonateur à distance pour la bombe'
           - name: 'Garde du corps résistant'
             count: 2
-            stats_reference: 'Chasseur (~210 points)'
+            entity_base: 'garde_du_corps'
       tactics: 'Mira reste en arrière, tire avec son fusil. Ses gardes protègent sa position. Si en danger, elle tente de déclencher le détonateur en dernier recours.'
       special_mechanic: 'Si Mira presse le détonateur et que la bombe n''a pas été désamorcée : EXPLOSION. Les joueurs ont 1 tour pour l''en empêcher (tir de désarmement, charge, etc.).'
       rewards:

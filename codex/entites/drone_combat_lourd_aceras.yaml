@@ -1,0 +1,79 @@
+name: "Drone de combat lourd Aceras"
+type: "Drone militaire"
+faction: "Aceras"
+alignement: "hostile"
+description: "Drone de combat militaire Aceras équipé d'un fusil à plasma. Plateforme de combat autonome mobile et bien armée."
+
+# Base statistics
+base_stats:
+  health: 45
+  speed: 8
+
+# Innate resistances
+innate_resistances:
+  RMEC: 1
+  RRAD: 2
+  RINT: 3
+
+# Flux system
+flux_system:
+  reserve: 0
+  per_turn: 0
+  recovery: 0
+
+# Affinities
+affinities:
+  distance: 5
+  melee: 0
+  schools: {}
+  types: {}
+
+# Character stats
+stats:
+  force: 10
+  dexterite: 13
+  constitution: 12
+  intelligence: 12
+  perception: 14
+  precision: 14
+  charisme: 5
+
+# Equipment
+equipment:
+  weapons:
+    - "Fusil à plasma"
+  armor: []
+  consumables: []
+
+# Skills
+skills: []
+
+# Spells
+spells: []
+
+# Gameplay guidance
+gameplay_guide: |
+  Drone de combat militaire avec armement plasma. Mobile et dangereux mais vulnérable.
+
+  CAPACITÉS OFFENSIVES:
+  - Fusil à plasma: 2d6+3 RRAD (thermique)
+  - Vol: ignore terrain, mobilité 3D
+  - Bonne précision et perception
+
+  DÉFENSES:
+  - Résistances modérées: RMEC 1, RRAD 2, RINT 3
+  - Mobilité élevée pour esquive (vitesse 8)
+  - Vol permet repositionnement rapide
+
+  TACTIQUES DU DRONE:
+  - Maintient distance optimale pour fusil plasma
+  - Utilise vol pour positionnement supérieur et couverture
+  - Se replie si gravement endommagé
+
+  CONTRE-MESURES:
+  - Fragile comparé aux unités blindées (45 PV)
+  - EMP ou sorts électriques très efficaces
+  - Armes rapides à distance (fusil, mitraillette)
+  - Cibler en priorité avant qu'il ne se repositionne
+
+  Note: Résistance RINT modérée (machine, réduit effets biologiques)

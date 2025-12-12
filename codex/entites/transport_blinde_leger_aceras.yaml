@@ -1,0 +1,66 @@
+name: "Transport blindé léger Aceras"
+type: "Véhicule / Transport de troupes"
+faction: "Aceras"
+alignement: "hostile"
+description: "Véhicule de transport de troupes blindé Aceras équipé d'un canon à plasma monté. Peut transporter une escouade complète tout en fournissant un appui-feu dévastateur."
+
+# Base statistics
+base_stats:
+  health: 200
+  speed: 10
+
+# Innate resistances
+innate_resistances:
+  RMEC: 8
+  RRAD: 3
+  RINT: 0
+
+# Flux system
+flux_system:
+  reserve: 0
+  per_turn: 0
+  recovery: 0
+
+# Affinities
+affinities:
+  distance: 4
+  melee: 0
+  schools: {}
+  types: {}
+
+# Character stats (vehicle)
+stats:
+  force: 16
+  dexterite: 8
+  constitution: 18
+  intelligence: 6
+  perception: 10
+  precision: 11
+  charisme: 5
+
+# Equipment
+equipment:
+  weapons:
+    - "Canon à plasma"
+  armor: []
+  consumables: []
+
+# Skills
+skills: []
+
+# Spells
+spells: []
+
+# Gameplay guidance
+gameplay_guide: |
+  Véhicule lourd avec blindage (RMEC 8). Canon à plasma dangereux (3d8+4 RRAD zone).
+
+  TACTIQUE:
+  - Priorité: détruire le véhicule pour empêcher transport et neutraliser le canon
+  - Points faibles: chenilles/roues (immobilisation), tourelle (désactivation arme), réservoir carburant
+  - Peut transporter 8 soldats - les empêcher de débarquer ou les cibler après débarquement
+
+  CONTRE-MESURES:
+  - Explosifs ciblés sur points faibles
+  - Attaques de flanc (blindage arrière plus faible)
+  - EMP ou sorts d'altération sur systèmes électroniques

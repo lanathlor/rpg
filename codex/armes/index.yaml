@@ -1,9 +1,15 @@
 files:
   - baton.yaml
+  - canon_a_plasma.yaml
+  - canon_rotatif_lourd.yaml
   - epee_courte.yaml
   - epee_legere.yaml
   - epee_lourde.yaml
+  - fusil_a_plasma.yaml
   - fusil_a_pompe_surcharge.yaml
+  - fusil_automatique_tourelle.yaml
   - fusil_de_sniper.yaml
   - fusil_mitrailleur.yaml
+  - lames_energetiques.yaml
+  - mitraillette_drone_legere.yaml
   - pistolet.yaml

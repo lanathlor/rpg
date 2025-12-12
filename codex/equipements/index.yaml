@@ -1,7 +1,10 @@
 files:
   - armure_de_plate_legere.yaml
   - armure_de_plate_lourde.yaml
+  - blindage_tourelle_renforce.yaml
   - bouclier.yaml
+  - bouclier_energetique_drone.yaml
+  - chassis_renforce_vehiculaire.yaml
   - drone_de_combat.yaml
   - exosquelette_de_combat.yaml
   - exosquelette_de_traque.yaml

@@ -1,4 +1,5 @@
 export interface BaseItem {
+  id?: string  // Filename-based ID (without .yaml extension)
   name?: string
   description?: string
   category?: string

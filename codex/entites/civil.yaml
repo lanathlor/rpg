@@ -1,0 +1,55 @@
+name: "Civil"
+type: "Non-combattant / Personnel civil"
+faction: "Variable"
+alignement: "variable"
+description: "Citoyen ordinaire sans formation militaire. Peut être médecin, scientifique, technicien, commerçant ou simple habitant. Compétences professionnelles variables mais capacités de combat très limitées."
+
+# Base statistics
+base_stats:
+  health: 30
+  speed: 4
+
+# Innate resistances
+innate_resistances:
+  RMEC: 0
+  RRAD: 0
+  RINT: 0
+
+# Flux system
+flux_system:
+  reserve: 0
+  per_turn: 0
+  recovery: 0
+
+# Affinities
+affinities:
+  distance: 1
+  melee: 1
+  schools: {}
+  types: {}
+
+# Character stats
+stats:
+  force: 9
+  dexterite: 10
+  constitution: 10
+  intelligence: 12
+  perception: 11
+  precision: 10
+  charisme: 11
+
+# Equipment
+equipment:
+  weapons: []
+  armor:
+    - "Tunique"
+  consumables: []
+
+# Skills
+skills: []
+
+# Spells
+spells: []
+
+# Gameplay guidance
+gameplay_guide: "Civil sans formation au combat. Fuit ou se rend si menacé. Peut avoir des compétences professionnelles utiles (médecine, science, technologie, etc.) selon le contexte. Vulnérable en combat. Utiliser le champ 'notes' dans les scénarios pour préciser la profession et les compétences spécifiques."

@@ -1,0 +1,79 @@
+name: "Tourelle défensive lourde"
+type: "Installation défensive / Système lourd"
+faction: "Aceras"
+alignement: "hostile"
+description: "Tourelle défensive lourde équipée d'un canon rotatif multi-tubes. Installation fortifiée capable de saturer une zone entière de projectiles. Défense de point critique."
+
+# Base statistics
+base_stats:
+  health: 100
+  speed: 0
+
+# Innate resistances
+innate_resistances:
+  RMEC: 4
+  RRAD: 2
+  RINT: 0
+
+# Flux system
+flux_system:
+  reserve: 0
+  per_turn: 0
+  recovery: 0
+
+# Affinities
+affinities:
+  distance: 6
+  melee: 0
+  schools: {}
+  types: {}
+
+# Character stats (heavy automated system)
+stats:
+  force: 10
+  dexterite: 8
+  constitution: 14
+  intelligence: 8
+  perception: 13
+  precision: 14
+  charisme: 0
+
+# Equipment
+equipment:
+  weapons:
+    - "Canon rotatif lourd"
+  armor: []
+  consumables: []
+
+# Skills
+skills: []
+
+# Spells
+spells: []
+
+# Gameplay guidance
+gameplay_guide: |
+  Tourelle lourde fortifiée avec canon rotatif dévastateur. Contrôle de zone extrême.
+
+  CAPACITÉS OFFENSIVES:
+  - Canon rotatif: 3d6 RMEC avec tir de suppression (arc 90°)
+  - Cadence massive: -2 SD pour toutes cibles dans la zone
+  - Peut engager plusieurs cibles simultanément
+  - Surchauffe après 3 tours de tir continu (1 tour de cooldown)
+
+  DÉFENSES:
+  - Blindage intégré: RMEC 4, RRAD 2
+  - Structure renforcée: 100 PV
+  - Immobile mais bien protégée
+
+  FAIBLESSES:
+  - Immobilité totale (vitesse 0)
+  - Hackable avec difficulté élevée (Intelligence 18)
+  - Points faibles: générateur arrière, système de refroidissement, capteurs
+  - Surchauffe exploitable (forcer tir continu puis attaquer pendant cooldown)
+
+  TACTIQUES:
+  - Approche par les angles morts (derrière, si accessible)
+  - Explosifs lourds sur générateur
+  - Sorts d'altération sur systèmes de refroidissement
+  - Neutralisation via surcharge (forcer surchauffe)

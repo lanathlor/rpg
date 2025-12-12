@@ -1,0 +1,59 @@
+name: "Soldat Aceras"
+type: "Soldat"
+faction: "Aceras"
+alignement: "hostile"
+description: "Un soldat d'infanterie d'Aceras, entraîné aux tactiques de combat urbain et aux opérations d'assaut rapides."
+
+# Base statistics
+base_stats:
+  health: 50
+  speed: 6
+
+# Innate resistances
+innate_resistances:
+  RMEC: 2
+  RRAD: 1
+  RINT: 0
+
+# Flux system
+flux_system:
+  reserve: 0
+  per_turn: 0
+  recovery: 0
+
+# Affinities (fusil à pompe = distance weapon)
+affinities:
+  distance: 8
+  melee: 2
+  schools: {}
+  types: {}
+
+# Character stats
+stats:
+  force: 14
+  dexterite: 14
+  constitution: 14
+  intelligence: 11
+  perception: 13
+  precision: 14
+  charisme: 10
+
+# Equipment (references to codex items)
+equipment:
+  weapons:
+    - "Fusil à pompe surchargé"
+  armor:
+    - "Armure de plate légère"
+  consumables:
+    - name: "Kit de soins"
+      quantity: 1
+
+# Skills (references to codex)
+skills:
+  - "Tacticien"
+
+# Spells (if any)
+spells: []
+
+# Gameplay guidance
+gameplay_guide: "Soldat d'infanterie Aceras spécialisé dans les assauts rapides. Équipé d'un fusil à pompe pour le combat rapproché et d'une armure de plate légère. Privilégie les tactiques agressives et coordonnées en petits groupes. Plus mobile que les gardes de l'Empire."

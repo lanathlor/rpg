@@ -1,0 +1,12 @@
+name: "Châssis renforcé véhiculaire"
+category: "Armure"
+subcategory: "blindage véhiculaire"
+cost: "3500 crédits"
+prerequisites:
+  special: "Véhicule uniquement"
+stats:
+  RMEC: "+5"
+  RRAD: "+3"
+  RINT: "+0"
+  stat_modifier: "-1 vitesse (poids supplémentaire)"
+description: "Blindage modulaire renforcé pour véhicules de transport militaire. Plaques de blindage composite fixées sur le châssis, offrant une protection maximale contre les armes antivéhicule. Le surpoids réduit légèrement la mobilité mais transforme le véhicule en forteresse mobile."
