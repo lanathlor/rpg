@@ -1,6 +1,7 @@
 import { useState, useMemo } from 'react'
 import { useParams, useNavigate, Link } from 'react-router-dom'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
 import {
@@ -13,14 +14,18 @@ import {
   ArrowLeft,
   Home,
   ChevronRight,
-  FileText,
+  Ghost,
+  Skull,
+  Handshake,
+  Users,
+  Target,
   Trophy,
   Calculator,
-  Target
+  FileText
 } from 'lucide-react'
-import { useClasses, useSpells, useWeapons, useArmors, useSkills, useConsumables } from '@/lib/dataProvider'
-import { filterCharacterContent, exportCharacterToPDF } from '@/lib/pdfExport'
+import { useEntities, useSpells, useWeapons, useArmors, useSkills, useConsumables } from '@/lib/dataProvider'
 import { calculateTotalPointBuy } from '@/lib/pointBuyCalculator'
+import { filterCharacterContent, exportCharacterToPDF } from '@/lib/pdfExport'
 import { SpellDetail } from '@/components/SpellDetail'
 import { WeaponDetail } from '@/components/WeaponDetail'
 import { ArmorDetail } from '@/components/ArmorDetail'
@@ -33,22 +38,40 @@ import { EquipmentCard } from '@/components/character/EquipmentCard'
 import { AbilitiesSection } from '@/components/character/AbilitiesSection'
 import type { Spell, Weapon, Armor, Skill, Consumable } from '@/types'
 
+const getAlignementColor = (alignement?: string) => {
+  if (!alignement) return 'bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300'
+  const aligned = alignement.toLowerCase()
+  if (aligned === 'amical' || aligned === 'ami' || aligned === 'allié') return 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300'
+  if (aligned === 'hostile' || aligned === 'ennemi') return 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300'
+  if (aligned === 'neutre') return 'bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300'
+  return 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300'
+}
 
-export function ClassDetailPage() {
-  const { className } = useParams<{ className: string }>()
+const getAlignementIcon = (alignement?: string) => {
+  if (!alignement) return <Users className="h-4 w-4" />
+  const aligned = alignement.toLowerCase()
+  if (aligned === 'amical' || aligned === 'ami' || aligned === 'allié') return <Handshake className="h-4 w-4" />
+  if (aligned === 'hostile' || aligned === 'ennemi') return <Skull className="h-4 w-4" />
+  if (aligned === 'neutre') return <Users className="h-4 w-4" />
+  return <Users className="h-4 w-4" />
+}
+
+
+export function EntityDetailPage() {
+  const { entityName } = useParams<{ entityName: string }>()
   const navigate = useNavigate()
-  const { classes, loading } = useClasses()
+  const { entities, loading } = useEntities()
   const { spells } = useSpells()
   const { weapons } = useWeapons()
   const { armors } = useArmors()
   const { skills } = useSkills()
   const { consumables } = useConsumables()
 
-  // Find class by matching URL slug to class name
-  const characterClass = useMemo(() => {
-    if (loading || !className) return null
-    return classes.find(c => {
-      const slug = (c.name || '').toLowerCase()
+  // Find entity by matching URL slug to entity name
+  const entity = useMemo(() => {
+    if (loading || !entityName) return null
+    return entities.find(e => {
+      const slug = (e.name || '').toLowerCase()
         .replace(/\s+/g, '-')
         .replace(/[àáâãäå]/g, 'a')
         .replace(/[èéêë]/g, 'e')
@@ -57,9 +80,9 @@ export function ClassDetailPage() {
         .replace(/[ùúûü]/g, 'u')
         .replace(/[ç]/g, 'c')
         .replace(/[^a-z0-9-]/g, '')
-      return slug === className
+      return slug === entityName
     }) || null
-  }, [className, classes, loading])
+  }, [entityName, entities, loading])
 
   // Popup state management
   const [selectedSpell, setSelectedSpell] = useState<Spell | null>(null)
@@ -125,11 +148,11 @@ export function ClassDetailPage() {
 
   // Handle PDF export
   const handleExportPDF = () => {
-    if (!characterClass) return
+    if (!entity) return
 
     try {
       const filteredData = filterCharacterContent(
-        characterClass,
+        entity,
         spells,
         weapons,
         armors,
@@ -143,27 +166,26 @@ export function ClassDetailPage() {
     }
   }
 
-
   if (loading) {
     return (
       <div className="flex items-center justify-center h-64">
-        <div className="text-lg">Chargement de la classe...</div>
+        <div className="text-lg">Chargement de l'entité...</div>
       </div>
     )
   }
 
-  if (!characterClass) {
+  if (!entity) {
     return (
       <div className="space-y-6">
         <div className="text-center py-12">
-          <h1 className="text-2xl font-bold mb-4">Classe non trouvée</h1>
+          <h1 className="text-2xl font-bold mb-4">Entité non trouvée</h1>
           <p className="text-muted-foreground mb-6">
-            La classe "{className}" n'existe pas ou n'a pas pu être chargée.
+            L'entité "{entityName}" n'existe pas ou n'a pas pu être chargée.
           </p>
           <Button asChild>
-            <Link to="/classes">
+            <Link to="/entites">
               <ArrowLeft className="h-4 w-4 mr-2" />
-              Retour aux classes
+              Retour aux entités
             </Link>
           </Button>
         </div>
@@ -179,18 +201,18 @@ export function ClassDetailPage() {
           <Home className="h-4 w-4" />
         </Link>
         <ChevronRight className="h-4 w-4" />
-        <Link to="/classes" className="hover:text-foreground transition-colors">
-          Classes
+        <Link to="/entites" className="hover:text-foreground transition-colors">
+          Entités
         </Link>
         <ChevronRight className="h-4 w-4" />
-        <span className="text-foreground font-medium">{characterClass.name}</span>
+        <span className="text-foreground font-medium">{entity.name}</span>
       </nav>
 
       {/* Action Buttons */}
       <div className="flex gap-3">
-        <Button variant="outline" onClick={() => navigate('/classes')}>
+        <Button variant="outline" onClick={() => navigate('/entites')}>
           <ArrowLeft className="h-4 w-4 mr-2" />
-          Retour aux classes
+          Retour aux entités
         </Button>
         <Button variant="outline" onClick={handleExportPDF}>
           <FileText className="h-4 w-4 mr-2" />
@@ -201,18 +223,44 @@ export function ClassDetailPage() {
       {/* Header */}
       <div className="space-y-4">
         <div>
-          <h1 className="text-4xl font-bold tracking-tight">{characterClass.name}</h1>
+          <div className="flex items-center gap-3 mb-4">
+            <h1 className="text-4xl font-bold tracking-tight">{entity.name}</h1>
+            <Ghost className="h-8 w-8 text-muted-foreground" />
+          </div>
+
+          {/* Faction and Alignement badges */}
+          <div className="flex gap-3 mb-4">
+            {entity.faction && (
+              <Badge variant="outline" className="text-base px-4 py-1 bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-300">
+                {entity.faction}
+              </Badge>
+            )}
+            {entity.alignement && (
+              <Badge className={`text-base px-4 py-1 ${getAlignementColor(entity.alignement)}`}>
+                <span className="flex items-center gap-2">
+                  {getAlignementIcon(entity.alignement)}
+                  {entity.alignement}
+                </span>
+              </Badge>
+            )}
+            {entity.type && (
+              <Badge variant="outline" className="text-base px-4 py-1">
+                {entity.type}
+              </Badge>
+            )}
+          </div>
+
           <p className="text-xl text-muted-foreground leading-relaxed mt-4">
-            {characterClass.description}
+            {entity.description}
           </p>
         </div>
 
         {/* Hero Image */}
-        {characterClass.image && (
+        {entity.image && (
           <div className="mt-6">
             <img
-              src={`${import.meta.env.BASE_URL}${characterClass.image}`}
-              alt={characterClass.name}
+              src={`${import.meta.env.BASE_URL}${entity.image}`}
+              alt={entity.name}
               className="rounded-lg w-full max-w-2xl mx-auto shadow-lg"
               loading="lazy"
             />
@@ -224,13 +272,13 @@ export function ClassDetailPage() {
 
       {/* Character Overview */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <BaseStatsCard character={characterClass} />
-        <CharacterStatsCard character={characterClass} />
+        <BaseStatsCard character={entity} />
+        <CharacterStatsCard character={entity} />
       </div>
 
       {/* Point Buy Breakdown */}
       {(() => {
-        const pointBuy = calculateTotalPointBuy(characterClass, weapons, armors, skills, consumables)
+        const pointBuy = calculateTotalPointBuy(entity, weapons, armors, skills, consumables)
 
         return (
           <Card>
@@ -293,11 +341,11 @@ export function ClassDetailPage() {
       })()}
 
       {/* Affinities */}
-      <AffinitiesCard character={characterClass} />
+      <AffinitiesCard character={entity} />
 
       {/* Equipment */}
       <EquipmentCard
-        character={characterClass}
+        character={entity}
         weapons={weapons}
         armors={armors}
         consumables={consumables}
@@ -308,7 +356,7 @@ export function ClassDetailPage() {
 
       {/* Abilities */}
       <AbilitiesSection
-        character={characterClass}
+        character={entity}
         spells={spells}
         skills={skills}
         onSpellClick={openSpellDetail}
@@ -316,7 +364,7 @@ export function ClassDetailPage() {
       />
 
       {/* Gameplay Guide */}
-      {characterClass.gameplay_guide && (
+      {entity.gameplay_guide && (
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
@@ -326,7 +374,7 @@ export function ClassDetailPage() {
           </CardHeader>
           <CardContent>
             <p className="text-muted-foreground leading-relaxed">
-              {characterClass.gameplay_guide}
+              {entity.gameplay_guide}
             </p>
           </CardContent>
         </Card>

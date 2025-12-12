@@ -1,0 +1,85 @@
+# Entity/NPC Template
+# Copy this file when creating a new entity
+
+name: "Entity Name"
+type: "Type (e.g., Soldat, Mage, Marchand, etc.)"
+faction: "Faction name (e.g., Empire, Aceras, Indépendant, etc.)"
+alignement: "Alignment (amical, hostile, neutre)"
+description: "Brief description of the entity and their role."
+
+# Optional: Path to entity image (relative to public directory)
+image: "images/entites/entity_name.png"
+
+# Base statistics
+base_stats:
+  health: 30  # Hit points
+  speed: 5    # Movement speed in meters per turn
+
+# Innate resistances (before equipment)
+innate_resistances:
+  RMEC: 0  # Mechanical/kinetic resistance
+  RRAD: 0  # Radiative/thermal resistance
+  RINT: 0  # Internal/metabolic resistance
+
+# Flux system (quantotechnique/magic system)
+flux_system:
+  reserve: 10    # Total flux capacity
+  per_turn: 3    # Flux regeneration per turn
+  recovery: 2    # Out-of-combat recovery rate
+
+# Affinities (combat style and spell schools)
+affinities:
+  distance: 0  # Ranged combat affinity (0-3)
+  melee: 0     # Melee combat affinity (0-3)
+  schools:
+    # Quantotechnique schools (0-3 each)
+    feu: 0
+    glace: 0
+    foudre: 0
+    terre: 0
+    vent: 0
+    eau: 0
+    lumiere: 0
+    ombre: 0
+    vie: 0
+    mort: 0
+  types:
+    # Spell types (0-3 each)
+    destruction: 0
+    alteration: 0
+    amelioration: 0
+    invocation: 0
+
+# Character stats
+stats:
+  force: 10         # Strength
+  dexterite: 10     # Dexterity
+  constitution: 10  # Constitution
+  intelligence: 10  # Intelligence
+  perception: 10    # Perception
+  precision: 10     # Precision
+  charisme: 10      # Charisma
+
+# Equipment (MUST reference items that exist in the codex)
+# Check /codex/armes/, /codex/equipements/, /codex/consommables/
+equipment:
+  weapons:
+    - "Weapon Name"  # Must match exact name from /codex/armes/
+  armor:
+    - "Armor Name"   # Must match exact name from /codex/equipements/
+  consumables:
+    - name: "Consumable Name"  # Must match exact name from /codex/consommables/
+      quantity: 1
+
+# Skills (MUST reference skills that exist in the codex)
+# Check /codex/competences/
+skills:
+  - "Skill Name"  # Must match exact name from /codex/competences/
+
+# Spells (MUST reference spell series that exist in the codex)
+# Check /codex/sorts/
+spells:
+  - "Spell Series Name"  # Must match spell_series field from /codex/sorts/
+
+# Gameplay guidance for GMs
+gameplay_guide: "Tactical advice for playing this entity, including combat style, role in encounters, and narrative guidance."

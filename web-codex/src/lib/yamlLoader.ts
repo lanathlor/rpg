@@ -8,6 +8,7 @@ import {
   type Skill,
   type Consumable,
   type CharacterClass,
+  type Entity,
   type Scenario,
   type CodexCategory,
 } from '@/types'
@@ -65,6 +66,7 @@ export class YamlLoader {
         skills: [],
         consumables: [],
         classes: [],
+        entities: [],
         scenarios: [],
       }
 
@@ -76,6 +78,7 @@ export class YamlLoader {
         'competences',
         'consommables',
         'classes',
+        'entites',
         'scenarios',
       ]
 
@@ -106,6 +109,9 @@ export class YamlLoader {
             break
           case 'classes':
             codexData.classes = items as CharacterClass[]
+            break
+          case 'entites':
+            codexData.entities = items as Entity[]
             break
           case 'scenarios':
             codexData.scenarios = items as Scenario[]
@@ -246,6 +252,11 @@ export class YamlLoader {
     return data.classes
   }
 
+  async getEntities(): Promise<Entity[]> {
+    const data = await this.loadCodexData()
+    return data.entities
+  }
+
   async getScenarios(): Promise<Scenario[]> {
     const data = await this.loadCodexData()
     return data.scenarios
@@ -261,6 +272,7 @@ export class YamlLoader {
       ...data.skills,
       ...data.consumables,
       ...data.classes,
+      ...data.entities,
       ...data.scenarios,
     ]
 

@@ -8,6 +8,7 @@ import {
   type Skill,
   type Consumable,
   type CharacterClass,
+  type Entity,
   type Scenario,
 } from '@/types'
 import { YamlLoader } from './yamlLoader'
@@ -179,6 +180,29 @@ export function useClasses() {
   }, [])
 
   return { classes, loading, error }
+}
+
+export function useEntities() {
+  const [entities, setEntities] = useState<Entity[]>([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
+
+  useEffect(() => {
+    async function loadEntities() {
+      try {
+        setError(null)
+        const data = await yamlLoader.getEntities()
+        setEntities(data)
+      } catch (err) {
+        setError(err instanceof Error ? err.message : 'Failed to load entities')
+      } finally {
+        setLoading(false)
+      }
+    }
+    loadEntities()
+  }, [])
+
+  return { entities, loading, error }
 }
 
 export function useScenarios() {

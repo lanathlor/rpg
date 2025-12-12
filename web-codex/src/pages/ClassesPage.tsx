@@ -1,10 +1,7 @@
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
 import { useClasses, useWeapons, useArmors, useSkills, useConsumables } from '@/lib/dataProvider'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Input } from '@/components/ui/input'
-import { Button } from '@/components/ui/button'
 import { Slider } from '@/components/ui/slider'
 import {
   Users,
@@ -14,21 +11,16 @@ import {
   Target,
   Eye,
   Cog,
-  Search,
-  ArrowRight,
-  Heart,
-  Brain,
-  Gauge,
-  Zap,
-  Hand,
-  Activity,
-  Star,
   Trophy,
   Filter,
-  ArrowUpDown
+  Brain
 } from 'lucide-react'
 import type { CharacterClass } from '@/types'
 import { calculateTotalPointBuy } from '@/lib/pointBuyCalculator'
+import { createSlug } from '@/lib/characterUtils'
+import { SearchBar } from '@/components/list/SearchBar'
+import { FilterControls, FilterSelect } from '@/components/list/FilterControls'
+import { CharacterCard } from '@/components/list/CharacterCard'
 
 const getClassIcon = (className: string) => {
   const name = className.toLowerCase()
@@ -56,44 +48,6 @@ const getClassColor = (className: string) => {
 
 const getClassArchetype = (characterClass: CharacterClass) => {
   return characterClass.type || 'Non défini'
-}
-
-const getHighestStat = (characterClass: CharacterClass) => {
-  const stats = characterClass.stats
-  const statEntries = [
-    { name: 'Force', value: stats.force, key: 'force' },
-    { name: 'Dextérité', value: stats.dexterite, key: 'dexterite' },
-    { name: 'Constitution', value: stats.constitution, key: 'constitution' },
-    { name: 'Intelligence', value: stats.intelligence, key: 'intelligence' },
-    { name: 'Perception', value: stats.perception, key: 'perception' },
-    { name: 'Précision', value: stats.precision, key: 'precision' },
-    { name: 'Charisme', value: stats.charisme, key: 'charisme' }
-  ]
-
-  return statEntries.reduce((highest, current) =>
-    current.value > highest.value ? current : highest
-  )
-}
-
-const getStatIcon = (statKey: string) => {
-  switch (statKey) {
-    case 'force':
-      return <Sword className="h-4 w-4 text-red-500" />
-    case 'dexterite':
-      return <Zap className="h-4 w-4 text-yellow-500" />
-    case 'constitution':
-      return <Activity className="h-4 w-4 text-green-500" />
-    case 'intelligence':
-      return <Brain className="h-4 w-4 text-purple-500" />
-    case 'perception':
-      return <Eye className="h-4 w-4 text-blue-500" />
-    case 'precision':
-      return <Target className="h-4 w-4 text-orange-500" />
-    case 'charisme':
-      return <Star className="h-4 w-4 text-pink-500" />
-    default:
-      return <Hand className="h-4 w-4 text-gray-500" />
-  }
 }
 
 export function ClassesPage() {
@@ -166,19 +120,6 @@ export function ClassesPage() {
     }
   })
 
-  // Create URL-friendly class name
-  const getClassSlug = (className: string) => {
-    return className.toLowerCase()
-      .replace(/\s+/g, '-')
-      .replace(/[àáâãäå]/g, 'a')
-      .replace(/[èéêë]/g, 'e')
-      .replace(/[ìíîï]/g, 'i')
-      .replace(/[òóôõö]/g, 'o')
-      .replace(/[ùúûü]/g, 'u')
-      .replace(/[ç]/g, 'c')
-      .replace(/[^a-z0-9-]/g, '')
-  }
-
   if (loading) {
     return (
       <div className="flex items-center justify-center h-64">
@@ -199,32 +140,37 @@ export function ClassesPage() {
       {/* Search and Filters */}
       <div className="space-y-4">
         {/* Search Bar */}
-        <div className="relative">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-          <Input
-            placeholder="Rechercher une classe..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="pl-10"
-          />
-        </div>
+        <SearchBar
+          value={searchQuery}
+          onChange={setSearchQuery}
+          placeholder="Rechercher une classe..."
+        />
 
         {/* Filters Row */}
-        <div className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-end">
+        <FilterControls
+          sortValue={sortBy}
+          onSortChange={setSortBy}
+          sortOptions={[
+            { label: 'Nom (A-Z)', value: 'name-asc' },
+            { label: 'Nom (Z-A)', value: 'name-desc' },
+            { label: 'Points (croissant)', value: 'points-asc' },
+            { label: 'Points (décroissant)', value: 'points-desc' }
+          ]}
+          onReset={() => {
+            setSearchQuery('')
+            setMinPoints(absoluteMin)
+            setMaxPoints(absoluteMax)
+            setSelectedArchetype('all')
+          }}
+          resetDisabled={!searchQuery && minPoints === absoluteMin && maxPoints === absoluteMax && selectedArchetype === 'all'}
+        >
           {/* Archetype Filter */}
-          <div className="flex items-center gap-2">
-            <Filter className="h-4 w-4 flex-shrink-0" />
-            <select
-              value={selectedArchetype}
-              onChange={(e) => setSelectedArchetype(e.target.value)}
-              className="border rounded px-3 py-2 bg-background flex-1 sm:flex-initial sm:min-w-[150px]"
-            >
-              <option value="all">Tous les types</option>
-              {uniqueArchetypes.map(archetype => (
-                <option key={archetype} value={archetype}>{archetype}</option>
-              ))}
-            </select>
-          </div>
+          <FilterSelect
+            value={selectedArchetype}
+            onChange={setSelectedArchetype}
+            options={uniqueArchetypes.map(archetype => ({ label: archetype, value: archetype }))}
+            allLabel="Tous les types"
+          />
 
           {/* Point Range Filter */}
           <div className="flex items-center gap-3 flex-1 sm:min-w-[300px]">
@@ -249,16 +195,14 @@ export function ClassesPage() {
                   value={minInputValue}
                   onChange={(e) => {
                     const value = e.target.value
-                    setMinInputValue(value) // Update display immediately
+                    setMinInputValue(value)
 
-                    // Update filter state only if valid
                     if (value !== '' && !isNaN(Number(value))) {
                       const numValue = Number(value)
                       setMinPoints(Math.max(absoluteMin, Math.min(numValue, maxPoints)))
                     }
                   }}
                   onBlur={() => {
-                    // Validate and clamp on blur
                     if (minInputValue === '' || isNaN(Number(minInputValue))) {
                       setMinPoints(absoluteMin)
                       setMinInputValue(String(absoluteMin))
@@ -278,16 +222,14 @@ export function ClassesPage() {
                   value={maxInputValue}
                   onChange={(e) => {
                     const value = e.target.value
-                    setMaxInputValue(value) // Update display immediately
+                    setMaxInputValue(value)
 
-                    // Update filter state only if valid
                     if (value !== '' && !isNaN(Number(value))) {
                       const numValue = Number(value)
                       setMaxPoints(Math.min(absoluteMax, Math.max(numValue, minPoints)))
                     }
                   }}
                   onBlur={() => {
-                    // Validate and clamp on blur
                     if (maxInputValue === '' || isNaN(Number(maxInputValue))) {
                       setMaxPoints(absoluteMax)
                       setMaxInputValue(String(absoluteMax))
@@ -303,140 +245,35 @@ export function ClassesPage() {
               </div>
             </div>
           </div>
-
-          {/* Sort Dropdown */}
-          <div className="flex items-center gap-2">
-            <ArrowUpDown className="h-4 w-4 flex-shrink-0" />
-            <select
-              value={sortBy}
-              onChange={(e) => setSortBy(e.target.value)}
-              className="border rounded px-3 py-2 bg-background flex-1 sm:flex-initial"
-            >
-              <option value="name-asc">Nom (A-Z)</option>
-              <option value="name-desc">Nom (Z-A)</option>
-              <option value="points-asc">Points (croissant)</option>
-              <option value="points-desc">Points (décroissant)</option>
-            </select>
-          </div>
-
-          {/* Reset Button - Always visible to prevent layout shift */}
-          <Button
-            variant="outline"
-            onClick={() => {
-              setSearchQuery('')
-              setMinPoints(absoluteMin)
-              setMaxPoints(absoluteMax)
-              setSelectedArchetype('all')
-            }}
-            disabled={!searchQuery && minPoints === absoluteMin && maxPoints === absoluteMax && selectedArchetype === 'all'}
-            className="w-full sm:w-auto"
-          >
-            Réinitialiser
-          </Button>
-        </div>
+        </FilterControls>
       </div>
 
       {/* Classes Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {filteredClasses.map((characterClass) => (
-          <Link
-            key={characterClass.name}
-            to={`/classes/${getClassSlug(characterClass.name || '')}`}
-            className="block"
-          >
-            <Card className="hover:shadow-lg transition-all cursor-pointer group h-full">
-              <CardHeader>
-                <div className="flex justify-between items-start">
-                  <div className="flex items-center gap-3">
-                    <div className={`p-2 rounded-lg ${getClassColor(characterClass.name || '').replace('text-', 'bg-').replace('bg-', 'bg-opacity-20 text-')}`}>
-                      {getClassIcon(characterClass.name || '')}
-                    </div>
-                    <div>
-                      <CardTitle className="text-lg group-hover:text-primary transition-colors">
-                        {characterClass.name}
-                      </CardTitle>
-                      <Badge variant="outline" className="mt-1">
-                        {getClassArchetype(characterClass)}
-                      </Badge>
-                    </div>
-                  </div>
-                  <ArrowRight className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
+        {filteredClasses.map((characterClass) => {
+          const pointBuy = calculateTotalPointBuy(characterClass, weapons, armors, skills, consumables)
+          return (
+            <CharacterCard
+              key={characterClass.name}
+              character={characterClass}
+              slug={createSlug(characterClass.name || '')}
+              basePath="classes"
+              icon={getClassIcon(characterClass.name || '')}
+              iconColor={getClassColor(characterClass.name || '')}
+              badges={
+                <Badge variant="outline">
+                  {getClassArchetype(characterClass)}
+                </Badge>
+              }
+              extraStats={
+                <div className="flex items-center gap-2">
+                  <Trophy className="h-4 w-4 text-amber-500" />
+                  <span className="font-medium">{pointBuy.total} pts</span>
                 </div>
-                <CardDescription className="line-clamp-3">
-                  {(characterClass.description || 'Aucune description disponible').slice(0, 150)}...
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="grid grid-cols-2 gap-3 text-sm">
-                  <div className="flex items-center gap-2">
-                    <Heart className="h-4 w-4 text-red-500" />
-                    <span className="font-medium">{characterClass.base_stats.health} PV</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Gauge className="h-4 w-4 text-blue-500" />
-                    <span className="font-medium">{characterClass.base_stats.speed} Vit</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    {getStatIcon(getHighestStat(characterClass).key)}
-                    <span className="font-medium">{getHighestStat(characterClass).value} {getHighestStat(characterClass).name.slice(0, 3).toUpperCase()}</span>
-                  </div>
-                  {(() => {
-                    const pointBuy = calculateTotalPointBuy(characterClass, weapons, armors, skills, consumables)
-                    return (
-                      <div className="flex items-center gap-2">
-                        <Trophy className="h-4 w-4 text-amber-500" />
-                        <span className="font-medium">{pointBuy.total} pts</span>
-                      </div>
-                    )
-                  })()}
-                </div>
-
-                {/* Resistances - show if any non-zero */}
-                {characterClass.innate_resistances &&
-                  (characterClass.innate_resistances.RMEC > 0 ||
-                   characterClass.innate_resistances.RRAD > 0 ||
-                   characterClass.innate_resistances.RINT > 0) && (
-                  <div className="mt-3 pt-3 border-t">
-                    <div className="flex items-center gap-3 text-xs">
-                      <span className="text-muted-foreground">Résist:</span>
-                      <div className="flex items-center gap-1">
-                        <Shield className="h-3 w-3 text-stone-500" />
-                        <span className="font-medium">{characterClass.innate_resistances.RMEC}</span>
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <Shield className="h-3 w-3 text-orange-500" />
-                        <span className="font-medium">{characterClass.innate_resistances.RRAD}</span>
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <Shield className="h-3 w-3 text-purple-500" />
-                        <span className="font-medium">{characterClass.innate_resistances.RINT}</span>
-                      </div>
-                    </div>
-                  </div>
-                )}
-
-                {/* Preview of abilities */}
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {characterClass.spells && characterClass.spells.length > 0 && (
-                    <Badge variant="secondary" className="text-xs">
-                      {characterClass.spells.length} sort{characterClass.spells.length > 1 ? 's' : ''}
-                    </Badge>
-                  )}
-                  {characterClass.skills && characterClass.skills.length > 0 && (
-                    <Badge variant="secondary" className="text-xs">
-                      {characterClass.skills.length} compétence{characterClass.skills.length > 1 ? 's' : ''}
-                    </Badge>
-                  )}
-                  {characterClass.equipment.weapons && characterClass.equipment.weapons.length > 0 && (
-                    <Badge variant="secondary" className="text-xs">
-                      {characterClass.equipment.weapons.length} arme{characterClass.equipment.weapons.length > 1 ? 's' : ''}
-                    </Badge>
-                  )}
-                </div>
-              </CardContent>
-            </Card>
-          </Link>
-        ))}
+              }
+            />
+          )
+        })}
       </div>
 
       {filteredClasses.length === 0 && (

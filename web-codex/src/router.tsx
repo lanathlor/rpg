@@ -12,6 +12,8 @@ const SkillsPage = lazy(() => import('@/pages/SkillsPage').then(m => ({ default:
 const ConsumablesPage = lazy(() => import('@/pages/ConsumablesPage').then(m => ({ default: m.ConsumablesPage })))
 const ClassesPage = lazy(() => import('@/pages/ClassesPage').then(m => ({ default: m.ClassesPage })))
 const ClassDetailPage = lazy(() => import('@/pages/ClassDetailPage').then(m => ({ default: m.ClassDetailPage })))
+const EntitiesPage = lazy(() => import('@/pages/EntitiesPage').then(m => ({ default: m.EntitiesPage })))
+const EntityDetailPage = lazy(() => import('@/pages/EntityDetailPage').then(m => ({ default: m.EntityDetailPage })))
 const CharactersPage = lazy(() => import('@/pages/CharactersPage').then(m => ({ default: m.CharactersPage })))
 const CharacterCreatorPage = lazy(() => import('@/pages/CharacterCreatorPage').then(m => ({ default: m.CharacterCreatorPage })))
 const RulesPage = lazy(() => import('@/pages/RulesPage').then(m => ({ default: m.RulesPage })))
@@ -66,6 +68,14 @@ export const router = createBrowserRouter([
       {
         path: 'classes/:className',
         element: withSuspense(ClassDetailPage),
+      },
+      {
+        path: 'entites',
+        element: withSuspense(EntitiesPage),
+      },
+      {
+        path: 'entites/:entityName',
+        element: withSuspense(EntityDetailPage),
       },
       {
         path: 'personnages',

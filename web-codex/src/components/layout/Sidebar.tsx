@@ -13,6 +13,7 @@ import {
   BookOpen,
   Scroll,
   Map,
+  Ghost,
 } from 'lucide-react'
 
 const navigationItems = [
@@ -74,6 +75,12 @@ const navigationItems = [
     href: '/classes',
     icon: Users,
     description: 'Classes de personnages',
+  },
+  {
+    name: 'Entités',
+    href: '/entites',
+    icon: Ghost,
+    description: 'PNJ et créatures',
   },
   {
     name: 'Personnages',

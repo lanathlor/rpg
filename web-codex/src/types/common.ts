@@ -50,6 +50,7 @@ export type CodexCategory =
   | 'armes'
   | 'equipements'
   | 'classes'
+  | 'entites'
   | 'competences'
   | 'consommables'
   | 'scenarios'

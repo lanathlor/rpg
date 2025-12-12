@@ -1,0 +1,4 @@
+# Index file for entities (NPCs)
+# Add entity YAML files here as they are created
+files:
+  - garde_de_l_empire.yaml

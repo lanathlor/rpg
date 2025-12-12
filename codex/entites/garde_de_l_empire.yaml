@@ -1,0 +1,63 @@
+name: "Garde de l'Empire"
+type: "Soldat"
+faction: "Empire"
+alignement: "neutre"
+description: "Un garde standard de l'Empire, entraîné pour la défense des installations militaires et le maintien de l'ordre."
+
+image: "images/entites/garde_empire.png"
+
+# Base statistics
+base_stats:
+  health: 35
+  speed: 5
+
+# Innate resistances
+innate_resistances:
+  RMEC: 1
+  RRAD: 0
+  RINT: 0
+
+# Flux system
+flux_system:
+  reserve: 2
+  per_turn: 1
+  recovery: 1
+
+# Affinities
+affinities:
+  distance: 6
+  melee: 2
+  schools:
+    feu: 0
+  types:
+    destruction: 1
+
+# Character stats
+stats:
+  force: 12
+  dexterite: 11
+  constitution: 13
+  intelligence: 10
+  perception: 11
+  precision: 13
+  charisme: 9
+
+# Equipment (references to codex items)
+equipment:
+  weapons:
+    - "Fusil mitrailleur"
+  armor:
+    - "Armure de plate légère"
+  consumables:
+    - name: "Kit de soins"
+      quantity: 1
+
+# Skills (references to codex)
+skills:
+  - "Guerrier"
+
+# Spells (if any)
+spells: []
+
+# Gameplay guidance
+gameplay_guide: "Un garde de l'Empire standard. Bon au combat rapproché avec son armure de plate légère, équipé d'un fusil mitrailleur pour couvrir les zones stratégiques. Préfère le combat tactique en groupe."

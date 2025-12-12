@@ -372,10 +372,6 @@ export function exportCharacterToPDF(filteredData: FilteredCharacterData): void 
       if (armor.stats?.movement) addText(`Mouvement: ${armor.stats.movement}`, 9, false, 10)
       if (armor.stats?.spellcasting) addText(`Lancement de sorts: ${armor.stats.spellcasting}`, 9, false, 10)
 
-      // Operational constraints
-      if (armor.stats?.action_required) addText(`Action requise: ${armor.stats.action_required}`, 9, false, 10)
-      if (armor.stats?.cooldown) addText(`Cooldown: ${armor.stats.cooldown}`, 9, false, 10)
-
       // Properties and resistances
       if (armor.properties && armor.properties.length > 0) {
         addText(`Propriétés: ${armor.properties.join(', ')}`, 9, false, 10)
