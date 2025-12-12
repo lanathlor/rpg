@@ -23,7 +23,8 @@ export function filterCharacterContent(
   weapons: Weapon[],
   armors: Armor[],
   skills: Skill[],
-  consumables: Consumable[]
+  consumables: Consumable[],
+  skipAccessChecks = false // Set to true for custom characters to show all equipment
 ): FilteredCharacterData {
   // Filter spells - only include accessible ones with their highest accessible level
   const accessibleSpells: Array<{
@@ -32,37 +33,94 @@ export function filterCharacterContent(
     levelData: any
   }> = []
 
-  character.spells?.forEach(spellName => {
+  character.spells?.forEach(spellItem => {
+    // Handle both legacy string format and new SelectedSpell format
+    const spellName = typeof spellItem === 'string' ? spellItem : spellItem.series
+    const selectedLevel = typeof spellItem === 'string' ? undefined : spellItem.level
+
     const spell = spells.find(s => s.spell_series === spellName || s.name === spellName)
     if (spell) {
-      // Use the SAME logic as the UI: checkSpellSeriesAccess
-      const seriesAccess = checkSpellSeriesAccess(spell, character.affinities)
+      if (skipAccessChecks) {
+        // Skip access checks - use the selected level or find the highest level
+        if (selectedLevel) {
+          // Use the specific level selected by the player
+          const levelData = spell.levels?.find(l => l.level === selectedLevel)
+          if (levelData) {
+            accessibleSpells.push({
+              spell,
+              accessibleLevel: parseInt(selectedLevel),
+              levelData
+            })
+          }
+        } else if (spell.levels && spell.levels.length > 0) {
+          // Legacy path: find the highest level
+          let highestLevel = 0
+          let highestLevelData = null
 
-      if (seriesAccess.hasAccess && spell.levels) {
-        // Find the highest accessible level for this spell
-        let highestAccessibleLevel = 0
-        let levelData = null
+          for (const level of spell.levels) {
+            const levelNum = parseInt(level.level)
+            if (levelNum > highestLevel) {
+              highestLevel = levelNum
+              highestLevelData = level
+            }
+          }
 
-        for (const level of spell.levels) {
-          const affinityAccess = checkSpellAccess(level, character.affinities)
-
-          // Also check intelligence requirement
-          const intelligenceOk = !level.conditions?.intelligence_required ||
-                               character.stats.intelligence >= level.conditions.intelligence_required
-
-          if (affinityAccess.hasAccess && intelligenceOk && parseInt(level.level) > highestAccessibleLevel) {
-            highestAccessibleLevel = parseInt(level.level)
-            levelData = level
+          if (highestLevel > 0 && highestLevelData) {
+            accessibleSpells.push({
+              spell,
+              accessibleLevel: highestLevel,
+              levelData: highestLevelData
+            })
           }
         }
+      } else {
+        // Use the SAME logic as the UI: checkSpellSeriesAccess
+        const seriesAccess = checkSpellSeriesAccess(spell, character.affinities)
 
-        // Only include if we found at least one accessible level
-        if (highestAccessibleLevel > 0 && levelData) {
-          accessibleSpells.push({
-            spell,
-            accessibleLevel: highestAccessibleLevel,
-            levelData
-          })
+        if (seriesAccess.hasAccess && spell.levels) {
+          // If a specific level is selected, try to use that
+          if (selectedLevel) {
+            const levelData = spell.levels.find(l => l.level === selectedLevel)
+            if (levelData) {
+              const affinityAccess = checkSpellAccess(levelData, character.affinities)
+              const intelligenceOk = !levelData.conditions?.intelligence_required ||
+                                   character.stats.intelligence >= levelData.conditions.intelligence_required
+
+              if (affinityAccess.hasAccess && intelligenceOk) {
+                accessibleSpells.push({
+                  spell,
+                  accessibleLevel: parseInt(selectedLevel),
+                  levelData
+                })
+              }
+            }
+          } else {
+            // Legacy path: Find the highest accessible level for this spell
+            let highestAccessibleLevel = 0
+            let levelData = null
+
+            for (const level of spell.levels) {
+              const affinityAccess = checkSpellAccess(level, character.affinities)
+
+              // Also check intelligence requirement
+              const intelligenceOk = !level.conditions?.intelligence_required ||
+                                   character.stats.intelligence >= level.conditions.intelligence_required
+
+              if (affinityAccess.hasAccess && intelligenceOk && parseInt(level.level) > highestAccessibleLevel) {
+                highestAccessibleLevel = parseInt(level.level)
+                levelData = level
+              }
+            }
+
+            // Only include if we found at least one accessible level
+            if (highestAccessibleLevel > 0 && levelData) {
+              accessibleSpells.push({
+                spell,
+                accessibleLevel: highestAccessibleLevel,
+                levelData
+              })
+            }
+          }
         }
       }
     }
@@ -73,9 +131,13 @@ export function filterCharacterContent(
   character.equipment.weapons?.forEach(weaponName => {
     const weapon = weapons.find(w => w.name === weaponName)
     if (weapon) {
-      const access = checkWeaponAccess(weapon, character)
-      if (access.hasAccess) {
+      if (skipAccessChecks) {
         accessibleWeapons.push(weapon)
+      } else {
+        const access = checkWeaponAccess(weapon, character)
+        if (access.hasAccess) {
+          accessibleWeapons.push(weapon)
+        }
       }
     }
   })
@@ -85,9 +147,13 @@ export function filterCharacterContent(
   character.equipment.armor?.forEach(armorName => {
     const armor = armors.find(a => a.name === armorName)
     if (armor) {
-      const access = checkArmorAccess(armor, character)
-      if (access.hasAccess) {
+      if (skipAccessChecks) {
         accessibleArmor.push(armor)
+      } else {
+        const access = checkArmorAccess(armor, character)
+        if (access.hasAccess) {
+          accessibleArmor.push(armor)
+        }
       }
     }
   })
@@ -97,9 +163,13 @@ export function filterCharacterContent(
   character.skills?.forEach(skillName => {
     const skill = skills.find(s => s.name === skillName)
     if (skill) {
-      const access = checkSkillAccess(skill, character)
-      if (access.hasAccess) {
+      if (skipAccessChecks) {
         accessibleSkills.push(skill)
+      } else {
+        const access = checkSkillAccess(skill, character)
+        if (access.hasAccess) {
+          accessibleSkills.push(skill)
+        }
       }
     }
   })
@@ -109,9 +179,13 @@ export function filterCharacterContent(
   character.equipment.consumables?.forEach(consumableItem => {
     const consumable = consumables.find(c => c.name === consumableItem.name)
     if (consumable) {
-      const access = checkConsumableAccess(consumable, character)
-      if (access.hasAccess) {
+      if (skipAccessChecks) {
         accessibleConsumables.push(consumable)
+      } else {
+        const access = checkConsumableAccess(consumable, character)
+        if (access.hasAccess) {
+          accessibleConsumables.push(consumable)
+        }
       }
     }
   })
@@ -181,6 +255,12 @@ export function exportCharacterToPDF(filteredData: FilteredCharacterData): void 
     addText(`Flux - Réserve: ${character.flux_system.reserve} | Par tour: ${character.flux_system.per_turn} | Récupération: ${character.flux_system.recovery}`, 10)
   }
 
+  // Innate Resistances
+  const rmec = character.innate_resistances?.RMEC ?? 0
+  const rrad = character.innate_resistances?.RRAD ?? 0
+  const rint = character.innate_resistances?.RINT ?? 0
+  addText(`Résistances innées - RMEC: ${rmec} | RRAD: ${rrad} | RINT: ${rint}`, 10)
+
   // Character Stats
   addSectionHeader('CARACTÉRISTIQUES')
   const statNames = {
@@ -229,6 +309,7 @@ export function exportCharacterToPDF(filteredData: FilteredCharacterData): void 
 
       // Core combat stats
       if (weapon.stats.damage) addText(`Dégâts: ${weapon.stats.damage}`, 9, false, 10)
+      if (weapon.stats.off_hand_damage) addText(`Dégâts main secondaire: ${weapon.stats.off_hand_damage}`, 9, false, 10)
       if (weapon.stats.range) addText(`Portée: ${weapon.stats.range}`, 9, false, 10)
       if (weapon.stats.attack_type) addText(`Type d'attaque: ${weapon.stats.attack_type}`, 9, false, 10)
       if (weapon.stats.defense_type) addText(`Type de défense: ${weapon.stats.defense_type}`, 9, false, 10)
@@ -262,6 +343,7 @@ export function exportCharacterToPDF(filteredData: FilteredCharacterData): void 
       if (armor.stats?.protection_bonus) addText(`Protection: ${armor.stats.protection_bonus}`, 9, false, 10)
       if (armor.stats?.defense_bonus) addText(`Défense: ${armor.stats.defense_bonus}`, 9, false, 10)
       if (armor.stats?.armor_value) addText(`Valeur d'armure: ${armor.stats.armor_value}`, 9, false, 10)
+      if (armor.stats?.saving_throw_bonus) addText(`Bonus aux jets de sauvegarde: ${armor.stats.saving_throw_bonus}`, 9, false, 10)
 
       // Special abilities and modifiers (critical for gameplay)
       if (armor.stats?.special_ability) addText(`Capacité spéciale: ${armor.stats.special_ability}`, 9, false, 10)
@@ -273,6 +355,7 @@ export function exportCharacterToPDF(filteredData: FilteredCharacterData): void 
       // Stat modifications
       if (armor.stats?.stat_modifier) addText(`Modificateur de stats: ${armor.stats.stat_modifier}`, 9, false, 10)
       if (armor.stats?.stat_bonus) addText(`Bonus de stats: ${armor.stats.stat_bonus}`, 9, false, 10)
+      if (armor.stats?.conditional_bonus) addText(`Bonus conditionnel: ${armor.stats.conditional_bonus}`, 9, false, 10)
       if (armor.stats?.hacking_bonus) addText(`Bonus de piratage: ${armor.stats.hacking_bonus}`, 9, false, 10)
 
       // Inventory and utility
@@ -285,8 +368,13 @@ export function exportCharacterToPDF(filteredData: FilteredCharacterData): void 
       // Drone-specific stats (for drone armors)
       if (armor.stats?.health) addText(`Points de vie: ${armor.stats.health}`, 9, false, 10)
       if (armor.stats?.speed) addText(`Vitesse: ${armor.stats.speed}`, 9, false, 10)
+      if (armor.stats?.speed_bonus) addText(`Bonus de vitesse: ${armor.stats.speed_bonus}`, 9, false, 10)
       if (armor.stats?.movement) addText(`Mouvement: ${armor.stats.movement}`, 9, false, 10)
       if (armor.stats?.spellcasting) addText(`Lancement de sorts: ${armor.stats.spellcasting}`, 9, false, 10)
+
+      // Operational constraints
+      if (armor.stats?.action_required) addText(`Action requise: ${armor.stats.action_required}`, 9, false, 10)
+      if (armor.stats?.cooldown) addText(`Cooldown: ${armor.stats.cooldown}`, 9, false, 10)
 
       // Properties and resistances
       if (armor.properties && armor.properties.length > 0) {

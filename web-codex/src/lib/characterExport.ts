@@ -16,6 +16,7 @@ export function exportToYAML(character: Character): void {
     description: character.description,
     image: character.image,
     base_stats: character.base_stats,
+    innate_resistances: character.innate_resistances,
     flux_system: character.flux_system,
     affinities: character.affinities,
     stats: character.stats,
@@ -130,6 +131,28 @@ export function exportToPDF(character: Character): void {
     })
     yPos = (doc as any).lastAutoTable.finalY + 8
   }
+
+  // Innate Resistances
+  doc.setFontSize(14)
+  doc.setFont('helvetica', 'bold')
+  doc.text('Résistances innées', 15, yPos)
+  yPos += 8
+
+  autoTable(doc, {
+    startY: yPos,
+    head: [['RMEC', 'RRAD', 'RINT']],
+    body: [
+      [
+        character.innate_resistances?.RMEC ?? 0,
+        character.innate_resistances?.RRAD ?? 0,
+        character.innate_resistances?.RINT ?? 0,
+      ],
+    ],
+    theme: 'grid',
+    headStyles: { fillColor: [120, 120, 120] },
+    margin: { left: 15, right: 15 },
+  })
+  yPos = (doc as any).lastAutoTable.finalY + 8
 
   // Primary Stats
   doc.setFontSize(14)

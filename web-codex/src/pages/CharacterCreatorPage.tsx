@@ -26,7 +26,8 @@ import {
   saveCharacter,
 } from '@/lib/characterStorage'
 import { useClasses, useWeapons, useArmors, useSkills, useConsumables, useSpells } from '@/lib/dataProvider'
-import { exportToYAML, exportToPDF } from '@/lib/characterExport'
+import { exportToYAML } from '@/lib/characterExport'
+import { filterCharacterContent, exportCharacterToPDF } from '@/lib/pdfExport'
 import type { Character } from '@/types/character'
 import type { CharacterClass } from '@/types/classes'
 import { StatsEditor } from '@/components/character/StatsEditor'
@@ -306,7 +307,18 @@ export function CharacterCreatorPage() {
             <Button
               variant="outline"
               size="sm"
-              onClick={() => exportToPDF(character)}
+              onClick={() => {
+                const filteredData = filterCharacterContent(
+                  character,
+                  allSpells,
+                  weapons,
+                  armors,
+                  skills,
+                  consumables,
+                  true // Skip access checks for custom characters - show all equipment
+                )
+                exportCharacterToPDF(filteredData)
+              }}
             >
               <Download className="h-4 w-4 mr-2" />
               PDF
