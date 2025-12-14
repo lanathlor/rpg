@@ -1,9 +1,10 @@
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Separator } from '@/components/ui/separator'
-import type { Skill } from '@/types'
+import type { Skill, EffectType } from '@/types'
 import { Sword, Shield, Book, Wrench, Target, Zap, Trophy } from 'lucide-react'
 import { getCompetenceTier } from '@/lib/pointBuyCalculator'
+import type { ReactNode } from 'react'
 
 interface SkillDetailProps {
   skill: Skill
@@ -44,6 +45,45 @@ const getSubcategoryColor = (subcategory: string) => {
       return 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300'
     default:
       return 'bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-300'
+  }
+}
+
+// Effect type configuration for dynamic rendering
+const effectTypeConfig: Record<EffectType, { label: string; colorClass: string; icon: ReactNode }> = {
+  combat: {
+    label: 'Combat',
+    colorClass: 'text-red-600 dark:text-red-400',
+    icon: <Sword className="h-4 w-4 inline mr-1" />
+  },
+  defense: {
+    label: 'Défense',
+    colorClass: 'text-green-600 dark:text-green-400',
+    icon: <Shield className="h-4 w-4 inline mr-1" />
+  },
+  movement: {
+    label: 'Mouvement',
+    colorClass: 'text-yellow-600 dark:text-yellow-400',
+    icon: <Zap className="h-4 w-4 inline mr-1" />
+  },
+  technique: {
+    label: 'Technique',
+    colorClass: 'text-orange-600 dark:text-orange-400',
+    icon: <Wrench className="h-4 w-4 inline mr-1" />
+  },
+  detection: {
+    label: 'Détection',
+    colorClass: 'text-purple-600 dark:text-purple-400',
+    icon: <Target className="h-4 w-4 inline mr-1" />
+  },
+  passive: {
+    label: 'Passif',
+    colorClass: 'text-blue-600 dark:text-blue-400',
+    icon: <Book className="h-4 w-4 inline mr-1" />
+  },
+  special: {
+    label: 'Spécial',
+    colorClass: 'text-pink-600 dark:text-pink-400',
+    icon: <Trophy className="h-4 w-4 inline mr-1" />
   }
 }
 
@@ -89,94 +129,24 @@ export function SkillDetail({ skill }: SkillDetailProps) {
           <CardTitle className="text-lg">Effets</CardTitle>
         </CardHeader>
         <CardContent className="space-y-3">
-          {skill.effect.multiple_attacks && (
-            <div>
-              <span className="font-medium text-sm text-red-600 dark:text-red-400">Attaques multiples:</span>
-              <div className="text-sm text-muted-foreground mt-1">
-                {skill.effect.multiple_attacks}
-              </div>
-            </div>
-          )}
-          {skill.effect.protection_bonus && (
-            <div>
-              <span className="font-medium text-sm text-green-600 dark:text-green-400">Bonus de protection:</span>
-              <div className="text-sm text-muted-foreground mt-1">
-                {skill.effect.protection_bonus}
-              </div>
-            </div>
-          )}
-          {skill.effect.stat_bonus && (
-            <div>
-              <span className="font-medium text-sm text-blue-600 dark:text-blue-400">Bonus de statistique:</span>
-              <div className="text-sm text-muted-foreground mt-1">
-                {skill.effect.stat_bonus}
-              </div>
-            </div>
-          )}
-          {skill.effect.movement_bonus && (
-            <div>
-              <span className="font-medium text-sm text-yellow-600 dark:text-yellow-400">Bonus de mouvement:</span>
-              <div className="text-sm text-muted-foreground mt-1">
-                {skill.effect.movement_bonus}
-              </div>
-            </div>
-          )}
-          {skill.effect.detection_bonus && (
-            <div>
-              <span className="font-medium text-sm text-purple-600 dark:text-purple-400">Bonus de détection:</span>
-              <div className="text-sm text-muted-foreground mt-1">
-                {skill.effect.detection_bonus}
-              </div>
-            </div>
-          )}
-          {skill.effect.spell_recognition && (
-            <div>
-              <span className="font-medium text-sm text-indigo-600 dark:text-indigo-400">Reconnaissance des sorts:</span>
-              <div className="text-sm text-muted-foreground mt-1">
-                {skill.effect.spell_recognition}
-              </div>
-            </div>
-          )}
-          {skill.effect.tech_bonus && (
-            <div>
-              <span className="font-medium text-sm text-orange-600 dark:text-orange-400">Bonus technique:</span>
-              <div className="text-sm text-muted-foreground mt-1">
-                {skill.effect.tech_bonus}
-              </div>
-            </div>
-          )}
-          {skill.effect.repair_ability && (
-            <div>
-              <span className="font-medium text-sm text-teal-600 dark:text-teal-400">Capacité de réparation:</span>
-              <div className="text-sm text-muted-foreground mt-1">
-                {skill.effect.repair_ability}
-              </div>
-            </div>
-          )}
-          {skill.effect.spell_enhancement && (
-            <div>
-              <span className="font-medium text-sm text-violet-600 dark:text-violet-400">Amélioration des sorts:</span>
-              <div className="text-sm text-muted-foreground mt-1">
-                {skill.effect.spell_enhancement}
-              </div>
-            </div>
-          )}
-          {skill.effect.passive_bonus && (
-            <div>
-              <span className="font-medium text-sm text-gray-600 dark:text-gray-400">Bonus passif:</span>
-              <div className="text-sm text-muted-foreground mt-1">
-                {skill.effect.passive_bonus}
-              </div>
-            </div>
-          )}
-          {skill.effect.special_abilities && skill.effect.special_abilities.length > 0 && (
-            <div>
-              <span className="font-medium text-sm text-pink-600 dark:text-pink-400">Capacités spéciales:</span>
-              <div className="text-sm text-muted-foreground mt-1 space-y-1">
-                {skill.effect.special_abilities.map((ability, index) => (
-                  <div key={index}>• {ability}</div>
-                ))}
-              </div>
+          {skill.effects && skill.effects.length > 0 ? (
+            skill.effects.map((effect, index) => {
+              const config = effectTypeConfig[effect.type]
+              return (
+                <div key={index}>
+                  <span className={`font-medium text-sm ${config.colorClass}`}>
+                    {config.icon}
+                    {config.label}:
+                  </span>
+                  <div className="text-sm text-muted-foreground mt-1">
+                    {effect.description}
+                  </div>
+                </div>
+              )
+            })
+          ) : (
+            <div className="text-sm text-muted-foreground">
+              Aucun effet défini
             </div>
           )}
         </CardContent>

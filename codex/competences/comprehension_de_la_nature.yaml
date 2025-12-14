@@ -2,7 +2,9 @@ name: "Compréhension de la nature"
 category: "Compétence"
 subcategory: "survie"
 point_cost: 5
-effect:
-  identification_bonus: "Identification des plantes et animaux plus simple"
-  animal_communication: "Peut communiquer de manière primaire avec certains animaux"
+effects:
+  - type: "special"
+    description: "Identification des plantes et animaux plus simple"
+  - type: "special"
+    description: "Peut communiquer de manière primaire avec certains animaux"
 description: "Connaissance profonde des écosystèmes naturels et capacité limitée de communication avec la faune."

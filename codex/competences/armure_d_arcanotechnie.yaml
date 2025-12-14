@@ -2,6 +2,7 @@ name: "Armure d'arcanotechnie"
 category: "Compétence"
 subcategory: "défensive"
 point_cost: 15
-effect:
-  protection_bonus: "+2 score de protection arcanotechnique"
-description: "Technique de concentration permettant de créer une protection passive contre les attaques arcanotechniques."
+effects:
+  - type: "defense"
+    description: "+1 RRAD et +1 RINT"
+description: "Technique de concentration permettant de créer une protection énergétique passive. Le personnage manipule son propre Flux pour former un bouclier qui dissipe l'énergie radiative (RRAD) et stabilise son métabolisme contre les intrusions internes (RINT)."

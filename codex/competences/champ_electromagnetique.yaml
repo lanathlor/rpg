@@ -2,6 +2,9 @@ name: "Champ électromagnétique"
 category: "Compétence"
 subcategory: "défensive"
 point_cost: 15
-effect:
-  protection_bonus: "+2 scores de protection à distance"
-description: "Capacité à générer un champ électromagnétique défensif déviant les projectiles et énergies dirigées."
+effects:
+  - type: "defense"
+    description: "+2 RMEC contre projectiles métalliques"
+  - type: "special"
+    description: "Peut dévier ou ralentir les projectiles ferreux et les armes métalliques"
+description: "Capacité à générer un champ électromagnétique défensif qui perturbe et dévie les projectiles métalliques et les armes ferreux. Efficace contre balles, lames métalliques et débris ferreux, mais n'affecte pas les projectiles non-métalliques ou les énergies."

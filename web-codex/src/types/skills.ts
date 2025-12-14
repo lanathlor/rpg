@@ -1,23 +1,37 @@
 import type { BaseItem } from './common'
 
+export type EffectType =
+  | 'combat'      // Offensive capabilities (attacks, damage)
+  | 'defense'     // Defensive capabilities (blocking, protection)
+  | 'movement'    // Mobility enhancements (speed, terrain)
+  | 'technique'   // Technical abilities (repair, construction, hacking)
+  | 'detection'   // Perception and identification (tracking, recognition)
+  | 'passive'     // Stat bonuses and passive effects
+  | 'special'     // Unique abilities that don't fit other categories
+
 export interface SkillEffect {
-  multiple_attacks?: string
-  spell_enhancement?: string
-  special_abilities?: string[]
-  passive_bonus?: string
-  protection_bonus?: string
-  detection_bonus?: string
-  spell_recognition?: string
-  tech_bonus?: string
-  repair_ability?: string
-  stat_bonus?: string
-  movement_bonus?: string
+  type: EffectType
+  description: string
 }
 
 export interface Skill extends BaseItem {
-  effect: SkillEffect
+  effects: SkillEffect[]
   point_cost?: number
 }
 
 export type SkillCategory = 'Compétence'
-export type SkillSubcategory = 'combat' | 'défensive' | 'connaissance' | 'technique' | 'précision' | 'mobilité'
+export type SkillSubcategory =
+  | 'combat'
+  | 'défense'
+  | 'défensive'
+  | 'connaissance'
+  | 'technique'
+  | 'précision'
+  | 'mobilité'
+  | 'tactique'
+  | 'survie'
+  | 'furtivité'
+  | 'social'
+  | 'analyse'
+  | 'perception'
+  | 'capacité spéciale'

@@ -2,6 +2,7 @@ name: "Vue des quantiques"
 category: "Compétence"
 subcategory: "perception"
 point_cost: 5
-effect:
-  detection_bonus: "Augmente les chances de voir des éléments liés à l'arcanotechnie"
+effects:
+  - type: "detection"
+    description: "Augmente les chances de voir des éléments liés à l'arcanotechnie"
 description: "Capacité à percevoir les flux arcanotechniques et à identifier les objets, créatures ou phénomènes d'origine arcanotechnique."

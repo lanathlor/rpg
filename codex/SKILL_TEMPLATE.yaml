@@ -1,0 +1,126 @@
+# ========================================
+# SKILL TEMPLATE
+# ========================================
+# This template defines the structure for skill YAML files
+# in the codex/competences/ directory.
+#
+# All skills follow this simplified format with a generic
+# effects array instead of hardcoded field types.
+# ========================================
+
+name: "Nom de la compétence"
+category: "Compétence"
+
+# Subcategories available:
+# - combat, défense, défensive, connaissance, technique
+# - précision, mobilité, tactique, survie, furtivité
+# - social, analyse, perception, capacité spéciale
+subcategory: "combat"
+
+# Point cost determines the tier:
+# - 18 pts (Tier S): Most powerful, major advantages
+# - 15 pts (Tier A): Very powerful defensive/mobility
+# - 12 pts (Tier B): Significant tactical advantages
+# - 10 pts (Tier C): Useful stat bonuses
+# -  8 pts (Tier D): Practical utility abilities
+# -  5 pts (Tier E): Minor bonuses or specialized knowledge
+point_cost: 10
+
+# Effects array - each effect has a type and description
+# This is the NEW simplified format
+effects:
+  # Effect types available:
+  # - combat: Offensive capabilities (attacks, damage)
+  # - defense: Defensive capabilities (blocking, protection, healing)
+  # - movement: Mobility enhancements (speed, terrain navigation)
+  # - technique: Technical abilities (repair, construction, hacking)
+  # - detection: Perception and identification (tracking, recognition)
+  # - passive: Stat bonuses and passive effects
+  # - special: Unique abilities that don't fit other categories
+
+  - type: "combat"
+    description: "Peut attaquer 2 fois en 1 tour"
+
+  - type: "passive"
+    description: "+2 en Force"
+
+  # You can have as many effects as needed for the skill
+  - type: "special"
+    description: "Une capacité unique et situationnelle"
+
+description: "Description complète de la compétence. Explique comment elle fonctionne, quand l'utiliser, et son impact sur le jeu. Cette description apparaît en haut de la page de détail de la compétence."
+
+# ========================================
+# EXAMPLES BY EFFECT TYPE
+# ========================================
+
+# COMBAT examples:
+# effects:
+#   - type: "combat"
+#     description: "Peut attaquer 2 fois en 1 tour"
+#
+#   - type: "combat"
+#     description: "+2 aux jets d'attaque au corps à corps"
+
+# DEFENSE examples:
+# effects:
+#   - type: "defense"
+#     description: "Régénère 10 PV par tour si connecté à une source"
+#
+#   - type: "defense"
+#     description: "Peut sacrifier des racines pour bloquer automatiquement une attaque"
+#
+#   - type: "defense"
+#     description: "+2 RMEC et +1 RRAD"
+
+# MOVEMENT examples:
+# effects:
+#   - type: "movement"
+#     description: "Vitesse de déplacement +2m par tour"
+#
+#   - type: "movement"
+#     description: "Peut se déplacer en terrain difficile sans pénalité"
+
+# TECHNIQUE examples:
+# effects:
+#   - type: "technique"
+#     description: "Permet d'utiliser les technologies avec une plus grande chance de succès"
+#
+#   - type: "technique"
+#     description: "Peut réparer les dégâts électriques légers en 1 action"
+#
+#   - type: "technique"
+#     description: "Permet de pirater les systèmes de sécurité de niveau 1-3"
+
+# DETECTION examples:
+# effects:
+#   - type: "detection"
+#     description: "Reconnaît la classe des ennemis au premier regard"
+#
+#   - type: "detection"
+#     description: "+3 aux jets de Perception pour détecter les embuscades"
+#
+#   - type: "detection"
+#     description: "Peut identifier les sorts en les observant être lancés"
+
+# PASSIVE examples:
+# effects:
+#   - type: "passive"
+#     description: "+1 PRE"
+#
+#   - type: "passive"
+#     description: "+2 INT, +1 PER"
+#
+#   - type: "passive"
+#     description: "Immunité complète aux poisons, maladies et toxines"
+
+# SPECIAL examples:
+# effects:
+#   - type: "special"
+#     description: "Commande et manipule racines, vignes et plantes dans un rayon de 10m"
+#
+#   - type: "special"
+#     description: "Peut créer un champ électromagnétique qui dévie les projectiles métalliques"
+#
+#   - type: "special"
+#     description: "Les sorts lancés coûtent -2 Flux (minimum 1)"

@@ -94,15 +94,19 @@ export function SkillsPage() {
 
   // Helper function to display effect preview
   const getEffectPreview = (skill: Skill) => {
-    const effects = []
-    if (skill.effect.multiple_attacks) effects.push(`Attaques: ${skill.effect.multiple_attacks}`)
-    if (skill.effect.stat_bonus) effects.push(`Stats: ${skill.effect.stat_bonus}`)
-    if (skill.effect.protection_bonus) effects.push(`Protection: ${skill.effect.protection_bonus}`)
-    if (skill.effect.movement_bonus) effects.push(`Mouvement: ${skill.effect.movement_bonus}`)
-    if (skill.effect.tech_bonus) effects.push(`Tech: ${skill.effect.tech_bonus}`)
-    if (skill.effect.detection_bonus) effects.push(`Détection: ${skill.effect.detection_bonus}`)
+    if (!skill.effects || skill.effects.length === 0) {
+      return 'Voir les détails'
+    }
 
-    return effects.slice(0, 2).join(' • ') || 'Voir les détails'
+    // Take first 2 effects and show their descriptions (truncated)
+    const previews = skill.effects.slice(0, 2).map(effect => {
+      const desc = effect.description.length > 40
+        ? effect.description.substring(0, 40) + '...'
+        : effect.description
+      return desc
+    })
+
+    return previews.join(' • ')
   }
 
   if (loading) {

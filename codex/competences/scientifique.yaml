@@ -2,6 +2,7 @@ name: "Scientifique"
 category: "Compétence"
 subcategory: "analyse"
 point_cost: 5
-effect:
-  investigation_bonus: "Peut tirer plus d'information d'un jet d'inspection"
+effects:
+  - type: "special"
+    description: "Peut tirer plus d'information d'un jet d'inspection"
 description: "Formation scientifique permettant d'analyser méthodiquement les phénomènes et d'en extraire plus d'informations."

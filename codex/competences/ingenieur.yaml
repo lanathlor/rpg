@@ -2,7 +2,9 @@ name: "Ingénieur"
 category: "Compétence"
 subcategory: "technique"
 point_cost: 8
-effect:
-  repair_ability: "Permet de réparer les dégâts mécaniques et électriques"
-  construction_ability: "Permet de construire des objets"
+effects:
+  - type: "technique"
+    description: "Permet de réparer les dégâts mécaniques et électriques"
+  - type: "special"
+    description: "Permet de construire des objets"
 description: "Formation technique approfondie en mécanique et électronique permettant la réparation et la construction d'équipements."

@@ -2,7 +2,9 @@ name: "Charismatique"
 category: "Compétence"
 subcategory: "social"
 point_cost: 10
-effect:
-  stat_bonus: "+1 CHA"
-  threat_attraction: "Augmente les chances d'être pris pour cible"
+effects:
+  - type: "passive"
+    description: "+1 CHA"
+  - type: "special"
+    description: "Augmente les chances d'être pris pour cible"
 description: "Présence naturelle et autorité qui inspire mais attire aussi l'attention des ennemis qui voient la menace potentielle."

@@ -2,6 +2,7 @@ name: "Armure vivante"
 category: "Compétence"
 subcategory: "défense"
 point_cost: 14
-effect:
-  defense: "Peut sacrifier des racines ou parties de son corps pour bloquer automatiquement une attaque"
+effects:
+  - type: "defense"
+    description: "Peut sacrifier des racines ou parties de son corps pour bloquer automatiquement une attaque"
 description: "Défense organique active. Le personnage peut détacher des parties de son corps (racines, tentacules, excroissances) pour intercepter et bloquer des attaques entrantes. Ces parties repoussent lentement avec le temps ou via régénération."

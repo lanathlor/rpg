@@ -2,7 +2,9 @@ name: "Connaisseur d'arcanotechnie"
 category: "Compétence"
 subcategory: "connaissance"
 point_cost: 12
-effect:
-  detection_bonus: "Augmente les chances de voir des éléments liés à l'arcanotechnie"
-  spell_recognition: "Permet de reconnaître les sorts incantés grâce à une manœuvre"
+effects:
+  - type: "detection"
+    description: "Augmente les chances de voir des éléments liés à l'arcanotechnie"
+  - type: "detection"
+    description: "Permet de reconnaître les sorts incantés grâce à une manœuvre"
 description: "Connaissance approfondie de la théorie arcanotechnique permettant d'identifier et de comprendre les phénomènes arcanotechniques."

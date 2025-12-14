@@ -2,6 +2,7 @@ name: "Tacticien"
 category: "Compétence"
 subcategory: "tactique"
 point_cost: 10
-effect:
-  initiative_bonus: "+1 au jet d'initiative"
+effects:
+  - type: "special"
+    description: "+1 au jet d'initiative"
 description: "Formation tactique permettant d'anticiper les mouvements ennemis et de réagir plus rapidement en combat."
