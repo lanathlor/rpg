@@ -1,399 +1,330 @@
 # Comment Contribuer au Projet
 
-Bienvenue ! Ce document explique comment vous pouvez participer au développement de ce jeu de rôle, même sans connaissances techniques en programmation.
-
-**Dépôt GitHub :** https://github.com/lanathlor/rpg
-
-## Vue d'ensemble du projet
-
-Ce projet est un système de jeu de rôle sur table où la "magie" (appelée Flux ou Arcanotechnique) crée des phénomènes physiques réels. Le système utilise un mécanisme de résistances unifié basé sur la physique plutôt que des types de dégâts magiques séparés.
-
-### Trois types de résistances
-
-Tous les dégâts dans le jeu sont résistés par l'une des trois résistances suivantes, basées sur la **nature physique** de l'effet :
-
--   **RMEC (Résistance Mécanique)** - Dégâts cinétiques/mécaniques : impacts, projectiles, pression, ondes de choc
--   **RRAD (Résistance Radiative)** - Dégâts énergétiques/thermiques : feu, froid, électricité, lumière, radiation
--   **RINT (Résistance Interne)** - Dégâts internes/métaboliques : drain de vie, nécroses, corruption, effets internes
-
-**Règle importante :** Ce qui compte, c'est la NATURE PHYSIQUE de l'effet, pas sa source.
-
-**Exemples :**
-
--   Une boule de feu → RRAD (dégâts thermiques)
--   Un javelot de glace magique → RMEC (projectile cinétique)
--   Un drain de vie → RINT (effet interne)
-
-## Images et Ressources Visuelles
-
-**⚠️ Avertissement concernant les images générées par IA :**
-
-Actuellement, les images présentes dans ce projet sont **générées à l'aide d'outils d'intelligence artificielle** (tels que DALL-E, Midjourney ou similaires). Le créateur du projet n'est pas un artiste visuel et ne peut pas créer ces illustrations de manière indépendante.
-
-Il s'agit d'une **solution temporaire**. Nous recherchons activement :
-
--   **Des artistes bénévoles** pour remplacer les images générées par IA par des créations originales
--   **Des commandes artistiques** dès que les ressources seront disponibles
--   **Des contributions de la communauté** de la part d'artistes talentueux qui partagent notre vision
-
-Si vous êtes un artiste intéressé par la création d'illustrations originales pour ce projet, n'hésitez pas à nous contacter ! Nous serions ravis de collaborer et de remplacer le contenu généré par IA par de véritables créations humaines.
-
-## Comment contribuer
-
-Il existe plusieurs façons de participer au projet, selon vos intérêts et compétences.
-
-### 1. Créer des Sorts
-
-Les sorts sont stockés dans des fichiers au format YAML (un format simple pour écrire des données structurées). Vous pouvez créer de nouveaux sorts en suivant le modèle fourni.
-
-**Emplacement :** `/codex/sorts/`
-
-Les sorts sont organisés par type :
-
--   `destruction/` - Sorts offensifs
--   `alteration/` - Sorts qui modifient l'environnement ou les cibles
--   `amelioration/` - Sorts de renforcement
--   `arme/` - Sorts d'armes magiques
--   `soins/` - Sorts de guérison
--   etc.
-
-#### Modèle de sort
-
-Un fichier de sort ressemble à ceci :
-
-```yaml
-spell_series: 'Boule de feu'
-school: feu
-type: destruction
-description_base: 'Lancez une sphère de flammes ardentes...'
-
-levels:
-    - level: '1'
-      conditions:
-          cast_time: 'action principale'
-          range: '30m'
-          flux_cost: '2'
-      effects:
-          damage: '2d6+3 feu'
-          resistance: 'RRAD'
-          area: 'rayon de 3m'
-      description: 'Une boule de feu explose au point ciblé...'
-```
-
-#### Champs importants à remplir
-
--   **spell_series** : Nom unique du sort
--   **school** : École du sort (feu, glace, foudre, terre, air, eau, lumière, ombre, nature, etc.)
--   **type** : Type de sort (destruction, alteration, amélioration, etc.)
--   **description_base** : Description générale du sort
--   **level** : Niveau du sort (toujours entre guillemets : "1", "2", etc.)
--   **cast_time** : Temps d'incantation ("action principale", "action rapide", "1 sec", etc.)
--   **range** : Portée du sort ("30m", "contact", "personnelle", etc.)
--   **flux_cost** : Coût en Flux (toujours entre guillemets : "2", "3", etc.)
--   **damage** : Dégâts infligés (ex: "2d6+3 feu")
--   **resistance** : **TRÈS IMPORTANT** - Quelle résistance s'applique (RMEC, RRAD, ou RINT)
-
-#### Choisir la bonne résistance
-
-Posez-vous ces questions :
-
-1. **L'effet frappe-t-il avec de la force ?** → RMEC
-
-    - Projectiles (flèches magiques, rochers)
-    - Impacts physiques
-    - Ondes de choc
-    - Pression
-
-2. **L'effet brûle/gèle/électrocute-t-il ?** → RRAD
-
-    - Feu (brûlures)
-    - Froid (gelure)
-    - Électricité (choc électrique)
-    - Lumière intense
-    - Radiation
-
-3. **L'effet attaque-t-il de l'intérieur ?** → RINT
-    - Drain de vie
-    - Nécroses
-    - Corruption
-    - Poison magique
-    - Effets métaboliques
-
-**Exemples pratiques :**
-
--   "Boule de feu" → RRAD (c'est chaud, ça brûle)
--   "Lance de glace" → RMEC (c'est un projectile solide qui vous transperce)
--   "Rayon de givre" → RRAD (c'est du froid qui gèle)
--   "Marteau spectral" → RMEC (c'est un impact)
--   "Éclair" → RRAD (c'est de l'électricité)
--   "Drain de vie" → RINT (attaque le métabolisme interne)
-
-#### Conventions d'écriture
-
--   Les niveaux sont toujours des chaînes de caractères : `level: "1"` et non `level: 1`
--   Le temps utilise le format : `"X sec"` ou `"instantané"`, jamais `"X secs"` ou `"aucun"`
--   Utilisez une indentation de 2 espaces (pas de tabulations)
--   N'oubliez jamais le champ `resistance` dans les effets !
-
-### 2. Créer de l'Équipement
-
-L'équipement (armes, armures, objets) se trouve dans `/codex/equipements/`.
-
-#### Modèle d'armure
-
-```yaml
-name: 'Armure de combat lourde'
-category: armure
-subcategory: lourde
-description: 'Une armure complète qui offre une protection maximale...'
-stats:
-    RMEC: '+3' # Bonus de résistance mécanique
-    RRAD: '+1' # Bonus de résistance radiative
-    RINT: '+0' # Bonus de résistance interne
-    speed_bonus: '-1'
-    force_requirement: '4'
-cost: '5000 crédits'
-```
-
-#### Modèle d'arme
-
-```yaml
-name: 'Épée longue'
-category: arme
-subcategory: mêlée
-description: 'Une lame équilibrée pour le combat rapproché...'
-damage: '1d8+2'
-range: 'mêlée'
-cost: '800 crédits'
-```
-
-### 3. Créer des Classes de Personnages
-
-Les classes définissent les personnages de départ dans `/codex/classes/`.
-
-```yaml
-name: 'Guerrier'
-description: 'Un combattant robuste et polyvalent...'
-base_stats:
-    health: 25
-    flux_reserve: 5
-stats:
-    force: 4
-    agilité: 2
-    endurance: 3
-    intelligence: 1
-    sagesse: 2
-    charisme: 1
-equipment:
-    weapons: ['Épée longue']
-    armor: ['Armure de combat moyenne']
-spells: []
-skills: ['Combat au corps-à-corps I']
-starting_credits: 500
-```
-
-### 4. Améliorer les Règles
-
-Les règles du jeu sont écrites en Markdown (un format de texte simple) dans `/rules/`.
-
-Vous pouvez :
-
--   Corriger des fautes de frappe
--   Clarifier des règles ambiguës
--   Ajouter des exemples
--   Proposer de nouvelles mécaniques
-
-**Fichiers principaux :**
-
--   `00_introduction.md` - Présentation du jeu
--   `01_bases_des_regles.md` - Règles de base
--   `02_combat.md` - Système de combat
--   `07_systeme_de_resistances.md` - Guide complet des résistances
--   `09_lexique.md` - Glossaire des termes
-
-### 5. Signaler des Problèmes
-
-Si vous trouvez :
-
--   Des erreurs dans les sorts ou l'équipement
--   Des incohérences dans les règles
--   Des bugs dans l'application web
--   Des sorts mal équilibrés
-
-Signalez-les en créant une "issue" sur le dépôt GitHub : https://github.com/lanathlor/rpg/issues
-
-## Outils Recommandés
-
-### Éditeur de Texte
-
-Pour éditer les fichiers YAML et Markdown, utilisez un éditeur de texte simple :
-
--   **Visual Studio Code** (gratuit, recommandé) - https://code.visualstudio.com/
--   **Sublime Text** (gratuit)
--   **Notepad++** (Windows, gratuit)
--   **TextEdit** (Mac, intégré)
-
-⚠️ **N'utilisez PAS** Microsoft Word ou LibreOffice - ils ajoutent du formatage invisible qui casse les fichiers.
-
-### Validation YAML
-
-Pour vérifier que votre YAML est correct :
-
--   Utilisez un validateur en ligne comme https://www.yamllint.com/
--   Collez votre contenu et vérifiez qu'il n'y a pas d'erreurs
-
-## Processus de Contribution
-
-### Méthode Simple (par Email/Message)
-
-1. Créez votre contenu dans un fichier texte
-2. Suivez le modèle approprié
-3. Envoyez-le à l'équipe pour révision
-4. L'équipe l'intégrera au projet
-
-### Méthode Avancée (avec Git)
-
-Si vous êtes à l'aise avec Git :
-
-1. Clonez le dépôt :
-   ```bash
-   git clone https://github.com/lanathlor/rpg.git
-   ```
-2. Créez une branche pour vos modifications
-3. Ajoutez vos fichiers
-4. Créez un "pull request" sur https://github.com/lanathlor/rpg/pulls
-5. Attendez la révision
-
-## Conseils pour Créer du Contenu
-
-### Équilibrage
-
-Quand vous créez des sorts ou de l'équipement :
-
--   **Respectez la progression** : Les sorts de niveau 1 doivent être moins puissants que ceux de niveau 5
--   **Pensez au coût en Flux** : Plus un sort est puissant, plus il devrait coûter cher
--   **Considérez la portée** : Les sorts à longue portée devraient généralement faire moins de dégâts
--   **Variez les résistances** : Ne faites pas que des sorts RRAD, utilisez les trois types
-
-### Style d'Écriture
-
--   Écrivez en français
--   Utilisez un langage clair et concis
--   Évitez le jargon technique inutile
--   Donnez des exemples concrets
--   Soyez cohérent avec le ton du reste du jeu
-
-### Cohérence
-
--   Vérifiez que vos sorts correspondent aux écoles existantes
--   Assurez-vous que les coûts sont cohérents avec le contenu existant
--   Respectez les conventions de nommage
--   Utilisez les mêmes unités (mètres, secondes, crédits)
-
-## Questions Fréquentes
-
-### Q : Je ne connais rien à la programmation, puis-je quand même contribuer ?
-
-**R :** Absolument ! La plupart des contributions concernent le contenu du jeu (sorts, équipement, règles) et ne nécessitent aucune connaissance en programmation. Il suffit de savoir éditer des fichiers texte.
-
-### Q : Qu'est-ce que YAML exactement ?
-
-**R :** YAML est un format simple pour écrire des données structurées. C'est comme remplir un formulaire dans un fichier texte. Il faut juste faire attention à l'indentation (les espaces au début des lignes).
-
-### Q : Comment savoir si mes fichiers YAML sont corrects ?
-
-**R :** Utilisez un validateur en ligne comme yamllint.com. Si vous avez des erreurs, le validateur vous dira où elles se trouvent.
-
-### Q : Puis-je proposer de nouvelles écoles de magie ?
-
-**R :** Oui ! Proposez votre idée à l'équipe avec une description détaillée et quelques sorts d'exemple.
-
-### Q : Comment puis-je tester mes sorts dans le jeu ?
-
-**R :** L'application web permet d'importer des fichiers YAML. Vous pouvez créer un personnage et lui ajouter vos sorts pour les tester.
-
-### Q : Que faire si je ne suis pas sûr de la résistance à utiliser ?
-
-**R :** Posez-vous la question : "Physiquement, comment cet effet blesse-t-il la cible ?" Si c'est encore flou, demandez conseil à l'équipe ou regardez des sorts similaires existants.
-
-### Q : Combien de temps faut-il pour créer un sort ?
-
-**R :** Entre 10 et 30 minutes une fois que vous connaissez le format. Les premiers sont plus longs, mais ça devient plus rapide avec la pratique.
-
-### Q : Y a-t-il une limite au nombre de sorts que je peux créer ?
-
-**R :** Non ! Plus il y a de contenu, mieux c'est. Assurez-vous juste que chaque sort est unique et intéressant.
-
-## Ressources Utiles
-
--   **Modèle de sort :** `/codex/SPELL_TEMPLATE.yaml`
--   **Guide des résistances :** `/rules/07_systeme_de_resistances.md`
--   **Lexique :** `/rules/09_lexique.md`
--   **Sorts existants :** Parcourez `/codex/sorts/` pour voir des exemples
-
-## Licence et Droits d'Auteur
-
-Ce projet utilise une **double licence** pour permettre la plus grande liberté possible :
-
-### Contenu du Jeu (Licence Creative Commons)
-
-Tout le contenu du jeu (règles, sorts, équipement, etc.) est publié sous **licence Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)**.
-
-**Ce que cela signifie pour vous :**
-
-✅ **Vous pouvez :**
-- Utiliser ces règles pour vos parties (même commerciales)
-- Créer vos propres jeux basés sur ce système
-- Publier des aventures et suppléments (même payants)
-- Modifier et adapter le contenu
-- Traduire dans d'autres langues
-
-✅ **À condition de :**
-- Mentionner ce projet comme source (attribution)
-- Partager vos modifications sous la même licence (partage à l'identique)
-- Indiquer clairement ce que vous avez modifié
-
-**Exemple d'attribution :**
-```
-Basé sur [Nom du Projet RPG], disponible sur https://github.com/lanathlor/rpg
-Publié sous licence CC BY-SA 4.0
-```
-
-### Code Source (Licence MIT)
-
-Le code de l'application web et des outils est publié sous **licence MIT**, ce qui vous donne une liberté maximale pour l'utiliser et le modifier.
-
-### En Contribuant
-
-En participant à ce projet, vous acceptez que :
-
-1. Vos contributions au **contenu du jeu** seront publiées sous licence CC BY-SA 4.0
-2. Vos contributions au **code logiciel** seront publiées sous licence MIT
-3. Vous avez le droit de soumettre ce contenu sous ces licences
-4. Vos contributions resteront disponibles publiquement sous ces licences
-
-**Important :** Vous conservez vos droits d'auteur sur vos contributions, mais vous les partagez généreusement avec la communauté.
-
-**Note sur les images générées par IA :**
-Les images actuelles sont générées par IA à titre temporaire. Nous accueillons avec plaisir les contributions d'artistes pour les remplacer par des créations originales. Si vous souhaitez contribuer des illustrations, contactez-nous pour discuter des opportunités de collaboration.
-
-### Pourquoi Cette Licence ?
-
-La licence CC BY-SA 4.0 est le standard pour les jeux de rôle open source. Elle garantit que :
-
-- Le jeu reste libre et accessible à tous
-- Les améliorations profitent à toute la communauté
-- Personne ne peut "fermer" le système en créant une version propriétaire
-- Les créateurs peuvent gagner de l'argent avec leurs suppléments tout en partageant leurs innovations
-
-Pour plus de détails, consultez le fichier `LICENSE.md` à la racine du projet.
-
-## Contact
-
-valentin@viviersoft.com
+Bienvenue ! Ce guide vous explique comment participer au développement de ce jeu de rôle. **Aucune connaissance technique n'est requise** - si vous savez utiliser un navigateur web et écrire dans un fichier texte, vous pouvez contribuer !
+
+## 🎯 Vue Rapide : Que Puis-je Faire ?
+
+- **🎨 Artistes** → Créer des illustrations pour remplacer les images IA temporaires
+- **✨ Créateurs** → Inventer des sorts, armes, armures, classes de personnage
+- **📝 Rédacteurs** → Améliorer les règles, corriger les fautes, clarifier les textes
+- **🎲 Testeurs** → Jouer et signaler ce qui ne va pas
+- **💡 Penseurs** → Proposer de nouvelles idées et mécaniques
 
 ---
 
-**Merci de contribuer à ce projet ! Chaque sort, chaque pièce d'équipement, chaque amélioration des règles rend le jeu meilleur pour tout le monde.**
+## 📧 Méthode 1 : Par Email (Le Plus Simple !)
 
-**En partageant votre travail sous licence libre, vous participez à construire un jeu que tout le monde peut utiliser, modifier et améliorer. C'est l'esprit de l'open source !**
+**Parfait si vous n'aimez pas les sites web compliqués.**
+
+### Comment faire :
+
+1. **Créez votre contenu** dans n'importe quel éditeur de texte (Bloc-notes, TextEdit, Word...)
+2. **Envoyez un email** à : **valentin@viviersoft.com**
+
+### Exemple d'email :
+```
+Objet : Nouveau sort - Boule de feu
+
+Bonjour !
+
+J'ai créé un nouveau sort pour le jeu. C'est une boule de feu de niveau 1
+qui fait 2d6 dégâts dans une zone de 3 mètres.
+
+Voici les détails :
+- Nom : Boule de feu
+- École : Feu
+- Type : Destruction
+- Dégâts : 2d6+3
+- Portée : 30 mètres
+- Coût : 2 Flux
+
+Merci !
+```
+
+**C'est tout !** Nous nous occuperons de mettre votre création dans le bon format.
+
+---
+
+## 🌐 Méthode 2 : GitHub Sans Compte Développeur
+
+**GitHub est le site où le projet est hébergé. Vous pouvez contribuer directement depuis votre navigateur !**
+
+### Étape 1 : Créer un compte GitHub (Gratuit)
+
+1. Allez sur https://github.com
+2. Cliquez sur **"Sign up"** (en haut à droite)
+3. Suivez les étapes (email, mot de passe, nom d'utilisateur)
+4. Validez votre email
+5. **C'est fait !** Vous avez un compte GitHub
+
+### Étape 2 : Signaler un Problème ou Proposer une Idée
+
+1. Allez sur https://github.com/lanathlor/rpg
+2. Cliquez sur l'onglet **"Issues"**
+3. Cliquez sur le bouton vert **"New issue"**
+4. **Écrivez votre idée** :
+   - **Title** : Un titre court (ex: "Nouveau sort : Éclair")
+   - **Comment** : Décrivez votre idée ou collez votre création
+5. Cliquez sur **"Submit new issue"**
+
+**Exemple d'Issue :**
+```
+Title: Nouvelle classe - Technomancien
+
+Comment:
+J'ai une idée pour une nouvelle classe qui mélange technologie et magie.
+
+Caractéristiques :
+- Points de vie : 18
+- Flux : 12
+- Force : 8
+- Intelligence : 12
+
+Équipement de départ :
+- Pistolet à énergie
+- Armure légère tech
+
+Description : Un expert en fusion de la technologie et du Flux...
+```
+
+### Étape 3 : Modifier des Fichiers Directement sur GitHub
+
+**Vous pouvez éditer les fichiers du projet directement dans votre navigateur !**
+
+1. **Allez sur** https://github.com/lanathlor/rpg
+2. **Naviguez** jusqu'au fichier à modifier :
+   - Cliquez sur `codex` pour voir les sorts, armes, classes...
+   - Cliquez sur `rules` pour les règles du jeu
+3. **Cliquez sur un fichier** pour l'ouvrir
+4. **Cliquez sur l'icône crayon** ✏️ (en haut à droite du fichier)
+5. **Faites vos modifications** directement dans la page
+6. **En bas de la page** :
+   - Dans "Commit changes", décrivez ce que vous avez changé
+   - Cochez **"Create a new branch"**
+   - Cliquez sur **"Propose changes"**
+7. **Sur la page suivante**, cliquez sur **"Create pull request"**
+8. **C'est fait !** Vos modifications seront examinées
+
+### Étape 4 : Ajouter un Nouveau Fichier sur GitHub
+
+1. **Naviguez** jusqu'au bon dossier (ex: `codex/sorts/destruction/`)
+2. **Cliquez sur** "Add file" → "Create new file"
+3. **Nommez votre fichier** (ex: `boule_de_feu.yaml`)
+4. **Écrivez le contenu** dans l'éditeur
+5. **En bas**, décrivez votre ajout et cliquez sur **"Propose new file"**
+6. **Créez la pull request** comme ci-dessus
+
+---
+
+## 📝 Créer du Contenu de Jeu
+
+### Format Simplifié pour les Sorts
+
+**Pas besoin de connaître YAML !** Envoyez-nous simplement ces informations :
+
+```
+NOM DU SORT : Boule de feu
+ÉCOLE : Feu (options : feu, glace, foudre, terre, air, eau, lumière, ombre, nature)
+TYPE : Destruction (options : destruction, altération, amélioration, arme, soin)
+
+NIVEAU 1 :
+- Dégâts : 2d6+3 feu
+- Portée : 30 mètres
+- Zone : Rayon de 3 mètres
+- Coût en Flux : 2
+- Temps d'incantation : Action principale
+- Description : Une petite boule de feu explose au point ciblé
+
+NIVEAU 2 :
+- Dégâts : 3d6+5 feu
+- Portée : 40 mètres
+- Zone : Rayon de 4 mètres
+- Coût en Flux : 4
+- (etc...)
+```
+
+### Format Simplifié pour l'Équipement
+
+```
+NOM : Armure de combat
+TYPE : Armure lourde
+DESCRIPTION : Une armure complète en alliage renforcé
+
+BONUS :
+- Protection : +3
+- Vitesse : -1
+
+PRÉREQUIS : Force 4
+PRIX : 5000 crédits
+```
+
+### Format Simplifié pour les Classes
+
+```
+NOM : Technomancien
+DESCRIPTION : Expert en fusion de technologie et magie
+
+STATS DE BASE :
+- Points de vie : 18
+- Flux de réserve : 12
+- Vitesse : 6
+
+CARACTÉRISTIQUES :
+- Force : 8
+- Dextérité : 10
+- Constitution : 9
+- Intelligence : 12
+- Perception : 10
+- Précision : 11
+- Charisme : 8
+
+ÉQUIPEMENT DE DÉPART :
+- Pistolet à énergie
+- Armure légère tech
+- Kit de piratage
+
+SORTS DE DÉPART :
+- Bouclier énergétique
+- Hack système
+
+COMPÉTENCES :
+- Piratage niveau 1
+- Connaissance technologique
+```
+
+---
+
+## 🎨 Pour les Artistes
+
+**Nous cherchons activement des artistes !** Les images actuelles sont générées par IA temporairement.
+
+### Comment contribuer des illustrations :
+
+1. **Créez votre art** dans le style qui vous plaît
+2. **Formats acceptés** : PNG, JPG, SVG
+3. **Résolution idéale** : 512x512 pixels minimum pour les icônes, 1920x1080 pour les illustrations
+4. **Envoyez par** :
+   - Email avec les fichiers ou lien de téléchargement
+   - GitHub Issue avec les images attachées
+   - Pull Request si vous êtes à l'aise avec GitHub
+
+### Ce dont nous avons besoin :
+
+- Illustrations de sorts
+- Portraits de classes
+- Icônes d'équipement
+- Illustrations de créatures
+- Cartes et environnements
+- Tout ce qui peut enrichir visuellement le jeu !
+
+---
+
+## ❓ Questions Fréquentes
+
+### "Je n'y connais rien en programmation, puis-je vraiment aider ?"
+
+**OUI !** La majorité du contenu n'est que du texte. Si vous savez écrire un email, vous pouvez contribuer.
+
+### "Et si mon français n'est pas parfait ?"
+
+Pas de problème ! L'équipe corrigera les petites fautes. L'important c'est l'idée.
+
+### "Comment savoir si mon idée est bonne ?"
+
+Toute idée est bonne à proposer ! Au pire, on discutera ensemble pour l'améliorer.
+
+### "Combien de temps ça prend ?"
+
+- Créer un sort simple : 5-10 minutes
+- Créer une classe : 20-30 minutes
+- Signaler un problème : 2 minutes
+
+### "Je peux créer combien de choses ?"
+
+Autant que vous voulez ! Plus il y a de contenu, mieux c'est.
+
+### "Et si je fais une erreur ?"
+
+Aucun souci ! Tout est révisé avant d'être intégré. On corrigera ensemble.
+
+### "Puis-je modifier le contenu d'autres personnes ?"
+
+Oui ! C'est un projet collaboratif. Proposez vos améliorations.
+
+### "Comment je sais si ma contribution a été acceptée ?"
+
+Vous recevrez une notification par email (si vous avez utilisé GitHub) ou une réponse directe par email.
+
+---
+
+## 📚 Ressources Utiles
+
+### Où Trouver de l'Inspiration
+
+- **Sorts existants** : https://github.com/lanathlor/rpg/tree/main/codex/sorts
+- **Équipements existants** : https://github.com/lanathlor/rpg/tree/main/codex/equipements
+- **Classes existantes** : https://github.com/lanathlor/rpg/tree/main/codex/classes
+- **Règles du jeu** : https://github.com/lanathlor/rpg/tree/main/rules
+
+### Outils Recommandés (Optionnels)
+
+**📝 Éditeur de texte recommandé :**
+- **Visual Studio Code** (gratuit, tous systèmes) - https://code.visualstudio.com/
+  - ✅ Coloration syntaxique pour YAML et Markdown
+  - ✅ Détection automatique des erreurs de format
+  - ✅ Interface simple et intuitive
+  - ✅ Extensions utiles disponibles (YAML, Markdown Preview)
+
+**Autres éditeurs simples** (alternatives) :
+- **Windows** : Bloc-notes (déjà installé) ou Notepad++ (gratuit)
+- **Mac** : TextEdit (déjà installé)
+- **Linux** : Gedit, Kate, ou nano
+- **En ligne** : https://dillinger.io/ (éditeur en ligne gratuit)
+
+**Pour valider le format YAML** (optionnel) :
+- https://www.yamllint.com/ - Collez votre texte pour vérifier qu'il est correct
+- VS Code détecte automatiquement les erreurs si vous l'utilisez !
+
+---
+
+## 🤝 L'Esprit du Projet
+
+Ce projet est **collaboratif et ouvert**. Cela signifie :
+
+- ✅ **Tout le monde peut contribuer**, peu importe son niveau
+- ✅ **Toutes les idées sont bienvenues**
+- ✅ **Les erreurs sont normales** et on apprend ensemble
+- ✅ **Le respect et la bienveillance** sont essentiels
+- ✅ **Le plaisir de créer** est notre motivation principale
+
+### Licence Simplifiée
+
+En contribuant, vous acceptez que :
+- Votre contenu sera **librement utilisable** par tous (licence Creative Commons)
+- D'autres pourront le **modifier et l'améliorer**
+- Vous serez **crédité** comme contributeur
+- Le projet restera **gratuit et ouvert** pour toujours
+
+---
+
+## 📮 Contact
+
+**Email principal :** valentin@viviersoft.com
+
+**Discord :** [@Lanath](https://discord.com/users/Lanath)
+
+**GitHub du projet :** https://github.com/lanathlor/rpg
+
+**Pour toute question**, n'hésitez pas à :
+- Ouvrir une Issue sur GitHub
+- Envoyer un email
+- Me contacter sur Discord
+- Proposer directement vos idées
+
+---
+
+**🎉 Merci de votre intérêt pour ce projet !**
+
+Chaque contribution, petite ou grande, rend le jeu meilleur. Que vous créiez un seul sort ou une classe entière, que vous corrigiez une faute ou proposiez une nouvelle mécanique, **votre participation compte**.
+
+**Ensemble, créons un jeu de rôle unique et passionnant !**
