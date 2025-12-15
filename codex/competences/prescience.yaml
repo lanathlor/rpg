@@ -1,0 +1,10 @@
+name: "Prescience"
+category: "Compétence"
+subcategory: "mental"
+point_cost: 25
+effects:
+  - type: "defense"
+    description: "+3 au Score de Défense contre toutes les attaques"
+  - type: "special"
+    description: "Peut relancer un jet de sauvegarde raté (3/jour)"
+description: "Capacité surhumaine à anticiper les actions ennemies. Combinaison d'analyse tactique, d'intuition et de réflexes surhumains."

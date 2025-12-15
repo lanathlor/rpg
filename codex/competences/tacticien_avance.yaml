@@ -1,0 +1,12 @@
+name: "Tacticien avancé"
+category: "Compétence"
+subcategory: "combat"
+point_cost: 18
+prerequisites:
+  skill: "Tacticien"
+effects:
+  - type: "tactical"
+    description: "Peut analyser le champ de bataille pour révéler 3 points faibles ennemis par combat"
+  - type: "special"
+    description: "Les alliés peuvent relancer un jet d'attaque raté (1/allié/combat)"
+description: "Maîtrise tactique supérieure. Analyse instantanément les faiblesses ennemies et orchestre des stratégies complexes en temps réel."

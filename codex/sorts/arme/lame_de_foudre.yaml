@@ -15,5 +15,35 @@ levels:
       damage: 1d6+2 + 1d4 électricité
       resistance: RMEC + RRAD
       special: Dégâts supplémentaires d'électricité (lame = RMEC, électricité = RRAD)
+  - level: "2"
+    name: Lame de foudre II
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[électricité]: 8"
+        type_requirement: "A.Type[arme]: 8"
+        mixed_requirement: "A.École[électricité] + A.Type[arme]: 24"
+    conditions:
+      intelligence_required: 17
+      flux_cost: 10
+    effects:
+      damage: 2d8+6 + 3d6 électricité
+      resistance: RMEC + RRAD
+      special: L'électricité peut chaîner sur 1 cible proche (2d6 électricité RRAD)
+    description: "L'arme crépite d'énergie électrique intense, chaque frappe libérant des arcs foudroyants."
+  - level: "3"
+    name: Lame de foudre III
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[électricité]: 15"
+        type_requirement: "A.Type[arme]: 15"
+        mixed_requirement: "A.École[électricité] + A.Type[arme]: 45"
+    conditions:
+      intelligence_required: 20
+      flux_cost: 15
+    effects:
+      damage: 3d10+10 + 5d8 électricité
+      resistance: RMEC + RRAD
+      special: L'électricité chaîne sur jusqu'à 3 cibles proches (3d8 électricité RRAD chacune), paralyse (1 tour)
+    description: "L'arme devient un conduit pour la foudre elle-même. Chaque coup libère une tempête électrique dévastatrice."
 school: électricité
 type: arme

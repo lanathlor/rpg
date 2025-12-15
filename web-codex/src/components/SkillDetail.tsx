@@ -131,7 +131,11 @@ export function SkillDetail({ skill }: SkillDetailProps) {
         <CardContent className="space-y-3">
           {skill.effects && skill.effects.length > 0 ? (
             skill.effects.map((effect, index) => {
-              const config = effectTypeConfig[effect.type]
+              const config = effectTypeConfig[effect.type] || {
+                label: effect.type.charAt(0).toUpperCase() + effect.type.slice(1),
+                colorClass: 'text-gray-600 dark:text-gray-400',
+                icon: <Trophy className="h-4 w-4 inline mr-1" />
+              }
               return (
                 <div key={index}>
                   <span className={`font-medium text-sm ${config.colorClass}`}>

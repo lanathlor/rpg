@@ -159,7 +159,7 @@ export function EntityDetailPage() {
         skills,
         consumables
       )
-      exportCharacterToPDF(filteredData)
+      exportCharacterToPDF(filteredData, armors, weapons)
     } catch (error) {
       console.error('Error exporting PDF:', error)
       // You could add a toast notification here in the future

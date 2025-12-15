@@ -1,0 +1,10 @@
+name: "Force titanesque"
+category: "Compétence"
+subcategory: "physique"
+point_cost: 20
+effects:
+  - type: "strength"
+    description: "+2 aux dégâts de toutes les attaques physiques"
+  - type: "special"
+    description: "Peut porter, pousser et soulever 2× le poids normal pour sa FOR"
+description: "Force musculaire extraordinaire. Capable de prouesses physiques impossibles pour un humain normal."

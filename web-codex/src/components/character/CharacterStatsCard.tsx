@@ -2,6 +2,12 @@ import React from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from '@/components/ui/tooltip'
+import {
   Brain,
   Eye,
   Target,
@@ -12,6 +18,8 @@ import {
   Hand,
 } from 'lucide-react'
 import type { CharacterClass, Entity } from '@/types'
+import { useArmors, useWeapons } from '@/lib/dataProvider'
+import { calculateFinalStats } from '@/lib/statCalculator'
 
 interface CharacterStatsCardProps {
   character: CharacterClass | Entity
@@ -48,6 +56,22 @@ const getHighestStat = (character: CharacterClass | Entity) => {
 }
 
 export function CharacterStatsCard({ character }: CharacterStatsCardProps) {
+  const { armors } = useArmors()
+  const { weapons } = useWeapons()
+
+  // Calculate final stats with equipment bonuses
+  const finalStats = calculateFinalStats(character, armors, weapons)
+
+  const statDisplayNames: Record<string, string> = {
+    force: 'Force',
+    dexterite: 'Dextérité',
+    constitution: 'Constitution',
+    intelligence: 'Intelligence',
+    perception: 'Perception',
+    precision: 'Précision',
+    charisme: 'Charisme'
+  }
+
   return (
     <Card>
       <CardHeader>
@@ -57,19 +81,55 @@ export function CharacterStatsCard({ character }: CharacterStatsCardProps) {
         </CardTitle>
       </CardHeader>
       <CardContent>
-        <div className="grid grid-cols-2 gap-3">
-          {Object.entries(character.stats).map(([statName, value]) => (
-            <div key={statName} className="flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                {getStatIcon(statName)}
-                <span className="text-sm font-medium capitalize">
-                  {statName === 'dexterite' ? 'Dextérité' : statName}
-                </span>
-              </div>
-              <Badge variant="secondary">{value}</Badge>
-            </div>
-          ))}
-        </div>
+        <TooltipProvider>
+          <div className="grid grid-cols-2 gap-3">
+            {Object.entries(character.stats).map(([statName, baseValue]) => {
+              const calculation = finalStats[statName as keyof typeof finalStats]
+              const hasBonus = calculation !== undefined
+
+              return (
+                <div key={statName} className="flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    {getStatIcon(statName)}
+                    <span className="text-sm font-medium">
+                      {statDisplayNames[statName] || statName}
+                    </span>
+                  </div>
+
+                  {hasBonus ? (
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <div className="flex items-center gap-1 cursor-help">
+                          <span className="text-sm text-muted-foreground">{calculation.base}</span>
+                          <span className="text-sm text-muted-foreground">→</span>
+                          <Badge variant="default" className={calculation.equipment >= 0 ? "bg-green-600 hover:bg-green-700" : "bg-red-600 hover:bg-red-700"}>
+                            {calculation.final}
+                          </Badge>
+                        </div>
+                      </TooltipTrigger>
+                      <TooltipContent className="max-w-xs">
+                        <div className="space-y-1">
+                          <div className="font-semibold text-xs mb-2">{statDisplayNames[statName]}</div>
+                          <div className="text-xs">Base: {calculation.base}</div>
+                          {calculation.breakdown.map((item, idx) => (
+                            <div key={idx} className={`text-xs ${item.bonus >= 0 ? 'text-green-400' : 'text-red-400'}`}>
+                              {item.source}: {item.bonus >= 0 ? '+' : ''}{item.bonus}
+                            </div>
+                          ))}
+                          <div className="text-xs font-semibold border-t pt-1 mt-1">
+                            Total: {calculation.final}
+                          </div>
+                        </div>
+                      </TooltipContent>
+                    </Tooltip>
+                  ) : (
+                    <Badge variant="secondary">{baseValue}</Badge>
+                  )}
+                </div>
+              )
+            })}
+          </div>
+        </TooltipProvider>
       </CardContent>
     </Card>
   )

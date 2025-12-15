@@ -1,0 +1,10 @@
+name: "Volonté de fer"
+category: "Compétence"
+subcategory: "mental"
+point_cost: 18
+effects:
+  - type: "willpower"
+    description: "Immunité aux effets de peur et d'intimidation"
+  - type: "special"
+    description: "Peut continuer à combattre jusqu'à -20 PV avant de mourir (au lieu de 0)"
+description: "Détermination inébranlable. Refuse d'abandonner peu importe les circonstances, combattant jusqu'au dernier souffle."

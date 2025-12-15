@@ -1,0 +1,42 @@
+spell_series: Lame de lumière absolue
+description_base: "L'arme du lanceur se transforme en un rayon de lumière pure et aveuglante, capable de trancher à travers la matière comme si elle n'existait pas. Les légendes racontent que cette technique fut développée par les premiers Gardiens de l'Empire pour combattre les abominations dimensionnelles."
+image: "images/spells/lame_de_lumiere_absolue.png"
+levels:
+  - level: "1"
+    name: Lame de lumière absolue
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[lumière]: 12"
+        type_requirement: "A.Type[arme]: 12"
+        mixed_requirement: "A.École[lumière] + A.Type[arme]: 36"
+      stats:
+        - "FOR: 18"
+        - "INT: 18"
+    conditions:
+      intelligence_required: 20
+      flux_cost: 30
+    description: "Transforme votre arme de mêlée en rayon de lumière condensée d'une puissance dévastatrice. La lame devient quasi-intangible tout en conservant une force de frappe phénoménale."
+    effects:
+      damage: 6d10+20 + 4d8 lumière
+      resistance: RMEC + RRAD
+      special: "Ignore TOUTES les résistances RMEC et RRAD de la cible, aveugle les ennemis adjacents pendant 1 tour (jet de sauvegarde PER DD 20), allonge de l'arme augmentée à 5m, dure 3 tours"
+  - level: "2"
+    name: Lame de lumière absolue II
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[lumière]: 25"
+        type_requirement: "A.Type[arme]: 25"
+        mixed_requirement: "A.École[lumière] + A.Type[arme]: 75"
+      stats:
+        - "FOR: 22"
+        - "INT: 22"
+    conditions:
+      intelligence_required: 24
+      flux_cost: 50
+    description: "Apothéose martiale. L'arme devient une extension de la volonté pure du guerrier, un instrument de jugement capable de fendre la réalité elle-même."
+    effects:
+      damage: 10d10+35 + 8d8 lumière
+      resistance: RMEC + RRAD
+      special: "Ignore TOUTES résistances RMEC/RRAD/RINT, chaque frappe génère une onde de choc de lumière (3d8 RRAD dans un rayon de 3m), aveugle tous les ennemis dans un rayon de 10m (jet de sauvegarde PER DD 22), allonge 8m, frappe deux fois par action, dure 5 tours"
+school: lumière
+type: arme

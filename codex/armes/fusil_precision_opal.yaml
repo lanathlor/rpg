@@ -1,0 +1,38 @@
+name: "Fusil de précision arcanotechnique 'Silencieux'"
+category: "Arme"
+subcategory: "Distance"
+weapon_type: "sniper"
+type: "sniper"
+cost: "80000 crédits"
+
+description: "Fusil de précision de pointe intégrant un stabilisateur arcanotechnique, visée prédictive assistée par IA, et munitions à propulsion hybride. Portée extrême avec précision chirurgicale. Système de suppression de son et de signature thermique. Arme signature d'Opal."
+
+stats:
+  damage: "4d8+6"
+  resistance: "RMEC"
+  range: "1000m (portée optimale), 2000m (portée max)"
+  cadence: "1 tir/tour (mode précision) ou 2 tirs/tour (mode rafale)"
+
+bonuses:
+  precision: "+3"
+  perception: "+2"
+
+special_properties:
+  - "Stabilisateur arcanotechnique: Ignore pénalités de distance jusqu'à 1000m"
+  - "Visée prédictive: +2 aux jets d'attaque après avoir observé la cible 1 tour"
+  - "Munitions perforantes: Ignore 5 points de RMEC"
+  - "Mode silencieux: Tirs inaudibles au-delà de 50m"
+  - "Intégration exosquelette: +1 dégât et rechargement instantané si porté avec exo"
+  - "Chargeur étendu: 20 munitions"
+  - "Munitions arcanotechniques: Peut utiliser 5 Flux pour tir guidé (avantage au jet)"
+
+prerequisites:
+  affinity: "A. sniper 6"
+  stat: "PRE 14, PER 12"
+
+requirements:
+  precision_min: 14
+  perception_min: 12
+  affinity_sniper: 6
+
+notes: "Arme d'élite militaire. Production limitée. Chaque unité est calibrée pour son utilisateur. Maintenance spécialisée requise. Munitions arcanotechniques coûteuses (50 crédits/cartouche)."

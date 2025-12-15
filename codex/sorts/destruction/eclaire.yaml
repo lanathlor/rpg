@@ -15,5 +15,50 @@ levels:
       damage: 1d8+2 électricité
       resistance: RRAD
       special: Peut chaîner sur une cible proche
+  - level: "2"
+    name: Éclaire II
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[électricité]: 5"
+        type_requirement: "A.Type[destruction]: 5"
+        mixed_requirement: "A.École[électricité] + A.Type[destruction]: 15"
+    conditions:
+      intelligence_required: 17
+      flux_cost: 10
+    effects:
+      damage: 3d8+6 électricité
+      resistance: RRAD
+      special: Chaîne sur jusqu'à 3 cibles proches (dégâts réduits de 1d8 par rebond)
+    description: "Un arc électrique dévastateur qui bondit entre les cibles, électrocutant plusieurs ennemis à la fois avec une précision létale."
+  - level: "3"
+    name: Éclaire III
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[électricité]: 15"
+        type_requirement: "A.Type[destruction]: 15"
+        mixed_requirement: "A.École[électricité] + A.Type[destruction]: 45"
+    conditions:
+      intelligence_required: 20
+      flux_cost: 18
+    description: "Déchaînement électrique apocalyptique. Un éclair d'une puissance cataclysmique frappe la cible principale avant de se fragmenter en une tempête de foudre secondaire, sautant de victime en victime comme une cascade électrique incontrôlable."
+    effects:
+      damage: 6d8+15 électricité
+      resistance: RRAD
+      special: Chaîne sur jusqu'à 5 cibles (dégâts pleins sur les 3 premières, puis -2d8 par rebond), paralyse la cible principale (1 tour, jet de sauvegarde CON DD 20)
+  - level: "4"
+    name: Éclaire IV - Tempête divine
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[électricité]: 25"
+        type_requirement: "A.Type[destruction]: 25"
+        mixed_requirement: "A.École[électricité] + A.Type[destruction]: 75"
+    conditions:
+      intelligence_required: 24
+      flux_cost: 30
+    description: "Manifestation électrique divine. Un coup de foudre d'une puissance comparable à celle qui frappe lors des tempêtes planétaires. L'arc électrique se ramifie en une arborescence de destruction pure, électrocutant tout sur son passage."
+    effects:
+      damage: 10d8+25 électricité
+      resistance: RRAD
+      special: Chaîne sur jusqu'à 8 cibles (dégâts pleins sur toutes), paralyse toutes les cibles touchées (2 tours, jet de sauvegarde CON DD 22), surcharge et détruit les systèmes électroniques dans un rayon de 15m, crée une zone électrifiée pendant 2 tours (2d6 dégâts/tour pour ceux qui y entrent)
 school: électricité
 type: destruction

@@ -219,6 +219,151 @@ export function WeaponDetail({ weapon }: WeaponDetailProps) {
         </Card>
       </div>
 
+      {/* Stat Bonuses */}
+      {weapon.bonuses && (
+        <>
+          <Separator />
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-lg">Bonus de caractéristiques</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                {weapon.bonuses.force && (
+                  <div><span className="font-medium">Force:</span> <span className="text-muted-foreground">{weapon.bonuses.force}</span></div>
+                )}
+                {weapon.bonuses.dexterite && (
+                  <div><span className="font-medium">Dextérité:</span> <span className="text-muted-foreground">{weapon.bonuses.dexterite}</span></div>
+                )}
+                {weapon.bonuses.constitution && (
+                  <div><span className="font-medium">Constitution:</span> <span className="text-muted-foreground">{weapon.bonuses.constitution}</span></div>
+                )}
+                {weapon.bonuses.intelligence && (
+                  <div><span className="font-medium">Intelligence:</span> <span className="text-muted-foreground">{weapon.bonuses.intelligence}</span></div>
+                )}
+                {weapon.bonuses.perception && (
+                  <div><span className="font-medium">Perception:</span> <span className="text-muted-foreground">{weapon.bonuses.perception}</span></div>
+                )}
+                {weapon.bonuses.precision && (
+                  <div><span className="font-medium">Précision:</span> <span className="text-muted-foreground">{weapon.bonuses.precision}</span></div>
+                )}
+                {weapon.bonuses.charisme && (
+                  <div><span className="font-medium">Charisme:</span> <span className="text-muted-foreground">{weapon.bonuses.charisme}</span></div>
+                )}
+              </div>
+            </CardContent>
+          </Card>
+        </>
+      )}
+
+      {/* Base Stat Bonuses */}
+      {weapon.base_stat_bonuses && (
+        <>
+          <Separator />
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-lg">Bonus de statistiques de base</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="grid grid-cols-2 gap-3">
+                {weapon.base_stat_bonuses.health && (
+                  <div><span className="font-medium">Points de vie:</span> <span className="text-muted-foreground">{weapon.base_stat_bonuses.health}</span></div>
+                )}
+                {weapon.base_stat_bonuses.speed && (
+                  <div><span className="font-medium">Vitesse:</span> <span className="text-muted-foreground">{weapon.base_stat_bonuses.speed}</span></div>
+                )}
+              </div>
+            </CardContent>
+          </Card>
+        </>
+      )}
+
+      {/* Resistance Bonuses */}
+      {weapon.resistance_bonuses && (
+        <>
+          <Separator />
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-lg">Bonus de résistances</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="flex flex-wrap gap-2">
+                {weapon.resistance_bonuses.RMEC && (
+                  <Badge variant="outline" className="bg-stone-50 dark:bg-stone-900">
+                    <span className="font-semibold">RMEC</span>
+                    <span className="ml-1">{weapon.resistance_bonuses.RMEC}</span>
+                  </Badge>
+                )}
+                {weapon.resistance_bonuses.RRAD && (
+                  <Badge variant="outline" className="bg-orange-50 dark:bg-orange-950">
+                    <span className="font-semibold">RRAD</span>
+                    <span className="ml-1">{weapon.resistance_bonuses.RRAD}</span>
+                  </Badge>
+                )}
+                {weapon.resistance_bonuses.RINT && (
+                  <Badge variant="outline" className="bg-purple-50 dark:bg-purple-950">
+                    <span className="font-semibold">RINT</span>
+                    <span className="ml-1">{weapon.resistance_bonuses.RINT}</span>
+                  </Badge>
+                )}
+              </div>
+            </CardContent>
+          </Card>
+        </>
+      )}
+
+      {/* Flux Bonuses */}
+      {weapon.flux_bonuses && (
+        <>
+          <Separator />
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-lg">Bonus de flux</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="grid grid-cols-3 gap-3">
+                {weapon.flux_bonuses.reserve && (
+                  <div><span className="font-medium">Réserve:</span> <span className="text-muted-foreground">{weapon.flux_bonuses.reserve}</span></div>
+                )}
+                {weapon.flux_bonuses.per_turn && (
+                  <div><span className="font-medium">Par tour:</span> <span className="text-muted-foreground">{weapon.flux_bonuses.per_turn}</span></div>
+                )}
+                {weapon.flux_bonuses.recovery && (
+                  <div><span className="font-medium">Récupération:</span> <span className="text-muted-foreground">{weapon.flux_bonuses.recovery}</span></div>
+                )}
+              </div>
+            </CardContent>
+          </Card>
+        </>
+      )}
+
+      {/* Affinity Bonuses */}
+      {weapon.affinity_bonuses && (
+        <>
+          <Separator />
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-lg">Bonus d'affinités</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                {Object.entries(weapon.affinity_bonuses).map(([key, value]) => {
+                  if (value) {
+                    return (
+                      <div key={key}>
+                        <span className="font-medium capitalize">{key.replace(/_/g, ' ')}:</span>
+                        <span className="text-muted-foreground ml-1">{value}</span>
+                      </div>
+                    )
+                  }
+                  return null
+                })}
+              </div>
+            </CardContent>
+          </Card>
+        </>
+      )}
+
       {/* Additional Properties */}
       {weapon.properties && weapon.properties.length > 0 && (
         <>

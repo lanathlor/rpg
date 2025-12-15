@@ -1,0 +1,10 @@
+name: "Espion"
+category: "Compétence"
+subcategory: "infiltration"
+point_cost: 15
+effects:
+  - type: "stealth"
+    description: "+4 aux jets de discrétion et déguisement"
+  - type: "special"
+    description: "Peut créer une fausse identité crédible en 1 heure"
+description: "Entraînement d'espionnage d'élite. Maître de l'infiltration, du déguisement et de la collecte d'informations sensibles."

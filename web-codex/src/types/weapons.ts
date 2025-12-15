@@ -1,4 +1,5 @@
 import type { BaseItem, Prerequisites } from './common'
+import type { StatBonuses, BaseStatBonuses, ResistanceBonuses, FluxBonuses, AffinityBonuses } from './armor'
 
 export interface WeaponStats {
   damage: string
@@ -16,6 +17,11 @@ export interface Weapon extends BaseItem {
   properties?: string[]
   cost?: string
   image?: string
+  bonuses?: StatBonuses  // New structured stat bonuses
+  base_stat_bonuses?: BaseStatBonuses  // Health and speed bonuses
+  resistance_bonuses?: ResistanceBonuses  // New structured resistance bonuses
+  flux_bonuses?: FluxBonuses  // New structured flux bonuses
+  affinity_bonuses?: AffinityBonuses  // New structured affinity bonuses
 }
 
 export type WeaponCategory = 'Arme de corps à corps' | 'Arme à distance'

@@ -33,6 +33,7 @@ files:
   - amelioration/bouclier_renforce.yaml
   - amelioration/regeneration_protocolaire.yaml
   - amelioration/surcharge_plasma.yaml
+  - amelioration/surmultiplication_combat.yaml
   - arme/attaque_de_force.yaml
   - arme/attaque_des_points_sensibles.yaml
   - arme/attaque_multiple.yaml
@@ -42,6 +43,7 @@ files:
   - arme/fendre.yaml
   - arme/frappe_precise.yaml
   - arme/lame_de_foudre.yaml
+  - arme/lame_de_lumiere_absolue.yaml
   - arme/lame_fantome.yaml
   - arme/plombs_a_haute_velocite.yaml
   - arme/plombs_a_haute_velocite_tech.yaml
@@ -60,6 +62,7 @@ files:
   - destruction/givre.yaml
   - destruction/javelot_de_glace.yaml
   - destruction/onde_de_choc.yaml
+  - destruction/salve_devastatrice.yaml
   - destruction/poigne_de_force.yaml
   - destruction/vent_cinglant.yaml
   - protection/annulation_arcanotechnie.yaml

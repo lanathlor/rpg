@@ -1,0 +1,10 @@
+name: "Sens du danger"
+category: "Compétence"
+subcategory: "mental"
+point_cost: 18
+effects:
+  - type: "perception"
+    description: "+4 aux jets de perception pour détecter les embuscades et pièges"
+  - type: "special"
+    description: "Ne peut jamais être pris par surprise, agit toujours durant le tour de surprise"
+description: "Sixième sens surnaturel pour le danger. Détecte instinctivement les menaces avant qu'elles ne se manifestent."

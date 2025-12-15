@@ -1,0 +1,10 @@
+name: "Négociateur"
+category: "Compétence"
+subcategory: "social"
+point_cost: 15
+effects:
+  - type: "social"
+    description: "+3 aux jets de marchandage"
+  - type: "special"
+    description: "Réduit de 20% tous les achats, augmente de 20% les ventes"
+description: "Expert en négociation commerciale. Obtient systématiquement les meilleures affaires dans toute transaction."

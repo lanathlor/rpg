@@ -1,0 +1,10 @@
+name: "Maître arcanotechnicien"
+category: "Compétence"
+subcategory: "arcanotechnique"
+point_cost: 20
+effects:
+  - type: "spell"
+    description: "Coût en Flux de tous les sorts réduit de 2 (minimum 1)"
+  - type: "special"
+    description: "Peut lancer un sort de niveau inférieur en action gratuite (1/tour)"
+description: "Virtuose de l'arcanotechnique. La manipulation du Flux est devenue une seconde nature, permettant une efficacité maximale."

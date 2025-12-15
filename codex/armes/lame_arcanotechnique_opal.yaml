@@ -1,0 +1,38 @@
+name: "Lame arcanotechnique 'Éclair'"
+category: "Arme"
+subcategory: "Corps à corps"
+weapon_type: "arme_1_main"
+type: "melee"
+cost: "120000 crédits"
+
+description: "Épée monofilament à lame plasmique alimentée par Flux. La lame vibre à fréquence ultrasonique et peut être chargée en énergie pour des frappes dévastatrices. Conçue spécifiquement pour les exosoldats Opales, elle exploite la force augmentée de l'exosquelette. La garde intègre des systèmes défensifs et un générateur de champ de force de proximité. Arme signature pour le combat rapproché des unités Élite."
+
+stats:
+  damage: "3d6+8"
+  resistance: "RMEC"
+  range: "Corps à corps (3m avec allonge exo)"
+
+bonuses:
+  force: "+2"
+  dexterite: "+2"
+
+special_properties:
+  - "Lame monofilament: Ignore 8 points de RMEC"
+  - "Charge plasmique: Peut dépenser 8 Flux pour ajouter +3d6 RRAD dégâts (1/tour)"
+  - "Vibration ultrasonique: +2 aux jets d'attaque contre armures lourdes"
+  - "Garde fortifiée: +2 aux parades et blocages"
+  - "Intégration exo: Temps de dégainage instantané, recharge Flux gratuite si porté avec exo"
+  - "Champ de proximité: Peut activer un champ défensif (+3 RMEC pour 1 tour, 5 Flux)"
+  - "Allonge augmentée: Portée 3m avec servo-assistance exosquelette"
+  - "Mode perçant: Peut basculer en mode perforation (ignore tout RMEC, -1d6 dégâts)"
+
+prerequisites:
+  affinity: "A. melee 8"
+  stat: "FOR 14, DEX 14"
+
+requirements:
+  force_min: 14
+  dexterite_min: 14
+  affinity_melee: 8
+
+notes: "Arme d'élite pour combat rapproché. Production limitée aux arsenaux militaires de première catégorie. Chaque lame est accordée à son porteur via interface neurale. Extrêmement létale - peut trancher des portes blindées et des armures lourdes. Nécessite entraînement intensif (compétence Guerrier recommandée). Signature énergétique distinctive. Maintenance spécialisée quotidienne requise."

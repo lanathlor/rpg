@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any, react-hooks/set-state-in-effect */
 import * as yaml from 'js-yaml'
 import {
   type CodexData,

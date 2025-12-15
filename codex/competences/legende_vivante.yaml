@@ -1,0 +1,12 @@
+name: "Légende vivante"
+category: "Compétence"
+subcategory: "prestige"
+point_cost: 30
+effects:
+  - type: "presence"
+    description: "Les ennemis de rang inférieur doivent réussir un jet de moral (DD 20) pour attaquer"
+  - type: "special"
+    description: "+2 à tous les jets (attaque, défense, compétences, sauvegardes)"
+  - type: "legendary"
+    description: "Une fois par jour, peut auto-réussir n'importe quel jet"
+description: "Statut légendaire reconnu à travers toute la galaxie. La simple présence inspire la terreur chez les ennemis et l'espoir chez les alliés. Les exploits passés semblent rendre l'impossible possible."

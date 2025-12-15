@@ -1,0 +1,10 @@
+name: "Commandant"
+category: "Compétence"
+subcategory: "social"
+point_cost: 15
+effects:
+  - type: "leadership"
+    description: "Les alliés dans un rayon de 10m gagnent +2 à leurs jets d'attaque"
+  - type: "special"
+    description: "Peut donner un ordre tactique qui accorde un tour supplémentaire à un allié (1/combat)"
+description: "Leadership militaire d'élite. Inspire et coordonne les troupes au combat, transformant un groupe en force de frappe coordonnée."

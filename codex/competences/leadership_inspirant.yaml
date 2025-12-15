@@ -1,0 +1,10 @@
+name: "Leadership inspirant"
+category: "Compétence"
+subcategory: "social"
+point_cost: 18
+effects:
+  - type: "morale"
+    description: "Les alliés dans un rayon de 15m sont immunisés à la peur"
+  - type: "special"
+    description: "Peut rallier un allié paniqué ou démoralisé en action gratuite"
+description: "Présence charismatique inspirante. Galvanise les troupes et maintient le moral même dans les situations désespérées."

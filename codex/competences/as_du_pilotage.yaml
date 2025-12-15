@@ -1,0 +1,10 @@
+name: "As du pilotage"
+category: "Compétence"
+subcategory: "technique"
+point_cost: 12
+effects:
+  - type: "piloting"
+    description: "+4 aux jets de pilotage de véhicules et vaisseaux"
+  - type: "special"
+    description: "Peut effectuer des manœuvres impossibles pour un pilote normal"
+description: "Talent inné pour le pilotage. Capable de manœuvrer véhicules et vaisseaux avec une précision surhumaine même dans les situations les plus périlleuses."

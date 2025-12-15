@@ -1,0 +1,10 @@
+name: "Intimidation"
+category: "Compétence"
+subcategory: "social"
+point_cost: 12
+effects:
+  - type: "social"
+    description: "+4 aux jets d'intimidation"
+  - type: "special"
+    description: "Peut démoraliser un ennemi (pénalité -2 aux attaques, 3 tours) avec jet opposé CHA"
+description: "Présence menaçante capable de saper le moral ennemi. La simple menace peut suffire à faire plier un adversaire."

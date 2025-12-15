@@ -1,0 +1,10 @@
+name: "Polyglotte"
+category: "Compétence"
+subcategory: "connaissance"
+point_cost: 12
+effects:
+  - type: "language"
+    description: "Connaît 6 langues supplémentaires"
+  - type: "special"
+    description: "Peut comprendre les bases d'une langue inconnue après 1 heure d'exposition"
+description: "Talent linguistique exceptionnel. Apprend les langues rapidement et peut communiquer dans la plupart des situations."

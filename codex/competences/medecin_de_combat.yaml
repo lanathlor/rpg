@@ -1,0 +1,10 @@
+name: "Médecin de combat"
+category: "Compétence"
+subcategory: "support"
+point_cost: 15
+effects:
+  - type: "healing"
+    description: "Peut soigner 2d8+5 PV avec un kit de soins (action standard)"
+  - type: "special"
+    description: "Peut stabiliser un allié mourant à distance (10m) en action gratuite"
+description: "Formation médicale avancée adaptée au champ de bataille. Capable de sauver des vies sous le feu ennemi."

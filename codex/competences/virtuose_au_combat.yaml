@@ -1,0 +1,12 @@
+name: "Virtuose au combat"
+category: "Compétence"
+subcategory: "combat"
+point_cost: 25
+prerequisites:
+  skill: "Guerrier"
+effects:
+  - type: "combat"
+    description: "+3 aux jets d'attaque et de dégâts avec toutes les armes"
+  - type: "special"
+    description: "Coup de maître: Sur un 20 naturel, les dégâts sont maximisés et doublés"
+description: "Maîtrise martiale absolue. Le combat est devenu un art perfectionné, chaque mouvement optimisé pour l'efficacité maximale."

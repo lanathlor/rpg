@@ -27,7 +27,7 @@ interface DiceNotation {
  */
 export function parseDiceNotation(damageString: string): DiceNotation | null {
   // Match patterns like: 2d6+3, 1d8, 3d6+6, d6, d12+4
-  const match = damageString.match(/(\d+)?d(\d+)([+\-]\d+)?/)
+  const match = damageString.match(/(\d+)?d(\d+)([+-]\d+)?/)
 
   if (!match) return null
 
@@ -53,7 +53,7 @@ export function extractTotalDamage(damageString: string): number {
   let total = 0
 
   // Find all dice notations in the string
-  const diceMatches = damageString.matchAll(/(\d+)?d(\d+)([+\-]\d+)?/g)
+  const diceMatches = damageString.matchAll(/(\d+)?d(\d+)([+-]\d+)?/g)
 
   for (const match of diceMatches) {
     const count = match[1] ? parseInt(match[1], 10) : 1

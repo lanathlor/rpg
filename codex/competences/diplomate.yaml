@@ -1,0 +1,10 @@
+name: "Diplomate"
+category: "Compétence"
+subcategory: "social"
+point_cost: 15
+effects:
+  - type: "social"
+    description: "+4 aux jets de diplomatie et négociation"
+  - type: "special"
+    description: "Peut améliorer l'attitude d'un PNJ hostile en neutre avec 10 minutes de conversation"
+description: "Talent diplomatique exceptionnel. Capable de désamorcer des conflits et de négocier même avec des ennemis."

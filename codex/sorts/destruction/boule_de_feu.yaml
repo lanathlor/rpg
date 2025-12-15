@@ -33,5 +33,37 @@ levels:
       resistance: RRAD
       area_damage: 1d8 feu dans un rayon de 3m
       special: Zone d'effet
+  - level: "3"
+    name: Boule de feu III
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[feu]: 15"
+        type_requirement: "A.Type[destruction]: 15"
+        mixed_requirement: "A.École[feu] + A.Type[destruction]: 45"
+    conditions:
+      intelligence_required: 20
+      flux_cost: 20
+    description: "La manifestation ultime de la pyrokinésie destructrice. Une sphère de plasma incandescent comprimé à des températures dépassant celles des étoiles. L'explosion crée une onde de choc thermique capable de vaporiser l'acier et de transformer le sable en verre."
+    effects:
+      damage: 5d8+12 feu
+      resistance: RRAD
+      area_damage: 3d8 feu dans un rayon de 8m
+      special: Zone d'effet massive, ignore 10 points de RRAD, brûlure III (3d4 dégâts/tour pendant 3 tours)
+  - level: "4"
+    name: Boule de feu IV - Nova stellaire
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[feu]: 25"
+        type_requirement: "A.Type[destruction]: 25"
+        mixed_requirement: "A.École[feu] + A.Type[destruction]: 75"
+    conditions:
+      intelligence_required: 24
+      flux_cost: 35
+    description: "Arme de destruction massive. Une miniature de supernova contenue dans une sphère de plasma stellaire. L'explosion génère des températures si extrêmes qu'elle ionise l'air sur des dizaines de mètres, créant un champignon atomique miniature."
+    effects:
+      damage: 8d10+25 feu
+      resistance: RRAD
+      area_damage: 6d8 feu dans un rayon de 15m
+      special: Zone d'effet cataclysmique, ignore 20 points de RRAD, brûlure IV (4d6 dégâts/tour pendant 4 tours), onde de choc (renverse toutes les créatures dans la zone, jet de sauvegarde FOR DD 22), enflamme l'environnement
 school: feu
 type: destruction

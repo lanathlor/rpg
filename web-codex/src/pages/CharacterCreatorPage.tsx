@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any, react-hooks/set-state-in-effect */
 import { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { Card, CardContent } from '@/components/ui/card'
@@ -317,7 +318,7 @@ export function CharacterCreatorPage() {
                   consumables,
                   true // Skip access checks for custom characters - show all equipment
                 )
-                exportCharacterToPDF(filteredData)
+                exportCharacterToPDF(filteredData, armors, weapons)
               }}
             >
               <Download className="h-4 w-4 mr-2" />

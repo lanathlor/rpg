@@ -1,0 +1,10 @@
+name: "Esprit analytique"
+category: "Compétence"
+subcategory: "mental"
+point_cost: 15
+effects:
+  - type: "investigation"
+    description: "+4 aux jets d'investigation et d'analyse"
+  - type: "special"
+    description: "Peut déduire une faiblesse ennemie après 1 tour d'observation"
+description: "Intellect aiguisé capable d'analyse rapide et précise. Décèle les patterns et faiblesses instantanément."

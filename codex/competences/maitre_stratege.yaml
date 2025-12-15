@@ -1,0 +1,12 @@
+name: "Maître stratège"
+category: "Compétence"
+subcategory: "tactique"
+point_cost: 25
+prerequisites:
+  skill: "Tacticien avancé"
+effects:
+  - type: "tactical"
+    description: "Avant le combat, peut placer des alliés où bon vous semble sur le champ de bataille"
+  - type: "special"
+    description: "Une fois par combat, peut forcer un ennemi à relancer son jet d'attaque et garder le pire résultat"
+description: "Génie tactique légendaire. Anticipe chaque mouvement ennemi et orchestre des stratégies de niveau grand maître."

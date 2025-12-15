@@ -1,0 +1,46 @@
+spell_series: Surmultiplication au combat
+description_base: "Amplification arcanotechnique extrême des réflexes et de la perception temporelle. Le lanceur entre dans un état de combat transcendant où chaque seconde semble durer une éternité, permettant des prouesses martiales impossibles pour un être non augmenté."
+image: "images/spells/surmultiplication_combat.png"
+levels:
+  - level: "1"
+    name: Surmultiplication au combat
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[martial]: 15"
+        type_requirement: "A.Type[amélioration]: 15"
+        mixed_requirement: "A.École[martial] + A.Type[amélioration]: 45"
+      stats:
+        - "DEX: 18"
+        - "INT: 18"
+    conditions:
+      intelligence_required: 20
+      flux_cost: 35
+    description: "Technique secrète des maîtres de guerre impériaux. Accélère tous les processus cognitifs et physiques pour transcender les limites humaines normales."
+    effects:
+      attack_bonus: "+3 attaques supplémentaires par tour, +5 à tous les jets d'attaque"
+      defense_bonus: "+5 au Score de Défense"
+      movement: "Mouvement doublé"
+      special: "Dure 3 tours. Contre-coup: après l'effet, -2 à tous les jets pendant 2 tours (fatigue extrême)"
+    duration: "3 tours"
+  - level: "2"
+    name: Surmultiplication au combat II
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[martial]: 25"
+        type_requirement: "A.Type[amélioration]: 25"
+        mixed_requirement: "A.École[martial] + A.Type[amélioration]: 75"
+      stats:
+        - "DEX: 22"
+        - "INT: 22"
+    conditions:
+      intelligence_required: 24
+      flux_cost: 60
+    description: "État de transe de combat ultime. Le guerrier devient une tornade de destruction, se déplaçant si vite qu'il semble se démultiplier sur le champ de bataille."
+    effects:
+      attack_bonus: "+5 attaques supplémentaires par tour, +8 à tous les jets d'attaque, +10 à l'initiative"
+      defense_bonus: "+8 au Score de Défense"
+      movement: "Triple le mouvement, peut effectuer une action de mouvement gratuite après chaque attaque"
+      special: "Dure 4 tours, automatiquement réussit les jets de sauvegarde contre effets de contrôle. Contre-coup: après l'effet, -4 à tous les jets pendant 3 tours (fatigue extrême), vitesse réduite de moitié"
+    duration: "4 tours"
+school: martial
+type: amelioration

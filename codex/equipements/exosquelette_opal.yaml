@@ -1,0 +1,60 @@
+name: "Exosquelette Prototype OPAL-XS7"
+category: "Armure"
+subcategory: "Exosquelette de combat lourd"
+cost: "2000000 crédits"
+
+description: "Le summum de l'ingénierie arcanotechnique militaire. Cet exosquelette tactique de génération 7 intègre des servomoteurs amplifiés par Flux, une armure composite multicouche, un système de ciblage neural, des réacteurs arcanotechniques miniaturisés, et des amplificateurs d'affinités. Seuls quelques prototypes existent dans tout l'Empire. Valeur équivalente à plusieurs vaisseaux de transport. Réservé exclusivement aux Opales, les unités de rang Élite capables d'influencer seules le cours d'une bataille. L'exosquelette amplifie non seulement les capacités physiques mais aussi les capacités arcanotechniques de l'opérateur, transformant un soldat d'élite en une force de frappe stratégique à lui seul."
+
+stats:
+  RMEC: "+25"
+  RRAD: "+20"
+  RINT: "+15"
+  weight: "250 kg (compensé par servomoteurs)"
+
+bonuses:
+  force: "+10"
+  dexterite: "+8"
+  constitution: "+8"
+  perception: "+6"
+  precision: "+8"
+
+base_stat_bonuses:
+  health: "+50"
+  speed: "+3"
+
+resistance_bonuses:
+  RMEC: "+25"
+  RRAD: "+20"
+  RINT: "+15"
+
+flux_bonuses:
+  reserve: "+100"
+  per_turn: "+10"
+  recovery: "+10"
+
+affinity_bonuses:
+  distance: "+6"
+  melee: "+4"
+  balistique: "+5"
+  martial: "+5"
+  lumiere: "+5"
+  electricite: "+5"
+  feu: "+4"
+  destruction: "+5"
+  amelioration: "+5"
+  arme: "+5"
+
+special_properties:
+  - "Servomoteurs amplifiés: Permet de porter l'exosquelette sans pénalité de mobilité"
+  - "Ciblage neural intégré: Interface directe avec armes à distance"
+  - "Bouclier énergétique: Peut activer un bouclier RRAD +5 pendant 3 tours (1/combat)"
+  - "Recyclage de Flux: Régénération Flux +2 par tour"
+  - "Vision augmentée: Infrarouge, thermique, détection de signatures arcanotechniques"
+  - "Système de survie: Environnements hostiles, vide spatial (2h autonomie)"
+  - "Amplificateurs de saut: Peut sauter jusqu'à 6m verticalement"
+  - "Camouflage optique: Devient invisible pendant 1 tour (3/jour, 10 Flux)"
+
+prerequisites:
+  stat: "FOR 10, CON 12, INT 14"
+
+notes: "Équipement ultra-rare. Nécessite maintenance quotidienne (500 crédits/jour). Chaque unité coûte plus qu'un petit vaisseau spatial. Réservé aux agents d'élite en missions critiques. Signature arcanotechnique intense (facilement détectable). Interdit à la vente civile."

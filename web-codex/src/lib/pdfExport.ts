@@ -1,6 +1,14 @@
 import jsPDF from 'jspdf'
-import type { CharacterClass, Spell, Weapon, Armor, Skill, Consumable } from '@/types'
+import type { CharacterClass, Spell, Weapon, Armor, Skill, Consumable, SpellLevel } from '@/types'
 import { checkSpellSeriesAccess, checkSpellAccess, checkWeaponAccess, checkArmorAccess, checkSkillAccess, checkConsumableAccess } from './accessUtils'
+import {
+  calculateFinalStats,
+  calculateFinalBaseStats,
+  calculateFinalResistances,
+  calculateFinalFlux,
+  calculateFinalAffinities,
+  type StatCalculation
+} from './statCalculator'
 
 // Interface for filtered character data ready for export
 interface FilteredCharacterData {
@@ -8,7 +16,7 @@ interface FilteredCharacterData {
   accessibleSpells: Array<{
     spell: Spell
     accessibleLevel: number
-    levelData: any
+    levelData: SpellLevel
   }>
   accessibleWeapons: Weapon[]
   accessibleArmor: Armor[]
@@ -30,7 +38,7 @@ export function filterCharacterContent(
   const accessibleSpells: Array<{
     spell: Spell
     accessibleLevel: number
-    levelData: any
+    levelData: SpellLevel
   }> = []
 
   character.spells?.forEach(spellItem => {
@@ -201,8 +209,19 @@ export function filterCharacterContent(
 }
 
 // Generate and download PDF character sheet
-export function exportCharacterToPDF(filteredData: FilteredCharacterData): void {
+export function exportCharacterToPDF(
+  filteredData: FilteredCharacterData,
+  allArmor: Armor[],
+  allWeapons: Weapon[]
+): void {
   const { character } = filteredData
+
+  // Calculate final stats with equipment bonuses
+  const finalStats = calculateFinalStats(character, allArmor, allWeapons)
+  const finalBaseStats = calculateFinalBaseStats(character, allArmor, allWeapons)
+  const finalResistances = calculateFinalResistances(character, allArmor, allWeapons)
+  const finalFlux = calculateFinalFlux(character, allArmor, allWeapons)
+  const finalAffinities = calculateFinalAffinities(character, allArmor, allWeapons)
 
   // Create new PDF document (A4 portrait)
   const doc = new jsPDF('portrait', 'mm', 'a4')
@@ -211,6 +230,14 @@ export function exportCharacterToPDF(filteredData: FilteredCharacterData): void 
   const contentWidth = pageWidth - (margin * 2)
 
   let yPosition = margin
+
+  // Helper function to format stat value with equipment bonuses
+  function formatStatWithBonus(baseValue: number, calculation: StatCalculation | undefined): string {
+    if (calculation && calculation.equipment !== 0) {
+      return `${baseValue} -> ${calculation.final}`
+    }
+    return `${baseValue}`
+  }
 
   // Helper function to add text with automatic line wrapping
   function addText(text: string, fontSize = 10, isBold = false, indent = 0): void {
@@ -248,18 +275,26 @@ export function exportCharacterToPDF(filteredData: FilteredCharacterData): void 
 
   // Base Statistics
   addSectionHeader('STATISTIQUES DE BASE')
-  addText(`Points de vie: ${character.base_stats.health} PV`, 10)
-  addText(`Vitesse: ${character.base_stats.speed} m/tour`, 10)
+  const healthText = formatStatWithBonus(character.base_stats.health, finalBaseStats.health)
+  const speedText = formatStatWithBonus(character.base_stats.speed, finalBaseStats.speed)
+  addText(`Points de vie: ${healthText} PV`, 10)
+  addText(`Vitesse: ${speedText} m/tour`, 10)
 
   if (character.flux_system) {
-    addText(`Flux - Réserve: ${character.flux_system.reserve} | Par tour: ${character.flux_system.per_turn} | Récupération: ${character.flux_system.recovery}`, 10)
+    const reserveText = formatStatWithBonus(character.flux_system.reserve || 0, finalFlux.reserve)
+    const perTurnText = formatStatWithBonus(character.flux_system.per_turn || 0, finalFlux.per_turn)
+    const recoveryText = formatStatWithBonus(character.flux_system.recovery || 0, finalFlux.recovery)
+    addText(`Flux - Réserve: ${reserveText} | Par tour: ${perTurnText} | Récupération: ${recoveryText}`, 10)
   }
 
   // Innate Resistances
   const rmec = character.innate_resistances?.RMEC ?? 0
   const rrad = character.innate_resistances?.RRAD ?? 0
   const rint = character.innate_resistances?.RINT ?? 0
-  addText(`Résistances innées - RMEC: ${rmec} | RRAD: ${rrad} | RINT: ${rint}`, 10)
+  const rmecText = formatStatWithBonus(rmec, finalResistances.RMEC)
+  const rradText = formatStatWithBonus(rrad, finalResistances.RRAD)
+  const rintText = formatStatWithBonus(rint, finalResistances.RINT)
+  addText(`Résistances innées - RMEC: ${rmecText} | RRAD: ${rradText} | RINT: ${rintText}`, 10)
 
   // Character Stats
   addSectionHeader('CARACTÉRISTIQUES')
@@ -275,29 +310,39 @@ export function exportCharacterToPDF(filteredData: FilteredCharacterData): void 
 
   Object.entries(character.stats).forEach(([key, value]) => {
     const statName = statNames[key as keyof typeof statNames] || key
-    addText(`${statName}: ${value}`, 10, false, 5)
+    const calculation = finalStats[key as keyof typeof finalStats]
+    const statText = formatStatWithBonus(value, calculation)
+    addText(`${statName}: ${statText}`, 10, false, 5)
   })
 
   // Affinities
   addSectionHeader('AFFINITÉS QUANTOTECHNIQUES')
   if (character.affinities.distance !== undefined) {
-    addText(`Distance: ${character.affinities.distance}`, 10, false, 5)
+    const distanceText = formatStatWithBonus(character.affinities.distance, finalAffinities.distance)
+    addText(`Distance: ${distanceText}`, 10, false, 5)
   }
   if (character.affinities.melee !== undefined) {
-    addText(`Corps à corps: ${character.affinities.melee}`, 10, false, 5)
+    const meleeText = formatStatWithBonus(character.affinities.melee, finalAffinities.melee)
+    addText(`Corps à corps: ${meleeText}`, 10, false, 5)
   }
 
   if (character.affinities.schools) {
     addText('Écoles:', 10, true, 5)
     Object.entries(character.affinities.schools).forEach(([school, level]) => {
-      addText(`• ${school}: ${level}`, 9, false, 10)
+      if (level !== undefined) {
+        const schoolText = formatStatWithBonus(level, finalAffinities[school])
+        addText(`• ${school}: ${schoolText}`, 9, false, 10)
+      }
     })
   }
 
   if (character.affinities.types) {
     addText('Types:', 10, true, 5)
     Object.entries(character.affinities.types).forEach(([type, level]) => {
-      addText(`• ${type}: ${level}`, 9, false, 10)
+      if (level !== undefined) {
+        const typeText = formatStatWithBonus(level, finalAffinities[type])
+        addText(`• ${type}: ${typeText}`, 9, false, 10)
+      }
     })
   }
 
@@ -383,7 +428,6 @@ export function exportCharacterToPDF(filteredData: FilteredCharacterData): void 
       // Category and type information
       if (armor.category) addText(`Catégorie: ${armor.category}`, 9, false, 10)
       if (armor.subcategory) addText(`Sous-catégorie: ${armor.subcategory}`, 9, false, 10)
-      if ((armor as any).type) addText(`Type: ${(armor as any).type}`, 9, false, 10)
 
       // Cost
       if (armor.cost) addText(`Coût: ${armor.cost}`, 9, false, 10)
@@ -391,9 +435,6 @@ export function exportCharacterToPDF(filteredData: FilteredCharacterData): void 
       // Requirements
       if (armor.prerequisites?.stat) {
         addText(`Prérequis: ${armor.prerequisites.stat}`, 9, false, 10)
-      }
-      if ((armor.prerequisites as any)?.skill) {
-        addText(`Compétence requise: ${(armor.prerequisites as any).skill}`, 9, false, 10)
       }
 
       if (armor.description) addText(armor.description, 9, false, 10)
@@ -435,8 +476,8 @@ export function exportCharacterToPDF(filteredData: FilteredCharacterData): void 
         addText(`Durée: ${levelData.duration}`, 9, false, 10)
       }
 
-      if (levelData.range) {
-        addText(`Portée: ${levelData.range}`, 9, false, 10)
+      if (levelData.conditions?.target_range) {
+        addText(`Portée: ${levelData.conditions.target_range}`, 9, false, 10)
       }
 
       // Effects - key gameplay information
@@ -514,7 +555,7 @@ export function exportCharacterToPDF(filteredData: FilteredCharacterData): void 
       }
 
       // Cost information
-      if ((consumable as any).cost) addText(`Coût: ${(consumable as any).cost}`, 9, false, 10)
+      if (consumable.cost) addText(`Coût: ${consumable.cost}`, 9, false, 10)
 
       if (consumable.description) addText(consumable.description, 9, false, 10)
       yPosition += 2

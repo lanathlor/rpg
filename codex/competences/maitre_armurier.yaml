@@ -1,0 +1,10 @@
+name: "Maître armurier"
+category: "Compétence"
+subcategory: "technique"
+point_cost: 15
+effects:
+  - type: "crafting"
+    description: "+3 aux jets de réparation et modification d'armes"
+  - type: "special"
+    description: "Peut améliorer les armes (+1 dégât permanent, 1/arme)"
+description: "Maîtrise exceptionnelle de la fabrication, réparation et modification des armes. Peut optimiser les armes existantes pour en améliorer les performances."

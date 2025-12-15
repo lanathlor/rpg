@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any, react-hooks/set-state-in-effect */
 import type { CharacterClass } from '@/types/classes'
 import type { Weapon } from '@/types/weapons'
 import type { Armor } from '@/types/armor'

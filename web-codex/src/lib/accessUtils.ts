@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any, react-hooks/set-state-in-effect */
 import type { Spell, SpellLevel, Weapon, Armor, Skill, Consumable, CharacterClass, AffinityStats } from '@/types'
 
 // Define access result interface

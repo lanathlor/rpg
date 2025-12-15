@@ -27,9 +27,28 @@ levels:
         - "FOR: 18"
     conditions:
       special: aucune
+      flux_cost: 8
     recharge_time: "30 sec"
     effects:
-      damage_bonus: +1d8 + 4 a la prochaine attaque physique
+      damage_bonus: +2d8 + 8 a la prochaine attaque physique
       resistance: RMEC
+  - level: "3"
+    name: Attaque de force III
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[martial]: 15"
+        type_requirement: "A.Type[arme]: 15"
+        mixed_requirement: "A.École[martial] + A.Type[arme]: 45"
+      stats:
+        - "FOR: 22"
+    conditions:
+      intelligence_required: 20
+      flux_cost: 12
+    recharge_time: "30 sec"
+    effects:
+      damage_bonus: +4d10 + 16 a la prochaine attaque physique
+      resistance: RMEC
+      special: Ignore 10 points de RMEC, renverse la cible (jet de sauvegarde CON)
+    description: "Concentration de force surhumaine. La frappe suivante possède une puissance dévastatrice capable de briser les armures et renverser les ennemis."
 school: martial
 type: arme

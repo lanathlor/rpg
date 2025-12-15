@@ -1,0 +1,36 @@
+spell_series: Salve dévastatrice
+description_base: "Technique militaire arcanotechnique d'élite. Le soldat canalise le Flux dans son arme à distance pour déchaîner un barrage de projectiles surchargés qui saturent complètement une zone, transformant le champ de bataille en enfer de métal et d'énergie destructrice."
+image: "images/spells/salve_devastatrice.png"
+levels:
+  - level: "1"
+    name: Salve dévastatrice
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[balistique]: 10"
+        type_requirement: "A.Type[destruction]: 10"
+        mixed_requirement: "A.École[balistique] + A.Type[destruction]: 30"
+    conditions:
+      intelligence_required: 18
+      flux_cost: 25
+    description: "Barrage de tirs surchargés qui saturent une zone entière. Chaque projectile est amplifié par le Flux pour maximiser les dégâts et la pénétration."
+    effects:
+      damage: 8d6+20 RMEC dans une zone de 6m
+      resistance: RMEC
+      special: "Ignore 15 points de RMEC, tous les ennemis dans la zone doivent réussir un jet de sauvegarde DEX (DD 18) ou subir les dégâts pleins (moitié si réussite), nécessite une arme à distance"
+  - level: "2"
+    name: Salve dévastatrice II
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[balistique]: 20"
+        type_requirement: "A.Type[destruction]: 20"
+        mixed_requirement: "A.École[balistique] + A.Type[destruction]: 60"
+    conditions:
+      intelligence_required: 22
+      flux_cost: 40
+    description: "Version ultime réservée aux soldats d'élite de l'Empire. Un déluge de feu concentré capable de raser des fortifications et d'annihiler des escouades entières en secondes."
+    effects:
+      damage: 12d8+30 RMEC dans une zone de 10m
+      resistance: RMEC
+      special: "Ignore 20 points de RMEC, zone de suppression (les ennemis restent cloués au sol, -4 à toutes actions pendant 2 tours), peut détruire couvertures et structures légères, nécessite une arme à distance"
+school: balistique
+type: destruction

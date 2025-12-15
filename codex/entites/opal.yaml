@@ -1,0 +1,326 @@
+name: 'Opale'
+type: 'Rang Élite / Exosoldat'
+faction: 'Empire'
+alignement: "Loyal (envers l'Empire)"
+description: "Les Opales représentent le rang Élite de l'armée impériale - des unités capables d'influencer seules le cours d'une bataille. Exosoldats équipés du prototype d'exosquelette de génération 7 le plus avancé jamais conçu, ils forment une force de frappe stratégique déployée uniquement lors de missions critiques. Leur entraînement dure des décennies, leur équipement vaut plus que des vaisseaux entiers. Chaque Opale est une arme vivante, capable d'accomplir seule ce qui nécessiterait normalement un bataillon. Leur simple présence sur un champ de bataille change l'équilibre des forces. Peu nombreux, stratégiquement décisifs."
+
+
+base_stats:
+    health: 600
+    speed: 18
+
+
+innate_resistances:
+    RMEC: 60
+    RRAD: 55
+    RINT: 60
+
+
+flux_system:
+    reserve: 500
+    per_turn: 50
+    recovery: 45
+
+
+affinities:
+    distance: 30
+    melee: 30
+    sniper: 24
+    arme_1_main: 24
+    schools:
+        balistique: 30
+        martial: 30
+        feu: 30
+        lumiere: 30
+        electricite: 30
+    types:
+        destruction: 30
+        amelioration: 30
+        arme: 30
+
+
+
+
+stats:
+    force: 22
+    dexterite: 22
+    constitution: 23
+    intelligence: 20
+    perception: 23
+    precision: 27
+    charisme: 16
+
+
+
+
+
+
+
+equipment:
+    weapons:
+        - "Fusil de précision arcanotechnique 'Silencieux'"
+        - "Lame arcanotechnique 'Éclair'"
+    armor:
+        - 'Exosquelette Prototype OPAL-XS7'
+    consumables: []
+
+
+
+skills:
+    - 'Guerrier'
+    - "Œil d'aigle"
+    - 'Vétéran'
+    - "À l'affût"
+    - 'Tacticien'
+    - 'Rôdeur'
+    - 'Expert des terrains'
+    - 'Hackeur'
+    - 'Ingénieur'
+    - 'Traque'
+    - 'Scientifique'
+    - 'Vue des quantiques'
+    - "Connaisseur d'arcanotechnie"
+    - 'Charismatique'
+    - 'Maître armurier'
+    - 'As du pilotage'
+    - 'Commandant'
+    - 'Tacticien avancé'
+    - 'Médecin de combat'
+    - 'Espion'
+    - 'Assassin'
+    - 'Maître du Flux'
+    - 'Maître arcanotechnicien'
+    - 'Prescience'
+    - 'Réflexes surhumains'
+    - 'Endurance surhumaine'
+    - 'Force titanesque'
+    - 'Esprit analytique'
+    - 'Leadership inspirant'
+    - 'Intimidation'
+    - 'Diplomate'
+    - 'Négociateur'
+    - 'Polyglotte'
+    - 'Sens du danger'
+    - 'Chanceux'
+    - 'Résistance mentale'
+    - 'Volonté de fer'
+    - 'Maître stratège'
+    - 'Virtuose au combat'
+    - 'Légende vivante'
+
+
+spells:
+
+    - series: 'Boule de feu'
+      level: '4'
+    - series: 'Éclaire'
+      level: '4'
+    - series: 'Salve dévastatrice'
+      level: '2'
+
+    - series: 'Tir surchargé'
+      level: '3'
+    - series: 'Lame de foudre'
+      level: '3'
+    - series: 'Lame de lumière absolue'
+      level: '2'
+    - series: 'Attaque de force'
+      level: '3'
+
+    - series: 'Surmultiplication au combat'
+      level: '2'
+
+
+gameplay_guide: |
+    ★★★ RANG ÉLITE (~10,000 POINTS) ★★★
+
+    "Capables d'influencer seules le cours d'une bataille."
+    - Structure de l'armée impériale, 08_histoire.md
+
+    STATISTIQUES BASE (sans exo) :
+    - FOR 12 / DEX 16 / CON 15 / INT 18 / PER 18 / PRE 20 / CHA 14
+    - Flux: 60 (12/tour, récup 10)
+    - Affinités: distance 12, balistique 10, etc.
+
+    STATISTIQUES AVEC EXOSQUELETTE OPAL-XS7 :
+    - FOR 18 / DEX 20 / CON 20 / INT 18 / PER 21 / PRE 25 / CHA 14
+    - PV: 180 | Vitesse: 8m/tour
+    - Flux: 80 (15/tour, récup 12) - BONUS EXO: +20/+3/+2
+    - Affinités améliorées - BONUS EXO: +3 distance, +2 balistique/lumière/électricité/destruction/amélioration
+
+    RÉSISTANCES TOTALES (base + exo) :
+    - RMEC: +20 (5 innée + 15 exo)
+    - RRAD: +16 (4 innée + 12 exo)
+    - RINT: +16 (8 innée + 8 exo)
+
+    SD (Score de Défense) selon attaque :
+    - vs Corps-à-corps (FOR): 24
+    - vs Mêlée légère (DEX): 25
+    - vs Distance (PRE): 27-28
+    - vs Arcanotechnique (INT): 24
+
+    ═══════════════════════════════════════════════════════════
+    CAPACITÉS PRINCIPALES
+    ═══════════════════════════════════════════════════════════
+
+    🎯 TIREUR D'ÉLITE LÉGENDAIRE :
+    - PRE 25 (+7 modificateur) - Précision surhumaine
+    - Affinité distance 15 + sniper 12 = Maîtrise absolue
+    - Fusil 'Silencieux': 4d8+6 RMEC, portée 2000m, ignore 5 RMEC
+    - +3 PRE (fusil) +2 PER (fusil) +2 attaque (visée prédictive)
+    - Stabilisateur: Ignore pénalités distance jusqu'à 1000m
+    - Tir guidé arcanotechnique (5 Flux): Avantage au jet
+    - GUERRIER: Peut tirer DEUX FOIS par tour
+
+    ⚔️ MAÎTRE DU COMBAT RAPPROCHÉ :
+    - FOR 18, DEX 20 - Force et agilité surhumaines
+    - Affinité melee 8 + arme_1_main = Compétence martiale d'élite
+    - Lame 'Éclair': 3d6+8 RMEC, ignore 8 RMEC
+    - +2 FOR (lame) +2 DEX (lame) +2 parades (garde fortifiée)
+    - Charge plasmique (8 Flux): +3d6 RRAD dégâts supplémentaires
+    - Mode perçant: Ignore TOUT RMEC (utile vs armures lourdes)
+    - Champ défensif (5 Flux): +3 RMEC pendant 1 tour
+    - GUERRIER: Peut frapper DEUX FOIS par tour
+    - Allonge 3m avec servo-assistance exosquelette
+
+    🎖️ COMPÉTENCES TACTIQUES :
+    - Vétéran: Identifie classes ennemies instantanément
+    - À l'affût: Embuscade, initiative supérieure
+    - Tacticien: Accorde avantages tactiques aux alliés
+    - Traque: Impossible de perdre une cible
+    - Rôdeur + Expert terrains: Maîtrise environnement
+
+    🔧 INFILTRATION & TECHNOLOGIE :
+    - Hackeur: Piratage systèmes niveau expert
+    - Ingénieur: Maintenance exosquelette, sabotage
+    - Vue quantiques: Détecte signatures arcanotechniques
+    - Connaisseur: Identifie objets/sorts arcanotechniques
+    - Scientifique: Connaissances techniques avancées
+
+    🛡️ EXOSQUELETTE PROTOTYPE XS7 (Valeur: 2M crédits = 5000 pts) :
+    - Résistances massives: +15 RMEC, +12 RRAD, +8 RINT
+    - Bonus stats: +6 FOR, +4 DEX, +5 CON, +3 PER, +5 PRE
+    - Bonus Flux: +20 réserve, +3 per_turn, +2 recovery
+    - Bonus affinités: +3 distance, +2 balistique, +2 lumière, +2 électricité, +2 destruction, +2 amélioration
+    - Bouclier énergétique: +5 RRAD pendant 3 tours (1/combat)
+    - Recyclage Flux: Déjà inclus dans bonus (+3 par tour total avec bonus)
+    - Vision augmentée: IR, thermique, détection arcanotechnique
+    - Survie: Vide spatial, environnements hostiles
+    - Saut amplifié: Bond 6m vertical
+    - Camouflage: Invisibilité 1 tour (3/jour, 10 Flux)
+
+    ═══════════════════════════════════════════════════════════
+    ARSENAL ARCANOTECHNIQUE
+    ═══════════════════════════════════════════════════════════
+
+    DESTRUCTION (niveau 2-3) :
+    • Rayon de lumière III: 6d6+9 RRAD, perforant, portée extrême
+    • Boule de feu II: 4d6+6 RRAD, zone 8m
+    • Éclair II: 3d8+6 RRAD, chaîne entre cibles
+
+    ALTÉRATION (niveau 2) :
+    • Invisibilité II: Disparaît complètement, 5 tours
+    • Impulsion EM II: Désactive électronique dans 15m
+    • Manipulation gravité II: Lévitation, déplacement forcé
+
+    AMÉLIORATION (niveau 2) :
+    • Bouclier de force II: +6 RMEC/RRAD, 4 tours
+    • Détection de vie II: Sens tous organismes vivants 100m
+    • Surcharge sensorielle II: Améliore tous sens pendant combat
+
+    TACTIQUE (niveau 2) :
+    • Téléportation courte II: 30m instantané, déplacement tactique
+
+    ═══════════════════════════════════════════════════════════
+    TACTIQUES DE COMBAT
+    ═══════════════════════════════════════════════════════════
+
+    🎯 ÉLIMINATION LONGUE PORTÉE (>500m) :
+    1. Détection de vie → Localise cibles
+    2. Invisibilité/Camouflage exo → Positionne
+    3. Surcharge sensorielle → Améliore perception
+    4. Visée prédictive (1 tour observation) → +2 attaque
+    5. Guerrier → DEUX tirs à 4d8+6 chacun
+    6. Tirs guidés si nécessaire (5 Flux/tir)
+    → Dégâts: ~44 dégâts moyens × 2 = 88 dégâts/tour
+    → Ignore 5 RMEC des cibles
+    → Inaudible, invisible, impossible à localiser
+
+    ⚔️ COMBAT MOYEN (50-100m) :
+    1. Bouclier de force → +6 protection
+    2. Téléportation → Positionnement optimal
+    3. Boule de feu / Éclair → Dégâts zone
+    4. Guerrier + fusil mode rafale → 2 tirs/tour
+    5. Exosquelette absorbe contre-attaques
+
+    ⚔️ COMBAT RAPPROCHÉ (<10m) :
+    1. Téléportation → Engagement au corps-à-corps
+    2. Lame 'Éclair' dégainée instantanément
+    3. Guerrier → DEUX frappes par tour
+       - Frappe 1: 3d6+8 RMEC base (ignore 8 RMEC)
+       - Frappe 2: 3d6+8 RMEC + charge plasmique (8 Flux) = +3d6 RRAD
+       → Total: ~50-60 dégâts/tour en mêlée
+    4. Champ défensif si nécessaire (5 Flux, +3 RMEC)
+    5. Mode perçant contre cibles lourdement blindées
+    6. Allonge 3m = Frappe avant engagement direct
+    7. FOR 18 + DEX 20 = Esquive et contre-attaque létales
+
+    🗡️ MODE ASSASSINAT (Cible unique) :
+    1. Invisibilité II (5 tours)
+    2. Approche silencieuse
+    3. Téléportation courte → Derrière la cible
+    4. Guerrier + Lame avec charge plasmique
+       → 2× (3d6+8 RMEC + 3d6 RRAD) = ~80-100 dégâts
+    5. Si cible survit: Éclair niveau 2 (3d8+6 RRAD)
+    → Élimination garantie de la plupart des cibles
+
+    🌩️ MODE GHOST (Infiltration/Fuite) :
+    1. Camouflage exo (invisible 1 tour)
+    2. Invisibilité II (5 tours totaux)
+    3. Téléportation courte (franchit obstacles)
+    4. IEM si poursuivie (désactive tech ennemie)
+    5. Vitesse 8 + saut amplifié = mobilité extrême
+
+    🔋 GESTION FLUX :
+    - Réserve: 80 Flux
+    - Régénération: 14/tour (12 base + 2 exo)
+    - Peut maintenir combat arcanotechnique intensif 5+ tours
+    - Bouclier énergétique exo (gratuit, 1/combat)
+
+    ═══════════════════════════════════════════════════════════
+    FAIBLESSES & CONTRE-MESURES
+    ═══════════════════════════════════════════════════════════
+
+    ⚠️ VULNÉRABILITÉS :
+    - Signature arcanotechnique MASSIVE (exo détectable)
+    - Dépend de l'exosquelette (sans lui: ~5000 pts)
+    - Maintenance quotidienne requise (500 crédits/jour)
+    - Combat prolongé corps-à-corps pas optimal
+    - Flux limité malgré régénération (épuisement possible)
+
+    🛡️ COMMENT LA COMBATTRE (bon courage) :
+    1. Détection anticipée: Scanner signatures arcanotechniques
+    2. Brouillage: Interférence électromagnétique massive
+    3. Zone anti-Flux: Champ suppresseur arcanotechnique
+    4. Attaque surprise coordonnée: 4+ combattants simultanés
+    5. Armes anti-matériel: RMEC élevé pour percer armure
+    6. Drain de Flux: Sorts RINT qui épuisent ses réserves
+    7. Environnement confiné: Limite portée et mobilité
+    8. EMP puissant: Peut temporairement désactiver exosquelette
+
+    ⚠️ AVERTISSEMENT GM :
+    Les Opales (rang Élite) sont des PNJ de niveau divin. Ne les utilisez comme
+    adversaires directs que pour des groupes niveau 5-6 avec préparation massive.
+    Utilisez-les plutôt comme :
+    - Alliés impériaux lors de missions critiques
+    - Antagonistes indirects (commandent des forces)
+    - Figures légendaires aperçues de loin
+    - Boss final ultime d'une campagne
+    - Exemple de la puissance militaire impériale
+
+    SANS EXOSQUELETTE :
+    Une Opale sans son exo reste formidable (~5000 pts)
+    mais devient vulnérable et peut être vaincue par un groupe coordonné.
+    Détruire ou désactiver l'exosquelette est une stratégie viable.
+
+notes: "RANG ÉLITE ~10,000 POINTS. Les Opales sont parmi les combattants les plus redoutables de l'Empire. Rang Élite de l'armée - capables d'influencer seules le cours d'une bataille. Leur exosquelette seul vaut plus que certains vaisseaux spatiaux. Peu nombreux dans tout l'Empire, déployés uniquement pour des missions stratégiquement critiques. L'exosquelette prototype Gen-7 fournit des bonus massifs : stats, résistances, Flux, et affinités. Sans l'exo, l'Opale reste formidable (~5000 pts) mais vulnérable. Mentionnés dans les rapports de guerre comme exemple de la supériorité tactique impériale."

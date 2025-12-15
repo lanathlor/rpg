@@ -2,22 +2,48 @@ files:
   - a_laffut.yaml
   - armure_d_arcanotechnie.yaml
   - armure_vivante.yaml
+  - as_du_pilotage.yaml
+  - assassin.yaml
   - champ_electromagnetique.yaml
+  - chanceux.yaml
   - charismatique.yaml
+  - commandant.yaml
   - comprehension_de_la_nature.yaml
   - connaisseur_d_arcanotechnie.yaml
   - controle_vegetal.yaml
   - course.yaml
+  - diplomate.yaml
+  - endurance_surhumaine.yaml
+  - espion.yaml
+  - esprit_analytique.yaml
   - expert_des_terrains.yaml
+  - force_titanesque.yaml
   - guerrier.yaml
   - hackeur.yaml
   - ingenieur.yaml
+  - intimidation.yaml
+  - leadership_inspirant.yaml
+  - legende_vivante.yaml
+  - maitre_arcanotechnicien.yaml
+  - maitre_armurier.yaml
+  - maitre_du_flux.yaml
+  - maitre_stratege.yaml
+  - medecin_de_combat.yaml
+  - negociateur.yaml
   - oeil_daigle.yaml
+  - polyglotte.yaml
+  - prescience.yaml
+  - reflexes_surhumains.yaml
   - regeneration.yaml
+  - resistance_mentale.yaml
   - resistance_toxique.yaml
   - rodeur.yaml
   - scientifique.yaml
+  - sens_du_danger.yaml
   - tacticien.yaml
+  - tacticien_avance.yaml
   - traque.yaml
   - veteran.yaml
+  - virtuose_au_combat.yaml
+  - volonte_de_fer.yaml
   - vue_des_quantiques.yaml
