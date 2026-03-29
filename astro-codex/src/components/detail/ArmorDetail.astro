@@ -1,0 +1,401 @@
+---
+import type { Armor } from '@/types/armor';
+
+interface Props {
+  armor: Armor;
+}
+
+const { armor } = Astro.props;
+
+function getCategoryColor(category: string): string {
+  const colors: Record<string, string> = {
+    'armure': 'bg-stone-100 text-stone-800 dark:bg-stone-900 dark:text-stone-300',
+    'vêtement': 'bg-teal-100 text-teal-800 dark:bg-teal-900 dark:text-teal-300',
+    'casque': 'bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300',
+    'exosquelette': 'bg-violet-100 text-violet-800 dark:bg-violet-900 dark:text-violet-300',
+    'augmentation': 'bg-fuchsia-100 text-fuchsia-800 dark:bg-fuchsia-900 dark:text-fuchsia-300',
+    'implant': 'bg-cyan-100 text-cyan-800 dark:bg-cyan-900 dark:text-cyan-300',
+    'drone': 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300',
+    'bouclier': 'bg-sky-100 text-sky-800 dark:bg-sky-900 dark:text-sky-300',
+    'proxy': 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300',
+  };
+  return colors[category?.toLowerCase()] || 'bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-300';
+}
+
+function getSubcategoryColor(subcategory: string): string {
+  const colors: Record<string, string> = {
+    'plate': 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300',
+    'legere': 'bg-lime-100 text-lime-800 dark:bg-lime-900 dark:text-lime-300',
+    'cuir': 'bg-lime-100 text-lime-800 dark:bg-lime-900 dark:text-lime-300',
+    'tissue': 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300',
+    'tunique': 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300',
+    'bouclier': 'bg-sky-100 text-sky-800 dark:bg-sky-900 dark:text-sky-300',
+    'exosquelette': 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300',
+    'drone': 'bg-zinc-100 text-zinc-800 dark:bg-zinc-900 dark:text-zinc-300',
+    'neural': 'bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-300',
+    'implant': 'bg-cyan-100 text-cyan-800 dark:bg-cyan-900 dark:text-cyan-300',
+    'combat': 'bg-rose-100 text-rose-800 dark:bg-rose-900 dark:text-rose-300',
+    'vitesse': 'bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-300',
+    'traque': 'bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-300',
+    'stabilisateur': 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300',
+  };
+  return colors[subcategory?.toLowerCase()] || 'bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-300';
+}
+
+const stats = armor.stats || {};
+const prereqs = armor.prerequisites || {};
+const hasNoPrereqs = !prereqs.affinity && !prereqs.stat && !prereqs.special && !prereqs.equipment;
+const hasResistanceStats = stats.RMEC || stats.RRAD || stats.RINT;
+const affinityEntries = armor.affinity_bonuses ? Object.entries(armor.affinity_bonuses).filter(([_, value]) => value) : [];
+---
+
+<div class="max-w-4xl mx-auto space-y-6">
+  <!-- Header -->
+  <div class="space-y-4">
+    <div class="flex items-start justify-between flex-wrap gap-2">
+      <div>
+        <h1 class="text-3xl font-bold tracking-tight">{armor.name}</h1>
+        {armor.subcategory && <p class="text-lg text-muted-foreground mt-1">{armor.subcategory}</p>}
+      </div>
+      <div class="flex gap-2">
+        {armor.category && (
+          <span class={`inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold ${getCategoryColor(armor.category)}`}>
+            {armor.category}
+          </span>
+        )}
+        {armor.subcategory && (
+          <span class={`inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold capitalize ${getSubcategoryColor(armor.subcategory)}`}>
+            {armor.subcategory}
+          </span>
+        )}
+      </div>
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-sm mb-2">Description</h3>
+      <p class="text-muted-foreground leading-relaxed">{armor.description || 'Aucune description disponible'}</p>
+    </div>
+
+    {armor.image && (
+      <div class="mt-6">
+        <img
+          src={`${import.meta.env.BASE_URL}${armor.image}`}
+          alt={armor.name || ''}
+          class="rounded-lg w-full max-w-2xl mx-auto shadow-lg"
+          loading="lazy"
+        />
+      </div>
+    )}
+  </div>
+
+  <hr class="border-border" />
+
+  <!-- Prerequisites & Stats Grid -->
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+    <!-- Prerequisites -->
+    <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Prerequis</h3></div>
+      <div class="p-6 pt-0 space-y-3">
+        {prereqs.affinity && (
+          <div>
+            <span class="font-medium text-sm">Affinite:</span>
+            <div class="text-sm text-muted-foreground mt-1">{prereqs.affinity}</div>
+          </div>
+        )}
+        {prereqs.stat && (
+          <div>
+            <span class="font-medium text-sm">Statistique:</span>
+            <div class="text-sm text-muted-foreground mt-1">{prereqs.stat}</div>
+          </div>
+        )}
+        {prereqs.special && prereqs.special !== 'aucun' && (
+          <div>
+            <span class="font-medium text-sm">Special:</span>
+            <div class="text-sm text-muted-foreground mt-1">{prereqs.special}</div>
+          </div>
+        )}
+        {prereqs.equipment && (
+          <div>
+            <span class="font-medium text-sm">Equipement:</span>
+            <div class="text-sm text-muted-foreground mt-1">{prereqs.equipment}</div>
+          </div>
+        )}
+        {hasNoPrereqs && (
+          <div class="text-sm text-muted-foreground italic">Aucun prerequis</div>
+        )}
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Statistiques</h3></div>
+      <div class="p-6 pt-0 space-y-3">
+        {/* New Resistance System */}
+        {hasResistanceStats && (
+          <div>
+            <span class="font-medium text-sm mb-2 block">Resistances:</span>
+            <div class="flex flex-wrap gap-2">
+              {stats.RMEC && (
+                <span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold bg-stone-50 dark:bg-stone-900">
+                  <span class="font-semibold">RMEC</span><span class="ml-1">{stats.RMEC}</span>
+                </span>
+              )}
+              {stats.RRAD && (
+                <span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold bg-orange-50 dark:bg-orange-950">
+                  <span class="font-semibold">RRAD</span><span class="ml-1">{stats.RRAD}</span>
+                </span>
+              )}
+              {stats.RINT && (
+                <span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold bg-purple-50 dark:bg-purple-950">
+                  <span class="font-semibold">RINT</span><span class="ml-1">{stats.RINT}</span>
+                </span>
+              )}
+            </div>
+          </div>
+        )}
+        {/* Legacy Protection bonus */}
+        {stats.protection_bonus && !hasResistanceStats && (
+          <div>
+            <span class="font-medium text-sm text-blue-600 dark:text-blue-400">Bonus de protection (ancien):</span>
+            <div class="text-sm text-muted-foreground mt-1">{stats.protection_bonus}</div>
+          </div>
+        )}
+        {/* Defense bonus */}
+        {stats.defense_bonus && (
+          <div>
+            <span class="font-medium text-sm text-green-600 dark:text-green-400">Bonus de defense:</span>
+            <div class="text-sm text-muted-foreground mt-1">{stats.defense_bonus}</div>
+          </div>
+        )}
+        {/* Stat modifier/bonus */}
+        {(stats.stat_modifier || stats.stat_bonus) && (
+          <div>
+            <span class="font-medium text-sm text-purple-600 dark:text-purple-400">Modification de statistique:</span>
+            <div class="text-sm text-muted-foreground mt-1">{stats.stat_modifier || stats.stat_bonus}</div>
+          </div>
+        )}
+        {/* Special abilities */}
+        {(stats.special_ability || stats.special) && (
+          <div>
+            <span class="font-medium text-sm text-orange-600 dark:text-orange-400">Capacite speciale:</span>
+            <div class="text-sm text-muted-foreground mt-1">{stats.special_ability || stats.special}</div>
+          </div>
+        )}
+        {/* Multiple special abilities */}
+        {stats.special_abilities && stats.special_abilities.length > 0 && (
+          <div>
+            <span class="font-medium text-sm text-orange-600 dark:text-orange-400">Capacites speciales:</span>
+            <div class="text-sm text-muted-foreground mt-1 space-y-1">
+              {stats.special_abilities.map((ability: string) => (
+                <div>- {ability}</div>
+              ))}
+            </div>
+          </div>
+        )}
+        {/* Inventory bonus */}
+        {stats.inventory_bonus && (
+          <div>
+            <span class="font-medium text-sm text-indigo-600 dark:text-indigo-400">Bonus d'inventaire:</span>
+            <div class="text-sm text-muted-foreground mt-1">{stats.inventory_bonus}</div>
+          </div>
+        )}
+        {/* Speed bonus */}
+        {stats.speed_bonus && (
+          <div>
+            <span class="font-medium text-sm text-amber-600 dark:text-amber-400">Bonus de vitesse:</span>
+            <div class="text-sm text-muted-foreground mt-1">{stats.speed_bonus}</div>
+          </div>
+        )}
+        {/* Hacking bonus */}
+        {stats.hacking_bonus && (
+          <div>
+            <span class="font-medium text-sm text-cyan-600 dark:text-cyan-400">Bonus de piratage:</span>
+            <div class="text-sm text-muted-foreground mt-1">{stats.hacking_bonus}</div>
+          </div>
+        )}
+        {/* Saving throw bonus */}
+        {stats.saving_throw_bonus && (
+          <div>
+            <span class="font-medium text-sm text-emerald-600 dark:text-emerald-400">Bonus de sauvegarde:</span>
+            <div class="text-sm text-muted-foreground mt-1">{stats.saving_throw_bonus}</div>
+          </div>
+        )}
+        {/* Conditional bonus */}
+        {stats.conditional_bonus && (
+          <div>
+            <span class="font-medium text-sm text-violet-600 dark:text-violet-400">Bonus conditionnel:</span>
+            <div class="text-sm text-muted-foreground mt-1">{stats.conditional_bonus}</div>
+          </div>
+        )}
+        {/* Legacy fields */}
+        {stats.armor_value && (
+          <div>
+            <span class="font-medium text-sm text-blue-600 dark:text-blue-400">Valeur d'armure:</span>
+            <div class="text-sm text-muted-foreground mt-1">{stats.armor_value}</div>
+          </div>
+        )}
+        {stats.movement_penalty && (
+          <div>
+            <span class="font-medium text-sm text-red-600 dark:text-red-400">Malus de mouvement:</span>
+            <div class="text-sm text-muted-foreground mt-1">{stats.movement_penalty}</div>
+          </div>
+        )}
+        {/* Drone-specific stats */}
+        {stats.health && (
+          <div>
+            <span class="font-medium text-sm text-red-600 dark:text-red-400">Points de vie:</span>
+            <div class="text-sm text-muted-foreground mt-1">{stats.health}</div>
+          </div>
+        )}
+        {stats.speed && (
+          <div>
+            <span class="font-medium text-sm text-yellow-600 dark:text-yellow-400">Vitesse:</span>
+            <div class="text-sm text-muted-foreground mt-1">{stats.speed}</div>
+          </div>
+        )}
+        {stats.movement && (
+          <div>
+            <span class="font-medium text-sm text-blue-600 dark:text-blue-400">Mouvement:</span>
+            <div class="text-sm text-muted-foreground mt-1">{stats.movement}</div>
+          </div>
+        )}
+        {stats.spellcasting && (
+          <div>
+            <span class="font-medium text-sm text-purple-600 dark:text-purple-400">Incantation:</span>
+            <div class="text-sm text-muted-foreground mt-1">{stats.spellcasting}</div>
+          </div>
+        )}
+        {stats.attack_penalty && (
+          <div>
+            <span class="font-medium text-sm text-red-600 dark:text-red-400">Malus d'attaque:</span>
+            <div class="text-sm text-muted-foreground mt-1">{stats.attack_penalty}</div>
+          </div>
+        )}
+      </div>
+    </div>
+  </div>
+
+  <!-- Stat Bonuses -->
+  {armor.bonuses && (
+    <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Bonus de caracteristiques</h3></div>
+      <div class="p-6 pt-0">
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+          {armor.bonuses.force && <div><span class="font-medium">Force:</span> <span class="text-muted-foreground">{armor.bonuses.force}</span></div>}
+          {armor.bonuses.dexterite && <div><span class="font-medium">Dexterite:</span> <span class="text-muted-foreground">{armor.bonuses.dexterite}</span></div>}
+          {armor.bonuses.constitution && <div><span class="font-medium">Constitution:</span> <span class="text-muted-foreground">{armor.bonuses.constitution}</span></div>}
+          {armor.bonuses.intelligence && <div><span class="font-medium">Intelligence:</span> <span class="text-muted-foreground">{armor.bonuses.intelligence}</span></div>}
+          {armor.bonuses.perception && <div><span class="font-medium">Perception:</span> <span class="text-muted-foreground">{armor.bonuses.perception}</span></div>}
+          {armor.bonuses.precision && <div><span class="font-medium">Precision:</span> <span class="text-muted-foreground">{armor.bonuses.precision}</span></div>}
+          {armor.bonuses.charisme && <div><span class="font-medium">Charisme:</span> <span class="text-muted-foreground">{armor.bonuses.charisme}</span></div>}
+        </div>
+      </div>
+    </div>
+  )}
+
+  <!-- Base Stat Bonuses -->
+  {armor.base_stat_bonuses && (
+    <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Bonus de statistiques de base</h3></div>
+      <div class="p-6 pt-0">
+        <div class="grid grid-cols-2 gap-3">
+          {armor.base_stat_bonuses.health && <div><span class="font-medium">Points de vie:</span> <span class="text-muted-foreground">{armor.base_stat_bonuses.health}</span></div>}
+          {armor.base_stat_bonuses.speed && <div><span class="font-medium">Vitesse:</span> <span class="text-muted-foreground">{armor.base_stat_bonuses.speed}</span></div>}
+        </div>
+      </div>
+    </div>
+  )}
+
+  <!-- Resistance Bonuses -->
+  {armor.resistance_bonuses && (
+    <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Bonus de resistances</h3></div>
+      <div class="p-6 pt-0">
+        <div class="flex flex-wrap gap-2">
+          {armor.resistance_bonuses.RMEC && (
+            <span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold bg-stone-50 dark:bg-stone-900">
+              <span class="font-semibold">RMEC</span><span class="ml-1">{armor.resistance_bonuses.RMEC}</span>
+            </span>
+          )}
+          {armor.resistance_bonuses.RRAD && (
+            <span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold bg-orange-50 dark:bg-orange-950">
+              <span class="font-semibold">RRAD</span><span class="ml-1">{armor.resistance_bonuses.RRAD}</span>
+            </span>
+          )}
+          {armor.resistance_bonuses.RINT && (
+            <span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold bg-purple-50 dark:bg-purple-950">
+              <span class="font-semibold">RINT</span><span class="ml-1">{armor.resistance_bonuses.RINT}</span>
+            </span>
+          )}
+        </div>
+      </div>
+    </div>
+  )}
+
+  <!-- Flux Bonuses -->
+  {armor.flux_bonuses && (
+    <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Bonus de flux</h3></div>
+      <div class="p-6 pt-0">
+        <div class="grid grid-cols-3 gap-3">
+          {armor.flux_bonuses.reserve && <div><span class="font-medium">Reserve:</span> <span class="text-muted-foreground">{armor.flux_bonuses.reserve}</span></div>}
+          {armor.flux_bonuses.per_turn && <div><span class="font-medium">Par tour:</span> <span class="text-muted-foreground">{armor.flux_bonuses.per_turn}</span></div>}
+          {armor.flux_bonuses.recovery && <div><span class="font-medium">Recuperation:</span> <span class="text-muted-foreground">{armor.flux_bonuses.recovery}</span></div>}
+        </div>
+      </div>
+    </div>
+  )}
+
+  <!-- Affinity Bonuses -->
+  {affinityEntries.length > 0 && (
+    <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Bonus d'affinites</h3></div>
+      <div class="p-6 pt-0">
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+          {affinityEntries.map(([key, value]) => (
+            <div>
+              <span class="font-medium capitalize">{key.replace(/_/g, ' ')}:</span>
+              <span class="text-muted-foreground ml-1">{value}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  )}
+
+  <!-- Properties -->
+  {armor.properties && armor.properties.length > 0 && (
+    <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Proprietes speciales</h3></div>
+      <div class="p-6 pt-0">
+        <div class="flex flex-wrap gap-2">
+          {armor.properties.map((prop: string) => (
+            <span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold">{prop}</span>
+          ))}
+        </div>
+      </div>
+    </div>
+  )}
+
+  <!-- Resistances -->
+  {armor.resistances && armor.resistances.length > 0 && (
+    <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Resistances</h3></div>
+      <div class="p-6 pt-0">
+        <div class="flex flex-wrap gap-2">
+          {armor.resistances.map((resistance: string) => (
+            <span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold text-green-600 dark:text-green-400">{resistance}</span>
+          ))}
+        </div>
+      </div>
+    </div>
+  )}
+
+  <!-- Cost -->
+  {armor.cost && (
+    <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Cout</h3></div>
+      <div class="p-6 pt-0"><div class="text-lg font-medium">{armor.cost}</div></div>
+    </div>
+  )}
+</div>

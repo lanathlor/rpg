@@ -1,0 +1,23 @@
+---
+import MainLayout from '@/layouts/MainLayout.astro';
+import ClassDetail from '@/components/detail/ClassDetail.astro';
+import { getClasses } from '@/lib/dataUtils';
+
+export async function getStaticPaths() {
+  const classes = await getClasses();
+  return classes.map(c => ({
+    params: { slug: c.slug },
+    props: { characterClass: c.data },
+  }));
+}
+
+const { characterClass } = Astro.props;
+const base = import.meta.env.BASE_URL;
+---
+
+<MainLayout title={`${characterClass.name} - Classes - Codex RPG`} description={characterClass.description}>
+  <div>
+    <a href={`${base}classes/`} class="text-sm text-muted-foreground hover:text-foreground mb-4 inline-block">&larr; Retour aux classes</a>
+    <ClassDetail characterClass={characterClass} />
+  </div>
+</MainLayout>

@@ -1,0 +1,52 @@
+---
+import MainLayout from '@/layouts/MainLayout.astro';
+import { getSpells, getWeapons, getArmors, getSkills, getConsumables, getClasses, getEntities, getScenarios, getRules, getHistory } from '@/lib/dataUtils';
+
+const [spells, weapons, armors, skills, consumables, classes, entities, scenarios, rules, history] = await Promise.all([
+  getSpells(), getWeapons(), getArmors(), getSkills(), getConsumables(), getClasses(), getEntities(), getScenarios(), getRules(), getHistory(),
+]);
+
+const base = import.meta.env.BASE_URL;
+
+const sections = [
+  { name: 'Règles', href: 'regles/', count: rules.length, description: 'Système de jeu et mécaniques', color: 'border-blue-500' },
+  { name: 'Histoire', href: 'histoire/', count: history.length, description: 'Chroniques de l\'Empire', color: 'border-amber-500' },
+  { name: 'Scénarios', href: 'scenarios/', count: scenarios.length, description: 'Aventures one-shot', color: 'border-green-500' },
+  { name: 'Sorts', href: 'sorts/', count: spells.length, description: 'Techniques arcanotechniques', color: 'border-purple-500' },
+  { name: 'Armes', href: 'armes/', count: weapons.length, description: 'Arsenal disponible', color: 'border-red-500' },
+  { name: 'Équipements', href: 'equipements/', count: armors.length, description: 'Armures et implants', color: 'border-stone-500' },
+  { name: 'Compétences', href: 'competences/', count: skills.length, description: 'Capacités spéciales', color: 'border-yellow-500' },
+  { name: 'Consommables', href: 'consommables/', count: consumables.length, description: 'Objets utilisables', color: 'border-cyan-500' },
+  { name: 'Classes', href: 'classes/', count: classes.length, description: 'Classes de personnages', color: 'border-indigo-500' },
+  { name: 'Entités', href: 'entites/', count: entities.length, description: 'PNJ et créatures', color: 'border-pink-500' },
+];
+---
+
+<MainLayout title="Codex RPG - Jeu de rôle sci-fi" description="Codex complet du RPG sci-fi dans l'Empire galactique. Règles, sorts, armes, classes et plus.">
+  <div class="max-w-4xl mx-auto space-y-8">
+    <div class="space-y-4">
+      <h1 class="text-4xl font-bold tracking-tight">Codex RPG</h1>
+      <p class="text-xl text-muted-foreground leading-relaxed">
+        An 5755 — L'Empire galactique, gouverné par l'immortel Conseil des Gardiens, entre dans la dernière décennie d'une guerre séculaire contre les Acéras.
+      </p>
+      <p class="text-muted-foreground">
+        Ce codex contient l'ensemble des données du jeu de rôle : règles, techniques arcanotechniques, équipements, classes et entités.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      {sections.map(section => (
+        <a
+          href={`${base}${section.href}`}
+          class={`block p-6 rounded-lg border-l-4 ${section.color} border border-border hover:bg-accent transition-colors`}
+        >
+          <div class="flex items-center justify-between mb-2">
+            <h2 class="text-lg font-semibold">{section.name}</h2>
+            <span class="text-2xl font-bold text-muted-foreground">{section.count}</span>
+          </div>
+          <p class="text-sm text-muted-foreground">{section.description}</p>
+        </a>
+      ))}
+    </div>
+  </div>
+</MainLayout>

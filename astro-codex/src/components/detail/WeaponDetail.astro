@@ -1,0 +1,160 @@
+---
+import type { Weapon } from '@/types/weapons';
+
+interface Props {
+  weapon: Weapon;
+}
+
+const { weapon } = Astro.props;
+
+function getCategoryColor(category: string): string {
+  const colors: Record<string, string> = {
+    'arme de corps à corps': 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300',
+    'arme à distance': 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300',
+    "arme d'épaule": 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300',
+    'arme de poing': 'bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300',
+    'arme défensive': 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300',
+    'arme électronique': 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300',
+  };
+  return colors[category?.toLowerCase()] || 'bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-300';
+}
+
+const stats = weapon.stats || {};
+const prereqs = weapon.prerequisites || {};
+---
+
+<div class="max-w-4xl mx-auto space-y-6">
+  <div class="space-y-4">
+    <div class="flex items-start justify-between flex-wrap gap-2">
+      <div>
+        <h1 class="text-3xl font-bold tracking-tight">{weapon.name}</h1>
+        {weapon.subcategory && <p class="text-lg text-muted-foreground mt-1">{weapon.subcategory}</p>}
+      </div>
+      <div class="flex gap-2">
+        {weapon.category && (
+          <span class={`inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold ${getCategoryColor(weapon.category)}`}>{weapon.category}</span>
+        )}
+        {weapon.type && (
+          <span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-300">{weapon.type}</span>
+        )}
+      </div>
+    </div>
+    <div>
+      <h3 class="font-semibold text-sm mb-2">Description</h3>
+      <p class="text-muted-foreground leading-relaxed">{weapon.description || 'Aucune description disponible'}</p>
+    </div>
+    {weapon.image && (
+      <div class="mt-6">
+        <img src={`${import.meta.env.BASE_URL}${weapon.image}`} alt={weapon.name} class="rounded-lg w-full max-w-2xl mx-auto shadow-lg" loading="lazy" />
+      </div>
+    )}
+  </div>
+
+  <hr class="border-border" />
+
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+    <!-- Prerequisites -->
+    <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Prérequis</h3></div>
+      <div class="p-6 pt-0 space-y-3">
+        {prereqs.affinity && <div><span class="font-medium text-sm">Affinité:</span><div class="text-sm text-muted-foreground mt-1">{prereqs.affinity}</div></div>}
+        {prereqs.stat && <div><span class="font-medium text-sm">Statistique:</span><div class="text-sm text-muted-foreground mt-1">{prereqs.stat}</div></div>}
+        {prereqs.special && prereqs.special !== 'aucun' && <div><span class="font-medium text-sm">Spécial:</span><div class="text-sm text-muted-foreground mt-1">{prereqs.special}</div></div>}
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Statistiques</h3></div>
+      <div class="p-6 pt-0 space-y-3">
+        {stats.damage && <div><span class="font-medium text-sm text-red-600 dark:text-red-400">Dégâts:</span><div class="text-sm text-muted-foreground mt-1">{stats.damage}</div></div>}
+        {stats.attack_type && <div><span class="font-medium text-sm text-blue-600 dark:text-blue-400">Type d'attaque:</span><div class="text-sm text-muted-foreground mt-1">{stats.attack_type}</div></div>}
+        {stats.defense_type && <div><span class="font-medium text-sm text-green-600 dark:text-green-400">Type de défense:</span><div class="text-sm text-muted-foreground mt-1">{stats.defense_type}</div></div>}
+        {stats.range && <div><span class="font-medium text-sm text-purple-600 dark:text-purple-400">Portée:</span><div class="text-sm text-muted-foreground mt-1">{stats.range}</div></div>}
+        {stats.special && <div><span class="font-medium text-sm text-orange-600 dark:text-orange-400">Spécial:</span><div class="text-sm text-muted-foreground mt-1">{stats.special}</div></div>}
+      </div>
+    </div>
+  </div>
+
+  <!-- Stat Bonuses -->
+  {weapon.bonuses && (
+    <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Bonus de caractéristiques</h3></div>
+      <div class="p-6 pt-0">
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+          {weapon.bonuses.force && <div><span class="font-medium">Force:</span> <span class="text-muted-foreground">{weapon.bonuses.force}</span></div>}
+          {weapon.bonuses.dexterite && <div><span class="font-medium">Dextérité:</span> <span class="text-muted-foreground">{weapon.bonuses.dexterite}</span></div>}
+          {weapon.bonuses.constitution && <div><span class="font-medium">Constitution:</span> <span class="text-muted-foreground">{weapon.bonuses.constitution}</span></div>}
+          {weapon.bonuses.intelligence && <div><span class="font-medium">Intelligence:</span> <span class="text-muted-foreground">{weapon.bonuses.intelligence}</span></div>}
+          {weapon.bonuses.perception && <div><span class="font-medium">Perception:</span> <span class="text-muted-foreground">{weapon.bonuses.perception}</span></div>}
+          {weapon.bonuses.precision && <div><span class="font-medium">Précision:</span> <span class="text-muted-foreground">{weapon.bonuses.precision}</span></div>}
+          {weapon.bonuses.charisme && <div><span class="font-medium">Charisme:</span> <span class="text-muted-foreground">{weapon.bonuses.charisme}</span></div>}
+        </div>
+      </div>
+    </div>
+  )}
+
+  <!-- Resistance Bonuses -->
+  {weapon.resistance_bonuses && (
+    <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Bonus de résistances</h3></div>
+      <div class="p-6 pt-0">
+        <div class="flex flex-wrap gap-2">
+          {weapon.resistance_bonuses.RMEC && <span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold bg-stone-50 dark:bg-stone-900"><span class="font-semibold">RMEC</span><span class="ml-1">{weapon.resistance_bonuses.RMEC}</span></span>}
+          {weapon.resistance_bonuses.RRAD && <span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold bg-orange-50 dark:bg-orange-950"><span class="font-semibold">RRAD</span><span class="ml-1">{weapon.resistance_bonuses.RRAD}</span></span>}
+          {weapon.resistance_bonuses.RINT && <span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold bg-purple-50 dark:bg-purple-950"><span class="font-semibold">RINT</span><span class="ml-1">{weapon.resistance_bonuses.RINT}</span></span>}
+        </div>
+      </div>
+    </div>
+  )}
+
+  <!-- Flux Bonuses -->
+  {weapon.flux_bonuses && (
+    <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Bonus de flux</h3></div>
+      <div class="p-6 pt-0">
+        <div class="grid grid-cols-3 gap-3">
+          {weapon.flux_bonuses.reserve && <div><span class="font-medium">Réserve:</span> <span class="text-muted-foreground">{weapon.flux_bonuses.reserve}</span></div>}
+          {weapon.flux_bonuses.per_turn && <div><span class="font-medium">Par tour:</span> <span class="text-muted-foreground">{weapon.flux_bonuses.per_turn}</span></div>}
+          {weapon.flux_bonuses.recovery && <div><span class="font-medium">Récupération:</span> <span class="text-muted-foreground">{weapon.flux_bonuses.recovery}</span></div>}
+        </div>
+      </div>
+    </div>
+  )}
+
+  <!-- Affinity Bonuses -->
+  {weapon.affinity_bonuses && (
+    <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Bonus d'affinités</h3></div>
+      <div class="p-6 pt-0">
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+          {Object.entries(weapon.affinity_bonuses).map(([key, value]) => value && (
+            <div><span class="font-medium capitalize">{key.replace(/_/g, ' ')}:</span><span class="text-muted-foreground ml-1">{value}</span></div>
+          ))}
+        </div>
+      </div>
+    </div>
+  )}
+
+  <!-- Properties -->
+  {weapon.properties && weapon.properties.length > 0 && (
+    <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Propriétés spéciales</h3></div>
+      <div class="p-6 pt-0">
+        <div class="flex flex-wrap gap-2">
+          {weapon.properties.map((prop: string) => (
+            <span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold">{prop}</span>
+          ))}
+        </div>
+      </div>
+    </div>
+  )}
+
+  <!-- Cost -->
+  {weapon.cost && (
+    <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Coût</h3></div>
+      <div class="p-6 pt-0"><div class="text-lg font-medium">{weapon.cost}</div></div>
+    </div>
+  )}
+</div>

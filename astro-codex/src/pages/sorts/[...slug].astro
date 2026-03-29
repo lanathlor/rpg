@@ -1,0 +1,25 @@
+---
+import MainLayout from '@/layouts/MainLayout.astro';
+import SpellDetail from '@/components/detail/SpellDetail.astro';
+import { getSpells } from '@/lib/dataUtils';
+
+export async function getStaticPaths() {
+  const spells = await getSpells();
+  return spells.map(spell => ({
+    params: { slug: spell.slug },
+    props: { spell: spell.data },
+  }));
+}
+
+const { spell } = Astro.props;
+const base = import.meta.env.BASE_URL;
+---
+
+<MainLayout title={`${spell.name || spell.spell_series} - Sorts - Codex RPG`} description={spell.description_base}>
+  <div>
+    <a href={`${base}sorts/`} class="text-sm text-muted-foreground hover:text-foreground mb-4 inline-block">
+      &larr; Retour aux sorts
+    </a>
+    <SpellDetail spell={spell} />
+  </div>
+</MainLayout>

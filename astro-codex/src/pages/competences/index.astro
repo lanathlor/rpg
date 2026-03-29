@@ -1,0 +1,35 @@
+---
+import MainLayout from '@/layouts/MainLayout.astro';
+import { SkillListIsland } from '@/components/islands/SkillListIsland';
+import { getSkills } from '@/lib/dataUtils';
+import { getCompetenceTier } from '@/lib/pointBuyCalculator';
+
+const skills = await getSkills();
+const base = import.meta.env.BASE_URL;
+
+const items = skills.map(s => {
+  const tier = s.data.point_cost !== undefined ? getCompetenceTier(s.data.point_cost) : { tier: '?', colorClass: 'text-gray-600' };
+  const effectsPreview = s.data.effects?.slice(0, 2).map((e: any) => e.description?.slice(0, 40)).filter(Boolean).join(' • ') || '';
+  return {
+    slug: s.slug,
+    name: s.data.name,
+    category: s.data.category || '',
+    subcategory: s.data.subcategory || '',
+    description: s.data.description || '',
+    pointCost: s.data.point_cost ?? 0,
+    tier: tier.tier,
+    tierColor: tier.colorClass,
+    effectsPreview,
+  };
+}).sort((a, b) => a.name.localeCompare(b.name));
+---
+
+<MainLayout title="Compétences - Codex RPG" description="Capacités spéciales des personnages">
+  <div class="space-y-6">
+    <div>
+      <h1 class="text-3xl font-bold tracking-tight">Compétences</h1>
+      <p class="text-lg text-muted-foreground">{items.length} compétences disponibles.</p>
+    </div>
+    <SkillListIsland skills={items} base={base} client:load />
+  </div>
+</MainLayout>

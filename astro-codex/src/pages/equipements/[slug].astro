@@ -1,0 +1,23 @@
+---
+import MainLayout from '@/layouts/MainLayout.astro';
+import ArmorDetail from '@/components/detail/ArmorDetail.astro';
+import { getArmors } from '@/lib/dataUtils';
+
+export async function getStaticPaths() {
+  const armors = await getArmors();
+  return armors.map(a => ({
+    params: { slug: a.slug },
+    props: { armor: a.data },
+  }));
+}
+
+const { armor } = Astro.props;
+const base = import.meta.env.BASE_URL;
+---
+
+<MainLayout title={`${armor.name} - Équipements - Codex RPG`} description={armor.description}>
+  <div>
+    <a href={`${base}equipements/`} class="text-sm text-muted-foreground hover:text-foreground mb-4 inline-block">&larr; Retour aux équipements</a>
+    <ArmorDetail armor={armor} />
+  </div>
+</MainLayout>

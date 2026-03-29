@@ -1,0 +1,230 @@
+---
+import type { Entity } from '@/types/entities';
+
+interface Props {
+  entity: Entity;
+}
+
+const { entity } = Astro.props;
+const base = import.meta.env.BASE_URL;
+
+function getAlignementColor(alignement?: string): string {
+  if (!alignement) return 'bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300';
+  const a = alignement.toLowerCase();
+  if (a === 'amical' || a === 'ami' || a === 'allié') return 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300';
+  if (a === 'hostile' || a === 'ennemi') return 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300';
+  if (a === 'neutre') return 'bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300';
+  return 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300';
+}
+
+const statLabels: Record<string, string> = {
+  force: 'Force', dexterite: 'Dextérité', constitution: 'Constitution',
+  intelligence: 'Intelligence', perception: 'Perception', precision: 'Précision', charisme: 'Charisme',
+};
+
+const affinities = entity.affinities || {};
+const schools = affinities.schools || {};
+const types = affinities.types || {};
+const hasEquipment = entity.equipment && (
+  (entity.equipment.weapons?.length > 0) ||
+  (entity.equipment.armor?.length > 0) ||
+  (entity.equipment.consumables?.length > 0)
+);
+---
+
+<div class="max-w-4xl mx-auto space-y-6">
+  <!-- Header -->
+  <div class="space-y-4">
+    <h1 class="text-3xl font-bold tracking-tight">{entity.name}</h1>
+
+    <div class="flex gap-3 flex-wrap">
+      {entity.faction && (
+        <span class="inline-flex items-center rounded-full border px-4 py-1 text-sm font-semibold bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-300">{entity.faction}</span>
+      )}
+      {entity.alignement && (
+        <span class={`inline-flex items-center rounded-full border px-4 py-1 text-sm font-semibold ${getAlignementColor(entity.alignement)}`}>{entity.alignement}</span>
+      )}
+      {entity.type && (
+        <span class="inline-flex items-center rounded-full border px-4 py-1 text-sm font-semibold">{entity.type}</span>
+      )}
+    </div>
+
+    {entity.description && (
+      <p class="text-lg text-muted-foreground leading-relaxed">{entity.description}</p>
+    )}
+
+    {entity.image && (
+      <div class="mt-6">
+        <img src={`${base}${entity.image}`} alt={entity.name} class="rounded-lg w-full max-w-2xl mx-auto shadow-lg" loading="lazy" />
+      </div>
+    )}
+  </div>
+
+  <hr class="border-border" />
+
+  <!-- Base Stats & Character Stats -->
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+    {entity.base_stats && (
+      <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+        <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Statistiques de base</h3></div>
+        <div class="p-6 pt-0 space-y-4">
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <span class="text-sm font-medium text-muted-foreground">Points de vie</span>
+              <div class="text-lg font-semibold mt-1">{entity.base_stats.health} PV</div>
+            </div>
+            <div>
+              <span class="text-sm font-medium text-muted-foreground">Vitesse</span>
+              <div class="text-lg font-semibold mt-1">{entity.base_stats.speed} m/tour</div>
+            </div>
+          </div>
+
+          {entity.flux_system && (
+            <div>
+              <h4 class="font-medium text-sm mb-2">Système de flux</h4>
+              <div class="grid grid-cols-3 gap-2 text-sm">
+                <div><span class="text-muted-foreground">Réserve:</span><div class="font-semibold">{entity.flux_system.reserve}</div></div>
+                <div><span class="text-muted-foreground">Par tour:</span><div class="font-semibold">{entity.flux_system.per_turn}</div></div>
+                <div><span class="text-muted-foreground">Récupération:</span><div class="font-semibold">{entity.flux_system.recovery}</div></div>
+              </div>
+            </div>
+          )}
+
+          <div>
+            <h4 class="font-medium text-sm mb-2">Résistances innées</h4>
+            <div class="grid grid-cols-3 gap-2 text-sm">
+              <div><span class="text-muted-foreground">RMEC:</span><div class="font-semibold">{entity.innate_resistances?.RMEC ?? 0}</div></div>
+              <div><span class="text-muted-foreground">RRAD:</span><div class="font-semibold">{entity.innate_resistances?.RRAD ?? 0}</div></div>
+              <div><span class="text-muted-foreground">RINT:</span><div class="font-semibold">{entity.innate_resistances?.RINT ?? 0}</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    )}
+
+    {entity.stats && (
+      <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+        <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Caractéristiques</h3></div>
+        <div class="p-6 pt-0">
+          <div class="grid grid-cols-2 gap-3">
+            {Object.entries(entity.stats).map(([statName, value]) => (
+              <div class="flex items-center justify-between">
+                <span class="text-sm font-medium">{statLabels[statName] || statName}</span>
+                <span class="inline-flex items-center rounded-full bg-secondary px-2.5 py-0.5 text-xs font-semibold">{value}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    )}
+  </div>
+
+  <!-- Affinities -->
+  {(Object.keys(schools).length > 0 || Object.keys(types).length > 0 || affinities.distance || affinities.melee) && (
+    <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Affinités</h3></div>
+      <div class="p-6 pt-0 space-y-4">
+        {(affinities.distance || affinities.melee) && (
+          <div class="grid grid-cols-2 gap-2">
+            {affinities.distance && <div class="flex justify-between"><span class="text-sm">Distance</span><span class="inline-flex items-center rounded-full bg-secondary px-2.5 py-0.5 text-xs font-semibold">{affinities.distance}</span></div>}
+            {affinities.melee && <div class="flex justify-between"><span class="text-sm">Corps à corps</span><span class="inline-flex items-center rounded-full bg-secondary px-2.5 py-0.5 text-xs font-semibold">{affinities.melee}</span></div>}
+          </div>
+        )}
+        {Object.keys(schools).length > 0 && (
+          <div class="grid grid-cols-2 gap-2">
+            {Object.entries(schools).map(([school, level]) => level > 0 && (
+              <div class="flex justify-between"><span class="text-sm capitalize">{school}</span><span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold">{level}</span></div>
+            ))}
+          </div>
+        )}
+        {Object.keys(types).length > 0 && (
+          <div class="border-t pt-4 grid grid-cols-2 gap-2">
+            {Object.entries(types).map(([type, level]) => level > 0 && (
+              <div class="flex justify-between"><span class="text-sm capitalize">{type}</span><span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold">{level}</span></div>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+  )}
+
+  <!-- Equipment -->
+  {hasEquipment && (
+    <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Équipement</h3></div>
+      <div class="p-6 pt-0 space-y-4">
+        {entity.equipment.weapons?.length > 0 && (
+          <div>
+            <h4 class="text-sm font-medium text-muted-foreground mb-2">Armes</h4>
+            <div class="flex flex-wrap gap-2">
+              {entity.equipment.weapons.map((w: string) => (
+                <span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold">{w}</span>
+              ))}
+            </div>
+          </div>
+        )}
+        {entity.equipment.armor?.length > 0 && (
+          <div>
+            <h4 class="text-sm font-medium text-muted-foreground mb-2">Armures</h4>
+            <div class="flex flex-wrap gap-2">
+              {entity.equipment.armor.map((a: string) => (
+                <span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold">{a}</span>
+              ))}
+            </div>
+          </div>
+        )}
+        {entity.equipment.consumables?.length > 0 && (
+          <div>
+            <h4 class="text-sm font-medium text-muted-foreground mb-2">Consommables</h4>
+            <div class="flex flex-wrap gap-2">
+              {entity.equipment.consumables.map((item: any) => (
+                <span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold">
+                  {item.name}{item.quantity > 1 && ` x${item.quantity}`}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  )}
+
+  <!-- Skills -->
+  {entity.skills?.length > 0 && (
+    <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Compétences</h3></div>
+      <div class="p-6 pt-0">
+        <div class="flex flex-wrap gap-2">
+          {entity.skills.map((skill: string) => (
+            <span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold">{skill}</span>
+          ))}
+        </div>
+      </div>
+    </div>
+  )}
+
+  <!-- Spells -->
+  {entity.spells?.length > 0 && (
+    <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Sorts</h3></div>
+      <div class="p-6 pt-0">
+        <div class="flex flex-wrap gap-2">
+          {entity.spells.map((spell: any) => {
+            const spellName = typeof spell === 'string' ? spell : spell.series || spell.name;
+            return <span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold">{spellName}</span>;
+          })}
+        </div>
+      </div>
+    </div>
+  )}
+
+  <!-- Gameplay Guide -->
+  {entity.gameplay_guide && (
+    <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Guide de jeu</h3></div>
+      <div class="p-6 pt-0">
+        <p class="text-muted-foreground leading-relaxed">{entity.gameplay_guide}</p>
+      </div>
+    </div>
+  )}
+</div>

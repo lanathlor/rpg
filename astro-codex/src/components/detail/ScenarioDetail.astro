@@ -1,0 +1,214 @@
+---
+import type { Scenario } from '@/types/scenarios';
+
+interface Props {
+  scenario: Scenario;
+}
+
+const { scenario } = Astro.props;
+
+const difficultyColors: Record<string, string> = {
+  'low': 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300',
+  'medium': 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300',
+  'high': 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300',
+};
+---
+
+<div class="max-w-4xl mx-auto space-y-6">
+  <!-- Header -->
+  <div class="space-y-4">
+    <h1 class="text-3xl font-bold tracking-tight">{scenario.name}</h1>
+    {scenario.description && (
+      <p class="text-lg text-muted-foreground leading-relaxed">{scenario.description}</p>
+    )}
+  </div>
+
+  <hr class="border-border" />
+
+  <!-- Session Info -->
+  {scenario.session_info && (
+    <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Informations de session</h3></div>
+      <div class="p-6 pt-0">
+        <div class="grid grid-cols-3 gap-4 text-sm">
+          {scenario.session_info.duration && (
+            <div><span class="text-muted-foreground">Durée:</span><div class="font-semibold">{scenario.session_info.duration}</div></div>
+          )}
+          {scenario.session_info.player_count && (
+            <div><span class="text-muted-foreground">Joueurs:</span><div class="font-semibold">{scenario.session_info.player_count}</div></div>
+          )}
+          {scenario.session_info.recommended_points && (
+            <div><span class="text-muted-foreground">Points recommandés:</span><div class="font-semibold">{scenario.session_info.recommended_points}</div></div>
+          )}
+        </div>
+      </div>
+    </div>
+  )}
+
+  <!-- GM Notes -->
+  {scenario.gm_notes && (
+    <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Notes pour le MJ</h3></div>
+      <div class="p-6 pt-0 space-y-2 text-sm">
+        {scenario.gm_notes.preparation_time && (
+          <div><span class="font-medium">Temps de préparation:</span> {scenario.gm_notes.preparation_time}</div>
+        )}
+        {scenario.gm_notes.complexity && (
+          <div class="flex items-center gap-2">
+            <span class="font-medium">Complexité:</span>
+            <span class={`inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold ${difficultyColors[scenario.gm_notes.complexity] || ''}`}>
+              {scenario.gm_notes.complexity}
+            </span>
+          </div>
+        )}
+        {scenario.gm_notes.tone && (
+          <div><span class="font-medium">Ambiance:</span> {scenario.gm_notes.tone}</div>
+        )}
+      </div>
+    </div>
+  )}
+
+  <!-- Requirements -->
+  {scenario.requirements && (
+    <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Prérequis</h3></div>
+      <div class="p-6 pt-0 space-y-4">
+        {scenario.requirements.required_rules?.length > 0 && (
+          <div>
+            <h4 class="text-sm font-medium text-muted-foreground mb-2">Règles requises</h4>
+            <div class="flex flex-wrap gap-2">
+              {scenario.requirements.required_rules.map((rule: string) => (
+                <span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold">{rule}</span>
+              ))}
+            </div>
+          </div>
+        )}
+        {scenario.requirements.recommended_classes?.length > 0 && (
+          <div>
+            <h4 class="text-sm font-medium text-muted-foreground mb-2">Classes recommandées</h4>
+            <div class="flex flex-wrap gap-2">
+              {scenario.requirements.recommended_classes.map((cls: string) => (
+                <span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold">{cls}</span>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  )}
+
+  <!-- Synopsis -->
+  {scenario.synopsis && (
+    <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Synopsis</h3></div>
+      <div class="p-6 pt-0">
+        <p class="text-muted-foreground leading-relaxed whitespace-pre-line">{scenario.synopsis}</p>
+      </div>
+    </div>
+  )}
+
+  <!-- Acts -->
+  {scenario.acts?.length > 0 && (
+    <div class="space-y-4">
+      <h2 class="text-xl font-semibold">Actes</h2>
+      {scenario.acts.map((act: any) => (
+        <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+          <div class="flex flex-col space-y-1.5 p-6">
+            <h3 class="text-lg font-semibold">
+              {act.act && <span class="text-muted-foreground mr-2">Acte {act.act} —</span>}
+              {act.title}
+            </h3>
+          </div>
+          <div class="p-6 pt-0 space-y-3">
+            {act.description && <p class="text-sm text-muted-foreground whitespace-pre-line">{act.description}</p>}
+            {act.key_scenes?.length > 0 && (
+              <div>
+                <h4 class="text-sm font-medium mb-2">Scènes clés</h4>
+                <ul class="list-disc list-inside text-sm text-muted-foreground space-y-1">
+                  {act.key_scenes.map((scene: string) => <li>{scene}</li>)}
+                </ul>
+              </div>
+            )}
+            {act.estimated_duration && (
+              <div class="text-xs text-muted-foreground">Durée estimée: {act.estimated_duration}</div>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+  )}
+
+  <!-- Encounters -->
+  {scenario.encounters?.length > 0 && (
+    <div class="space-y-4">
+      <h2 class="text-xl font-semibold">Rencontres</h2>
+      {scenario.encounters.map((encounter: any) => (
+        <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+          <div class="flex flex-col space-y-1.5 p-6">
+            <div class="flex items-center justify-between">
+              <h3 class="text-lg font-semibold">{encounter.name}</h3>
+              <div class="flex gap-2">
+                {encounter.type && <span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold">{encounter.type}</span>}
+                {encounter.difficulty && <span class={`inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold ${difficultyColors[encounter.difficulty] || ''}`}>{encounter.difficulty}</span>}
+              </div>
+            </div>
+          </div>
+          <div class="p-6 pt-0 space-y-3 text-sm">
+            {encounter.enemies?.length > 0 && (
+              <div>
+                <span class="font-medium">Ennemis:</span>
+                <div class="flex flex-wrap gap-2 mt-1">
+                  {encounter.enemies.map((enemy: any) => (
+                    <span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold">
+                      {enemy.name}{enemy.count > 1 && ` x${enemy.count}`}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
+            {encounter.tactics && <div><span class="font-medium">Tactiques:</span> <span class="text-muted-foreground">{encounter.tactics}</span></div>}
+          </div>
+        </div>
+      ))}
+    </div>
+  )}
+
+  <!-- NPCs -->
+  {scenario.npcs?.length > 0 && (
+    <div class="space-y-4">
+      <h2 class="text-xl font-semibold">PNJ</h2>
+      <div class="grid gap-4">
+        {scenario.npcs.map((npc: any) => (
+          <div class="rounded-lg border bg-card text-card-foreground shadow-sm p-6">
+            <h3 class="font-semibold">{npc.name}</h3>
+            {npc.role && <div class="text-sm text-muted-foreground">{npc.role}</div>}
+            {npc.description && <p class="text-sm mt-2">{npc.description}</p>}
+            {npc.motivations && <div class="text-sm mt-1"><span class="font-medium">Motivations:</span> {npc.motivations}</div>}
+          </div>
+        ))}
+      </div>
+    </div>
+  )}
+
+  <!-- Rewards -->
+  {scenario.rewards && (
+    <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Récompenses</h3></div>
+      <div class="p-6 pt-0 space-y-2 text-sm">
+        {scenario.rewards.points && <div><span class="font-medium">Points:</span> {scenario.rewards.points}</div>}
+        {scenario.rewards.credits && <div><span class="font-medium">Crédits:</span> {scenario.rewards.credits}</div>}
+        {scenario.rewards.items?.length > 0 && (
+          <div>
+            <span class="font-medium">Objets:</span>
+            <div class="flex flex-wrap gap-2 mt-1">
+              {scenario.rewards.items.map((item: string) => (
+                <span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold">{item}</span>
+              ))}
+            </div>
+          </div>
+        )}
+        {scenario.rewards.special && <div><span class="font-medium">Spécial:</span> {scenario.rewards.special}</div>}
+      </div>
+    </div>
+  )}
+</div>

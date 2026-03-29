@@ -1,0 +1,23 @@
+---
+import MainLayout from '@/layouts/MainLayout.astro';
+import WeaponDetail from '@/components/detail/WeaponDetail.astro';
+import { getWeapons } from '@/lib/dataUtils';
+
+export async function getStaticPaths() {
+  const weapons = await getWeapons();
+  return weapons.map(w => ({
+    params: { slug: w.slug },
+    props: { weapon: w.data },
+  }));
+}
+
+const { weapon } = Astro.props;
+const base = import.meta.env.BASE_URL;
+---
+
+<MainLayout title={`${weapon.name} - Armes - Codex RPG`} description={weapon.description}>
+  <div>
+    <a href={`${base}armes/`} class="text-sm text-muted-foreground hover:text-foreground mb-4 inline-block">&larr; Retour aux armes</a>
+    <WeaponDetail weapon={weapon} />
+  </div>
+</MainLayout>

@@ -1,0 +1,152 @@
+---
+import type { Consumable } from '@/types/consumables';
+
+interface Props {
+  consumable: Consumable;
+}
+
+const { consumable } = Astro.props;
+
+function getSubcategoryColor(subcategory: string): string {
+  const colors: Record<string, string> = {
+    'médical': 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300',
+    'explosive': 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300',
+    'arcanotechnique': 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300',
+    'tactique': 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300',
+    'technologique': 'bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300',
+  };
+  return colors[subcategory?.toLowerCase()] || 'bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-300';
+}
+
+const effect = consumable.effect || {};
+---
+
+<div class="max-w-4xl mx-auto space-y-6">
+  <!-- Header -->
+  <div class="space-y-4">
+    <div class="flex items-start justify-between flex-wrap gap-2">
+      <div>
+        <h1 class="text-3xl font-bold tracking-tight">{consumable.name}</h1>
+        {consumable.subcategory && <p class="text-lg text-muted-foreground mt-1">{consumable.subcategory}</p>}
+      </div>
+      <div class="flex gap-2">
+        {consumable.category && (
+          <span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-300">
+            {consumable.category}
+          </span>
+        )}
+        {consumable.subcategory && (
+          <span class={`inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold capitalize ${getSubcategoryColor(consumable.subcategory)}`}>
+            {consumable.subcategory}
+          </span>
+        )}
+      </div>
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-sm mb-2">Description</h3>
+      <p class="text-muted-foreground leading-relaxed">{consumable.description || 'Aucune description disponible'}</p>
+    </div>
+  </div>
+
+  <hr class="border-border" />
+
+  <!-- Usage Information -->
+  {effect.usage && (
+    <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Utilisation</h3></div>
+      <div class="p-6 pt-0">
+        <div class="text-sm">
+          <span class="font-medium text-gray-600 dark:text-gray-400">Type d'action:</span>
+          <div class="text-muted-foreground mt-1">{effect.usage}</div>
+        </div>
+      </div>
+    </div>
+  )}
+
+  <!-- Effects -->
+  <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+    <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Effets</h3></div>
+    <div class="p-6 pt-0 space-y-3">
+      {effect.healing && (
+        <div>
+          <span class="font-medium text-sm text-green-600 dark:text-green-400">Soins:</span>
+          <div class="text-sm text-muted-foreground mt-1">{effect.healing}</div>
+        </div>
+      )}
+      {effect.damage && (
+        <div>
+          <span class="font-medium text-sm text-red-600 dark:text-red-400">Degats:</span>
+          <div class="text-sm text-muted-foreground mt-1">{effect.damage}</div>
+        </div>
+      )}
+      {(effect.area || effect.area_effect) && (
+        <div>
+          <span class="font-medium text-sm text-yellow-600 dark:text-yellow-400">Zone d'effet:</span>
+          <div class="text-sm text-muted-foreground mt-1">{effect.area || effect.area_effect}</div>
+        </div>
+      )}
+      {effect.duration && (
+        <div>
+          <span class="font-medium text-sm text-blue-600 dark:text-blue-400">Duree:</span>
+          <div class="text-sm text-muted-foreground mt-1">{effect.duration}</div>
+        </div>
+      )}
+      {effect.flux_restoration && (
+        <div>
+          <span class="font-medium text-sm text-cyan-600 dark:text-cyan-400">Restauration de flux:</span>
+          <div class="text-sm text-muted-foreground mt-1">{effect.flux_restoration}</div>
+        </div>
+      )}
+      {effect.recharge_reduction && (
+        <div>
+          <span class="font-medium text-sm text-indigo-600 dark:text-indigo-400">Reduction de recharge:</span>
+          <div class="text-sm text-muted-foreground mt-1">{effect.recharge_reduction}</div>
+        </div>
+      )}
+      {effect.spell_enhancement && (
+        <div>
+          <span class="font-medium text-sm text-purple-600 dark:text-purple-400">Amelioration arcanotechnique:</span>
+          <div class="text-sm text-muted-foreground mt-1">{effect.spell_enhancement}</div>
+        </div>
+      )}
+      {effect.spell_block && (
+        <div>
+          <span class="font-medium text-sm text-indigo-600 dark:text-indigo-400">Blocage de sorts:</span>
+          <div class="text-sm text-muted-foreground mt-1">{effect.spell_block}</div>
+          {effect.exception && (
+            <div class="text-xs text-muted-foreground mt-1 italic">
+              Exception: {effect.exception}
+            </div>
+          )}
+        </div>
+      )}
+      {effect.emp_effect && (
+        <div>
+          <span class="font-medium text-sm text-orange-600 dark:text-orange-400">Effet IEM:</span>
+          <div class="text-sm text-muted-foreground mt-1">{effect.emp_effect}</div>
+        </div>
+      )}
+      {effect.blind_effect && (
+        <div>
+          <span class="font-medium text-sm text-cyan-600 dark:text-cyan-400">Effet d'aveuglement:</span>
+          <div class="text-sm text-muted-foreground mt-1">{effect.blind_effect}</div>
+        </div>
+      )}
+      {effect.special && (
+        <div>
+          <span class="font-medium text-sm text-pink-600 dark:text-pink-400">Effet special:</span>
+          <div class="text-sm text-muted-foreground mt-1">{effect.special}</div>
+        </div>
+      )}
+    </div>
+  </div>
+
+  <!-- Cost -->
+  {consumable.cost && (
+    <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Cout</h3></div>
+      <div class="p-6 pt-0"><div class="text-lg font-medium">{consumable.cost}</div></div>
+    </div>
+  )}
+</div>

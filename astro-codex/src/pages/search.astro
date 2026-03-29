@@ -1,0 +1,31 @@
+---
+import MainLayout from '@/layouts/MainLayout.astro';
+import { SearchIsland } from '@/components/islands/SearchIsland';
+import { getSpells, getWeapons, getArmors, getSkills, getConsumables, getClasses, getEntities, getScenarios } from '@/lib/dataUtils';
+
+const base = import.meta.env.BASE_URL;
+
+const [spells, weapons, armors, skills, consumables, classes, entities, scenarios] = await Promise.all([
+  getSpells(), getWeapons(), getArmors(), getSkills(), getConsumables(), getClasses(), getEntities(), getScenarios(),
+]);
+
+const searchItems = [
+  ...spells.map(s => ({ name: s.data.name || s.data.spell_series || '', type: 'sort', description: s.data.description_base, href: `${base}sorts/${s.slug}/` })),
+  ...weapons.map(w => ({ name: w.data.name, type: 'arme', description: w.data.description, href: `${base}armes/${w.slug}/` })),
+  ...armors.map(a => ({ name: a.data.name, type: 'equipement', description: a.data.description, href: `${base}equipements/${a.slug}/` })),
+  ...skills.map(s => ({ name: s.data.name, type: 'competence', description: s.data.description, href: `${base}competences/${s.slug}/` })),
+  ...consumables.map(c => ({ name: c.data.name, type: 'consommable', description: c.data.description, href: `${base}consommables/${c.slug}/` })),
+  ...classes.map(c => ({ name: c.data.name, type: 'classe', description: c.data.description, href: `${base}classes/${c.slug}/` })),
+  ...entities.map(e => ({ name: e.data.name, type: 'entite', description: e.data.description, href: `${base}entites/${e.slug}/` })),
+  ...scenarios.map(s => ({ name: s.data.name, type: 'scenario', description: s.data.description, href: `${base}scenarios/${s.slug}/` })),
+];
+
+const q = Astro.url.searchParams.get('q') || '';
+---
+
+<MainLayout title="Recherche - Codex RPG" description="Recherche globale dans le codex">
+  <div class="max-w-4xl mx-auto space-y-6">
+    <h1 class="text-3xl font-bold tracking-tight">Recherche</h1>
+    <SearchIsland items={searchItems} initialQuery={q} client:load />
+  </div>
+</MainLayout>

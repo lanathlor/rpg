@@ -1,0 +1,51 @@
+---
+import type { TreeNode } from '@/lib/treeUtils';
+
+interface Props {
+  nodes: TreeNode[];
+  section: string;
+  activePath: string;
+  ancestorPaths: string[];
+  base: string;
+}
+
+const { nodes, section, activePath, ancestorPaths, base } = Astro.props;
+
+function escapeHtml(s: string): string {
+  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+function renderTree(nodes: TreeNode[], depth: number): string {
+  const listClass = depth > 0 ? 'ml-3 border-l border-border/50 pl-2 space-y-0.5' : 'space-y-0.5';
+  const items = nodes.map(node => {
+    const isActive = node.path === activePath;
+    const isAncestor = ancestorPaths.includes(node.path);
+    const hasChildren = node.children.length > 0;
+    const href = `${base}${section}/${node.path}/`;
+
+    if (hasChildren) {
+      const openAttr = (isActive || isAncestor) ? ' open' : '';
+      const summaryClass = isActive
+        ? 'bg-primary/10 text-primary font-medium'
+        : 'text-muted-foreground';
+      const link = node.hasContent
+        ? `<a href="${href}" class="flex-1 hover:text-foreground transition-colors">${escapeHtml(node.title)}</a>`
+        : `<span class="flex-1">${escapeHtml(node.title)}</span>`;
+      const chevron = `<svg class="h-3 w-3 ml-auto shrink-0 transition-transform sidebar-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>`;
+      return `<li><details${openAttr}><summary class="flex items-center rounded-md px-2 py-1 text-sm cursor-pointer hover:bg-accent transition-colors select-none ${summaryClass}">${link}${chevron}</summary>${renderTree(node.children, depth + 1)}</details></li>`;
+    } else {
+      const linkClass = isActive
+        ? 'bg-primary text-primary-foreground font-medium'
+        : 'text-muted-foreground hover:text-foreground';
+      return `<li><a href="${href}" class="block rounded-md px-2 py-1.5 text-sm transition-colors ${linkClass}">${escapeHtml(node.title)}</a></li>`;
+    }
+  }).join('');
+  return `<ul class="${listClass}">${items}</ul>`;
+}
+
+const treeHtml = renderTree(nodes, 0);
+---
+
+<nav class="sidebar-tree" aria-label={`Navigation ${section}`}>
+  <Fragment set:html={treeHtml} />
+</nav>

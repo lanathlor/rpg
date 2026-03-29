@@ -1,0 +1,168 @@
+---
+import type { Skill, EffectType } from '@/types/skills';
+import { getCompetenceTier } from '@/lib/pointBuyCalculator';
+
+interface Props {
+  skill: Skill;
+}
+
+const { skill } = Astro.props;
+
+function getSubcategoryColor(subcategory: string): string {
+  const colors: Record<string, string> = {
+    'combat': 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300',
+    'défensive': 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300',
+    'défense': 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300',
+    'connaissance': 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300',
+    'technique': 'bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300',
+    'précision': 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300',
+    'mobilité': 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300',
+    'tactique': 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300',
+    'survie': 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300',
+    'furtivité': 'bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-300',
+    'social': 'bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-300',
+    'analyse': 'bg-cyan-100 text-cyan-800 dark:bg-cyan-900 dark:text-cyan-300',
+    'perception': 'bg-violet-100 text-violet-800 dark:bg-violet-900 dark:text-violet-300',
+    'capacité spéciale': 'bg-rose-100 text-rose-800 dark:bg-rose-900 dark:text-rose-300',
+  };
+  return colors[subcategory?.toLowerCase()] || 'bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-300';
+}
+
+// Effect type colors (no icons in server-rendered Astro, use colored text labels)
+const effectTypeConfig: Record<EffectType, { label: string; colorClass: string }> = {
+  combat: {
+    label: 'Combat',
+    colorClass: 'text-red-600 dark:text-red-400',
+  },
+  defense: {
+    label: 'Defence',
+    colorClass: 'text-green-600 dark:text-green-400',
+  },
+  movement: {
+    label: 'Mouvement',
+    colorClass: 'text-yellow-600 dark:text-yellow-400',
+  },
+  technique: {
+    label: 'Technique',
+    colorClass: 'text-orange-600 dark:text-orange-400',
+  },
+  detection: {
+    label: 'Detection',
+    colorClass: 'text-purple-600 dark:text-purple-400',
+  },
+  passive: {
+    label: 'Passif',
+    colorClass: 'text-blue-600 dark:text-blue-400',
+  },
+  special: {
+    label: 'Special',
+    colorClass: 'text-pink-600 dark:text-pink-400',
+  },
+};
+
+function getEffectConfig(type: EffectType) {
+  return effectTypeConfig[type] || {
+    label: type.charAt(0).toUpperCase() + type.slice(1),
+    colorClass: 'text-gray-600 dark:text-gray-400',
+  };
+}
+
+// Pre-compute tier if point_cost exists
+const tier = skill.point_cost !== undefined ? getCompetenceTier(skill.point_cost) : null;
+
+// Tier description text
+function getTierDescription(tierLetter: string): string {
+  const descriptions: Record<string, string> = {
+    'S': ' Les competences de tier S (18 pts) sont les plus puissantes et offrent des avantages majeurs comme les attaques multiples.',
+    'A': ' Les competences de tier A (15 pts) offrent des capacites defensives ou de mobilite tres puissantes.',
+    'B': ' Les competences de tier B (12 pts) conferent des avantages tactiques significatifs.',
+    'C': ' Les competences de tier C (10 pts) donnent des bonus de statistiques utiles.',
+    'D': ' Les competences de tier D (8 pts) offrent des capacites utilitaires pratiques.',
+    'E': ' Les competences de tier E (5 pts) conferent des bonus mineurs ou des connaissances specialisees.',
+  };
+  return descriptions[tierLetter] || '';
+}
+---
+
+<div class="max-w-4xl mx-auto space-y-6">
+  <!-- Header -->
+  <div class="space-y-4">
+    <div class="flex items-start justify-between flex-wrap gap-2">
+      <div>
+        <h1 class="text-3xl font-bold tracking-tight">{skill.name}</h1>
+        {skill.subcategory && <p class="text-lg text-muted-foreground mt-1">{skill.subcategory}</p>}
+      </div>
+      <div class="flex gap-2">
+        {skill.category && (
+          <span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300">
+            {skill.category}
+          </span>
+        )}
+        {skill.subcategory && (
+          <span class={`inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold capitalize ${getSubcategoryColor(skill.subcategory)}`}>
+            {skill.subcategory}
+          </span>
+        )}
+      </div>
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-sm mb-2">Description</h3>
+      <p class="text-muted-foreground leading-relaxed">{skill.description || 'Aucune description disponible'}</p>
+    </div>
+  </div>
+
+  <hr class="border-border" />
+
+  <!-- Effects -->
+  <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+    <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Effets</h3></div>
+    <div class="p-6 pt-0 space-y-3">
+      {skill.effects && skill.effects.length > 0 ? (
+        skill.effects.map((effect) => {
+          const config = getEffectConfig(effect.type);
+          return (
+            <div>
+              <span class={`font-medium text-sm ${config.colorClass}`}>
+                {config.label}:
+              </span>
+              <div class="text-sm text-muted-foreground mt-1">
+                {effect.description}
+              </div>
+            </div>
+          );
+        })
+      ) : (
+        <div class="text-sm text-muted-foreground">Aucun effet defini</div>
+      )}
+    </div>
+  </div>
+
+  <!-- Point Cost -->
+  {skill.point_cost !== undefined && tier && (
+    <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+      <div class="flex flex-col space-y-1.5 p-6">
+        <h3 class="text-lg font-semibold">Cout en points</h3>
+      </div>
+      <div class="p-6 pt-0">
+        <div class="flex items-center justify-between p-4 bg-muted rounded-lg">
+          <div>
+            <div class="text-sm text-muted-foreground">Cout</div>
+            <div class={`text-2xl font-bold ${tier.colorClass}`}>
+              {skill.point_cost} points
+            </div>
+          </div>
+          <span class={`inline-flex items-center rounded-full border px-3 py-1 text-lg font-semibold ${tier.colorClass}`}>
+            Tier {tier.tier}
+          </span>
+        </div>
+        <div class="mt-3 text-sm text-muted-foreground">
+          <p>
+            Cette competence appartient au tier <strong>{tier.tier}</strong> de puissance.
+            {getTierDescription(tier.tier)}
+          </p>
+        </div>
+      </div>
+    </div>
+  )}
+</div>

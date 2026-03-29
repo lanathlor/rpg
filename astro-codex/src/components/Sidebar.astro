@@ -1,0 +1,113 @@
+---
+import SidebarTree from './SidebarTree.astro';
+import { getRulesTree, getHistoryTree } from '@/lib/dataUtils';
+import { findAncestors } from '@/lib/treeUtils';
+
+const pathname = Astro.url.pathname;
+const base = import.meta.env.BASE_URL;
+
+function isActive(href: string): boolean {
+  const fullHref = base + href.replace(/^\//, '');
+  if (href === '/') {
+    return pathname === base || pathname === base.replace(/\/$/, '');
+  }
+  return pathname.startsWith(fullHref);
+}
+
+const navigationItems = [
+  { name: 'Accueil', href: '/', icon: 'home', description: '' },
+  { name: 'Regles', href: '/regles/', icon: 'book-open', description: 'Systeme de jeu et mecaniques', section: 'regles' },
+  { name: 'Histoire', href: '/histoire/', icon: 'scroll', description: 'Chroniques du monde', section: 'histoire' },
+  { name: 'Scenarios', href: '/scenarios/', icon: 'map', description: 'Aventures one-shot et campagnes' },
+  { name: 'Sorts', href: '/sorts/', icon: 'sparkles', description: 'Arcanotechnie et sortileges' },
+  { name: 'Armes', href: '/armes/', icon: 'sword', description: 'Armes de corps a corps et a distance' },
+  { name: 'Equipements', href: '/equipements/', icon: 'shield', description: 'Armures, implants et equipements' },
+  { name: 'Competences', href: '/competences/', icon: 'zap', description: 'Capacites speciales' },
+  { name: 'Consommables', href: '/consommables/', icon: 'package', description: 'Objets utilisables' },
+  { name: 'Classes', href: '/classes/', icon: 'users', description: 'Classes de personnages' },
+  { name: 'Entites', href: '/entites/', icon: 'ghost', description: 'PNJ et creatures' },
+  { name: 'Personnages', href: '/personnages/', icon: 'user', description: 'Créer et gérer vos personnages' },
+  { name: 'Rechercher', href: '/search/', icon: 'search', description: 'Recherche globale' },
+];
+
+// Detect sections and load trees
+const isReglesSection = pathname.startsWith(base + 'regles');
+const isHistoireSection = pathname.startsWith(base + 'histoire');
+
+function extractSlug(section: string): string {
+  const prefix = base + section + '/';
+  return pathname.replace(prefix, '').replace(/\/$/, '') || '';
+}
+
+let rulesTree = null;
+let historyTree = null;
+let rulesActivePath = '';
+let historyActivePath = '';
+let rulesAncestors: string[] = [];
+let historyAncestors: string[] = [];
+
+if (isReglesSection) {
+  rulesTree = await getRulesTree();
+  rulesActivePath = extractSlug('regles');
+  rulesAncestors = findAncestors(rulesTree, rulesActivePath);
+}
+if (isHistoireSection) {
+  historyTree = await getHistoryTree();
+  historyActivePath = extractSlug('histoire');
+  historyAncestors = findAncestors(historyTree, historyActivePath);
+}
+---
+
+<div class="pb-12 w-64">
+  <div class="space-y-4 py-4">
+    <div class="px-3 py-2">
+      <h2 class="mb-2 px-4 text-lg font-semibold tracking-tight">
+        Codex RPG
+      </h2>
+      <div class="space-y-1">
+        {navigationItems.map((item) => (
+          <>
+            <a
+              href={`${base}${item.href.replace(/^\//, '')}`}
+              class:list={[
+                'flex items-center rounded-lg px-3 py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground transition-colors',
+                isActive(item.href)
+                  ? 'bg-primary text-primary-foreground'
+                  : 'text-muted-foreground'
+              ]}
+            >
+              <div class="flex flex-col">
+                <span>{item.name}</span>
+                {item.description && (
+                  <span class="text-xs opacity-70">{item.description}</span>
+                )}
+              </div>
+            </a>
+            {item.section === 'regles' && isReglesSection && rulesTree && (
+              <div class="mt-1 mb-2 ml-2">
+                <SidebarTree
+                  nodes={rulesTree}
+                  section="regles"
+                  activePath={rulesActivePath}
+                  ancestorPaths={rulesAncestors}
+                  base={base}
+                />
+              </div>
+            )}
+            {item.section === 'histoire' && isHistoireSection && historyTree && (
+              <div class="mt-1 mb-2 ml-2">
+                <SidebarTree
+                  nodes={historyTree}
+                  section="histoire"
+                  activePath={historyActivePath}
+                  ancestorPaths={historyAncestors}
+                  base={base}
+                />
+              </div>
+            )}
+          </>
+        ))}
+      </div>
+    </div>
+  </div>
+</div>
