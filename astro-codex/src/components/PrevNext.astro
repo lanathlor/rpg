@@ -1,5 +1,6 @@
 ---
 import type { TreeNode } from '@/lib/treeUtils';
+import type { Lang } from '@/lib/i18n';
 
 interface Props {
   prev: TreeNode | null;
@@ -8,7 +9,8 @@ interface Props {
 }
 
 const { prev, next, section } = Astro.props;
-const base = import.meta.env.BASE_URL;
+const locale = (Astro.params.locale || Astro.url.pathname.match(/\/rpg\/(en|fr)\//)?.[1] || 'en') as Lang;
+const base = import.meta.env.BASE_URL + locale + '/';
 ---
 
 {(prev || next) && (

@@ -12,13 +12,13 @@ const locale = Astro.params.locale as Lang;
 setLang(locale);
 
 const base = import.meta.env.BASE_URL + locale + '/';
-const tree = await getHistoryTree();
+const tree = await getHistoryTree(locale);
 
 const categoryMeta: Record<string, { icon: string; color: string }> = {
-  'introduction_narrative': { icon: 'users', color: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300' },
-  'chronologie': { icon: 'clock', color: 'bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-300' },
-  'contexte': { icon: 'book-open', color: 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300' },
-  'arcanotechnie': { icon: 'sparkles', color: 'bg-violet-100 text-violet-800 dark:bg-violet-900 dark:text-violet-300' },
+  'narrative_introduction': { icon: 'users', color: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300' },
+  'timeline': { icon: 'clock', color: 'bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-300' },
+  'context': { icon: 'book-open', color: 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300' },
+  'arcanotechnology': { icon: 'sparkles', color: 'bg-violet-100 text-violet-800 dark:bg-violet-900 dark:text-violet-300' },
 };
 ---
 

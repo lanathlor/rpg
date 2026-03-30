@@ -49,12 +49,12 @@ let rulesAncestors: string[] = [];
 let historyAncestors: string[] = [];
 
 if (isRulesSection) {
-  rulesTree = await getRulesTree();
+  rulesTree = await getRulesTree(locale);
   rulesActivePath = extractSlug('rules');
   rulesAncestors = findAncestors(rulesTree, rulesActivePath);
 }
 if (isHistorySection) {
-  historyTree = await getHistoryTree();
+  historyTree = await getHistoryTree(locale);
   historyActivePath = extractSlug('history');
   historyAncestors = findAncestors(historyTree, historyActivePath);
 }

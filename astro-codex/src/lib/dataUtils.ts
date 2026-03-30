@@ -99,28 +99,32 @@ export async function getScenarios(locale: Lang = 'fr'): Promise<Array<{ id: str
   }));
 }
 
-export async function getRules() {
+export async function getRules(locale: Lang = 'fr') {
   const entries = await getCollection('rules');
-  return entries.sort((a, b) => a.id.localeCompare(b.id));
+  return byLocale(entries, locale)
+    .map(e => ({ ...e, id: stripLocale(e.id) }))
+    .sort((a, b) => a.id.localeCompare(b.id));
 }
 
-export async function getHistory() {
+export async function getHistory(locale: Lang = 'fr') {
   const entries = await getCollection('history');
-  return entries.sort((a, b) => a.id.localeCompare(b.id));
+  return byLocale(entries, locale)
+    .map(e => ({ ...e, id: stripLocale(e.id) }))
+    .sort((a, b) => a.id.localeCompare(b.id));
 }
 
-export async function getRulesTree(): Promise<TreeNode[]> {
+export async function getRulesTree(locale: Lang = 'fr'): Promise<TreeNode[]> {
   const entries = await getCollection('rules');
-  return buildTree(entries.map(e => ({
-    id: e.id,
+  return buildTree(byLocale(entries, locale).map(e => ({
+    id: stripLocale(e.id),
     data: e.data as { title?: string; order?: number; description?: string },
   })));
 }
 
-export async function getHistoryTree(): Promise<TreeNode[]> {
+export async function getHistoryTree(locale: Lang = 'fr'): Promise<TreeNode[]> {
   const entries = await getCollection('history');
-  return buildTree(entries.map(e => ({
-    id: e.id,
+  return buildTree(byLocale(entries, locale).map(e => ({
+    id: stripLocale(e.id),
     data: e.data as { title?: string; order?: number; description?: string },
   })));
 }

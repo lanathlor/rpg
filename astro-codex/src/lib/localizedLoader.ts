@@ -1,10 +1,14 @@
 /**
- * Custom Astro content loader for i18n codex data.
+ * Custom Astro content loaders for i18n data.
  *
- * Scans directories for items containing _shared.yaml + fr.yaml + en.yaml.
- * Produces TWO entries per item: one with locale 'fr', one with locale 'en'.
- * Entry IDs are prefixed with locale: "fr/destruction/boule_de_feu", "en/destruction/boule_de_feu".
- * The data is deep-merged: _shared.yaml + locale file, with locale winning on conflicts.
+ * localizedLoader (YAML):
+ *   Scans directories for items containing _shared.yaml + fr.yaml + en.yaml.
+ *   Deep-merges _shared + locale file. Produces locale-prefixed entries.
+ *
+ * localizedMarkdownLoader (Markdown):
+ *   Scans {base}/fr/**\/*.md for FR content, checks {base}/en/ for overrides.
+ *   Falls back to FR when EN file doesn't exist. Renders markdown to HTML.
+ *   Produces locale-prefixed entries: "fr/combat/attacking", "en/combat/attacking".
  */
 
 import fs from 'node:fs';
@@ -87,6 +91,135 @@ function loadYamlFile(filePath: string): Record<string, any> | null {
   }
   return null;
 }
+
+// ─── Markdown frontmatter parser ────────────────────────────────────────
+
+const FRONTMATTER_RE = /^---\r?\n([\s\S]*?)\r?\n---\r?\n?/;
+
+function parseFrontmatter(raw: string): { data: Record<string, any>; body: string } {
+  const match = raw.match(FRONTMATTER_RE);
+  if (!match) return { data: {}, body: raw };
+  const fmStr = match[1];
+  const body = raw.slice(match[0].length);
+  const data = (yaml.load(fmStr) as Record<string, any>) || {};
+  return { data, body };
+}
+
+/** Find all .md files recursively under dir. Returns relative paths. */
+function findMdFiles(dir: string): string[] {
+  const results: string[] = [];
+  function walk(current: string, rel: string) {
+    let entries: fs.Dirent[];
+    try {
+      entries = fs.readdirSync(current, { withFileTypes: true });
+    } catch {
+      return;
+    }
+    for (const entry of entries) {
+      const entryRel = rel ? `${rel}/${entry.name}` : entry.name;
+      if (entry.isDirectory()) {
+        walk(path.join(current, entry.name), entryRel);
+      } else if (entry.name.endsWith('.md')) {
+        results.push(entryRel);
+      }
+    }
+  }
+  walk(dir, '');
+  return results;
+}
+
+/**
+ * Convert a relative .md file path to a slug.
+ * - Strips .md extension
+ * - Converts "/index" at the end to just the directory path
+ * e.g. "combat/attacking.md" → "combat/attacking"
+ *      "combat/index.md" → "combat"
+ *      "index.md" → "" (root index — typically not used)
+ */
+function mdPathToSlug(relPath: string): string {
+  let slug = relPath.replace(/\.md$/, '');
+  // Resolve index files to their parent directory
+  if (slug === 'index') return '';
+  if (slug.endsWith('/index')) return slug.slice(0, -'/index'.length);
+  return slug;
+}
+
+// ─── Localized Markdown Loader ──────────────────────────────────────────
+
+interface LocalizedMarkdownLoaderOptions {
+  /** Base directory containing fr/ (and optionally en/) subdirs */
+  base: string;
+  /** Glob patterns to exclude */
+  exclude?: string[];
+}
+
+export function localizedMarkdownLoader(options: LocalizedMarkdownLoaderOptions): Loader {
+  return {
+    name: 'localized-markdown-loader',
+    async load(context) {
+      const { store, parseData, generateDigest, renderMarkdown, config } = context;
+      store.clear();
+
+      const baseDir = path.resolve(config.root.pathname, options.base);
+      const frDir = path.join(baseDir, 'fr');
+
+      if (!fs.existsSync(frDir)) {
+        context.logger.warn(`FR directory not found: ${frDir}`);
+        return;
+      }
+
+      const enDir = path.join(baseDir, 'en');
+      const frFiles = findMdFiles(frDir);
+
+      for (const relPath of frFiles) {
+        const slug = mdPathToSlug(relPath);
+        if (slug === '') continue; // skip root index if any
+
+        const frFilePath = path.join(frDir, relPath);
+        const enFilePath = path.join(enDir, relPath);
+        const hasEn = fs.existsSync(enFilePath);
+
+        const frRaw = fs.readFileSync(frFilePath, 'utf8');
+        const frParsed = parseFrontmatter(frRaw);
+
+        const enParsed = hasEn
+          ? parseFrontmatter(fs.readFileSync(enFilePath, 'utf8'))
+          : null;
+
+        for (const locale of LOCALES) {
+          const parsed = locale === 'fr' ? frParsed : (enParsed || frParsed);
+          const sourceFile = locale === 'en' && hasEn ? enFilePath : frFilePath;
+
+          const id = `${locale}/${slug}`;
+          const relFile = path.relative(config.root.pathname, sourceFile);
+
+          const data = await parseData({
+            id,
+            data: parsed.data,
+            filePath: relFile,
+          });
+
+          const rendered = await renderMarkdown(parsed.body, {
+            fileURL: new URL(`file://${sourceFile}`),
+          });
+
+          const digest = generateDigest(parsed.body);
+
+          store.set({
+            id,
+            data,
+            body: parsed.body,
+            filePath: relFile,
+            digest,
+            rendered,
+          });
+        }
+      }
+    },
+  };
+}
+
+// ─── Localized YAML Loader ──────────────────────────────────────────────
 
 export function localizedLoader(options: LocalizedLoaderOptions): Loader {
   return {

@@ -1,6 +1,5 @@
 import { defineCollection, z } from 'astro:content';
-import { glob } from 'astro/loaders';
-import { localizedLoader } from '@/lib/localizedLoader';
+import { localizedLoader, localizedMarkdownLoader } from '@/lib/localizedLoader';
 
 // Flexible schema for YAML spell effects (highly variable structure)
 const spellEffectsSchema = z.any();
@@ -164,18 +163,12 @@ const mdFrontmatterSchema = z.object({
 });
 
 const reglesCollection = defineCollection({
-  loader: glob({
-    pattern: '**/*.md',
-    base: '../rules',
-  }),
+  loader: localizedMarkdownLoader({ base: '../rules' }),
   schema: mdFrontmatterSchema,
 });
 
 const histoireCollection = defineCollection({
-  loader: glob({
-    pattern: ['**/*.md', '!12_structure_militaire.md'],
-    base: '../history',
-  }),
+  loader: localizedMarkdownLoader({ base: '../history' }),
   schema: mdFrontmatterSchema,
 });
 
