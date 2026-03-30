@@ -1,0 +1,7 @@
+name: Veteran
+category: Skill
+subcategory: tactical
+effects:
+  - type: detection
+    description: Recognizes the class of enemies
+description: Combat experience allowing quick identification of adversaries' capabilities and specializations.

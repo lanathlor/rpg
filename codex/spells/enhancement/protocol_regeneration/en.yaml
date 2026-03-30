@@ -1,0 +1,15 @@
+spell_series: Protocol Regeneration
+description_base: Activation of a cybernetic protocol for accelerated cellular regeneration. Nano-machines inject repair agents into the bloodstream.
+levels:
+  - level: "1"
+    name: Protocol Regeneration
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[bioarcanotechnique]: 3"
+        type_requirement: "A.Type[amelioration]: 3"
+    conditions:
+      intelligence_required: 14
+      flux_cost: 8
+    effects:
+      special: Heals 25 HP immediately. Self-targeting only.
+    recharge_time: 3 sec

@@ -1,0 +1,16 @@
+spell_series: Plasma Overcharge
+description_base: Overheats the energy weapon systems to drastically increase the power of the next shot. Intense glow and crackling energy.
+levels:
+  - level: "1"
+    name: Plasma Overcharge
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[feu]: 2"
+        type_requirement: "A.Type[amelioration]: 3"
+    conditions:
+      intelligence_required: 13
+      flux_cost: 10
+    effects:
+      special: The next ranged attack deals +3d6 additional RRAD damage. Must be used within the next 2 turns or the effect dissipates.
+    duration: 2 turns (until used)
+    recharge_time: 2 sec

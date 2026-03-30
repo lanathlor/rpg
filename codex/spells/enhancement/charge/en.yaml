@@ -1,0 +1,16 @@
+spell_series: Charge
+description_base: Charges the target with force.
+levels:
+  - level: "1"
+    name: Charge
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[martial]: 2"
+        type_requirement: "A.Type[amelioration]: 2"
+        mixed_requirement: "A.École[martial] + A.Type[amelioration]: 6"
+    conditions:
+      target_range: target in range (1d8 + speed)
+    recharge_time: instant
+    effects:
+      damage: You move to the target and deal 1d4 damage
+      resistance: RMEC

@@ -1,0 +1,36 @@
+spell_series: Temporal Acceleration
+description_base: Accelerates personal temporal flow to act faster.
+levels:
+  - level: "1"
+    name: Temporal Acceleration
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[chronodynamique]: 2"
+        type_requirement: "A.Type[amelioration]: 2"
+        mixed_requirement: "A.École[chronodynamique] + A.Type[amelioration]: 6"
+    conditions:
+      intelligence_required: 18
+      flux_cost: 6
+    effects:
+      specials:
+        - +1 additional action this turn
+        - +3 to initiative for the duration
+        - Doubles movement speed
+    duration: 2 turns
+  - level: "2"
+    name: Greater Temporal Acceleration
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[chronodynamique]: 3"
+        type_requirement: "A.Type[amelioration]: 3"
+        mixed_requirement: "A.École[chronodynamique] + A.Type[amelioration]: 9"
+    conditions:
+      intelligence_required: 20
+      flux_cost: 10
+    effects:
+      specials:
+        - +2 additional actions this turn
+        - +5 to initiative for the duration
+        - Triples movement speed
+        - Can automatically dodge the first attack each turn
+    duration: 3 turns

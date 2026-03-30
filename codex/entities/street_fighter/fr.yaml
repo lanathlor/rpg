@@ -1,0 +1,15 @@
+name: Combattant de rue
+type: Voyou
+faction: Indépendant
+alignement: hostile
+description: Un combattant de rue aguerri, habitué aux bagarres et aux affrontements dans les zones urbaines. Agressif et imprévisible.
+equipment:
+  weapons:
+    - Épée courte
+  armor:
+    - Tunique
+  consumables: []
+skills:
+  - Rôdeur
+spells: []
+gameplay_guide: Un combattant de rue agressif qui privilégie le combat au corps à corps. Rapide et impulsif, il charge souvent sans stratégie. Faible en armure mais compense par sa mobilité et son expérience des combats de rue.

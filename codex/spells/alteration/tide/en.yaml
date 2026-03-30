@@ -1,0 +1,36 @@
+spell_series: Tide
+description_base: Manipulates surrounding water to create waves and currents.
+levels:
+  - level: "1"
+    name: Tide
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[hydrodynamique]: 2"
+        type_requirement: "A.Type[alteration]: 2"
+        mixed_requirement: "A.École[hydrodynamique] + A.Type[alteration]: 6"
+    conditions:
+      intelligence_required: 15
+      flux_cost: 4
+    effects:
+      area: Transforms terrain into difficult terrain (mud, water) over 20m²
+      specials:
+        - Enemies in the area suffer -2 to their movement
+        - Can extinguish flames and cool hot surfaces
+    duration: 3d4 turns
+  - level: "2"
+    name: Destructive Tide
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[hydrodynamique]: 3"
+        type_requirement: "A.Type[alteration]: 3"
+        mixed_requirement: "A.École[hydrodynamique] + A.Type[alteration]: 9"
+    conditions:
+      intelligence_required: 17
+      flux_cost: 7
+    effects:
+      area: Transforms terrain into difficult terrain over 40m²
+      damage: 1d4 drowning to enemies in the area each turn
+      specials:
+        - Enemies in the area suffer -3 to their movement and attacks
+        - Can carry away light objects and debris
+    duration: 4d4 turns

@@ -1,0 +1,24 @@
+name: Technologist
+type: Tactician
+description: Bridge between the quantum and technology, Technologists represent the ultimate evolution of imperial engineering. Trained in the Empire's prestigious dual institutes, they master both electrical circuits and arcanotechnical fluxes, creating synergies impossible for an uninitiated mind. Their neural implants allow them to interface directly with computer systems, while their understanding of quantum energies transforms every piece of equipment into an instrument of war. On the field, they sow confusion in enemy ranks, corrupt hostile data, and turn adversary technologies against their former masters. Unpredictable and versatile, they embody the Empire's technological superiority.
+equipment:
+  weapons:
+    - Pistol
+  armor:
+    - Military neural implant
+    - Stabilizer exoskeleton
+    - Combat drone
+  consumables:
+    - name: Healing kit
+      quantity: 1
+    - name: EMP bomb
+      quantity: 1
+skills:
+  - Engineer
+  - Hacker
+spells:
+  - Jamming
+  - Void
+  - Overclock
+  - Data theft
+gameplay_guide: The Technologist is a support class that can reduce the combat strength of targets and break established tactics while you deploy your own. The Technologist has undeniable effectiveness outside of combat, being able to open new routes and limit the group's risk of missteps. Keep your spells in mind, even outside of combat.

@@ -1,0 +1,9 @@
+name: Compréhension de la nature
+category: Compétence
+subcategory: survie
+effects:
+  - type: special
+    description: Identification des plantes et animaux plus simple
+  - type: special
+    description: Peut communiquer de manière primaire avec certains animaux
+description: Connaissance profonde des écosystèmes naturels et capacité limitée de communication avec la faune.

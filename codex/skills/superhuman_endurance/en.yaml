@@ -1,0 +1,9 @@
+name: Superhuman Endurance
+category: Skill
+subcategory: physical
+effects:
+  - type: health
+    description: +30 maximum HP
+  - type: special
+    description: Immunity to normal fatigue, can fight for 24 hours without rest
+description: Extraordinary physical endurance. The body has been conditioned to function well beyond human limits.

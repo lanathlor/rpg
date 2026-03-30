@@ -1,0 +1,21 @@
+name: Sentinel
+type: Fighter
+description: The Sentinel is the defensive force of the army. Their role oscillates between counter-espionage and the defense of strategic urban positions. Their strength comes primarily from their ability to surprise the enemy through precise knowledge of the terrain and devastating ambushes. Few enemy reports mention Sentinels, but the disappearance of units infiltrated into human territory is a fact known to all.
+equipment:
+  weapons:
+    - Light sword
+    - Light sword
+  armor:
+    - Speed exoskeleton
+  consumables:
+    - name: Healing kit
+      quantity: 2
+skills:
+  - Sprint
+  - Prowler
+spells:
+  - Multi-attack
+  - Cleave
+  - Precise strike
+  - Weak point strike
+gameplay_guide: The Sentinel is a combat class that swoops down on enemies to take them out before being noticed. By using your attacks effectively, you can create a hole in enemy lines. But your positioning is paramount to your success.

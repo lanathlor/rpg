@@ -1,0 +1,7 @@
+name: Living Armor
+category: Skill
+subcategory: defense
+effects:
+  - type: defense
+    description: Can sacrifice roots or body parts to automatically block an attack
+description: Active organic defense. The character can detach body parts (roots, tentacles, growths) to intercept and block incoming attacks. These parts slowly regrow over time or via regeneration.

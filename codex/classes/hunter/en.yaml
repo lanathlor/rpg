@@ -1,0 +1,22 @@
+name: Hunter
+type: Sharpshooter
+description: Ruthless specialists in hunting Arcanotechnicians, Hunters form the Empire's anti-arcanotechnical elite. Trained to recognize the subtle signs of arcanotechnology and exploit spellcasters' weaknesses, they wield a devastating arsenal specifically designed to pierce quantum defenses. Their overcharged shotgun and special ammunition can reduce even the most powerful Arcanotechnician to ashes before they have time to cast. Masters of tactical mobility and positioning, they strike fast and hard before disappearing into the shadows, leaving behind bewildered and terrified foes.
+equipment:
+  weapons:
+    - Overcharged shotgun
+  armor:
+    - Tracking exoskeleton
+  consumables:
+    - name: Healing kit
+      quantity: 1
+    - name: Anti-arcanotechnical dart
+      quantity: 1
+skills:
+  - Arcanotechnology armor
+  - Quantum sight
+spells:
+  - Augmented shrapnel cartridge
+  - High-velocity slugs
+  - Headshot
+  - Roll
+gameplay_guide: The Hunter is a class capable of dealing enormous damage in a short time. The combination of 'Augmented shrapnel cartridge' and 'High-velocity slugs' is the solution to many problems. Their survival depends on their ability to reposition correctly on the battlefield.

@@ -21,17 +21,17 @@ export function MobileSidebar({ base, pathname }: MobileSidebarProps) {
 
   const navigationItems = [
     { name: t('nav.home'), href: '/', description: '' },
-    { name: t('nav.rules'), href: '/regles/', description: t('nav.rulesDesc') },
-    { name: t('nav.history'), href: '/histoire/', description: t('nav.historyDesc') },
+    { name: t('nav.rules'), href: '/rules/', description: t('nav.rulesDesc') },
+    { name: t('nav.history'), href: '/history/', description: t('nav.historyDesc') },
     { name: t('nav.scenarios'), href: '/scenarios/', description: t('nav.scenariosDesc') },
-    { name: t('nav.spells'), href: '/sorts/', description: t('nav.spellsDesc') },
-    { name: t('nav.weapons'), href: '/armes/', description: t('nav.weaponsDesc') },
-    { name: t('nav.equipment'), href: '/equipements/', description: t('nav.equipmentDesc') },
-    { name: t('nav.skills'), href: '/competences/', description: t('nav.skillsDesc') },
-    { name: t('nav.consumables'), href: '/consommables/', description: t('nav.consumablesDesc') },
+    { name: t('nav.spells'), href: '/spells/', description: t('nav.spellsDesc') },
+    { name: t('nav.weapons'), href: '/weapons/', description: t('nav.weaponsDesc') },
+    { name: t('nav.equipment'), href: '/equipment/', description: t('nav.equipmentDesc') },
+    { name: t('nav.skills'), href: '/skills/', description: t('nav.skillsDesc') },
+    { name: t('nav.consumables'), href: '/consumables/', description: t('nav.consumablesDesc') },
     { name: t('nav.classes'), href: '/classes/', description: t('nav.classesDesc') },
-    { name: t('nav.entities'), href: '/entites/', description: t('nav.entitiesDesc') },
-    { name: t('nav.characters'), href: '/personnages/', description: t('nav.charactersDesc') },
+    { name: t('nav.entities'), href: '/entities/', description: t('nav.entitiesDesc') },
+    { name: t('nav.characters'), href: '/characters/', description: t('nav.charactersDesc') },
     { name: t('nav.search'), href: '/search/', description: t('nav.searchDesc') },
   ];
 

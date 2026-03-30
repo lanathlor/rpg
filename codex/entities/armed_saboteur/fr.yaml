@@ -1,0 +1,17 @@
+name: Saboteur armé
+type: Combattant / Résistant
+faction: Résistance anti-impériale
+alignement: hostile
+description: Membre armé d'une cellule de résistance. Formation militaire basique, équipement léger, déterminé mais moins expérimenté que les soldats professionnels. Combat pour une cause idéologique contre l'Empire.
+equipment:
+  weapons:
+    - Fusil d'assaut
+  armor:
+    - Gilet pare-balles léger
+  consumables:
+    - name: Kit de soins
+      quantity: 1
+skills:
+  - Tacticien
+spells: []
+gameplay_guide: Combattant de résistance avec formation militaire basique. Utilise couverture et tactiques de guérilla. Moins discipliné que les soldats impériaux mais motivé par sa cause. Préfère le combat à distance. Fuit si débordé ou isolé. Dangereux en groupe coordonné.

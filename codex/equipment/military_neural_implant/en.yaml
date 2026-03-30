@@ -1,0 +1,13 @@
+name: Military neural implant
+category: Augmentation
+subcategory: neural implant
+type: neural
+cost: 4000 credits
+prerequisites:
+  skill_any_of:
+    - Hacker
+    - Engineer
+stats:
+  hacking_bonus: +2 to hacking roll
+  special: Reduces deadlock chances of mainframes
+description: This latest-generation neural chip interfaces directly with the cerebral cortex to augment cognitive computing capabilities. Equipped with military security protocols and advanced intrusion algorithms, it allows its wearer to navigate enemy computer systems with superhuman fluidity. The implant also integrates safeguards to avoid the most dangerous logic traps.

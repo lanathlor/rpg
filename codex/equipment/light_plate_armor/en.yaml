@@ -1,0 +1,10 @@
+name: Light plate armor
+category: Armor
+subcategory: plate
+cost: 800 credits
+prerequisites:
+  stat: STR 12
+stats:
+  RMEC: "+2"
+  RRAD: "+1"
+description: Metal plate armor offering good protection against projectiles (RMEC) and limited protection against thermal effects (RRAD) while maintaining acceptable mobility.

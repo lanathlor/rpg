@@ -1,0 +1,9 @@
+name: Intimidation
+category: Skill
+subcategory: social
+effects:
+  - type: social
+    description: +4 to intimidation rolls
+  - type: special
+    description: Can demoralize an enemy (-2 penalty to attacks, 3 turns) with an opposed CHA roll
+description: Menacing presence capable of sapping enemy morale. The mere threat can be enough to break an opponent.

@@ -1,0 +1,22 @@
+name: Guardian
+type: Protector
+description: Unwavering pillars of the Empire, Guardians form the vanguard of every pitched battle. Masters of hard-light arcanotechnology, they transform pure energy into impenetrable ramparts and gleaming weapons. Their presence on the battlefield inspires confidence in allied troops and strikes terror in enemies. True beacons in the darkness of conflict, they enable imperial units to hold their positions against the fiercest assaults. Their absolute devotion to protecting their comrades makes them the legendary protectors of the Empire.
+equipment:
+  weapons:
+    - Light sword
+  armor:
+    - Heavy plate armor
+    - Shield
+  consumables:
+    - name: Healing kit
+      quantity: 3
+skills:
+  - On alert
+  - Charismatic
+  - Guardian
+spells:
+  - Intervention
+  - Flash
+  - Hard-light shield
+  - Force strike
+gameplay_guide: The Guardian is the group's tank. Your ability to draw fire toward yourself and absorb hits better than the group obliges you to step forward and protect them.

@@ -1,0 +1,12 @@
+name: Bâton
+category: Arme de corps à corps
+subcategory: 2 mains
+type: bâton
+cost: 50 crédits
+prerequisites:
+  affinity: A. CAC 1
+stats:
+  damage: 1d4
+  attack_type: attaque lourde (FOR)
+  defense_type: parade (FOR)
+description: Bâton de combat simple mais efficace, souvent utilisé par les Arcanotechniciens et érudits pour sa portée et sa facilité de maniement.

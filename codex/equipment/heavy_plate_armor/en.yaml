@@ -1,0 +1,11 @@
+name: Heavy plate armor
+category: Armor
+subcategory: plate
+cost: 1200 credits
+prerequisites:
+  stat: STR 14
+stats:
+  RMEC: "+3"
+  RRAD: "+1"
+  inventory_bonus: +1 consumable slot
+description: Full heavy plate armor, offering maximum protection against impacts and projectiles (RMEC), limited protection against thermal effects (RRAD), and integrated storage compartments.

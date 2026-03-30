@@ -1,0 +1,12 @@
+name: Reinforced turret plating
+category: Armor
+subcategory: fixed plating
+cost: 2200 credits
+prerequisites:
+  special: Fixed installation only
+stats:
+  RMEC: "+4"
+  RRAD: "+2"
+  RINT: "+1"
+  stat_modifier: "Speed: 0 (immobile)"
+description: Multi-layered composite armor plates for fixed defensive installations. Combination of metal alloys and ballistic ceramics offering superior protection against kinetic projectiles. Internal cavities are filled with reactive gel to dissipate thermal energy.

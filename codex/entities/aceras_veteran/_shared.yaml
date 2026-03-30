@@ -1,0 +1,24 @@
+base_stats:
+  health: 60
+  speed: 5
+innate_resistances:
+  RMEC: 3
+  RRAD: 2
+  RINT: 1
+flux_system:
+  reserve: 0
+  per_turn: 0
+  recovery: 0
+affinities:
+  distance: 9
+  melee: 3
+  schools: {}
+  types: {}
+stats:
+  force: 15
+  dexterite: 14
+  constitution: 16
+  intelligence: 14
+  perception: 15
+  precision: 16
+  charisme: 14

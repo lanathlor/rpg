@@ -1,0 +1,9 @@
+name: Ace Pilot
+category: Skill
+subcategory: technical
+effects:
+  - type: piloting
+    description: +4 to piloting rolls for vehicles and spacecraft
+  - type: special
+    description: Can perform maneuvers impossible for a normal pilot
+description: Innate talent for piloting. Capable of maneuvering vehicles and spacecraft with superhuman precision even in the most perilous situations.

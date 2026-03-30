@@ -1,0 +1,30 @@
+image: images/classes/arcanotechnologue.png
+base_stats:
+  health: 40
+  speed: 4
+innate_resistances:
+  RMEC: 0
+  RRAD: 0
+  RINT: 0
+flux_system:
+  reserve: 25
+  per_turn: 6
+  recovery: 4
+affinities:
+  distance: 0
+  melee: 2
+  schools:
+    bioarcanotechnique: 3
+    feu: 2
+  types:
+    alteration: 3
+    amelioration: 3
+    destruction: 2
+stats:
+  force: 9
+  dexterite: 10
+  constitution: 11
+  intelligence: 16
+  perception: 16
+  precision: 9
+  charisme: 10

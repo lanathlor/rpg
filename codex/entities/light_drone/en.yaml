@@ -1,0 +1,13 @@
+name: Light Drone
+type: Drone / Light Automated Unit
+faction: Variable
+alignement: neutral
+description: Light reconnaissance or security drone. Equipped with sensors and basic armament. Used for surveillance, scouting, or minimal tactical support.
+equipment:
+  weapons:
+    - Mitraillette légère
+  armor: []
+  consumables: []
+skills: []
+spells: []
+gameplay_guide: Automated light drone with reconnaissance capabilities. Mobile and hard to hit but fragile. Used for flanking, scouting, or harassment. Weak in direct combat but useful in support.

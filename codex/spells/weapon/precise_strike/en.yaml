@@ -1,0 +1,16 @@
+spell_series: Precise Strike
+description_base: You analyze your opponent's movements to strike with surgical precision where their defense is weakest.
+levels:
+  - level: "1"
+    name: Precise Strike
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[martial]: 2"
+        type_requirement: "A.Type[arme]: 2"
+        mixed_requirement: "A.École[martial] + A.Type[arme]: 6"
+    conditions:
+      special: none
+    recharge_time: 30 sec
+    effects:
+      attack_bonus: +5 to the attack roll of the next physical attack
+      resistance: RMEC

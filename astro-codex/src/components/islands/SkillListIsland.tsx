@@ -148,7 +148,7 @@ export function SkillListIsland({ skills, base }: Props) {
         {filtered.map(skill => (
           <a
             key={skill.slug}
-            href={`${base}competences/${skill.slug}/`}
+            href={`${base}skills/${skill.slug}/`}
             className="block rounded-lg border bg-card text-card-foreground shadow-sm hover:shadow-lg transition-shadow cursor-pointer h-full"
           >
             <div className="flex flex-col space-y-1.5 p-6">

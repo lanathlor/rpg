@@ -1,0 +1,7 @@
+name: On Alert
+category: Skill
+subcategory: tactical
+effects:
+  - type: special
+    description: Can attack or cast a spell at the start of combat
+description: Constant vigilance and developed reflexes allowing immediate action at the onset of hostilities.

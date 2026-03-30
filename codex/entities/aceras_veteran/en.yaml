@@ -1,0 +1,18 @@
+name: Aceras Veteran
+type: Veteran
+faction: Aceras
+alignement: hostile
+description: Aceras war veteran, experienced combatant and competent tactician. Equipped with heavy armor and advanced armament.
+equipment:
+  weapons:
+    - Fusil mitrailleur
+  armor:
+    - Armure de plate lourde
+  consumables:
+    - name: Kit de soins
+      quantity: 2
+skills:
+  - Tacticien
+  - Vétéran
+spells: []
+gameplay_guide: Aceras veteran with combat experience and tactical capabilities. Well protected by heavy plate armor, equipped with a versatile machine gun. Disciplined combatant who exploits enemy weaknesses and coordinates with their unit. Effective at medium range combat.

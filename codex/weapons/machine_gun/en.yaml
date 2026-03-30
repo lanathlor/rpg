@@ -1,0 +1,12 @@
+name: Machine gun
+category: Ranged weapon
+subcategory: two-handed weapon
+type: machine gun
+cost: 1500 credits
+prerequisites:
+  affinity: A. dist 6
+stats:
+  damage: 1d12
+  attack_type: ranged shot (PRE)
+  defense_type: dodge (DEX)
+description: Heavy automatic weapon for suppression and sustained damage. Requires advanced mastery of ranged weapons.

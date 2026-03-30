@@ -1,0 +1,36 @@
+spell_series: Shadow Veil
+description_base: Envelops the target in darkness, disrupting their perception.
+levels:
+  - level: "1"
+    name: Shadow Veil
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[ombre]: 2"
+        type_requirement: "A.Type[alteration]: 2"
+        mixed_requirement: "A.École[ombre] + A.Type[alteration]: 6"
+    conditions:
+      intelligence_required: 15
+      flux_cost: 5
+    effects:
+      specials:
+        - "-2 to the target's attack rolls"
+        - "-2 to the target's detection and perception"
+        - The target becomes partially invisible to optical sensors
+    duration: 2d4 turns
+  - level: "2"
+    name: Greater Shadow Veil
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[ombre]: 3"
+        type_requirement: "A.Type[alteration]: 3"
+        mixed_requirement: "A.École[ombre] + A.Type[alteration]: 9"
+    conditions:
+      intelligence_required: 17
+      flux_cost: 6
+    effects:
+      specials:
+        - "-3 to the target's attack rolls"
+        - "-3 to the target's detection and perception"
+        - The target becomes invisible to optical sensors
+        - Can affect up to 3 targets
+    duration: 3d4 turns

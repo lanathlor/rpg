@@ -1,0 +1,52 @@
+spell_series: Power Attack
+description_base: Prepares a devastating attack against a nearby opponent.
+levels:
+  - level: "1"
+    name: Power Attack
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[martial]: 2"
+        type_requirement: "A.Type[arme]: 2"
+        mixed_requirement: "A.École[martial] + A.Type[arme]: 6"
+      stats:
+        - "STR: 14"
+    conditions:
+      special: none
+    recharge_time: 30 sec
+    effects:
+      damage_bonus: +1d8 to the next physical attack
+      resistance: RMEC
+  - level: "2"
+    name: Power Attack II
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[martial]: 3"
+        type_requirement: "A.Type[arme]: 3"
+        mixed_requirement: "A.École[martial] + A.Type[arme]: 9"
+      stats:
+        - "STR: 18"
+    conditions:
+      special: none
+      flux_cost: 8
+    recharge_time: 30 sec
+    effects:
+      damage_bonus: +2d8 + 8 to the next physical attack
+      resistance: RMEC
+  - level: "3"
+    name: Power Attack III
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[martial]: 15"
+        type_requirement: "A.Type[arme]: 15"
+        mixed_requirement: "A.École[martial] + A.Type[arme]: 45"
+      stats:
+        - "STR: 22"
+    conditions:
+      intelligence_required: 20
+      flux_cost: 12
+    recharge_time: 30 sec
+    effects:
+      damage_bonus: +4d10 + 16 to the next physical attack
+      resistance: RMEC
+      special: Ignores 10 points of RMEC, knocks down the target (CON saving throw)
+    description: Superhuman concentration of force. The following strike possesses devastating power capable of shattering armor and knocking down enemies.

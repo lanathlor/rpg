@@ -1,0 +1,21 @@
+name: Resistance Commander
+type: Leader / Commander
+faction: Anti-imperial Resistance
+alignement: Variable (often chaotic)
+description: Charismatic commander of a resistance cell. Brilliant tactician and elite marksman. Experienced leader with complete military training. Ready to make difficult decisions for the cause.
+equipment:
+  weapons:
+    - Fusil de précision
+  armor:
+    - Armure légère tactique
+  consumables:
+    - name: Kit de soins
+      quantity: 1
+skills:
+  - Tacticienne
+  - Tir de précision
+  - Vétéran
+  - Leadership
+spells: []
+gameplay_guide: "Resistance commander: tactical leader and elite marksman. Exceptional tactician with +2 Initiative and ability to coordinate allies. Precision Shot gives +3 to Precision rolls. Ranged combat, stays back with protection (bodyguards). High Dexterity and Precision (16) for deadly shots. Leadership inspires allies. ~230 points."
+notes: Archetype for resistance commanders. Can be customized with name, motivations, and special equipment per scenario (e.g., detonator, encrypted communicator, etc.).

@@ -1,0 +1,17 @@
+name: Turret automatic rifle
+category: Ranged weapon
+subcategory: mounted weapon
+type: automatic rifle
+cost: 1200 credits
+prerequisites:
+  affinity: A. dist 5
+stats:
+  damage: 2d6
+  attack_type: ranged shot (PRE)
+  defense_type: dodge (DEX)
+special_effects:
+  - Automated targeting system
+  - Controlled burst fire
+  - Gyroscopic stabilization
+  - RMEC damage type (kinetic)
+description: Automatic rifle integrated into Aceras defensive turrets. AI-assisted targeting system enabling precise and continuous fire. Belt-fed ammunition for sustained fire.

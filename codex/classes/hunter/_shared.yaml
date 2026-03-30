@@ -1,0 +1,30 @@
+image: images/classes/chasseur.png
+base_stats:
+  health: 40
+  speed: 6
+innate_resistances:
+  RMEC: 0
+  RRAD: 0
+  RINT: 0
+flux_system:
+  reserve: 5
+  per_turn: 2
+  recovery: 1
+affinities:
+  distance: 4
+  melee: 0
+  fusil_a_pompe: 4
+  schools:
+    balistique: 4
+    martial: 3
+  types:
+    arme: 8
+    deplacement: 2
+stats:
+  force: 13
+  dexterite: 14
+  constitution: 12
+  intelligence: 8
+  perception: 12
+  precision: 11
+  charisme: 10

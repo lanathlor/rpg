@@ -1,0 +1,22 @@
+name: Horion
+type: Sharpshooter
+description: Having attended the finest military academies, Horions are formidable fighters. Trained to face all types of enemies across a wide variety of terrain, they specialize in guerrilla warfare. With their remarkable techniques and their 'drop & go' strategy, they are capable of retaking control of zones even when outnumbered. Often confused with regular infantry soldiers, this is a mistake rarely made twice -- if they even give you the chance.
+equipment:
+  weapons:
+    - Machine gun
+  armor:
+    - Combat exoskeleton
+  consumables:
+    - name: Healing kit
+      quantity: 1
+    - name: Grenade
+      quantity: 1
+skills:
+  - Veteran
+  - Tactician
+spells:
+  - Headshot
+  - Barrage fire
+  - Movement reading
+  - Roll
+gameplay_guide: The Horion is a class capable of dealing sustained damage while staying safe. Correctly choosing your targets and discussing the combat plan with your allies is what allows the Horion to shine. The Horion's positioning during combat is essential to get the most out of all the tools at your disposal.

@@ -1,0 +1,9 @@
+name: Assassin
+category: Skill
+subcategory: combat
+effects:
+  - type: combat
+    description: Surprise attacks deal +3d6 damage
+  - type: special
+    description: "Coup de grace: Attack against a defenseless target = instant death (CON saving throw DC 20)"
+description: Lethal training in elimination techniques. Expert in silent elimination and surgical strikes.

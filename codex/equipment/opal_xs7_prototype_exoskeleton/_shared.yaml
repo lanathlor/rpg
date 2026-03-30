@@ -1,0 +1,28 @@
+bonuses:
+  force: "+10"
+  dexterite: "+8"
+  constitution: "+8"
+  perception: "+6"
+  precision: "+8"
+base_stat_bonuses:
+  health: "+50"
+  speed: "+3"
+resistance_bonuses:
+  RMEC: "+25"
+  RRAD: "+20"
+  RINT: "+15"
+flux_bonuses:
+  reserve: "+100"
+  per_turn: "+10"
+  recovery: "+10"
+affinity_bonuses:
+  distance: "+6"
+  melee: "+4"
+  balistique: "+5"
+  martial: "+5"
+  lumiere: "+5"
+  electricite: "+5"
+  feu: "+4"
+  destruction: "+5"
+  amelioration: "+5"
+  arme: "+5"

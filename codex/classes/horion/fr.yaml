@@ -1,0 +1,22 @@
+name: Horion
+type: Tireur d'élite
+description: Ayant fait les meilleures écoles militaires, les horions sont de redoutables combattants. Entrainés à affronter tout type d'ennemies sur une grande variété de terrain, ils sont spécialisés dans les guérillas. Avec leurs techniques remarquables et leur stratégie de « drop & go », ils sont capables de reprendre le contrôle des zones même écrasé par le nombre. Souvent confondus avec les soldats d'infanterie, c'est une erreur rarement commise deux fois, si toutefois ils vous laissent cette occasion.
+equipment:
+  weapons:
+    - Fusil mitrailleur
+  armor:
+    - Exosquelette de combat
+  consumables:
+    - name: Kit de soins
+      quantity: 1
+    - name: Grenade
+      quantity: 1
+skills:
+  - Vétéran
+  - Tacticien
+spells:
+  - Tir à la tête
+  - Tir de barrage
+  - Lecture des mouvements
+  - Roulade
+gameplay_guide: Le horion est une classe capable d'infliger des dégâts sur la durée tout en restant en sécurité. Choisir correctement ses cibles et dialoguer du plan de combat avec ses alliés est ce qui permet au horion de se distinguer. Le placement du horion lors des combats est indispensable afin de tirer le meilleur de tous les outils à votre disposition.

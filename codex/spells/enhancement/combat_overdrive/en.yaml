@@ -1,0 +1,43 @@
+spell_series: Combat Overdrive
+description_base: Extreme arcanotechnical amplification of reflexes and temporal perception. The caster enters a transcendent combat state where every second seems to last an eternity, enabling martial feats impossible for a non-augmented being.
+levels:
+  - level: "1"
+    name: Combat Overdrive
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[martial]: 15"
+        type_requirement: "A.Type[amélioration]: 15"
+        mixed_requirement: "A.École[martial] + A.Type[amélioration]: 45"
+      stats:
+        - "DEX: 18"
+        - "INT: 18"
+    conditions:
+      intelligence_required: 20
+      flux_cost: 35
+    description: Secret technique of the Imperial war masters. Accelerates all cognitive and physical processes to transcend normal human limits.
+    effects:
+      attack_bonus: +3 additional attacks per turn, +5 to all attack rolls
+      defense_bonus: +5 to Defense Score
+      movement: Movement doubled
+      special: "Lasts 3 turns. Backlash: after the effect, -2 to all rolls for 2 turns (extreme fatigue)"
+    duration: 3 turns
+  - level: "2"
+    name: Combat Overdrive II
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[martial]: 25"
+        type_requirement: "A.Type[amélioration]: 25"
+        mixed_requirement: "A.École[martial] + A.Type[amélioration]: 75"
+      stats:
+        - "DEX: 22"
+        - "INT: 22"
+    conditions:
+      intelligence_required: 24
+      flux_cost: 60
+    description: Ultimate combat trance state. The warrior becomes a tornado of destruction, moving so fast they seem to multiply across the battlefield.
+    effects:
+      attack_bonus: +5 additional attacks per turn, +8 to all attack rolls, +10 to initiative
+      defense_bonus: +8 to Defense Score
+      movement: Triples movement, can perform a free movement action after each attack
+      special: "Lasts 4 turns, automatically succeeds saving throws against control effects. Backlash: after the effect, -4 to all rolls for 3 turns (extreme fatigue), speed halved"
+    duration: 4 turns

@@ -6,14 +6,15 @@ import { getScenarios, getEntities, getWeapons, getArmors, getSkills, getConsuma
 import { calculateTotalPointBuy } from '@/lib/pointBuyCalculator';
 
 export async function getStaticPaths() {
-  const scenarios = await getScenarios();
-  const locales = ['en', 'fr'];
-  return locales.flatMap(locale =>
-    scenarios.map(s => ({
+  const locales = ['en', 'fr'] as const;
+  const results = await Promise.all(locales.map(async locale => {
+    const scenarios = await getScenarios(locale);
+    return scenarios.map(s => ({
       params: { locale, slug: s.slug },
       props: { scenario: s.data },
-    }))
-  );
+    }));
+  }));
+  return results.flat();
 }
 
 const { scenario } = Astro.props;
@@ -23,7 +24,7 @@ const base = import.meta.env.BASE_URL + locale + '/';
 
 // Load all entities and codex data for cross-referencing
 const [allEntities, allWeapons, allArmors, allSkills, allConsumables] = await Promise.all([
-  getEntities(), getWeapons(), getArmors(), getSkills(), getConsumables(),
+  getEntities(locale), getWeapons(locale), getArmors(locale), getSkills(locale), getConsumables(locale),
 ]);
 
 // Collect all entity_base references from the scenario

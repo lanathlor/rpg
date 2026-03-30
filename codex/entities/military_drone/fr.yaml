@@ -1,0 +1,15 @@
+name: Drone militaire
+type: Drone / Unité automatisée de combat
+faction: Variable
+alignement: neutre
+description: Drone de combat lourd équipé d'armement militaire avancé. Blindage renforcé et systèmes d'armes automatisés. Utilisé pour l'appui feu et le contrôle de zone.
+equipment:
+  weapons:
+    - Fusil mitrailleur
+  armor:
+    - Blindage de drone
+  consumables: []
+skills:
+  - Tacticien
+spells: []
+gameplay_guide: Drone militaire lourd avec blindage et armement significatifs. Fournit appui feu soutenu et contrôle de zone. Plus résilient que le drone léger mais moins mobile. Menace sérieuse en support d'unités terrestres.

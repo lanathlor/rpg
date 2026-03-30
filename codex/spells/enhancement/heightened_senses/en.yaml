@@ -1,0 +1,18 @@
+spell_series: Heightened Senses
+description_base: Your senses are temporarily sharpened, nothing escapes you.
+levels:
+  - level: "1"
+    name: Heightened Senses
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[bioarcanotechnique]: 2"
+        type_requirement: "A.Type[amelioration]: 2"
+        mixed_requirement: "A.École[bioarcanotechnique] + A.Type[amelioration]: 6"
+    conditions:
+      flux_cost: 5
+    effects:
+      specials:
+        - +2 to perception
+        - +1 to saving throw
+        - +1 to initiative
+    duration: 30 sec

@@ -1,0 +1,17 @@
+name: Agent de sécurité
+type: Garde
+faction: Indépendant
+alignement: neutre
+description: Un agent de sécurité privé, généralement employé pour protéger des installations civiles ou commerciales.
+equipment:
+  weapons:
+    - Pistolet
+  armor:
+    - Tenue de survie
+  consumables:
+    - name: Kit de soins
+      quantity: 1
+skills:
+  - Guerrier
+spells: []
+gameplay_guide: Un agent de sécurité standard, équipé d'un pistolet et d'une tenue de survie basique. Plus vigilant que combatif, il excelle dans la détection des intrusions. Préfère alerter et ralentir plutôt que d'engager directement le combat.

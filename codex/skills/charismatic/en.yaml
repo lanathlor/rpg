@@ -1,0 +1,9 @@
+name: Charismatic
+category: Skill
+subcategory: social
+effects:
+  - type: passive
+    description: +1 CHA
+  - type: special
+    description: Increases the chance of being targeted
+description: Natural presence and authority that inspires but also draws attention from enemies who see the potential threat.

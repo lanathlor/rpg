@@ -1,0 +1,46 @@
+name: Commandant Aceras
+type: Commandant / Boss
+faction: Aceras
+alignement: hostile
+description: Commandant Aceras d'élite en armure de combat lourde, avec augmentations cybernétiques. Tacticien brillant et combattant redoutable avec armes énergétiques avancées et capacités arcanotechniques.
+equipment:
+  weapons:
+    - Canon à plasma
+    - Lames énergétiques
+  armor:
+    - Exosquelette de combat
+  consumables:
+    - name: Kit de soins
+      quantity: 3
+skills:
+  - Guerrier
+  - Tacticien
+  - Vétéran
+  - Course
+spells:
+  - Régénération protocolaire
+  - Surcharge plasma
+  - Analyse tactique
+  - Bouclier renforcé
+gameplay_guide: |
+  BOSS FIGHT - Commandant Aceras
+
+  Commandant Aceras d'élite avec exosquelette de guerre, armes énergétiques intégrées et capacités arcanotechniques.
+
+  PHASES DE COMBAT:
+  - Phase 1 (180-90 PV): Combat à distance avec canon à plasma, mobilité tactique, les gardes protègent ses flancs
+  - Phase 2 (90-50 PV): Combat mixte, alterne tirs et mêlée, devient plus agressif
+  - Phase 3 (<50 PV): Corps à corps total, double attaques (Guerrier), combat désespéré - TRÈS DANGEREUX
+
+  CAPACITÉS ARCANOTECHNIQUES:
+  Le commandant possède 4 sorts d'amélioration qui renforcent ses capacités de combat:
+  - Régénération protocolaire: Soigne 25 PV instantanément (Flux: 8)
+  - Surcharge plasma: +3d6 RRAD sur la prochaine attaque à distance (Flux: 10)
+  - Analyse tactique: Révèle faiblesses ennemies, donne Avantage aux alliés (Flux: 6)
+  - Bouclier renforcé: +5 à toutes résistances pendant 3 tours (Flux: 12)
+
+  ATTAQUES:
+  - Canon à plasma: 3d8+4 RRAD, portée moyenne, recharge 2 tours
+  - Lames énergétiques: 2d8+5 / 1d8+2 RMEC (main + seconde main), corps à corps (×2 avec Guerrier)
+
+  C'est un adversaire de niveau boss (~500 points total avec capacités). Groupe recommandé: 3-5 joueurs ~220-240 points chacun.

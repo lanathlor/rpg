@@ -1,0 +1,11 @@
+name: Tracking exoskeleton
+category: Armor
+subcategory: exoskeleton
+cost: 2800 credits
+prerequisites:
+  stat: DEX 14
+stats:
+  special_ability: Choose a target. +1 to attack roll against that target
+  cooldown: Can change target every 4 turns
+  action_required: Requires a maneuver to change target
+description: Specialized exoskeleton for hunting and tracking, allowing lock-on to a specific target.

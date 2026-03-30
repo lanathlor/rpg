@@ -1,8 +1,0 @@
-name: "Traque"
-category: "Compétence"
-subcategory: "survie"
-point_cost: 8
-effects:
-  - type: "special"
-    description: "Traque les proies avec une grande efficacité, révélant les indices laissés derrière"
-description: "Compétence de pistage permettant de suivre les traces et indices laissés par les créatures et personnages."

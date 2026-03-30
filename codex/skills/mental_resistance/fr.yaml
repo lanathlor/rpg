@@ -1,0 +1,9 @@
+name: Résistance mentale
+category: Compétence
+subcategory: mental
+effects:
+  - type: defense
+    description: +4 aux jets de sauvegarde contre les effets mentaux (peur, charme, confusion)
+  - type: special
+    description: Avantage aux jets contre le contrôle mental
+description: Esprit fortifié contre les intrusions psychiques. Résistance exceptionnelle aux manipulations mentales.

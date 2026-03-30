@@ -1,0 +1,7 @@
+name: Regeneration
+category: Skill
+subcategory: defense
+effects:
+  - type: defense
+    description: Regenerates 10 HP per turn if connected to a source (roots, favorable terrain, etc.)
+description: Biological or arcanotechnological rapid regeneration capability. The character can recover hit points each turn as long as they remain in contact with their power source (roots for plant creatures, Flux terrain for corrupted creatures, etc.).

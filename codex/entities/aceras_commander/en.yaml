@@ -1,0 +1,46 @@
+name: Aceras Commander
+type: Commander / Boss
+faction: Aceras
+alignement: hostile
+description: Elite Aceras commander in heavy combat armor, with cybernetic augmentations. Brilliant tactician and formidable combatant with advanced energy weapons and arcanotechnological capabilities.
+equipment:
+  weapons:
+    - Canon à plasma
+    - Lames énergétiques
+  armor:
+    - Exosquelette de combat
+  consumables:
+    - name: Kit de soins
+      quantity: 3
+skills:
+  - Guerrier
+  - Tacticien
+  - Vétéran
+  - Course
+spells:
+  - Régénération protocolaire
+  - Surcharge plasma
+  - Analyse tactique
+  - Bouclier renforcé
+gameplay_guide: |
+  BOSS FIGHT - Aceras Commander
+
+  Elite Aceras commander with war exoskeleton, integrated energy weapons and arcanotechnological capabilities.
+
+  COMBAT PHASES:
+  - Phase 1 (180-90 HP): Ranged combat with plasma cannon, tactical mobility, guards protect flanks
+  - Phase 2 (90-50 HP): Mixed combat, alternates shooting and melee, becomes more aggressive
+  - Phase 3 (<50 HP): Full melee, double attacks (Warrior), desperate combat - VERY DANGEROUS
+
+  ARCANOTECHNOLOGICAL ABILITIES:
+  The commander possesses 4 enhancement spells that reinforce combat capabilities:
+  - Protocol Regeneration: Heals 25 HP instantly (Flux: 8)
+  - Plasma Overcharge: +3d6 RRAD on next ranged attack (Flux: 10)
+  - Tactical Analysis: Reveals enemy weaknesses, grants Advantage to allies (Flux: 6)
+  - Reinforced Shield: +5 to all resistances for 3 turns (Flux: 12)
+
+  ATTACKS:
+  - Plasma cannon: 3d8+4 RRAD, medium range, 2-turn recharge
+  - Energy blades: 2d8+5 / 1d8+2 RMEC (main + off-hand), melee (x2 with Warrior)
+
+  This is a boss-level adversary (~500 total points with abilities). Recommended group: 3-5 players ~220-240 points each.

@@ -1,0 +1,17 @@
+name: Energy blades
+category: Melee weapon
+subcategory: 1-handed
+type: twin blades
+cost: 2800 credits
+prerequisites:
+  affinity: A. CAC 8
+stats:
+  damage: 2d8+5
+  off_hand_damage: 1d8+2
+  attack_type: quick attack (DEX) or heavy attack (STR)
+  defense_type: parry (STR) or dodge (DEX)
+special_effects:
+  - Pair of energy blades
+  - Double attack with Warrior skill
+  - RMEC damage type (kinetic)
+description: Pair of high-frequency blades used by elite Aceras commanders. Extremely lethal in close combat.

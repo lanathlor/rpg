@@ -1,0 +1,18 @@
+name: Garde du corps
+type: Protecteur professionnel
+faction: Variable
+alignement: variable
+description: Professionnel de la protection personnelle. Formation militaire ou policière approfondie, discipliné, loyal. Prêt à sacrifier sa vie pour protéger son employeur. Reste calme sous pression et évalue constamment les menaces.
+equipment:
+  weapons:
+    - Fusil mitrailleur
+  armor:
+    - Armure de plate légère
+  consumables:
+    - name: Kit de soins
+      quantity: 1
+skills:
+  - Tacticien
+  - Protecteur
+spells: []
+gameplay_guide: "Garde du corps professionnel. Priorité absolue: protéger son employeur. Se place toujours entre la menace et sa cible. Utilise couverture intelligemment et couvre les retraites. Combat discipliné et coordonné. Haute Perception pour détecter les dangers. Compétence Protecteur permet d'intercepter les attaques."

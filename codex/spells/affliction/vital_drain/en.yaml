@@ -1,0 +1,36 @@
+spell_series: Vital Drain
+description_base: Absorbs vital energy from the target to heal oneself.
+levels:
+  - level: "1"
+    name: Vital Drain
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[biométabolique]: 2"
+        type_requirement: "A.Type[affliction]: 2"
+        mixed_requirement: "A.École[biométabolique] + A.Type[affliction]: 6"
+    conditions:
+      intelligence_required: 16
+      flux_cost: 4
+    effects:
+      damage: 1d6
+      resistance: RINT
+      special: The caster regains half the damage dealt as HP
+      specials:
+        - The target suffers -1 to all rolls for 2 turns
+  - level: "2"
+    name: Greater Vital Drain
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[biométabolique]: 3"
+        type_requirement: "A.Type[affliction]: 3"
+        mixed_requirement: "A.École[biométabolique] + A.Type[affliction]: 9"
+    conditions:
+      intelligence_required: 18
+      flux_cost: 7
+    effects:
+      damage: 2d6
+      resistance: RINT
+      special: The caster regains all damage dealt as HP
+      specials:
+        - The target suffers -2 to all rolls for 3 turns
+        - Can target up to 2 adjacent enemies

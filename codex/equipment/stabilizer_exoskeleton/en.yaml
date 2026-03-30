@@ -1,0 +1,9 @@
+name: Stabilizer exoskeleton
+category: Armor
+subcategory: exoskeleton
+cost: 2600 credits
+prerequisites:
+  none: true
+stats:
+  conditional_bonus: +1 PRE and +3 damage if immobile for 20 seconds
+description: Sniper exoskeleton with advanced stabilization systems for precision shooting.

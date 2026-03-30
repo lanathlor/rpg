@@ -1,0 +1,9 @@
+name: Polyglot
+category: Skill
+subcategory: knowledge
+effects:
+  - type: language
+    description: Knows 6 additional languages
+  - type: special
+    description: Can understand the basics of an unknown language after 1 hour of exposure
+description: Exceptional linguistic talent. Learns languages quickly and can communicate in most situations.

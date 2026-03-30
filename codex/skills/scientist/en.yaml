@@ -1,0 +1,7 @@
+name: Scientist
+category: Skill
+subcategory: analysis
+effects:
+  - type: special
+    description: Can extract more information from an inspection roll
+description: Scientific training allowing methodical analysis of phenomena and extraction of more information.

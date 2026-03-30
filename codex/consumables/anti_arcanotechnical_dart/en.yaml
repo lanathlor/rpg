@@ -1,0 +1,10 @@
+name: Anti-arcanotechnical dart
+category: Consumable
+subcategory: tactical
+cost: 400 credits
+effect:
+  spell_block: Prevents a target from casting spells
+  exception: Except attack enhancement and weapon attack
+  duration: 2 turns
+  usage: attack action
+description: Specialized dart containing arcanotechnical inhibitors to temporarily neutralize spellcasters.

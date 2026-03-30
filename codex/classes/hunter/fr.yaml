@@ -1,0 +1,22 @@
+name: Chasseur
+type: Tireur d'élite
+description: Spécialistes impitoyables de la chasse aux Arcanotechniciens, les chasseurs forment l'élite anti-arcanotechnique de l'Empire. Entraînés à reconnaître les signes subtils de l'arcanotechnie et à exploiter les faiblesses des lanceurs de sorts, ils maîtrisent un arsenal dévastateur conçu spécifiquement pour percer les défenses quantiques. Leur fusil à pompe surchargé et leurs munitions spéciales peuvent réduire en cendres le Arcanotechnicien le plus puissant avant même qu'il n'ait le temps d'incanter. Maîtres de la mobilité tactique et du positionnement, ils frappent vite et fort avant de disparaître dans l'ombre, laissant derrière eux des adversaires déconcertés et terrifiés.
+equipment:
+  weapons:
+    - Fusil à pompe surchargé
+  armor:
+    - Exosquelette de traque
+  consumables:
+    - name: Kit de soins
+      quantity: 1
+    - name: Fléchette anti-arcanotechnique
+      quantity: 1
+skills:
+  - Armure d'arcanotechnie
+  - Vue des quantiques
+spells:
+  - Cartouche de shrapnel augmentée
+  - Plombs à haute vélocité
+  - Tir à la tête
+  - Roulade
+gameplay_guide: Le chasseur est une classe capable de fournir d'énormes dégâts en peu de temps. La combinaison de « Cartouche de shrapnel augmentée » et « Plombs à haute vélocité » est la solution à bien des problèmes. Sa survie dépend de sa capacité à se replacer correctement sur le terrain.

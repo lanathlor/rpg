@@ -1,0 +1,31 @@
+image: images/classes/spectre.png
+base_stats:
+  health: 40
+  speed: 5
+innate_resistances:
+  RMEC: 0
+  RRAD: 0
+  RINT: 0
+flux_system:
+  reserve: 8
+  per_turn: 3
+  recovery: 1
+affinities:
+  distance: 5
+  melee: 4
+  sniper: 2
+  schools:
+    balistique: 5
+    electricite: 2
+    martial: 2
+  types:
+    arme: 6
+    amelioration: 2
+stats:
+  force: 8
+  dexterite: 14
+  constitution: 9
+  intelligence: 10
+  perception: 11
+  precision: 14
+  charisme: 10

@@ -1,0 +1,7 @@
+name: Course
+category: Compétence
+subcategory: mobilité
+effects:
+  - type: movement
+    description: Peut se déplacer deux fois en un tour
+description: Entraînement physique permettant de couvrir de grandes distances rapidement, même en situation de combat.

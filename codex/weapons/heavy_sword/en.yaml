@@ -1,0 +1,12 @@
+name: Heavy sword
+category: Melee weapon
+subcategory: 2-handed
+type: swords
+cost: 800 credits
+prerequisites:
+  affinity: A. CAC 6
+stats:
+  damage: 1d12
+  attack_type: heavy attack (STR)
+  defense_type: parry (STR)
+description: Large two-handed sword requiring great mastery. High damage but difficult handling reserved for experts.

@@ -1,0 +1,7 @@
+name: Toxic Resistance
+category: Skill
+subcategory: defense
+effects:
+  - type: passive
+    description: Complete immunity to poisons, diseases, and toxins
+description: Biological constitution or arcanotechnological modification conferring total immunity to toxic substances, venoms, poisons, and diseases. The character's system automatically neutralizes or absorbs these threats.

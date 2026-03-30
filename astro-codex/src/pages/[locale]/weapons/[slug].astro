@@ -1,0 +1,30 @@
+---
+import MainLayout from '@/layouts/MainLayout.astro';
+import { setLang, t, type Lang } from '@/lib/i18n';
+import WeaponDetail from '@/components/detail/WeaponDetail.astro';
+import { getWeapons } from '@/lib/dataUtils';
+
+export async function getStaticPaths() {
+  const locales = ['en', 'fr'] as const;
+  const results = await Promise.all(locales.map(async locale => {
+    const weapons = await getWeapons(locale);
+    return weapons.map(w => ({
+      params: { locale, slug: w.slug },
+      props: { weapon: w.data },
+    }));
+  }));
+  return results.flat();
+}
+
+const { weapon } = Astro.props;
+const locale = Astro.params.locale as Lang;
+setLang(locale);
+const base = import.meta.env.BASE_URL + locale + '/';
+---
+
+<MainLayout title={`${weapon.name} - Armes - Pyrrhic Stars`} description={weapon.description}>
+  <div>
+    <a href={`${base}weapons/`} class="text-sm text-muted-foreground hover:text-foreground mb-4 inline-block">{t('page.back.weapons')}</a>
+    <WeaponDetail weapon={weapon} />
+  </div>
+</MainLayout>

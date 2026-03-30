@@ -1,0 +1,37 @@
+name: Heavy Defensive Turret
+type: Defensive Installation / Heavy System
+faction: Aceras
+alignement: hostile
+description: Heavy defensive turret equipped with a multi-barrel rotary cannon. Fortified installation capable of saturating an entire zone with projectiles. Critical point defense.
+equipment:
+  weapons:
+    - Canon rotatif lourd
+  armor: []
+  consumables: []
+skills: []
+spells: []
+gameplay_guide: |
+  Fortified heavy turret with devastating rotary cannon. Extreme area control.
+
+  OFFENSIVE CAPABILITIES:
+  - Rotary cannon: 3d6 RMEC with suppressive fire (90-degree arc)
+  - Massive rate of fire: -2 DS for all targets in the zone
+  - Can engage multiple targets simultaneously
+  - Overheats after 3 turns of continuous fire (1 turn cooldown)
+
+  DEFENSES:
+  - Integrated armor: RMEC 4, RRAD 2
+  - Reinforced structure: 100 HP
+  - Immobile but well protected
+
+  WEAKNESSES:
+  - Total immobility (speed 0)
+  - Hackable with high difficulty (Intelligence 18)
+  - Weak points: rear generator, cooling system, sensors
+  - Overheating is exploitable (force continuous fire then attack during cooldown)
+
+  TACTICS:
+  - Approach from blind spots (behind, if accessible)
+  - Heavy explosives on generator
+  - Alteration spells on cooling systems
+  - Neutralization via overload (force overheating)

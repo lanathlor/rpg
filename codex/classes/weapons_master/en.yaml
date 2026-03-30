@@ -1,0 +1,20 @@
+name: Weapons Master
+type: Fighter
+description: Weapons Masters embody the spearhead of the imperial army. Being one of the oldest martial schools of humanity, Weapons Masters have proven their worth on countless battlefields and have entered legend. Often forming the front line, few Weapons Masters get the chance to be called veterans. But those who do are, rightfully, feared by all and seen as the arm of Blanc within the army.
+equipment:
+  weapons:
+    - Heavy sword
+  armor:
+    - Heavy plate armor
+  consumables:
+    - name: Healing kit
+      quantity: 2
+skills:
+  - Warrior
+  - Tactician
+spells:
+  - Force strike
+  - Cleave
+  - Precise strike
+  - Charge
+gameplay_guide: "The Weapons Master is a one-track class: weak outside of combat, they shine in the thick of the melee. But you should not rush the first enemy in sight. You will be the safety net in case of an unpleasant surprise."

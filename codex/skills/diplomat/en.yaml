@@ -1,0 +1,9 @@
+name: Diplomat
+category: Skill
+subcategory: social
+effects:
+  - type: social
+    description: +4 to diplomacy and negotiation rolls
+  - type: special
+    description: Can improve a hostile NPC's attitude to neutral with 10 minutes of conversation
+description: Exceptional diplomatic talent. Capable of defusing conflicts and negotiating even with enemies.

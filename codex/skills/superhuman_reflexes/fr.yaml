@@ -1,0 +1,9 @@
+name: Réflexes surhumains
+category: Compétence
+subcategory: physique
+effects:
+  - type: initiative
+    description: +5 à l'initiative
+  - type: defense
+    description: +2 au Score de Défense basé sur DEX
+description: Temps de réaction bien au-delà des limites humaines normales. Peut réagir instantanément aux menaces.

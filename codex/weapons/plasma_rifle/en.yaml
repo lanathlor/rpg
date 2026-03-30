@@ -1,0 +1,17 @@
+name: Plasma rifle
+category: Ranged weapon
+subcategory: two-handed weapon
+type: energy rifle
+cost: 2400 credits
+prerequisites:
+  affinity: A. dist 6
+stats:
+  damage: 2d6+3
+  attack_type: ranged shot (PRE)
+  defense_type: dodge (DEX)
+special_effects:
+  - Ionized plasma projectiles
+  - 1-turn recharge between bursts
+  - RRAD damage type (thermal)
+  - Can be mounted on combat drone
+description: Standard Aceras army plasma rifle. Fires high-temperature ionized plasma projectiles. Perfect balance between firepower and maneuverability. Frequently mounted on heavy combat drones.

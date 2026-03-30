@@ -1,0 +1,20 @@
+spell_series: Intervention
+description_base: Intervient rapidement pour protéger un allié en danger.
+levels:
+  - level: "1"
+    name: Intervention
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[martial]: 2"
+        type_requirement: "A.Type[protection]: 2"
+        mixed_requirement: "A.École[martial] + A.Type[protection]: 6"
+      competences:
+        - Gardien
+    conditions:
+      special: aucune
+    recharge_time: 30 sec
+    effects:
+      protection: Prend les dégâts à la place d'un allié
+      movement: Déplacement instantané vers l'allié
+      special: Réaction défensive
+    duration: instantané

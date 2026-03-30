@@ -1,0 +1,11 @@
+name: Combat exoskeleton
+category: Armor
+subcategory: exoskeleton
+cost: 2500 credits
+prerequisites:
+  stat: STR 12
+stats:
+  RMEC: "+3"
+  RRAD: "+1"
+  stat_modifier: "-1 DEX"
+description: "This cutting-edge mechanical armor combines reinforced ballistic plates and assisted servomotors to transform its wearer into a walking fortress. Offers excellent mechanical protection (RMEC) and limited radiative protection (RRAD). The integrated hydraulic systems partially compensate for the equipment's considerable weight, but at the cost of reduced maneuverability. Designed for frontal assaults and defensive positions, this exoskeleton embodies the imperial military philosophy: power before subtlety."

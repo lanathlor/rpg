@@ -1,0 +1,17 @@
+name: Aceras Soldier
+type: Soldier
+faction: Aceras
+alignement: hostile
+description: An Aceras infantry soldier, trained in urban combat tactics and rapid assault operations.
+equipment:
+  weapons:
+    - Fusil à pompe surchargé
+  armor:
+    - Armure de plate légère
+  consumables:
+    - name: Kit de soins
+      quantity: 1
+skills:
+  - Tacticien
+spells: []
+gameplay_guide: Aceras infantry soldier specializing in rapid assaults. Equipped with a shotgun for close-range combat and light plate armor. Favors aggressive and coordinated small-group tactics. More mobile than Imperial guards.

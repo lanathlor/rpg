@@ -1,0 +1,31 @@
+image: images/classes/tutelaire.png
+base_stats:
+  health: 75
+  speed: 4
+innate_resistances:
+  RMEC: 0
+  RRAD: 0
+  RINT: 0
+flux_system:
+  reserve: 20
+  per_turn: 5
+  recovery: 2
+affinities:
+  distance: 0
+  melee: 6
+  schools:
+    lumiere: 3
+    martial: 3
+  types:
+    amelioration: 4
+    arme: 3
+    alteration: 2
+    protection: 3
+stats:
+  force: 14
+  dexterite: 10
+  constitution: 15
+  intelligence: 12
+  perception: 9
+  precision: 10
+  charisme: 13

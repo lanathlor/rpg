@@ -1,9 +1,0 @@
-name: "Grenade"
-category: "Consommable"
-subcategory: "explosive"
-cost: "200 crédits"
-effect:
-  damage: "1d12"
-  area: "4 mètres de rayon"
-  usage: "action d'attaque"
-description: "Grenade explosive standard causant des dégâts importants dans une zone d'effet."

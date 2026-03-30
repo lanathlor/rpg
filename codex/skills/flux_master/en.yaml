@@ -1,0 +1,9 @@
+name: Flux Master
+category: Skill
+subcategory: arcanotechnological
+effects:
+  - type: flux
+    description: +20 to maximum Flux reserve
+  - type: special
+    description: Flux recovery +2 per additional turn
+description: Exceptional mastery of Flux manipulation. Vastly increased reserves and accelerated recovery.

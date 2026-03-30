@@ -1,0 +1,9 @@
+name: Electromagnetic Field
+category: Skill
+subcategory: defensive
+effects:
+  - type: defense
+    description: +2 RMEC against metallic projectiles
+  - type: special
+    description: Can deflect or slow ferrous projectiles and metallic weapons
+description: Ability to generate a defensive electromagnetic field that disrupts and deflects metallic projectiles and ferrous weapons. Effective against bullets, metallic blades, and ferrous debris, but does not affect non-metallic projectiles or energy.

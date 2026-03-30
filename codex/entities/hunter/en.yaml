@@ -1,0 +1,18 @@
+name: Hunter
+type: Combatant / Versatile Soldier
+faction: Variable
+alignement: variable
+description: Versatile and tactical combatant. Complete military training with specialization in ranged weapons and tactical combat. Archetype of the balanced professional soldier between mobility and firepower.
+equipment:
+  weapons:
+    - Fusil d'assaut
+  armor:
+    - Armure de plate légère
+  consumables:
+    - name: Kit de soins
+      quantity: 1
+skills:
+  - Tacticien
+  - Vétéran
+spells: []
+gameplay_guide: Versatile hunter with good balance between ranged and melee combat. High Perception and Precision for effective ranged combat. Tactician and Veteran skills provide tactical expertise. Uses cover intelligently and coordinates with allies. Represents an experienced professional soldier.

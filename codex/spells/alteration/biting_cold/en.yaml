@@ -1,0 +1,16 @@
+spell_series: Biting Cold
+description_base: Intensely cools a target, penetrating its defenses to plunge it into a supernatural cold that slows its movements.
+levels:
+  - level: "1"
+    name: Biting Cold
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[givre]: 3"
+        type_requirement: "A.Type[alteration]: 3"
+        mixed_requirement: "A.École[givre] + A.Type[alteration]: 9"
+    conditions:
+      intelligence_required: 14
+      flux_cost: 6
+    effects:
+      special: Inflicts 4x 'Frostbite' on the target
+      resistance: RINT

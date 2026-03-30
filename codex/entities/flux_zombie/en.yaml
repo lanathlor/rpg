@@ -1,0 +1,12 @@
+name: Flux Zombie
+type: Animated Corpse / Controlled Cadaver
+faction: Hostile
+alignement: hostile
+description: Corpse animated by the influence of a powerful Flux crystal. Slow but relentless, resistant to internal damage but vulnerable to radiant damage. Ignores the living and seeks to extinguish sources of electromagnetic interference.
+equipment:
+  weapons: []
+  armor: []
+  consumables: []
+skills: []
+spells: []
+gameplay_guide: Flux-animated zombie. Ignores players and heads toward the communication antenna to shut it down. If blocked, attacks the obstacle. Slow (Speed 2) but numerous. High internal resistance (RINT +6) as already dead. Vulnerable to area damage and radiant damage. Melee combat only (1d6 RMEC).

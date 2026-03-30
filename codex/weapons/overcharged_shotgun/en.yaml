@@ -1,0 +1,17 @@
+name: Overcharged shotgun
+category: Ranged weapon
+subcategory: two-handed weapon
+type: shotgun
+cost: 1800 credits
+prerequisites:
+  affinity: A. fusil à pompe 2
+stats:
+  damage: 4d4 (or fewer dice)
+  attack_type: ranged attack (PRE)
+  defense_type: dodge (DEX)
+  special: multiple attack
+special_effects:
+  - You are pushed back one meter for each die rolled in the opposite direction from the target
+  - Also applies to weapon attack spells
+  - Attack score divided by 2
+description: Modified shotgun for maximum damage. The significant recoil requires tactical positioning.

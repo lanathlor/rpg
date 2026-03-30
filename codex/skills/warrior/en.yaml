@@ -1,0 +1,7 @@
+name: Warrior
+category: Skill
+subcategory: combat
+effects:
+  - type: combat
+    description: Can attack 2 times in 1 turn
+description: Advanced martial mastery allowing multiple attacks to be chained in a single combat turn.

@@ -1,0 +1,47 @@
+spell_series: Lightning Blade
+description_base: Envelops the weapon in electricity for the next attack.
+levels:
+  - level: "1"
+    name: Lightning Blade
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[électricité]: 2"
+        type_requirement: "A.Type[arme]: 2"
+        mixed_requirement: "A.École[électricité] + A.Type[arme]: 6"
+    conditions:
+      special: none
+      flux_cost: 5
+    effects:
+      damage: 1d6+2 + 1d4 electricity
+      resistance: RMEC + RRAD
+      special: Additional electricity damage (blade = RMEC, electricity = RRAD)
+  - level: "2"
+    name: Lightning Blade II
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[électricité]: 8"
+        type_requirement: "A.Type[arme]: 8"
+        mixed_requirement: "A.École[électricité] + A.Type[arme]: 24"
+    conditions:
+      intelligence_required: 17
+      flux_cost: 10
+    effects:
+      damage: 2d8+6 + 3d6 electricity
+      resistance: RMEC + RRAD
+      special: The electricity can chain to 1 nearby target (2d6 electricity RRAD)
+    description: The weapon crackles with intense electric energy, each strike releasing thunderous arcs.
+  - level: "3"
+    name: Lightning Blade III
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[électricité]: 15"
+        type_requirement: "A.Type[arme]: 15"
+        mixed_requirement: "A.École[électricité] + A.Type[arme]: 45"
+    conditions:
+      intelligence_required: 20
+      flux_cost: 15
+    effects:
+      damage: 3d10+10 + 5d8 electricity
+      resistance: RMEC + RRAD
+      special: The electricity chains to up to 3 nearby targets (3d8 electricity RRAD each), paralyzes (1 turn)
+    description: The weapon becomes a conduit for lightning itself. Each blow unleashes a devastating electric storm.

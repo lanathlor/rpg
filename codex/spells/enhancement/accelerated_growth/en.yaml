@@ -1,0 +1,24 @@
+spell_series: Accelerated Growth
+description_base: Drastically accelerates plant growth, allowing damaged roots or plants to regenerate in seconds.
+levels:
+  - level: "1"
+    name: Accelerated Growth
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[bioarcanotechnique]: 3"
+        type_requirement: "A.Type[amelioration]: 2"
+        mixed_requirement: "A.École[bioarcanotechnique] + A.Type[amelioration]: 6"
+    conditions:
+      intelligence_required: 12
+      flux_cost: 6
+    effects:
+      healing: Regenerates damaged plant structures
+      special: Restores roots, vines, or plant barriers to full power
+      specials:
+        - Can repair damage to plant terrain
+        - Restores organic defenses (Root Wall, Living Armor, etc.)
+        - Affected plants regrow instantly
+    timing:
+      casting_time: 1 action
+      duration: Instant
+      range: Touch or 5m

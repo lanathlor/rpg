@@ -1,0 +1,9 @@
+name: Lucky
+category: Skill
+subcategory: special
+effects:
+  - type: luck
+    description: Can reroll a failed die roll (3/day, must keep the second result)
+  - type: special
+    description: Critical failures become normal failures
+description: Extraordinary luck that defies probability. Events seem to conspire in the character's favor.

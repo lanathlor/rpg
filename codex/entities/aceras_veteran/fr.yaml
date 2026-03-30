@@ -1,0 +1,18 @@
+name: Veteran Aceras
+type: Vétéran
+faction: Aceras
+alignement: hostile
+description: Vétéran de guerre Aceras, combattant expérimenté et tacticien compétent. Équipé d'armure lourde et d'armement avancé.
+equipment:
+  weapons:
+    - Fusil mitrailleur
+  armor:
+    - Armure de plate lourde
+  consumables:
+    - name: Kit de soins
+      quantity: 2
+skills:
+  - Tacticien
+  - Vétéran
+spells: []
+gameplay_guide: Veteran Aceras avec expérience au combat et capacités tactiques. Bien protégé par une armure de plate lourde, équipé d'un fusil mitrailleur polyvalent. Combattant discipliné qui exploite les faiblesses ennemies et coordonne avec son unité. Efficace au combat à moyenne portée.

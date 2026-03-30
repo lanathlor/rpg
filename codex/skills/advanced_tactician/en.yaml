@@ -1,0 +1,11 @@
+name: Advanced Tactician
+category: Skill
+subcategory: combat
+prerequisites:
+  skill: Tacticien
+effects:
+  - type: tactical
+    description: Can analyze the battlefield to reveal 3 enemy weak points per combat
+  - type: special
+    description: Allies can reroll a failed attack roll (1/ally/combat)
+description: Superior tactical mastery. Instantly analyzes enemy weaknesses and orchestrates complex strategies in real time.

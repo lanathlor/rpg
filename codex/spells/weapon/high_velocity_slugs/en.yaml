@@ -1,0 +1,17 @@
+spell_series: High-Velocity Slugs
+description_base: Fires multiple projectiles at high speed.
+levels:
+  - level: "1"
+    name: High-Velocity Slugs
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[balistique]: 3"
+        type_requirement: "A.Type[arme]: 3"
+        mixed_requirement: "A.École[balistique] + A.Type[arme]: 9"
+    conditions:
+      special: none
+    recharge_time: 20 sec
+    effects:
+      damage: +3d4 to weapon damage
+      resistance: RMEC
+      special: Multiple projectiles

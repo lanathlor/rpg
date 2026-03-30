@@ -1,0 +1,28 @@
+image: images/classes/taliste.png
+base_stats:
+  health: 35
+  speed: 8
+innate_resistances:
+  RMEC: 0
+  RRAD: 0
+  RINT: 0
+flux_system:
+  reserve: 20
+  per_turn: 5
+  recovery: 4
+affinities:
+  distance: 2
+  melee: 0
+  schools:
+    bioarcanotechnique: 2
+    martial: 2
+  types:
+    amelioration: 3
+stats:
+  force: 6
+  dexterite: 8
+  constitution: 9
+  intelligence: 14
+  perception: 18
+  precision: 10
+  charisme: 12

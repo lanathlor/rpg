@@ -1,0 +1,31 @@
+spell_series: Vol de données
+description_base: Vol les données de la cible.
+levels:
+  - level: "1"
+    name: Vol de données
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[illusion]: 2"
+        type_requirement: "A.Type[alteration]: 2"
+        mixed_requirement: "A.École[illusion] + A.Type[alteration]: 6"
+      competences:
+        - Hackeur
+    conditions:
+      perception_required: 15
+      flux_cost: 4
+    effects:
+      information: Récupère des informations partielles sur la cible. Un meilleur jet augmente le nombre d'informations. Des jets sur la même cible révèlent de nouvelles informations.
+  - level: "2"
+    name: Vol de données II
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[illusion]: 3"
+        type_requirement: "A.Type[alteration]: 3"
+        mixed_requirement: "A.École[illusion] + A.Type[alteration]: 9"
+      competences:
+        - Hackeur
+    conditions:
+      perception_required: 15
+      flux_cost: 7
+    effects:
+      information: Récupère des informations partielles sur la cible. Un meilleur jet augmente le nombre d'informations. Des jets sur la même cible révèlent de nouvelles informations. Ce sort est plus efficace que « Vol de données ».

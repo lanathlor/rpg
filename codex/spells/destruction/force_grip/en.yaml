@@ -1,0 +1,38 @@
+spell_series: Force Grip
+description_base: Generates an invisible kinesthetic force to manipulate or crush.
+levels:
+  - level: "1"
+    name: Force Grip
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[kinesthésique]: 2"
+        type_requirement: "A.Type[destruction]: 2"
+        mixed_requirement: "A.École[kinesthésique] + A.Type[destruction]: 6"
+    conditions:
+      intelligence_required: 16
+      flux_cost: 4
+    effects:
+      resistance: RMEC
+      specials:
+        - Immobilizes a target for 2 turns
+        - Inflicts 1d4 compression damage each turn
+        - Can manipulate objects at a distance (up to 50kg)
+    duration: 2 turns
+  - level: "2"
+    name: Destructive Force Grip
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[kinesthésique]: 3"
+        type_requirement: "A.Type[destruction]: 3"
+        mixed_requirement: "A.École[kinesthésique] + A.Type[destruction]: 9"
+    conditions:
+      intelligence_required: 18
+      flux_cost: 7
+    effects:
+      resistance: RMEC
+      specials:
+        - Immobilizes up to 2 targets for 3 turns
+        - Inflicts 2d4 compression damage each turn
+        - Can lift and throw objects up to 200kg
+        - Can break light armor (reduces protection by 2 points)
+    duration: 3 turns

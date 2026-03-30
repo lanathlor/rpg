@@ -1,0 +1,22 @@
+name: OPAL-XS7 Prototype Exoskeleton
+category: Armor
+subcategory: Heavy combat exoskeleton
+cost: 2000000 credits
+description: The pinnacle of military arcanotechnical engineering. This 7th-generation tactical exoskeleton integrates Flux-amplified servomotors, multi-layered composite armor, a neural targeting system, miniaturized arcanotechnical reactors, and affinity amplifiers. Only a few prototypes exist in the entire Empire. Equivalent in value to several transport ships. Reserved exclusively for Opals, Elite-rank units capable of single-handedly influencing the course of a battle. The exoskeleton amplifies not only the operator's physical capabilities but also their arcanotechnical abilities, transforming an elite soldier into a strategic strike force on their own.
+stats:
+  RMEC: "+25"
+  RRAD: "+20"
+  RINT: "+15"
+  weight: 250 kg (compensated by servomotors)
+special_properties:
+  - "Amplified servomotors: Allows wearing the exoskeleton without mobility penalty"
+  - "Integrated neural targeting: Direct interface with ranged weapons"
+  - "Energy shield: Can activate a RRAD +5 shield for 3 turns (1/combat)"
+  - "Flux recycling: Flux regeneration +2 per turn"
+  - "Augmented vision: Infrared, thermal, arcanotechnical signature detection"
+  - "Life support system: Hostile environments, vacuum of space (2h autonomy)"
+  - "Jump amplifiers: Can jump up to 6m vertically"
+  - "Optical camouflage: Becomes invisible for 1 turn (3/day, 10 Flux)"
+prerequisites:
+  stat: STR 10, CON 12, INT 14
+notes: Ultra-rare equipment. Requires daily maintenance (500 credits/day). Each unit costs more than a small spaceship. Reserved for elite agents on critical missions. Intense arcanotechnical signature (easily detectable). Prohibited for civilian sale.

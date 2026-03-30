@@ -1,0 +1,9 @@
+name: Hacker
+category: Skill
+subcategory: technical
+effects:
+  - type: technique
+    description: Allows using technologies with a greater chance of success
+  - type: technique
+    description: Allows repairing light electrical damage
+description: Expertise in computer and electronic systems enabling hacking and technology manipulation.

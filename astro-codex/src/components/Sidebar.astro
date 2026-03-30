@@ -18,26 +18,26 @@ function isActive(href: string): boolean {
 
 const navigationItems = [
   { name: t('nav.home'), href: '/', description: '' },
-  { name: t('nav.rules'), href: '/regles/', description: t('nav.rulesDesc'), section: 'regles' },
-  { name: t('nav.history'), href: '/histoire/', description: t('nav.historyDesc'), section: 'histoire' },
+  { name: t('nav.rules'), href: '/rules/', description: t('nav.rulesDesc'), section: 'rules' },
+  { name: t('nav.history'), href: '/history/', description: t('nav.historyDesc'), section: 'history' },
   { name: t('nav.scenarios'), href: '/scenarios/', description: t('nav.scenariosDesc') },
-  { name: t('nav.spells'), href: '/sorts/', description: t('nav.spellsDesc') },
-  { name: t('nav.weapons'), href: '/armes/', description: t('nav.weaponsDesc') },
-  { name: t('nav.equipment'), href: '/equipements/', description: t('nav.equipmentDesc') },
-  { name: t('nav.skills'), href: '/competences/', description: t('nav.skillsDesc') },
-  { name: t('nav.consumables'), href: '/consommables/', description: t('nav.consumablesDesc') },
+  { name: t('nav.spells'), href: '/spells/', description: t('nav.spellsDesc') },
+  { name: t('nav.weapons'), href: '/weapons/', description: t('nav.weaponsDesc') },
+  { name: t('nav.equipment'), href: '/equipment/', description: t('nav.equipmentDesc') },
+  { name: t('nav.skills'), href: '/skills/', description: t('nav.skillsDesc') },
+  { name: t('nav.consumables'), href: '/consumables/', description: t('nav.consumablesDesc') },
   { name: t('nav.classes'), href: '/classes/', description: t('nav.classesDesc') },
-  { name: t('nav.entities'), href: '/entites/', description: t('nav.entitiesDesc') },
-  { name: t('nav.characters'), href: '/personnages/', description: t('nav.charactersDesc') },
+  { name: t('nav.entities'), href: '/entities/', description: t('nav.entitiesDesc') },
+  { name: t('nav.characters'), href: '/characters/', description: t('nav.charactersDesc') },
   { name: t('nav.search'), href: '/search/', description: t('nav.searchDesc') },
 ];
 
 // Detect sections and load trees
-const isReglesSection = pathname.startsWith(base + 'regles');
-const isHistoireSection = pathname.startsWith(base + 'histoire');
+const isRulesSection = pathname.startsWith(base + 'rules');
+const isHistorySection = pathname.startsWith(base + 'history');
 
-function extractSlug(section: string): string {
-  const prefix = base + section + '/';
+function extractSlug(sectionName: string): string {
+  const prefix = base + sectionName + '/';
   return pathname.replace(prefix, '').replace(/\/$/, '') || '';
 }
 
@@ -48,14 +48,14 @@ let historyActivePath = '';
 let rulesAncestors: string[] = [];
 let historyAncestors: string[] = [];
 
-if (isReglesSection) {
+if (isRulesSection) {
   rulesTree = await getRulesTree();
-  rulesActivePath = extractSlug('regles');
+  rulesActivePath = extractSlug('rules');
   rulesAncestors = findAncestors(rulesTree, rulesActivePath);
 }
-if (isHistoireSection) {
+if (isHistorySection) {
   historyTree = await getHistoryTree();
-  historyActivePath = extractSlug('histoire');
+  historyActivePath = extractSlug('history');
   historyAncestors = findAncestors(historyTree, historyActivePath);
 }
 ---
@@ -85,22 +85,22 @@ if (isHistoireSection) {
                 )}
               </div>
             </a>
-            {item.section === 'regles' && isReglesSection && rulesTree && (
+            {item.section === 'rules' && isRulesSection && rulesTree && (
               <div class="mt-1 mb-2 ml-2">
                 <SidebarTree
                   nodes={rulesTree}
-                  section="regles"
+                  section="rules"
                   activePath={rulesActivePath}
                   ancestorPaths={rulesAncestors}
                   base={base}
                 />
               </div>
             )}
-            {item.section === 'histoire' && isHistoireSection && historyTree && (
+            {item.section === 'history' && isHistorySection && historyTree && (
               <div class="mt-1 mb-2 ml-2">
                 <SidebarTree
                   nodes={historyTree}
-                  section="histoire"
+                  section="history"
                   activePath={historyActivePath}
                   ancestorPaths={historyAncestors}
                   base={base}

@@ -1,0 +1,21 @@
+name: Combat Arcanotechnician
+type: Artillery
+description: During the war against the Aceras, it became clear that guerrilla warfare was the key to success. Arcanotechnicians, powerful in large-scale battles, had to take on a new role. Combat Arcanotechnicians are the answer. Effective against groups of infantry soldiers, Combat Arcanotechnicians are able to move fast and shift the battlefield to strategic points. Their ferocity and independence earned them a unique place within the army.
+equipment:
+  weapons:
+    - Light sword
+  armor:
+    - Combat exoskeleton
+  consumables:
+    - name: Healing kit
+      quantity: 2
+skills:
+  - Electromagnetic field
+  - Quantum sight
+spells:
+  - Lightning
+  - Static charge
+  - Lightning blade
+  - Zap
+  - Magnetization
+gameplay_guide: The Combat Arcanotechnician is designed to quickly eliminate multiple fragile units. However, due to their fragility, they can be at risk during longer fights. You will then need to be patient and let your more resilient allies take the front line.

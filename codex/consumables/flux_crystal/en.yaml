@@ -1,0 +1,9 @@
+name: Flux Crystal
+category: Consumable
+subcategory: arcanotechnical
+cost: 800 credits
+effect:
+  flux_restoration: Restores 12 Flux
+  recharge_reduction: Reduces up to 60 seconds of cooldown on a spell of your choice
+  usage: simple action
+description: This synthetic gem of electric blue regularly pulses with concentrated quantum energy. Created in imperial laboratories through crystallization of pure arcanotechnical Flux, it stores an energy reserve usable to short-circuit the constraints normally imposed by spell invocation. Its use immediately restores the caster's Flux reserves and accelerates the recovery of a spell on cooldown.

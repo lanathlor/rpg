@@ -1,0 +1,17 @@
+name: Heavy rotary cannon
+category: Ranged weapon
+subcategory: mounted weapon
+type: rotary cannon
+cost: 2800 credits
+prerequisites:
+  affinity: A. dist 7
+stats:
+  damage: 3d6
+  attack_type: ranged shot (PRE)
+  defense_type: dodge (DEX)
+special_effects:
+  - "Suppressive fire: can attack multiple targets in a 90° arc"
+  - "Massive rate of fire: -2 to defense score of targets in the suppressed zone"
+  - RMEC damage type (kinetic)
+  - Overheats after 3 turns of continuous fire
+description: Multi-barrel rotary cannon mounted on heavy defensive turrets. Capable of saturating an entire zone with projectiles, suppressing enemy movement. Liquid cooling system required to prevent overheating.

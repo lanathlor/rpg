@@ -1,0 +1,28 @@
+image: images/classes/maitre_darmes.png
+base_stats:
+  health: 65
+  speed: 5
+innate_resistances:
+  RMEC: 0
+  RRAD: 0
+  RINT: 0
+flux_system:
+  reserve: 8
+  per_turn: 3
+  recovery: 1
+affinities:
+  distance: 0
+  melee: 8
+  schools:
+    martial: 4
+  types:
+    arme: 5
+    amelioration: 2
+stats:
+  force: 16
+  dexterite: 12
+  constitution: 14
+  intelligence: 10
+  perception: 8
+  precision: 10
+  charisme: 12

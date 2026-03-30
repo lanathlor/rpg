@@ -1,0 +1,9 @@
+name: Prescience
+category: Skill
+subcategory: mental
+effects:
+  - type: defense
+    description: +3 to Defense Score against all attacks
+  - type: special
+    description: Can reroll a failed saving throw (3/day)
+description: Superhuman ability to anticipate enemy actions. Combination of tactical analysis, intuition, and superhuman reflexes.

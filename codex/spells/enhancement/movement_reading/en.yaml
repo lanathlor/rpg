@@ -1,0 +1,18 @@
+spell_series: Movement Reading
+description_base: Thanks to years spent on the battlefield, reading a person's movements is an easy task.
+levels:
+  - level: "1"
+    name: Movement Reading
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[martial]: 2"
+        type_requirement: "A.Type[amelioration]: 2"
+        mixed_requirement: "A.École[martial] + A.Type[amelioration]: 6"
+      competences:
+        - Vétéran
+    conditions:
+      perception_required: 14
+    recharge_time: 30 sec
+    effects:
+      prediction: Predicts the target's action, accuracy increases with the roll
+    notes: This spell is considered a maneuver

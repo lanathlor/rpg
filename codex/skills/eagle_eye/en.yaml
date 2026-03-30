@@ -1,0 +1,7 @@
+name: Eagle Eye
+category: Skill
+subcategory: precision
+effects:
+  - type: passive
+    description: +1 PRE
+description: Exceptional visual acuity developed through long-range shooting training.

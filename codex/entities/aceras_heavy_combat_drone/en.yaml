@@ -1,0 +1,37 @@
+name: Aceras Heavy Combat Drone
+type: Military Drone
+faction: Aceras
+alignement: hostile
+description: Aceras military combat drone equipped with a plasma rifle. Autonomous mobile combat platform, well-armed.
+equipment:
+  weapons:
+    - Fusil à plasma
+  armor: []
+  consumables: []
+skills: []
+spells: []
+gameplay_guide: |
+  Military combat drone with plasma armament. Mobile and dangerous but vulnerable.
+
+  OFFENSIVE CAPABILITIES:
+  - Plasma rifle: 2d6+3 RRAD (thermal)
+  - Flight: ignores terrain, 3D mobility
+  - Good precision and perception
+
+  DEFENSES:
+  - Moderate resistances: RMEC 1, RRAD 2, RINT 3
+  - High mobility for evasion (speed 8)
+  - Flight allows rapid repositioning
+
+  DRONE TACTICS:
+  - Maintains optimal distance for plasma rifle
+  - Uses flight for superior positioning and cover
+  - Retreats if severely damaged
+
+  COUNTERMEASURES:
+  - Fragile compared to armored units (45 HP)
+  - EMP or electrical spells very effective
+  - Fast ranged weapons (rifle, submachine gun)
+  - Prioritize targeting before it repositions
+
+  Note: Moderate RINT resistance (machine, reduces biological effects)

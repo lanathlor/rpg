@@ -1,0 +1,21 @@
+spell_series: Camouflage
+description_base: The camouflage systems integrated into the exoskeleton analyze the environment and instantly adapt their pigmentation to blend perfectly into the surroundings. Combined with the user's mastery of stealth movement, this technology allows one to completely vanish from adversaries' sight, creating the illusion of a supernatural disappearance.
+levels:
+  - level: "1"
+    name: Camouflage
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[électricité]: 2"
+        type_requirement: "A.Type[amelioration]: 2"
+        mixed_requirement: "A.École[électricité] + A.Type[amelioration]: 6"
+      armure: Exosquelette
+      competences:
+        - Rôdeur
+    conditions:
+      dexterity_required: 16
+    recharge_time: 80 sec
+    effects:
+      success: you are automatically camouflaged for 3 turns
+      failure: "-1 to attack rolls against you"
+      automatic_success: if no one can see you
+    notes: This spell is considered a maneuver

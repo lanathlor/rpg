@@ -123,7 +123,7 @@ export function ArmorListIsland({ armors, base }: Props) {
         {filtered.map(armor => (
           <a
             key={armor.slug}
-            href={`${base}equipements/${armor.slug}/`}
+            href={`${base}equipment/${armor.slug}/`}
             className="block rounded-lg border bg-card text-card-foreground shadow-sm hover:shadow-lg transition-shadow cursor-pointer h-full"
           >
             <div className="flex flex-col space-y-1.5 p-6">

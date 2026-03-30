@@ -1,0 +1,18 @@
+spell_series: Biting Wind
+description_base: Projects a freezing wind over a distance of 25 meters, creating a blast of intense cold that cuts through enemy ranks.
+levels:
+  - level: "1"
+    name: Biting Wind
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[givre]: 3"
+        type_requirement: "A.Type[destruction]: 3"
+        mixed_requirement: "A.École[givre] + A.Type[destruction]: 9"
+    conditions:
+      intelligence_required: 16
+      flux_cost: 10
+    effects:
+      damage: 1d12+1d8 frost
+      resistance: RRAD
+      special: Inflicts 2x 'Frostbite' on targets hit
+      area: Linear zone of 25 meters

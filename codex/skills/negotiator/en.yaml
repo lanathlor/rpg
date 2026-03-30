@@ -1,0 +1,9 @@
+name: Negotiator
+category: Skill
+subcategory: social
+effects:
+  - type: social
+    description: +3 to bargaining rolls
+  - type: special
+    description: Reduces all purchases by 20%, increases all sales by 20%
+description: Expert in commercial negotiation. Systematically obtains the best deals in any transaction.

@@ -1,0 +1,9 @@
+name: Terrain Expert
+category: Skill
+subcategory: survival
+effects:
+  - type: special
+    description: Less hindered on complex and rough terrain
+  - type: movement
+    description: Movement roll penalties reduced by 2
+description: Extensive experience with difficult environments allowing efficient navigation on all terrain types.

@@ -1,0 +1,17 @@
+spell_series: Ice Javelin
+description_base: Hurls an ice javelin at the target and freezes it, creating a lance of pure ice that pierces and freezes its victim on impact.
+levels:
+  - level: "1"
+    name: Ice Javelin
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[givre]: 5"
+        type_requirement: "A.Type[destruction]: 4"
+        mixed_requirement: "A.École[givre] + A.Type[destruction]: 14"
+    conditions:
+      intelligence_required: 16
+      flux_cost: 8
+    effects:
+      damage: 3d6+3 frost
+      resistance: RMEC
+      special: Inflicts 'Frostbite' on the target

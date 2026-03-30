@@ -1,0 +1,21 @@
+name: Sentinelle
+type: Combattant
+description: La sentinelle est la force défensive de l'armée. Son rôle oscille entre le contre-espionnage et la défense des points stratégiques urbains. Sa force vient principalement de sa capacité à surprendre l'adversaire par une connaissance précise du terrain et des embuscades dévastatrices. Peu de rapport ennemi parle des sentinelles, mais la disparition des unités infiltrer sur le territoire humain est un fait connu de tous.
+equipment:
+  weapons:
+    - Épée légère
+    - Épée légère
+  armor:
+    - Exosquelette de vitesse
+  consumables:
+    - name: Kit de soins
+      quantity: 2
+skills:
+  - Course
+  - Rôdeur
+spells:
+  - Attaque multiple
+  - Fendre
+  - Frappe précise
+  - Attaque des points sensibles
+gameplay_guide: La sentinelle est une classe de combat fondant sur son ennemie pour l'abattre avant d'être remarqué. En utilisant vos attaques efficacement, vous pouvez créer un trou dans les lignes ennemies. Mais votre placement est primordial à votre réussite.

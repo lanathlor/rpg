@@ -1,0 +1,9 @@
+name: Master Armorer
+category: Skill
+subcategory: technical
+effects:
+  - type: crafting
+    description: +3 to weapon repair and modification rolls
+  - type: special
+    description: Can upgrade weapons (+1 permanent damage, 1/weapon)
+description: Exceptional mastery of weapon fabrication, repair, and modification. Can optimize existing weapons to improve their performance.

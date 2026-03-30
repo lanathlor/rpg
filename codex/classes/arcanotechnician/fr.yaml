@@ -1,0 +1,23 @@
+name: Arcanotechnicien
+type: Artilleur
+description: Seuls les enfants dotés d'une capacité à l'utilisation de l'arcanotechnie dès leur plus jeune âge peuvent aspirer à devenir Arcanotechnicien. Et les études qui suivent sont longues et compliquées. Mais une fois leur entrainement terminé, les Arcanotechniciens deviennent des armes de destruction incroyable. Souvent utiliser dans les guerres de position ou les batailles rangées. Ils sont capables, en alliant leur force, de faire pleuvoir les enfers sur les ennemies. Ils savent aussi briller par leur capacité à réduire en cendre des escouades seule lors de guérilla. Plus puissant avec d'autres Arcanotechniciens, les sous-estimer quand ils sont seuls peut tout de même changer l'issue une bataille.
+equipment:
+  weapons:
+    - Bâton
+  armor:
+    - Tunique
+  consumables:
+    - name: Kit de soins
+      quantity: 1
+    - name: Cristal de Flux
+      quantity: 1
+skills:
+  - Armure d'arcanotechnie
+  - Vue des quantiques
+spells:
+  - Javelot de glace
+  - Vent cinglant
+  - Froid mordant
+  - Givre
+  - Un avec le froid
+gameplay_guide: Le Arcanotechnicien est une classe infligeant beaucoup de dégât en peu de temps, mais ne les tient pas dans le temps. Il est plus efficient dans les combats de courte durée ou avec beaucoup d'ennemies proches grâce à colonnes de flamme. Sa capacité de survie est limitée. Les sorts et le positionnement du Arcanotechnicien doivent être réfléchis prudemment.

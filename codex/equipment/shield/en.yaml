@@ -1,0 +1,10 @@
+name: Shield
+category: Armor
+subcategory: shield
+cost: 600 credits
+prerequisites:
+  stat: STR 14
+stats:
+  defense_bonus: +2 to defense score
+  special_ability: Allows parrying physical attacks
+description: Robust shield allowing active blocking of enemy attacks and improving defensive capabilities.

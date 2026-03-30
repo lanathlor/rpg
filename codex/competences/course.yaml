@@ -1,8 +1,0 @@
-name: "Course"
-category: "Compétence"
-subcategory: "mobilité"
-point_cost: 15
-effects:
-  - type: "movement"
-    description: "Peut se déplacer deux fois en un tour"
-description: "Entraînement physique permettant de couvrir de grandes distances rapidement, même en situation de combat."

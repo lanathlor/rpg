@@ -1,0 +1,22 @@
+name: Arcanotechnologue
+type: Tacticien
+description: Bien que souvent confondus avec les Arcanotechniciens par les civils, les arcanotechnologues suivent une voie radicalement différente. Ce sont d'anciens aspirants Arcanotechniciens dont l'affinité arcanotechnique s'est révélée tardivement, les orientant vers l'étude théorique plutôt que la pratique pure. Véritables ingénieurs de l'quantique, ils conçoivent et perfectionnent les sorts utilisés par l'Empire, que ce soit pour les applications militaires ou industrielles. Chaque sort lancé par un Arcanotechnicien provient des recherches d'un arcanotechnologue. Face à l'impossibilité d'adapter leurs créations depuis leurs laboratoires, une branche combattante s'est développée pour déployer des arcanotechnologues directement sur le terrain. Leur présence rend chaque bataille imprévisible, leurs innovations tactiques bouleversant les stratégies établies.
+equipment:
+  weapons:
+    - Bâton
+  armor:
+    - Tunique
+  consumables:
+    - name: Kit de soins
+      quantity: 1
+    - name: Cristal de Flux
+      quantity: 1
+skills:
+  - Connaisseur d'arcanotechnie
+  - Scientifique
+spells:
+  - Confusion
+  - Flammèche
+  - Optimisation
+  - Partage de connaissance
+gameplay_guide: Le arcanotechnologue est une classe de soutien, vous dépendez de vos alliés et eux de vous. La communication est la clé pour faire de cette classe un pilier solide de votre groupe. Votre perception élevée est un outil parfait pour naviguer correctement sans rater les détails importants, si vous regardez aux bons endroits.

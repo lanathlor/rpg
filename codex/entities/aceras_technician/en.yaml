@@ -1,0 +1,32 @@
+name: Aceras Technician
+type: Technical Personnel / Non-combatant
+faction: Aceras
+alignement: hostile
+description: Aceras technician specializing in maintenance and electronic systems. Non-combatant personnel with basic light weapons training. Competent in hacking and repairs.
+equipment:
+  weapons:
+    - Pistolet
+  armor: []
+  consumables: []
+skills:
+  - Hacker
+  - Ingénieur
+spells: []
+gameplay_guide: |
+  Non-combatant technical personnel. High Intelligence for technical tasks but weak martial capabilities.
+
+  ROLE:
+  - Maintenance of communication and defense systems
+  - Hacking and electronic countermeasures
+  - Emergency repairs on equipment
+
+  COMBAT:
+  - Avoids direct combat (minimal training)
+  - Attempts to flee or call for reinforcements
+  - Uses the environment (locked doors, defensive systems)
+  - Surrenders easily if isolated
+
+  STRATEGIC VALUE:
+  - Can disable security systems if captured alive
+  - Possesses access codes and tactical information
+  - Can repair player equipment if convinced

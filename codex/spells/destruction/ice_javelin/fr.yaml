@@ -1,0 +1,17 @@
+spell_series: Javelot de glace
+description_base: Lance un javelot de glace à la cible et la gèle, créant une lance de glace pure qui transperce et glace sa victime à l'impact.
+levels:
+  - level: "1"
+    name: Javelot de glace
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[givre]: 5"
+        type_requirement: "A.Type[destruction]: 4"
+        mixed_requirement: "A.École[givre] + A.Type[destruction]: 14"
+    conditions:
+      intelligence_required: 16
+      flux_cost: 8
+    effects:
+      damage: 3d6+3 givre
+      resistance: RMEC
+      special: Inflige 'Gelure' à la cible

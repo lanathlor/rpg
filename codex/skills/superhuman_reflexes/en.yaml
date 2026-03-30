@@ -1,0 +1,9 @@
+name: Superhuman Reflexes
+category: Skill
+subcategory: physical
+effects:
+  - type: initiative
+    description: +5 to initiative
+  - type: defense
+    description: +2 to DEX-based Defense Score
+description: Reaction time far beyond normal human limits. Can react instantly to threats.

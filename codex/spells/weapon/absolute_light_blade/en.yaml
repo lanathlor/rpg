@@ -1,0 +1,39 @@
+spell_series: Absolute Light Blade
+description_base: The caster's weapon transforms into a ray of pure, blinding light, capable of cutting through matter as if it did not exist. Legends say this technique was developed by the first Guardians of the Empire to fight dimensional abominations.
+levels:
+  - level: "1"
+    name: Absolute Light Blade
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[lumière]: 12"
+        type_requirement: "A.Type[arme]: 12"
+        mixed_requirement: "A.École[lumière] + A.Type[arme]: 36"
+      stats:
+        - "STR: 18"
+        - "INT: 18"
+    conditions:
+      intelligence_required: 20
+      flux_cost: 30
+    description: Transforms your melee weapon into a ray of condensed light of devastating power. The blade becomes quasi-intangible while retaining phenomenal striking force.
+    effects:
+      damage: 6d10+20 + 4d8 light
+      resistance: RMEC + RRAD
+      special: Ignores ALL RMEC and RRAD resistances of the target, blinds adjacent enemies for 1 turn (PER saving throw DC 20), weapon reach increased to 5m, lasts 3 turns
+  - level: "2"
+    name: Absolute Light Blade II
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[lumière]: 25"
+        type_requirement: "A.Type[arme]: 25"
+        mixed_requirement: "A.École[lumière] + A.Type[arme]: 75"
+      stats:
+        - "STR: 22"
+        - "INT: 22"
+    conditions:
+      intelligence_required: 24
+      flux_cost: 50
+    description: Martial apotheosis. The weapon becomes an extension of the warrior's pure will, an instrument of judgment capable of cleaving reality itself.
+    effects:
+      damage: 10d10+35 + 8d8 light
+      resistance: RMEC + RRAD
+      special: Ignores ALL RMEC/RRAD/RINT resistances, each strike generates a light shockwave (3d8 RRAD in a 3m radius), blinds all enemies in a 10m radius (PER saving throw DC 22), 8m reach, strikes twice per action, lasts 5 turns

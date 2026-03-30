@@ -1,0 +1,262 @@
+name: Opal
+type: Elite Rank / Exosoldier
+faction: Empire
+alignement: Loyal (to the Empire)
+description: Opals represent the Elite rank of the imperial army - units capable of single-handedly influencing the course of a battle. Exosoldiers equipped with the most advanced Generation 7 prototype exoskeleton ever designed, they form a strategic strike force deployed only during critical missions. Their training lasts decades, their equipment is worth more than entire starships. Each Opal is a living weapon, capable of accomplishing alone what would normally require a battalion. Their mere presence on a battlefield shifts the balance of power. Few in number, strategically decisive.
+equipment:
+  weapons:
+    - Fusil de précision arcanotechnique 'Silencieux'
+    - Lame arcanotechnique 'Éclair'
+  armor:
+    - Exosquelette Prototype OPAL-XS7
+  consumables: []
+skills:
+  - Guerrier
+  - Œil d'aigle
+  - Vétéran
+  - À l'affût
+  - Tacticien
+  - Rôdeur
+  - Expert des terrains
+  - Hackeur
+  - Ingénieur
+  - Traque
+  - Scientifique
+  - Vue des quantiques
+  - Connaisseur d'arcanotechnie
+  - Charismatique
+  - Maître armurier
+  - As du pilotage
+  - Commandant
+  - Tacticien avancé
+  - Médecin de combat
+  - Espion
+  - Assassin
+  - Maître du Flux
+  - Maître arcanotechnicien
+  - Prescience
+  - Réflexes surhumains
+  - Endurance surhumaine
+  - Force titanesque
+  - Esprit analytique
+  - Leadership inspirant
+  - Intimidation
+  - Diplomate
+  - Négociateur
+  - Polyglotte
+  - Sens du danger
+  - Chanceux
+  - Résistance mentale
+  - Volonté de fer
+  - Maître stratège
+  - Virtuose au combat
+  - Légende vivante
+spells:
+  - series: Boule de feu
+    level: "4"
+  - series: Éclaire
+    level: "4"
+  - series: Salve dévastatrice
+    level: "2"
+  - series: Tir surchargé
+    level: "3"
+  - series: Lame de foudre
+    level: "3"
+  - series: Lame de lumière absolue
+    level: "2"
+  - series: Attaque de force
+    level: "3"
+  - series: Surmultiplication au combat
+    level: "2"
+gameplay_guide: |
+  *** ELITE RANK (~10,000 POINTS) ***
+
+  "Capable of single-handedly influencing the course of a battle."
+  - Imperial army structure, 08_histoire.md
+
+  BASE STATISTICS (without exo):
+  - STR 12 / DEX 16 / CON 15 / INT 18 / PER 18 / PRE 20 / CHA 14
+  - Flux: 60 (12/turn, recovery 10)
+  - Affinities: distance 12, ballistic 10, etc.
+
+  STATISTICS WITH OPAL-XS7 EXOSKELETON:
+  - STR 18 / DEX 20 / CON 20 / INT 18 / PER 21 / PRE 25 / CHA 14
+  - HP: 180 | Speed: 8m/turn
+  - Flux: 80 (15/turn, recovery 12) - EXO BONUS: +20/+3/+2
+  - Enhanced affinities - EXO BONUS: +3 distance, +2 ballistic/light/electricity/destruction/enhancement
+
+  TOTAL RESISTANCES (base + exo):
+  - RMEC: +20 (5 innate + 15 exo)
+  - RRAD: +16 (4 innate + 12 exo)
+  - RINT: +16 (8 innate + 8 exo)
+
+  DS (Defense Score) by attack:
+  - vs Melee (STR): 24
+  - vs Light melee (DEX): 25
+  - vs Ranged (PRE): 27-28
+  - vs Arcanotechnological (INT): 24
+
+  ===================================================================
+  MAIN CAPABILITIES
+  ===================================================================
+
+  LEGENDARY ELITE MARKSMAN:
+  - PRE 25 (+7 modifier) - Superhuman precision
+  - Distance affinity 15 + sniper 12 = Absolute mastery
+  - Rifle 'Silent': 4d8+6 RMEC, range 2000m, ignores 5 RMEC
+  - +3 PRE (rifle) +2 PER (rifle) +2 attack (predictive aim)
+  - Stabilizer: Ignores distance penalties up to 1000m
+  - Arcanotechnological guided shot (5 Flux): Advantage on roll
+  - WARRIOR: Can fire TWICE per turn
+
+  CLOSE COMBAT MASTER:
+  - STR 18, DEX 20 - Superhuman strength and agility
+  - Melee affinity 8 + one-handed weapon = Elite martial competence
+  - Blade 'Lightning': 3d6+8 RMEC, ignores 8 RMEC
+  - +2 STR (blade) +2 DEX (blade) +2 parries (fortified guard)
+  - Plasma charge (8 Flux): +3d6 RRAD additional damage
+  - Piercing mode: Ignores ALL RMEC (useful vs heavy armor)
+  - Defensive field (5 Flux): +3 RMEC for 1 turn
+  - WARRIOR: Can strike TWICE per turn
+  - 3m reach with exoskeleton servo-assistance
+
+  TACTICAL SKILLS:
+  - Veteran: Identifies enemy classes instantly
+  - On Alert: Ambush, superior initiative
+  - Tactician: Grants tactical advantages to allies
+  - Tracking: Impossible to lose a target
+  - Stalker + Terrain Expert: Environment mastery
+
+  INFILTRATION & TECHNOLOGY:
+  - Hacker: Expert-level system hacking
+  - Engineer: Exoskeleton maintenance, sabotage
+  - Quantum Vision: Detects arcanotechnological signatures
+  - Arcanotechnology Expert: Identifies arcanotechnological objects/spells
+  - Scientist: Advanced technical knowledge
+
+  PROTOTYPE XS7 EXOSKELETON (Value: 2M credits = 5000 pts):
+  - Massive resistances: +15 RMEC, +12 RRAD, +8 RINT
+  - Stat bonuses: +6 STR, +4 DEX, +5 CON, +3 PER, +5 PRE
+  - Flux bonus: +20 reserve, +3 per_turn, +2 recovery
+  - Affinity bonuses: +3 distance, +2 ballistic, +2 light, +2 electricity, +2 destruction, +2 enhancement
+  - Energy shield: +5 RRAD for 3 turns (1/combat)
+  - Flux recycling: Already included in bonus (+3 per turn total with bonus)
+  - Augmented vision: IR, thermal, arcanotechnological detection
+  - Survival: Vacuum of space, hostile environments
+  - Amplified jump: 6m vertical leap
+  - Camouflage: Invisibility 1 turn (3/day, 10 Flux)
+
+  ===================================================================
+  ARCANOTECHNOLOGICAL ARSENAL
+  ===================================================================
+
+  DESTRUCTION (level 2-3):
+  - Light Ray III: 6d6+9 RRAD, piercing, extreme range
+  - Fireball II: 4d6+6 RRAD, 8m area
+  - Lightning II: 3d8+6 RRAD, chains between targets
+
+  ALTERATION (level 2):
+  - Invisibility II: Disappears completely, 5 turns
+  - EM Pulse II: Disables electronics within 15m
+  - Gravity Manipulation II: Levitation, forced displacement
+
+  ENHANCEMENT (level 2):
+  - Force Shield II: +6 RMEC/RRAD, 4 turns
+  - Life Detection II: Senses all living organisms 100m
+  - Sensory Overload II: Enhances all senses during combat
+
+  TACTICAL (level 2):
+  - Short Teleportation II: 30m instant, tactical displacement
+
+  ===================================================================
+  COMBAT TACTICS
+  ===================================================================
+
+  LONG RANGE ELIMINATION (>500m):
+  1. Life Detection -> Locates targets
+  2. Invisibility/Exo Camouflage -> Positions
+  3. Sensory Overload -> Enhances perception
+  4. Predictive aim (1 turn observation) -> +2 attack
+  5. Warrior -> TWO shots at 4d8+6 each
+  6. Guided shots if needed (5 Flux/shot)
+  -> Damage: ~44 average damage x 2 = 88 damage/turn
+  -> Ignores 5 RMEC of targets
+  -> Inaudible, invisible, impossible to locate
+
+  MEDIUM COMBAT (50-100m):
+  1. Force Shield -> +6 protection
+  2. Teleportation -> Optimal positioning
+  3. Fireball / Lightning -> Area damage
+  4. Warrior + rifle burst mode -> 2 shots/turn
+  5. Exoskeleton absorbs counterattacks
+
+  CLOSE COMBAT (<10m):
+  1. Teleportation -> Melee engagement
+  2. Blade 'Lightning' drawn instantly
+  3. Warrior -> TWO strikes per turn
+     - Strike 1: 3d6+8 RMEC base (ignores 8 RMEC)
+     - Strike 2: 3d6+8 RMEC + plasma charge (8 Flux) = +3d6 RRAD
+     -> Total: ~50-60 damage/turn in melee
+  4. Defensive field if needed (5 Flux, +3 RMEC)
+  5. Piercing mode against heavily armored targets
+  6. 3m reach = Strikes before direct engagement
+  7. STR 18 + DEX 20 = Lethal evasion and counterattack
+
+  ASSASSINATION MODE (Single target):
+  1. Invisibility II (5 turns)
+  2. Silent approach
+  3. Short Teleportation -> Behind target
+  4. Warrior + Blade with plasma charge
+     -> 2x (3d6+8 RMEC + 3d6 RRAD) = ~80-100 damage
+  5. If target survives: Lightning level 2 (3d8+6 RRAD)
+  -> Guaranteed elimination of most targets
+
+  GHOST MODE (Infiltration/Escape):
+  1. Exo Camouflage (invisible 1 turn)
+  2. Invisibility II (5 total turns)
+  3. Short Teleportation (bypasses obstacles)
+  4. EMP if pursued (disables enemy tech)
+  5. Speed 8 + amplified jump = extreme mobility
+
+  FLUX MANAGEMENT:
+  - Reserve: 80 Flux
+  - Regeneration: 14/turn (12 base + 2 exo)
+  - Can maintain intense arcanotechnological combat 5+ turns
+  - Exo energy shield (free, 1/combat)
+
+  ===================================================================
+  WEAKNESSES & COUNTERMEASURES
+  ===================================================================
+
+  VULNERABILITIES:
+  - MASSIVE arcanotechnological signature (exo detectable)
+  - Depends on the exoskeleton (without it: ~5000 pts)
+  - Daily maintenance required (500 credits/day)
+  - Prolonged close combat not optimal
+  - Limited Flux despite regeneration (exhaustion possible)
+
+  HOW TO FIGHT ONE (good luck):
+  1. Early detection: Scan arcanotechnological signatures
+  2. Jamming: Massive electromagnetic interference
+  3. Anti-Flux zone: Arcanotechnological suppressor field
+  4. Coordinated surprise attack: 4+ simultaneous combatants
+  5. Anti-materiel weapons: High RMEC to pierce armor
+  6. Flux Drain: RINT spells that deplete reserves
+  7. Confined environment: Limits range and mobility
+  8. Powerful EMP: Can temporarily disable exoskeleton
+
+  GM WARNING:
+  Opals (Elite rank) are god-tier NPCs. Only use them as
+  direct adversaries for level 5-6 groups with massive preparation.
+  Instead, use them as:
+  - Imperial allies during critical missions
+  - Indirect antagonists (commanding forces)
+  - Legendary figures glimpsed from afar
+  - Ultimate final boss of a campaign
+  - Example of imperial military power
+
+  WITHOUT EXOSKELETON:
+  An Opal without their exo remains formidable (~5000 pts)
+  but becomes vulnerable and can be defeated by a coordinated group.
+  Destroying or disabling the exoskeleton is a viable strategy.
+notes: "ELITE RANK ~10,000 POINTS. Opals are among the most fearsome combatants of the Empire. Elite rank of the army - capable of single-handedly influencing the course of a battle. Their exoskeleton alone is worth more than some starships. Few in the entire Empire, deployed only for strategically critical missions. The Gen-7 prototype exoskeleton provides massive bonuses: stats, resistances, Flux, and affinities. Without the exo, an Opal remains formidable (~5000 pts) but vulnerable. Mentioned in war reports as an example of imperial tactical superiority."

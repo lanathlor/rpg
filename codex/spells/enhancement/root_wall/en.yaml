@@ -1,0 +1,46 @@
+spell_series: Root Wall
+description_base: Causes a thick wall of living, intertwined roots to burst from the ground, creating a defensive barrier.
+levels:
+  - level: "1"
+    name: Root Wall
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[bioarcanotechnique]: 5"
+        type_requirement: "A.Type[amelioration]: 4"
+        mixed_requirement: "A.École[bioarcanotechnique] + A.Type[amelioration]: 12"
+    conditions:
+      intelligence_required: 14
+      flux_cost: 12
+    effects:
+      barrier: Creates a root wall 5m long and 3m high
+      special: The wall has 50 HP and blocks line of sight
+      specials:
+        - RMEC +8 against attacks passing through the wall
+        - The roots can grapple (STR check DC 15 to pass through)
+        - The wall regenerates 5 HP per turn if the caster is nearby
+    timing:
+      casting_time: 1 action
+      duration: 5 turns or until destroyed
+      range: 10m
+  - level: "2"
+    name: Reinforced Root Wall
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[bioarcanotechnique]: 8"
+        type_requirement: "A.Type[amelioration]: 6"
+        mixed_requirement: "A.École[bioarcanotechnique] + A.Type[amelioration]: 17"
+    conditions:
+      intelligence_required: 16
+      flux_cost: 18
+    effects:
+      barrier: Creates a root wall 10m long and 5m high
+      special: The wall has 100 HP and completely blocks line of sight
+      specials:
+        - RMEC +12 against attacks passing through the wall
+        - The roots grapple and restrain (STR check DC 18 to break free)
+        - The wall regenerates 10 HP per turn automatically
+        - The roots can attack (1d8+4 RMEC) adjacent targets on command
+    timing:
+      casting_time: 1 action
+      duration: 8 turns or until destroyed
+      range: 15m

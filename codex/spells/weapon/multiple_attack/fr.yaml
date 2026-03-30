@@ -1,0 +1,29 @@
+spell_series: Attaque multiple
+description_base: Enchaine avec virtuosité les attaques autour de soi.
+levels:
+  - level: "1"
+    name: Attaque multiple
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[martial]: 3"
+        type_requirement: "A.Type[arme]: 3"
+        mixed_requirement: "A.École[martial] + A.Type[arme]: 9"
+    conditions:
+      dexterity_required: 16
+    recharge_time: 60 sec
+    effects:
+      multiple_attack: Lance une copie de la prochaine attaque
+      resistance: RMEC
+  - level: "2"
+    name: Attaque multiple II
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[martial]: 4"
+        type_requirement: "A.Type[arme]: 4"
+        mixed_requirement: "A.École[martial] + A.Type[arme]: 12"
+    conditions:
+      dexterity_required: 16
+    recharge_time: 40 sec
+    effects:
+      multiple_attack: Lance une copie de la prochaine attaque
+      resistance: RMEC

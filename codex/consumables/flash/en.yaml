@@ -1,0 +1,10 @@
+name: Flash
+category: Consumable
+subcategory: tactical
+cost: 150 credits
+effect:
+  blind_effect: Blinds characters near the explosion center
+  duration: Until their turn
+  area: Zone around the explosion center
+  usage: attack action
+description: Flashbang grenade producing an intense flash to temporarily disorient enemies.

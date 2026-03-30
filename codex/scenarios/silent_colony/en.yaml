@@ -1,0 +1,273 @@
+name: Silent Colony
+description: A recent colony has gone silent. A first team has disappeared. The players must investigate on-site and discover what haunts this dead town.
+description_long: |
+  A recent colony, protected by an active magnetosphere, ceased all communication 72 hours ago. Without the ground antenna, contacting the colonists is impossible. 48 hours ago, a first team of soldiers was sent. Communication was briefly restored for 1 minute before being cut again.
+
+  The planet being too far away, no reinforcements can arrive for 96 hours. The players are the Empire's last chance to understand what is happening. Upon landing at the colony's edge, contact with their ship is lost.
+
+  Mutilated corpses, improvised barricades, traces of desperate struggles... The colony is a charnel house. But when the antenna comes back online, the dead rise. Slow but relentless, they have only one objective: shut down the antenna. And at the heart of the forest, something ancient and powerful waits in the roots of a colossal tree.
+category: one-shot
+theme: horror
+difficulty: advanced
+setting: colony
+gm_notes:
+  preparation_time: 45 minutes
+  complexity: high
+  tone: Horror survival with cosmic mystery - oppressive atmosphere, progressive revelations
+synopsis: |
+  An extremely powerful Flux crystal lies at the heart of an ancient tree in the forest. The Empire had built a secret installation to study and recover it, but the experiment went wrong. The crystal possesses a rudimentary consciousness and has taken control of the colony's corpses via its influence on the local Flux.
+
+  The arcanotechnological creature protecting the crystal uses bioarcanotechnology and biometabolics. It has also taken mental control of the first team's soldiers, using them as bait.
+
+  IMPORTANT GM INFORMATION: The Opals and Whites were ALREADY en route to the colony before the antenna was even cut. This is a classified secret mission. The Empire knew something about this crystal. The players DO NOT receive this information in their briefing - they think they are the only rescue team. The Opals and Whites will arrive a few hours after the players have handled the situation (success or failure), as they were already traveling to this colony.
+
+  The players must:
+  1. Understand the antenna mechanism (the dead animate when it is active)
+  2. Choose between two paths: forest (direct) or installation (information)
+  3. Face an extremely powerful creature
+  4. Recover or destroy the crystal
+
+  Possible outcomes:
+  - Recovery: The Opals and Whites arrive and take the crystal ("normal" ending)
+  - Destruction: The crystal is destroyed, cutting all influence - The Opals and Whites arrive too late and are displeased ("heroic" ending but tensions)
+  - Failure: The players die or flee - The Opals and Whites complete the mission without them ("dark" ending)
+  - Corruption: A player tries to keep the crystal - The Opals and Whites hunt them down (catastrophic consequences)
+acts:
+  - act: "1"
+    title: The Dead Town
+    description: Arrival in the colony and discovery of the horror
+    key_scenes:
+      - Landing at the edge - loss of contact with the ship
+      - Crossing the colony - corpses, barricades, traces of panic
+      - Discovery of the antenna and the dead soldier
+      - "First activation: the dead rise and attack the antenna"
+      - Desperate defense while the ship transmits data
+      - The antenna shuts down - the zombies attack briefly then collapse
+    estimated_duration: 60-75 minutes
+  - act: "2"
+    title: Between Two Paths
+    description: Exploration and strategic choice
+    key_scenes:
+      - "Analysis of ship data: Flux source to the west, armored door to the north"
+      - "WEST path: Encounter with the \"normal\" soldiers - they lie about what happened to them"
+      - "NORTH path: Discovery of the secret imperial installation"
+      - "Progressive revelation: the crystal, the creature, the mental control"
+      - The colossal tree visible in the distance - oppressive Flux presence
+      - Night falls progressively - the presence becomes MUCH stronger and more oppressive
+    estimated_duration: 90-120 minutes
+  - act: "3"
+    title: The Heart of the Tree
+    description: Final confrontation in the depths
+    key_scenes:
+      - Descent toward the heart of the tree (via the forest or the installation)
+      - The corrupted soldiers reveal their true nature - ambush
+      - Face to face with the arcanotechnological guardian creature
+      - Epic combat in the crystal chamber
+      - "AFTER THE COMBAT: The crystal speaks to players sensitive to arcanotechnology (incomprehensible voice, ancient language)"
+      - The crystal makes those who touch it or stay too close sick (nausea, fever, hallucinations)
+      - "Final decision: recover or destroy the crystal (beware of effects)"
+      - "Epilogue: arrival of the Opals and Whites a few hours later (whether recovered or destroyed)"
+    estimated_duration: 90-120 minutes
+npcs:
+  - name: Commander Zex Kaine
+    role: First team leader / Corrupted enemy
+    description: Imperial veteran (42 years old), visible combat implants. Appears normal but has a strangely vacant gaze. Under total mental control of the crystal.
+    entity_base: soldat_imperial
+    notes: Military exoskeleton, under mental control of the crystal
+    motivations: Serve the crystal. Lure the players to the tree. Prevent the crystal's destruction.
+  - name: Dr. Velena Korr
+    role: Installation scientist (if discovered)
+    description: Corpse found in the installation. Audio logs reveal she led the research team. Died trying to contain the creature.
+    entity_base: civil
+    notes: Scientist
+    motivations: Dead - but her logs are essential for understanding the situation
+  - name: The Guardian
+    role: Final boss - Arcanotechnological creature
+    description: Hybrid plant/flesh entity created (or transformed) by the crystal. 3m tall humanoid form, fused roots and flesh. Green luminescent eyes. Advanced bioarcanotechnological and biometabolic capabilities.
+    entity_base: colosse_du_flux
+    motivations: Protect the crystal at all costs. Extend the crystal's influence. Corrupt the living.
+encounters:
+  - name: Antenna Defense
+    type: combat
+    difficulty: hard
+    location: Communication station - Act 1
+    description: As soon as the antenna turns on, all corpses in the colony rise and converge to shut it down. The players must hold for 3 minutes.
+    enemies:
+      - name: Flux Zombies (wave 1)
+        count: 20
+        entity_base: zombie_du_flux
+      - name: Flux Zombies (following waves)
+        count: 30
+        entity_base: zombie_du_flux
+    tactics: The zombies ignore the players and head straight for the antenna. If blocked, they attack the obstacle (player or barricade). Slow but relentless.
+    success_conditions:
+      - Hold for 3 minutes (18 turns) until transmission is complete
+      - Protect the antenna switch
+    alternative: Voluntarily shutting down the antenna cuts the transmission but triggers a final attack
+    special_mechanic: IMPORTANT - Once the antenna is shut down (voluntarily or by the zombies), all zombies frenetically attack the players for exactly 20 seconds (3-4 combat turns) then collapse permanently. This is their last surge of energy before the crystal's signal dissipates.
+    rewards:
+      - "Ship data: map with Flux source and installation"
+      - "Understanding of the mechanism: antenna ON = active zombies"
+  - name: Corrupted Soldier Ambush
+    type: combat
+    difficulty: hard
+    location: Edge of the tree zone - Act 2/3
+    description: |
+      The 4 surviving soldiers initially seem normal and explain to the players: "There is something living in the forest. That immense tree over there... it's the energy source. When we got close, we were attacked. Some didn't come back."
+
+      But it's a lie. They are under total mental control and are luring the players toward the tree. Perceptive players may notice inconsistencies in their stories, their vacant gaze, or their slightly desynchronized movements.
+
+      At the critical moment (near the tree or if the players become too suspicious), they reveal their true nature and attack in coordination.
+    enemies:
+      - name: Commander Zex Kaine
+        count: 1
+        entity_base: soldat_imperial
+      - name: Corrupted Soldier
+        count: 3
+        entity_base: soldat_imperial
+    tactics: Military formation. Kaine coordinates. They use cover and suppressive fire. They do not seek to kill, but to capture or slow down the players.
+    alternative: If the players discovered the installation, they know how to break the mental control (destroy the communication implants that the crystal uses)
+    rewards:
+      - Quality military equipment
+      - Corrupted communication implants (clues about mental control)
+  - name: The Guardian of the Tree
+    type: combat
+    difficulty: extreme
+    location: Crystal chamber - Heart of the tree - Act 3
+    description: Final boss. The creature defends the crystal with all its power. Combat in a confined space, living roots everywhere, oppressive green glow.
+    enemies:
+      - name: The Guardian
+        count: 1
+        entity_base: colosse_du_flux
+    tactics: |
+      Phase 1 (230-150 HP): Ranged attacks via roots and spores, active regeneration
+      Phase 2 (150-75 HP): Aggressive melee + life drain, uses mental control
+      Phase 3 (<75 HP): Berserk, sacrifices defense for massive damage, double attacks (Warrior)
+    challenges:
+      - Destroy the main roots to prevent regeneration
+      - Resist the hallucinogenic spores
+      - Avoid area attacks in the confined space
+    success_conditions:
+      - Reduce The Guardian to 0 HP
+      - Or cut its connection to the crystal (Intelligence 18 or Arcanotechnology)
+    rewards:
+      - Access to the Flux crystal
+      - Rare organic tissues (bioarcanotechnological research material)
+      - Seeds of the ancient tree (rare artifact)
+  - name: Installation Exploration
+    type: exploration
+    difficulty: medium
+    location: Secret imperial installation - Act 2
+    description: |
+      The abandoned installation is impressive and unsettling. No visible corpses - all fled or were taken. Traces of a secret unit everywhere: classified imperial logos, abandoned state-of-the-art military equipment, high-security zones.
+
+      At the center of the installation is a GIGANTIC EXCAVATION TOOL - an industrial-scale arcanotechnological drill, capable of piercing kilometers of rock. It dug a descending tunnel directly to the heart of the ancient tree.
+
+      The installation contains crucial information about the crystal and the creature in the terminals and audio logs.
+    challenges:
+      - Decipher the scientific logs (Intelligence 15 or Scientist skill)
+      - Navigate the dark and partially collapsed installation (Perception 14)
+      - Access secured terminals (Intelligence 16 or Hacker)
+    rewards:
+      - Complete knowledge of the experiment and its consequences
+      - Schematics of the tree and the crystal chamber
+      - "Guardian weakness: destroying roots cuts regeneration"
+      - Method to break soldiers mental control
+      - Direct access to the heart of the tree via the excavation tunnel
+rewards:
+  points: 8-12 points per player based on performance and choices
+  credits: 2000 credits per player + recovered equipment
+  items:
+    - Minor Flux crystal (recovered from tree debris)
+    - Experimental biometabolic armor (prototype found in the installation)
+    - Military arcanotechnological weapon (from corrupted soldiers)
+    - Military medical kit x4
+  special: |
+    Depending on the outcome:
+    - Crystal handed to the Opals and Whites: +5 Empire Reputation, access to secret missions, official recognition
+    - Crystal destroyed: +3 Empire Reputation, clear conscience, but questions about what was lost
+    - Failure (flight): -2 Empire Reputation, mental trauma, internal investigation
+    - Attempt to keep the crystal: Progressive corruption, hunted by the Empire, catastrophic consequences
+variants:
+  - name: Intense Horror Version
+    description: |
+      To maximize horror:
+      - Add visual/auditory hallucinations caused by the crystal
+      - Zombies are more numerous and aggressive
+      - The Guardian can create illusory copies of dead soldiers
+      - Forced nighttime atmosphere (limited vision)
+      - Strange sounds coming from the tree
+  - name: Investigation Version
+    description: |
+      For groups who enjoy investigation:
+      - Reduce the number of combats
+      - Add more logs, colonists' personal journals
+      - Allow saving some soldiers from mental control
+      - Discover the complete history of the colony
+      - Diplomatic option with The Guardian (very difficult)
+  - name: Quick Version (3h)
+    description: |
+      For short sessions:
+      - Remove installation exploration
+      - Corrupted soldiers revealed immediately
+      - Shorten the antenna defense (1 minute instead of 3)
+      - The Guardian has fewer HP (150 instead of 230)
+related_content:
+  spells_used:
+    - Drain de vie
+    - Contrôle végétal
+    - Spores toxiques
+    - Régénération
+    - Barrière vivante
+  equipment_used:
+    - Exosquelette militaire
+    - Fusil d'assaut
+    - Implant de communication
+    - Détecteur de Flux
+  locations:
+    - Lost Colony Delta-7
+    - Classified Research Installation IR-449
+    - The Ancient Tree
+    - Crystal Chamber
+tags:
+  - horror
+  - survival
+  - mystery
+  - boss-fight
+  - moral-choice
+  - urban
+  - cosmic-horror
+  - advanced
+author: Lanathlor
+gm_tips: |
+  1. ATMOSPHERE: This is a horror scenario. Use sensory descriptions, strange sounds, oppressive silence. The colony must be frightening.
+
+  2. ZOMBIES: They are not classic "undead." The crystal animates the corpses via the Flux. When the antenna amplifies the signal, they activate. When it shuts down, they collapse.
+
+  3. MENTAL CONTROL: The soldiers are under total control near the crystal. They seem normal but "a bit odd." Let the players be suspicious. Only reveal the betrayal at the dramatic moment.
+
+  4. THE GUARDIAN: This is a DIFFICULT boss (~400 points for a group ~230). It must be a real challenge. Use the environment, regeneration, area attacks. The players must tactically manage this combat.
+
+  5. TWO PATHS: Installation = information and tactical advantages. Forest = direct but without preparation. Both lead to the same place but with different levels of preparation.
+
+  6. THE CRYSTAL: It is EXTREMELY POWERFUL and possesses a rudimentary consciousness.
+     - Players sensitive to the Flux feel it from afar (migraines, unease)
+     - IMPORTANT: After defeating The Guardian, the crystal SPEAKS to players sensitive to arcanotechnology. It is a mental voice, in an unknown and incomprehensible language. No one can translate. It is deeply disturbing.
+     - Touching the crystal or staying near it makes one SICK: nausea, fever, visual/auditory hallucinations, weakness. The longer one stays, the worse it gets.
+     - If they try to keep it: progressive corruption, madness, physical changes, and imperial pursuit. CATASTROPHIC consequences.
+
+  7. OPALS AND WHITES - IMPORTANT TIMING:
+     - They were ALREADY EN ROUTE before the antenna was cut. Classified secret mission.
+     - The Empire KNEW something about this crystal. The installation was not a recently discovered accident.
+     - The players DO NOT KNOW this. In their briefing, they think they are the only rescue team.
+     - The Opals and Whites arrive a few hours after the resolution, whether successful or not.
+     - Impressive arrival: two elite soldiers in white armor with opal symbols. Courteous but firm.
+     - If crystal intact: they take it, thank briefly, leave without explanations.
+     - If crystal destroyed: they arrive too late, visibly displeased but professional. Question the players about what happened.
+     - Mystery for the players: Why did the Empire send its best soldiers? What did they know?
+
+  8. PACING: Act 1 = tension/horror, Act 2 = mystery/exploration, Act 3 = action/boss fight. Vary the pacing.
+
+  9. POSSIBLE FAILURE: The players can fail and flee. That's OK. The Empire will send a larger force. But the players will live with that failure.
+
+  10. NARRATIVE REWARDS: Beyond points/credits, offer clues about the universe. What are these crystals? Why does the Empire keep them secret? Plant seeds for future adventures.

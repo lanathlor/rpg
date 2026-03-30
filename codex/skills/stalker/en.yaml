@@ -1,0 +1,9 @@
+name: Stalker
+category: Skill
+subcategory: stealth
+effects:
+  - type: special
+    description: Can avoid entering combat and remain camouflaged
+  - type: special
+    description: DEX roll required
+description: Camouflage and stealthy movement techniques allowing avoidance of detection and direct combat.

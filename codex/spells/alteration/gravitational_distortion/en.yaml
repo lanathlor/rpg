@@ -1,0 +1,36 @@
+spell_series: Gravitational Distortion
+description_base: Alters local gravity to manipulate weight and movement.
+levels:
+  - level: "1"
+    name: Gravitational Distortion
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[gravitonique]: 2"
+        type_requirement: "A.Type[alteration]: 2"
+        mixed_requirement: "A.École[gravitonique] + A.Type[alteration]: 6"
+    conditions:
+      intelligence_required: 17
+      flux_cost: 5
+    effects:
+      specials:
+        - Reduces a target's weight by 50% (doubles their movement speed)
+        - Or increases an enemy's weight by 100% (halves their speed)
+        - Affects projectile trajectories in the area
+    duration: 3 turns
+  - level: "2"
+    name: Greater Gravitational Distortion
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[gravitonique]: 3"
+        type_requirement: "A.Type[alteration]: 3"
+        mixed_requirement: "A.École[gravitonique] + A.Type[alteration]: 9"
+    conditions:
+      intelligence_required: 19
+      flux_cost: 8
+    effects:
+      specials:
+        - Can create a zero-gravity zone (levitation) or triple gravity
+        - Affects up to 3 targets in a 6m radius
+        - Can levitate objects up to 500kg
+        - Automatically deflects all projectiles
+    duration: 4 turns

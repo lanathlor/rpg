@@ -1,0 +1,7 @@
+name: Tactician
+category: Skill
+subcategory: tactical
+effects:
+  - type: special
+    description: +1 to initiative roll
+description: Tactical training allowing anticipation of enemy movements and faster reaction in combat.

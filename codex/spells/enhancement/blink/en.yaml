@@ -1,0 +1,27 @@
+spell_series: Blink
+description_base: You teleport in the chosen direction without being blocked. Does not trigger opportunity attacks.
+levels:
+  - level: "1"
+    name: Blink
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[quantique]: 2"
+        type_requirement: "A.Type[amelioration]: 2"
+        mixed_requirement: "A.École[quantique] + A.Type[amelioration]: 6"
+    conditions:
+      intelligence_required: 18
+      flux_cost: 8
+    effects:
+      teleport: Teleport 1d4 + speed meters
+  - level: "2"
+    name: Blink II
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[quantique]: 3"
+        type_requirement: "A.Type[amelioration]: 3"
+        mixed_requirement: "A.École[quantique] + A.Type[amelioration]: 9"
+    conditions:
+      intelligence_required: 18
+      flux_cost: 10
+    effects:
+      teleport: Teleport 1d4 + 2 + speed meters

@@ -142,7 +142,7 @@ export function SpellListIsland({ spells, base }: Props) {
         {filtered.map(spell => (
           <a
             key={spell.slug}
-            href={`${base}sorts/${spell.slug}/`}
+            href={`${base}spells/${spell.slug}/`}
             className="block rounded-lg border bg-card text-card-foreground shadow-sm hover:shadow-lg transition-shadow cursor-pointer h-full"
           >
             <div className="flex flex-col space-y-1.5 p-6">

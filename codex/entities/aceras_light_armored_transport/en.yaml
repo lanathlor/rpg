@@ -1,0 +1,24 @@
+name: Aceras Light Armored Transport
+type: Vehicle / Troop Transport
+faction: Aceras
+alignement: hostile
+description: Aceras armored troop transport vehicle equipped with a mounted plasma cannon. Can transport a full squad while providing devastating fire support.
+equipment:
+  weapons:
+    - Canon à plasma
+  armor: []
+  consumables: []
+skills: []
+spells: []
+gameplay_guide: |
+  Heavy vehicle with armor (RMEC 8). Dangerous plasma cannon (3d8+4 RRAD area).
+
+  TACTICS:
+  - Priority: destroy the vehicle to prevent transport and neutralize the cannon
+  - Weak points: treads/wheels (immobilization), turret (weapon disabling), fuel tank
+  - Can transport 8 soldiers - prevent disembarkation or target them after they dismount
+
+  COUNTERMEASURES:
+  - Targeted explosives on weak points
+  - Flank attacks (weaker rear armor)
+  - EMP or alteration spells on electronic systems

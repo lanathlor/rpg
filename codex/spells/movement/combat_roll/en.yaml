@@ -1,0 +1,33 @@
+spell_series: Combat Roll
+description_base: Performs a quick roll to dodge and reposition.
+levels:
+  - level: "1"
+    name: Combat Roll
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[martial]: 2"
+        type_requirement: "A.Type[deplacement]: 2"
+        mixed_requirement: "A.École[martial] + A.Type[deplacement]: 6"
+    conditions:
+      dexterity_required: 14
+    recharge_time: 20 sec
+    effects:
+      movement: 5m movement + automatic dodge
+      defense_bonus: +2 to defense until next turn
+    duration: 1 turn
+  - level: "2"
+    name: Combat Roll II
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[martial]: 3"
+        type_requirement: "A.Type[deplacement]: 3"
+        mixed_requirement: "A.École[martial] + A.Type[deplacement]: 9"
+      equipment:
+        - Exosquelette
+    conditions:
+      dexterity_required: 12
+    recharge_time: 40 sec
+    description: Thanks to the speed of your movements and the power granted by the exoskeleton, you propel yourself far from danger.
+    effects:
+      movement: Movement of 1d8 + speed in any direction
+      special: Does not trigger opportunity attacks. This spell is considered a movement

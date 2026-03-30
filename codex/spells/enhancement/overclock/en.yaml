@@ -1,0 +1,17 @@
+spell_series: Overclock
+description_base: Overclocks the target's exoskeleton, temporarily increasing its capabilities.
+levels:
+  - level: "1"
+    name: Overclock
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[bioarcanotechnique]: 2"
+        type_requirement: "A.Type[amelioration]: 2"
+        mixed_requirement: "A.École[bioarcanotechnique] + A.Type[amelioration]: 6"
+      special: The target must be wearing an exoskeleton
+    conditions:
+      intelligence_required: 14
+      flux_cost: 5
+    effects:
+      special: +1d4 to a target stat chosen by the caster
+    duration: 1 turn

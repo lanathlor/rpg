@@ -1,0 +1,50 @@
+spell_series: Overcharged Shot
+description_base: Overcharges the weapon for a devastating shot.
+levels:
+  - level: "1"
+    name: Overcharged Shot
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[balistique]: 5"
+        type_requirement: "A.Type[arme]: 5"
+        mixed_requirement: "A.École[balistique] + A.Type[arme]: 15"
+    conditions:
+      special: none
+      flux_cost: 8
+    recharge_time: 60 sec
+    effects:
+      damage: +3d6+6 to weapon damage
+      resistance: RMEC
+      special: Risk of weapon overheating
+  - level: "2"
+    name: Overcharged Shot II
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[balistique]: 10"
+        type_requirement: "A.Type[arme]: 10"
+        mixed_requirement: "A.École[balistique] + A.Type[arme]: 30"
+    conditions:
+      intelligence_required: 18
+      flux_cost: 12
+    recharge_time: 60 sec
+    effects:
+      damage: +5d6+12 to weapon damage
+      resistance: RMEC
+      special: Ignores 10 points of RMEC, minimal overheating risk
+    description: Perfectly controlled energy channeling into the weapon, producing a shot of devastating power without compromising the weapon's integrity.
+  - level: "3"
+    name: Overcharged Shot III
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[balistique]: 15"
+        type_requirement: "A.Type[arme]: 15"
+        mixed_requirement: "A.École[balistique] + A.Type[arme]: 45"
+    conditions:
+      intelligence_required: 20
+      flux_cost: 18
+    recharge_time: 60 sec
+    effects:
+      damage: +8d6+20 to weapon damage
+      resistance: RMEC
+      special: Ignores 15 points of RMEC, no overheating risk, can pierce through cover
+    description: Absolute mastery of arcanotechnical overcharge. The shot becomes an irresistible force capable of piercing even the thickest armor plating.

@@ -1,0 +1,9 @@
+name: Assassin
+category: Compétence
+subcategory: combat
+effects:
+  - type: combat
+    description: Les attaques surprises infligent +3d6 dégâts
+  - type: special
+    description: "Coup de grâce: Attaque contre cible sans défense = mort instantanée (jet de sauvegarde CON DD 20)"
+description: Formation létale aux techniques d'élimination. Expert en élimination silencieuse et frappes chirurgicales.

@@ -1,0 +1,7 @@
+name: Plant Control
+category: Skill
+subcategory: special ability
+effects:
+  - type: special
+    description: Commands and manipulates roots, vines, and plants within a 10m radius
+description: Bioarcanotechnological ability to command surrounding vegetation. Can grow, move, and control roots and vines to attack, entangle, or create barriers. Plants obey the character's mental commands.

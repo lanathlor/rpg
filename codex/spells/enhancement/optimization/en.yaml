@@ -1,0 +1,16 @@
+spell_series: Optimization
+description_base: Optimizes the arcanotechnical consumption of the next spell cast by the target, allowing maximum efficiency.
+levels:
+  - level: "1"
+    name: Optimization
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[bioarcanotechnique]: 2"
+        type_requirement: "A.Type[amelioration]: 2"
+        mixed_requirement: "A.École[bioarcanotechnique] + A.Type[amelioration]: 6"
+    conditions:
+      intelligence_required: 14
+      flux_cost: 5
+    effects:
+      special: The next spell cast by the target costs no flux (excluding weapon attacks)
+    duration: 1 turn

@@ -1,0 +1,9 @@
+name: Engineer
+category: Skill
+subcategory: technical
+effects:
+  - type: technique
+    description: Allows repairing mechanical and electrical damage
+  - type: special
+    description: Allows constructing objects
+description: Extensive technical training in mechanics and electronics enabling equipment repair and construction.

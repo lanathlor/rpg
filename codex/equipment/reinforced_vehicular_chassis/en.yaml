@@ -1,0 +1,12 @@
+name: Reinforced vehicular chassis
+category: Armor
+subcategory: vehicular plating
+cost: 3500 credits
+prerequisites:
+  special: Vehicle only
+stats:
+  RMEC: "+5"
+  RRAD: "+3"
+  RINT: "+0"
+  stat_modifier: "-1 speed (extra weight)"
+description: Reinforced modular plating for military transport vehicles. Composite armor plates fixed onto the chassis, offering maximum protection against anti-vehicle weapons. The extra weight slightly reduces mobility but transforms the vehicle into a mobile fortress.

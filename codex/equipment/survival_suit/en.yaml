@@ -1,0 +1,9 @@
+name: Survival suit
+category: Light armor
+subcategory: leather
+cost: 400 credits
+prerequisites:
+  stat: health <= 35
+stats:
+  saving_throw_bonus: +2 to saving throw against alterations
+description: Specialized protective gear for hostile environments, offering resistance to alteration effects.

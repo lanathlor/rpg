@@ -1,0 +1,13 @@
+name: Light sword
+category: Melee weapon
+subcategory: 1-handed
+type: swords
+cost: 200 credits
+prerequisites:
+  affinity: A. CAC 2
+stats:
+  damage: 1d8
+  off_hand_damage: 1d4
+  attack_type: quick attack (DEX)
+  defense_type: dodge (DEX)
+description: Light and balanced sword, ideal for fighters who favor speed over raw power.

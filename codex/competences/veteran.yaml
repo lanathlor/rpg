@@ -1,8 +1,0 @@
-name: "Vétéran"
-category: "Compétence"
-subcategory: "tactique"
-point_cost: 12
-effects:
-  - type: "detection"
-    description: "Reconnaît la classe des ennemis"
-description: "Expérience de combat permettant d'identifier rapidement les capacités et spécialisations des adversaires."

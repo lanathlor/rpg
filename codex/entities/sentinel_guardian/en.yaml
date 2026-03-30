@@ -1,0 +1,18 @@
+name: Sentinel Guardian
+type: Elite Guard
+faction: Empire
+alignement: neutral
+description: An elite guard specialized in surveillance and protection of strategic installations. Equipped with advanced detection systems and a combat exoskeleton.
+equipment:
+  weapons:
+    - Fusil mitrailleur
+  armor:
+    - Exosquelette de combat
+  consumables:
+    - name: Kit de soins
+      quantity: 2
+skills:
+  - Guerrier
+  - À l'affût
+spells: []
+gameplay_guide: Elite guard specialized in surveillance of sensitive zones and high-value objects. Very high perception and equipped to detect intrusions at range. The combat exoskeleton provides excellent protection while maintaining mobility. Prefers to neutralize threats at range before they approach the guarded zone.

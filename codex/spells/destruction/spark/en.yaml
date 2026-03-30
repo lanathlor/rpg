@@ -1,0 +1,17 @@
+spell_series: Spark
+description_base: A miniature burst of flames shoots from the caster's fingertips, streaking toward its target in a luminous crackle. This basic elemental manifestation of quantum fire can ignite combustible materials on contact and sear flesh with painful burns.
+levels:
+  - level: "1"
+    name: Spark
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[feu]: 2"
+        type_requirement: "A.Type[destruction]: 2"
+        mixed_requirement: "A.École[feu] + A.Type[destruction]: 6"
+    conditions:
+      special: none
+      flux_cost: 3
+    effects:
+      damage: 1d4+1 fire
+      resistance: RRAD
+      burning_chance: 25% chance to ignite (1d4 per turn, 2 turns)

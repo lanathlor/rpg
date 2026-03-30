@@ -1,0 +1,10 @@
+name: EMP bomb
+category: Consumable
+subcategory: technological
+cost: 500 credits
+effect:
+  emp_effect: Disables exoskeleton bonuses and stops all electrical devices
+  area: 10-meter radius
+  duration: 20 seconds
+  usage: attack action
+description: Electromagnetic pulse that temporarily neutralizes all electronic equipment within the area of effect.

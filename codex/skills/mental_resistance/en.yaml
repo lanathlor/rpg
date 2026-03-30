@@ -1,0 +1,9 @@
+name: Mental Resistance
+category: Skill
+subcategory: mental
+effects:
+  - type: defense
+    description: +4 to saving throws against mental effects (fear, charm, confusion)
+  - type: special
+    description: Advantage on rolls against mental control
+description: Mind fortified against psychic intrusions. Exceptional resistance to mental manipulations.

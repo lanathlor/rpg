@@ -1,0 +1,17 @@
+name: Garde de l'Empire
+type: Soldat
+faction: Empire
+alignement: neutre
+description: Un garde standard de l'Empire, entraîné pour la défense des installations militaires et le maintien de l'ordre.
+equipment:
+  weapons:
+    - Fusil mitrailleur
+  armor:
+    - Armure de plate légère
+  consumables:
+    - name: Kit de soins
+      quantity: 1
+skills:
+  - Guerrier
+spells: []
+gameplay_guide: Un garde de l'Empire standard. Bon au combat rapproché avec son armure de plate légère, équipé d'un fusil mitrailleur pour couvrir les zones stratégiques. Préfère le combat tactique en groupe.

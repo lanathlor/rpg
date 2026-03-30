@@ -1,0 +1,12 @@
+name: Zombie du Flux
+type: Mort-vivant animé / Cadavre contrôlé
+faction: Hostile
+alignement: hostile
+description: Cadavre animé par l'influence d'un cristal de Flux puissant. Lent mais implacable, résistant aux dommages internes mais vulnérable aux dégâts radiants. Ignore les vivants et cherche à éteindre les sources d'interférence électromagnétique.
+equipment:
+  weapons: []
+  armor: []
+  consumables: []
+skills: []
+spells: []
+gameplay_guide: Zombie animé par le Flux. Ignore les joueurs et se dirige vers l'antenne de communication pour l'éteindre. Si empêché, attaque l'obstacle. Lent (Vitesse 2) mais nombreux. Haute résistance interne (RINT +6) car déjà mort. Vulnérable aux dégâts de zone et radiants. Combat corps à corps uniquement (1d6 RMEC).

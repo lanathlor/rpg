@@ -1,0 +1,10 @@
+name: Tunic
+category: Light armor
+subcategory: cloth
+cost: 50 credits
+prerequisites:
+  none: true
+stats:
+  protection_bonus: 0
+  special: No bonus
+description: Simple cloth garment, offering minimal protection but no hindrance to movement. Worn by Arcanotechnicians and scholars.

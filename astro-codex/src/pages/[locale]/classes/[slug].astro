@@ -5,14 +5,15 @@ import ClassDetail from '@/components/detail/ClassDetail.astro';
 import { getClasses } from '@/lib/dataUtils';
 
 export async function getStaticPaths() {
-  const classes = await getClasses();
-  const locales = ['en', 'fr'];
-  return locales.flatMap(locale =>
-    classes.map(c => ({
+  const locales = ['en', 'fr'] as const;
+  const results = await Promise.all(locales.map(async locale => {
+    const classes = await getClasses(locale);
+    return classes.map(c => ({
       params: { locale, slug: c.slug },
       props: { characterClass: c.data },
-    }))
-  );
+    }));
+  }));
+  return results.flat();
 }
 
 const { characterClass } = Astro.props;

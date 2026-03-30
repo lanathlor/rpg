@@ -1,0 +1,8 @@
+name: Healing kit
+category: Consumable
+subcategory: medical
+cost: 120 credits
+effect:
+  healing: 15 HP
+  usage: simple action
+description: First aid kit containing bandages, antiseptics, and stimulants for quickly treating wounds.

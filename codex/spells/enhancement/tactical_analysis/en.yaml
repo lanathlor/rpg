@@ -1,0 +1,16 @@
+spell_series: Tactical Analysis
+description_base: Cybernetic scan of enemies to identify their weak points. Holographic display of tactical data.
+levels:
+  - level: "1"
+    name: Tactical Analysis
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[lumiere]: 2"
+        type_requirement: "A.Type[amelioration]: 2"
+    conditions:
+      intelligence_required: 14
+      flux_cost: 6
+    effects:
+      special: Reveals the resistances and weaknesses of a target. Allies gain Advantage on their next attack roll against that target.
+    duration: 3 turns
+    recharge_time: 3 sec

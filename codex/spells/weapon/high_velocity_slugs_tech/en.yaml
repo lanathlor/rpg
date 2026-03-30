@@ -1,0 +1,17 @@
+spell_series: High-Velocity Slugs
+description_base: Your rifle fires the slugs of your next attack with increased velocity.
+levels:
+  - level: "1"
+    name: High-Velocity Slugs
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[balistique]: 2"
+        type_requirement: "A.Type[arme]: 2"
+        mixed_requirement: "A.École[balistique] + A.Type[arme]: 6"
+      equipment:
+        - Fusil à pompe
+    conditions: null
+    recharge_time: 50 sec
+    effects:
+      damage_bonus: +2 to each of your dice on your next shotgun attack
+      resistance: RMEC

@@ -1,0 +1,9 @@
+name: Danger Sense
+category: Skill
+subcategory: mental
+effects:
+  - type: perception
+    description: +4 to perception rolls to detect ambushes and traps
+  - type: special
+    description: Can never be caught by surprise, always acts during the surprise turn
+description: Supernatural sixth sense for danger. Instinctively detects threats before they manifest.

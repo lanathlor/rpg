@@ -1,14 +1,12 @@
 import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
+import { localizedLoader } from '@/lib/localizedLoader';
 
 // Flexible schema for YAML spell effects (highly variable structure)
 const spellEffectsSchema = z.any();
 
 const sortsCollection = defineCollection({
-  loader: glob({
-    pattern: ['**/*.yaml', '!**/index.yaml', '!**/SPELL_TEMPLATE.yaml'],
-    base: '../codex/sorts',
-  }),
+  loader: localizedLoader({ base: '../codex/spells' }),
   schema: z.object({
     spell_series: z.string().optional(),
     name: z.string().optional(),
@@ -32,10 +30,7 @@ const sortsCollection = defineCollection({
 });
 
 const armesCollection = defineCollection({
-  loader: glob({
-    pattern: ['*.yaml', '!index.yaml'],
-    base: '../codex/armes',
-  }),
+  loader: localizedLoader({ base: '../codex/weapons' }),
   schema: z.object({
     name: z.string(),
     description: z.string().optional(),
@@ -56,10 +51,7 @@ const armesCollection = defineCollection({
 });
 
 const equipementsCollection = defineCollection({
-  loader: glob({
-    pattern: ['*.yaml', '!index.yaml'],
-    base: '../codex/equipements',
-  }),
+  loader: localizedLoader({ base: '../codex/equipment' }),
   schema: z.object({
     name: z.string(),
     description: z.string().optional(),
@@ -80,10 +72,7 @@ const equipementsCollection = defineCollection({
 });
 
 const competencesCollection = defineCollection({
-  loader: glob({
-    pattern: ['*.yaml', '!index.yaml', '!SKILL_TEMPLATE.yaml'],
-    base: '../codex/competences',
-  }),
+  loader: localizedLoader({ base: '../codex/skills' }),
   schema: z.object({
     name: z.string(),
     description: z.string().optional(),
@@ -98,10 +87,7 @@ const competencesCollection = defineCollection({
 });
 
 const consommablesCollection = defineCollection({
-  loader: glob({
-    pattern: ['*.yaml', '!index.yaml'],
-    base: '../codex/consommables',
-  }),
+  loader: localizedLoader({ base: '../codex/consumables' }),
   schema: z.object({
     name: z.string(),
     description: z.string().optional(),
@@ -113,10 +99,7 @@ const consommablesCollection = defineCollection({
 });
 
 const classesCollection = defineCollection({
-  loader: glob({
-    pattern: ['*.yaml', '!index.yaml'],
-    base: '../codex/classes',
-  }),
+  loader: localizedLoader({ base: '../codex/classes' }),
   schema: z.object({
     name: z.string(),
     description: z.string().optional(),
@@ -135,10 +118,7 @@ const classesCollection = defineCollection({
 });
 
 const entitesCollection = defineCollection({
-  loader: glob({
-    pattern: ['*.yaml', '!index.yaml', '!ENTITY_TEMPLATE.yaml'],
-    base: '../codex/entites',
-  }),
+  loader: localizedLoader({ base: '../codex/entities' }),
   schema: z.object({
     name: z.string(),
     description: z.string().optional(),
@@ -160,10 +140,7 @@ const entitesCollection = defineCollection({
 });
 
 const scenariosCollection = defineCollection({
-  loader: glob({
-    pattern: ['*.yaml', '!index.yaml', '!SCENARIO_TEMPLATE.yaml'],
-    base: '../codex/scenarios',
-  }),
+  loader: localizedLoader({ base: '../codex/scenarios' }),
   schema: z.object({
     name: z.string(),
     description: z.string().optional(),
@@ -203,14 +180,14 @@ const histoireCollection = defineCollection({
 });
 
 export const collections = {
-  sorts: sortsCollection,
-  armes: armesCollection,
-  equipements: equipementsCollection,
-  competences: competencesCollection,
-  consommables: consommablesCollection,
+  spells: sortsCollection,
+  weapons: armesCollection,
+  equipment: equipementsCollection,
+  skills: competencesCollection,
+  consumables: consommablesCollection,
   classes: classesCollection,
-  entites: entitesCollection,
+  entities: entitesCollection,
   scenarios: scenariosCollection,
-  regles: reglesCollection,
-  histoire: histoireCollection,
+  rules: reglesCollection,
+  history: histoireCollection,
 };

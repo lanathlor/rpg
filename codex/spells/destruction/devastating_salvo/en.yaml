@@ -1,0 +1,33 @@
+spell_series: Devastating Salvo
+description_base: Elite military arcanotechnical technique. The soldier channels the Flux into their ranged weapon to unleash a barrage of overcharged projectiles that completely saturate an area, transforming the battlefield into a hell of metal and destructive energy.
+levels:
+  - level: "1"
+    name: Devastating Salvo
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[balistique]: 10"
+        type_requirement: "A.Type[destruction]: 10"
+        mixed_requirement: "A.École[balistique] + A.Type[destruction]: 30"
+    conditions:
+      intelligence_required: 18
+      flux_cost: 25
+    description: Barrage of overcharged shots that saturate an entire area. Each projectile is amplified by the Flux to maximize damage and penetration.
+    effects:
+      damage: 8d6+20 RMEC in a 6m area
+      resistance: RMEC
+      special: Ignores 15 points of RMEC, all enemies in the area must succeed a DEX saving throw (DC 18) or take full damage (half on success), requires a ranged weapon
+  - level: "2"
+    name: Devastating Salvo II
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[balistique]: 20"
+        type_requirement: "A.Type[destruction]: 20"
+        mixed_requirement: "A.École[balistique] + A.Type[destruction]: 60"
+    conditions:
+      intelligence_required: 22
+      flux_cost: 40
+    description: Ultimate version reserved for the Empire's elite soldiers. A deluge of concentrated fire capable of leveling fortifications and annihilating entire squads in seconds.
+    effects:
+      damage: 12d8+30 RMEC in a 10m area
+      resistance: RMEC
+      special: Ignores 20 points of RMEC, suppression zone (enemies remain pinned down, -4 to all actions for 2 turns), can destroy cover and light structures, requires a ranged weapon

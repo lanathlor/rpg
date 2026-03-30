@@ -1,0 +1,16 @@
+spell_series: Static Charge
+description_base: Charges your weapon with static electricity to increase its power.
+levels:
+  - level: "1"
+    name: Static Charge
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[électricité]: 2"
+        type_requirement: "A.Type[arme]: 2"
+        mixed_requirement: "A.École[électricité] + A.Type[arme]: 6"
+    conditions:
+      flux_cost: 4
+    effects:
+      damage_bonus: Your next physical attack deals 6 additional damage
+      resistance: RMEC + RRAD
+      special: Additional electricity damage

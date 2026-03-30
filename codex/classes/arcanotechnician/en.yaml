@@ -1,0 +1,23 @@
+name: Arcanotechnician
+type: Artillery
+description: Only children gifted with an ability to use arcanotechnology from a very young age can aspire to become Arcanotechnicians. And the studies that follow are long and complex. But once their training is complete, Arcanotechnicians become incredible weapons of destruction. Often deployed in positional warfare or pitched battles, they are capable, by combining their strength, of raining hellfire upon their enemies. They also excel at reducing entire squads to ashes single-handedly during guerrilla operations. More powerful alongside other Arcanotechnicians, underestimating them when alone can still change the outcome of a battle.
+equipment:
+  weapons:
+    - Staff
+  armor:
+    - Tunic
+  consumables:
+    - name: Healing kit
+      quantity: 1
+    - name: Flux Crystal
+      quantity: 1
+skills:
+  - Arcanotechnology armor
+  - Quantum sight
+spells:
+  - Ice javelin
+  - Biting wind
+  - Bitter cold
+  - Frost
+  - One with the cold
+gameplay_guide: The Arcanotechnician is a class that deals massive damage in a short time, but cannot sustain it over time. They are most efficient in short fights or with many enemies clustered together thanks to flame columns. Their survivability is limited. The Arcanotechnician's spells and positioning must be carefully considered.

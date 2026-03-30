@@ -1,0 +1,44 @@
+spell_series: Hallucinogenic Spores
+description_base: Releases a cloud of bioarcanotechnical spores causing hallucinations in those who breathe them.
+levels:
+  - level: "1"
+    name: Hallucinogenic Spores
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[bioarcanotechnique]: 4"
+        type_requirement: "A.Type[affliction]: 3"
+        mixed_requirement: "A.École[bioarcanotechnique] + A.Type[affliction]: 10"
+    conditions:
+      intelligence_required: 14
+      flux_cost: 10
+    effects:
+      area: 5m radius zone
+      resistance: RINT
+      debuff: "-2 to Perception and attack rolls"
+      special: Affected targets suffer hallucinations for 3 turns and may attack allies
+      duration: 3 turns
+    timing:
+      casting_time: 1 action
+      duration: 3 turns
+      range: 15m
+  - level: "2"
+    name: Greater Hallucinogenic Spores
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[bioarcanotechnique]: 7"
+        type_requirement: "A.Type[affliction]: 5"
+        mixed_requirement: "A.École[bioarcanotechnique] + A.Type[affliction]: 15"
+    conditions:
+      intelligence_required: 16
+      flux_cost: 15
+    effects:
+      area: 8m radius zone
+      resistance: RINT
+      debuff: "-3 to Perception, attack, and all rolls"
+      damage: 1d6 per turn
+      special: Affected targets suffer violent hallucinations for 5 turns and must attack the nearest creature
+      duration: 5 turns
+    timing:
+      casting_time: 1 action
+      duration: 5 turns
+      range: 20m

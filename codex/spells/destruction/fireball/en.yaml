@@ -1,0 +1,66 @@
+spell_series: Fireball
+description_base: A concentrated orb of flames forms in the Arcanotechnician's palm before being hurled at its target. On impact, this incandescent sphere explodes in a blinding deflagration, incinerating everything within a conquering radius and leaving behind the acrid smell of destruction arcanotechnology.
+levels:
+  - level: "1"
+    name: Fireball
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[feu]: 4"
+        type_requirement: "A.Type[destruction]: 4"
+        mixed_requirement: "A.École[feu] + A.Type[destruction]: 12"
+    conditions:
+      special: none
+      flux_cost: 8
+    effects:
+      damage: 2d6+3 fire
+      resistance: RRAD
+      area_damage: 1d4 fire in a 3m radius
+      special: Area of effect
+  - level: "2"
+    name: Fireball II
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[feu]: 5"
+        type_requirement: "A.Type[destruction]: 5"
+        mixed_requirement: "A.École[feu] + A.Type[destruction]: 15"
+    conditions:
+      intelligence_required: 17
+      flux_cost: 10
+    description: An amplified and refined version of the base spell, this flaming orb pulses with destructive energy before striking its target. The resulting explosion unleashes flames so intense they cling to flesh and materials, continuing to consume long after the initial impact.
+    effects:
+      damage: 2d8+4 fire and 'burn II' to the target
+      resistance: RRAD
+      area_damage: 1d8 fire in a 3m radius
+      special: Area of effect
+  - level: "3"
+    name: Fireball III
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[feu]: 15"
+        type_requirement: "A.Type[destruction]: 15"
+        mixed_requirement: "A.École[feu] + A.Type[destruction]: 45"
+    conditions:
+      intelligence_required: 20
+      flux_cost: 20
+    description: The ultimate manifestation of destructive pyrokinesis. A sphere of incandescent plasma compressed to temperatures exceeding those of stars. The explosion creates a thermal shockwave capable of vaporizing steel and turning sand into glass.
+    effects:
+      damage: 5d8+12 fire
+      resistance: RRAD
+      area_damage: 3d8 fire in an 8m radius
+      special: Massive area of effect, ignores 10 points of RRAD, burn III (3d4 damage/turn for 3 turns)
+  - level: "4"
+    name: Fireball IV - Stellar Nova
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[feu]: 25"
+        type_requirement: "A.Type[destruction]: 25"
+        mixed_requirement: "A.École[feu] + A.Type[destruction]: 75"
+    conditions:
+      intelligence_required: 24
+      flux_cost: 35
+    description: Weapon of mass destruction. A miniature supernova contained within a sphere of stellar plasma. The explosion generates temperatures so extreme it ionizes the air for dozens of meters, creating a miniature mushroom cloud.
+    effects:
+      damage: 8d10+25 fire
+      resistance: RRAD
+      area_damage: 6d8 fire in a 15m radius
+      special: Cataclysmic area of effect, ignores 20 points of RRAD, burn IV (4d6 damage/turn for 4 turns), shockwave (knocks down all creatures in the area, STR saving throw DC 22), ignites the environment

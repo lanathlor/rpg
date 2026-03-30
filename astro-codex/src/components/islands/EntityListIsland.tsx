@@ -149,7 +149,7 @@ export function EntityListIsland({ entities, base }: Props) {
         {filtered.map(entity => (
           <a
             key={entity.slug}
-            href={`${base}entites/${entity.slug}/`}
+            href={`${base}entities/${entity.slug}/`}
             className="block rounded-lg border bg-card text-card-foreground shadow-sm hover:shadow-lg transition-shadow cursor-pointer h-full"
           >
             <div className="flex flex-col space-y-1.5 p-6">

@@ -1,0 +1,36 @@
+spell_series: Shockwave
+description_base: Generates a powerful destructive sonic wave.
+levels:
+  - level: "1"
+    name: Shockwave
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[sonique]: 2"
+        type_requirement: "A.Type[destruction]: 2"
+        mixed_requirement: "A.École[sonique] + A.Type[destruction]: 6"
+    conditions:
+      intelligence_required: 15
+      flux_cost: 5
+    effects:
+      damage: 2d4 in an 8m cone
+      resistance: RMEC
+      special: Pierces light armor (ignores 2 points of protection)
+      specials:
+        - Targets suffer -2 to perception rolls for 3 turns
+  - level: "2"
+    name: Devastating Shockwave
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[sonique]: 3"
+        type_requirement: "A.Type[destruction]: 3"
+        mixed_requirement: "A.École[sonique] + A.Type[destruction]: 9"
+    conditions:
+      intelligence_required: 17
+      flux_cost: 8
+    effects:
+      damage: 3d6 in a 12m cone
+      resistance: RMEC
+      special: Pierces medium armor (ignores 4 points of protection)
+      specials:
+        - Targets suffer -3 to perception and attack rolls for 4 turns
+        - Can shatter fragile objects and windows in the area

@@ -1,0 +1,16 @@
+name: Light drone submachine gun
+category: Ranged weapon
+subcategory: mounted weapon
+type: automatic submachine gun
+cost: 800 credits
+prerequisites:
+  affinity: A. dist 4
+stats:
+  damage: 1d6+2
+  attack_type: ranged shot (PRE)
+  defense_type: dodge (DEX)
+special_effects:
+  - Drone-mounted weapon
+  - Rapid automatic fire rate
+  - RMEC damage type (kinetic)
+description: Lightweight submachine gun mounted on Aceras reconnaissance drones. Gyroscopic stabilization system for firing on the move. High rate of fire compensating for low firepower.

@@ -1,0 +1,16 @@
+name: Plasma cannon
+category: Ranged weapon
+subcategory: two-handed weapon
+type: energy cannon
+cost: 3500 credits
+prerequisites:
+  affinity: A. dist 8
+stats:
+  damage: 3d8+4
+  attack_type: ranged shot (PRE)
+  defense_type: dodge (DEX)
+special_effects:
+  - Medium range
+  - 2-turn recharge between shots
+  - RRAD damage type (thermal)
+description: Heavy Aceras energy weapon firing superheated plasma projectiles. Devastating damage but significant recharge time between shots.

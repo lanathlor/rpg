@@ -1,0 +1,18 @@
+spell_series: Jamming
+description_base: Jams the target's electronic systems.
+levels:
+  - level: "1"
+    name: Jamming
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[magnétique]: 2"
+        type_requirement: "A.Type[alteration]: 2"
+        mixed_requirement: "A.École[magnétique] + A.Type[alteration]: 6"
+    conditions:
+      perception_required: 16
+      flux_cost: 4
+    effects:
+      - "If the target has an exoskeleton: -1 to attack rolls"
+      - "-2 to camouflage detection"
+      - Disables enemy remote communications
+    duration: 1d4 turns

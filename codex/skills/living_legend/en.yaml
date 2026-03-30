@@ -1,0 +1,11 @@
+name: Living Legend
+category: Skill
+subcategory: prestige
+effects:
+  - type: presence
+    description: Lower-ranked enemies must succeed a morale check (DC 20) to attack
+  - type: special
+    description: +2 to all rolls (attack, defense, skills, saving throws)
+  - type: legendary
+    description: Once per day, can automatically succeed any roll
+description: Legendary status recognized across the entire galaxy. Mere presence inspires terror in enemies and hope in allies. Past exploits seem to make the impossible possible.

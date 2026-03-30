@@ -1,0 +1,9 @@
+name: Master Arcanotechnician
+category: Skill
+subcategory: arcanotechnological
+effects:
+  - type: spell
+    description: Flux cost of all spells reduced by 2 (minimum 1)
+  - type: special
+    description: Can cast a lower-level spell as a free action (1/turn)
+description: Virtuoso of arcanotechnology. Flux manipulation has become second nature, allowing maximum efficiency.

@@ -1,0 +1,37 @@
+spell_series: Tornado
+description_base: Generates a powerful controlled air vortex.
+levels:
+  - level: "1"
+    name: Tornado
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[aérocinétique]: 2"
+        type_requirement: "A.Type[deplacement]: 2"
+        mixed_requirement: "A.École[aérocinétique] + A.Type[deplacement]: 6"
+    conditions:
+      intelligence_required: 15
+      flux_cost: 4
+    effects:
+      specials:
+        - Pushes back all enemies in a 4m radius
+        - Automatically deflects projectiles for 2 turns
+        - Allows moving an additional 10m this turn
+    duration: 2 turns
+  - level: "2"
+    name: Destructive Tornado
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[aérocinétique]: 3"
+        type_requirement: "A.Type[deplacement]: 3"
+        mixed_requirement: "A.École[aérocinétique] + A.Type[deplacement]: 9"
+    conditions:
+      intelligence_required: 17
+      flux_cost: 7
+    effects:
+      resistance: RMEC
+      specials:
+        - Pushes back and deals 1d6 damage to all enemies in a 6m radius
+        - Automatically deflects all projectiles for 4 turns
+        - Allows moving an additional 15m this turn
+        - Creates difficult terrain for enemies
+    duration: 3 turns

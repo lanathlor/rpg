@@ -8,98 +8,109 @@ import type { CharacterClass } from '@/types/classes';
 import type { Entity } from '@/types/entities';
 import type { Scenario } from '@/types/scenarios';
 import { buildTree, type TreeNode } from '@/lib/treeUtils';
+import type { Lang } from '@/lib/i18n';
 
-export async function getSpells(): Promise<Array<{ id: string; slug: string; data: Spell }>> {
-  const entries = await getCollection('sorts');
-  return entries.map(entry => {
+/** Extract slug from a locale-prefixed ID: "fr/destruction/boule_de_feu" -> "destruction/boule_de_feu" */
+function stripLocale(id: string): string {
+  const slash = id.indexOf('/');
+  return slash >= 0 ? id.slice(slash + 1) : id;
+}
+
+/** Filter collection entries by locale prefix */
+function byLocale<T>(entries: Array<{ id: string; data: T }>, locale: Lang) {
+  return entries.filter(e => e.id.startsWith(`${locale}/`));
+}
+
+export async function getSpells(locale: Lang = 'fr'): Promise<Array<{ id: string; slug: string; data: Spell }>> {
+  const entries = await getCollection('spells');
+  return byLocale(entries, locale).map(entry => {
     const data = entry.data as Spell;
-    // Map spell_series to name when name is missing
     if (!data.name && data.spell_series) {
       data.name = data.spell_series;
     }
     return {
       id: entry.id,
-      slug: entry.id,
+      slug: stripLocale(entry.id),
       data,
     };
   });
 }
 
-export async function getWeapons(): Promise<Array<{ id: string; slug: string; data: Weapon }>> {
-  const entries = await getCollection('armes');
-  return entries.map(entry => ({
+export async function getWeapons(locale: Lang = 'fr'): Promise<Array<{ id: string; slug: string; data: Weapon }>> {
+  const entries = await getCollection('weapons');
+  return byLocale(entries, locale).map(entry => ({
     id: entry.id,
-    slug: entry.id.replace(/\.yaml$/, ''),
+    slug: stripLocale(entry.id),
     data: entry.data as unknown as Weapon,
   }));
 }
 
-export async function getArmors(): Promise<Array<{ id: string; slug: string; data: Armor }>> {
-  const entries = await getCollection('equipements');
-  return entries.map(entry => ({
+export async function getArmors(locale: Lang = 'fr'): Promise<Array<{ id: string; slug: string; data: Armor }>> {
+  const entries = await getCollection('equipment');
+  return byLocale(entries, locale).map(entry => ({
     id: entry.id,
-    slug: entry.id.replace(/\.yaml$/, ''),
+    slug: stripLocale(entry.id),
     data: entry.data as unknown as Armor,
   }));
 }
 
-export async function getSkills(): Promise<Array<{ id: string; slug: string; data: Skill }>> {
-  const entries = await getCollection('competences');
-  return entries.map(entry => ({
+export async function getSkills(locale: Lang = 'fr'): Promise<Array<{ id: string; slug: string; data: Skill }>> {
+  const entries = await getCollection('skills');
+  return byLocale(entries, locale).map(entry => ({
     id: entry.id,
-    slug: entry.id.replace(/\.yaml$/, ''),
+    slug: stripLocale(entry.id),
     data: entry.data as unknown as Skill,
   }));
 }
 
-export async function getConsumables(): Promise<Array<{ id: string; slug: string; data: Consumable }>> {
-  const entries = await getCollection('consommables');
-  return entries.map(entry => ({
+export async function getConsumables(locale: Lang = 'fr'): Promise<Array<{ id: string; slug: string; data: Consumable }>> {
+  const entries = await getCollection('consumables');
+  return byLocale(entries, locale).map(entry => ({
     id: entry.id,
-    slug: entry.id.replace(/\.yaml$/, ''),
+    slug: stripLocale(entry.id),
     data: entry.data as unknown as Consumable,
   }));
 }
 
-export async function getClasses(): Promise<Array<{ id: string; slug: string; data: CharacterClass }>> {
+export async function getClasses(locale: Lang = 'fr'): Promise<Array<{ id: string; slug: string; data: CharacterClass }>> {
   const entries = await getCollection('classes');
-  return entries.map(entry => ({
+  return byLocale(entries, locale).map(entry => ({
     id: entry.id,
-    slug: entry.id.replace(/\.yaml$/, ''),
+    slug: stripLocale(entry.id),
     data: entry.data as unknown as CharacterClass,
   }));
 }
 
-export async function getEntities(): Promise<Array<{ id: string; slug: string; data: Entity }>> {
-  const entries = await getCollection('entites');
-  return entries.map(entry => ({
+export async function getEntities(locale: Lang = 'fr'): Promise<Array<{ id: string; slug: string; data: Entity }>> {
+  const entries = await getCollection('entities');
+  return byLocale(entries, locale).map(entry => ({
     id: entry.id,
-    slug: entry.id.replace(/\.yaml$/, ''),
+    slug: stripLocale(entry.id),
     data: entry.data as unknown as Entity,
   }));
 }
 
-export async function getScenarios(): Promise<Array<{ id: string; slug: string; data: Scenario }>> {
+export async function getScenarios(locale: Lang = 'fr'): Promise<Array<{ id: string; slug: string; data: Scenario }>> {
   const entries = await getCollection('scenarios');
-  return entries.map(entry => ({
+  return byLocale(entries, locale).map(entry => ({
     id: entry.id,
-    slug: entry.id.replace(/\.yaml$/, ''),
+    slug: stripLocale(entry.id),
     data: entry.data as unknown as Scenario,
   }));
 }
 
 export async function getRules() {
-  const entries = await getCollection('regles');
+  const entries = await getCollection('rules');
   return entries.sort((a, b) => a.id.localeCompare(b.id));
 }
 
 export async function getHistory() {
-  const entries = await getCollection('histoire');
+  const entries = await getCollection('history');
   return entries.sort((a, b) => a.id.localeCompare(b.id));
 }
 
 export async function getRulesTree(): Promise<TreeNode[]> {
-  const entries = await getCollection('regles');
+  const entries = await getCollection('rules');
   return buildTree(entries.map(e => ({
     id: e.id,
     data: e.data as { title?: string; order?: number; description?: string },
@@ -107,7 +118,7 @@ export async function getRulesTree(): Promise<TreeNode[]> {
 }
 
 export async function getHistoryTree(): Promise<TreeNode[]> {
-  const entries = await getCollection('histoire');
+  const entries = await getCollection('history');
   return buildTree(entries.map(e => ({
     id: e.id,
     data: e.data as { title?: string; order?: number; description?: string },

@@ -202,7 +202,7 @@ const hasEquipment = characterClass.equipment && (
             <h4 class="text-sm font-medium text-muted-foreground mb-2">{t('detail.class.weapons')}</h4>
             <div class="flex flex-wrap gap-2">
               {characterClass.equipment.weapons.map((w: string) => (
-                <a href={`${base}armes/${w.toLowerCase().replace(/\s+/g, '_').replace(/[éè]/g, 'e').replace(/[à]/g, 'a')}/`} class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold hover:bg-accent transition-colors">{w}</a>
+                <a href={`${base}weapons/${w.toLowerCase().replace(/\s+/g, '_').replace(/[éè]/g, 'e').replace(/[à]/g, 'a')}/`} class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold hover:bg-accent transition-colors">{w}</a>
               ))}
             </div>
           </div>

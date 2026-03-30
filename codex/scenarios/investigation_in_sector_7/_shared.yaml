@@ -1,0 +1,20 @@
+image: images/scenarios/enquete_sector_7.png
+session_info:
+  duration: 3-4 heures
+  player_count: 3-5
+  recommended_points: 195-220 points
+requirements:
+  required_rules:
+    - Combat de base
+    - Système de résistances
+    - Systèmes arcanotechniques automatisés
+  recommended_classes:
+    - Chasseur
+    - Spectre
+    - Arcanotechnicien
+    - Taliste
+  required_npcs: 6
+  maps_included: true
+  handouts_included: false
+last_updated: "2025-12-11"
+playtested: false

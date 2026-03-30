@@ -1,0 +1,277 @@
+name: Murder at the Parade
+description: A man is found dead in warehouses the day before the great imperial parade. A simple criminal case... or a conspiracy against the Empire?
+description_long: |
+  The planet Kethara was recently conquered by the Empire. In a few hours the Great Imperial Parade celebrating this victory will take place. Preparations are in full swing when a body is discovered in the warehouses where parade materials are stored.
+
+  The victim: Jax Morell, an unemployed man with no criminal record. No apparent motive. The local police, already overwhelmed with parade security, are uncooperative with imperial investigators.
+
+  The players, agents of Imperial Security, must investigate quickly. But as their investigation progresses, they discover this is not a simple murder: Jax was involved in an anti-imperial plot that could turn the parade into a bloodbath.
+
+  A race against time begins. Will they find the saboteurs in time? Or will the attack become the first act of resistance of a planet that refuses to be conquered?
+category: one-shot
+theme: investigation
+difficulty: intermediate
+setting: urban
+gm_notes:
+  preparation_time: 30 minutes
+  complexity: medium
+  tone: Police investigation with time pressure - political thriller
+synopsis: |
+  Jax Morell, a desperate unemployed man, was recruited by an anti-imperial resistance cell disguised as a "private security company." The group planned to sabotage the imperial parade with an explosive hidden in the honor tribune.
+
+  But Jax had second thoughts at the last minute and wanted to withdraw. The saboteurs killed him to prevent him from talking and hid his body in the warehouses.
+
+  IMPORTANT GM INFORMATION: This scenario is designed to be DIFFICULT. The players have approximately 6-8 hours in game time (2-3 real hours) before the parade. They must:
+  1. Understand that this is a murder linked to a conspiracy
+  2. Identify the fake security company
+  3. Locate the saboteurs or the bomb
+  4. Stop the attack
+
+  EXPECTED OUTCOME: In most games, the players DO NOT stop the attack in time. The bomb explodes, killing several high-ranking imperial officers. This is a PARTIAL FAILURE that creates important narrative consequences:
+  - The players can still arrest the saboteurs after the fact
+  - This triggers imperial repression on the planet
+  - The characters carry the weight of this failure
+
+  However, if the players are efficient and perceptive, they CAN succeed. Let them have that possibility.
+acts:
+  - act: "1"
+    title: The Body in the Warehouse
+    description: Discovery of the murder and first investigations
+    key_scenes:
+      - "Briefing: body discovered, parade in 6 hours, uncooperative local police"
+      - "Crime scene: parade warehouses, clues to collect"
+      - "Quick autopsy: dead 12-18h ago, strangulation, signs of struggle"
+      - "Search of Jax's apartment: cover letter, resume, photos of his ex"
+      - "First contact with local police: tension, they reveal at minimum that he has an ex-partner"
+    estimated_duration: 45-60 minutes
+  - act: "2"
+    title: Red Threads
+    description: Investigation into the victim's circle and discovery of the plot
+    key_scenes:
+      - "Interrogation of ex-partner Lyra: reveals he had \"found a job\""
+      - Investigation into "SecurKeth Solutions" - the company does not officially exist
+      - "Discovery: it is a front for a resistance group"
+      - "Analysis of Jax's communications: last call to Lyra, encrypted messages"
+      - "Identification of a contact: Kael Theron, \"recruiter\" for SecurKeth"
+      - "Race against time: the parade approaches (3-4h remaining)"
+    estimated_duration: 60-90 minutes
+  - act: "3"
+    title: Countdown
+    description: Hunting the saboteurs and attempting to stop the attack
+    key_scenes:
+      - Locating the saboteurs hideout OR the bomb
+      - Confrontation with the saboteurs - combat or negotiation
+      - Frantic search for the bomb in the tribune (if not found before)
+      - "TIPPING POINT: stopping the attack OR explosion"
+      - "Success epilogue: parade secured, saboteurs captured, imperial recognition"
+      - "Failure epilogue: explosion, deaths, imperial reprisals, player guilt"
+    estimated_duration: 60-90 minutes
+npcs:
+  - name: Jax Morell
+    role: Victim / Investigation starting point
+    description: 32-year-old man, unemployed for 8 months. Tired face, worn clothes. Found dead by strangulation in the warehouses.
+    entity_base: civil
+    notes: No combat capabilities
+    motivations: "Was: Find a job to win back his ex. Had agreed to join the saboteurs out of financial desperation but had second thoughts."
+  - name: Lyra Kessan
+    role: Victim's ex-partner / Key witness
+    description: 29-year-old woman, employed at a cafe. Emotionally exhausted. Left Jax 1 month ago due to his depressive behavior linked to unemployment.
+    entity_base: civil
+    motivations: No longer in love with Jax but feels guilty for not answering his last call. Wants to help understand what happened.
+  - name: Lieutenant Harven Koss
+    role: Local police contact / Bureaucratic obstacle
+    description: Local police officer (38 years old), tired and cynical. Feels the imperial occupation as a humiliation. Very uncooperative with imperial agents.
+    entity_base: chasseur
+    motivations: Protect his jurisdiction. Does not want the Imperials taking control of "his" investigation. Withholds information on principle.
+  - name: Kael Theron
+    role: Saboteur recruiter / Secondary antagonist
+    description: 42-year-old man, former Kethara military. Cold charisma, war scars. Logistics coordinator of the resistance cell.
+    entity_base: chasseur
+    notes: Discreet equipment, military experience
+    motivations: Avenge Kethara's defeat. Recruit the desperate for the cause. Eliminate potential traitors like Jax.
+  - name: Commander Mira Sarros
+    role: Saboteur leader / Primary antagonist
+    description: Former Kethara army officer (45 years old), brilliant tactician. Refuses to accept defeat. Ready to do anything to strike the Empire.
+    entity_base: commandante_resistance
+    motivations: Lead the resistance against the Empire. The attack is a symbolic act to rally the population. The deaths are a "necessary sacrifice."
+encounters:
+  - name: Crime Scene
+    type: exploration
+    difficulty: medium
+    location: Parade warehouses - Level 2
+    description: Jax Morell's body is hidden behind crates of parade material. The players must collect clues.
+    challenges:
+      - "Perception 14: find textile fibers under the victim's fingernails"
+      - "Intelligence 15 or Medicine: determine time of death (12-18h)"
+      - "Perception 16: footprints leading toward the service exit"
+      - "Investigation 15: Jax's mobile phone (needs Hacker to unlock)"
+    rewards:
+      - Resume and cover letter for "SecurKeth Solutions"
+      - Phone with last call to Lyra and encrypted messages
+      - Photo of Lyra in his wallet
+      - "Temporary warehouse access badge (suspicious: how did he get it?)"
+  - name: Lyra Interrogation
+    type: social
+    difficulty: low
+    location: Cafe "The Conquered" - City center
+    description: Lyra is devastated to learn of Jax's death. She wants to help but doesn't know much.
+    success_conditions:
+      - "Charisma (Empathy) roll difficulty 13: she opens up freely"
+      - "Charisma (Persuasion) roll difficulty 15: she reveals embarrassing details"
+    rewards:
+      - "Information: Jax had \"found a job\" a few days ago"
+      - "Information: He called her last night, seemed panicked, but she did not answer"
+      - "Information: He had become depressive due to unemployment, the couple had no future"
+      - "Solid alibi: she was at work at the time of the murder"
+  - name: Confrontation with Local Police
+    type: social
+    difficulty: hard
+    location: Kethara-City Police Station
+    description: Lieutenant Koss refuses to fully cooperate. Tension between local and imperial authority.
+    success_conditions:
+      - "Charisma (Intimidation) roll difficulty 17: impose imperial authority (risk of diplomatic degradation)"
+      - "Charisma (Persuasion) roll difficulty 16: appeal to professionalism"
+      - "Show concrete proof of the conspiracy: he cooperates out of duty"
+    failure_consequence: Koss blocks access to local resources, slows the investigation (-1h game time)
+    rewards:
+      - "Access to police files on Jax (confirms: no criminal record)"
+      - "Information on \"SecurKeth Solutions\": no registered commercial license"
+      - List of legitimate security companies for the parade (SecurKeth is not on it)
+  - name: Hunting Kael Theron
+    type: mixed
+    difficulty: hard
+    location: Industrial quarter - Clandestine hideout
+    description: The players have located Kael Theron. He can be interrogated, captured, or killed.
+    challenges:
+      - Infiltration (Stealth 16) or Frontal assault
+      - Kael will attempt to flee if spotted
+      - Combat if cornered (him + 2 armed saboteurs)
+    enemies:
+      - name: Kael Theron
+        count: 1
+        entity_base: chasseur
+      - name: Armed Saboteur
+        count: 2
+        entity_base: saboteur_arme
+    tactics: Kael attempts to flee first. His men cover his retreat. If captured alive, he can reveal the bomb's location under torture/persuasion (diff. 18).
+    rewards:
+      - Partial plans of the honor tribune
+      - Cell communication codes (allows locating Vess Narun)
+      - "If successfully interrogated: bomb location (tribune, 3rd west pillar)"
+  - name: Tribune Search - Against the Clock
+    type: exploration
+    difficulty: extreme
+    location: Honor tribune - Victory Square
+    description: "TIME LIMITED: The parade starts in 30 minutes (real time: 10-15 min). The players must find the bomb hidden in a massive structure."
+    challenges:
+      - "Perception 18: locate the bomb hidden in the 3rd west pillar"
+      - "Intelligence 17 or Explosives: disarm without plans"
+      - "Intelligence 15 or Explosives: disarm with Kael's plans"
+      - Each failed roll costs 5 minutes of game time
+    failure_consequence: The bomb explodes during the parade. 12 dead including 4 imperial generals. Mission failure.
+    rewards:
+      - "If success: Attack foiled, parade secured, major imperial recognition"
+      - Recovered bomb can be analyzed to identify the manufacturers
+  - name: Final Confrontation with Mira Sarros
+    type: combat
+    difficulty: hard
+    location: Secret observation point - Adjacent building rooftop
+    description: Commander Mira Sarros observes the tribune to remotely trigger the bomb. Combat is inevitable if the players find her.
+    enemies:
+      - name: Commander Mira Sarros
+        count: 1
+        entity_base: commandante_resistance
+        notes: Possesses a remote detonator for the bomb
+      - name: Resistance bodyguard
+        count: 2
+        entity_base: garde_du_corps
+    tactics: Mira stays back, shoots with her rifle. Her guards protect her position. If in danger, she attempts to trigger the detonator as a last resort.
+    special_mechanic: "If Mira presses the detonator and the bomb has not been disarmed: EXPLOSION. The players have 1 turn to prevent it (disarming shot, charge, etc.)."
+    rewards:
+      - "Mira's capture: information on the complete resistance network"
+      - "Recovered detonator: proof of the conspiracy"
+      - Major imperial reputation if parade secured
+      - Kethara military equipment (tactical armor, precision rifle)
+rewards:
+  points: 8-12 points per player based on performance (failure = 5 points)
+  credits: 2000 credits per player if success / 1000 credits if partial failure
+  items:
+    - Level 3 Imperial Security Badge (expanded access)
+    - Arcanotechnological weapon confiscated from saboteurs (player choice)
+    - Military tactical equipment (recovered from Mira)
+  special: |
+    Depending on the outcome:
+    - TOTAL SUCCESS (attack foiled, saboteurs captured): +5 Reputation with the Empire, promotion, imperial medal, total trust from superiors
+    - PARTIAL SUCCESS (attack foiled BUT saboteurs escaped): +3 Reputation, official recognition but investigation continues
+    - PARTIAL FAILURE (attack succeeded BUT saboteurs captured after): +1 Reputation, official blame tempered by the arrest
+    - TOTAL FAILURE (attack succeeded, saboteurs escaped): -2 Reputation, internal investigation, possible demotion, psychological trauma
+variants:
+  - name: Complex Investigation Version
+    description: |
+      For groups who enjoy in-depth investigation:
+      - Add more false leads (innocent suspects, red herrings)
+      - Complexify the resistance cell structure (3-4 levels)
+      - Add cryptographic clues to decipher
+      - Allow infiltrating the cell by posing as recruits
+  - name: Action Version
+    description: |
+      For groups who enjoy combat:
+      - Reduce the investigation phase (Cipher gives shortcuts)
+      - Multiply armed confrontations with saboteur cells
+      - Add a vehicle chase through the streets of Kethara-City
+      - Epic final combat on the tribune as the parade begins
+  - name: Quick Version (2h)
+    description: |
+      For short sessions:
+      - Lyra directly gives the name "SecurKeth Solutions"
+      - Kael is easy to locate and talks quickly
+      - Reduce parade time to 4 hours (1h30 real time)
+      - Simplify the tribune search (Perception 15)
+related_content:
+  spells_used:
+    - Révélation
+    - Détection des mensonges
+    - Camouflage
+    - Communication
+  equipment_used:
+    - Kit d'investigation
+    - Analyseur arcanotechnique
+    - Armure tactique légère
+    - Fusil de précision
+  locations:
+    - Kethara-City (recently conquered planet)
+    - Parade Warehouses
+    - Victory Square - Honor Tribune
+    - Industrial quarter - Clandestine hideouts
+tags:
+  - investigation
+  - political
+  - time-pressure
+  - urban
+  - mystery
+  - terrorism
+  - resistance
+  - intermediate
+author: Lanathlor
+gm_tips: |
+  GM TIPS:
+
+  1. TIME PRESSURE: Time is the main enemy. Use a visible countdown. Every false lead, every failed interrogation = time lost.
+
+  2. FAILURE IS AN OPTION: This scenario is DESIGNED to be difficult. Do not artificially make it easier. If the players fail, the attack takes place. It is narratively powerful.
+
+  3. EXPLOSION CONSEQUENCES: If the bomb explodes, describe the horror. Dead, wounded, screams. The players must FEEL the failure. But they can still capture the saboteurs and limit the damage.
+
+  4. LOCAL POLICE: Harven Koss is not a villain. He is frustrated, humiliated by the occupation. Play that tension. The players can rally him if they show respect.
+
+  5. LYRA: She is an innocent and vulnerable witness. Do not turn her into a suspect unless the players are really paranoid. She can become an emotional anchor point.
+
+  6. MIRA SARROS: She is a fanatic but not stupid. She sincerely believes the Empire is an oppressor. Give her depth in her dialogue if captured.
+
+  7. PROGRESSIVE CLUES: If the players are stuck, give subtle hints (anonymous call, a witness comes forward). But do NOT give them the solution.
+
+  8. ATMOSPHERE: Rising tension. Countdown music. Descriptions of the festive city unaware of the danger. Contrast between the colorful parade and the dark conspiracy.
+
+  9. IMPERIAL REPRESSION: If the attack succeeds, the Empire will react firmly but methodically. Temporary martial law, reinforced security sweeps, intensive investigations and targeted arrests of suspects. Political pressure on the local government for having "failed to maintain order." The players witness the consequences of their failure and rising tensions.
+
+  10. POSSIBLE SEQUEL: This scenario can launch a campaign. If the attack succeeds, the resistance ignites. The players must dismantle the complete network. If foiled, Mira becomes a martyr, rallying more recruits.

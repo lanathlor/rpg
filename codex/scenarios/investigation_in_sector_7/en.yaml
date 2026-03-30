@@ -1,0 +1,265 @@
+name: Investigation in Sector 7
+description: A renowned arcanotechnician has disappeared in the industrial zone. The players must discover what hides behind this disappearance before the situation spirals out of control.
+description_long: |
+  Doctor Kaela Vex, a brilliant arcanotechnician specializing in Flux energy crystals, mysteriously disappeared 48 hours ago. Her last known position: Sector 7, a decrepit industrial zone on the outskirts of Prime City.
+
+  The Imperial Bureau of Arcanotechnological Research (IBAR), her employer, wants to discreetly recover her research before it falls into the wrong hands. But the truth is far darker: Dr. Vex had discovered a forbidden application of the Flux and was fleeing to protect her discovery.
+
+  The players, hired as independent investigators, will plunge into a network of corruption, illegal research, and bureaucratic betrayal. Between local gangs, corrupt imperial security agents, and dangerous experiments, they must navigate carefully to survive.
+category: one-shot
+theme: investigation
+difficulty: intermediate
+setting: urban
+gm_notes:
+  preparation_time: 30 minutes
+  complexity: medium
+  tone: Tech-noir investigation with action - dark cyberpunk atmosphere
+synopsis: |
+  Dr. Kaela Vex discovered a way to create multi-affinity Flux energy crystals - a revolutionary but dangerous technology. Realizing that the IBAR would want to militarize her discovery, she fled with her prototype.
+
+  She took refuge in her old clandestine laboratory in Sector 7, but Security Commander Marcus Kane, corrupt and opportunistic, discovered her hideout and is trying to steal the prototype to sell it to foreign powers hostile to the Empire.
+
+  The players will need to:
+  1. Investigate the disappearance and discover Vex's last movements
+  2. Navigate between Sector 7's distrustful population, clandestine informants, and corrupt imperial agents
+  3. Find the secret laboratory before Kane
+  4. Decide the prototype's fate: return it to the IBAR, destroy it, or help Vex escape
+
+  Possible outcomes:
+  - Heroic: Help Vex flee with her prototype
+  - Loyal: Return the prototype to the IBAR (+imperial reward, -morale)
+  - Pragmatic: Destroy the prototype to avoid catastrophe
+  - Criminal: Steal the prototype and resell it (betrayal against the Empire - very dangerous!)
+acts:
+  - act: "1"
+    title: The Contract
+    description: Engagement by the IBAR and first investigations
+    key_scenes:
+      - Meeting with Elena Voss, IBAR research director - initial briefing
+      - Visit to Vex's apartment - discovery of encrypted notes
+      - First contact with Sector 7 inhabitants - witnesses of Vex's passage
+      - Ambush by corrupt security agents who want to eliminate witnesses
+    estimated_duration: 45-60 minutes
+  - act: "2"
+    title: Into the Depths
+    description: Exploration of Sector 7 and discovery of the conspiracy
+    key_scenes:
+      - Negotiation or intimidation of local informants for information
+      - Discovery of warehouse 12-B - recent crime scene
+      - Encounter with Cipher, hacker informant - reveals Kane's corruption
+      - Infiltration of IBAR archives to access security files
+      - Chase through the industrial tunnels
+    estimated_duration: 90-120 minutes
+  - act: "3"
+    title: The Secret Laboratory
+    description: Final confrontation and moral choice
+    key_scenes:
+      - Discovery of the hidden laboratory beneath the old foundry
+      - Meeting with Dr. Vex - she explains her discovery and her fears
+      - Arrival of Kane and his commando team - laboratory siege
+      - Tactical combat or three-way negotiation (players, Vex, Kane)
+      - Final decision on the prototype's fate
+      - "Epilogue: consequences of the players' choices"
+    estimated_duration: 60-90 minutes
+npcs:
+  - name: Dr. Kaela Vex
+    role: Mission objective / Potential ally
+    description: Brilliant arcanotechnician (35 years old), idealist. Enhanced ocular implants and always carries a Flux crystal in hand. Frightened but determined.
+    entity_base: arcanotechnicien
+    notes: Pure School, Flux energy crystal expertise
+    motivations: Protect her discovery from militarization, prove that science must serve humanity and not war
+  - name: Elena Voss
+    role: Quest giver (apparent)
+    description: IBAR research director (42 years old), cold and calculating. Impeccable suit, discreet imperial insignias, visible neural implants, pale skin.
+    entity_base: civil
+    notes: High social skills
+    motivations: Recover Vex's research for the Empire and her own bureaucratic career. Unaware of Kane's agenda.
+  - name: Commander Marcus Kane
+    role: Primary antagonist
+    description: IBAR Security Commander (48 years old), corrupt military veteran. Imposing, visible military cybernetics, plasma scar on face.
+    entity_base: soldat_imperial
+    notes: Heavy military equipment, arcanotechnological rifle
+    motivations: Steal the prototype to sell to foreign powers hostile to the Empire. A traitor ready to eliminate all witnesses.
+  - name: Vex-7 "The Foreman"
+    role: Former factory foreman / Local informant / Information source
+    description: Ex-foreman turned respected figure among Sector 7 workers (31 years old). Covered in bioluminescent tattoos and augmentation scars from workplace accidents. Distrustful of authorities but pragmatic.
+    entity_base: combattant_de_rue
+    motivations: Protect the sector workers from abuse. Survival and worker solidarity. Can become an ally if paid or if the players show respect for the local population.
+  - name: Cipher
+    role: Informant / Neutral hacker
+    description: Independent hacker (24 years old), nervous but competent. Lives in a clandestine apartment filled with screens and cables. Augmented reality glasses constantly active.
+    entity_base: civil
+    notes: Expert-level Hacker skill
+    motivations: Money and survival. Will sell information to the highest bidder but prefers to avoid violence and imperial authorities.
+  - name: Lieutenant Kess Varn
+    role: Imperial security forces (possible intervention)
+    description: Incorruptible Imperial Security officer (29 years old), tired of bureaucratic corruption but idealistic. Worn but well-maintained patrol armor.
+    entity_base: soldat_imperial
+    motivations: Stop traitors and corrupt officials within the Empire. Can help the players if they prove Kane's betrayal.
+encounters:
+  - name: Corrupt Security Ambush
+    type: combat
+    difficulty: medium
+    location: Sector 7 alleyway - Act 1
+    enemies:
+      - name: Corrupt imperial security agent
+        count: 3
+        entity_base: soldat_imperial
+      - name: Armed reconnaissance drone
+        count: 1
+        entity_base: drone_leger
+    tactics: Ambush from the rooftops. The drone flanks while the agents fire from covered positions.
+    rewards:
+      - IBAR level 1 access cards
+      - 400 credits in recovered equipment
+      - Proof of corruption (communication logs revealing Kane's orders)
+  - name: Negotiation with Sector 7 Inhabitants
+    type: social
+    difficulty: medium
+    location: Worker bar "The Sector" - Warehouse 7
+    description: Convince Vex-7 and the local workers to share what they know about the scientist's passage. The sector inhabitants saw Vex but distrust imperial agents and IBAR bureaucrats.
+    success_conditions:
+      - Charisma (Persuasion) roll difficulty 15 - show that you don't really work for the IBAR or that you're trying to help Vex
+      - Strength (Intimidation) roll difficulty 17 - show of force (but risk of closing all future cooperation)
+      - Pay 800 credits (collective bribe)
+      - Promise to rid the sector of Kane and his corrupt men
+      - Show respect for the difficult working conditions and worker solidarity
+    failure_consequence:
+      type: combat
+      description: Defensive combat - workers protect their community
+      enemies:
+        - name: Armed Worker
+          count: 6
+          entity_base: ouvrier_arme
+    rewards:
+      - "Information: Vex seen entering the old foundry, level -2"
+      - Map of Sector 7 tunnels (maintenance passages known to workers)
+      - Potential ally for act 3
+  - name: IBAR Archive Infiltration
+    type: exploration
+    difficulty: hard
+    description: Penetrate the IBAR's secured archives to access surveillance files showing Kane's movements and prove his betrayal.
+    challenges:
+      - Advanced imperial security systems (Perception 16 to detect, Intelligence 17 or Hacker to disable)
+      - Imperial guard patrols (Stealth 15 to avoid)
+      - Secured military terminal (Intelligence 18 or Hacker to access classified logs)
+    failure_consequence: Alarm triggered - 4 imperial guard reinforcements arrive in 3 turns
+    rewards:
+      - Communication logs revealing Kane's betrayal and his contacts with foreign powers
+      - Complete Sector 7 schematic with the laboratory marked
+      - Level 3 temporary access codes
+  - name: Tunnel Chase
+    type: mixed
+    difficulty: medium
+    description: The players are spotted and pursued by Kane's team through the industrial tunnels.
+    challenges:
+      - Chase (opposed Agility rolls)
+      - Environmental obstacles (steam pipes, unstable platforms)
+      - Combat while moving if caught
+    enemies:
+      - name: Kane's elite agent
+        count: 2
+        entity_base: soldat_imperial
+    rewards:
+      - Escaping the chase preserves the tactical advantage for act 3
+  - name: Laboratory Siege
+    type: combat
+    difficulty: hard
+    location: Underground laboratory - Act 3
+    description: Kane and his commando team attack the laboratory. The players must protect Vex and the prototype.
+    enemies:
+      - name: Marcus Kane
+        count: 1
+        entity_base: soldat_imperial
+      - name: Elite commando
+        count: 4
+        entity_base: soldat_imperial
+      - name: Heavy combat drone
+        count: 2
+        entity_base: drone_militaire
+    tactics: Kane coordinates the assault. Commandos advance in formation, drones provide fire support. Kane targets the prototype.
+    alternative: Can be resolved by negotiation if the players have sufficient evidence against Kane or can threaten him politically
+    rewards:
+      - "Kane's defeat: quality military equipment"
+      - "Successful negotiation: Kane arrested, reputation with the police"
+rewards:
+  points: 5-10 points per player based on choices and resolutions
+  credits: 1500 credits per player + 500 credits bonus depending on outcome
+  items:
+    - Experimental Flux energy crystal (dual affinity - very rare)
+    - Combat neural implant (player choice)
+    - Enhanced arcanotechnological weapon (player choice)
+    - Military medical kit x3
+  special: |
+    Depending on the chosen outcome:
+    - Allied with Vex: High-level scientific contact, access to cutting-edge (clandestine) research
+    - Returned to the IBAR: +3 Reputation with the Empire, lucrative imperial contracts, official recognition
+    - Destroyed the prototype: +2 Reputation with imperial security forces, clear conscience
+    - Sold on the black market: 5000 additional credits but hunted by the Empire as a traitor - VERY dangerous
+variants:
+  - name: Intense Combat Version
+    description: |
+      For groups who enjoy action:
+      - Add a combat encounter in Act 1 (hostile workers by default, social conflict)
+      - Make the archive infiltration impossible - force a frontal assault
+      - Double the enemies during the final siege
+      - Kane flees if beaten, creating a recurring nemesis hunted by the Empire
+  - name: Pure Investigation Version
+    description: |
+      For groups who enjoy investigation:
+      - Replace the Act 1 ambush with more clues and NPCs
+      - Add technical puzzles (decryption, crystal analysis)
+      - Allow turning Kane or his men with evidence
+      - Possible outcome without any combat at all
+  - name: Quick Version (2h)
+    description: |
+      For short sessions:
+      - Remove the archive infiltration
+      - Cipher directly gives the laboratory location
+      - Combine Acts 2 and 3
+      - Simplify the final siege (3 enemies instead of 7)
+related_content:
+  spells_used:
+    - Camouflage
+    - Flash
+    - Annulation arcanotechnique
+    - Révélation
+    - Frappe précise
+  equipment_used:
+    - Exosquelette de combat
+    - Fusil d'assaut
+    - Implant neural
+    - Cristal de mana
+  locations:
+    - Sector 7 - Abandoned Industrial Zone
+    - IBAR Complex - Imperial Archives
+    - Underground Laboratory Alpha-9 (clandestine)
+    - Abandoned industrial tunnels
+tags:
+  - investigation
+  - imperial-corruption
+  - tech-noir
+  - urban
+  - mystery
+  - moral-choice
+  - espionage
+  - beginner-friendly
+author: Lanathlor
+gm_tips: |
+  GM TIPS:
+
+  1. FLEXIBILITY: The players can approach the scenario in multiple ways. Be prepared to improvise.
+
+  2. PACING: If Act 2 drags on, Cipher can directly reveal the location to speed things up.
+
+  3. KANE: He is a pragmatic antagonist, not a fanatic. He can surrender or flee if the situation turns bad.
+
+  4. VEX: She is not a damsel in distress. She can defend herself and has prepared defenses in her lab.
+
+  5. MORAL CHOICE: Do not force a "good" answer. All outcomes have interesting consequences.
+
+  6. ATMOSPHERE: Use descriptions of neons, acid rain, decrepit neighborhoods to reinforce the tech-noir feeling.
+
+  7. BACKUPS: Prepare backup NPCs (e.g., additional witness) in case the players get stuck on the investigation.
+
+  8. TACTICAL COMBAT: Sector 7 offers a lot of cover and elevation. Use the environment.

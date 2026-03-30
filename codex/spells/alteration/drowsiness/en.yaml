@@ -1,0 +1,17 @@
+spell_series: Drowsiness
+description_base: Puts the target to sleep. They can no longer act and wake up at the end of the effect or upon taking damage.
+levels:
+  - level: "1"
+    name: Drowsiness
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[quantique]: 3"
+        type_requirement: "A.Type[alteration]: 3"
+        mixed_requirement: "A.École[quantique] + A.Type[alteration]: 9"
+    conditions:
+      charisma_required: 18
+      flux_cost: 10
+    effects:
+      status: The target is incapacitated
+      resistance: RINT
+    duration: 1d4

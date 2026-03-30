@@ -1,0 +1,13 @@
+name: Short sword
+category: Melee weapon
+subcategory: 1-handed
+type: swords
+cost: 150 credits
+prerequisites:
+  affinity: A. CAC 1
+stats:
+  damage: 1d6
+  off_hand_damage: 1d4
+  attack_type: quick attack (DEX)
+  defense_type: dodge (DEX)
+description: Short and maneuverable sword, ideal as a secondary weapon or for fighters favoring stealth.

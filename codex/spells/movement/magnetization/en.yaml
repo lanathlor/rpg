@@ -1,0 +1,17 @@
+spell_series: Magnetization
+description_base: Uses magnetic forces to propel oneself rapidly.
+levels:
+  - level: "1"
+    name: Magnetization
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[magnétique]: 3"
+        type_requirement: "A.Type[deplacement]: 3"
+        mixed_requirement: "A.École[magnétique] + A.Type[deplacement]: 9"
+    conditions:
+      special: none
+      flux_cost: 7
+    effects:
+      movement: Instant movement of 10m
+      special: Can pass through metallic objects
+    duration: instant

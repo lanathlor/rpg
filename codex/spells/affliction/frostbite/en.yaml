@@ -1,0 +1,16 @@
+spell_series: Frostbite
+description_base: The target suffers from frostbite, disrupting their senses. Cumulative freeze effect that progressively slows and weakens the victim.
+levels:
+  - level: "1"
+    name: Frostbite
+    prerequisites:
+      special: Cannot be cast directly by a character - only applied by other spells
+    conditions:
+      activation: Triggered by a frost spell
+      flux_cost: 0
+    effects:
+      debuff: "-1 speed, -1 hit score per stack"
+      resistance: RRAD
+      special: Stackable. New application resets duration to 0. 5 stacks = 2d20+8 damage then lose 5 'Frostbite'
+      duration: 2 turns
+    recharge_time: instant

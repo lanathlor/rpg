@@ -1,0 +1,17 @@
+name: Imperial Guard
+type: Soldier
+faction: Empire
+alignement: neutral
+description: A standard Imperial guard, trained for military installation defense and peacekeeping.
+equipment:
+  weapons:
+    - Fusil mitrailleur
+  armor:
+    - Armure de plate légère
+  consumables:
+    - name: Kit de soins
+      quantity: 1
+skills:
+  - Guerrier
+spells: []
+gameplay_guide: A standard Imperial guard. Good in close combat with light plate armor, equipped with a machine gun to cover strategic zones. Prefers tactical group combat.

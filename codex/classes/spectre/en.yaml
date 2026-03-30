@@ -1,0 +1,23 @@
+name: Spectre
+type: Sharpshooter
+description: Silent shadows of the Empire, Spectres operate where others would not dare venture. Absolute masters of precision shooting and infiltration, they eliminate their targets with surgical accuracy from positions the enemy does not even suspect. Their rigorous training combines camouflage techniques, ballistic mastery, and mental endurance to create soldiers capable of operating alone behind enemy lines for weeks. Every shot they take can change the course of a battle, every piece of intelligence they bring back can save thousands of imperial lives.
+equipment:
+  weapons:
+    - Sniper rifle
+    - Short sword
+  armor:
+    - Stabilizer exoskeleton
+  consumables:
+    - name: Healing kit
+      quantity: 1
+    - name: Flash
+      quantity: 1
+skills:
+  - Eagle eye
+  - Prowler
+spells:
+  - Headshot
+  - Overcharged shot
+  - Precise strike
+  - Camouflage
+gameplay_guide: The Spectre is a class that greatly benefits from their sniper rifle. They play at range, sometimes away from the group to provide maximum support. Be careful not to lose sight of the enemies at the risk of getting isolated.

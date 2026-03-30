@@ -1,0 +1,31 @@
+name: Light Automatic Turret
+type: Defensive Installation / Automated System
+faction: Aceras
+alignement: hostile
+description: Automated defensive turret equipped with an automatic rifle and 360-degree sensors. Standard perimeter defense system for Aceras installations.
+equipment:
+  weapons:
+    - Fusil automatique de tourelle
+  armor: []
+  consumables: []
+skills: []
+spells: []
+gameplay_guide: |
+  Immobile automated turret with 360-degree vision. Cannot move but excellent area coverage.
+
+  CAPABILITIES:
+  - 360-degree vision: impossible to flank, detects all approaches
+  - Constant automatic fire without fatigue
+  - Reacts instantly to movement
+
+  WEAKNESSES:
+  - Immobile (speed 0)
+  - Can be hacked (Intelligence 15 or Hacker skill)
+  - Vulnerable to EMP and electrical alteration spells
+  - Weak points: power generator (rear), sensors (top)
+
+  APPROACH TACTICS:
+  - Use cover to approach undetected
+  - Hack for deactivation or takeover
+  - Targeted shots on generator or sensors
+  - Explosives for rapid destruction

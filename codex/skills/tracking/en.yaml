@@ -1,0 +1,7 @@
+name: Tracking
+category: Skill
+subcategory: survival
+effects:
+  - type: special
+    description: Tracks prey with great efficiency, revealing clues left behind
+description: Tracking skill allowing following of traces and clues left by creatures and characters.

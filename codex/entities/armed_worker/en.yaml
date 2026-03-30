@@ -1,0 +1,15 @@
+name: Armed Worker
+type: Civilian / Improvised Combatant
+faction: Variable
+alignement: variable
+description: Industrial worker who has taken up arms to defend their community. No formal military training but determined and knows their territory well. Equipped with improvised or salvaged weapons.
+equipment:
+  weapons:
+    - Fusil d'assaut
+  armor:
+    - Armure de cuir renforcée
+  consumables: []
+skills:
+  - Combattant
+spells: []
+gameplay_guide: Worker defending their community. No military training but determined and knows the terrain. Fights with courage but lacks tactical discipline. Dangerous in numbers and on their own territory. Uses cover and defensive positions.

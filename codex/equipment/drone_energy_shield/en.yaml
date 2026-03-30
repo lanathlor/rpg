@@ -1,0 +1,12 @@
+name: Drone energy shield
+category: Equipment
+subcategory: defensive system
+cost: 1800 credits
+prerequisites:
+  stat: INT 12
+stats:
+  RMEC: "+2"
+  RRAD: "+3"
+  RINT: "+0"
+  special: "Shield regeneration: 1 resistance point per turn if not damaged this turn"
+description: Miniaturized force field generator for autonomous units. Creates an energy shield around the drone that absorbs damage. The system automatically regenerates between impacts. Particularly effective against energy weapons (RRAD).

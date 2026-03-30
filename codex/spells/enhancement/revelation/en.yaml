@@ -1,0 +1,15 @@
+spell_series: Revelation
+description_base: Your topographic knowledge gives you the ability to reveal the terrain ahead of you at a glance.
+levels:
+  - level: "1"
+    name: Revelation
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[bioarcanotechnique]: 2"
+        type_requirement: "A.Type[amelioration]: 2"
+        mixed_requirement: "A.École[bioarcanotechnique] + A.Type[amelioration]: 6"
+    conditions:
+      perception_required: 18
+      flux_cost: 4
+    effects:
+      special: Reveals a 20m² terrain patch at a maximum distance of 100 meters. Reveals traps and characters approximately

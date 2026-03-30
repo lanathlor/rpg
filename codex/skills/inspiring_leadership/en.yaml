@@ -1,0 +1,9 @@
+name: Inspiring Leadership
+category: Skill
+subcategory: social
+effects:
+  - type: morale
+    description: Allies within a 15m radius are immune to fear
+  - type: special
+    description: Can rally a panicked or demoralized ally as a free action
+description: Inspiring charismatic presence. Galvanizes troops and maintains morale even in desperate situations.

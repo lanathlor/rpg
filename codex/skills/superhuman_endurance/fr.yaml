@@ -1,0 +1,9 @@
+name: Endurance surhumaine
+category: Compétence
+subcategory: physique
+effects:
+  - type: health
+    description: +30 PV maximum
+  - type: special
+    description: Immunité à la fatigue normale, peut combattre pendant 24h sans repos
+description: Endurance physique extraordinaire. Le corps a été conditionné pour fonctionner bien au-delà des limites humaines.

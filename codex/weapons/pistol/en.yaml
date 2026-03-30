@@ -1,0 +1,13 @@
+name: Pistol
+category: Ranged weapon
+subcategory: one-handed weapon
+type: pistol
+cost: 300 credits
+prerequisites:
+  affinity: A. dist 1
+stats:
+  damage: 1d8
+  off_hand_damage: 1d4
+  attack_type: ranged shot (PRE)
+  defense_type: dodge (DEX)
+description: Standard sidearm, easy to conceal and handle. Ideal for close-range combat or as a secondary weapon.

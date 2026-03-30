@@ -1,0 +1,17 @@
+spell_series: Augmented Shrapnel Cartridge
+description_base: You load a cartridge with more shrapnel.
+levels:
+  - level: "1"
+    name: Augmented Shrapnel Cartridge
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[balistique]: 2"
+        type_requirement: "A.Type[arme]: 2"
+        mixed_requirement: "A.École[balistique] + A.Type[arme]: 6"
+      equipment:
+        - Fusil à pompe
+    conditions: null
+    recharge_time: 80 sec
+    effects:
+      damage_bonus: Add 1d8 d4 to your next attack
+      resistance: RMEC

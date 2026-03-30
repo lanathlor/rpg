@@ -1,0 +1,31 @@
+spell_series: Flash
+description_base: Creates a blinding sphere of light on a target.
+levels:
+  - level: "1"
+    name: Flash
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[lumière]: 2"
+        type_requirement: "A.Type[alteration]: 2"
+        mixed_requirement: "A.École[lumière] + A.Type[alteration]: 6"
+    conditions:
+      intelligence_required: 14
+      flux_cost: 4
+    effects:
+      status: The target can no longer act or defend itself
+      resistance: RRAD
+    duration: 1 turn
+  - level: "2"
+    name: Flash II
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[lumière]: 3"
+        type_requirement: "A.Type[alteration]: 3"
+        mixed_requirement: "A.École[lumière] + A.Type[alteration]: 9"
+    conditions:
+      intelligence_required: 14
+      flux_cost: 7
+    effects:
+      status: The target can no longer act or defend itself
+      resistance: RRAD
+    duration: 2 turns

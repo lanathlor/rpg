@@ -1,0 +1,11 @@
+name: Combat Virtuoso
+category: Skill
+subcategory: combat
+prerequisites:
+  skill: Guerrier
+effects:
+  - type: combat
+    description: +3 to attack and damage rolls with all weapons
+  - type: special
+    description: "Master stroke: On a natural 20, damage is maximized and doubled"
+description: Absolute martial mastery. Combat has become a perfected art, each movement optimized for maximum efficiency.

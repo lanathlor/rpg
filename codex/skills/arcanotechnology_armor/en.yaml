@@ -1,0 +1,7 @@
+name: Arcanotechnology Armor
+category: Skill
+subcategory: defensive
+effects:
+  - type: defense
+    description: +1 RRAD and +1 RINT
+description: Concentration technique allowing the creation of a passive energy protection. The character manipulates their own Flux to form a shield that dissipates radiative energy (RRAD) and stabilizes metabolism against internal intrusions (RINT).

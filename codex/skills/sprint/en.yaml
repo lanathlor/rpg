@@ -1,0 +1,7 @@
+name: Sprint
+category: Skill
+subcategory: mobility
+effects:
+  - type: movement
+    description: Can move twice in one turn
+description: Physical training allowing rapid coverage of great distances, even in combat situations.

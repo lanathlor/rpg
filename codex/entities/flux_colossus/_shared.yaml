@@ -1,0 +1,29 @@
+base_stats:
+  health: 230
+  speed: 5
+innate_resistances:
+  RMEC: 9
+  RRAD: 5
+  RINT: 14
+flux_system:
+  reserve: 30
+  per_turn: 9
+  recovery: 9
+affinities:
+  distance: 0
+  melee: 6
+  schools:
+    bioarcanotechnique: 10
+    biometabolique: 8
+  types:
+    alteration: 5
+    affliction: 5
+    amelioration: 7
+stats:
+  force: 18
+  dexterite: 15
+  constitution: 18
+  intelligence: 14
+  perception: 17
+  precision: 14
+  charisme: 10

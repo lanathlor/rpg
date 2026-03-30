@@ -1,0 +1,13 @@
+name: Civilian
+type: Non-combatant / Civilian Personnel
+faction: Variable
+alignement: variable
+description: Ordinary citizen without military training. May be a doctor, scientist, technician, merchant, or simple inhabitant. Variable professional skills but very limited combat capabilities.
+equipment:
+  weapons: []
+  armor:
+    - Tunique
+  consumables: []
+skills: []
+spells: []
+gameplay_guide: Civilian without combat training. Flees or surrenders if threatened. May have useful professional skills (medicine, science, technology, etc.) depending on context. Vulnerable in combat. Use the 'notes' field in scenarios to specify the profession and specific skills.

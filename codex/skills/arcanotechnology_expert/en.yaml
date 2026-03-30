@@ -1,0 +1,9 @@
+name: Arcanotechnology Expert
+category: Skill
+subcategory: knowledge
+effects:
+  - type: detection
+    description: Increases chances of noticing arcanotechnology-related elements
+  - type: detection
+    description: Can recognize cast spells through a maneuver
+description: Deep knowledge of arcanotechnological theory allowing identification and understanding of arcanotechnological phenomena.

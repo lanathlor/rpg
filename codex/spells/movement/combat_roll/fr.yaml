@@ -1,0 +1,33 @@
+spell_series: Roulade
+description_base: Effectue une roulade rapide pour esquiver et se repositionner.
+levels:
+  - level: "1"
+    name: Roulade
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[martial]: 2"
+        type_requirement: "A.Type[deplacement]: 2"
+        mixed_requirement: "A.École[martial] + A.Type[deplacement]: 6"
+    conditions:
+      dexterity_required: 14
+    recharge_time: 20 sec
+    effects:
+      movement: Déplacement de 5m + esquive automatique
+      defense_bonus: +2 en défense jusqu'au prochain tour
+    duration: 1 tour
+  - level: "2"
+    name: Roulade II
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[martial]: 3"
+        type_requirement: "A.Type[deplacement]: 3"
+        mixed_requirement: "A.École[martial] + A.Type[deplacement]: 9"
+      equipment:
+        - Exosquelette
+    conditions:
+      dexterity_required: 12
+    recharge_time: 40 sec
+    description: Grâce à la rapidité de vos mouvements et à la puissance conférée par l'exosquelette, vous vous propulsez loin du danger.
+    effects:
+      movement: Déplacement de 1d8 + vitesse dans n'importe quelle direction
+      special: Ne déclenche pas de jet d'opportunité. Ce sort est considéré comme un déplacement

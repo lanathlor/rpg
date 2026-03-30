@@ -1,0 +1,16 @@
+spell_series: Pursuit
+description_base: Your connection to the elements allows you to locate anyone on the planet.
+levels:
+  - level: "1"
+    name: Pursuit
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[bioarcanotechnique]: 2"
+        type_requirement: "A.Type[amelioration]: 2"
+        mixed_requirement: "A.École[bioarcanotechnique] + A.Type[amelioration]: 6"
+      special: Knowledge of the target
+    conditions:
+      flux_cost: 8
+    effects:
+      special: You know precisely where your target is located
+    duration: 1 hour

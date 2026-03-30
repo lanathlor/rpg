@@ -1,0 +1,22 @@
+name: Arcanotechnologist
+type: Tactician
+description: Although often confused with Arcanotechnicians by civilians, Arcanotechnologists follow a radically different path. They are former Arcanotechnician aspirants whose arcanotechnical affinity manifested late, steering them toward theoretical study rather than pure practice. True engineers of the quantum, they design and refine the spells used by the Empire, whether for military or industrial applications. Every spell cast by an Arcanotechnician originates from an Arcanotechnologist's research. Faced with the impossibility of adapting their creations from their laboratories, a combat branch developed to deploy Arcanotechnologists directly in the field. Their presence makes every battle unpredictable, their tactical innovations disrupting established strategies.
+equipment:
+  weapons:
+    - Staff
+  armor:
+    - Tunic
+  consumables:
+    - name: Healing kit
+      quantity: 1
+    - name: Flux Crystal
+      quantity: 1
+skills:
+  - Arcanotechnology expert
+  - Scientist
+spells:
+  - Confusion
+  - Spark
+  - Optimization
+  - Knowledge sharing
+gameplay_guide: The Arcanotechnologist is a support class; you depend on your allies and they depend on you. Communication is key to making this class a solid pillar of your group. Your high perception is a perfect tool for navigating correctly without missing important details, if you look in the right places.

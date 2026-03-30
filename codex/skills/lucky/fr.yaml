@@ -1,0 +1,9 @@
+name: Chanceux
+category: Compétence
+subcategory: special
+effects:
+  - type: luck
+    description: Peut relancer un jet de dé raté (3/jour, doit garder le second résultat)
+  - type: special
+    description: Les échecs critiques deviennent des échecs normaux
+description: Chance extraordinaire qui défie les probabilités. Les événements semblent conspirer en faveur du personnage.

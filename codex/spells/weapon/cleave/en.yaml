@@ -1,0 +1,17 @@
+spell_series: Cleave
+description_base: Delivers a powerful blow that can cut through multiple aligned enemies.
+levels:
+  - level: "1"
+    name: Cleave
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[martial]: 4"
+        type_requirement: "A.Type[arme]: 4"
+        mixed_requirement: "A.École[martial] + A.Type[arme]: 12"
+    conditions:
+      strength_required: 16
+    recharge_time: 40 sec
+    effects:
+      damage: +2d6+4 to weapon damage
+      resistance: RMEC
+      special: Strikes in a straight line, can hit multiple targets

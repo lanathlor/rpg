@@ -1,0 +1,27 @@
+spell_series: Burn
+description_base: Burns the flesh of the person touched.
+levels:
+  - level: "1"
+    name: Burn
+    prerequisites:
+      note: Cannot be cast by a character
+    conditions:
+      activation: triggered by a spell
+    recharge_time: instant
+    effects:
+      damage: 1d4 each turn
+      resistance: RRAD
+      dice_rolled_once: true
+    duration: 3 turns
+  - level: "2"
+    name: Burn II
+    prerequisites:
+      note: Cannot be cast by a character
+    conditions:
+      activation: triggered by a spell
+    recharge_time: instant
+    effects:
+      damage: 1d4 + 3 each turn
+      resistance: RRAD
+      dice_rolled_once: true
+    duration: 3 turns

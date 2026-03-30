@@ -1,0 +1,9 @@
+name: Grenade
+category: Consumable
+subcategory: explosive
+cost: 200 credits
+effect:
+  damage: 1d12
+  area: 4-meter radius
+  usage: attack action
+description: Standard explosive grenade causing significant damage in an area of effect.

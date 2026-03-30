@@ -1,0 +1,9 @@
+name: Nature Comprehension
+category: Skill
+subcategory: survival
+effects:
+  - type: special
+    description: Identifying plants and animals is easier
+  - type: special
+    description: Can communicate in a primal way with certain animals
+description: Deep knowledge of natural ecosystems and limited ability to communicate with fauna.

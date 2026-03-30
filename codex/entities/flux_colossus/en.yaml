@@ -1,0 +1,61 @@
+name: Flux Colossus
+type: Boss / Arcanotechnological Creature
+faction: Hostile
+alignement: Neutral (controlled by Flux source)
+description: Hybrid plant/flesh entity created or transformed by a powerful Flux source. Massive 3-meter-tall humanoid form, roots and flesh fused in grotesque fashion. Greenish luminescent eyes. Possesses advanced bioarcanotechnological and biometabolic capabilities. Implacable guardian of its power source.
+equipment:
+  weapons: []
+  armor: []
+  consumables: []
+skills:
+  - Guerrier
+  - Régénération
+  - Contrôle végétal
+  - Vétéran
+  - Armure vivante
+  - Résistance toxique
+spells:
+  - series: Drain vital
+    level: "2"
+  - series: Spores hallucinogènes
+    level: "2"
+  - series: Mur de racines
+    level: "2"
+  - series: Croissance accélérée
+    level: "1"
+  - series: Corruption du Flux
+    level: "1"
+gameplay_guide: |
+  EXTREME BOSS (~500 points) - Massive hybrid plant/flesh creature
+
+  DS (varies by attack type):
+  - vs Heavy/2-handed (STR): 19
+  - vs Light/1-handed (DEX): 17-18
+  - vs Ranged (PRE): 17
+  - vs Arcanotechnological (INT): 17
+
+  SPECIAL SKILLS:
+  - Warrior (S-tier): Can attack TWICE per turn with roots
+  - Regeneration (A-tier): 10 HP/turn if connected to roots
+  - Plant Control (A-tier): Commands roots and vines within 10m
+  - Veteran: Resists control effects
+  - Living Armor (A-tier): Sacrifices roots to block attacks
+  - Toxic Resistance: Poison/disease immunity
+
+  ARCANOTECHNOLOGICAL ABILITIES:
+  - Life Drain (8 Flux): 3d8 RINT, recovers half as HP
+  - Hallucinogenic Spores (10 Flux): CON save 17 or hallucinations
+  - Root Wall (12 Flux): Creates a living barrier
+  - Accelerated Growth (6 Flux): Regenerates damaged roots
+  - Flux Corruption (15 Flux): Mental control attempt
+
+  ATTACKS:
+  - Roots/tentacles: 2d10+5 RMEC, range 3m (x2 with Warrior)
+  - Life Drain: 3d8 RINT, heals half
+  - Spores: 5m area, CON save 17
+
+  COMBAT PHASES:
+  Phase 1 (230-150 HP): Ranged, roots and spores, active regeneration
+  Phase 2 (150-75 HP): Aggressive, life drain, mental control
+  Phase 3 (<75 HP): Berserk, sacrifices defense for damage, double attacks
+notes: Major boss for end-of-scenario. Extremely powerful with regeneration, multiple attacks, and terrain control. Requires a coordinated group of level 3-4 minimum. Phased combat with changing tactics. Poison/disease immunity. Vulnerable to fire (separates flesh and plant matter).

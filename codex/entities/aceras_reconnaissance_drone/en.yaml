@@ -1,0 +1,13 @@
+name: Aceras Reconnaissance Drone
+type: Light Drone
+faction: Aceras
+alignement: hostile
+description: Autonomous Aceras reconnaissance drone equipped with thermal sensors and a light submachine gun. Fast and mobile surveillance unit.
+equipment:
+  weapons:
+    - Mitraillette de drone légère
+  armor: []
+  consumables: []
+skills: []
+spells: []
+gameplay_guide: Fast and fragile reconnaissance drone. Excellent perception for spotting enemies. Flight allows it to ignore difficult terrain. Weak in direct combat but effective for tactical support and flanking. Priority target, easy to eliminate.

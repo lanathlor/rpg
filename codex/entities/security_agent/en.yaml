@@ -1,0 +1,17 @@
+name: Security Agent
+type: Guard
+faction: Independent
+alignement: neutral
+description: A private security agent, typically employed to protect civilian or commercial installations.
+equipment:
+  weapons:
+    - Pistolet
+  armor:
+    - Tenue de survie
+  consumables:
+    - name: Kit de soins
+      quantity: 1
+skills:
+  - Guerrier
+spells: []
+gameplay_guide: A standard security agent, equipped with a pistol and basic survival gear. More vigilant than combative, excels at detecting intrusions. Prefers to alert and delay rather than engage in direct combat.

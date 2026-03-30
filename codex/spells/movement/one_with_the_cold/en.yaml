@@ -1,0 +1,16 @@
+spell_series: One with the Cold
+description_base: You propel yourself with a blast of freezing wind, using frost arcanotechnology to create rapid and fluid movement.
+levels:
+  - level: "1"
+    name: One with the Cold
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[givre]: 3"
+        type_requirement: "A.Type[deplacement]: 3"
+        mixed_requirement: "A.École[givre] + A.Type[deplacement]: 9"
+    conditions:
+      intelligence_required: 14
+      flux_cost: 5
+    effects:
+      movement: Movement of 20 meters freely, pushing aside light obstacles
+      special: Does not trigger opportunity attacks. Inflicts 2x 'Frostbite' on the caster

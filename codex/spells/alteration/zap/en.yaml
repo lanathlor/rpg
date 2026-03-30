@@ -1,0 +1,17 @@
+spell_series: Zap
+description_base: Paralyzes the target with an electric shock.
+levels:
+  - level: "1"
+    name: Zap
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[électricité]: 2"
+        type_requirement: "A.Type[alteration]: 2"
+        mixed_requirement: "A.École[électricité] + A.Type[alteration]: 6"
+    conditions:
+      intelligence_required: 15
+      flux_cost: 5
+    effects:
+      status: The target is paralyzed
+      resistance: RINT
+    duration: 1 turn

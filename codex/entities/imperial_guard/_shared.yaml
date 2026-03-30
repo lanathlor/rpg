@@ -1,0 +1,25 @@
+image: images/entites/garde_empire.png
+base_stats:
+  health: 48
+  speed: 5
+innate_resistances:
+  RMEC: 2
+  RRAD: 1
+  RINT: 0
+flux_system:
+  reserve: 0
+  per_turn: 0
+  recovery: 0
+affinities:
+  distance: 8
+  melee: 2
+  schools: {}
+  types: {}
+stats:
+  force: 14
+  dexterite: 13
+  constitution: 15
+  intelligence: 11
+  perception: 13
+  precision: 15
+  charisme: 10

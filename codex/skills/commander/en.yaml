@@ -1,0 +1,9 @@
+name: Commander
+category: Skill
+subcategory: social
+effects:
+  - type: leadership
+    description: Allies within a 10m radius gain +2 to their attack rolls
+  - type: special
+    description: Can give a tactical order that grants an extra turn to one ally (1/combat)
+description: Elite military leadership. Inspires and coordinates troops in combat, transforming a group into a coordinated strike force.

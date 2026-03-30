@@ -1,0 +1,17 @@
+spell_series: Frost
+description_base: Moderately freezes the target with ice crystal formations that cling to the skin and maintain existing freeze effects.
+levels:
+  - level: "1"
+    name: Frost
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[givre]: 2"
+        type_requirement: "A.Type[destruction]: 2"
+        mixed_requirement: "A.École[givre] + A.Type[destruction]: 6"
+    conditions:
+      intelligence_required: 14
+      flux_cost: 4
+    effects:
+      damage: 1d4+4 frost
+      resistance: RRAD
+      special: Refreshes 'Frostbite' effects on the target

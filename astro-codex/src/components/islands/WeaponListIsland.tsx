@@ -121,7 +121,7 @@ export function WeaponListIsland({ weapons, base }: Props) {
         {filtered.map(weapon => (
           <a
             key={weapon.slug}
-            href={`${base}armes/${weapon.slug}/`}
+            href={`${base}weapons/${weapon.slug}/`}
             className="block rounded-lg border bg-card text-card-foreground shadow-sm hover:shadow-lg transition-shadow cursor-pointer h-full"
           >
             <div className="flex flex-col space-y-1.5 p-6">

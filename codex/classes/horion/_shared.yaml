@@ -1,0 +1,30 @@
+image: images/classes/horion.png
+base_stats:
+  health: 50
+  speed: 6
+innate_resistances:
+  RMEC: 0
+  RRAD: 0
+  RINT: 0
+flux_system:
+  reserve: 5
+  per_turn: 2
+  recovery: 1
+affinities:
+  distance: 6
+  melee: 2
+  schools:
+    balistique: 4
+    martial: 3
+  types:
+    arme: 8
+    amelioration: 2
+    deplacement: 2
+stats:
+  force: 12
+  dexterite: 8
+  constitution: 12
+  intelligence: 11
+  perception: 12
+  precision: 16
+  charisme: 11

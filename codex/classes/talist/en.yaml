@@ -1,0 +1,21 @@
+name: Talist
+type: Tactician
+description: True masters of the wilderness, Talists are the eyes and ears of the Empire in unexplored regions. Trained from childhood to read the signs of nature and commune with the most hostile ecosystems, they possess an intuitive understanding of the living world that few can match. Their sharpened senses allow them to detect the slightest signs of enemy presence, while their bio-quantum arcanotechnology gives them the ability to blend into their environment. Incomparable scouts and infallible guides, they pave the way for the imperial conquest of new worlds.
+equipment:
+  weapons:
+    - Pistol
+  armor:
+    - Survival suit
+  consumables:
+    - name: Healing kit
+      quantity: 2
+skills:
+  - Tracking
+  - Terrain expert
+  - Nature comprehension
+spells:
+  - Pursuit
+  - Revelation
+  - Heightened senses
+  - Silence
+gameplay_guide: The Talist is the support class with the greatest versatility but the least combat effectiveness. It is therefore necessary for them to be well surrounded and to avoid fights. A Talist attentive to roleplay can be of great use to their group.

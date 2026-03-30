@@ -1,0 +1,7 @@
+name: Quantum Vision
+category: Skill
+subcategory: perception
+effects:
+  - type: detection
+    description: Increases chances of noticing arcanotechnology-related elements
+description: Ability to perceive arcanotechnological fluxes and identify objects, creatures, or phenomena of arcanotechnological origin.

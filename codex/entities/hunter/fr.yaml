@@ -1,0 +1,18 @@
+name: Chasseur
+type: Combattant / Soldat polyvalent
+faction: Variable
+alignement: variable
+description: Combattant polyvalent et tactique. Formation militaire complète avec spécialisation en armes à distance et combat tactique. Archétype du soldat professionnel équilibré entre mobilité et puissance de feu.
+equipment:
+  weapons:
+    - Fusil d'assaut
+  armor:
+    - Armure de plate légère
+  consumables:
+    - name: Kit de soins
+      quantity: 1
+skills:
+  - Tacticien
+  - Vétéran
+spells: []
+gameplay_guide: Chasseur polyvalent avec bon équilibre entre combat distance et corps-à-corps. Haute Perception et Précision pour combat à distance efficace. Compétences Tacticien et Vétéran donnent expertise tactique. Utilise couverture intelligemment et coordonne avec alliés. Représente soldat professionnel expérimenté.

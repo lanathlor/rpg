@@ -1,0 +1,28 @@
+name: Arcanotechnical precision rifle 'Silencer'
+category: Weapon
+subcategory: Ranged
+weapon_type: sniper
+type: sniper
+cost: 80000 credits
+description: Cutting-edge precision rifle integrating an arcanotechnical stabilizer, AI-assisted predictive targeting, and hybrid-propulsion ammunition. Extreme range with surgical precision. Sound and thermal signature suppression system. Opal's signature weapon.
+stats:
+  damage: 4d8+6
+  resistance: RMEC
+  range: 1000m (optimal range), 2000m (max range)
+  cadence: 1 shot/turn (precision mode) or 2 shots/turn (burst mode)
+special_properties:
+  - "Arcanotechnical stabilizer: Ignores distance penalties up to 1000m"
+  - "Predictive targeting: +2 to attack rolls after observing the target for 1 turn"
+  - "Armor-piercing rounds: Ignores 5 points of RMEC"
+  - "Silent mode: Shots inaudible beyond 50m"
+  - "Exoskeleton integration: +1 damage and instant reload when worn with exo"
+  - "Extended magazine: 20 rounds"
+  - "Arcanotechnical ammunition: Can spend 5 Flux for a guided shot (advantage on roll)"
+prerequisites:
+  affinity: A. sniper 6
+  stat: PRE 14, PER 12
+requirements:
+  precision_min: 14
+  perception_min: 12
+  affinity_sniper: 6
+notes: Elite military weapon. Limited production. Each unit is calibrated for its user. Specialized maintenance required. Arcanotechnical ammunition is expensive (50 credits/cartridge).

@@ -1,0 +1,9 @@
+name: Spy
+category: Skill
+subcategory: infiltration
+effects:
+  - type: stealth
+    description: +4 to stealth and disguise rolls
+  - type: special
+    description: Can create a credible false identity in 1 hour
+description: Elite espionage training. Master of infiltration, disguise, and sensitive information gathering.

@@ -1,0 +1,9 @@
+name: Speed exoskeleton
+category: Armor
+subcategory: exoskeleton
+cost: 2200 credits
+prerequisites:
+  stat: DEX 12
+stats:
+  speed_bonus: +2 speed
+description: Lightweight exoskeleton optimized for mobility and rapid movement.

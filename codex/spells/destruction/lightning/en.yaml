@@ -1,0 +1,62 @@
+spell_series: Lightning
+description_base: Projects an electric lightning bolt at the target.
+levels:
+  - level: "1"
+    name: Lightning
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[électricité]: 2"
+        type_requirement: "A.Type[destruction]: 2"
+        mixed_requirement: "A.École[électricité] + A.Type[destruction]: 6"
+    conditions:
+      special: none
+      flux_cost: 6
+    effects:
+      damage: 1d8+2 electricity
+      resistance: RRAD
+      special: Can chain to a nearby target
+  - level: "2"
+    name: Lightning II
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[électricité]: 5"
+        type_requirement: "A.Type[destruction]: 5"
+        mixed_requirement: "A.École[électricité] + A.Type[destruction]: 15"
+    conditions:
+      intelligence_required: 17
+      flux_cost: 10
+    effects:
+      damage: 3d8+6 electricity
+      resistance: RRAD
+      special: Chains to up to 3 nearby targets (damage reduced by 1d8 per bounce)
+    description: A devastating electric arc that leaps between targets, electrocuting multiple enemies at once with lethal precision.
+  - level: "3"
+    name: Lightning III
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[électricité]: 15"
+        type_requirement: "A.Type[destruction]: 15"
+        mixed_requirement: "A.École[électricité] + A.Type[destruction]: 45"
+    conditions:
+      intelligence_required: 20
+      flux_cost: 18
+    description: Apocalyptic electric unleashing. A lightning bolt of cataclysmic power strikes the primary target before fragmenting into a secondary thunder storm, jumping from victim to victim like an uncontrollable electric cascade.
+    effects:
+      damage: 6d8+15 electricity
+      resistance: RRAD
+      special: Chains to up to 5 targets (full damage on the first 3, then -2d8 per bounce), paralyzes the primary target (1 turn, CON saving throw DC 20)
+  - level: "4"
+    name: Lightning IV - Divine Storm
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[électricité]: 25"
+        type_requirement: "A.Type[destruction]: 25"
+        mixed_requirement: "A.École[électricité] + A.Type[destruction]: 75"
+    conditions:
+      intelligence_required: 24
+      flux_cost: 30
+    description: Divine electric manifestation. A thunderbolt of power comparable to those that strike during planetary storms. The electric arc branches into an arborescence of pure destruction, electrocuting everything in its path.
+    effects:
+      damage: 10d8+25 electricity
+      resistance: RRAD
+      special: Chains to up to 8 targets (full damage on all), paralyzes all targets hit (2 turns, CON saving throw DC 22), overloads and destroys electronic systems in a 15m radius, creates an electrified zone for 2 turns (2d6 damage/turn for those who enter)

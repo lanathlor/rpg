@@ -1,0 +1,40 @@
+spell_series: Flux Corruption
+description_base: Attempts to corrupt a target's mind by infiltrating their neural network with corrupted bioarcanotechnical Flux, establishing temporary mind control.
+levels:
+  - level: "1"
+    name: Flux Corruption
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[bioarcanotechnique]: 7"
+        type_requirement: "A.Type[alteration]: 5"
+        mixed_requirement: "A.École[bioarcanotechnique] + A.Type[alteration]: 15"
+    conditions:
+      intelligence_required: 16
+      flux_cost: 15
+    effects:
+      resistance: RINT
+      special: Mind control of a creature for 2 turns. The target obeys mental commands. Control breaks if the target takes damage. Less effective against high Intelligence or Veteran skill
+      duration: 2 turns (concentration)
+    timing:
+      casting_time: 1 action
+      duration: 2 turns (concentration)
+      range: 10m
+  - level: "2"
+    name: Greater Flux Corruption
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[bioarcanotechnique]: 10"
+        type_requirement: "A.Type[alteration]: 7"
+        mixed_requirement: "A.École[bioarcanotechnique] + A.Type[alteration]: 20"
+    conditions:
+      intelligence_required: 18
+      flux_cost: 22
+    effects:
+      resistance: RINT
+      targets: Up to 2 creatures
+      special: Complete mind control for 4 turns. Targets obey all commands, even suicidal ones. Control persists despite damage. Partially ignores Veteran
+      duration: 4 turns (concentration)
+    timing:
+      casting_time: 1 action
+      duration: 4 turns (concentration)
+      range: 15m

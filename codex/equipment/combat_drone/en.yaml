@@ -1,0 +1,13 @@
+name: Combat drone
+category: Proxy
+subcategory: drone
+cost: 3500 credits
+prerequisites:
+  equipment_subcategory: neural implant
+stats:
+  health: 5 hit points
+  speed: 10 speed points
+  movement: Moving the drone does not cost an action point
+  spellcasting: Can cast an enhancement or alteration spell from the owner using a maneuver
+  attack_penalty: "-1 to attack rolls"
+description: Autonomous combat drone controlled via neural interface, capable of tactical assistance and spellcasting.

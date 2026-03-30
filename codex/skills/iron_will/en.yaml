@@ -1,0 +1,9 @@
+name: Iron Will
+category: Skill
+subcategory: mental
+effects:
+  - type: willpower
+    description: Immunity to fear and intimidation effects
+  - type: special
+    description: Can continue fighting down to -20 HP before dying (instead of 0)
+description: Unshakeable determination. Refuses to give up regardless of circumstances, fighting to the very last breath.

@@ -1,0 +1,15 @@
+name: Ouvrier armé
+type: Civil / Combattant improvisé
+faction: Variable
+alignement: variable
+description: Travailleur industriel qui a pris les armes pour défendre sa communauté. Sans formation militaire formelle mais déterminé et connaît bien son territoire. Équipé d'armes de fortune ou récupérées.
+equipment:
+  weapons:
+    - Fusil d'assaut
+  armor:
+    - Armure de cuir renforcée
+  consumables: []
+skills:
+  - Combattant
+spells: []
+gameplay_guide: Ouvrier qui défend sa communauté. Pas de formation militaire mais déterminé et connaît le terrain. Combat avec courage mais manque de discipline tactique. Dangereux en nombre et sur leur territoire. Utilisent couverture et positions défensives.

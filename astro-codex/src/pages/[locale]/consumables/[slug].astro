@@ -1,0 +1,30 @@
+---
+import MainLayout from '@/layouts/MainLayout.astro';
+import { setLang, t, type Lang } from '@/lib/i18n';
+import ConsumableDetail from '@/components/detail/ConsumableDetail.astro';
+import { getConsumables } from '@/lib/dataUtils';
+
+export async function getStaticPaths() {
+  const locales = ['en', 'fr'] as const;
+  const results = await Promise.all(locales.map(async locale => {
+    const consumables = await getConsumables(locale);
+    return consumables.map(c => ({
+      params: { locale, slug: c.slug },
+      props: { consumable: c.data },
+    }));
+  }));
+  return results.flat();
+}
+
+const { consumable } = Astro.props;
+const locale = Astro.params.locale as Lang;
+setLang(locale);
+const base = import.meta.env.BASE_URL + locale + '/';
+---
+
+<MainLayout title={`${consumable.name} - Consommables - Pyrrhic Stars`} description={consumable.description}>
+  <div>
+    <a href={`${base}consumables/`} class="text-sm text-muted-foreground hover:text-foreground mb-4 inline-block">{t('page.back.consumables')}</a>
+    <ConsumableDetail consumable={consumable} />
+  </div>
+</MainLayout>

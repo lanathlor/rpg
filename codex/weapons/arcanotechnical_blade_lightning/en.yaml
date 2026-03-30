@@ -1,0 +1,28 @@
+name: Arcanotechnical blade 'Lightning'
+category: Weapon
+subcategory: Melee
+weapon_type: arme_1_main
+type: melee
+cost: 120000 credits
+description: Monofilament sword with a Flux-powered plasmic blade. The blade vibrates at ultrasonic frequency and can be charged with energy for devastating strikes. Specifically designed for Opal exosoldiers, it exploits the exoskeleton's augmented strength. The guard integrates defensive systems and a proximity force field generator. Signature weapon for Elite unit close combat.
+stats:
+  damage: 3d6+8
+  resistance: RMEC
+  range: Melee (3m with exo reach)
+special_properties:
+  - "Monofilament blade: Ignores 8 points of RMEC"
+  - "Plasmic charge: Can spend 8 Flux to add +3d6 RRAD damage (1/turn)"
+  - "Ultrasonic vibration: +2 to attack rolls against heavy armor"
+  - "Fortified guard: +2 to parries and blocks"
+  - "Exo integration: Instant draw time, free Flux recharge when worn with exo"
+  - "Proximity field: Can activate a defensive field (+3 RMEC for 1 turn, 5 Flux)"
+  - "Augmented reach: 3m range with exoskeleton servo-assistance"
+  - "Piercing mode: Can switch to perforation mode (ignores all RMEC, -1d6 damage)"
+prerequisites:
+  affinity: A. melee 8
+  stat: STR 14, DEX 14
+requirements:
+  force_min: 14
+  dexterite_min: 14
+  affinity_melee: 8
+notes: Elite close combat weapon. Production limited to first-category military arsenals. Each blade is attuned to its wielder via neural interface. Extremely lethal - can cut through armored doors and heavy armor. Requires intensive training (Warrior skill recommended). Distinctive energy signature. Daily specialized maintenance required.

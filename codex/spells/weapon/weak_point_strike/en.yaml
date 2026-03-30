@@ -1,0 +1,31 @@
+spell_series: Weak Point Strike
+description_base: Targets the opponent's weak points to maximize damage.
+levels:
+  - level: "1"
+    name: Weak Point Strike
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[martial]: 3"
+        type_requirement: "A.Type[arme]: 3"
+        mixed_requirement: "A.École[martial] + A.Type[arme]: 9"
+    conditions:
+      dexterity_required: 14
+    recharge_time: 30 sec
+    effects:
+      damage: +1d8+3 to weapon damage
+      resistance: RMEC
+      critical_chance: Critical on 19-20
+  - level: "2"
+    name: Weak Point Strike II
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[martial]: 4"
+        type_requirement: "A.Type[arme]: 4"
+        mixed_requirement: "A.École[martial] + A.Type[arme]: 12"
+    conditions:
+      perception_required: 18
+    recharge_time: 120 sec
+    description: Finds the target's vital points and attacks them as priority, dealing enormous damage.
+    effects:
+      damage: 2d20 + 10
+      resistance: RMEC

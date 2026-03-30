@@ -1,0 +1,17 @@
+spell_series: Plombs à haute vélocité
+description_base: Tire plusieurs projectiles à grande vitesse.
+levels:
+  - level: "1"
+    name: Plombs à haute vélocité
+    prerequisites:
+      affinities:
+        école_requirement: "A.École[balistique]: 3"
+        type_requirement: "A.Type[arme]: 3"
+        mixed_requirement: "A.École[balistique] + A.Type[arme]: 9"
+    conditions:
+      special: aucune
+    recharge_time: 20 sec
+    effects:
+      damage: +3d4 aux dégâts d'arme
+      resistance: RMEC
+      special: Plusieurs projectiles

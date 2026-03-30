@@ -13,7 +13,7 @@ const locale = Astro.params.locale as Lang;
 setLang(locale);
 
 const [classes, allWeapons, allArmors, allSkills, allConsumables] = await Promise.all([
-  getClasses(), getWeapons(), getArmors(), getSkills(), getConsumables(),
+  getClasses(locale), getWeapons(locale), getArmors(locale), getSkills(locale), getConsumables(locale),
 ]);
 const base = import.meta.env.BASE_URL + locale + '/';
 

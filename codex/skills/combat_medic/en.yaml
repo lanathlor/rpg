@@ -1,0 +1,9 @@
+name: Combat Medic
+category: Skill
+subcategory: support
+effects:
+  - type: healing
+    description: Can heal 2d8+5 HP with a medical kit (standard action)
+  - type: special
+    description: Can stabilize a dying ally at range (10m) as a free action
+description: Advanced medical training adapted for the battlefield. Capable of saving lives under enemy fire.

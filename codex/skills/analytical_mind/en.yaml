@@ -1,0 +1,9 @@
+name: Analytical Mind
+category: Skill
+subcategory: mental
+effects:
+  - type: investigation
+    description: +4 to investigation and analysis rolls
+  - type: special
+    description: Can deduce an enemy weakness after 1 turn of observation
+description: Sharp intellect capable of rapid and precise analysis. Instantly discerns patterns and weaknesses.

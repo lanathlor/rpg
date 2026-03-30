@@ -1,0 +1,11 @@
+name: Master Strategist
+category: Skill
+subcategory: tactical
+prerequisites:
+  skill: Tacticien avancé
+effects:
+  - type: tactical
+    description: Before combat, can place allies wherever you wish on the battlefield
+  - type: special
+    description: Once per combat, can force an enemy to reroll their attack roll and keep the worse result
+description: Legendary tactical genius. Anticipates every enemy move and orchestrates grand master-level strategies.
