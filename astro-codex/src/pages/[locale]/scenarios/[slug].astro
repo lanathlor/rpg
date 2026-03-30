@@ -1,0 +1,73 @@
+---
+import MainLayout from '@/layouts/MainLayout.astro';
+import { setLang, t, type Lang } from '@/lib/i18n';
+import { ScenarioDetailIsland } from '@/components/islands/ScenarioDetailIsland';
+import { getScenarios, getEntities, getWeapons, getArmors, getSkills, getConsumables } from '@/lib/dataUtils';
+import { calculateTotalPointBuy } from '@/lib/pointBuyCalculator';
+
+export async function getStaticPaths() {
+  const scenarios = await getScenarios();
+  const locales = ['en', 'fr'];
+  return locales.flatMap(locale =>
+    scenarios.map(s => ({
+      params: { locale, slug: s.slug },
+      props: { scenario: s.data },
+    }))
+  );
+}
+
+const { scenario } = Astro.props;
+const locale = Astro.params.locale as Lang;
+setLang(locale);
+const base = import.meta.env.BASE_URL + locale + '/';
+
+// Load all entities and codex data for cross-referencing
+const [allEntities, allWeapons, allArmors, allSkills, allConsumables] = await Promise.all([
+  getEntities(), getWeapons(), getArmors(), getSkills(), getConsumables(),
+]);
+
+// Collect all entity_base references from the scenario
+const entityBases = new Set<string>();
+scenario.npcs?.forEach((npc: any) => { if (npc.entity_base) entityBases.add(npc.entity_base); });
+scenario.encounters?.forEach((enc: any) => {
+  enc.enemies?.forEach((e: any) => { if (e.entity_base) entityBases.add(e.entity_base); });
+  if (enc.failure_consequence?.enemies) {
+    enc.failure_consequence.enemies.forEach((e: any) => { if (e.entity_base) entityBases.add(e.entity_base); });
+  }
+});
+
+// Build entity lookup map with point buy totals
+const entityMap: Record<string, any> = {};
+for (const entityBase of entityBases) {
+  const found = allEntities.find(e => {
+    if (e.slug === entityBase || e.id === entityBase) return true;
+    const slug = e.data.name?.toLowerCase()
+      .replace(/\s+/g, '_')
+      .replace(/[àáâãäå]/g, 'a').replace(/[èéêë]/g, 'e')
+      .replace(/[ìíîï]/g, 'i').replace(/[òóôõö]/g, 'o')
+      .replace(/[ùúûü]/g, 'u').replace(/[ç]/g, 'c')
+      .replace(/[^a-z0-9_]/g, '');
+    return slug === entityBase || e.data.name === entityBase;
+  });
+  if (found) {
+    const weaponData = allWeapons.map(w => w.data);
+    const armorData = allArmors.map(a => a.data);
+    const skillData = allSkills.map(s => s.data);
+    const consumableData = allConsumables.map(c => c.data);
+    let pointBuyTotal = 0;
+    try {
+      const breakdown = calculateTotalPointBuy(found.data as any, weaponData as any, armorData as any, skillData as any, consumableData as any);
+      pointBuyTotal = breakdown.total;
+    } catch { /* ignore calculation errors */ }
+
+    entityMap[entityBase] = { ...found.data, pointBuyTotal };
+  }
+}
+---
+
+<MainLayout title={`${scenario.name} - Scénarios - Pyrrhic Stars`} description={scenario.description}>
+  <div>
+    <a href={`${base}scenarios/`} class="text-sm text-muted-foreground hover:text-foreground mb-4 inline-block">{t('page.back.scenarios')}</a>
+    <ScenarioDetailIsland scenario={scenario} entities={entityMap} base={base} client:load />
+  </div>
+</MainLayout>

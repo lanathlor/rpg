@@ -1,25 +1,29 @@
 ---
 import { ThemeToggle } from './ThemeToggle';
+import { LangToggle } from './LangToggle';
 import { MobileSidebar } from './MobileSidebar';
+import { t, type Lang } from '@/lib/i18n';
 
-const base = import.meta.env.BASE_URL;
+const locale = (Astro.currentLocale || 'en') as Lang;
+const base = import.meta.env.BASE_URL + locale + '/';
 const pathname = Astro.url.pathname;
 ---
 
 <header class="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
   <div class="flex h-14 items-center px-4 gap-4">
     <MobileSidebar base={base} pathname={pathname} client:media="(max-width: 768px)" />
-    <a href={base} class="font-bold text-lg">Pyrrhic Stars</a>
+    <a href={base} class="font-bold text-lg">{t('nav.title')}</a>
     <div class="flex-1">
       <form action={`${base}search/`} method="get" class="hidden md:flex max-w-sm">
         <input
           type="search"
           name="q"
-          placeholder="Rechercher..."
+          placeholder={t('common.search')}
           class="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
         />
       </form>
     </div>
+    <LangToggle client:load />
     <ThemeToggle client:load />
   </div>
 </header>

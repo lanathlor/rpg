@@ -1,5 +1,6 @@
 ---
 import type { Entity } from '@/types/entities';
+import { t } from '@/lib/i18n';
 
 interface Props {
   entity: Entity;
@@ -66,32 +67,32 @@ const hasEquipment = entity.equipment && (
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
     {entity.base_stats && (
       <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
-        <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Statistiques de base</h3></div>
+        <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">{t('detail.class.baseStats')}</h3></div>
         <div class="p-6 pt-0 space-y-4">
           <div class="grid grid-cols-2 gap-4">
             <div>
-              <span class="text-sm font-medium text-muted-foreground">Points de vie</span>
+              <span class="text-sm font-medium text-muted-foreground">{t('detail.class.health')}</span>
               <div class="text-lg font-semibold mt-1">{entity.base_stats.health} PV</div>
             </div>
             <div>
-              <span class="text-sm font-medium text-muted-foreground">Vitesse</span>
-              <div class="text-lg font-semibold mt-1">{entity.base_stats.speed} m/tour</div>
+              <span class="text-sm font-medium text-muted-foreground">{t('detail.class.speed')}</span>
+              <div class="text-lg font-semibold mt-1">{entity.base_stats.speed} <span>{t('detail.class.mPerTurn')}</span></div>
             </div>
           </div>
 
           {entity.flux_system && (
             <div>
-              <h4 class="font-medium text-sm mb-2">Système de flux</h4>
+              <h4 class="font-medium text-sm mb-2">{t('detail.class.fluxSystem')}</h4>
               <div class="grid grid-cols-3 gap-2 text-sm">
-                <div><span class="text-muted-foreground">Réserve:</span><div class="font-semibold">{entity.flux_system.reserve}</div></div>
-                <div><span class="text-muted-foreground">Par tour:</span><div class="font-semibold">{entity.flux_system.per_turn}</div></div>
-                <div><span class="text-muted-foreground">Récupération:</span><div class="font-semibold">{entity.flux_system.recovery}</div></div>
+                <div><span class="text-muted-foreground">{t('detail.class.reserve')}</span><div class="font-semibold">{entity.flux_system.reserve}</div></div>
+                <div><span class="text-muted-foreground">{t('detail.class.perTurn')}</span><div class="font-semibold">{entity.flux_system.per_turn}</div></div>
+                <div><span class="text-muted-foreground">{t('detail.class.recovery')}</span><div class="font-semibold">{entity.flux_system.recovery}</div></div>
               </div>
             </div>
           )}
 
           <div>
-            <h4 class="font-medium text-sm mb-2">Résistances innées</h4>
+            <h4 class="font-medium text-sm mb-2">{t('detail.class.innateResistances')}</h4>
             <div class="grid grid-cols-3 gap-2 text-sm">
               <div><span class="text-muted-foreground">RMEC:</span><div class="font-semibold">{entity.innate_resistances?.RMEC ?? 0}</div></div>
               <div><span class="text-muted-foreground">RRAD:</span><div class="font-semibold">{entity.innate_resistances?.RRAD ?? 0}</div></div>
@@ -104,7 +105,7 @@ const hasEquipment = entity.equipment && (
 
     {entity.stats && (
       <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
-        <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Caractéristiques</h3></div>
+        <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">{t('detail.class.characteristics')}</h3></div>
         <div class="p-6 pt-0">
           <div class="grid grid-cols-2 gap-3">
             {Object.entries(entity.stats).map(([statName, value]) => (
@@ -122,12 +123,12 @@ const hasEquipment = entity.equipment && (
   <!-- Affinities -->
   {(Object.keys(schools).length > 0 || Object.keys(types).length > 0 || affinities.distance || affinities.melee) && (
     <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
-      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Affinités</h3></div>
+      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">{t('detail.class.affinities')}</h3></div>
       <div class="p-6 pt-0 space-y-4">
         {(affinities.distance || affinities.melee) && (
           <div class="grid grid-cols-2 gap-2">
-            {affinities.distance && <div class="flex justify-between"><span class="text-sm">Distance</span><span class="inline-flex items-center rounded-full bg-secondary px-2.5 py-0.5 text-xs font-semibold">{affinities.distance}</span></div>}
-            {affinities.melee && <div class="flex justify-between"><span class="text-sm">Corps à corps</span><span class="inline-flex items-center rounded-full bg-secondary px-2.5 py-0.5 text-xs font-semibold">{affinities.melee}</span></div>}
+            {affinities.distance && <div class="flex justify-between"><span class="text-sm">{t('detail.class.ranged')}</span><span class="inline-flex items-center rounded-full bg-secondary px-2.5 py-0.5 text-xs font-semibold">{affinities.distance}</span></div>}
+            {affinities.melee && <div class="flex justify-between"><span class="text-sm">{t('detail.class.melee')}</span><span class="inline-flex items-center rounded-full bg-secondary px-2.5 py-0.5 text-xs font-semibold">{affinities.melee}</span></div>}
           </div>
         )}
         {Object.keys(schools).length > 0 && (
@@ -151,11 +152,11 @@ const hasEquipment = entity.equipment && (
   <!-- Equipment -->
   {hasEquipment && (
     <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
-      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Équipement</h3></div>
+      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">{t('detail.class.startingEquipment')}</h3></div>
       <div class="p-6 pt-0 space-y-4">
         {entity.equipment.weapons?.length > 0 && (
           <div>
-            <h4 class="text-sm font-medium text-muted-foreground mb-2">Armes</h4>
+            <h4 class="text-sm font-medium text-muted-foreground mb-2">{t('detail.class.weapons')}</h4>
             <div class="flex flex-wrap gap-2">
               {entity.equipment.weapons.map((w: string) => (
                 <span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold">{w}</span>
@@ -165,7 +166,7 @@ const hasEquipment = entity.equipment && (
         )}
         {entity.equipment.armor?.length > 0 && (
           <div>
-            <h4 class="text-sm font-medium text-muted-foreground mb-2">Armures</h4>
+            <h4 class="text-sm font-medium text-muted-foreground mb-2">{t('detail.class.armor')}</h4>
             <div class="flex flex-wrap gap-2">
               {entity.equipment.armor.map((a: string) => (
                 <span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold">{a}</span>
@@ -175,7 +176,7 @@ const hasEquipment = entity.equipment && (
         )}
         {entity.equipment.consumables?.length > 0 && (
           <div>
-            <h4 class="text-sm font-medium text-muted-foreground mb-2">Consommables</h4>
+            <h4 class="text-sm font-medium text-muted-foreground mb-2">{t('detail.class.consumables')}</h4>
             <div class="flex flex-wrap gap-2">
               {entity.equipment.consumables.map((item: any) => (
                 <span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold">
@@ -192,7 +193,7 @@ const hasEquipment = entity.equipment && (
   <!-- Skills -->
   {entity.skills?.length > 0 && (
     <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
-      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Compétences</h3></div>
+      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">{t('detail.class.skills')}</h3></div>
       <div class="p-6 pt-0">
         <div class="flex flex-wrap gap-2">
           {entity.skills.map((skill: string) => (
@@ -206,7 +207,7 @@ const hasEquipment = entity.equipment && (
   <!-- Spells -->
   {entity.spells?.length > 0 && (
     <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
-      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Sorts</h3></div>
+      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">{t('detail.class.spells')}</h3></div>
       <div class="p-6 pt-0">
         <div class="flex flex-wrap gap-2">
           {entity.spells.map((spell: any) => {
@@ -221,7 +222,7 @@ const hasEquipment = entity.equipment && (
   <!-- Gameplay Guide -->
   {entity.gameplay_guide && (
     <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
-      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Guide de jeu</h3></div>
+      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">{t('detail.class.gameplayGuide')}</h3></div>
       <div class="p-6 pt-0">
         <p class="text-muted-foreground leading-relaxed">{entity.gameplay_guide}</p>
       </div>

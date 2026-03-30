@@ -2,9 +2,11 @@
 import SidebarTree from './SidebarTree.astro';
 import { getRulesTree, getHistoryTree } from '@/lib/dataUtils';
 import { findAncestors } from '@/lib/treeUtils';
+import { t, type Lang } from '@/lib/i18n';
 
+const locale = (Astro.currentLocale || 'en') as Lang;
 const pathname = Astro.url.pathname;
-const base = import.meta.env.BASE_URL;
+const base = import.meta.env.BASE_URL + locale + '/';
 
 function isActive(href: string): boolean {
   const fullHref = base + href.replace(/^\//, '');
@@ -15,19 +17,19 @@ function isActive(href: string): boolean {
 }
 
 const navigationItems = [
-  { name: 'Accueil', href: '/', icon: 'home', description: '' },
-  { name: 'Regles', href: '/regles/', icon: 'book-open', description: 'Systeme de jeu et mecaniques', section: 'regles' },
-  { name: 'Histoire', href: '/histoire/', icon: 'scroll', description: 'Chroniques du monde', section: 'histoire' },
-  { name: 'Scenarios', href: '/scenarios/', icon: 'map', description: 'Aventures one-shot et campagnes' },
-  { name: 'Sorts', href: '/sorts/', icon: 'sparkles', description: 'Arcanotechnie et sortileges' },
-  { name: 'Armes', href: '/armes/', icon: 'sword', description: 'Armes de corps a corps et a distance' },
-  { name: 'Equipements', href: '/equipements/', icon: 'shield', description: 'Armures, implants et equipements' },
-  { name: 'Competences', href: '/competences/', icon: 'zap', description: 'Capacites speciales' },
-  { name: 'Consommables', href: '/consommables/', icon: 'package', description: 'Objets utilisables' },
-  { name: 'Classes', href: '/classes/', icon: 'users', description: 'Classes de personnages' },
-  { name: 'Entites', href: '/entites/', icon: 'ghost', description: 'PNJ et creatures' },
-  { name: 'Personnages', href: '/personnages/', icon: 'user', description: 'Créer et gérer vos personnages' },
-  { name: 'Rechercher', href: '/search/', icon: 'search', description: 'Recherche globale' },
+  { name: t('nav.home'), href: '/', description: '' },
+  { name: t('nav.rules'), href: '/regles/', description: t('nav.rulesDesc'), section: 'regles' },
+  { name: t('nav.history'), href: '/histoire/', description: t('nav.historyDesc'), section: 'histoire' },
+  { name: t('nav.scenarios'), href: '/scenarios/', description: t('nav.scenariosDesc') },
+  { name: t('nav.spells'), href: '/sorts/', description: t('nav.spellsDesc') },
+  { name: t('nav.weapons'), href: '/armes/', description: t('nav.weaponsDesc') },
+  { name: t('nav.equipment'), href: '/equipements/', description: t('nav.equipmentDesc') },
+  { name: t('nav.skills'), href: '/competences/', description: t('nav.skillsDesc') },
+  { name: t('nav.consumables'), href: '/consommables/', description: t('nav.consumablesDesc') },
+  { name: t('nav.classes'), href: '/classes/', description: t('nav.classesDesc') },
+  { name: t('nav.entities'), href: '/entites/', description: t('nav.entitiesDesc') },
+  { name: t('nav.characters'), href: '/personnages/', description: t('nav.charactersDesc') },
+  { name: t('nav.search'), href: '/search/', description: t('nav.searchDesc') },
 ];
 
 // Detect sections and load trees
@@ -62,7 +64,7 @@ if (isHistoireSection) {
   <div class="space-y-4 py-4">
     <div class="px-3 py-2">
       <h2 class="mb-2 px-4 text-lg font-semibold tracking-tight">
-        Pyrrhic Stars
+        {t('nav.title')}
       </h2>
       <div class="space-y-1">
         {navigationItems.map((item) => (

@@ -1,5 +1,6 @@
 ---
 import type { CharacterClass } from '@/types/classes';
+import { t } from '@/lib/i18n';
 
 interface Props {
   characterClass: CharacterClass;
@@ -84,32 +85,32 @@ const hasEquipment = characterClass.equipment && (
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
     {characterClass.base_stats && (
       <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
-        <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Statistiques de base</h3></div>
+        <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">{t('detail.class.baseStats')}</h3></div>
         <div class="p-6 pt-0 space-y-4">
           <div class="grid grid-cols-2 gap-4">
             <div>
-              <span class="text-sm font-medium text-muted-foreground">Points de vie</span>
+              <span class="text-sm font-medium text-muted-foreground">{t('detail.class.health')}</span>
               <div class="text-lg font-semibold mt-1">{characterClass.base_stats.health} PV</div>
             </div>
             <div>
-              <span class="text-sm font-medium text-muted-foreground">Vitesse</span>
-              <div class="text-lg font-semibold mt-1">{characterClass.base_stats.speed} m/tour</div>
+              <span class="text-sm font-medium text-muted-foreground">{t('detail.class.speed')}</span>
+              <div class="text-lg font-semibold mt-1">{characterClass.base_stats.speed} <span>{t('detail.class.mPerTurn')}</span></div>
             </div>
           </div>
 
           {characterClass.flux_system && (
             <div>
-              <h4 class="font-medium text-sm mb-2">Système de flux</h4>
+              <h4 class="font-medium text-sm mb-2">{t('detail.class.fluxSystem')}</h4>
               <div class="grid grid-cols-3 gap-2 text-sm">
-                <div><span class="text-muted-foreground">Réserve:</span><div class="font-semibold">{characterClass.flux_system.reserve}</div></div>
-                <div><span class="text-muted-foreground">Par tour:</span><div class="font-semibold">{characterClass.flux_system.per_turn}</div></div>
-                <div><span class="text-muted-foreground">Récupération:</span><div class="font-semibold">{characterClass.flux_system.recovery}</div></div>
+                <div><span class="text-muted-foreground">{t('detail.class.reserve')}</span><div class="font-semibold">{characterClass.flux_system.reserve}</div></div>
+                <div><span class="text-muted-foreground">{t('detail.class.perTurn')}</span><div class="font-semibold">{characterClass.flux_system.per_turn}</div></div>
+                <div><span class="text-muted-foreground">{t('detail.class.recovery')}</span><div class="font-semibold">{characterClass.flux_system.recovery}</div></div>
               </div>
             </div>
           )}
 
           <div>
-            <h4 class="font-medium text-sm mb-2">Résistances innées</h4>
+            <h4 class="font-medium text-sm mb-2">{t('detail.class.innateResistances')}</h4>
             <div class="grid grid-cols-3 gap-2 text-sm">
               <div><span class="text-muted-foreground">RMEC:</span><div class="font-semibold">{characterClass.innate_resistances?.RMEC ?? 0}</div></div>
               <div><span class="text-muted-foreground">RRAD:</span><div class="font-semibold">{characterClass.innate_resistances?.RRAD ?? 0}</div></div>
@@ -122,7 +123,7 @@ const hasEquipment = characterClass.equipment && (
 
     {characterClass.stats && (
       <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
-        <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Caractéristiques</h3></div>
+        <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">{t('detail.class.characteristics')}</h3></div>
         <div class="p-6 pt-0">
           <div class="grid grid-cols-2 gap-3">
             {Object.entries(characterClass.stats).map(([statName, value]) => (
@@ -140,21 +141,21 @@ const hasEquipment = characterClass.equipment && (
   <!-- Affinities -->
   {(Object.keys(schools).length > 0 || Object.keys(types).length > 0 || affinities.distance || affinities.melee) && (
     <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
-      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Affinités arcanotechniques</h3></div>
+      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">{t('detail.class.affinities')}</h3></div>
       <div class="p-6 pt-0 space-y-4">
         {(affinities.distance || affinities.melee) && (
           <div>
-            <h4 class="text-sm font-medium mb-3 text-muted-foreground">Combat</h4>
+            <h4 class="text-sm font-medium mb-3 text-muted-foreground">{t('detail.class.combat')}</h4>
             <div class="grid grid-cols-2 gap-2">
               {affinities.distance && (
                 <div class="flex items-center justify-between">
-                  <span class="text-sm">Distance</span>
+                  <span class="text-sm">{t('detail.class.ranged')}</span>
                   <span class="inline-flex items-center rounded-full bg-secondary px-2.5 py-0.5 text-xs font-semibold">{affinities.distance}</span>
                 </div>
               )}
               {affinities.melee && (
                 <div class="flex items-center justify-between">
-                  <span class="text-sm">Corps à corps</span>
+                  <span class="text-sm">{t('detail.class.melee')}</span>
                   <span class="inline-flex items-center rounded-full bg-secondary px-2.5 py-0.5 text-xs font-semibold">{affinities.melee}</span>
                 </div>
               )}
@@ -163,7 +164,7 @@ const hasEquipment = characterClass.equipment && (
         )}
         {Object.keys(schools).length > 0 && (
           <div>
-            <h4 class="text-sm font-medium mb-3 text-muted-foreground">Écoles</h4>
+            <h4 class="text-sm font-medium mb-3 text-muted-foreground">{t('detail.class.schools')}</h4>
             <div class="grid grid-cols-2 gap-2">
               {Object.entries(schools).map(([school, level]) => level > 0 && (
                 <div class="flex items-center justify-between">
@@ -176,7 +177,7 @@ const hasEquipment = characterClass.equipment && (
         )}
         {Object.keys(types).length > 0 && (
           <div class="border-t pt-4">
-            <h4 class="text-sm font-medium mb-3 text-muted-foreground">Types</h4>
+            <h4 class="text-sm font-medium mb-3 text-muted-foreground">{t('detail.class.types')}</h4>
             <div class="grid grid-cols-2 gap-2">
               {Object.entries(types).map(([type, level]) => level > 0 && (
                 <div class="flex items-center justify-between">
@@ -194,11 +195,11 @@ const hasEquipment = characterClass.equipment && (
   <!-- Equipment -->
   {hasEquipment && (
     <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
-      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Équipement de départ</h3></div>
+      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">{t('detail.class.startingEquipment')}</h3></div>
       <div class="p-6 pt-0 space-y-4">
         {characterClass.equipment.weapons?.length > 0 && (
           <div>
-            <h4 class="text-sm font-medium text-muted-foreground mb-2">Armes</h4>
+            <h4 class="text-sm font-medium text-muted-foreground mb-2">{t('detail.class.weapons')}</h4>
             <div class="flex flex-wrap gap-2">
               {characterClass.equipment.weapons.map((w: string) => (
                 <a href={`${base}armes/${w.toLowerCase().replace(/\s+/g, '_').replace(/[éè]/g, 'e').replace(/[à]/g, 'a')}/`} class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold hover:bg-accent transition-colors">{w}</a>
@@ -208,7 +209,7 @@ const hasEquipment = characterClass.equipment && (
         )}
         {characterClass.equipment.armor?.length > 0 && (
           <div>
-            <h4 class="text-sm font-medium text-muted-foreground mb-2">Armures</h4>
+            <h4 class="text-sm font-medium text-muted-foreground mb-2">{t('detail.class.armor')}</h4>
             <div class="flex flex-wrap gap-2">
               {characterClass.equipment.armor.map((a: string) => (
                 <span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold">{a}</span>
@@ -218,7 +219,7 @@ const hasEquipment = characterClass.equipment && (
         )}
         {characterClass.equipment.consumables?.length > 0 && (
           <div>
-            <h4 class="text-sm font-medium text-muted-foreground mb-2">Consommables</h4>
+            <h4 class="text-sm font-medium text-muted-foreground mb-2">{t('detail.class.consumables')}</h4>
             <div class="flex flex-wrap gap-2">
               {characterClass.equipment.consumables.map((item: any) => (
                 <span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold">
@@ -235,7 +236,7 @@ const hasEquipment = characterClass.equipment && (
   <!-- Skills -->
   {characterClass.skills?.length > 0 && (
     <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
-      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Compétences</h3></div>
+      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">{t('detail.class.skills')}</h3></div>
       <div class="p-6 pt-0">
         <div class="flex flex-wrap gap-2">
           {characterClass.skills.map((skill: string) => (
@@ -249,7 +250,7 @@ const hasEquipment = characterClass.equipment && (
   <!-- Spells -->
   {characterClass.spells?.length > 0 && (
     <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
-      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Sorts</h3></div>
+      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">{t('detail.class.spells')}</h3></div>
       <div class="p-6 pt-0">
         <div class="flex flex-wrap gap-2">
           {characterClass.spells.map((spell: any) => {
@@ -266,7 +267,7 @@ const hasEquipment = characterClass.equipment && (
   <!-- Gameplay Guide -->
   {characterClass.gameplay_guide && (
     <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
-      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Guide de jeu</h3></div>
+      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">{t('detail.class.gameplayGuide')}</h3></div>
       <div class="p-6 pt-0">
         <p class="text-muted-foreground leading-relaxed">{characterClass.gameplay_guide}</p>
       </div>

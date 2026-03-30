@@ -1,0 +1,29 @@
+---
+import MainLayout from '@/layouts/MainLayout.astro';
+import { setLang, t, type Lang } from '@/lib/i18n';
+import SkillDetail from '@/components/detail/SkillDetail.astro';
+import { getSkills } from '@/lib/dataUtils';
+
+export async function getStaticPaths() {
+  const skills = await getSkills();
+  const locales = ['en', 'fr'];
+  return locales.flatMap(locale =>
+    skills.map(s => ({
+      params: { locale, slug: s.slug },
+      props: { skill: s.data },
+    }))
+  );
+}
+
+const { skill } = Astro.props;
+const locale = Astro.params.locale as Lang;
+setLang(locale);
+const base = import.meta.env.BASE_URL + locale + '/';
+---
+
+<MainLayout title={`${skill.name} - Compétences - Pyrrhic Stars`} description={skill.description}>
+  <div>
+    <a href={`${base}competences/`} class="text-sm text-muted-foreground hover:text-foreground mb-4 inline-block">{t('page.back.skills')}</a>
+    <SkillDetail skill={skill} />
+  </div>
+</MainLayout>

@@ -1,5 +1,6 @@
 ---
 import type { Armor } from '@/types/armor';
+import { t } from '@/lib/i18n';
 
 interface Props {
   armor: Armor;
@@ -73,7 +74,7 @@ const affinityEntries = armor.affinity_bonuses ? Object.entries(armor.affinity_b
 
     <div>
       <h3 class="font-semibold text-sm mb-2">Description</h3>
-      <p class="text-muted-foreground leading-relaxed">{armor.description || 'Aucune description disponible'}</p>
+      <p class="text-muted-foreground leading-relaxed">{armor.description || t('detail.noDescription')}</p>
     </div>
 
     {armor.image && (
@@ -94,23 +95,23 @@ const affinityEntries = armor.affinity_bonuses ? Object.entries(armor.affinity_b
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
     <!-- Prerequisites -->
     <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
-      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Prerequis</h3></div>
+      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">{t('detail.prerequisites')}</h3></div>
       <div class="p-6 pt-0 space-y-3">
         {prereqs.affinity && (
           <div>
-            <span class="font-medium text-sm">Affinite:</span>
+            <span class="font-medium text-sm">{t('detail.weapon.affinityReq')}</span>
             <div class="text-sm text-muted-foreground mt-1">{prereqs.affinity}</div>
           </div>
         )}
         {prereqs.stat && (
           <div>
-            <span class="font-medium text-sm">Statistique:</span>
+            <span class="font-medium text-sm">{t('detail.weapon.statReq')}</span>
             <div class="text-sm text-muted-foreground mt-1">{prereqs.stat}</div>
           </div>
         )}
         {prereqs.special && prereqs.special !== 'aucun' && (
           <div>
-            <span class="font-medium text-sm">Special:</span>
+            <span class="font-medium text-sm">{t('common.special')}</span>
             <div class="text-sm text-muted-foreground mt-1">{prereqs.special}</div>
           </div>
         )}
@@ -121,19 +122,19 @@ const affinityEntries = armor.affinity_bonuses ? Object.entries(armor.affinity_b
           </div>
         )}
         {hasNoPrereqs && (
-          <div class="text-sm text-muted-foreground italic">Aucun prerequis</div>
+          <div class="text-sm text-muted-foreground italic">{t('detail.noPrerequisites')}</div>
         )}
       </div>
     </div>
 
     <!-- Stats -->
     <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
-      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Statistiques</h3></div>
+      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">{t('detail.statistics')}</h3></div>
       <div class="p-6 pt-0 space-y-3">
         {/* New Resistance System */}
         {hasResistanceStats && (
           <div>
-            <span class="font-medium text-sm mb-2 block">Resistances:</span>
+            <span class="font-medium text-sm mb-2 block">{t('detail.armor.resistances')}:</span>
             <div class="flex flex-wrap gap-2">
               {stats.RMEC && (
                 <span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold bg-stone-50 dark:bg-stone-900">
@@ -156,35 +157,35 @@ const affinityEntries = armor.affinity_bonuses ? Object.entries(armor.affinity_b
         {/* Legacy Protection bonus */}
         {stats.protection_bonus && !hasResistanceStats && (
           <div>
-            <span class="font-medium text-sm text-blue-600 dark:text-blue-400">Bonus de protection (ancien):</span>
+            <span class="font-medium text-sm text-blue-600 dark:text-blue-400">{t('detail.armor.protectionBonus')}</span>
             <div class="text-sm text-muted-foreground mt-1">{stats.protection_bonus}</div>
           </div>
         )}
         {/* Defense bonus */}
         {stats.defense_bonus && (
           <div>
-            <span class="font-medium text-sm text-green-600 dark:text-green-400">Bonus de defense:</span>
+            <span class="font-medium text-sm text-green-600 dark:text-green-400">{t('detail.armor.defenseBonus')}</span>
             <div class="text-sm text-muted-foreground mt-1">{stats.defense_bonus}</div>
           </div>
         )}
         {/* Stat modifier/bonus */}
         {(stats.stat_modifier || stats.stat_bonus) && (
           <div>
-            <span class="font-medium text-sm text-purple-600 dark:text-purple-400">Modification de statistique:</span>
+            <span class="font-medium text-sm text-purple-600 dark:text-purple-400">{t('detail.armor.statMod')}</span>
             <div class="text-sm text-muted-foreground mt-1">{stats.stat_modifier || stats.stat_bonus}</div>
           </div>
         )}
         {/* Special abilities */}
         {(stats.special_ability || stats.special) && (
           <div>
-            <span class="font-medium text-sm text-orange-600 dark:text-orange-400">Capacite speciale:</span>
+            <span class="font-medium text-sm text-orange-600 dark:text-orange-400">{t('detail.armor.specialAbility')}</span>
             <div class="text-sm text-muted-foreground mt-1">{stats.special_ability || stats.special}</div>
           </div>
         )}
         {/* Multiple special abilities */}
         {stats.special_abilities && stats.special_abilities.length > 0 && (
           <div>
-            <span class="font-medium text-sm text-orange-600 dark:text-orange-400">Capacites speciales:</span>
+            <span class="font-medium text-sm text-orange-600 dark:text-orange-400">{t('detail.armor.specialAbilities')}</span>
             <div class="text-sm text-muted-foreground mt-1 space-y-1">
               {stats.special_abilities.map((ability: string) => (
                 <div>- {ability}</div>
@@ -195,79 +196,79 @@ const affinityEntries = armor.affinity_bonuses ? Object.entries(armor.affinity_b
         {/* Inventory bonus */}
         {stats.inventory_bonus && (
           <div>
-            <span class="font-medium text-sm text-indigo-600 dark:text-indigo-400">Bonus d'inventaire:</span>
+            <span class="font-medium text-sm text-indigo-600 dark:text-indigo-400">{t('detail.armor.inventoryBonus')}</span>
             <div class="text-sm text-muted-foreground mt-1">{stats.inventory_bonus}</div>
           </div>
         )}
         {/* Speed bonus */}
         {stats.speed_bonus && (
           <div>
-            <span class="font-medium text-sm text-amber-600 dark:text-amber-400">Bonus de vitesse:</span>
+            <span class="font-medium text-sm text-amber-600 dark:text-amber-400">{t('detail.armor.speedBonus')}</span>
             <div class="text-sm text-muted-foreground mt-1">{stats.speed_bonus}</div>
           </div>
         )}
         {/* Hacking bonus */}
         {stats.hacking_bonus && (
           <div>
-            <span class="font-medium text-sm text-cyan-600 dark:text-cyan-400">Bonus de piratage:</span>
+            <span class="font-medium text-sm text-cyan-600 dark:text-cyan-400">{t('detail.armor.hackBonus')}</span>
             <div class="text-sm text-muted-foreground mt-1">{stats.hacking_bonus}</div>
           </div>
         )}
         {/* Saving throw bonus */}
         {stats.saving_throw_bonus && (
           <div>
-            <span class="font-medium text-sm text-emerald-600 dark:text-emerald-400">Bonus de sauvegarde:</span>
+            <span class="font-medium text-sm text-emerald-600 dark:text-emerald-400">{t('detail.armor.saveBonus')}</span>
             <div class="text-sm text-muted-foreground mt-1">{stats.saving_throw_bonus}</div>
           </div>
         )}
         {/* Conditional bonus */}
         {stats.conditional_bonus && (
           <div>
-            <span class="font-medium text-sm text-violet-600 dark:text-violet-400">Bonus conditionnel:</span>
+            <span class="font-medium text-sm text-violet-600 dark:text-violet-400">{t('detail.armor.conditionalBonus')}</span>
             <div class="text-sm text-muted-foreground mt-1">{stats.conditional_bonus}</div>
           </div>
         )}
         {/* Legacy fields */}
         {stats.armor_value && (
           <div>
-            <span class="font-medium text-sm text-blue-600 dark:text-blue-400">Valeur d'armure:</span>
+            <span class="font-medium text-sm text-blue-600 dark:text-blue-400">{t('detail.armor.armorValue')}</span>
             <div class="text-sm text-muted-foreground mt-1">{stats.armor_value}</div>
           </div>
         )}
         {stats.movement_penalty && (
           <div>
-            <span class="font-medium text-sm text-red-600 dark:text-red-400">Malus de mouvement:</span>
+            <span class="font-medium text-sm text-red-600 dark:text-red-400">{t('detail.armor.movementPenalty')}</span>
             <div class="text-sm text-muted-foreground mt-1">{stats.movement_penalty}</div>
           </div>
         )}
         {/* Drone-specific stats */}
         {stats.health && (
           <div>
-            <span class="font-medium text-sm text-red-600 dark:text-red-400">Points de vie:</span>
+            <span class="font-medium text-sm text-red-600 dark:text-red-400">{t('detail.armor.healthPoints')}</span>
             <div class="text-sm text-muted-foreground mt-1">{stats.health}</div>
           </div>
         )}
         {stats.speed && (
           <div>
-            <span class="font-medium text-sm text-yellow-600 dark:text-yellow-400">Vitesse:</span>
+            <span class="font-medium text-sm text-yellow-600 dark:text-yellow-400">{t('detail.armor.speed')}</span>
             <div class="text-sm text-muted-foreground mt-1">{stats.speed}</div>
           </div>
         )}
         {stats.movement && (
           <div>
-            <span class="font-medium text-sm text-blue-600 dark:text-blue-400">Mouvement:</span>
+            <span class="font-medium text-sm text-blue-600 dark:text-blue-400">{t('detail.armor.movement')}</span>
             <div class="text-sm text-muted-foreground mt-1">{stats.movement}</div>
           </div>
         )}
         {stats.spellcasting && (
           <div>
-            <span class="font-medium text-sm text-purple-600 dark:text-purple-400">Incantation:</span>
+            <span class="font-medium text-sm text-purple-600 dark:text-purple-400">{t('detail.armor.casting')}</span>
             <div class="text-sm text-muted-foreground mt-1">{stats.spellcasting}</div>
           </div>
         )}
         {stats.attack_penalty && (
           <div>
-            <span class="font-medium text-sm text-red-600 dark:text-red-400">Malus d'attaque:</span>
+            <span class="font-medium text-sm text-red-600 dark:text-red-400">{t('detail.armor.attackPenalty')}</span>
             <div class="text-sm text-muted-foreground mt-1">{stats.attack_penalty}</div>
           </div>
         )}
@@ -278,16 +279,16 @@ const affinityEntries = armor.affinity_bonuses ? Object.entries(armor.affinity_b
   <!-- Stat Bonuses -->
   {armor.bonuses && (
     <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
-      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Bonus de caracteristiques</h3></div>
+      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">{t('detail.armor.statBonuses')}</h3></div>
       <div class="p-6 pt-0">
         <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
-          {armor.bonuses.force && <div><span class="font-medium">Force:</span> <span class="text-muted-foreground">{armor.bonuses.force}</span></div>}
-          {armor.bonuses.dexterite && <div><span class="font-medium">Dexterite:</span> <span class="text-muted-foreground">{armor.bonuses.dexterite}</span></div>}
-          {armor.bonuses.constitution && <div><span class="font-medium">Constitution:</span> <span class="text-muted-foreground">{armor.bonuses.constitution}</span></div>}
-          {armor.bonuses.intelligence && <div><span class="font-medium">Intelligence:</span> <span class="text-muted-foreground">{armor.bonuses.intelligence}</span></div>}
-          {armor.bonuses.perception && <div><span class="font-medium">Perception:</span> <span class="text-muted-foreground">{armor.bonuses.perception}</span></div>}
-          {armor.bonuses.precision && <div><span class="font-medium">Precision:</span> <span class="text-muted-foreground">{armor.bonuses.precision}</span></div>}
-          {armor.bonuses.charisme && <div><span class="font-medium">Charisme:</span> <span class="text-muted-foreground">{armor.bonuses.charisme}</span></div>}
+          {armor.bonuses.force && <div><span class="font-medium">{t('common.stat.force')}:</span> <span class="text-muted-foreground">{armor.bonuses.force}</span></div>}
+          {armor.bonuses.dexterite && <div><span class="font-medium">{t('common.stat.dexterite')}:</span> <span class="text-muted-foreground">{armor.bonuses.dexterite}</span></div>}
+          {armor.bonuses.constitution && <div><span class="font-medium">{t('common.stat.constitution')}:</span> <span class="text-muted-foreground">{armor.bonuses.constitution}</span></div>}
+          {armor.bonuses.intelligence && <div><span class="font-medium">{t('common.stat.intelligence')}:</span> <span class="text-muted-foreground">{armor.bonuses.intelligence}</span></div>}
+          {armor.bonuses.perception && <div><span class="font-medium">{t('common.stat.perception')}:</span> <span class="text-muted-foreground">{armor.bonuses.perception}</span></div>}
+          {armor.bonuses.precision && <div><span class="font-medium">{t('common.stat.precision')}:</span> <span class="text-muted-foreground">{armor.bonuses.precision}</span></div>}
+          {armor.bonuses.charisme && <div><span class="font-medium">{t('common.stat.charisme')}:</span> <span class="text-muted-foreground">{armor.bonuses.charisme}</span></div>}
         </div>
       </div>
     </div>
@@ -296,11 +297,11 @@ const affinityEntries = armor.affinity_bonuses ? Object.entries(armor.affinity_b
   <!-- Base Stat Bonuses -->
   {armor.base_stat_bonuses && (
     <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
-      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Bonus de statistiques de base</h3></div>
+      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">{t('detail.armor.baseStatBonuses')}</h3></div>
       <div class="p-6 pt-0">
         <div class="grid grid-cols-2 gap-3">
-          {armor.base_stat_bonuses.health && <div><span class="font-medium">Points de vie:</span> <span class="text-muted-foreground">{armor.base_stat_bonuses.health}</span></div>}
-          {armor.base_stat_bonuses.speed && <div><span class="font-medium">Vitesse:</span> <span class="text-muted-foreground">{armor.base_stat_bonuses.speed}</span></div>}
+          {armor.base_stat_bonuses.health && <div><span class="font-medium">{t('detail.armor.healthPoints')}</span> <span class="text-muted-foreground">{armor.base_stat_bonuses.health}</span></div>}
+          {armor.base_stat_bonuses.speed && <div><span class="font-medium">{t('detail.armor.speed')}</span> <span class="text-muted-foreground">{armor.base_stat_bonuses.speed}</span></div>}
         </div>
       </div>
     </div>
@@ -309,7 +310,7 @@ const affinityEntries = armor.affinity_bonuses ? Object.entries(armor.affinity_b
   <!-- Resistance Bonuses -->
   {armor.resistance_bonuses && (
     <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
-      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Bonus de resistances</h3></div>
+      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">{t('detail.armor.resistBonuses')}</h3></div>
       <div class="p-6 pt-0">
         <div class="flex flex-wrap gap-2">
           {armor.resistance_bonuses.RMEC && (
@@ -335,12 +336,12 @@ const affinityEntries = armor.affinity_bonuses ? Object.entries(armor.affinity_b
   <!-- Flux Bonuses -->
   {armor.flux_bonuses && (
     <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
-      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Bonus de flux</h3></div>
+      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">{t('detail.armor.fluxBonuses')}</h3></div>
       <div class="p-6 pt-0">
         <div class="grid grid-cols-3 gap-3">
-          {armor.flux_bonuses.reserve && <div><span class="font-medium">Reserve:</span> <span class="text-muted-foreground">{armor.flux_bonuses.reserve}</span></div>}
-          {armor.flux_bonuses.per_turn && <div><span class="font-medium">Par tour:</span> <span class="text-muted-foreground">{armor.flux_bonuses.per_turn}</span></div>}
-          {armor.flux_bonuses.recovery && <div><span class="font-medium">Recuperation:</span> <span class="text-muted-foreground">{armor.flux_bonuses.recovery}</span></div>}
+          {armor.flux_bonuses.reserve && <div><span class="font-medium">{t('detail.weapon.reserve')}</span> <span class="text-muted-foreground">{armor.flux_bonuses.reserve}</span></div>}
+          {armor.flux_bonuses.per_turn && <div><span class="font-medium">{t('detail.weapon.perTurn')}</span> <span class="text-muted-foreground">{armor.flux_bonuses.per_turn}</span></div>}
+          {armor.flux_bonuses.recovery && <div><span class="font-medium">{t('detail.weapon.recovery')}</span> <span class="text-muted-foreground">{armor.flux_bonuses.recovery}</span></div>}
         </div>
       </div>
     </div>
@@ -349,7 +350,7 @@ const affinityEntries = armor.affinity_bonuses ? Object.entries(armor.affinity_b
   <!-- Affinity Bonuses -->
   {affinityEntries.length > 0 && (
     <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
-      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Bonus d'affinites</h3></div>
+      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">{t('detail.armor.affinityBonuses')}</h3></div>
       <div class="p-6 pt-0">
         <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
           {affinityEntries.map(([key, value]) => (
@@ -366,7 +367,7 @@ const affinityEntries = armor.affinity_bonuses ? Object.entries(armor.affinity_b
   <!-- Properties -->
   {armor.properties && armor.properties.length > 0 && (
     <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
-      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Proprietes speciales</h3></div>
+      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">{t('detail.specialProperties')}</h3></div>
       <div class="p-6 pt-0">
         <div class="flex flex-wrap gap-2">
           {armor.properties.map((prop: string) => (
@@ -380,7 +381,7 @@ const affinityEntries = armor.affinity_bonuses ? Object.entries(armor.affinity_b
   <!-- Resistances -->
   {armor.resistances && armor.resistances.length > 0 && (
     <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
-      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Resistances</h3></div>
+      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">{t('detail.armor.resistances')}</h3></div>
       <div class="p-6 pt-0">
         <div class="flex flex-wrap gap-2">
           {armor.resistances.map((resistance: string) => (
@@ -394,7 +395,7 @@ const affinityEntries = armor.affinity_bonuses ? Object.entries(armor.affinity_b
   <!-- Cost -->
   {armor.cost && (
     <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
-      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Cout</h3></div>
+      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">{t('detail.cost')}</h3></div>
       <div class="p-6 pt-0"><div class="text-lg font-medium">{armor.cost}</div></div>
     </div>
   )}

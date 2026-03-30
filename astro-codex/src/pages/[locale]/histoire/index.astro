@@ -1,0 +1,74 @@
+---
+import MainLayout from '@/layouts/MainLayout.astro';
+import Icon from '@/components/Icon.astro';
+import { setLang, t, type Lang } from '@/lib/i18n';
+import { getHistoryTree } from '@/lib/dataUtils';
+
+export function getStaticPaths() {
+  return [{ params: { locale: 'en' } }, { params: { locale: 'fr' } }];
+}
+
+const locale = Astro.params.locale as Lang;
+setLang(locale);
+
+const base = import.meta.env.BASE_URL + locale + '/';
+const tree = await getHistoryTree();
+
+const categoryMeta: Record<string, { icon: string; color: string }> = {
+  'introduction_narrative': { icon: 'users', color: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300' },
+  'chronologie': { icon: 'clock', color: 'bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-300' },
+  'contexte': { icon: 'book-open', color: 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300' },
+  'arcanotechnie': { icon: 'sparkles', color: 'bg-violet-100 text-violet-800 dark:bg-violet-900 dark:text-violet-300' },
+};
+---
+
+<MainLayout title="Histoire - Pyrrhic Stars" description="Chroniques, contexte et legendes de l'univers de jeu">
+  <div class="space-y-8">
+    <div>
+      <h1 class="text-3xl font-bold tracking-tight">{t('page.history.title')}</h1>
+      <p class="text-lg text-muted-foreground">
+        {t('page.history.description')}
+      </p>
+    </div>
+
+    {tree.map(category => {
+      const meta = categoryMeta[category.segment] || { icon: 'book-open', color: 'bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300' };
+      const items = category.children;
+      return (
+        <div class="space-y-4">
+          <div class="flex items-center gap-2">
+            <Icon name={meta.icon} class="h-4 w-4" />
+            <h2 class="text-xl font-semibold">{category.title}</h2>
+            <span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold">
+              {items.length} {t('page.rules.sections')}
+            </span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {items.map(item => (
+              <a href={`${base}histoire/${item.path}/`} class="block">
+                <div class="rounded-lg border bg-card text-card-foreground shadow-sm hover:shadow-lg transition-all cursor-pointer group h-full">
+                  <div class="flex flex-col space-y-1.5 p-6">
+                    <div class="flex items-center gap-3">
+                      <div class={`p-2 rounded-lg ${meta.color}`}>
+                        <Icon name={meta.icon} />
+                      </div>
+                      <h3 class="text-lg font-semibold group-hover:text-primary transition-colors">
+                        {item.title}
+                      </h3>
+                    </div>
+                    {item.description && (
+                      <p class="text-sm text-muted-foreground line-clamp-3">
+                        {item.description}
+                      </p>
+                    )}
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      );
+    })}
+  </div>
+</MainLayout>

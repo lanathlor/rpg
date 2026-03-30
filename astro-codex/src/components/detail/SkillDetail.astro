@@ -1,6 +1,7 @@
 ---
 import type { Skill, EffectType } from '@/types/skills';
 import { getCompetenceTier } from '@/lib/pointBuyCalculator';
+import { t } from '@/lib/i18n';
 
 interface Props {
   skill: Skill;
@@ -29,33 +30,40 @@ function getSubcategoryColor(subcategory: string): string {
 }
 
 // Effect type colors (no icons in server-rendered Astro, use colored text labels)
-const effectTypeConfig: Record<EffectType, { label: string; colorClass: string }> = {
+const effectTypeConfig: Record<EffectType, { label: string; tKey: string; colorClass: string }> = {
   combat: {
     label: 'Combat',
+    tKey: 'detail.class.combat',
     colorClass: 'text-red-600 dark:text-red-400',
   },
   defense: {
-    label: 'Defence',
+    label: t('detail.skill.defense'),
+    tKey: 'detail.skill.defense',
     colorClass: 'text-green-600 dark:text-green-400',
   },
   movement: {
-    label: 'Mouvement',
+    label: t('detail.skill.movement'),
+    tKey: 'detail.skill.movement',
     colorClass: 'text-yellow-600 dark:text-yellow-400',
   },
   technique: {
     label: 'Technique',
+    tKey: '',
     colorClass: 'text-orange-600 dark:text-orange-400',
   },
   detection: {
     label: 'Detection',
+    tKey: '',
     colorClass: 'text-purple-600 dark:text-purple-400',
   },
   passive: {
-    label: 'Passif',
+    label: t('detail.skill.passive'),
+    tKey: 'detail.skill.passive',
     colorClass: 'text-blue-600 dark:text-blue-400',
   },
   special: {
-    label: 'Special',
+    label: t('detail.skill.special'),
+    tKey: 'detail.skill.special',
     colorClass: 'text-pink-600 dark:text-pink-400',
   },
 };
@@ -63,6 +71,7 @@ const effectTypeConfig: Record<EffectType, { label: string; colorClass: string }
 function getEffectConfig(type: EffectType) {
   return effectTypeConfig[type] || {
     label: type.charAt(0).toUpperCase() + type.slice(1),
+    tKey: '',
     colorClass: 'text-gray-600 dark:text-gray-400',
   };
 }
@@ -108,7 +117,7 @@ function getTierDescription(tierLetter: string): string {
 
     <div>
       <h3 class="font-semibold text-sm mb-2">Description</h3>
-      <p class="text-muted-foreground leading-relaxed">{skill.description || 'Aucune description disponible'}</p>
+      <p class="text-muted-foreground leading-relaxed">{skill.description || t('detail.noDescription')}</p>
     </div>
   </div>
 
@@ -116,7 +125,7 @@ function getTierDescription(tierLetter: string): string {
 
   <!-- Effects -->
   <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
-    <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Effets</h3></div>
+    <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">{t('detail.effects')}</h3></div>
     <div class="p-6 pt-0 space-y-3">
       {skill.effects && skill.effects.length > 0 ? (
         skill.effects.map((effect) => {
@@ -133,7 +142,7 @@ function getTierDescription(tierLetter: string): string {
           );
         })
       ) : (
-        <div class="text-sm text-muted-foreground">Aucun effet defini</div>
+        <div class="text-sm text-muted-foreground">{t('detail.noEffects')}</div>
       )}
     </div>
   </div>
@@ -142,18 +151,18 @@ function getTierDescription(tierLetter: string): string {
   {skill.point_cost !== undefined && tier && (
     <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
       <div class="flex flex-col space-y-1.5 p-6">
-        <h3 class="text-lg font-semibold">Cout en points</h3>
+        <h3 class="text-lg font-semibold">{t('detail.pointCost')}</h3>
       </div>
       <div class="p-6 pt-0">
         <div class="flex items-center justify-between p-4 bg-muted rounded-lg">
           <div>
-            <div class="text-sm text-muted-foreground">Cout</div>
+            <div class="text-sm text-muted-foreground">{t('detail.cost')}</div>
             <div class={`text-2xl font-bold ${tier.colorClass}`}>
-              {skill.point_cost} points
+              {skill.point_cost} <span>{t('detail.points')}</span>
             </div>
           </div>
           <span class={`inline-flex items-center rounded-full border px-3 py-1 text-lg font-semibold ${tier.colorClass}`}>
-            Tier {tier.tier}
+            <span>{t('detail.tier')}</span>&nbsp;{tier.tier}
           </span>
         </div>
         <div class="mt-3 text-sm text-muted-foreground">

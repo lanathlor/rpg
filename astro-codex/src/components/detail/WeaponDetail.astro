@@ -1,5 +1,6 @@
 ---
 import type { Weapon } from '@/types/weapons';
+import { t } from '@/lib/i18n';
 
 interface Props {
   weapon: Weapon;
@@ -41,7 +42,7 @@ const prereqs = weapon.prerequisites || {};
     </div>
     <div>
       <h3 class="font-semibold text-sm mb-2">Description</h3>
-      <p class="text-muted-foreground leading-relaxed">{weapon.description || 'Aucune description disponible'}</p>
+      <p class="text-muted-foreground leading-relaxed">{weapon.description || t('detail.noDescription')}</p>
     </div>
     {weapon.image && (
       <div class="mt-6">
@@ -55,23 +56,23 @@ const prereqs = weapon.prerequisites || {};
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
     <!-- Prerequisites -->
     <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
-      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Prérequis</h3></div>
+      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">{t('detail.prerequisites')}</h3></div>
       <div class="p-6 pt-0 space-y-3">
-        {prereqs.affinity && <div><span class="font-medium text-sm">Affinité:</span><div class="text-sm text-muted-foreground mt-1">{prereqs.affinity}</div></div>}
-        {prereqs.stat && <div><span class="font-medium text-sm">Statistique:</span><div class="text-sm text-muted-foreground mt-1">{prereqs.stat}</div></div>}
-        {prereqs.special && prereqs.special !== 'aucun' && <div><span class="font-medium text-sm">Spécial:</span><div class="text-sm text-muted-foreground mt-1">{prereqs.special}</div></div>}
+        {prereqs.affinity && <div><span class="font-medium text-sm">{t('detail.weapon.affinityReq')}</span><div class="text-sm text-muted-foreground mt-1">{prereqs.affinity}</div></div>}
+        {prereqs.stat && <div><span class="font-medium text-sm">{t('detail.weapon.statReq')}</span><div class="text-sm text-muted-foreground mt-1">{prereqs.stat}</div></div>}
+        {prereqs.special && prereqs.special !== 'aucun' && <div><span class="font-medium text-sm">{t('common.special')}</span><div class="text-sm text-muted-foreground mt-1">{prereqs.special}</div></div>}
       </div>
     </div>
 
     <!-- Stats -->
     <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
-      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Statistiques</h3></div>
+      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">{t('detail.statistics')}</h3></div>
       <div class="p-6 pt-0 space-y-3">
-        {stats.damage && <div><span class="font-medium text-sm text-red-600 dark:text-red-400">Dégâts:</span><div class="text-sm text-muted-foreground mt-1">{stats.damage}</div></div>}
-        {stats.attack_type && <div><span class="font-medium text-sm text-blue-600 dark:text-blue-400">Type d'attaque:</span><div class="text-sm text-muted-foreground mt-1">{stats.attack_type}</div></div>}
-        {stats.defense_type && <div><span class="font-medium text-sm text-green-600 dark:text-green-400">Type de défense:</span><div class="text-sm text-muted-foreground mt-1">{stats.defense_type}</div></div>}
-        {stats.range && <div><span class="font-medium text-sm text-purple-600 dark:text-purple-400">Portée:</span><div class="text-sm text-muted-foreground mt-1">{stats.range}</div></div>}
-        {stats.special && <div><span class="font-medium text-sm text-orange-600 dark:text-orange-400">Spécial:</span><div class="text-sm text-muted-foreground mt-1">{stats.special}</div></div>}
+        {stats.damage && <div><span class="font-medium text-sm text-red-600 dark:text-red-400">{t('common.damage')}</span><div class="text-sm text-muted-foreground mt-1">{stats.damage}</div></div>}
+        {stats.attack_type && <div><span class="font-medium text-sm text-blue-600 dark:text-blue-400">{t('common.attackType')}</span><div class="text-sm text-muted-foreground mt-1">{stats.attack_type}</div></div>}
+        {stats.defense_type && <div><span class="font-medium text-sm text-green-600 dark:text-green-400">{t('detail.weapon.defenseType')}</span><div class="text-sm text-muted-foreground mt-1">{stats.defense_type}</div></div>}
+        {stats.range && <div><span class="font-medium text-sm text-purple-600 dark:text-purple-400">{t('common.range')}</span><div class="text-sm text-muted-foreground mt-1">{stats.range}</div></div>}
+        {stats.special && <div><span class="font-medium text-sm text-orange-600 dark:text-orange-400">{t('common.special')}</span><div class="text-sm text-muted-foreground mt-1">{stats.special}</div></div>}
       </div>
     </div>
   </div>
@@ -79,16 +80,16 @@ const prereqs = weapon.prerequisites || {};
   <!-- Stat Bonuses -->
   {weapon.bonuses && (
     <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
-      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Bonus de caractéristiques</h3></div>
+      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">{t('detail.weapon.statBonuses')}</h3></div>
       <div class="p-6 pt-0">
         <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
-          {weapon.bonuses.force && <div><span class="font-medium">Force:</span> <span class="text-muted-foreground">{weapon.bonuses.force}</span></div>}
-          {weapon.bonuses.dexterite && <div><span class="font-medium">Dextérité:</span> <span class="text-muted-foreground">{weapon.bonuses.dexterite}</span></div>}
-          {weapon.bonuses.constitution && <div><span class="font-medium">Constitution:</span> <span class="text-muted-foreground">{weapon.bonuses.constitution}</span></div>}
-          {weapon.bonuses.intelligence && <div><span class="font-medium">Intelligence:</span> <span class="text-muted-foreground">{weapon.bonuses.intelligence}</span></div>}
-          {weapon.bonuses.perception && <div><span class="font-medium">Perception:</span> <span class="text-muted-foreground">{weapon.bonuses.perception}</span></div>}
-          {weapon.bonuses.precision && <div><span class="font-medium">Précision:</span> <span class="text-muted-foreground">{weapon.bonuses.precision}</span></div>}
-          {weapon.bonuses.charisme && <div><span class="font-medium">Charisme:</span> <span class="text-muted-foreground">{weapon.bonuses.charisme}</span></div>}
+          {weapon.bonuses.force && <div><span class="font-medium">{t('common.stat.force')}:</span> <span class="text-muted-foreground">{weapon.bonuses.force}</span></div>}
+          {weapon.bonuses.dexterite && <div><span class="font-medium">{t('common.stat.dexterite')}:</span> <span class="text-muted-foreground">{weapon.bonuses.dexterite}</span></div>}
+          {weapon.bonuses.constitution && <div><span class="font-medium">{t('common.stat.constitution')}:</span> <span class="text-muted-foreground">{weapon.bonuses.constitution}</span></div>}
+          {weapon.bonuses.intelligence && <div><span class="font-medium">{t('common.stat.intelligence')}:</span> <span class="text-muted-foreground">{weapon.bonuses.intelligence}</span></div>}
+          {weapon.bonuses.perception && <div><span class="font-medium">{t('common.stat.perception')}:</span> <span class="text-muted-foreground">{weapon.bonuses.perception}</span></div>}
+          {weapon.bonuses.precision && <div><span class="font-medium">{t('common.stat.precision')}:</span> <span class="text-muted-foreground">{weapon.bonuses.precision}</span></div>}
+          {weapon.bonuses.charisme && <div><span class="font-medium">{t('common.stat.charisme')}:</span> <span class="text-muted-foreground">{weapon.bonuses.charisme}</span></div>}
         </div>
       </div>
     </div>
@@ -97,7 +98,7 @@ const prereqs = weapon.prerequisites || {};
   <!-- Resistance Bonuses -->
   {weapon.resistance_bonuses && (
     <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
-      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Bonus de résistances</h3></div>
+      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">{t('detail.weapon.resistBonuses')}</h3></div>
       <div class="p-6 pt-0">
         <div class="flex flex-wrap gap-2">
           {weapon.resistance_bonuses.RMEC && <span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold bg-stone-50 dark:bg-stone-900"><span class="font-semibold">RMEC</span><span class="ml-1">{weapon.resistance_bonuses.RMEC}</span></span>}
@@ -111,12 +112,12 @@ const prereqs = weapon.prerequisites || {};
   <!-- Flux Bonuses -->
   {weapon.flux_bonuses && (
     <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
-      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Bonus de flux</h3></div>
+      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">{t('detail.weapon.fluxBonuses')}</h3></div>
       <div class="p-6 pt-0">
         <div class="grid grid-cols-3 gap-3">
-          {weapon.flux_bonuses.reserve && <div><span class="font-medium">Réserve:</span> <span class="text-muted-foreground">{weapon.flux_bonuses.reserve}</span></div>}
-          {weapon.flux_bonuses.per_turn && <div><span class="font-medium">Par tour:</span> <span class="text-muted-foreground">{weapon.flux_bonuses.per_turn}</span></div>}
-          {weapon.flux_bonuses.recovery && <div><span class="font-medium">Récupération:</span> <span class="text-muted-foreground">{weapon.flux_bonuses.recovery}</span></div>}
+          {weapon.flux_bonuses.reserve && <div><span class="font-medium">{t('detail.weapon.reserve')}</span> <span class="text-muted-foreground">{weapon.flux_bonuses.reserve}</span></div>}
+          {weapon.flux_bonuses.per_turn && <div><span class="font-medium">{t('detail.weapon.perTurn')}</span> <span class="text-muted-foreground">{weapon.flux_bonuses.per_turn}</span></div>}
+          {weapon.flux_bonuses.recovery && <div><span class="font-medium">{t('detail.weapon.recovery')}</span> <span class="text-muted-foreground">{weapon.flux_bonuses.recovery}</span></div>}
         </div>
       </div>
     </div>
@@ -125,7 +126,7 @@ const prereqs = weapon.prerequisites || {};
   <!-- Affinity Bonuses -->
   {weapon.affinity_bonuses && (
     <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
-      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Bonus d'affinités</h3></div>
+      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">{t('detail.weapon.affinityBonuses')}</h3></div>
       <div class="p-6 pt-0">
         <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
           {Object.entries(weapon.affinity_bonuses).map(([key, value]) => value && (
@@ -139,7 +140,7 @@ const prereqs = weapon.prerequisites || {};
   <!-- Properties -->
   {weapon.properties && weapon.properties.length > 0 && (
     <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
-      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Propriétés spéciales</h3></div>
+      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">{t('detail.specialProperties')}</h3></div>
       <div class="p-6 pt-0">
         <div class="flex flex-wrap gap-2">
           {weapon.properties.map((prop: string) => (
@@ -153,7 +154,7 @@ const prereqs = weapon.prerequisites || {};
   <!-- Cost -->
   {weapon.cost && (
     <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
-      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Coût</h3></div>
+      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">{t('detail.cost')}</h3></div>
       <div class="p-6 pt-0"><div class="text-lg font-medium">{weapon.cost}</div></div>
     </div>
   )}

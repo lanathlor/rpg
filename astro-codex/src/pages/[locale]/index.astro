@@ -1,0 +1,60 @@
+---
+import MainLayout from '@/layouts/MainLayout.astro';
+import { setLang, t, type Lang } from '@/lib/i18n';
+import { getSpells, getWeapons, getArmors, getSkills, getConsumables, getClasses, getEntities, getScenarios, getRules, getHistory } from '@/lib/dataUtils';
+
+export function getStaticPaths() {
+  return [{ params: { locale: 'en' } }, { params: { locale: 'fr' } }];
+}
+
+const locale = Astro.params.locale as Lang;
+setLang(locale);
+
+const [spells, weapons, armors, skills, consumables, classes, entities, scenarios, rules, history] = await Promise.all([
+  getSpells(), getWeapons(), getArmors(), getSkills(), getConsumables(), getClasses(), getEntities(), getScenarios(), getRules(), getHistory(),
+]);
+
+const base = import.meta.env.BASE_URL + locale + '/';
+
+const sections = [
+  { name: t('nav.rules'), href: 'regles/', count: rules.length, description: t('page.home.rulesDesc'), color: 'border-blue-500' },
+  { name: t('nav.history'), href: 'histoire/', count: history.length, description: t('page.home.historyDesc'), color: 'border-amber-500' },
+  { name: t('nav.scenarios'), href: 'scenarios/', count: scenarios.length, description: t('page.home.scenariosDesc'), color: 'border-green-500' },
+  { name: t('nav.spells'), href: 'sorts/', count: spells.length, description: t('page.home.spellsDesc'), color: 'border-purple-500' },
+  { name: t('nav.weapons'), href: 'armes/', count: weapons.length, description: t('page.home.weaponsDesc'), color: 'border-red-500' },
+  { name: t('nav.equipment'), href: 'equipements/', count: armors.length, description: t('page.home.equipmentDesc'), color: 'border-stone-500' },
+  { name: t('nav.skills'), href: 'competences/', count: skills.length, description: t('page.home.skillsDesc'), color: 'border-yellow-500' },
+  { name: t('nav.consumables'), href: 'consommables/', count: consumables.length, description: t('page.home.consumablesDesc'), color: 'border-cyan-500' },
+  { name: t('nav.classes'), href: 'classes/', count: classes.length, description: t('page.home.classesDesc'), color: 'border-indigo-500' },
+  { name: t('nav.entities'), href: 'entites/', count: entities.length, description: t('page.home.entitiesDesc'), color: 'border-pink-500' },
+];
+---
+
+<MainLayout title="Pyrrhic Stars - Jeu de rôle sci-fi" description="Codex complet de Pyrrhic Stars, un jeu de rôle sci-fi dans un empire galactique en guerre. Règles, techniques arcanotechniques, armes, classes et plus.">
+  <div class="max-w-4xl mx-auto space-y-8">
+    <div class="space-y-4">
+      <h1 class="text-4xl font-bold tracking-tight">{t('page.home.title')}</h1>
+      <p class="text-xl text-muted-foreground leading-relaxed">
+        {t('page.home.intro')}
+      </p>
+      <p class="text-muted-foreground">
+        {t('page.home.codexDesc')}
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      {sections.map(section => (
+        <a
+          href={`${base}${section.href}`}
+          class={`block p-6 rounded-lg border-l-4 ${section.color} border border-border hover:bg-accent transition-colors`}
+        >
+          <div class="flex items-center justify-between mb-2">
+            <h2 class="text-lg font-semibold">{section.name}</h2>
+            <span class="text-2xl font-bold text-muted-foreground">{section.count}</span>
+          </div>
+          <p class="text-sm text-muted-foreground">{section.description}</p>
+        </a>
+      ))}
+    </div>
+  </div>
+</MainLayout>

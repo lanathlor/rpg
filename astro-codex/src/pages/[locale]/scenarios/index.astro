@@ -1,0 +1,86 @@
+---
+import MainLayout from '@/layouts/MainLayout.astro';
+import { setLang, t, type Lang } from '@/lib/i18n';
+import { getScenarios } from '@/lib/dataUtils';
+
+export function getStaticPaths() {
+  return [{ params: { locale: 'en' } }, { params: { locale: 'fr' } }];
+}
+
+const locale = Astro.params.locale as Lang;
+setLang(locale);
+
+const scenarios = await getScenarios();
+const base = import.meta.env.BASE_URL + locale + '/';
+
+const difficultyColors: Record<string, string> = {
+  'low': 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300',
+  'medium': 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300',
+  'high': 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300',
+  'advanced': 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300',
+};
+---
+
+<MainLayout title="Scénarios - Pyrrhic Stars" description="Aventures et scénarios pour le MJ">
+  <div class="space-y-6">
+    <div>
+      <h1 class="text-3xl font-bold tracking-tight">{t('page.scenarios.title')}</h1>
+      <p class="text-lg text-muted-foreground">{scenarios.length} {t('page.scenarios.available')}</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {scenarios.map(s => (
+        <a
+          href={`${base}scenarios/${s.slug}/`}
+          class="block rounded-lg border bg-card text-card-foreground shadow-sm hover:shadow-lg transition-all cursor-pointer group h-full flex flex-col"
+        >
+          <div class="flex flex-col space-y-1.5 p-6 flex-1">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-lg font-semibold group-hover:text-primary transition-colors">{s.data.name}</h3>
+            </div>
+
+            {(s.data.gm_notes?.complexity || s.data.category) && (
+              <div class="flex flex-wrap gap-2 mb-2">
+                {s.data.gm_notes?.complexity && (
+                  <span class={`inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold ${difficultyColors[s.data.gm_notes.complexity] || ''}`}>
+                    {s.data.gm_notes.complexity}
+                  </span>
+                )}
+                {s.data.category && (
+                  <span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold">{s.data.category}</span>
+                )}
+              </div>
+            )}
+
+            {s.data.description && (
+              <p class="text-sm text-muted-foreground line-clamp-3 mb-3">{s.data.description}</p>
+            )}
+
+            <div class="space-y-1 text-sm text-muted-foreground mt-auto">
+              {s.data.session_info?.duration && (
+                <div>{t('scenarios.duration')}: {s.data.session_info.duration}</div>
+              )}
+              {s.data.session_info?.player_count && (
+                <div>{t('scenarios.players')}: {s.data.session_info.player_count}</div>
+              )}
+              {s.data.session_info?.recommended_points && (
+                <div>{t('scenarios.points')}: {s.data.session_info.recommended_points}</div>
+              )}
+            </div>
+
+            {s.data.requirements?.recommended_classes?.length > 0 && (
+              <div class="flex flex-wrap gap-1 mt-3">
+                {s.data.requirements.recommended_classes.slice(0, 3).map((cls: string) => (
+                  <span class="inline-flex items-center rounded-full border px-2 py-0.5 text-xs">{cls}</span>
+                ))}
+                {s.data.requirements.recommended_classes.length > 3 && (
+                  <span class="inline-flex items-center rounded-full border px-2 py-0.5 text-xs">+{s.data.requirements.recommended_classes.length - 3}</span>
+                )}
+              </div>
+            )}
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</MainLayout>

@@ -1,0 +1,53 @@
+---
+import MainLayout from '@/layouts/MainLayout.astro';
+import { setLang, t, type Lang } from '@/lib/i18n';
+import { SpellListIsland } from '@/components/islands/SpellListIsland';
+import { getSpells } from '@/lib/dataUtils';
+import { rateSpell } from '@/lib/spellRatingCalculator';
+
+export function getStaticPaths() {
+  return [{ params: { locale: 'en' } }, { params: { locale: 'fr' } }];
+}
+
+const locale = Astro.params.locale as Lang;
+setLang(locale);
+
+const spells = await getSpells();
+const base = import.meta.env.BASE_URL + locale + '/';
+
+// Pre-compute ratings at build time
+const spellItems = spells.map(s => {
+  const firstLevel = s.data.levels?.[0];
+  const rating = firstLevel ? rateSpell(firstLevel) : null;
+  return {
+    slug: s.slug,
+    name: s.data.name || s.data.spell_series || s.id,
+    school: s.data.school || '',
+    type: s.data.type || '',
+    description: s.data.description_base || '',
+    levelCount: s.data.levels?.length || 0,
+    firstLevel: firstLevel ? {
+      conditions: firstLevel.conditions,
+      recharge_time: firstLevel.recharge_time,
+      effects: firstLevel.effects,
+    } : undefined,
+    powerScore: rating?.powerScore || 0,
+    accessibilityScore: rating?.accessibilityScore || 0,
+    valueRating: rating?.valueRating || 0,
+    tierName: rating?.tier.name || '',
+    tierColor: rating?.tier.colorClass || '',
+  };
+}).sort((a, b) => a.name.localeCompare(b.name));
+---
+
+<MainLayout title="Sorts - Pyrrhic Stars" description="Catalogue de toutes les techniques arcanotechniques">
+  <div class="space-y-6">
+    <div>
+      <h1 class="text-3xl font-bold tracking-tight">{t('page.spells.title')}</h1>
+      <p class="text-lg text-muted-foreground">
+        {spellItems.length} {t('page.spells.available')}
+      </p>
+    </div>
+    <SpellListIsland spells={spellItems} base={base} client:load />
+  </div>
+</MainLayout>

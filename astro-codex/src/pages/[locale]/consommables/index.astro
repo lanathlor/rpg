@@ -1,0 +1,42 @@
+---
+import MainLayout from '@/layouts/MainLayout.astro';
+import { setLang, t, type Lang } from '@/lib/i18n';
+import { GenericListIsland } from '@/components/islands/GenericListIsland';
+import { getConsumables } from '@/lib/dataUtils';
+
+export function getStaticPaths() {
+  return [{ params: { locale: 'en' } }, { params: { locale: 'fr' } }];
+}
+
+const locale = Astro.params.locale as Lang;
+setLang(locale);
+
+const consumables = await getConsumables();
+const base = import.meta.env.BASE_URL + locale + '/';
+
+function parseCost(cost?: string): number {
+  if (!cost) return 0;
+  const match = cost.match(/(\d+)/);
+  return match ? parseInt(match[1], 10) : 0;
+}
+
+const items = consumables.map(c => ({
+  slug: c.slug,
+  name: c.data.name,
+  category: c.data.category,
+  subcategory: c.data.subcategory,
+  description: c.data.description,
+  extra: c.data.cost,
+  costNum: parseCost(c.data.cost),
+})).sort((a, b) => a.name.localeCompare(b.name));
+---
+
+<MainLayout title="Consommables - Pyrrhic Stars" description="Objets utilisables: soins, grenades, cristaux">
+  <div class="space-y-6">
+    <div>
+      <h1 class="text-3xl font-bold tracking-tight">{t('page.consumables.title')}</h1>
+      <p class="text-lg text-muted-foreground">{items.length} {t('page.consumables.available')}</p>
+    </div>
+    <GenericListIsland items={items} base={base} basePath="consommables/" searchPlaceholder="Rechercher un consommable..." categoryLabel="Sous-catégorie" itemLabel="consommable" client:load />
+  </div>
+</MainLayout>

@@ -1,0 +1,29 @@
+---
+import MainLayout from '@/layouts/MainLayout.astro';
+import { setLang, t, type Lang } from '@/lib/i18n';
+import ClassDetail from '@/components/detail/ClassDetail.astro';
+import { getClasses } from '@/lib/dataUtils';
+
+export async function getStaticPaths() {
+  const classes = await getClasses();
+  const locales = ['en', 'fr'];
+  return locales.flatMap(locale =>
+    classes.map(c => ({
+      params: { locale, slug: c.slug },
+      props: { characterClass: c.data },
+    }))
+  );
+}
+
+const { characterClass } = Astro.props;
+const locale = Astro.params.locale as Lang;
+setLang(locale);
+const base = import.meta.env.BASE_URL + locale + '/';
+---
+
+<MainLayout title={`${characterClass.name} - Classes - Pyrrhic Stars`} description={characterClass.description}>
+  <div>
+    <a href={`${base}classes/`} class="text-sm text-muted-foreground hover:text-foreground mb-4 inline-block">{t('page.back.classes')}</a>
+    <ClassDetail characterClass={characterClass} />
+  </div>
+</MainLayout>

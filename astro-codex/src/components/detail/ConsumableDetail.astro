@@ -1,5 +1,6 @@
 ---
 import type { Consumable } from '@/types/consumables';
+import { t } from '@/lib/i18n';
 
 interface Props {
   consumable: Consumable;
@@ -45,7 +46,7 @@ const effect = consumable.effect || {};
 
     <div>
       <h3 class="font-semibold text-sm mb-2">Description</h3>
-      <p class="text-muted-foreground leading-relaxed">{consumable.description || 'Aucune description disponible'}</p>
+      <p class="text-muted-foreground leading-relaxed">{consumable.description || t('detail.noDescription')}</p>
     </div>
   </div>
 
@@ -54,10 +55,10 @@ const effect = consumable.effect || {};
   <!-- Usage Information -->
   {effect.usage && (
     <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
-      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Utilisation</h3></div>
+      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">{t('detail.usage')}</h3></div>
       <div class="p-6 pt-0">
         <div class="text-sm">
-          <span class="font-medium text-gray-600 dark:text-gray-400">Type d'action:</span>
+          <span class="font-medium text-gray-600 dark:text-gray-400">{t('detail.actionType')}</span>
           <div class="text-muted-foreground mt-1">{effect.usage}</div>
         </div>
       </div>
@@ -66,76 +67,76 @@ const effect = consumable.effect || {};
 
   <!-- Effects -->
   <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
-    <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Effets</h3></div>
+    <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">{t('detail.effects')}</h3></div>
     <div class="p-6 pt-0 space-y-3">
       {effect.healing && (
         <div>
-          <span class="font-medium text-sm text-green-600 dark:text-green-400">Soins:</span>
+          <span class="font-medium text-sm text-green-600 dark:text-green-400">{t('detail.consumable.healing')}</span>
           <div class="text-sm text-muted-foreground mt-1">{effect.healing}</div>
         </div>
       )}
       {effect.damage && (
         <div>
-          <span class="font-medium text-sm text-red-600 dark:text-red-400">Degats:</span>
+          <span class="font-medium text-sm text-red-600 dark:text-red-400">{t('detail.consumable.damage')}</span>
           <div class="text-sm text-muted-foreground mt-1">{effect.damage}</div>
         </div>
       )}
       {(effect.area || effect.area_effect) && (
         <div>
-          <span class="font-medium text-sm text-yellow-600 dark:text-yellow-400">Zone d'effet:</span>
+          <span class="font-medium text-sm text-yellow-600 dark:text-yellow-400">{t('detail.consumable.zoneEffect')}</span>
           <div class="text-sm text-muted-foreground mt-1">{effect.area || effect.area_effect}</div>
         </div>
       )}
       {effect.duration && (
         <div>
-          <span class="font-medium text-sm text-blue-600 dark:text-blue-400">Duree:</span>
+          <span class="font-medium text-sm text-blue-600 dark:text-blue-400">{t('detail.consumable.duration')}</span>
           <div class="text-sm text-muted-foreground mt-1">{effect.duration}</div>
         </div>
       )}
       {effect.flux_restoration && (
         <div>
-          <span class="font-medium text-sm text-cyan-600 dark:text-cyan-400">Restauration de flux:</span>
+          <span class="font-medium text-sm text-cyan-600 dark:text-cyan-400">{t('detail.consumable.fluxRestore')}</span>
           <div class="text-sm text-muted-foreground mt-1">{effect.flux_restoration}</div>
         </div>
       )}
       {effect.recharge_reduction && (
         <div>
-          <span class="font-medium text-sm text-indigo-600 dark:text-indigo-400">Reduction de recharge:</span>
+          <span class="font-medium text-sm text-indigo-600 dark:text-indigo-400">{t('detail.consumable.rechargeReduction')}</span>
           <div class="text-sm text-muted-foreground mt-1">{effect.recharge_reduction}</div>
         </div>
       )}
       {effect.spell_enhancement && (
         <div>
-          <span class="font-medium text-sm text-purple-600 dark:text-purple-400">Amelioration arcanotechnique:</span>
+          <span class="font-medium text-sm text-purple-600 dark:text-purple-400">{t('detail.consumable.arcanotechEnhancement')}</span>
           <div class="text-sm text-muted-foreground mt-1">{effect.spell_enhancement}</div>
         </div>
       )}
       {effect.spell_block && (
         <div>
-          <span class="font-medium text-sm text-indigo-600 dark:text-indigo-400">Blocage de sorts:</span>
+          <span class="font-medium text-sm text-indigo-600 dark:text-indigo-400">{t('detail.consumable.spellBlock')}</span>
           <div class="text-sm text-muted-foreground mt-1">{effect.spell_block}</div>
           {effect.exception && (
             <div class="text-xs text-muted-foreground mt-1 italic">
-              Exception: {effect.exception}
+              <span>{t('detail.consumable.exception')}</span> {effect.exception}
             </div>
           )}
         </div>
       )}
       {effect.emp_effect && (
         <div>
-          <span class="font-medium text-sm text-orange-600 dark:text-orange-400">Effet IEM:</span>
+          <span class="font-medium text-sm text-orange-600 dark:text-orange-400">{t('detail.consumable.empEffect')}</span>
           <div class="text-sm text-muted-foreground mt-1">{effect.emp_effect}</div>
         </div>
       )}
       {effect.blind_effect && (
         <div>
-          <span class="font-medium text-sm text-cyan-600 dark:text-cyan-400">Effet d'aveuglement:</span>
+          <span class="font-medium text-sm text-cyan-600 dark:text-cyan-400">{t('detail.consumable.blindEffect')}</span>
           <div class="text-sm text-muted-foreground mt-1">{effect.blind_effect}</div>
         </div>
       )}
       {effect.special && (
         <div>
-          <span class="font-medium text-sm text-pink-600 dark:text-pink-400">Effet special:</span>
+          <span class="font-medium text-sm text-pink-600 dark:text-pink-400">{t('detail.consumable.specialEffect')}</span>
           <div class="text-sm text-muted-foreground mt-1">{effect.special}</div>
         </div>
       )}
@@ -145,7 +146,7 @@ const effect = consumable.effect || {};
   <!-- Cost -->
   {consumable.cost && (
     <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
-      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">Cout</h3></div>
+      <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">{t('detail.cost')}</h3></div>
       <div class="p-6 pt-0"><div class="text-lg font-medium">{consumable.cost}</div></div>
     </div>
   )}
