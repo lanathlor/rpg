@@ -15,7 +15,7 @@ const { entity } = Astro.props;
 const base = import.meta.env.BASE_URL;
 ---
 
-<MainLayout title={`${entity.name} - Entités - Codex RPG`} description={entity.description}>
+<MainLayout title={`${entity.name} - Entités - Pyrrhic Stars`} description={entity.description}>
   <div>
     <a href={`${base}entites/`} class="text-sm text-muted-foreground hover:text-foreground mb-4 inline-block">&larr; Retour aux entités</a>
     <EntityDetail entity={entity} />

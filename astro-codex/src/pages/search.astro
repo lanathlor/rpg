@@ -23,7 +23,7 @@ const searchItems = [
 const q = Astro.url.searchParams.get('q') || '';
 ---
 
-<MainLayout title="Recherche - Codex RPG" description="Recherche globale dans le codex">
+<MainLayout title="Recherche - Pyrrhic Stars" description="Recherche globale dans le codex">
   <div class="max-w-4xl mx-auto space-y-6">
     <h1 class="text-3xl font-bold tracking-tight">Recherche</h1>
     <SearchIsland items={searchItems} initialQuery={q} client:load />

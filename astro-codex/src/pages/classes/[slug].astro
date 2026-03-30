@@ -15,7 +15,7 @@ const { characterClass } = Astro.props;
 const base = import.meta.env.BASE_URL;
 ---
 
-<MainLayout title={`${characterClass.name} - Classes - Codex RPG`} description={characterClass.description}>
+<MainLayout title={`${characterClass.name} - Classes - Pyrrhic Stars`} description={characterClass.description}>
   <div>
     <a href={`${base}classes/`} class="text-sm text-muted-foreground hover:text-foreground mb-4 inline-block">&larr; Retour aux classes</a>
     <ClassDetail characterClass={characterClass} />

@@ -4,7 +4,7 @@ interface Props {
   description?: string;
 }
 
-const { title, description = 'Codex RPG - Système de jeu de rôle sci-fi dans un empire galactique' } = Astro.props;
+const { title, description = 'Pyrrhic Stars - Jeu de rôle sci-fi dans un empire galactique en guerre' } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
@@ -20,6 +20,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalURL} />
     <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/svg+xml" href="/rpg/favicon.svg" />
     <title>{title}</title>
     <!-- Prevent FOUC: apply theme before paint -->
     <script is:inline>

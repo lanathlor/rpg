@@ -15,7 +15,7 @@ const { consumable } = Astro.props;
 const base = import.meta.env.BASE_URL;
 ---
 
-<MainLayout title={`${consumable.name} - Consommables - Codex RPG`} description={consumable.description}>
+<MainLayout title={`${consumable.name} - Consommables - Pyrrhic Stars`} description={consumable.description}>
   <div>
     <a href={`${base}consommables/`} class="text-sm text-muted-foreground hover:text-foreground mb-4 inline-block">&larr; Retour aux consommables</a>
     <ConsumableDetail consumable={consumable} />

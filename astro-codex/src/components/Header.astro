@@ -9,7 +9,7 @@ const pathname = Astro.url.pathname;
 <header class="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
   <div class="flex h-14 items-center px-4 gap-4">
     <MobileSidebar base={base} pathname={pathname} client:media="(max-width: 768px)" />
-    <a href={base} class="font-bold text-lg">RPG Codex</a>
+    <a href={base} class="font-bold text-lg">Pyrrhic Stars</a>
     <div class="flex-1">
       <form action={`${base}search/`} method="get" class="hidden md:flex max-w-sm">
         <input
