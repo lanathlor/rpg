@@ -1,27 +1,12 @@
 import { useState } from 'react';
 import { Menu } from 'lucide-react';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { t } from '@/lib/i18n';
 
 interface MobileSidebarProps {
   base: string;
   pathname: string;
 }
-
-const navigationItems = [
-  { name: 'Accueil', href: '/', description: '' },
-  { name: 'Règles', href: '/regles/', description: 'Système de jeu et mécaniques' },
-  { name: 'Histoire', href: '/histoire/', description: 'Chroniques du monde' },
-  { name: 'Scénarios', href: '/scenarios/', description: 'Aventures one-shot et campagnes' },
-  { name: 'Sorts', href: '/sorts/', description: 'Arcanotechnie et sortilèges' },
-  { name: 'Armes', href: '/armes/', description: 'Armes de corps à corps et à distance' },
-  { name: 'Équipements', href: '/equipements/', description: 'Armures, implants et équipements' },
-  { name: 'Compétences', href: '/competences/', description: 'Capacités spéciales' },
-  { name: 'Consommables', href: '/consommables/', description: 'Objets utilisables' },
-  { name: 'Classes', href: '/classes/', description: 'Classes de personnages' },
-  { name: 'Entités', href: '/entites/', description: 'PNJ et créatures' },
-  { name: 'Personnages', href: '/personnages/', description: 'Créer et gérer vos personnages' },
-  { name: 'Rechercher', href: '/search/', description: 'Recherche globale' },
-];
 
 function isActive(href: string, base: string, pathname: string): boolean {
   const fullHref = base + href.replace(/^\//, '');
@@ -34,12 +19,28 @@ function isActive(href: string, base: string, pathname: string): boolean {
 export function MobileSidebar({ base, pathname }: MobileSidebarProps) {
   const [open, setOpen] = useState(false);
 
+  const navigationItems = [
+    { name: t('nav.home'), href: '/', description: '' },
+    { name: t('nav.rules'), href: '/regles/', description: t('nav.rulesDesc') },
+    { name: t('nav.history'), href: '/histoire/', description: t('nav.historyDesc') },
+    { name: t('nav.scenarios'), href: '/scenarios/', description: t('nav.scenariosDesc') },
+    { name: t('nav.spells'), href: '/sorts/', description: t('nav.spellsDesc') },
+    { name: t('nav.weapons'), href: '/armes/', description: t('nav.weaponsDesc') },
+    { name: t('nav.equipment'), href: '/equipements/', description: t('nav.equipmentDesc') },
+    { name: t('nav.skills'), href: '/competences/', description: t('nav.skillsDesc') },
+    { name: t('nav.consumables'), href: '/consommables/', description: t('nav.consumablesDesc') },
+    { name: t('nav.classes'), href: '/classes/', description: t('nav.classesDesc') },
+    { name: t('nav.entities'), href: '/entites/', description: t('nav.entitiesDesc') },
+    { name: t('nav.characters'), href: '/personnages/', description: t('nav.charactersDesc') },
+    { name: t('nav.search'), href: '/search/', description: t('nav.searchDesc') },
+  ];
+
   return (
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
         <button className="md:hidden inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground h-9 w-9">
           <Menu className="h-5 w-5" />
-          <span className="sr-only">Menu</span>
+          <span className="sr-only">{t('nav.menu')}</span>
         </button>
       </SheetTrigger>
       <SheetContent side="left" className="w-64 p-0">
@@ -47,7 +48,7 @@ export function MobileSidebar({ base, pathname }: MobileSidebarProps) {
           <div className="space-y-4 py-4">
             <div className="px-3 py-2">
               <h2 className="mb-2 px-4 text-lg font-semibold tracking-tight">
-                Codex RPG
+                {t('nav.title')}
               </h2>
               <div className="space-y-1">
                 {navigationItems.map((item) => (

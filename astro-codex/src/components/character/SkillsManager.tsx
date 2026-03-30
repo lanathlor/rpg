@@ -12,6 +12,7 @@ import {
 } from '@/components/ui/dialog'
 import { Zap, Plus, X, Search, Eye } from 'lucide-react'
 import { getCompetenceTier } from '@/lib/pointBuyCalculator'
+import { t } from '@/lib/i18n'
 import type { Skill } from '@/types/skills'
 
 interface SkillsManagerProps {
@@ -53,18 +54,18 @@ export function SkillsManager({ skills, allSkills, onUpdate }: SkillsManagerProp
           <div className="flex justify-between items-center">
             <CardTitle className="flex items-center gap-2">
               <Zap className="h-5 w-5 text-yellow-500" />
-              Compétences ({skills.length})
+              {t('skillsMgr.title')} ({skills.length})
             </CardTitle>
             <Button onClick={() => setSelectorOpen(true)}>
               <Plus className="h-4 w-4 mr-2" />
-              Ajouter
+              {t('common.add')}
             </Button>
           </div>
         </CardHeader>
         <CardContent>
           {skills.length === 0 ? (
             <p className="text-sm text-muted-foreground text-center py-8">
-              Aucune compétence sélectionnée. Cliquez sur "Ajouter" pour choisir des compétences.
+              {t('skillsMgr.empty')}
             </p>
           ) : (
             <div className="space-y-2">
@@ -78,7 +79,7 @@ export function SkillsManager({ skills, allSkills, onUpdate }: SkillsManagerProp
                       <span className="font-medium">{skillName}</span>
                       {tier && (
                         <Badge variant="secondary" className={`text-xs ${tier.colorClass}`}>
-                          Tier {tier.tier} • {skill?.point_cost} pts
+                          {`Tier ${tier.tier} • ${skill?.point_cost} ${t('common.pts')}`}
                         </Badge>
                       )}
                     </div>
@@ -97,8 +98,8 @@ export function SkillsManager({ skills, allSkills, onUpdate }: SkillsManagerProp
       <Dialog open={selectorOpen} onOpenChange={closeSelector}>
         <DialogContent className="max-w-full sm:max-w-7xl max-h-[85vh] overflow-hidden flex flex-col p-4 sm:p-6">
           <DialogHeader>
-            <DialogTitle>Sélectionner une compétence</DialogTitle>
-            <DialogDescription>{allSkills.length} compétences disponibles</DialogDescription>
+            <DialogTitle>{t('skillsMgr.selectTitle')}</DialogTitle>
+            <DialogDescription>{`${allSkills.length} ${t('skillsMgr.available')}`}</DialogDescription>
           </DialogHeader>
 
           <div className="relative">
@@ -116,7 +117,7 @@ export function SkillsManager({ skills, allSkills, onUpdate }: SkillsManagerProp
             <div className="flex-1 overflow-y-auto space-y-2 pr-2">
               {filteredSkills.length === 0 ? (
                 <div className="text-center py-8">
-                  <p className="text-muted-foreground">Aucune compétence ne correspond à la recherche</p>
+                  <p className="text-muted-foreground">{t('skillsMgr.noMatch')}</p>
                 </div>
               ) : (
                 filteredSkills.map((skill) => {
@@ -137,7 +138,7 @@ export function SkillsManager({ skills, allSkills, onUpdate }: SkillsManagerProp
                         <div className="flex gap-2 mt-1 flex-wrap">
                           {tier && (
                             <Badge variant="secondary" className={`text-xs ${tier.colorClass}`}>
-                              Tier {tier.tier} • {skill.point_cost} pts
+                              {`Tier ${tier.tier} • ${skill.point_cost} ${t('common.pts')}`}
                             </Badge>
                           )}
                           {skill.category && (
@@ -147,7 +148,7 @@ export function SkillsManager({ skills, allSkills, onUpdate }: SkillsManagerProp
                       </div>
                       <div className="flex items-center gap-2 ml-2">
                         {isSelected && (
-                          <Badge className="bg-green-100 text-green-800 dark:bg-green-900">Ajouté</Badge>
+                          <Badge className="bg-green-100 text-green-800 dark:bg-green-900">{t('common.added')}</Badge>
                         )}
                         <Eye className="h-4 w-4 text-muted-foreground" />
                       </div>
@@ -167,7 +168,7 @@ export function SkillsManager({ skills, allSkills, onUpdate }: SkillsManagerProp
                       {previewSkill.category && <Badge variant="secondary">{previewSkill.category}</Badge>}
                       {previewSkill.subcategory && <Badge variant="outline">{previewSkill.subcategory}</Badge>}
                       {previewSkill.point_cost != null && (
-                        <Badge variant="outline">{previewSkill.point_cost} pts</Badge>
+                        <Badge variant="outline">{`${previewSkill.point_cost} ${t('common.pts')}`}</Badge>
                       )}
                     </div>
                     {previewSkill.description && (
@@ -175,7 +176,7 @@ export function SkillsManager({ skills, allSkills, onUpdate }: SkillsManagerProp
                     )}
                     {previewSkill.effects && previewSkill.effects.length > 0 && (
                       <div className="mt-3 space-y-2">
-                        <h4 className="font-semibold text-sm">Effets</h4>
+                        <h4 className="font-semibold text-sm">{t('skillsMgr.effects')}</h4>
                         {previewSkill.effects.map((effect, i) => (
                           <div key={i} className="p-2 border rounded text-sm">
                             <Badge variant="outline" className="text-xs mb-1">{effect.type}</Badge>
@@ -191,7 +192,7 @@ export function SkillsManager({ skills, allSkills, onUpdate }: SkillsManagerProp
                       onClick={addPreviewedSkill}
                       disabled={skills.includes(previewSkill.name || '')}
                     >
-                      {skills.includes(previewSkill.name || '') ? 'Déjà ajouté' : 'Ajouter cette compétence'}
+                      {skills.includes(previewSkill.name || '') ? t('common.alreadyAdded') : t('skillsMgr.addSkill')}
                     </Button>
                   </div>
                 </div>
@@ -199,7 +200,7 @@ export function SkillsManager({ skills, allSkills, onUpdate }: SkillsManagerProp
                 <div className="flex items-center justify-center h-full text-center p-8">
                   <div>
                     <Eye className="h-12 w-12 mx-auto text-muted-foreground mb-4" />
-                    <p className="text-muted-foreground">Cliquez sur une compétence pour voir ses détails</p>
+                    <p className="text-muted-foreground">{t('skillsMgr.clickToPreview')}</p>
                   </div>
                 </div>
               )}

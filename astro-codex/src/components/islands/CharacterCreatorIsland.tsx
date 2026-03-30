@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState, useEffect, useCallback } from 'react'
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
@@ -66,16 +65,9 @@ import type { Weapon } from '@/types/weapons'
 import type { Armor } from '@/types/armor'
 import type { Skill } from '@/types/skills'
 import type { Consumable } from '@/types/consumables'
+import { t } from '@/lib/i18n'
 
 type ViewState = 'list' | 'create' | 'edit'
-
-const ARCHETYPES = [
-  'Artilleur',
-  'Combattant',
-  'Protecteur',
-  'Tacticien',
-  'Tireur d\'élite',
-]
 
 interface CharacterCreatorIslandProps {
   classes: CharacterClass[]
@@ -105,6 +97,14 @@ export function CharacterCreatorIsland({
   const [importSuccess, setImportSuccess] = useState(false)
   const [isDragging, setIsDragging] = useState(false)
   const [saveIndicator, setSaveIndicator] = useState(false)
+
+  const ARCHETYPES = [
+    t('character.archetype.artilleur'),
+    t('character.archetype.combattant'),
+    t('character.archetype.protecteur'),
+    t('character.archetype.tacticien'),
+    t('character.archetype.tireurElite'),
+  ]
 
   const loadCharacters = () => {
     const chars = getCharacterList()
@@ -224,14 +224,14 @@ export function CharacterCreatorIsland({
       <div className="space-y-6">
         <div className="flex justify-between items-start">
           <div>
-            <h1 className="text-3xl font-bold tracking-tight">Mes personnages</h1>
+            <h1 className="text-3xl font-bold tracking-tight">{t('character.myCharacters')}</h1>
             <p className="text-lg text-muted-foreground">
-              {filteredCharacters.length} personnage{filteredCharacters.length > 1 ? 's' : ''}
+              {`${filteredCharacters.length} ${filteredCharacters.length > 1 ? t('common.characters') : t('common.character')}`}
             </p>
           </div>
           <Button onClick={() => setImportDialogOpen(true)} variant="outline">
             <Upload className="h-4 w-4 mr-2" />
-            Importer YAML
+            {t('character.importYAML')}
           </Button>
         </div>
 
@@ -255,8 +255,8 @@ export function CharacterCreatorIsland({
               <div className="p-4 rounded-full bg-primary/10 group-hover:bg-primary/20 transition-colors mb-4">
                 <Plus className="h-8 w-8 text-primary" />
               </div>
-              <p className="text-lg font-medium">Créer un personnage</p>
-              <p className="text-sm text-muted-foreground">Partir de zéro ou d'une classe</p>
+              <p className="text-lg font-medium">{t('character.create')}</p>
+              <p className="text-sm text-muted-foreground">{t('character.createSubtitle')}</p>
             </CardContent>
           </Card>
 
@@ -277,16 +277,16 @@ export function CharacterCreatorIsland({
                       </div>
                       <div className="flex-1">
                         <div className="flex items-center gap-2">
-                          <h3 className="text-lg font-semibold">{char.name || 'Sans nom'}</h3>
+                          <h3 className="text-lg font-semibold">{char.name || t('character.unnamed')}</h3>
                           {!legalityCheck.isLegal && (
                             <TooltipProvider>
                               <Tooltip>
                                 <TooltipTrigger asChild>
-                                  <Badge variant="destructive" className="text-xs cursor-help">Non légal</Badge>
+                                  <Badge variant="destructive" className="text-xs cursor-help">{t('character.illegal')}</Badge>
                                 </TooltipTrigger>
                                 <TooltipContent className="max-w-xs">
                                   <div className="text-sm space-y-1">
-                                    <div className="font-medium mb-1">Problèmes:</div>
+                                    <div className="font-medium mb-1">{t('character.issues')}</div>
                                     {legalityCheck.issues.map((issue, i) => <div key={i}>• {issue}</div>)}
                                   </div>
                                 </TooltipContent>
@@ -296,7 +296,7 @@ export function CharacterCreatorIsland({
                         </div>
                         {char.type && <Badge variant="outline" className="mt-1 text-xs">{char.type}</Badge>}
                         {char.sourceClass && (
-                          <p className="text-xs text-muted-foreground mt-1">Basé sur {char.sourceClass}</p>
+                          <p className="text-xs text-muted-foreground mt-1">{t('character.basedOn')} {char.sourceClass}</p>
                         )}
                       </div>
                     </div>
@@ -306,11 +306,11 @@ export function CharacterCreatorIsland({
                     <div className="grid grid-cols-2 gap-2 text-sm">
                       <div className="flex items-center gap-2">
                         <Heart className="h-4 w-4 text-red-500" />
-                        <span className="font-medium">{char.health} PV</span>
+                        <span className="font-medium">{`${char.health} ${t('common.pv')}`}</span>
                       </div>
                       <div className="flex items-center gap-2">
                         <Zap className="h-4 w-4 text-purple-500" />
-                        <span className="font-medium">{char.flux_reserve} Flux</span>
+                        <span className="font-medium">{`${char.flux_reserve} ${t('common.flux')}`}</span>
                       </div>
                     </div>
 
@@ -327,7 +327,7 @@ export function CharacterCreatorIsland({
                         onClick={() => handleEditCharacter(char.id)}
                       >
                         <Edit className="h-3 w-3 mr-1" />
-                        Éditer
+                        {t('common.edit')}
                       </Button>
                       <Button
                         size="sm"
@@ -349,15 +349,15 @@ export function CharacterCreatorIsland({
 
         {filteredCharacters.length === 0 && characters.length > 0 && (
           <div className="text-center py-12">
-            <p className="text-muted-foreground">Aucun personnage ne correspond à la recherche.</p>
+            <p className="text-muted-foreground">{t('character.noMatchSearch')}</p>
           </div>
         )}
 
         {characters.length === 0 && (
           <div className="text-center py-12">
             <User className="h-12 w-12 mx-auto text-muted-foreground mb-4" />
-            <p className="text-lg font-medium mb-2">Aucun personnage</p>
-            <p className="text-muted-foreground mb-4">Créez votre premier personnage pour commencer l'aventure !</p>
+            <p className="text-lg font-medium mb-2">{t('character.noCharacters')}</p>
+            <p className="text-muted-foreground mb-4">{t('character.createFirst')}</p>
           </div>
         )}
 
@@ -365,12 +365,12 @@ export function CharacterCreatorIsland({
         <Dialog open={deleteDialogOpen} onOpenChange={setDeleteDialogOpen}>
           <DialogContent>
             <DialogHeader>
-              <DialogTitle>Supprimer le personnage ?</DialogTitle>
-              <DialogDescription>Cette action est irréversible.</DialogDescription>
+              <DialogTitle>{t('character.deleteConfirm')}</DialogTitle>
+              <DialogDescription>{t('character.deleteIrreversible')}</DialogDescription>
             </DialogHeader>
             <DialogFooter>
-              <Button variant="outline" onClick={() => setDeleteDialogOpen(false)}>Annuler</Button>
-              <Button variant="destructive" onClick={handleDelete}>Supprimer</Button>
+              <Button variant="outline" onClick={() => setDeleteDialogOpen(false)}>{t('common.cancel')}</Button>
+              <Button variant="destructive" onClick={handleDelete}>{t('common.delete')}</Button>
             </DialogFooter>
           </DialogContent>
         </Dialog>
@@ -382,8 +382,8 @@ export function CharacterCreatorIsland({
         }}>
           <DialogContent>
             <DialogHeader>
-              <DialogTitle>Importer un personnage</DialogTitle>
-              <DialogDescription>Glissez-déposez un fichier YAML ou cliquez pour le sélectionner</DialogDescription>
+              <DialogTitle>{t('character.importTitle')}</DialogTitle>
+              <DialogDescription>{t('character.importDesc')}</DialogDescription>
             </DialogHeader>
             <div className="py-4">
               <div
@@ -396,26 +396,26 @@ export function CharacterCreatorIsland({
               >
                 <Upload className="h-12 w-12 mx-auto mb-4 text-muted-foreground" />
                 <p className="text-sm text-muted-foreground mb-4">
-                  Glissez-déposez votre fichier YAML ici<br />ou cliquez pour sélectionner un fichier
+                  {t('character.importDropzone')}<br />{t('character.importDropzoneAlt')}
                 </p>
                 <input type="file" accept=".yaml,.yml" onChange={handleFileSelect} className="hidden" id="file-input" />
                 <Button variant="outline" onClick={() => document.getElementById('file-input')?.click()} disabled={importSuccess}>
-                  <FileText className="h-4 w-4 mr-2" />Sélectionner un fichier
+                  <FileText className="h-4 w-4 mr-2" />{t('character.importSelectFile')}
                 </Button>
               </div>
               {importSuccess && (
                 <div className="mt-4 p-3 bg-green-50 dark:bg-green-950 border border-green-200 dark:border-green-800 rounded-lg text-green-800 dark:text-green-200 text-sm flex items-center gap-2">
-                  <Check className="h-4 w-4" />Personnage importé avec succès !
+                  <Check className="h-4 w-4" />{t('character.importSuccess')}
                 </div>
               )}
               {importError && (
                 <div className="mt-4 p-3 bg-red-50 dark:bg-red-950 border border-red-200 dark:border-red-800 rounded-lg text-red-800 dark:text-red-200 text-sm">
-                  <strong>Erreur:</strong> {importError}
+                  <strong>{t('common.error')}</strong> {importError}
                 </div>
               )}
             </div>
             <DialogFooter>
-              <Button variant="outline" onClick={() => setImportDialogOpen(false)}>Fermer</Button>
+              <Button variant="outline" onClick={() => setImportDialogOpen(false)}>{t('common.close')}</Button>
             </DialogFooter>
           </DialogContent>
         </Dialog>
@@ -431,11 +431,11 @@ export function CharacterCreatorIsland({
           <Button variant="ghost" size="icon" onClick={() => setView('list')}>
             <ArrowLeft className="h-4 w-4" />
           </Button>
-          <h1 className="text-3xl font-bold tracking-tight">Créer un personnage</h1>
+          <h1 className="text-3xl font-bold tracking-tight">{t('character.create')}</h1>
         </div>
 
         <p className="text-muted-foreground">
-          Choisissez de partir d'une classe existante ou de créer un personnage de zéro.
+          {t('character.chooseClassOrScratch')}
         </p>
 
         <Card
@@ -445,16 +445,16 @@ export function CharacterCreatorIsland({
           <CardContent className="flex items-center gap-4 p-6">
             <div className="text-4xl">✨</div>
             <div>
-              <h3 className="font-bold text-lg">Partir de zéro</h3>
+              <h3 className="font-bold text-lg">{t('character.fromScratch')}</h3>
               <p className="text-sm text-muted-foreground">
-                Créer un personnage vierge et le personnaliser entièrement
+                {t('character.fromScratchDesc')}
               </p>
             </div>
           </CardContent>
         </Card>
 
         <div>
-          <h3 className="font-semibold mb-3">Partir d'une classe</h3>
+          <h3 className="font-semibold mb-3">{t('character.fromClass')}</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             {classes.map((cls) => (
               <Card
@@ -466,9 +466,9 @@ export function CharacterCreatorIsland({
                   <h4 className="font-medium">{cls.name}</h4>
                   <p className="text-xs text-muted-foreground line-clamp-2">{cls.description}</p>
                   <div className="flex gap-2 mt-2">
-                    <Badge variant="secondary" className="text-xs">{cls.base_stats.health} PV</Badge>
+                    <Badge variant="secondary" className="text-xs">{`${cls.base_stats.health} ${t('common.pv')}`}</Badge>
                     {cls.spells && cls.spells.length > 0 && (
-                      <Badge variant="secondary" className="text-xs">{cls.spells.length} sorts</Badge>
+                      <Badge variant="secondary" className="text-xs">{`${cls.spells.length} ${t('common.spells')}`}</Badge>
                     )}
                   </div>
                 </CardContent>
@@ -486,7 +486,7 @@ export function CharacterCreatorIsland({
       <div className="flex items-center justify-center h-[50vh]">
         <div className="text-center space-y-4">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto"></div>
-          <p className="text-muted-foreground">Chargement...</p>
+          <p className="text-muted-foreground">{t('common.loading')}</p>
         </div>
       </div>
     )
@@ -514,11 +514,11 @@ export function CharacterCreatorIsland({
                 <TooltipProvider>
                   <Tooltip>
                     <TooltipTrigger asChild>
-                      <Badge variant="destructive" className="cursor-help">Non légal</Badge>
+                      <Badge variant="destructive" className="cursor-help">{t('character.illegal')}</Badge>
                     </TooltipTrigger>
                     <TooltipContent className="max-w-xs">
                       <div className="text-sm space-y-1">
-                        <div className="font-medium mb-1">Problèmes détectés:</div>
+                        <div className="font-medium mb-1">{t('character.issuesDetected')}</div>
                         {legalityCheck.issues.map((issue, i) => <div key={i}>• {issue}</div>)}
                       </div>
                     </TooltipContent>
@@ -541,7 +541,7 @@ export function CharacterCreatorIsland({
                 </SelectContent>
               </Select>
               {character.sourceClass && (
-                <Badge variant="outline" className="text-xs">Basé sur {character.sourceClass}</Badge>
+                <Badge variant="outline" className="text-xs">{`${t('character.basedOn')} ${character.sourceClass}`}</Badge>
               )}
             </div>
           </div>
@@ -550,7 +550,7 @@ export function CharacterCreatorIsland({
         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
           {saveIndicator && (
             <div className="flex items-center gap-2 text-sm text-green-600">
-              <Check className="h-4 w-4" /><span>Sauvegardé</span>
+              <Check className="h-4 w-4" /><span>{t('common.saved')}</span>
             </div>
           )}
 
@@ -578,7 +578,7 @@ export function CharacterCreatorIsland({
 
       {/* Description */}
       <div>
-        <label className="text-sm font-medium mb-2 block">Description</label>
+        <label className="text-sm font-medium mb-2 block">{t('character.description')}</label>
         <textarea
           value={character.description || ''}
           onChange={(e) => updateCharacter({ description: e.target.value })}
@@ -590,12 +590,12 @@ export function CharacterCreatorIsland({
       {/* Tabbed Editor */}
       <Tabs defaultValue="stats" className="w-full">
         <TabsList className="grid w-full grid-cols-3 md:grid-cols-6">
-          <TabsTrigger value="stats">Statistiques</TabsTrigger>
-          <TabsTrigger value="flux">Flux</TabsTrigger>
-          <TabsTrigger value="affinities">Affinités</TabsTrigger>
-          <TabsTrigger value="spells">Sorts</TabsTrigger>
-          <TabsTrigger value="equipment">Équipement</TabsTrigger>
-          <TabsTrigger value="skills">Compétences</TabsTrigger>
+          <TabsTrigger value="stats">{t('character.tab.stats')}</TabsTrigger>
+          <TabsTrigger value="flux">{t('character.tab.flux')}</TabsTrigger>
+          <TabsTrigger value="affinities">{t('character.tab.affinities')}</TabsTrigger>
+          <TabsTrigger value="spells">{t('character.tab.spells')}</TabsTrigger>
+          <TabsTrigger value="equipment">{t('character.tab.equipment')}</TabsTrigger>
+          <TabsTrigger value="skills">{t('character.tab.skills')}</TabsTrigger>
         </TabsList>
 
         <TabsContent value="stats" className="space-y-4">

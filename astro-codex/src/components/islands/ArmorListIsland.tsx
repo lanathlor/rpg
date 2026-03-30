@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react';
+import { t } from '@/lib/i18n';
 
 interface ArmorItem {
   slug: string;
@@ -81,7 +82,7 @@ export function ArmorListIsland({ armors, base }: Props) {
         <div className="relative flex-1">
           <input
             type="text"
-            placeholder="Rechercher une armure..."
+            placeholder={t('armors.searchPlaceholder')}
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
@@ -89,32 +90,32 @@ export function ArmorListIsland({ armors, base }: Props) {
         </div>
         <div className="flex flex-col sm:flex-row gap-2 flex-wrap">
           <select value={filterCategory} onChange={(e) => { setFilterCategory(e.target.value); setFilterSubcategory(''); }} className="border rounded px-3 py-2 bg-background text-sm">
-            <option value="">Toutes les catégories</option>
+            <option value="">{t('armors.allCategories')}</option>
             {categories.map(c => <option key={c} value={c}>{c}</option>)}
           </select>
           <select value={filterSubcategory} onChange={(e) => setFilterSubcategory(e.target.value)} className="border rounded px-3 py-2 bg-background text-sm">
-            <option value="">Toutes les sous-catégories</option>
+            <option value="">{t('armors.allSubcategories')}</option>
             {subcategories.map(s => <option key={s} value={s}>{s}</option>)}
           </select>
           <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="border rounded px-3 py-2 bg-background text-sm">
-            <option value="name-asc">Nom A-Z</option>
-            <option value="name-desc">Nom Z-A</option>
-            <option value="cost-asc">Coût croissant</option>
-            <option value="cost-desc">Coût décroissant</option>
+            <option value="name-asc">{t('common.sort.nameAZShort')}</option>
+            <option value="name-desc">{t('common.sort.nameZAShort')}</option>
+            <option value="cost-asc">{t('common.sort.costAscShort')}</option>
+            <option value="cost-desc">{t('common.sort.costDescShort')}</option>
           </select>
           {hasFilters && (
             <button
               onClick={() => { setSearch(''); setFilterCategory(''); setFilterSubcategory(''); }}
               className="border rounded px-3 py-2 bg-background text-sm hover:bg-accent"
             >
-              Réinitialiser
+              {t('common.reset')}
             </button>
           )}
         </div>
       </div>
 
       <div className="text-sm text-muted-foreground">
-        {filtered.length} sur {armors.length} {armors.length === 1 ? 'armure' : 'armures'}
+        {filtered.length} {t('common.of')} {armors.length} {armors.length === 1 ? t('common.armor') : t('common.armors')}
       </div>
 
       {/* Card Grid */}
@@ -145,25 +146,25 @@ export function ArmorListIsland({ armors, base }: Props) {
               <div className="flex gap-2 flex-wrap">
                 {armor.RMEC && (
                   <span className="inline-flex items-center rounded-full border px-2 py-0.5 text-xs font-semibold bg-stone-100 text-stone-800 dark:bg-stone-800 dark:text-stone-300 border-stone-300 dark:border-stone-600">
-                    RMEC {armor.RMEC}
+                    {`RMEC ${armor.RMEC}`}
                   </span>
                 )}
                 {armor.RRAD && (
                   <span className="inline-flex items-center rounded-full border px-2 py-0.5 text-xs font-semibold bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300 border-orange-300 dark:border-orange-600">
-                    RRAD {armor.RRAD}
+                    {`RRAD ${armor.RRAD}`}
                   </span>
                 )}
                 {armor.RINT && (
                   <span className="inline-flex items-center rounded-full border px-2 py-0.5 text-xs font-semibold bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300 border-purple-300 dark:border-purple-600">
-                    RINT {armor.RINT}
+                    {`RINT ${armor.RINT}`}
                   </span>
                 )}
               </div>
               {armor.defensebonus && (
-                <div className="text-sm"><strong>Bonus de défense:</strong> {armor.defensebonus}</div>
+                <div className="text-sm"><strong>{t('armors.defenseBonus')}</strong> {armor.defensebonus}</div>
               )}
               {armor.cost && (
-                <div className="text-sm"><strong>Coût:</strong> {armor.cost}</div>
+                <div className="text-sm"><strong>{t('common.cost')}</strong> {armor.cost}</div>
               )}
             </div>
           </a>
@@ -172,7 +173,7 @@ export function ArmorListIsland({ armors, base }: Props) {
 
       {filtered.length === 0 && (
         <div className="text-center py-12 text-muted-foreground">
-          Aucun résultat ne correspond aux critères de recherche.
+          {t('common.noResult')}
         </div>
       )}
     </div>

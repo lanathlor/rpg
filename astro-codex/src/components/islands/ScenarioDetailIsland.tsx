@@ -8,6 +8,7 @@ import {
   CheckCircle, AlertCircle, AlertTriangle, Swords,
   Clock, Users, Map, BookOpen, User, Star, Lightbulb,
 } from 'lucide-react';
+import { t } from '@/lib/i18n';
 
 interface EntityData {
   name: string;
@@ -68,15 +69,18 @@ const getDifficultyColor = (difficulty?: string) => {
   }
 };
 
-const statLabels: Record<string, string> = {
-  force: 'Force', dexterite: 'Dextérité', constitution: 'Constitution',
-  intelligence: 'Intelligence', perception: 'Perception', precision: 'Précision', charisme: 'Charisme',
-};
+function getStatLabels(): Record<string, string> {
+  return {
+    force: t('common.stat.force'), dexterite: t('common.stat.dexterite'), constitution: t('common.stat.constitution'),
+    intelligence: t('common.stat.intelligence'), perception: t('common.stat.perception'), precision: t('common.stat.precision'), charisme: t('common.stat.charisme'),
+  };
+}
 
 function EntityDetailPanel({ entity, displayName }: { entity: EntityData; displayName: string }) {
   const affinities = entity.affinities || {};
   const schools = affinities.schools || {};
   const types = affinities.types || {};
+  const statLabels = getStatLabels();
 
   return (
     <div className="space-y-4">
@@ -87,7 +91,7 @@ function EntityDetailPanel({ entity, displayName }: { entity: EntityData; displa
           {entity.alignement && <Badge variant="outline">{entity.alignement}</Badge>}
           {entity.type && <Badge variant="outline">{entity.type}</Badge>}
           {entity.pointBuyTotal !== undefined && entity.pointBuyTotal > 0 && (
-            <Badge className="bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-300">{entity.pointBuyTotal} pts</Badge>
+            <Badge className="bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-300">{`${entity.pointBuyTotal} ${t('common.pts')}`}</Badge>
           )}
         </div>
         {entity.description && <p className="text-sm text-muted-foreground mt-2">{entity.description}</p>}
@@ -95,20 +99,20 @@ function EntityDetailPanel({ entity, displayName }: { entity: EntityData; displa
 
       {entity.base_stats && (
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-          <div className="p-3 border rounded-md"><div className="text-xs text-muted-foreground">PV</div><div className="text-lg font-bold">{entity.base_stats.health}</div></div>
-          <div className="p-3 border rounded-md"><div className="text-xs text-muted-foreground">Vitesse</div><div className="text-lg font-bold">{entity.base_stats.speed}</div></div>
+          <div className="p-3 border rounded-md"><div className="text-xs text-muted-foreground">{t('common.pv')}</div><div className="text-lg font-bold">{entity.base_stats.health}</div></div>
+          <div className="p-3 border rounded-md"><div className="text-xs text-muted-foreground">{t('common.speed')}</div><div className="text-lg font-bold">{entity.base_stats.speed}</div></div>
           {entity.innate_resistances && (
             <>
               <div className="p-3 border rounded-md">
-                <div className="text-xs text-muted-foreground">Résistances</div>
+                <div className="text-xs text-muted-foreground">{t('common.resistances')}</div>
                 <div className="text-sm font-semibold">
-                  RMEC {entity.innate_resistances.RMEC ?? 0} / RRAD {entity.innate_resistances.RRAD ?? 0} / RINT {entity.innate_resistances.RINT ?? 0}
+                  {`RMEC ${entity.innate_resistances.RMEC ?? 0} / RRAD ${entity.innate_resistances.RRAD ?? 0} / RINT ${entity.innate_resistances.RINT ?? 0}`}
                 </div>
               </div>
             </>
           )}
           {entity.flux_system?.reserve !== undefined && (
-            <div className="p-3 border rounded-md"><div className="text-xs text-muted-foreground">Flux</div><div className="text-lg font-bold">{entity.flux_system.reserve}</div></div>
+            <div className="p-3 border rounded-md"><div className="text-xs text-muted-foreground">{t('common.flux')}</div><div className="text-lg font-bold">{entity.flux_system.reserve}</div></div>
           )}
         </div>
       )}
@@ -126,19 +130,19 @@ function EntityDetailPanel({ entity, displayName }: { entity: EntityData; displa
 
       {(Object.keys(schools).length > 0 || Object.keys(types).length > 0 || affinities.distance || affinities.melee) && (
         <div>
-          <h4 className="font-semibold text-sm mb-2">Affinités</h4>
+          <h4 className="font-semibold text-sm mb-2">{t('scenarios.affinities')}</h4>
           <div className="flex flex-wrap gap-2">
-            {affinities.distance && <Badge variant="outline">Distance: {affinities.distance}</Badge>}
-            {affinities.melee && <Badge variant="outline">CAC: {affinities.melee}</Badge>}
+            {affinities.distance && <Badge variant="outline">{`${t('scenarios.distance')} ${affinities.distance}`}</Badge>}
+            {affinities.melee && <Badge variant="outline">{`${t('scenarios.melee')} ${affinities.melee}`}</Badge>}
             {Object.entries(schools).map(([s, v]) => v > 0 && <Badge key={s} variant="outline">{s}: {v as number}</Badge>)}
-            {Object.entries(types).map(([t, v]) => v > 0 && <Badge key={t} variant="outline">{t}: {v as number}</Badge>)}
+            {Object.entries(types).map(([tp, v]) => v > 0 && <Badge key={tp} variant="outline">{tp}: {v as number}</Badge>)}
           </div>
         </div>
       )}
 
       {entity.equipment && (
         <div>
-          <h4 className="font-semibold text-sm mb-2">Équipement</h4>
+          <h4 className="font-semibold text-sm mb-2">{t('scenarios.equipment')}</h4>
           <div className="flex flex-wrap gap-2">
             {entity.equipment.weapons?.map((w: string, i: number) => <Badge key={i} variant="outline">{w}</Badge>)}
             {entity.equipment.armor?.map((a: string, i: number) => <Badge key={i} variant="outline">{a}</Badge>)}
@@ -149,14 +153,14 @@ function EntityDetailPanel({ entity, displayName }: { entity: EntityData; displa
 
       {entity.skills && entity.skills.length > 0 && (
         <div>
-          <h4 className="font-semibold text-sm mb-2">Compétences</h4>
+          <h4 className="font-semibold text-sm mb-2">{t('common.skills')}</h4>
           <div className="flex flex-wrap gap-2">{entity.skills.map((s, i) => <Badge key={i} variant="secondary">{s}</Badge>)}</div>
         </div>
       )}
 
       {entity.spells && entity.spells.length > 0 && (
         <div>
-          <h4 className="font-semibold text-sm mb-2">Sorts</h4>
+          <h4 className="font-semibold text-sm mb-2">{t('common.spells')}</h4>
           <div className="flex flex-wrap gap-2">
             {entity.spells.map((sp: any, i: number) => {
               const name = typeof sp === 'string' ? sp : sp.series || sp.name;
@@ -168,7 +172,7 @@ function EntityDetailPanel({ entity, displayName }: { entity: EntityData; displa
 
       {entity.gameplay_guide && (
         <div>
-          <h4 className="font-semibold text-sm mb-2">Guide de jeu</h4>
+          <h4 className="font-semibold text-sm mb-2">{t('scenarios.gameplayGuide')}</h4>
           <p className="text-sm text-muted-foreground">{entity.gameplay_guide}</p>
         </div>
       )}
@@ -216,7 +220,7 @@ export function ScenarioDetailIsland({ scenario, entities, base }: Props) {
           {scenario.theme && <Badge variant="outline"><Star className="h-3 w-3 mr-1" />{scenario.theme}</Badge>}
           {scenario.setting && <Badge variant="outline"><Map className="h-3 w-3 mr-1" />{scenario.setting}</Badge>}
           {scenario.category && <Badge variant="secondary">{scenario.category}</Badge>}
-          {scenario.playtested && <Badge className="bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300"><CheckCircle className="h-3 w-3 mr-1" />Testé</Badge>}
+          {scenario.playtested && <Badge className="bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300"><CheckCircle className="h-3 w-3 mr-1" />{t('scenarios.tested')}</Badge>}
         </div>
       </div>
 
@@ -225,12 +229,12 @@ export function ScenarioDetailIsland({ scenario, entities, base }: Props) {
       {/* Session Info */}
       {scenario.session_info && (
         <Card>
-          <CardHeader><CardTitle className="flex items-center gap-2"><Clock className="h-5 w-5" />Informations de session</CardTitle></CardHeader>
+          <CardHeader><CardTitle className="flex items-center gap-2"><Clock className="h-5 w-5" />{t('scenarios.sessionInfo')}</CardTitle></CardHeader>
           <CardContent>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              {scenario.session_info.duration && <div><span className="text-sm font-medium text-muted-foreground flex items-center gap-2"><Clock className="h-4 w-4" />Durée</span><div className="text-lg font-semibold mt-1">{scenario.session_info.duration}</div></div>}
-              {scenario.session_info.player_count && <div><span className="text-sm font-medium text-muted-foreground flex items-center gap-2"><Users className="h-4 w-4" />Joueurs</span><div className="text-lg font-semibold mt-1">{scenario.session_info.player_count}</div></div>}
-              {scenario.session_info.recommended_points && <div><span className="text-sm font-medium text-muted-foreground flex items-center gap-2"><Target className="h-4 w-4" />Points</span><div className="text-lg font-semibold mt-1">{scenario.session_info.recommended_points}</div></div>}
+              {scenario.session_info.duration && <div><span className="text-sm font-medium text-muted-foreground flex items-center gap-2"><Clock className="h-4 w-4" />{t('scenarios.duration')}</span><div className="text-lg font-semibold mt-1">{scenario.session_info.duration}</div></div>}
+              {scenario.session_info.player_count && <div><span className="text-sm font-medium text-muted-foreground flex items-center gap-2"><Users className="h-4 w-4" />{t('scenarios.players')}</span><div className="text-lg font-semibold mt-1">{scenario.session_info.player_count}</div></div>}
+              {scenario.session_info.recommended_points && <div><span className="text-sm font-medium text-muted-foreground flex items-center gap-2"><Target className="h-4 w-4" />{t('scenarios.points')}</span><div className="text-lg font-semibold mt-1">{scenario.session_info.recommended_points}</div></div>}
             </div>
           </CardContent>
         </Card>
@@ -239,13 +243,13 @@ export function ScenarioDetailIsland({ scenario, entities, base }: Props) {
       {/* Requirements */}
       {scenario.requirements && (
         <Card>
-          <CardHeader><CardTitle>Prérequis</CardTitle></CardHeader>
+          <CardHeader><CardTitle>{t('scenarios.prerequisites')}</CardTitle></CardHeader>
           <CardContent className="space-y-4">
             {scenario.requirements.required_rules && scenario.requirements.required_rules.length > 0 && (
-              <div><h4 className="text-sm font-medium text-muted-foreground mb-2">Règles requises</h4><div className="flex flex-wrap gap-2">{scenario.requirements.required_rules.map((r, i) => <Badge key={i} variant="outline">{r}</Badge>)}</div></div>
+              <div><h4 className="text-sm font-medium text-muted-foreground mb-2">{t('scenarios.requiredRules')}</h4><div className="flex flex-wrap gap-2">{scenario.requirements.required_rules.map((r, i) => <Badge key={i} variant="outline">{r}</Badge>)}</div></div>
             )}
             {scenario.requirements.recommended_classes && scenario.requirements.recommended_classes.length > 0 && (
-              <div><h4 className="text-sm font-medium text-muted-foreground mb-2">Classes recommandées</h4><div className="flex flex-wrap gap-2">{scenario.requirements.recommended_classes.map((c, i) => <Badge key={i} variant="outline">{c}</Badge>)}</div></div>
+              <div><h4 className="text-sm font-medium text-muted-foreground mb-2">{t('scenarios.recommendedClasses')}</h4><div className="flex flex-wrap gap-2">{scenario.requirements.recommended_classes.map((c, i) => <Badge key={i} variant="outline">{c}</Badge>)}</div></div>
             )}
           </CardContent>
         </Card>
@@ -255,8 +259,8 @@ export function ScenarioDetailIsland({ scenario, entities, base }: Props) {
       {scenario.synopsis && (
         <Card className="border-2 border-red-500 dark:border-red-700 bg-red-50 dark:bg-red-950">
           <CardHeader>
-            <CardTitle className="flex items-center gap-2 text-red-700 dark:text-red-400"><AlertTriangle className="h-5 w-5" />SYNOPSIS - MJ SEULEMENT</CardTitle>
-            <p className="text-sm text-red-600 dark:text-red-500 font-medium">ATTENTION : Cette section contient des spoilers majeurs.</p>
+            <CardTitle className="flex items-center gap-2 text-red-700 dark:text-red-400"><AlertTriangle className="h-5 w-5" />{t('scenarios.synopsisTitle')}</CardTitle>
+            <p className="text-sm text-red-600 dark:text-red-500 font-medium">{t('scenarios.spoilerWarning')}</p>
           </CardHeader>
           <CardContent><p className="text-sm leading-relaxed whitespace-pre-line">{scenario.synopsis}</p></CardContent>
         </Card>
@@ -264,20 +268,20 @@ export function ScenarioDetailIsland({ scenario, entities, base }: Props) {
 
       {/* Description longue */}
       {scenario.description_long && (
-        <Card><CardHeader><CardTitle>Description complète</CardTitle></CardHeader><CardContent><p className="leading-relaxed whitespace-pre-line">{scenario.description_long}</p></CardContent></Card>
+        <Card><CardHeader><CardTitle>{t('scenarios.fullDescription')}</CardTitle></CardHeader><CardContent><p className="leading-relaxed whitespace-pre-line">{scenario.description_long}</p></CardContent></Card>
       )}
 
       {/* Acts */}
       {scenario.acts && scenario.acts.length > 0 && (
         <div className="space-y-4">
-          <h2 className="text-2xl font-semibold flex items-center gap-2"><BookOpen className="h-6 w-6" />Structure du scénario</h2>
+          <h2 className="text-2xl font-semibold flex items-center gap-2"><BookOpen className="h-6 w-6" />{t('scenarios.structure')}</h2>
           <div className="space-y-3">
             {scenario.acts.map((act: any) => (
               <Card key={act.act} className="overflow-hidden">
                 <CardHeader className="cursor-pointer hover:bg-accent/50 transition-colors" onClick={() => toggleAct(act.act)}>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-3">
-                      <Badge variant="outline">Acte {act.act}</Badge>
+                      <Badge variant="outline">{`${t('scenarios.act')} ${act.act}`}</Badge>
                       <CardTitle className="text-lg">{act.title}</CardTitle>
                     </div>
                     {expandedActs.has(act.act) ? <ChevronUp className="h-5 w-5 text-muted-foreground" /> : <ChevronDown className="h-5 w-5 text-muted-foreground" />}
@@ -287,9 +291,9 @@ export function ScenarioDetailIsland({ scenario, entities, base }: Props) {
                 {expandedActs.has(act.act) && (
                   <CardContent className="space-y-4">
                     {act.key_scenes?.length > 0 && (
-                      <div><h4 className="font-semibold text-sm mb-2">Scènes clés :</h4><ul className="list-disc list-inside space-y-1 text-sm">{act.key_scenes.map((s: string, i: number) => <li key={i} className="text-muted-foreground">{s}</li>)}</ul></div>
+                      <div><h4 className="font-semibold text-sm mb-2">{t('scenarios.keyScenes')}</h4><ul className="list-disc list-inside space-y-1 text-sm">{act.key_scenes.map((s: string, i: number) => <li key={i} className="text-muted-foreground">{s}</li>)}</ul></div>
                     )}
-                    {act.estimated_duration && <div className="flex items-center gap-2 text-sm text-muted-foreground"><Clock className="h-4 w-4" /><span>Durée estimée : {act.estimated_duration}</span></div>}
+                    {act.estimated_duration && <div className="flex items-center gap-2 text-sm text-muted-foreground"><Clock className="h-4 w-4" /><span>{`${t('scenarios.estimatedDuration')} ${act.estimated_duration}`}</span></div>}
                   </CardContent>
                 )}
               </Card>
@@ -301,7 +305,7 @@ export function ScenarioDetailIsland({ scenario, entities, base }: Props) {
       {/* NPCs */}
       {scenario.npcs && scenario.npcs.length > 0 && (
         <div className="space-y-4">
-          <h2 className="text-2xl font-semibold flex items-center gap-2"><User className="h-6 w-6" />Personnages Non-Joueurs</h2>
+          <h2 className="text-2xl font-semibold flex items-center gap-2"><User className="h-6 w-6" />{t('scenarios.npcs')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {scenario.npcs.map((npc: any, idx: number) => (
               <Card key={idx}>
@@ -327,7 +331,7 @@ export function ScenarioDetailIsland({ scenario, entities, base }: Props) {
       {/* Encounters */}
       {scenario.encounters && scenario.encounters.length > 0 && (
         <div className="space-y-4">
-          <h2 className="text-2xl font-semibold flex items-center gap-2"><Swords className="h-6 w-6" />Rencontres</h2>
+          <h2 className="text-2xl font-semibold flex items-center gap-2"><Swords className="h-6 w-6" />{t('scenarios.encounters')}</h2>
           <div className="space-y-3">
             {scenario.encounters.map((enc: any, idx: number) => (
               <Card key={idx}>
@@ -347,10 +351,10 @@ export function ScenarioDetailIsland({ scenario, entities, base }: Props) {
                   {enc.enemies?.length > 0 && (
                     <div>
                       <div className="flex items-center justify-between mb-2">
-                        <h4 className="font-semibold">Ennemis :</h4>
+                        <h4 className="font-semibold">{t('scenarios.enemies')}</h4>
                         {enc.enemies.some((e: any) => e.entity_base) && (
                           <span className="text-sm font-medium text-primary">
-                            Total: {enc.enemies.reduce((sum: number, e: any) => sum + (e.entity_base ? getEntityPoints(e.entity_base) : 0) * e.count, 0)} pts
+                            {`${t('common.total')}: ${enc.enemies.reduce((sum: number, e: any) => sum + (e.entity_base ? getEntityPoints(e.entity_base) : 0) * e.count, 0)} ${t('common.pts')}`}
                           </span>
                         )}
                       </div>
@@ -361,8 +365,8 @@ export function ScenarioDetailIsland({ scenario, entities, base }: Props) {
                             <li key={eidx} className="flex items-center gap-2">
                               <Shield className="h-3 w-3 text-muted-foreground" />
                               <span>
-                                {enemy.count}x {renderClickableEntity(enemy.entity_base, enemy.name)}
-                                {pts > 0 && <span className="text-muted-foreground text-xs ml-1">({pts} pts{enemy.count > 1 ? ` × ${enemy.count} = ${pts * enemy.count} pts` : ''})</span>}
+                                {`${enemy.count}x `}{renderClickableEntity(enemy.entity_base, enemy.name)}
+                                {pts > 0 && <span className="text-muted-foreground text-xs ml-1">{`(${pts} ${t('common.pts')}${enemy.count > 1 ? ` × ${enemy.count} = ${pts * enemy.count} ${t('common.pts')}` : ''})`}</span>}
                               </span>
                             </li>
                           );
@@ -373,22 +377,22 @@ export function ScenarioDetailIsland({ scenario, entities, base }: Props) {
 
                   {enc.tactics && (
                     <div className="bg-muted/50 p-3 rounded-md">
-                      <h4 className="font-semibold mb-1 flex items-center gap-2"><Target className="h-4 w-4" />Tactique :</h4>
+                      <h4 className="font-semibold mb-1 flex items-center gap-2"><Target className="h-4 w-4" />{t('scenarios.tactics')}</h4>
                       <p className="text-muted-foreground">{enc.tactics}</p>
                     </div>
                   )}
 
                   {enc.challenges?.length > 0 && (
-                    <div><h4 className="font-semibold mb-2">Défis :</h4><ul className="list-disc list-inside space-y-1 text-muted-foreground">{enc.challenges.map((c: string, i: number) => <li key={i}>{c}</li>)}</ul></div>
+                    <div><h4 className="font-semibold mb-2">{t('scenarios.challenges')}</h4><ul className="list-disc list-inside space-y-1 text-muted-foreground">{enc.challenges.map((c: string, i: number) => <li key={i}>{c}</li>)}</ul></div>
                   )}
 
                   {enc.success_conditions?.length > 0 && (
-                    <div><h4 className="font-semibold mb-2 flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-500" />Conditions de succès :</h4><ul className="list-disc list-inside space-y-1 text-muted-foreground">{enc.success_conditions.map((c: string, i: number) => <li key={i}>{c}</li>)}</ul></div>
+                    <div><h4 className="font-semibold mb-2 flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-500" />{t('scenarios.successConditions')}</h4><ul className="list-disc list-inside space-y-1 text-muted-foreground">{enc.success_conditions.map((c: string, i: number) => <li key={i}>{c}</li>)}</ul></div>
                   )}
 
                   {enc.failure_consequence && (
                     <div className="bg-destructive/10 p-3 rounded-md">
-                      <h4 className="font-semibold mb-1 flex items-center gap-2 text-destructive"><AlertCircle className="h-4 w-4" />En cas d'échec :</h4>
+                      <h4 className="font-semibold mb-1 flex items-center gap-2 text-destructive"><AlertCircle className="h-4 w-4" />{t('scenarios.onFailure')}</h4>
                       {typeof enc.failure_consequence === 'string' ? (
                         <p className="text-muted-foreground">{enc.failure_consequence}</p>
                       ) : (
@@ -399,7 +403,7 @@ export function ScenarioDetailIsland({ scenario, entities, base }: Props) {
                             return (
                               <div key={eidx} className="flex items-center gap-2">
                                 <Shield className="h-3 w-3 text-muted-foreground" />
-                                <span>{enemy.count}x {renderClickableEntity(enemy.entity_base, enemy.name)}{pts > 0 && <span className="text-muted-foreground text-xs ml-1">({pts} pts)</span>}</span>
+                                <span>{`${enemy.count}x `}{renderClickableEntity(enemy.entity_base, enemy.name)}{pts > 0 && <span className="text-muted-foreground text-xs ml-1">{`(${pts} ${t('common.pts')})`}</span>}</span>
                               </div>
                             );
                           })}
@@ -408,10 +412,10 @@ export function ScenarioDetailIsland({ scenario, entities, base }: Props) {
                     </div>
                   )}
 
-                  {enc.alternative && <div className="bg-primary/10 p-3 rounded-md"><h4 className="font-semibold mb-1">Alternative :</h4><p className="text-muted-foreground">{enc.alternative}</p></div>}
+                  {enc.alternative && <div className="bg-primary/10 p-3 rounded-md"><h4 className="font-semibold mb-1">{t('scenarios.alternative')}</h4><p className="text-muted-foreground">{enc.alternative}</p></div>}
 
                   {enc.rewards?.length > 0 && (
-                    <div><h4 className="font-semibold mb-2 flex items-center gap-2"><Trophy className="h-4 w-4 text-yellow-500" />Récompenses :</h4><ul className="list-disc list-inside space-y-1 text-muted-foreground">{enc.rewards.map((r: string, i: number) => <li key={i}>{r}</li>)}</ul></div>
+                    <div><h4 className="font-semibold mb-2 flex items-center gap-2"><Trophy className="h-4 w-4 text-yellow-500" />{t('scenarios.rewards')}</h4><ul className="list-disc list-inside space-y-1 text-muted-foreground">{enc.rewards.map((r: string, i: number) => <li key={i}>{r}</li>)}</ul></div>
                   )}
                 </CardContent>
               </Card>
@@ -423,12 +427,12 @@ export function ScenarioDetailIsland({ scenario, entities, base }: Props) {
       {/* Rewards */}
       {scenario.rewards && (
         <Card className="border-l-4 border-l-yellow-500">
-          <CardHeader><CardTitle className="flex items-center gap-2"><Trophy className="h-5 w-5 text-yellow-500" />Récompenses globales</CardTitle></CardHeader>
+          <CardHeader><CardTitle className="flex items-center gap-2"><Trophy className="h-5 w-5 text-yellow-500" />{t('scenarios.globalRewards')}</CardTitle></CardHeader>
           <CardContent className="space-y-3 text-sm">
-            {scenario.rewards.points && <div className="flex items-center gap-2"><Star className="h-4 w-4 text-blue-500" /><span className="font-semibold">Points :</span>{scenario.rewards.points}</div>}
-            {scenario.rewards.credits && <div className="flex items-center gap-2"><Trophy className="h-4 w-4 text-yellow-500" /><span className="font-semibold">Crédits :</span>{scenario.rewards.credits}</div>}
-            {scenario.rewards.items?.length > 0 && <div><h4 className="font-semibold mb-2">Objets :</h4><ul className="list-disc list-inside space-y-1 text-muted-foreground">{scenario.rewards.items.map((item: string, i: number) => <li key={i}>{item}</li>)}</ul></div>}
-            {scenario.rewards.special && <div className="bg-primary/10 p-3 rounded-md"><h4 className="font-semibold mb-1">Récompense spéciale :</h4><p className="text-muted-foreground whitespace-pre-line">{scenario.rewards.special}</p></div>}
+            {scenario.rewards.points && <div className="flex items-center gap-2"><Star className="h-4 w-4 text-blue-500" /><span className="font-semibold">{t('scenarios.rewardPoints')}</span>{scenario.rewards.points}</div>}
+            {scenario.rewards.credits && <div className="flex items-center gap-2"><Trophy className="h-4 w-4 text-yellow-500" /><span className="font-semibold">{t('scenarios.rewardCredits')}</span>{scenario.rewards.credits}</div>}
+            {scenario.rewards.items?.length > 0 && <div><h4 className="font-semibold mb-2">{t('scenarios.rewardItems')}</h4><ul className="list-disc list-inside space-y-1 text-muted-foreground">{scenario.rewards.items.map((item: string, i: number) => <li key={i}>{item}</li>)}</ul></div>}
+            {scenario.rewards.special && <div className="bg-primary/10 p-3 rounded-md"><h4 className="font-semibold mb-1">{t('scenarios.specialReward')}</h4><p className="text-muted-foreground whitespace-pre-line">{scenario.rewards.special}</p></div>}
           </CardContent>
         </Card>
       )}
@@ -436,7 +440,7 @@ export function ScenarioDetailIsland({ scenario, entities, base }: Props) {
       {/* Variants */}
       {scenario.variants?.length > 0 && (
         <div className="space-y-4">
-          <h2 className="text-2xl font-semibold flex items-center gap-2"><Lightbulb className="h-6 w-6" />Variantes</h2>
+          <h2 className="text-2xl font-semibold flex items-center gap-2"><Lightbulb className="h-6 w-6" />{t('scenarios.variants')}</h2>
           {scenario.variants.map((v: any, i: number) => (
             <Card key={i}><CardHeader><CardTitle className="text-base">{v.name}</CardTitle></CardHeader><CardContent><p className="text-sm text-muted-foreground whitespace-pre-line">{v.description}</p></CardContent></Card>
           ))}
@@ -448,28 +452,28 @@ export function ScenarioDetailIsland({ scenario, entities, base }: Props) {
         <Card className="border-l-4 border-l-purple-500">
           <CardHeader className="cursor-pointer hover:bg-accent/50 transition-colors" onClick={() => setGmNotesExpanded(!gmNotesExpanded)}>
             <div className="flex items-center justify-between">
-              <CardTitle className="flex items-center gap-2"><Lightbulb className="h-5 w-5 text-purple-500" />Notes pour le MJ</CardTitle>
+              <CardTitle className="flex items-center gap-2"><Lightbulb className="h-5 w-5 text-purple-500" />{t('scenarios.gmNotes')}</CardTitle>
               {gmNotesExpanded ? <ChevronUp className="h-5 w-5 text-muted-foreground" /> : <ChevronDown className="h-5 w-5 text-muted-foreground" />}
             </div>
           </CardHeader>
           {gmNotesExpanded && (
             <CardContent className="space-y-4 text-sm">
-              {scenario.gm_notes?.preparation_time && <div><span className="font-semibold">Temps de préparation : </span><span className="text-muted-foreground">{scenario.gm_notes.preparation_time}</span></div>}
-              {scenario.gm_notes?.complexity && <div><span className="font-semibold">Complexité : </span><Badge variant="outline">{scenario.gm_notes.complexity}</Badge></div>}
-              {scenario.gm_notes?.tone && <div><span className="font-semibold">Ton : </span><span className="text-muted-foreground">{scenario.gm_notes.tone}</span></div>}
-              {scenario.gm_tips && <div className="bg-purple-50 dark:bg-purple-950/30 p-4 rounded-md"><h4 className="font-semibold mb-2">Conseils de maîtrise :</h4><p className="text-muted-foreground whitespace-pre-line leading-relaxed">{scenario.gm_tips}</p></div>}
+              {scenario.gm_notes?.preparation_time && <div><span className="font-semibold">{t('scenarios.prepTime')}</span><span className="text-muted-foreground">{scenario.gm_notes.preparation_time}</span></div>}
+              {scenario.gm_notes?.complexity && <div><span className="font-semibold">{t('scenarios.complexity')}</span><Badge variant="outline">{scenario.gm_notes.complexity}</Badge></div>}
+              {scenario.gm_notes?.tone && <div><span className="font-semibold">{t('scenarios.tone')}</span><span className="text-muted-foreground">{scenario.gm_notes.tone}</span></div>}
+              {scenario.gm_tips && <div className="bg-purple-50 dark:bg-purple-950/30 p-4 rounded-md"><h4 className="font-semibold mb-2">{t('scenarios.gmTips')}</h4><p className="text-muted-foreground whitespace-pre-line leading-relaxed">{scenario.gm_tips}</p></div>}
             </CardContent>
           )}
         </Card>
       )}
 
       {/* Tags */}
-      {scenario.tags?.length > 0 && <div className="flex flex-wrap gap-2">{scenario.tags.map((t, i) => <Badge key={i} variant="secondary" className="text-xs">{t}</Badge>)}</div>}
+      {scenario.tags?.length > 0 && <div className="flex flex-wrap gap-2">{scenario.tags.map((tg, i) => <Badge key={i} variant="secondary" className="text-xs">{tg}</Badge>)}</div>}
 
       {/* Entity Detail Modal */}
       <Dialog open={!!selectedEntity} onOpenChange={() => setSelectedEntity(null)}>
         <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
-          <DialogHeader><DialogTitle>Détails de l'entité</DialogTitle></DialogHeader>
+          <DialogHeader><DialogTitle>{t('scenarios.entityDetails')}</DialogTitle></DialogHeader>
           {selectedEntity && <EntityDetailPanel entity={selectedEntity.entity} displayName={selectedEntity.displayName} />}
         </DialogContent>
       </Dialog>

@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
@@ -14,6 +13,7 @@ import {
 } from '@/components/ui/dialog'
 import { Sword, Shield, Package, Plus, X, Search, Lock, Eye, AlertTriangle } from 'lucide-react'
 import { hasAccessToWeapon, hasAccessToArmor, checkWeaponAccess, checkArmorAccess, getDetailedAccessInfo } from '@/lib/accessUtils'
+import { t } from '@/lib/i18n'
 import type { Equipment, CharacterStats } from '@/types/classes'
 import type { AffinityStats } from '@/types/common'
 import type { Weapon } from '@/types/weapons'
@@ -146,13 +146,13 @@ export function EquipmentManager({
           {w.description && <p className="text-sm text-muted-foreground">{w.description}</p>}
           {w.stats && (
             <div className="space-y-1 text-sm">
-              {w.stats.damage && <div>Dégâts: {w.stats.damage}</div>}
-              {w.stats.attack_type && <div>Type d'attaque: {w.stats.attack_type}</div>}
-              {w.stats.range && <div>Portée: {w.stats.range}</div>}
-              {w.stats.special && <div>Spécial: {w.stats.special}</div>}
+              {w.stats.damage && <div>{t('common.damage')} {w.stats.damage}</div>}
+              {w.stats.attack_type && <div>{t('common.attackType')} {w.stats.attack_type}</div>}
+              {w.stats.range && <div>{t('common.range')} {w.stats.range}</div>}
+              {w.stats.special && <div>{t('common.special')} {w.stats.special}</div>}
             </div>
           )}
-          {w.cost && <div className="text-sm font-medium">Coût: {w.cost}</div>}
+          {w.cost && <div className="text-sm font-medium">{t('common.cost')} {w.cost}</div>}
         </div>
       )
     }
@@ -165,13 +165,13 @@ export function EquipmentManager({
           {a.description && <p className="text-sm text-muted-foreground">{a.description}</p>}
           {a.stats && (
             <div className="space-y-1 text-sm">
-              {a.stats.RMEC && <div>RMEC: {a.stats.RMEC}</div>}
-              {a.stats.RRAD && <div>RRAD: {a.stats.RRAD}</div>}
-              {a.stats.RINT && <div>RINT: {a.stats.RINT}</div>}
-              {a.stats.defense_bonus && <div>Défense: {a.stats.defense_bonus}</div>}
+              {a.stats.RMEC && <div>{`RMEC: ${a.stats.RMEC}`}</div>}
+              {a.stats.RRAD && <div>{`RRAD: ${a.stats.RRAD}`}</div>}
+              {a.stats.RINT && <div>{`RINT: ${a.stats.RINT}`}</div>}
+              {a.stats.defense_bonus && <div>{t('common.defense')} {a.stats.defense_bonus}</div>}
             </div>
           )}
-          {a.cost && <div className="text-sm font-medium">Coût: {a.cost}</div>}
+          {a.cost && <div className="text-sm font-medium">{t('common.cost')} {a.cost}</div>}
         </div>
       )
     }
@@ -184,14 +184,14 @@ export function EquipmentManager({
           {c.description && <p className="text-sm text-muted-foreground">{c.description}</p>}
           {c.effect && (
             <div className="space-y-1 text-sm">
-              {c.effect.healing && <div>Soins: {c.effect.healing}</div>}
-              {c.effect.damage && <div>Dégâts: {c.effect.damage}</div>}
-              {c.effect.flux_restoration && <div>Flux: {c.effect.flux_restoration}</div>}
-              {c.effect.duration && <div>Durée: {c.effect.duration}</div>}
-              {c.effect.special && <div>Spécial: {c.effect.special}</div>}
+              {c.effect.healing && <div>{t('common.healing')} {c.effect.healing}</div>}
+              {c.effect.damage && <div>{t('common.damage')} {c.effect.damage}</div>}
+              {c.effect.flux_restoration && <div>{t('equipment.fluxLabel')} {c.effect.flux_restoration}</div>}
+              {c.effect.duration && <div>{t('common.duration')} {c.effect.duration}</div>}
+              {c.effect.special && <div>{t('common.special')} {c.effect.special}</div>}
             </div>
           )}
-          {c.cost && <div className="text-sm font-medium">Coût: {c.cost}</div>}
+          {c.cost && <div className="text-sm font-medium">{t('common.cost')} {c.cost}</div>}
         </div>
       )
     }
@@ -207,16 +207,16 @@ export function EquipmentManager({
             <div className="flex justify-between items-center">
               <CardTitle className="flex items-center gap-2">
                 <Sword className="h-5 w-5 text-red-500" />
-                Armes ({equipment.weapons?.length || 0})
+                {t('equipment.weapons')} ({equipment.weapons?.length || 0})
               </CardTitle>
               <Button size="sm" onClick={() => openSelector('weapon')}>
-                <Plus className="h-4 w-4 mr-2" />Ajouter
+                <Plus className="h-4 w-4 mr-2" />{t('common.add')}
               </Button>
             </div>
           </CardHeader>
           <CardContent>
             {!equipment.weapons || equipment.weapons.length === 0 ? (
-              <p className="text-sm text-muted-foreground text-center py-4">Aucune arme</p>
+              <p className="text-sm text-muted-foreground text-center py-4">{t('equipment.noWeapon')}</p>
             ) : (
               <div className="space-y-2">
                 {equipment.weapons.map((weaponName) => {
@@ -235,7 +235,7 @@ export function EquipmentManager({
                       <div className="flex items-center gap-2 flex-1">
                         {!accessResult.hasAccess && <AlertTriangle className="h-4 w-4 text-red-500" />}
                         <span className="text-sm font-medium">{weaponName}</span>
-                        {!accessResult.hasAccess && <Badge variant="destructive" className="text-xs">Non accessible</Badge>}
+                        {!accessResult.hasAccess && <Badge variant="destructive" className="text-xs">{t('equipment.notAccessible')}</Badge>}
                       </div>
                       <Button size="icon" variant="ghost" onClick={() => removeWeapon(weaponName)}>
                         <X className="h-4 w-4 text-red-500" />
@@ -254,16 +254,16 @@ export function EquipmentManager({
             <div className="flex justify-between items-center">
               <CardTitle className="flex items-center gap-2">
                 <Shield className="h-5 w-5 text-blue-500" />
-                Armures ({equipment.armor?.length || 0})
+                {t('equipment.armors')} ({equipment.armor?.length || 0})
               </CardTitle>
               <Button size="sm" onClick={() => openSelector('armor')}>
-                <Plus className="h-4 w-4 mr-2" />Ajouter
+                <Plus className="h-4 w-4 mr-2" />{t('common.add')}
               </Button>
             </div>
           </CardHeader>
           <CardContent>
             {!equipment.armor || equipment.armor.length === 0 ? (
-              <p className="text-sm text-muted-foreground text-center py-4">Aucune armure</p>
+              <p className="text-sm text-muted-foreground text-center py-4">{t('equipment.noArmor')}</p>
             ) : (
               <div className="space-y-2">
                 {equipment.armor.map((armorName) => {
@@ -282,7 +282,7 @@ export function EquipmentManager({
                       <div className="flex items-center gap-2 flex-1">
                         {!accessResult.hasAccess && <AlertTriangle className="h-4 w-4 text-red-500" />}
                         <span className="text-sm font-medium">{armorName}</span>
-                        {!accessResult.hasAccess && <Badge variant="destructive" className="text-xs">Non accessible</Badge>}
+                        {!accessResult.hasAccess && <Badge variant="destructive" className="text-xs">{t('equipment.notAccessible')}</Badge>}
                       </div>
                       <Button size="icon" variant="ghost" onClick={() => removeArmor(armorName)}>
                         <X className="h-4 w-4 text-red-500" />
@@ -301,16 +301,16 @@ export function EquipmentManager({
             <div className="flex justify-between items-center">
               <CardTitle className="flex items-center gap-2">
                 <Package className="h-5 w-5 text-green-500" />
-                Consommables ({equipment.consumables?.length || 0})
+                {t('equipment.consumables')} ({equipment.consumables?.length || 0})
               </CardTitle>
               <Button size="sm" onClick={() => openSelector('consumable')}>
-                <Plus className="h-4 w-4 mr-2" />Ajouter
+                <Plus className="h-4 w-4 mr-2" />{t('common.add')}
               </Button>
             </div>
           </CardHeader>
           <CardContent>
             {!equipment.consumables || equipment.consumables.length === 0 ? (
-              <p className="text-sm text-muted-foreground text-center py-4">Aucun consommable</p>
+              <p className="text-sm text-muted-foreground text-center py-4">{t('equipment.noConsumable')}</p>
             ) : (
               <div className="space-y-2">
                 {equipment.consumables.map((item) => (
@@ -340,12 +340,12 @@ export function EquipmentManager({
         <DialogContent className="max-w-full sm:max-w-7xl max-h-[85vh] overflow-hidden flex flex-col p-4 sm:p-6">
           <DialogHeader>
             <DialogTitle>
-              {selectorType === 'weapon' && 'Sélectionner une arme'}
-              {selectorType === 'armor' && 'Sélectionner une armure'}
-              {selectorType === 'consumable' && 'Sélectionner un consommable'}
+              {selectorType === 'weapon' && t('equipment.selectWeapon')}
+              {selectorType === 'armor' && t('equipment.selectArmor')}
+              {selectorType === 'consumable' && t('equipment.selectConsumable')}
             </DialogTitle>
             <DialogDescription>
-              {selectorType !== 'consumable' && `${getFilteredItems().length} objets accessibles avec vos affinités`}
+              {selectorType !== 'consumable' && `${getFilteredItems().length} ${t('equipment.accessibleCount')}`}
             </DialogDescription>
           </DialogHeader>
 
@@ -365,7 +365,7 @@ export function EquipmentManager({
                 <div className="text-center py-8">
                   <Lock className="h-12 w-12 mx-auto text-muted-foreground mb-2" />
                   <p className="text-muted-foreground">
-                    {searchQuery ? 'Aucun objet ne correspond à la recherche' : 'Aucun objet accessible'}
+                    {searchQuery ? t('equipment.noItemMatch') : t('equipment.noItemAccessible')}
                   </p>
                 </div>
               ) : (
@@ -386,7 +386,7 @@ export function EquipmentManager({
                         {item.category && <Badge variant="secondary" className="text-xs mt-1">{item.category}</Badge>}
                       </div>
                       <div className="flex items-center gap-2 ml-2">
-                        {isSelected && <Badge className="bg-green-100 text-green-800 dark:bg-green-900">Ajouté</Badge>}
+                        {isSelected && <Badge className="bg-green-100 text-green-800 dark:bg-green-900">{t('common.added')}</Badge>}
                         <Eye className="h-4 w-4 text-muted-foreground" />
                       </div>
                     </div>
@@ -405,7 +405,7 @@ export function EquipmentManager({
                       onClick={addPreviewedItem}
                       disabled={isItemSelected(previewItem.name || '')}
                     >
-                      {isItemSelected(previewItem.name || '') ? 'Déjà ajouté' : 'Ajouter cet objet'}
+                      {isItemSelected(previewItem.name || '') ? t('common.alreadyAdded') : t('equipment.addItem')}
                     </Button>
                   </div>
                 </div>
@@ -413,7 +413,7 @@ export function EquipmentManager({
                 <div className="flex items-center justify-center h-full text-center p-8">
                   <div>
                     <Eye className="h-12 w-12 mx-auto text-muted-foreground mb-4" />
-                    <p className="text-muted-foreground">Cliquez sur un objet pour voir ses détails</p>
+                    <p className="text-muted-foreground">{t('equipment.clickToPreview')}</p>
                   </div>
                 </div>
               )}

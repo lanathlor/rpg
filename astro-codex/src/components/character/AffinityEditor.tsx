@@ -14,6 +14,7 @@ import {
   COMBAT_AFFINITY_COST,
 } from '@/lib/affinityConstants'
 import { getSchoolIcon, getTypeIcon } from '@/lib/schoolUtils'
+import { t } from '@/lib/i18n'
 
 interface AffinityEditorProps {
   affinities: AffinityStats
@@ -99,13 +100,13 @@ export function AffinityEditor({ affinities, onUpdate }: AffinityEditorProps) {
             <div>
               <CardTitle className="flex items-center gap-2">
                 <Target className="h-5 w-5 text-blue-500" />
-                Affinités de combat
+                {t('affinity.combatTitle')}
               </CardTitle>
               <CardDescription>
-                Affinité avec les armes à distance et au corps à corps ({COMBAT_AFFINITY_COST} pts/niveau)
+                {`${t('affinity.combatDesc')} (${COMBAT_AFFINITY_COST} ${t('affinity.ptsPerLevel')})`}
               </CardDescription>
             </div>
-            <Badge variant="secondary" className="text-base">{combatCost} pts</Badge>
+            <Badge variant="secondary" className="text-base">{`${combatCost} ${t('common.pts')}`}</Badge>
           </div>
         </CardHeader>
         <CardContent>
@@ -127,7 +128,7 @@ export function AffinityEditor({ affinities, onUpdate }: AffinityEditorProps) {
                     />
                   </div>
                   {level > 0 && (
-                    <Badge variant="secondary" className="mt-6">{cost} pts</Badge>
+                    <Badge variant="secondary" className="mt-6">{`${cost} ${t('common.pts')}`}</Badge>
                   )}
                 </div>
               )
@@ -143,11 +144,11 @@ export function AffinityEditor({ affinities, onUpdate }: AffinityEditorProps) {
             <div>
               <CardTitle className="flex items-center gap-2">
                 <Sparkles className="h-5 w-5 text-orange-500" />
-                Affinités d'école
+                {t('affinity.schoolTitle')}
               </CardTitle>
-              <CardDescription>Niveau d'affinité avec chaque école de quantotechnique</CardDescription>
+              <CardDescription>{t('affinity.schoolDesc')}</CardDescription>
             </div>
-            <Badge variant="secondary" className="text-base">{schoolsCost} pts</Badge>
+            <Badge variant="secondary" className="text-base">{`${schoolsCost} ${t('common.pts')}`}</Badge>
           </div>
         </CardHeader>
         <CardContent className="space-y-4">
@@ -164,7 +165,7 @@ export function AffinityEditor({ affinities, onUpdate }: AffinityEditorProps) {
                     <SchoolIcon className="h-5 w-5 flex-shrink-0" />
                     <div className="flex-1 min-w-0">
                       <label className="text-sm font-medium capitalize block">{school}</label>
-                      <p className="text-xs text-muted-foreground">{costPerLevel} pts/niveau</p>
+                      <p className="text-xs text-muted-foreground">{`${costPerLevel} ${t('affinity.ptsPerLevel')}`}</p>
                     </div>
                     <div className="flex items-center gap-2">
                       <Input
@@ -175,7 +176,7 @@ export function AffinityEditor({ affinities, onUpdate }: AffinityEditorProps) {
                         max={10}
                         className="w-20"
                       />
-                      <Badge variant="secondary">{totalCost} pts</Badge>
+                      <Badge variant="secondary">{`${totalCost} ${t('common.pts')}`}</Badge>
                       <Button size="icon" variant="ghost" onClick={() => updateSchoolLevel(school, 0)}>
                         <X className="h-4 w-4 text-red-500" />
                       </Button>
@@ -193,10 +194,10 @@ export function AffinityEditor({ affinities, onUpdate }: AffinityEditorProps) {
                 onChange={(e) => setSelectedSchool(e.target.value)}
                 className="flex-1 border rounded px-3 py-2 bg-background"
               >
-                <option value="">Sélectionner une école...</option>
+                <option value="">{t('affinity.selectSchool')}</option>
                 {availableSchools.map((school) => (
                   <option key={school} value={school}>
-                    {school} ({getSchoolCost(school)} pts/niv)
+                    {school} ({getSchoolCost(school)} {t('affinity.ptsPerLevelShort')})
                   </option>
                 ))}
               </select>
@@ -208,7 +209,7 @@ export function AffinityEditor({ affinities, onUpdate }: AffinityEditorProps) {
 
           {availableSchools.length === 0 && (
             <p className="text-sm text-muted-foreground text-center py-2">
-              Toutes les écoles ont été ajoutées
+              {t('affinity.allSchoolsAdded')}
             </p>
           )}
         </CardContent>
@@ -221,11 +222,11 @@ export function AffinityEditor({ affinities, onUpdate }: AffinityEditorProps) {
             <div>
               <CardTitle className="flex items-center gap-2">
                 <Swords className="h-5 w-5 text-purple-500" />
-                Affinités de type
+                {t('affinity.typeTitle')}
               </CardTitle>
-              <CardDescription>Niveau d'affinité avec chaque type de sort ({TYPE_COST} pts/niveau)</CardDescription>
+              <CardDescription>{`${t('affinity.typeDesc')} (${TYPE_COST} ${t('affinity.ptsPerLevel')})`}</CardDescription>
             </div>
-            <Badge variant="secondary" className="text-base">{typesCost} pts</Badge>
+            <Badge variant="secondary" className="text-base">{`${typesCost} ${t('common.pts')}`}</Badge>
           </div>
         </CardHeader>
         <CardContent className="space-y-4">
@@ -241,7 +242,7 @@ export function AffinityEditor({ affinities, onUpdate }: AffinityEditorProps) {
                     <TypeIcon className="h-5 w-5 flex-shrink-0" />
                     <div className="flex-1 min-w-0">
                       <label className="text-sm font-medium capitalize block">{type}</label>
-                      <p className="text-xs text-muted-foreground">{TYPE_COST} pts/niveau</p>
+                      <p className="text-xs text-muted-foreground">{`${TYPE_COST} ${t('affinity.ptsPerLevel')}`}</p>
                     </div>
                     <div className="flex items-center gap-2">
                       <Input
@@ -252,7 +253,7 @@ export function AffinityEditor({ affinities, onUpdate }: AffinityEditorProps) {
                         max={10}
                         className="w-20"
                       />
-                      <Badge variant="secondary">{totalCost} pts</Badge>
+                      <Badge variant="secondary">{`${totalCost} ${t('common.pts')}`}</Badge>
                       <Button size="icon" variant="ghost" onClick={() => updateTypeLevel(type, 0)}>
                         <X className="h-4 w-4 text-red-500" />
                       </Button>
@@ -270,10 +271,10 @@ export function AffinityEditor({ affinities, onUpdate }: AffinityEditorProps) {
                 onChange={(e) => setSelectedType(e.target.value)}
                 className="flex-1 border rounded px-3 py-2 bg-background"
               >
-                <option value="">Sélectionner un type...</option>
+                <option value="">{t('affinity.selectType')}</option>
                 {availableTypes.map((type) => (
                   <option key={type} value={type}>
-                    {type} ({TYPE_COST} pts/niv)
+                    {type} ({TYPE_COST} {t('affinity.ptsPerLevelShort')})
                   </option>
                 ))}
               </select>
@@ -285,7 +286,7 @@ export function AffinityEditor({ affinities, onUpdate }: AffinityEditorProps) {
 
           {availableTypes.length === 0 && (
             <p className="text-sm text-muted-foreground text-center py-2">
-              Tous les types ont été ajoutés
+              {t('affinity.allTypesAdded')}
             </p>
           )}
         </CardContent>

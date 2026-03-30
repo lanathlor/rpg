@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react';
+import { t } from '@/lib/i18n';
 
 interface WeaponItem {
   slug: string;
@@ -79,7 +80,7 @@ export function WeaponListIsland({ weapons, base }: Props) {
         <div className="relative flex-1">
           <input
             type="text"
-            placeholder="Rechercher une arme..."
+            placeholder={t('weapons.searchPlaceholder')}
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
@@ -87,32 +88,32 @@ export function WeaponListIsland({ weapons, base }: Props) {
         </div>
         <div className="flex flex-col sm:flex-row gap-2 flex-wrap">
           <select value={filterCategory} onChange={(e) => setFilterCategory(e.target.value)} className="border rounded px-3 py-2 bg-background text-sm">
-            <option value="">Toutes les catégories</option>
+            <option value="">{t('weapons.allCategories')}</option>
             {categories.map(c => <option key={c} value={c}>{c}</option>)}
           </select>
           <select value={filterType} onChange={(e) => setFilterType(e.target.value)} className="border rounded px-3 py-2 bg-background text-sm">
-            <option value="">Tous les types</option>
-            {types.map(t => <option key={t} value={t}>{t}</option>)}
+            <option value="">{t('weapons.allTypes')}</option>
+            {types.map(tp => <option key={tp} value={tp}>{tp}</option>)}
           </select>
           <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="border rounded px-3 py-2 bg-background text-sm">
-            <option value="name-asc">Nom A-Z</option>
-            <option value="name-desc">Nom Z-A</option>
-            <option value="cost-asc">Coût croissant</option>
-            <option value="cost-desc">Coût décroissant</option>
+            <option value="name-asc">{t('common.sort.nameAZShort')}</option>
+            <option value="name-desc">{t('common.sort.nameZAShort')}</option>
+            <option value="cost-asc">{t('common.sort.costAscShort')}</option>
+            <option value="cost-desc">{t('common.sort.costDescShort')}</option>
           </select>
           {hasFilters && (
             <button
               onClick={() => { setSearch(''); setFilterCategory(''); setFilterType(''); }}
               className="border rounded px-3 py-2 bg-background text-sm hover:bg-accent"
             >
-              Réinitialiser
+              {t('common.reset')}
             </button>
           )}
         </div>
       </div>
 
       <div className="text-sm text-muted-foreground">
-        {filtered.length} sur {weapons.length} {weapons.length === 1 ? 'arme' : 'armes'}
+        {filtered.length} {t('common.of')} {weapons.length} {weapons.length === 1 ? t('common.weapon') : t('common.weapons')}
       </div>
 
       {/* Card Grid */}
@@ -140,16 +141,16 @@ export function WeaponListIsland({ weapons, base }: Props) {
             </div>
             <div className="p-6 pt-0 space-y-1">
               {weapon.damage && (
-                <div className="text-sm"><strong className="text-red-600 dark:text-red-400">Dégâts:</strong> {weapon.damage}</div>
+                <div className="text-sm"><strong className="text-red-600 dark:text-red-400">{t('common.damage')}</strong> {weapon.damage}</div>
               )}
               {weapon.attackType && (
-                <div className="text-sm"><strong>Type d'attaque:</strong> {weapon.attackType}</div>
+                <div className="text-sm"><strong>{t('common.attackType')}</strong> {weapon.attackType}</div>
               )}
               {weapon.range && (
-                <div className="text-sm"><strong>Portée:</strong> {weapon.range}</div>
+                <div className="text-sm"><strong>{t('common.range')}</strong> {weapon.range}</div>
               )}
               {weapon.cost && (
-                <div className="text-sm"><strong>Coût:</strong> {weapon.cost}</div>
+                <div className="text-sm"><strong>{t('common.cost')}</strong> {weapon.cost}</div>
               )}
             </div>
           </a>
@@ -158,7 +159,7 @@ export function WeaponListIsland({ weapons, base }: Props) {
 
       {filtered.length === 0 && (
         <div className="text-center py-12 text-muted-foreground">
-          Aucun résultat ne correspond aux critères de recherche.
+          {t('common.noResult')}
         </div>
       )}
     </div>

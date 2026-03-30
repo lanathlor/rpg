@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react';
+import { t } from '@/lib/i18n';
 
 interface ListItem {
   slug: string;
@@ -78,21 +79,21 @@ export function GenericListIsland({ items, base, basePath, searchPlaceholder = '
             </select>
           )}
           <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="border rounded px-3 py-2 bg-background text-sm">
-            <option value="name-asc">Nom (A-Z)</option>
-            <option value="name-desc">Nom (Z-A)</option>
-            <option value="cost-asc">Coût (croissant)</option>
-            <option value="cost-desc">Coût (décroissant)</option>
+            <option value="name-asc">{t('common.sort.nameAZ')}</option>
+            <option value="name-desc">{t('common.sort.nameZA')}</option>
+            <option value="cost-asc">{t('common.sort.costAsc')}</option>
+            <option value="cost-desc">{t('common.sort.costDesc')}</option>
           </select>
           {hasFilters && (
             <button onClick={() => { setSearch(''); setFilterCategory(''); }} className="border rounded px-3 py-2 bg-background text-sm hover:bg-accent">
-              Réinitialiser
+              {t('common.reset')}
             </button>
           )}
         </div>
       </div>
 
       <div className="text-sm text-muted-foreground">
-        {filtered.length} sur {items.length} {itemLabel}{filtered.length > 1 ? 's' : ''}
+        {`${filtered.length} ${t('common.of')} ${items.length} ${itemLabel}${filtered.length > 1 ? 's' : ''}`}
       </div>
 
       {/* Card Grid */}
@@ -137,7 +138,7 @@ export function GenericListIsland({ items, base, basePath, searchPlaceholder = '
 
       {filtered.length === 0 && (
         <div className="text-center py-12 text-muted-foreground">
-          Aucun résultat ne correspond aux critères de recherche.
+          {t('common.noResult')}
         </div>
       )}
     </div>

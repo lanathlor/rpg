@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react';
+import { t } from '@/lib/i18n';
 
 interface SkillItem {
   slug: string;
@@ -88,7 +89,7 @@ export function SkillListIsland({ skills, base }: Props) {
         <div className="relative flex-1">
           <input
             type="text"
-            placeholder="Rechercher une compétence..."
+            placeholder={t('skills.searchPlaceholder')}
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
@@ -96,21 +97,21 @@ export function SkillListIsland({ skills, base }: Props) {
         </div>
         <div className="flex flex-col sm:flex-row gap-2 flex-wrap">
           <select value={filterSubcategory} onChange={(e) => setFilterSubcategory(e.target.value)} className="border rounded px-3 py-2 bg-background text-sm">
-            <option value="">Toutes les sous-catégories</option>
+            <option value="">{t('skills.allSubcategories')}</option>
             {subcategories.map(s => <option key={s} value={s}>{s}</option>)}
           </select>
           <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="border rounded px-3 py-2 bg-background text-sm">
-            <option value="name-asc">Nom A-Z</option>
-            <option value="name-desc">Nom Z-A</option>
-            <option value="points-asc">Points croissant</option>
-            <option value="points-desc">Points décroissant</option>
+            <option value="name-asc">{t('common.sort.nameAZShort')}</option>
+            <option value="name-desc">{t('common.sort.nameZAShort')}</option>
+            <option value="points-asc">{t('common.sort.pointsAsc')}</option>
+            <option value="points-desc">{t('common.sort.pointsDesc')}</option>
           </select>
           {hasFilters && (
             <button
               onClick={() => { setSearch(''); setFilterSubcategory(''); setActiveTiers(new Set()); }}
               className="border rounded px-3 py-2 bg-background text-sm hover:bg-accent"
             >
-              Réinitialiser
+              {t('common.reset')}
             </button>
           )}
         </div>
@@ -118,7 +119,7 @@ export function SkillListIsland({ skills, base }: Props) {
 
       {/* Tier toggle badges */}
       <div className="flex gap-2 flex-wrap items-center">
-        <span className="text-sm text-muted-foreground mr-1">Tier:</span>
+        <span className="text-sm text-muted-foreground mr-1">{t('skills.tier')}</span>
         {allTiers.map(tier => {
           const conf = tierConfig[tier];
           const isActive = activeTiers.has(tier);
@@ -139,7 +140,7 @@ export function SkillListIsland({ skills, base }: Props) {
       </div>
 
       <div className="text-sm text-muted-foreground">
-        {filtered.length} sur {skills.length} {skills.length === 1 ? 'compétence' : 'compétences'}
+        {filtered.length} {t('common.of')} {skills.length} {skills.length === 1 ? t('common.skill') : t('common.skills')}
       </div>
 
       {/* Card Grid */}
@@ -177,7 +178,7 @@ export function SkillListIsland({ skills, base }: Props) {
               {skill.pointCost != null && (
                 <div className="text-sm">
                   <span className="inline-flex items-center rounded-full border px-2 py-0.5 text-xs font-semibold bg-amber-50 dark:bg-amber-950/20 border-amber-200 dark:border-amber-800 text-amber-600 dark:text-amber-400">
-                    {skill.pointCost} pts
+                    {`${skill.pointCost} ${t('common.pts')}`}
                   </span>
                 </div>
               )}
@@ -188,7 +189,7 @@ export function SkillListIsland({ skills, base }: Props) {
 
       {filtered.length === 0 && (
         <div className="text-center py-12 text-muted-foreground">
-          Aucun résultat ne correspond aux critères de recherche.
+          {t('common.noResult')}
         </div>
       )}
     </div>

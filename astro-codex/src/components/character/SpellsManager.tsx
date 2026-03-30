@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState, useEffect } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
@@ -14,6 +13,7 @@ import {
 } from '@/components/ui/dialog'
 import { Sparkles, Plus, X, Search, Lock, Eye, AlertTriangle, CheckCircle } from 'lucide-react'
 import { hasAccessToSpell, checkSpellAccess } from '@/lib/accessUtils'
+import { t } from '@/lib/i18n'
 import type { AffinityStats } from '@/types/common'
 import type { Spell } from '@/types/spells'
 import type { SelectedSpell } from '@/types/classes'
@@ -132,7 +132,7 @@ export function SpellsManager({ spells, affinities, intelligence = 0, bonusSlots
             <div>
               <CardTitle className="flex items-center gap-2">
                 <Sparkles className="h-5 w-5 text-orange-500" />
-                Sorts ({normalizedSpells.length}/{maxSpellSlots})
+                {t('spellsMgr.title')} ({normalizedSpells.length}/{maxSpellSlots})
               </CardTitle>
               <div className="text-xs text-muted-foreground mt-1 space-y-1">
                 <p>
@@ -143,7 +143,7 @@ export function SpellsManager({ spells, affinities, intelligence = 0, bonusSlots
                 </p>
                 {onBonusSlotsUpdate && (
                   <div className="flex items-center gap-2">
-                    <span>Bonus MJ:</span>
+                    <span>{t('spellsMgr.bonusGM')}</span>
                     {editingBonus ? (
                       <div className="flex items-center gap-1">
                         <Input
@@ -161,12 +161,12 @@ export function SpellsManager({ spells, affinities, intelligence = 0, bonusSlots
                             setEditingBonus(false)
                           }}
                         >
-                          ✓
+                          {"✓"}
                         </Button>
                         <Button size="sm" variant="ghost" className="h-5 w-5 p-0"
                           onClick={() => { setTempBonus(bonusSlots.toString()); setEditingBonus(false) }}
                         >
-                          ✗
+                          {"✗"}
                         </Button>
                       </div>
                     ) : (
@@ -174,21 +174,21 @@ export function SpellsManager({ spells, affinities, intelligence = 0, bonusSlots
                         +{bonusSlots}
                       </button>
                     )}
-                    {bonusSlots > 0 && ` = ${maxSpellSlots} total`}
+                    {bonusSlots > 0 && ` = ${maxSpellSlots} ${t('common.total').toLowerCase()}`}
                   </div>
                 )}
               </div>
             </div>
             <Button onClick={() => setSelectorOpen(true)} disabled={normalizedSpells.length >= maxSpellSlots}>
               <Plus className="h-4 w-4 mr-2" />
-              Ajouter
+              {t('common.add')}
             </Button>
           </div>
         </CardHeader>
         <CardContent>
           {normalizedSpells.length === 0 ? (
             <p className="text-sm text-muted-foreground text-center py-8">
-              Aucun sort sélectionné. Cliquez sur "Ajouter" pour choisir des sorts.
+              {t('spellsMgr.empty')}
             </p>
           ) : (
             <div className="space-y-2">
@@ -221,7 +221,7 @@ export function SpellsManager({ spells, affinities, intelligence = 0, bonusSlots
                         }}
                       >
                         <SelectTrigger className="w-[90px] h-7 text-xs">
-                          <SelectValue>Niv. {selectedSpell.level}</SelectValue>
+                          <SelectValue>{`${t('spellsMgr.level')} ${selectedSpell.level}`}</SelectValue>
                         </SelectTrigger>
                         <SelectContent>
                           {spell?.levels?.map(level => {
@@ -233,7 +233,7 @@ export function SpellsManager({ spells, affinities, intelligence = 0, bonusSlots
                                 disabled={!levelHasAccess}
                                 className={levelHasAccess ? '' : 'opacity-50'}
                               >
-                                Niveau {level.level} {!levelHasAccess && '🔒'}
+                                {`${t('spellsMgr.levelFull')} ${level.level}`} {!levelHasAccess && '🔒'}
                               </SelectItem>
                             )
                           })}
@@ -242,7 +242,7 @@ export function SpellsManager({ spells, affinities, intelligence = 0, bonusSlots
 
                       {!hasAccess && (
                         <Badge variant="destructive" className="text-xs">
-                          Prérequis non remplis
+                          {t('spellsMgr.prereqNotMet')}
                         </Badge>
                       )}
                     </div>
@@ -265,9 +265,9 @@ export function SpellsManager({ spells, affinities, intelligence = 0, bonusSlots
       <Dialog open={selectorOpen} onOpenChange={closeSelector}>
         <DialogContent className="max-w-full sm:max-w-7xl max-h-[85vh] overflow-hidden flex flex-col p-4 sm:p-6">
           <DialogHeader>
-            <DialogTitle>Sélectionner un sort</DialogTitle>
+            <DialogTitle>{t('spellsMgr.selectTitle')}</DialogTitle>
             <DialogDescription>
-              {accessibleSpells.length} sorts accessibles avec vos affinités
+              {`${accessibleSpells.length} ${t('spellsMgr.accessibleCount')}`}
             </DialogDescription>
           </DialogHeader>
 
@@ -288,7 +288,7 @@ export function SpellsManager({ spells, affinities, intelligence = 0, bonusSlots
                 <div className="text-center py-8">
                   <Lock className="h-12 w-12 mx-auto text-muted-foreground mb-2" />
                   <p className="text-muted-foreground">
-                    {searchQuery ? 'Aucun sort ne correspond à la recherche' : 'Aucun sort accessible avec vos affinités actuelles'}
+                    {searchQuery ? t('spellsMgr.noMatch') : t('spellsMgr.noAccessible')}
                   </p>
                 </div>
               ) : (
@@ -310,12 +310,12 @@ export function SpellsManager({ spells, affinities, intelligence = 0, bonusSlots
                         <div className="flex gap-2 mt-1 flex-wrap">
                           {spell.school && <Badge variant="secondary" className="text-xs">{spell.school}</Badge>}
                           {spell.type && <Badge variant="outline" className="text-xs">{spell.type}</Badge>}
-                          {spell.levels && <Badge variant="outline" className="text-xs">Niv. 1-{spell.levels.length}</Badge>}
+                          {spell.levels && <Badge variant="outline" className="text-xs">{`${t('spellsMgr.level')} 1-${spell.levels.length}`}</Badge>}
                         </div>
                       </div>
                       <div className="flex items-center gap-2 ml-2">
                         {selectedLevels.length > 0 && selectedLevels.map(level => (
-                          <Badge key={level} className="bg-green-100 text-green-800 dark:bg-green-900 text-xs">Niv. {level}</Badge>
+                          <Badge key={level} className="bg-green-100 text-green-800 dark:bg-green-900 text-xs">{`${t('spellsMgr.level')} ${level}`}</Badge>
                         ))}
                         <Eye className="h-4 w-4 text-muted-foreground" />
                       </div>
@@ -341,12 +341,12 @@ export function SpellsManager({ spells, affinities, intelligence = 0, bonusSlots
                     )}
                     {previewSpell.levels && previewSpell.levels.map(level => (
                       <div key={level.level} className="mt-3 p-3 border rounded-lg text-sm">
-                        <div className="font-semibold">Niveau {level.level}{level.name && level.name !== previewSpell.spell_series ? ` - ${level.name}` : ''}</div>
-                        {level.effects?.damage && <div>Dégâts: {level.effects.damage}</div>}
-                        {level.conditions?.flux_cost != null && <div>Coût: {level.conditions.flux_cost} Flux</div>}
-                        {level.effects?.defense && <div>Défense: {level.effects.defense}</div>}
-                        {level.effects?.protection && <div>Protection: {level.effects.protection}</div>}
-                        {level.duration && <div>Durée: {level.duration}</div>}
+                        <div className="font-semibold">{`${t('spellsMgr.levelFull')} ${level.level}`}{level.name && level.name !== previewSpell.spell_series ? ` - ${level.name}` : ''}</div>
+                        {level.effects?.damage && <div>{t('common.damage')} {level.effects.damage}</div>}
+                        {level.conditions?.flux_cost != null && <div>{`${t('common.cost')} ${level.conditions.flux_cost} ${t('common.flux')}`}</div>}
+                        {level.effects?.defense && <div>{t('common.defense')} {level.effects.defense}</div>}
+                        {level.effects?.protection && <div>{t('common.protection')} {level.effects.protection}</div>}
+                        {level.duration && <div>{t('common.duration')} {level.duration}</div>}
                         {level.description && <div className="text-muted-foreground mt-1">{level.description}</div>}
                       </div>
                     ))}
@@ -355,7 +355,7 @@ export function SpellsManager({ spells, affinities, intelligence = 0, bonusSlots
                   {/* Level Selection */}
                   {previewSpell.levels && previewSpell.levels.length > 0 && (
                     <div className="space-y-3 p-4 border rounded-lg bg-secondary/10">
-                      <h4 className="font-semibold text-sm">Sélectionner le niveau</h4>
+                      <h4 className="font-semibold text-sm">{t('spellsMgr.selectLevel')}</h4>
                       <Select value={selectedLevel} onValueChange={setSelectedLevel}>
                         <SelectTrigger className="w-full">
                           <SelectValue placeholder="Sélectionner un niveau" />
@@ -374,15 +374,15 @@ export function SpellsManager({ spells, affinities, intelligence = 0, bonusSlots
                                 disabled={!hasAccess || isAlreadyAdded}
                               >
                                 <div className="flex items-center gap-2">
-                                  <span>Niveau {level.level}</span>
+                                  <span>{`${t('spellsMgr.levelFull')} ${level.level}`}</span>
                                   {isAlreadyAdded && (
                                     <Badge className="bg-green-100 text-green-800 dark:bg-green-900 text-xs ml-2">
-                                      <CheckCircle className="h-3 w-3 mr-1" />Déjà ajouté
+                                      <CheckCircle className="h-3 w-3 mr-1" />{t('common.alreadyAdded')}
                                     </Badge>
                                   )}
                                   {!hasAccess && (
                                     <Badge variant="destructive" className="text-xs ml-2">
-                                      <AlertTriangle className="h-3 w-3 mr-1" />Prérequis non remplis
+                                      <AlertTriangle className="h-3 w-3 mr-1" />{t('spellsMgr.prereqNotMet')}
                                     </Badge>
                                   )}
                                 </div>
@@ -408,12 +408,12 @@ export function SpellsManager({ spells, affinities, intelligence = 0, bonusSlots
                       }
                     >
                       {normalizedSpells.length >= maxSpellSlots
-                        ? 'Limite de sorts atteinte'
+                        ? t('spellsMgr.limitReached')
                         : normalizedSpells.some(
                             s => s.series === (previewSpell.spell_series || previewSpell.name || '') && s.level === selectedLevel
                           )
-                        ? `Niveau ${selectedLevel} déjà ajouté`
-                        : `Ajouter ce sort (Niveau ${selectedLevel})`}
+                        ? `${t('spellsMgr.levelFull')} ${selectedLevel} - ${t('common.alreadyAdded')}`
+                        : `${t('spellsMgr.addSpell')} (${t('spellsMgr.levelFull')} ${selectedLevel})`}
                     </Button>
                   </div>
                 </div>
@@ -421,7 +421,7 @@ export function SpellsManager({ spells, affinities, intelligence = 0, bonusSlots
                 <div className="flex items-center justify-center h-full text-center p-8">
                   <div>
                     <Eye className="h-12 w-12 mx-auto text-muted-foreground mb-4" />
-                    <p className="text-muted-foreground">Cliquez sur un sort pour voir ses détails</p>
+                    <p className="text-muted-foreground">{t('spellsMgr.clickToPreview')}</p>
                   </div>
                 </div>
               )}

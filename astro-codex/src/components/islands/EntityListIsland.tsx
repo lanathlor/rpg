@@ -1,5 +1,6 @@
 import { useState, useMemo } from 'react';
 import { RangeSlider } from '@/components/ui/range-slider';
+import { t } from '@/lib/i18n';
 
 interface EntityItem {
   slug: string;
@@ -94,7 +95,7 @@ export function EntityListIsland({ entities, base }: Props) {
         <div className="relative flex-1">
           <input
             type="text"
-            placeholder="Rechercher une entité..."
+            placeholder={t('entities.searchPlaceholder')}
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
@@ -102,27 +103,27 @@ export function EntityListIsland({ entities, base }: Props) {
         </div>
         <div className="flex flex-col sm:flex-row gap-2 flex-wrap">
           <select value={filterFaction} onChange={(e) => setFilterFaction(e.target.value)} className="border rounded px-3 py-2 bg-background text-sm">
-            <option value="">Toutes les factions</option>
+            <option value="">{t('entities.allFactions')}</option>
             {factions.map(f => <option key={f} value={f}>{f}</option>)}
           </select>
           <select value={filterAlignement} onChange={(e) => setFilterAlignement(e.target.value)} className="border rounded px-3 py-2 bg-background text-sm">
-            <option value="">Tous les alignements</option>
+            <option value="">{t('entities.allAlignments')}</option>
             {alignements.map(a => <option key={a} value={a}>{a}</option>)}
           </select>
           <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="border rounded px-3 py-2 bg-background text-sm">
-            <option value="name-asc">Nom A-Z</option>
-            <option value="name-desc">Nom Z-A</option>
-            <option value="health-asc">PV croissant</option>
-            <option value="health-desc">PV décroissant</option>
-            <option value="points-asc">Points croissant</option>
-            <option value="points-desc">Points décroissant</option>
+            <option value="name-asc">{t('common.sort.nameAZShort')}</option>
+            <option value="name-desc">{t('common.sort.nameZAShort')}</option>
+            <option value="health-asc">{t('entities.sort.healthAsc')}</option>
+            <option value="health-desc">{t('entities.sort.healthDesc')}</option>
+            <option value="points-asc">{t('common.sort.pointsAsc')}</option>
+            <option value="points-desc">{t('common.sort.pointsDesc')}</option>
           </select>
           {hasFilters && (
             <button
               onClick={() => { setSearch(''); setFilterFaction(''); setFilterAlignement(''); setMinPoints(absoluteMin); setMaxPoints(absoluteMax); }}
               className="border rounded px-3 py-2 bg-background text-sm hover:bg-accent"
             >
-              Réinitialiser
+              {t('common.reset')}
             </button>
           )}
         </div>
@@ -130,7 +131,7 @@ export function EntityListIsland({ entities, base }: Props) {
 
       {/* Point Range Slider */}
       <div className="flex items-center gap-3">
-        <span className="text-sm font-medium whitespace-nowrap">Points:</span>
+        <span className="text-sm font-medium whitespace-nowrap">{t('classes.points')}</span>
         <RangeSlider
           min={absoluteMin}
           max={absoluteMax}
@@ -140,7 +141,7 @@ export function EntityListIsland({ entities, base }: Props) {
       </div>
 
       <div className="text-sm text-muted-foreground">
-        {filtered.length} sur {entities.length} {entities.length === 1 ? 'entité' : 'entités'}
+        {filtered.length} {t('common.of')} {entities.length} {entities.length === 1 ? t('common.entity') : t('common.entities')}
       </div>
 
       {/* Card Grid */}
@@ -177,8 +178,8 @@ export function EntityListIsland({ entities, base }: Props) {
             <div className="p-6 pt-0 space-y-2">
               {/* Core stats */}
               <div className="flex gap-3 flex-wrap text-sm">
-                {entity.health != null && <span><strong>PV:</strong> {entity.health}</span>}
-                {entity.speed != null && <span><strong>Vit:</strong> {entity.speed}</span>}
+                {entity.health != null && <span><strong>{t('common.pvLabel')}</strong> {entity.health}</span>}
+                {entity.speed != null && <span><strong>{t('common.speedLabel')}</strong> {entity.speed}</span>}
                 {entity.highestStatName && (
                   <span><strong>{entity.highestStatName}:</strong> {entity.highestStat}</span>
                 )}
@@ -188,7 +189,7 @@ export function EntityListIsland({ entities, base }: Props) {
               {entity.points != null && (
                 <div className="flex gap-2 flex-wrap">
                   <span className="inline-flex items-center rounded-full border px-2 py-0.5 text-xs font-semibold bg-amber-50 dark:bg-amber-950/20 border-amber-200 dark:border-amber-800 text-amber-600 dark:text-amber-400">
-                    {entity.points} pts
+                    {`${entity.points} ${t('common.pts')}`}
                   </span>
                 </div>
               )}
@@ -198,17 +199,17 @@ export function EntityListIsland({ entities, base }: Props) {
                 <div className="flex gap-2 flex-wrap">
                   {entity.rmec > 0 && (
                     <span className="inline-flex items-center rounded-full border px-2 py-0.5 text-xs font-semibold bg-stone-100 text-stone-800 dark:bg-stone-800 dark:text-stone-300 border-stone-300 dark:border-stone-600">
-                      RMEC +{entity.rmec}
+                      {`RMEC +${entity.rmec}`}
                     </span>
                   )}
                   {entity.rrad > 0 && (
                     <span className="inline-flex items-center rounded-full border px-2 py-0.5 text-xs font-semibold bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300 border-orange-300 dark:border-orange-600">
-                      RRAD +{entity.rrad}
+                      {`RRAD +${entity.rrad}`}
                     </span>
                   )}
                   {entity.rint > 0 && (
                     <span className="inline-flex items-center rounded-full border px-2 py-0.5 text-xs font-semibold bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300 border-purple-300 dark:border-purple-600">
-                      RINT +{entity.rint}
+                      {`RINT +${entity.rint}`}
                     </span>
                   )}
                 </div>
@@ -219,17 +220,17 @@ export function EntityListIsland({ entities, base }: Props) {
                 <div className="flex gap-2 flex-wrap">
                   {entity.spellCount > 0 && (
                     <span className="inline-flex items-center rounded-full border px-2 py-0.5 text-xs font-semibold bg-indigo-50 dark:bg-indigo-950/20 border-indigo-200 dark:border-indigo-800 text-indigo-600 dark:text-indigo-400">
-                      {entity.spellCount} sort{entity.spellCount > 1 ? 's' : ''}
+                      {`${entity.spellCount} ${entity.spellCount > 1 ? t('common.spells') : t('common.spell')}`}
                     </span>
                   )}
                   {entity.skillCount > 0 && (
                     <span className="inline-flex items-center rounded-full border px-2 py-0.5 text-xs font-semibold bg-teal-50 dark:bg-teal-950/20 border-teal-200 dark:border-teal-800 text-teal-600 dark:text-teal-400">
-                      {entity.skillCount} comp.
+                      {`${entity.skillCount} ${t('common.comp')}`}
                     </span>
                   )}
                   {entity.weaponCount > 0 && (
                     <span className="inline-flex items-center rounded-full border px-2 py-0.5 text-xs font-semibold bg-rose-50 dark:bg-rose-950/20 border-rose-200 dark:border-rose-800 text-rose-600 dark:text-rose-400">
-                      {entity.weaponCount} arme{entity.weaponCount > 1 ? 's' : ''}
+                      {`${entity.weaponCount} ${entity.weaponCount > 1 ? t('common.weapons') : t('common.weapon')}`}
                     </span>
                   )}
                 </div>
@@ -241,7 +242,7 @@ export function EntityListIsland({ entities, base }: Props) {
 
       {filtered.length === 0 && (
         <div className="text-center py-12 text-muted-foreground">
-          Aucun résultat ne correspond aux critères de recherche.
+          {t('common.noResult')}
         </div>
       )}
     </div>

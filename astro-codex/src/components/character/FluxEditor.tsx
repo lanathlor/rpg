@@ -2,6 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Input } from '@/components/ui/input'
 import { Badge } from '@/components/ui/badge'
 import { Zap, Battery, RefreshCw } from 'lucide-react'
+import { t } from '@/lib/i18n'
 import type { FluxSystem } from '@/types/classes'
 
 interface FluxEditorProps {
@@ -20,14 +21,14 @@ export function FluxEditor({ fluxSystem, onUpdate }: FluxEditorProps) {
           <div>
             <CardTitle className="flex items-center gap-2">
               <Zap className="h-5 w-5 text-purple-500" />
-              Système de Flux
+              {t('flux.title')}
             </CardTitle>
             <CardDescription>
-              Le Flux est l'énergie utilisée pour lancer des sorts et activer des capacités spéciales.
+              {t('flux.description')}
             </CardDescription>
           </div>
           <Badge variant="secondary" className="text-base">
-            {fluxCost} pts
+            {`${fluxCost} ${t('common.pts')}`}
           </Badge>
         </div>
       </CardHeader>
@@ -36,7 +37,7 @@ export function FluxEditor({ fluxSystem, onUpdate }: FluxEditorProps) {
           <div>
             <label className="text-sm font-medium flex items-center gap-2 mb-2">
               <Battery className="h-4 w-4 text-purple-500" />
-              Réserve de Flux
+              {t('flux.reserveLabel')}
             </label>
             <Input
               type="number"
@@ -44,12 +45,12 @@ export function FluxEditor({ fluxSystem, onUpdate }: FluxEditorProps) {
               onChange={(e) => onUpdate({ ...flux, reserve: parseInt(e.target.value) || 0 })}
               min={0}
             />
-            <p className="text-xs text-muted-foreground mt-1">Quantité maximale de Flux disponible</p>
+            <p className="text-xs text-muted-foreground mt-1">{t('flux.reserveHelp')}</p>
           </div>
           <div>
             <label className="text-sm font-medium flex items-center gap-2 mb-2">
               <Zap className="h-4 w-4 text-yellow-500" />
-              Flux par tour
+              {t('flux.perTurnLabel')}
             </label>
             <Input
               type="number"
@@ -57,12 +58,12 @@ export function FluxEditor({ fluxSystem, onUpdate }: FluxEditorProps) {
               onChange={(e) => onUpdate({ ...flux, per_turn: parseInt(e.target.value) || 0 })}
               min={0}
             />
-            <p className="text-xs text-muted-foreground mt-1">Flux régénéré chaque tour</p>
+            <p className="text-xs text-muted-foreground mt-1">{t('flux.perTurnHelp')}</p>
           </div>
           <div>
             <label className="text-sm font-medium flex items-center gap-2 mb-2">
               <RefreshCw className="h-4 w-4 text-green-500" />
-              Récupération
+              {t('flux.recoveryLabel')}
             </label>
             <Input
               type="number"
@@ -70,7 +71,7 @@ export function FluxEditor({ fluxSystem, onUpdate }: FluxEditorProps) {
               onChange={(e) => onUpdate({ ...flux, recovery: parseInt(e.target.value) || 0 })}
               min={0}
             />
-            <p className="text-xs text-muted-foreground mt-1">Flux récupéré hors combat</p>
+            <p className="text-xs text-muted-foreground mt-1">{t('flux.recoveryHelp')}</p>
           </div>
         </div>
       </CardContent>

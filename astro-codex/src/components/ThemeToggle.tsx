@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Moon, Sun, Monitor } from 'lucide-react';
+import { t } from '@/lib/i18n';
 
 type Theme = 'dark' | 'light' | 'system';
 
@@ -38,7 +39,7 @@ export function ThemeToggle() {
       {theme === 'light' && <Sun className="h-4 w-4" />}
       {theme === 'dark' && <Moon className="h-4 w-4" />}
       {theme === 'system' && <Monitor className="h-4 w-4" />}
-      <span className="sr-only">Changer de thème</span>
+      <span className="sr-only">{t('theme.toggle')}</span>
     </button>
   );
 }
