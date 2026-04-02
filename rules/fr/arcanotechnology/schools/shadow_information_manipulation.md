@@ -1,5 +1,5 @@
 ---
-title: "Ombre — Manipulation de l’information"
+title: "Ombre - Manipulation de l’information"
 order: 6
 ---
 

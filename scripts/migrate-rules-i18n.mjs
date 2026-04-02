@@ -225,7 +225,7 @@ function migrateCollection(name, collectionDir) {
   // Skip the fr/ and en/ dirs if they already exist (re-run safety)
   const frDir = path.join(collectionDir, 'fr');
   if (fs.existsSync(frDir)) {
-    console.log(`  ℹ ${name}/fr/ already exists — skipping`);
+    console.log(`  ℹ ${name}/fr/ already exists - skipping`);
     return;
   }
 

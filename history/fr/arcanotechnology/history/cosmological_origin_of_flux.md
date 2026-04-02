@@ -53,7 +53,7 @@ Le Conseil des Gardiens maintient donc un contrôle strict sur l'exploitation du
 
 _"Le Flux est l'ordre pur dans un univers tendant vers le chaos. Chaque conversion arcanotechnique est un acte irréversible. Utilisons cette ressource avec sagesse, car nous ne pourrons jamais la reconstituer."_
 
-— Principe fondamental du Conseil des Gardiens
+- Principe fondamental du Conseil des Gardiens
 
 ---
 

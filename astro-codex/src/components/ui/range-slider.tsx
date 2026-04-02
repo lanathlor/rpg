@@ -80,7 +80,7 @@ export function RangeSlider({ min, max, value, onChange, label = 'Points', suffi
             }}
             className="w-20 h-9 px-2 border rounded bg-background text-sm [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
           />
-          <span className="text-muted-foreground">—</span>
+          <span className="text-muted-foreground">-</span>
           <input
             type="number"
             min={minVal}

@@ -1,5 +1,5 @@
 ---
-title: '️Givre — Extraction énergétique'
+title: '️Givre - Extraction énergétique'
 order: 2
 ---
 

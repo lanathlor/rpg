@@ -358,7 +358,7 @@ export const fr = {
 
   // === Astro Pages ===
   'page.home.title': 'Pyrrhic Stars',
-  'page.home.intro': 'An 5755 — L\'Empire galactique, gouverné par l\'immortel Conseil des Gardiens, entre dans la dernière décennie d\'une guerre séculaire contre les Acéras.',
+  'page.home.intro': 'An 5755 - L\'Empire galactique, gouverné par l\'immortel Conseil des Gardiens, entre dans la dernière décennie d\'une guerre séculaire contre les Acéras.',
   'page.home.codexDesc': 'Ce codex contient l\'ensemble des données du jeu de rôle : règles, techniques arcanotechniques, équipements, classes et entités.',
   'page.home.rulesDesc': 'Système de jeu et mécaniques',
   'page.home.historyDesc': 'Chroniques de l\'Empire',

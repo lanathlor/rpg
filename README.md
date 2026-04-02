@@ -1,22 +1,26 @@
-# Physics-Based Tabletop RPG System
+# Pyrrhic Stars - Sci-Fi Tabletop RPG
 
-A French-language tabletop RPG system with a unified physics-based resistance mechanism, where "magic" (Flux/Arcanotechnique) creates real physical phenomena governed by physics laws.
+A bilingual (FR/EN) sci-fi tabletop RPG set in a galactic empire during the final decade of a centuries-long interstellar war. The Flux, an advanced arcanotechnology, manipulates physical laws through science, not magic.
+
+**[Play online](https://lanathlor.github.io/rpg/)** | Rules, codex, lore, and character creator
 
 ## Repository Structure
 
 ```
-├── rules/                # Game rules in Markdown (French)
-├── codex/               # Game data in YAML format
-│   ├── sorts/          # Spells organized by type
-│   ├── equipements/    # Weapons, armor, items
+├── astro-codex/         # Astro 6 static site (production)
+├── rules/               # Game rules in Markdown (FR + EN)
+├── history/             # Lore and worldbuilding (FR + EN)
+├── codex/               # Game data in YAML (i18n structure)
+│   ├── spells/         # Arcanotechnic techniques by type
+│   ├── weapons/        # Weapons
+│   ├── equipment/      # Armor and gear
 │   ├── classes/        # Character classes
-│   ├── competences/    # Skills
-│   └── sorts_series/   # Spell series definitions
-├── web-codex/          # React web viewer application
-│   └── web-codex/     # Main application directory
-├── sorts/              # Legacy spell format (being migrated)
+│   ├── skills/         # Skills
+│   ├── consumables/    # Consumable items
+│   ├── entities/       # Bestiary
+│   └── scenarios/      # Game scenarios
+├── web-codex/          # Legacy React viewer (deprecated)
 └── CLAUDE.md           # AI assistant instructions
-
 ```
 
 ## Core Concept: The Resistance System
@@ -33,11 +37,9 @@ All damage is resisted by one of three resistances based on the **physical natur
 
 **Critical Rule:** What matters is the PHYSICAL NATURE of the effect, not its source.
 
--   Fireball spell → RRAD damage (thermal)
--   Magic ice javelin → RMEC damage (kinetic projectile)
+-   Flux fireball → RRAD damage (thermal)
+-   Arcanotechnic ice javelin → RMEC damage (kinetic projectile)
 -   Life drain → RINT damage (internal)
-
-See `/rules/07_systeme_de_resistances.md` for complete reference.
 
 ## Getting Started
 
@@ -62,26 +64,26 @@ npm install -g pnpm
     cd rpg
     ```
 
-2. **Web Codex Development**
+2. **Astro Codex (production site)**
 
     ```bash
-    cd web-codex/web-codex
-    pnpm install
-    pnpm dev
+    cd astro-codex
+    npm install
+    npm run dev
     ```
 
-    The application will be available at `http://localhost:5173`
+    The application will be available at `http://localhost:4321`
 
 3. **Available Commands**
     ```bash
-    pnpm dev              # Start development server
-    pnpm build            # Build for production
-    pnpm preview          # Preview production build
-    pnpm lint             # Run ESLint
-    pnpm lint:fix         # Auto-fix linting issues
-    pnpm format           # Format with Prettier
-    pnpm typecheck        # TypeScript type checking
-    pnpm test             # Run tests
+    npm run dev              # Start development server
+    npm run build            # Build for production
+    npm run preview          # Preview production build
+    npm run lint             # Run ESLint
+    npm run lint:fix         # Auto-fix linting issues
+    npm run format           # Format with Prettier
+    npm run typecheck        # TypeScript type checking
+    npm test                 # Run tests
     ```
 
 ## Contributing to Game Content

@@ -1,5 +1,5 @@
 ---
-title: "Biométabolique — Conversion bioénergétique"
+title: "Biométabolique - Conversion bioénergétique"
 order: 7
 ---
 

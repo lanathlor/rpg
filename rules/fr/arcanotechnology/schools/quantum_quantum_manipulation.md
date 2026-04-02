@@ -1,5 +1,5 @@
 ---
-title: "Quantique — Manipulation quantique"
+title: "Quantique - Manipulation quantique"
 order: 8
 ---
 

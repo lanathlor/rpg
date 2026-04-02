@@ -220,7 +220,7 @@ Hors combat, un personnage récupère l’intégralité de sa Réserve de Flux v
 | Afflux par Tour        | Vitesse de mobilisation | Détermine la vitesse de préparation d'un sort |
 | Récupération Naturelle | Regain automatique      | Permet de maintenir le rythme arcanotechnique         |
 | Instabilité du Flux    | Surcharge               | Limite l’abus de sorts lourds                 |
-| Coût du sort           | —                       | Flux à atteindre pour lancer un sort          |
+| Coût du sort           | -                       | Flux à atteindre pour lancer un sort          |
 
 ---
 

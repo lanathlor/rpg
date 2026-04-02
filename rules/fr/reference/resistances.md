@@ -15,7 +15,7 @@ Que l'attaque provienne d'une épée, d'une balle, d'un arcane de feu ou d'un ra
 
 ## ⚔️ Les Trois Résistances
 
-### 1. RMEC — Résistance Mécanique
+### 1. RMEC - Résistance Mécanique
 
 **Ce qu'elle couvre :**
 
@@ -39,7 +39,7 @@ Capacité du corps/armure à absorber ou dévier l'énergie cinétique et les co
 
 ---
 
-### 2. RRAD — Résistance Radiative
+### 2. RRAD - Résistance Radiative
 
 **Ce qu'elle couvre :**
 
@@ -63,7 +63,7 @@ Capacité à isoler, réfléchir ou dissiper l'énergie rayonnée ou conduite th
 
 ---
 
-### 3. RINT — Résistance Interne
+### 3. RINT - Résistance Interne
 
 **Aussi appelée RFP (Résistance au Flux Personnel)**
 
@@ -154,11 +154,11 @@ Dégâts finaux = Dégâts bruts - Résistance applicable
 
 ### Étapes de résolution
 
-1. **Déterminer le type de dégât** — L'attaquant/MJ identifie la nature physique de l'attaque
-2. **Identifier la résistance** — RMEC, RRAD ou RINT (parfois plusieurs)
-3. **Calculer la résistance totale** — Armure + Stat + Buffs
-4. **Appliquer la réduction** — Soustraire la résistance des dégâts bruts
-5. **Résultat** — Les dégâts finaux ne peuvent jamais être négatifs (minimum 0)
+1. **Déterminer le type de dégât** - L'attaquant/MJ identifie la nature physique de l'attaque
+2. **Identifier la résistance** - RMEC, RRAD ou RINT (parfois plusieurs)
+3. **Calculer la résistance totale** - Armure + Stat + Buffs
+4. **Appliquer la réduction** - Soustraire la résistance des dégâts bruts
+5. **Résultat** - Les dégâts finaux ne peuvent jamais être négatifs (minimum 0)
 
 ### Cas des attaques mixtes
 
@@ -203,15 +203,15 @@ Le MJ choisit la méthode selon la complexité souhaitée.
 ## 💡 Philosophie du Système
 
 > **Une seule réalité physique.**
-> Le Flux ne crée pas de "dégâts magiques" — il crée du feu, de la glace, des projectiles, de l'énergie cinétique.
+> Le Flux ne crée pas de "dégâts magiques" - il crée du feu, de la glace, des projectiles, de l'énergie cinétique.
 > Ces phénomènes obéissent aux lois de la physique et sont contrés par les mêmes résistances qu'une attaque "normale".
 
 **Avantages de ce système :**
 
-1. **Cohérence narrative** — Pas de distinction artificielle entre "physique" et "magique"
-2. **Clarté tactique** — Les joueurs comprennent intuitivement quel type de résistance protège contre quoi
-3. **Équilibre** — Les arcanotechniciens ne contournent pas toute armure, mais peuvent cibler des faiblesses spécifiques
-4. **Profondeur stratégique** — Les ennemis ont des profils de résistance variés (tank RMEC faible RRAD, etc.)
+1. **Cohérence narrative** - Pas de distinction artificielle entre "physique" et "magique"
+2. **Clarté tactique** - Les joueurs comprennent intuitivement quel type de résistance protège contre quoi
+3. **Équilibre** - Les arcanotechniciens ne contournent pas toute armure, mais peuvent cibler des faiblesses spécifiques
+4. **Profondeur stratégique** - Les ennemis ont des profils de résistance variés (tank RMEC faible RRAD, etc.)
 
 **Exemples d'application :**
 
@@ -225,9 +225,9 @@ Le MJ choisit la méthode selon la complexité souhaitée.
 
 ### Concevoir des ennemis équilibrés
 
-- **Tank mécanique** : RMEC élevé, RRAD faible, RINT très faible — Vulnérable au feu et aux attaques internes
-- **Créature élémentaire** : RMEC faible, RRAD très élevé, RINT modéré — Résiste à son élément, fragile aux armes physiques
-- **Entité de Flux** : RMEC très faible, RRAD faible, RINT très élevé — Résiste aux drains, vulnérable aux attaques conventionnelles
+- **Tank mécanique** : RMEC élevé, RRAD faible, RINT très faible - Vulnérable au feu et aux attaques internes
+- **Créature élémentaire** : RMEC faible, RRAD très élevé, RINT modéré - Résiste à son élément, fragile aux armes physiques
+- **Entité de Flux** : RMEC très faible, RRAD faible, RINT très élevé - Résiste aux drains, vulnérable aux attaques conventionnelles
 
 ### Varier les défis
 

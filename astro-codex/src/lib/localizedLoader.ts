@@ -134,7 +134,7 @@ function findMdFiles(dir: string): string[] {
  * - Converts "/index" at the end to just the directory path
  * e.g. "combat/attacking.md" → "combat/attacking"
  *      "combat/index.md" → "combat"
- *      "index.md" → "" (root index — typically not used)
+ *      "index.md" → "" (root index - typically not used)
  */
 function mdPathToSlug(relPath: string): string {
   let slug = relPath.replace(/\.md$/, '');

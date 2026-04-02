@@ -7,7 +7,7 @@ Chaque statistique commence à **8 gratuitement**. Augmenter une statistique au-
 
 | Valeur de stat | Coût par niveau | Coût cumulé depuis 8 |
 | -------------- | --------------- | -------------------- |
-| 8              | —               | 0                    |
+| 8              | -               | 0                    |
 | 9-13           | 2 pts/niveau    | 2, 4, 6, 8, 10       |
 | 14-15          | 3 pts/niveau    | 13, 16               |
 | 16-17          | 5 pts/niveau    | 21, 26               |

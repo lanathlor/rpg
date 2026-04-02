@@ -5,7 +5,7 @@ order: 1
 
 La arcanotechnique constitue une **énergie potentielle fondamentale**, appelée **énergie primique**, omniprésente dans la structure même de l'univers. Intrinsèque à toute matière, elle imprègne chaque atome, chaque particule, formant le substrat énergétique de la réalité physique.
 
-Les pratiquants — appelés **canalisateurs** — ont appris à extraire et convertir cette énergie primique en différentes formes d'énergie mesurable : énergie thermique (chaleur), électromagnétique (lumière, électricité), mécanique (gravité, pression), ou encore biologique et informationnelle.
+Les pratiquants - appelés **canalisateurs** - ont appris à extraire et convertir cette énergie primique en différentes formes d'énergie mesurable : énergie thermique (chaleur), électromagnétique (lumière, électricité), mécanique (gravité, pression), ou encore biologique et informationnelle.
 
 Chaque **École d'arcanotechnie** correspond à une **conversion spécifique** d'énergie arcanotechnique vers un type d'énergie physique particulier :
 

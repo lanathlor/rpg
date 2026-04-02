@@ -55,7 +55,7 @@ Elles permettent de réussir des actions exceptionnelles là où d’autres éch
 
 - Une compétence peut être **permanente** (acquise par l’expérience) ou **temporaire** (issue d’un buff).
 - Certaines blessures peuvent rendre une compétence inutilisable (ex : acrobatie avec une jambe blessée).
-- L’usage créatif d’une compétence est encouragé — les joueurs ingénieux seront souvent récompensés.
+- L’usage créatif d’une compétence est encouragé - les joueurs ingénieux seront souvent récompensés.
 
 Chaque compétence sera décrite dans les sections dédiées aux classes qui la possèdent.
 
@@ -70,7 +70,7 @@ Les armes et sorts possèdent un **prérequis d’affinité** : un personnage do
 
 ### Types d’affinités de base :
 
-- **Armes de mêlée (A.CAC)** : armes blanches — épées, haches, etc.
+- **Armes de mêlée (A.CAC)** : armes blanches - épées, haches, etc.
 - **Armes à distance (A.Dist)** : armes à feu, fusils, arcs.
 - **Arcanotechnie (A.Arc)** : capacité à manier les sorts.
 

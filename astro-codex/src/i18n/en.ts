@@ -1,6 +1,6 @@
 import type { TranslationKey } from './fr';
 
-// English translations — initially same as French, translate later
+// English translations - initially same as French, translate later
 export const en: Record<TranslationKey, string> = {
   // === Common ===
   'common.pts': 'pts',
@@ -354,7 +354,7 @@ export const en: Record<TranslationKey, string> = {
 
   // === Astro Pages ===
   'page.home.title': 'Pyrrhic Stars',
-  'page.home.intro': 'Year 5755 — The galactic Empire, governed by the immortal Council of Guardians, enters the final decade of a centuries-long war against the Acéras.',
+  'page.home.intro': 'Year 5755 - The galactic Empire, governed by the immortal Council of Guardians, enters the final decade of a centuries-long war against the Acéras.',
   'page.home.codexDesc': 'This codex contains all the role-playing game data: rules, arcanotechnic techniques, equipment, classes and entities.',
   'page.home.rulesDesc': 'Game system and mechanics',
   'page.home.historyDesc': 'Empire chronicles',

@@ -7,7 +7,7 @@ order: 1
 
 L'éducation est **universelle et gratuite** dans tout l'Empire. Elle commence dès les premiers mots et se poursuit progressivement tout au long de l'enfance et de l'adolescence.
 
-Le système met fortement en avant **les sciences** — tant classiques qu'arcanotechniques — reflétant les priorités technologiques de l'Empire.
+Le système met fortement en avant **les sciences** - tant classiques qu'arcanotechniques - reflétant les priorités technologiques de l'Empire.
 
 ### Écoles prestigieuses et spécialisation précoce
 

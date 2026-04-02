@@ -5,7 +5,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://lanmusic.github.io',
+  site: 'https://lanathlor.github.io',
   base: '/rpg/',
   i18n: {
     defaultLocale: 'en',
