@@ -1,4 +1,3 @@
-image: images/entites/garde_empire.png
 base_stats:
   health: 48
   speed: 5
