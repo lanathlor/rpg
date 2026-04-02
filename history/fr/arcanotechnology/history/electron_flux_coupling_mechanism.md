@@ -134,7 +134,7 @@ Chaque praticien possède une **affinité neuronale naturelle** pour certaines c
 
 Ce mécanisme permet également des applications purement technologiques :
 
--   **Cristaux de mana** : Les électrons du réseau cristallin peuvent être stimulés pour déclencher la conversion
+-   **Cristaux de Flux** : Les électrons du réseau cristallin peuvent être stimulés pour déclencher la conversion
 -   **Dispositifs arcanotechniques** : Des faisceaux d'électrons contrôlés permettent une manipulation précise
 -   **Interfaces cybernétiques** : Les implants neuronaux amplifient et focalisent les patterns électroniques naturels
 

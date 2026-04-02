@@ -1,9 +1,9 @@
 ---
-title: "Pure — Manipulation du flux arcanotechnique"
+title: "Pure - Manipulation du flux arcanotechnique"
 order: 9
 ---
 
-**Principe :** Action sur l'arcanotechnie elle-même : interruption, déviation, brûlure de mana, amplification.
+**Principe :** Action sur l'arcanotechnie elle-même : interruption, déviation, brûlure de Flux, amplification.
 
 **Forces :**
 

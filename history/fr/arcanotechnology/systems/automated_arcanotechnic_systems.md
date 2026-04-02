@@ -9,7 +9,7 @@ La véritable révolution industrielle vint avec le développement de **modulate
 
 Un système arcanotechnique automatisé combine :
 
--   **Cristaux de mana** comme source et convertisseur de Flux
+-   **Cristaux de Flux** comme source et convertisseur de Flux
 -   **Générateurs de signaux précis** (électriques, magnétiques, ou acoustiques) qui stimulent les électrons cristallins selon des patterns programmés
 -   **Modulateur arcanotechnique** qui orchestre les conversions avec une précision microseconde
 -   **Capteurs de rétroaction** qui mesurent la densité du Flux et ajustent les paramètres en temps réel

@@ -66,14 +66,14 @@ It serves as a quick reference for players and Game Masters.
 
 ---
 
-## Arcanotechnology and Mana
+## Arcanotechnology and Flux
 
 | Term                          | Definition                                                                                     |
 | ----------------------------- | ---------------------------------------------------------------------------------------------- |
-| **Mana**                      | Potential energy used to power spells and manipulate arcanotechnological flux.                  |
-| **Arcanotechnological Flux**  | A current of energy connecting all forms of mana. Can be manipulated, blocked, or amplified.    |
+| **Flux**                      | Primic potential energy used to power spells and arcanotechnological systems.                   |
+| **Arcanotechnological Flux**  | A current of primic energy that can be channeled, manipulated, blocked, or amplified.           |
 | **Arcanotechnology School**   | A category representing the nature of arcanotechnological energy (Fire, Frost, Light, etc.).    |
-| **Arcanotechnology Type**     | The way mana is transformed (Destruction, Annihilation, Cataclysm, etc.).                      |
+| **Arcanotechnology Type**     | The way Flux is converted (Destruction, Annihilation, Cataclysm, etc.).                        |
 | **Affinity**                  | A measure of mastery over a School or Type. Determines accessible spells.                      |
 | **Spell**                     | A concrete expression of arcanotechnology, defined by a School and a Type.                     |
 | **Flux Crystal**              | An object used to store or restore Flux.                                                       |

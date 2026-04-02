@@ -108,7 +108,7 @@ Once the principle was established, development was **meteoric**:
 -   **2555**: First neural interface prototypes
 -   **2558**: Classification of the first "conversion channels" (future schools)
 -   **2560**: Creation of the Order of Arcanotechnicians
--   **2565**: Invention of mana crystals
+-   **2565**: Invention of Flux crystals
 
 In less than two decades, humanity went from total ignorance of the primic field to a civilization whose entire infrastructure rested on its manipulation. The Council of Guardians named this newly discovered field the **"Flux"** - a name that evoked its fluid and omnipresent nature.
 

@@ -1,9 +1,9 @@
 ---
-title: "Les Cristaux de Mana"
+title: "Les Cristaux de Flux"
 order: 2
 ---
 
-L'une des plus grandes percées arcanotechniques fut la création des **cristaux de mana** - des matrices cristallines spécialement conçues qui exploitent le mécanisme de couplage électron-Flux. Ces cristaux agissent comme des **réservoirs de Flux** à haute entropie négative et comme des convertisseurs contrôlables.
+L'une des plus grandes percées arcanotechniques fut la création des **cristaux de Flux** - des matrices cristallines spécialement conçues qui exploitent le mécanisme de couplage électron-Flux. Ces cristaux agissent comme des **réservoirs de Flux** à haute entropie négative et comme des convertisseurs contrôlables.
 
 ### Principe de fonctionnement
 
@@ -24,6 +24,6 @@ La structure cristalline est ingénieusement conçue pour combiner deux fonction
 -   **Portabilité** : Peut être intégré dans des dispositifs compacts
 -   **Sécurité** : Pas de risque de surcharge mentale pour l'utilisateur
 
-Ces cristaux ont démocratisé l'accès à l'arcanotechnie, permettant même aux non-praticiens d'utiliser des appareils alimentés par conversion du Flux. Des simples sources de lumière aux armes énergétiques, les cristaux de mana alimentent la civilisation moderne.
+Ces cristaux ont démocratisé l'accès à l'arcanotechnie, permettant même aux non-praticiens d'utiliser des appareils alimentés par conversion du Flux. Des simples sources de lumière aux armes énergétiques, les cristaux de Flux alimentent la civilisation moderne.
 
 ---

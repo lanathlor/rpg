@@ -9,7 +9,7 @@ Despite their apparent power, automated systems present **major constraints** th
 
 To match the conversion capacity of **a single properly trained arcanotechnician**, a crystal system requires:
 
--   An industrial-class mana crystal (~5-10 kg)
+-   An industrial-class Flux crystal (~5-10 kg)
 -   An arcanotechnic modulator with signal generators (~40-50 kg)
 -   Cooling and stabilization systems (integrated into the modulator)
 -   **Total mass: 50 to 60 kilograms**

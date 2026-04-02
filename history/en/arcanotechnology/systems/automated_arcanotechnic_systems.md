@@ -9,7 +9,7 @@ The true industrial revolution came with the development of **arcanotechnic modu
 
 An automated arcanotechnic system combines:
 
--   **Mana crystals** as Flux source and converter
+-   **Flux crystals** as energy source and converter
 -   **Precise signal generators** (electrical, magnetic, or acoustic) that stimulate crystalline electrons according to programmed patterns
 -   **Arcanotechnic modulator** that orchestrates conversions with microsecond precision
 -   **Feedback sensors** that measure Flux density and adjust parameters in real time

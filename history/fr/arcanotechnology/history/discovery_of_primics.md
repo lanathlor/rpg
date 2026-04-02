@@ -108,7 +108,7 @@ Une fois le principe établi, le développement fut **fulgurant** :
 -   **2555** : Premiers prototypes d'interfaces neuronales
 -   **2558** : Classification des premiers "canaux de conversion" (futures écoles)
 -   **2560** : Création de l'Ordre des Arcanotechniciens
--   **2565** : Invention des cristaux de mana
+-   **2565** : Invention des cristaux de Flux
 
 En moins de deux décennies, l'humanité passa de l'ignorance totale du champ primique à une civilisation dont l'infrastructure entière reposait sur sa manipulation. Le Conseil des Gardiens nomma ce champ nouvellement découvert le **"Flux"** - un nom qui évoquait sa nature fluide et omniprésente.
 

@@ -6,10 +6,10 @@ order: 1
 ## Abstract
 
 Le but de ce document est de livrer les règles suffisantes à la préparation d’une partie par les joueurs.
-Les règles ne sont pas encore assez complètes pour animer une partie dans sa totalité, et les différentes classes et caractéristiques sont pensées pour les campagnes déjà préparées.
+Le système est en cours de perfectionnement : certaines mécaniques sont encore en phase de test et d’équilibrage, et les différentes classes et caractéristiques sont pensées pour les campagnes déjà préparées.
 
-Les règles et données (classes, monstres, sorts) seront développées dans le futur après des tests satisfaisants avec les éléments déjà en place.
-Vous pouvez faire des retours sur tous les défauts rencontrés lors de la lecture de ce document.
+Les règles et données (classes, créatures, sorts) continueront d’évoluer au fil des retours de playtest.
+N’hésitez pas à signaler tout problème ou incohérence rencontré lors de la lecture de ce document.
 
 Des tests de combats ont été effectués pour assurer un semblant d’équilibre, mais certaines classes sont naturellement plus orientées vers le combat que d’autres et possèdent donc de meilleures attaques.
 Des incohérences entre le lore et les statistiques peuvent être présentes : si certaines classes ne semblent pas incarner leur background (ex : un Arcanotechnicien avec plus de force que d'intelligence), il s'agit d'une anomalie.
@@ -39,7 +39,7 @@ sont détaillés dans des documents séparés appelés **Codex** :
 - **Codex des Armes et Armures** – caractéristiques des équipements physiques.
 - **Codex des Sorts** – répertoire complet des sorts, classés par École et Type.
 - **Codex des Compétences** – liste des compétences spéciales et effets.
-- **Codex des Objets et Consommables** – artefacts, cristaux de mana, grenades, kits de soins, etc.
+- **Codex des Objets et Consommables** – artefacts, cristaux de Flux, grenades, kits de soins, etc.
 - _(optionnel)_ **Codex Bestiaire** – créatures, PNJ et adversaires rencontrés en jeu.
 
 Les Codex peuvent évoluer indépendamment du manuel pour permettre des mises à jour de contenu sans modifier les règles.

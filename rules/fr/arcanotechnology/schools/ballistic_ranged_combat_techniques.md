@@ -1,5 +1,5 @@
 ---
-title: "Balistique — Techniques de combat à distance"
+title: "Balistique - Techniques de combat à distance"
 order: 19
 ---
 
@@ -7,7 +7,7 @@ order: 19
 
 **Forces :**
 
-- Aucune consommation de mana.
+- Aucune consommation de Flux.
 - Efficace à longue portée.
 - Améliore les capacités d'armement à distance.
 - Permet l'usage de munitions spécialisées.

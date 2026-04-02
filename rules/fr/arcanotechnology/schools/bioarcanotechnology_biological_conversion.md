@@ -1,9 +1,9 @@
 ---
-title: "Bioarcanotechnie — Conversion biologique"
+title: "Bioarcanotechnie - Conversion biologique"
 order: 13
 ---
 
-**Principe :** Utilisation du mana pour influencer la croissance et la régénération cellulaire.
+**Principe :** Utilisation du Flux pour influencer la croissance et la régénération cellulaire.
 
 **Forces :**
 

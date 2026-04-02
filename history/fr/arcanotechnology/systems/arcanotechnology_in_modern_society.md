@@ -3,7 +3,7 @@ title: "L'Arcanotechnie dans la Société Moderne"
 order: 1
 ---
 
-Aujourd'hui, l'arcanotechnie imprègne chaque aspect de la société impériale. Des simples cristaux de mana qui alimentent les appareils domestiques aux armes arcanotechniques qui équipent les soldats, le Flux est omniprésent.
+Aujourd'hui, l'arcanotechnie imprègne chaque aspect de la société impériale. Des simples cristaux de Flux qui alimentent les appareils domestiques aux armes arcanotechniques qui équipent les soldats, le Flux est omniprésent.
 
 ### Les Académies Arcanotechniques
 

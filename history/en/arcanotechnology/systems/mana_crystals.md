@@ -1,9 +1,9 @@
 ---
-title: "Mana Crystals"
+title: "Flux Crystals"
 order: 2
 ---
 
-One of the greatest arcanotechnic breakthroughs was the creation of **mana crystals** - specially designed crystalline matrices that exploit the electron-Flux coupling mechanism. These crystals act as **Flux reservoirs** with high negative entropy and as controllable converters.
+One of the greatest arcanotechnic breakthroughs was the creation of **Flux crystals** - specially designed crystalline matrices that exploit the electron-Flux coupling mechanism. These crystals act as **Flux reservoirs** with high negative entropy and as controllable converters.
 
 ### Operating Principle
 
@@ -24,6 +24,6 @@ The crystalline structure is ingeniously designed to combine two functions:
 -   **Portability**: Can be integrated into compact devices
 -   **Safety**: No risk of mental overload for the user
 
-These crystals have democratized access to arcanotechnology, allowing even non-practitioners to use devices powered by Flux conversion. From simple light sources to energy weapons, mana crystals power modern civilization.
+These crystals have democratized access to arcanotechnology, allowing even non-practitioners to use devices powered by Flux conversion. From simple light sources to energy weapons, Flux crystals power modern civilization.
 
 ---

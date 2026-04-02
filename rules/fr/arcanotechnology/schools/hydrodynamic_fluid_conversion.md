@@ -1,9 +1,9 @@
 ---
-title: "Hydrodynamique — Conversion fluide"
+title: "Hydrodynamique - Conversion fluide"
 order: 11
 ---
 
-**Principe :** Transformation du mana en énergie contrôlant l’eau et ses états.
+**Principe :** Transformation du Flux en énergie contrôlant l’eau et ses états.
 
 **Forces :**
 

@@ -1,9 +1,9 @@
 ---
-title: '️Chronodynamique — Conversion temporelle'
+title: '️Chronodynamique - Conversion temporelle'
 order: 15
 ---
 
-**Principe :** Manipulation du rythme local du temps via compression ou dilatation du flux de mana.
+**Principe :** Manipulation du rythme local du temps via compression ou dilatation du champ de Flux.
 
 **Forces :**
 

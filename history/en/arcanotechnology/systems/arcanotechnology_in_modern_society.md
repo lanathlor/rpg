@@ -3,7 +3,7 @@ title: "Arcanotechnology in Modern Society"
 order: 1
 ---
 
-Today, arcanotechnology permeates every aspect of Imperial society. From simple mana crystals that power household devices to arcanotechnic weapons that equip soldiers, the Flux is omnipresent.
+Today, arcanotechnology permeates every aspect of Imperial society. From simple Flux crystals that power household devices to arcanotechnic weapons that equip soldiers, the Flux is omnipresent.
 
 ### The Arcanotechnic Academies
 

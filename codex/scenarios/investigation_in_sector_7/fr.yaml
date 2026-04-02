@@ -1,7 +1,7 @@
 name: Enquête au Secteur 7
 description: Un arcanotechnicien de renom a disparu dans la zone industrielle. Les joueurs doivent découvrir ce qui se cache derrière cette disparition avant que la situation ne dégénère.
 description_long: |
-  Le Docteur Kaela Vex, une brillante arcanotechnicienne spécialisée dans les cristaux de mana, a mystérieusement disparu il y a 48 heures. Sa dernière position connue : le Secteur 7, une zone industrielle décrépite en bordure de la ville de Prime.
+  Le Docteur Kaela Vex, une brillante arcanotechnicienne spécialisée dans les cristaux de Flux, a mystérieusement disparu il y a 48 heures. Sa dernière position connue : le Secteur 7, une zone industrielle décrépite en bordure de la ville de Prime.
 
   Le Bureau Impérial de Recherche Arcanotechnique (BIRA), son employeur, veut récupérer discrètement ses recherches avant qu'elles ne tombent entre de mauvaises mains. Mais la vérité est bien plus sombre : le Dr. Vex avait découvert une application interdite du Flux et fuyait pour protéger sa découverte.
 
@@ -15,7 +15,7 @@ gm_notes:
   complexity: medium
   tone: Tech-noir investigation avec action - ambiance cyberpunk sombre
 synopsis: |
-  Le Dr. Kaela Vex a découvert un moyen de créer des cristaux de mana à affinité multiple - une technologie révolutionnaire mais dangereuse. Réalisant que le BIRA voudrait militariser sa découverte, elle a fui avec son prototype.
+  Le Dr. Kaela Vex a découvert un moyen de créer des cristaux de Flux à affinité multiple - une technologie révolutionnaire mais dangereuse. Réalisant que le BIRA voudrait militariser sa découverte, elle a fui avec son prototype.
 
   Elle s'est réfugiée dans son ancien laboratoire clandestin au Secteur 7, mais le Commandant de Sécurité Marcus Kane, corrompu et opportuniste, a découvert sa cachette et tente de voler le prototype pour le vendre à des puissances étrangères hostiles à l'Empire.
 
@@ -66,7 +66,7 @@ npcs:
     role: Objectif de la mission / Allié potentiel
     description: Arcanotechnicienne brillante (35 ans), idéaliste. Implants oculaires améliorés et porte toujours un cristal de Flux à la main. Effrayée mais déterminée.
     entity_base: arcanotechnicien
-    notes: École Pure, expertise cristaux de mana
+    notes: École Pure, expertise cristaux de Flux
     motivations: Protéger sa découverte de la militarisation, prouver que la science doit servir l'humanité et non la guerre
   - name: Elena Voss
     role: Donneuse de quête (apparente)
@@ -186,7 +186,7 @@ rewards:
   points: 5-10 points par joueur selon les choix et résolutions
   credits: 1500 cr par joueur + bonus de 500 cr selon l'issue
   items:
-    - Cristal de mana expérimental (affinité double - très rare)
+    - Cristal de Flux expérimental (affinité double - très rare)
     - Implant neural de combat (au choix)
     - Arme arcanotechnique améliorée (au choix)
     - Kit de soins militaire x3
@@ -229,7 +229,7 @@ related_content:
     - Exosquelette de combat
     - Fusil d'assaut
     - Implant neural
-    - Cristal de mana
+    - Cristal de Flux
   locations:
     - Secteur 7 - Zone Industrielle Abandonnée
     - Complexe du BIRA - Archives Impériales

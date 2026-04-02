@@ -32,7 +32,7 @@ This unification marked the end of human civil wars and the beginning of an era 
 
 After laying solid foundations in its nearby systems, the Empire began expanding into space and encountering other isolated human groups.
 Led by the **Council of Guardians**, the Empire's humans quickly positioned themselves as leaders during the first interstellar dialogues.
-**Blanc**, head of the Council, was very present during diplomatic encounters and made no secret of his desire to federate all human peoples under the imperial banner.
+**Sérac**, head of the Council, was very present during diplomatic encounters and made no secret of his desire to federate all human peoples under the imperial banner.
 
 ---
 
@@ -134,15 +134,15 @@ Their semi-independent status makes them both admired and feared.
 
 The **Council of Guardians** constitutes the supreme authority of the Empire. These five immortal beings with exceptional abilities have led humanity since the Founding, each according to their natural areas of expertise:
 
-- **Blanc** _(temporary name)_: **Head of the Council in wartime**. A military strategist and outstanding negotiator, he assumes leadership during the Aceras conflict thanks to his tactical and diplomatic genius.
+- **Sérac**: **Head of the Council in wartime**. A military strategist and outstanding negotiator, he assumes leadership during the Aceras conflict thanks to his tactical and diplomatic genius.
 
-- **The Scientist** _(name TBD)_: **Research and Industry**. A leading arcanotechnologist, he oversees the Empire's technological innovation and industrial processes.
+- **Théon**: **Research and Industry**. A leading arcanotechnologist, he oversees the Empire's technological innovation and industrial processes.
 
-- **The Explorer** _(name TBD)_: **Expansion and Intelligence**. Responsible for colonizing new worlds and imperial intelligence networks.
+- **Veyra**: **Expansion and Intelligence**. Responsible for colonizing new worlds and imperial intelligence networks.
 
-- **The Biologist** _(name TBD)_: **Terraforming and Health**. Master of ecological adaptation and medicine, he manages planetary terraforming and the Empire's public health.
+- **Olis**: **Terraforming and Health**. Master of ecological adaptation and medicine, he manages planetary terraforming and the Empire's public health.
 
-- **The Administrator** _(name TBD)_: **Economy and Infrastructure**. Manager of resources, commerce, and architectural engineering on a galactic scale.
+- **Carène**: **Economy and Infrastructure**. Manager of resources, commerce, and architectural engineering on a galactic scale.
 
 These semi-divine beings perfectly master arcanotechnology and possess intelligence far surpassing the human average. Their apparent immortality and extraordinary abilities inspire both respect and mystery among the population.
 
@@ -195,7 +195,7 @@ Practitioners -- called **channelers** -- have learned to extract and convert th
 
 Each **Arcanotechnology School** corresponds to a **specific conversion** of arcanotechnological energy into a particular type of physical energy:
 
-- **Fire** converts mana into molecular kinetic energy
+- **Fire** converts Flux into molecular kinetic energy
 - **Electricity** transforms it into an ordered electromagnetic field
 - **Light** generates a coherent and confined photonic flux
 - **Kinesthetic** produces mechanical and gravitational work
@@ -204,7 +204,7 @@ This scientific understanding of arcanotechnology has revolutionized the Empire'
 
 ### Arcanotechnological Revolution
 
-Thanks to the Council of Guardians, the Empire has developed industrial mastery of **mana**. **Power crystals** and **solid arcanotechnology cells** now allow the storage, channeling, and conversion of this universal energy into mechanical or digital power, definitively merging science and sorcery.
+Thanks to the Council of Guardians, the Empire has developed industrial mastery of the **Flux**. **Power crystals** and **solid arcanotechnology cells** now allow the storage, channeling, and conversion of this universal energy into mechanical or digital power, definitively merging science and arcanotechnology.
 
 Spells have become true **arcanotechnological programs**: **Arcanotechnologists**, scientists specializing in arcanotechnological theory, design and code these energy conversion sequences, while operational **Arcanotechnicians** execute them in the field.
 
@@ -212,8 +212,8 @@ These **arcanotechnological programs** are developed according to the same princ
 
 This symbiosis between technology and arcanotechnology has transformed modern battlefields. Imperial Arcanotechnicians are now weapons of destruction comparable to heavy artillery, capable of manipulating the fundamental forces of nature with the precision of a scientific instrument.
 
-> In this context, the line between engineer and sorcerer has definitively disappeared.
-> The Empire has built its galactic supremacy on this perfect union between the scientific understanding of mana and its practical mastery.
+> In this context, the line between engineer and arcanotechnician has definitively disappeared.
+> The Empire has built its galactic supremacy on this perfect union between the scientific understanding of the Flux and its practical mastery.
 > Arcanotechnology is no longer mystical -- it has become an exact science.
 
 ---

@@ -6,10 +6,10 @@ order: 1
 ## Abstract
 
 The purpose of this document is to provide the rules necessary for players to prepare for a game session.
-The rules are not yet complete enough to run an entire game session, and the various classes and characteristics are designed for pre-prepared campaigns.
+The system is still being refined; some mechanics are in active testing and balancing, and the various classes and characteristics are designed for pre-prepared campaigns.
 
-Rules and data (classes, monsters, spells) will be developed in the future after satisfactory testing with the elements already in place.
-You are welcome to provide feedback on any issues encountered while reading this document.
+Rules and data (classes, creatures, spells) will continue to evolve based on playtest feedback.
+Feel free to report any issues or inconsistencies found while reading this document.
 
 Combat tests have been conducted to ensure a semblance of balance, but some classes are naturally more combat-oriented than others and therefore have better attacks.
 Inconsistencies between the lore and statistics may be present: if some classes do not seem to embody their background (e.g., an Arcanotechnician with more strength than intelligence), it is an anomaly.
@@ -39,7 +39,7 @@ are detailed in separate documents called **Codices**:
 - **Weapons and Armor Codex** -- characteristics of physical equipment.
 - **Spells Codex** -- complete repertoire of spells, sorted by School and Type.
 - **Skills Codex** -- list of special skills and effects.
-- **Items and Consumables Codex** -- artifacts, mana crystals, grenades, medkits, etc.
+- **Items and Consumables Codex** -- artifacts, Flux crystals, grenades, medkits, etc.
 - _(optional)_ **Bestiary Codex** -- creatures, NPCs, and adversaries encountered in play.
 
 The Codices can evolve independently from the handbook to allow content updates without modifying the rules.

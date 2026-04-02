@@ -1,9 +1,9 @@
 ---
-title: "Illusion — Manipulation de la perception"
+title: "Illusion - Manipulation de la perception"
 order: 17
 ---
 
-**Principe :** Transformation du mana en signaux informationnels altérant la perception sensorielle.
+**Principe :** Transformation du Flux en signaux informationnels altérant la perception sensorielle.
 
 **Forces :**
 

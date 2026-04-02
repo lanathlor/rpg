@@ -134,7 +134,7 @@ Each practitioner possesses a **natural neural affinity** for certain configurat
 
 This mechanism also enables purely technological applications:
 
--   **Mana crystals**: The electrons in the crystal lattice can be stimulated to trigger conversion
+-   **Flux crystals**: The electrons in the crystal lattice can be stimulated to trigger conversion
 -   **Arcanotechnic devices**: Controlled electron beams allow precise manipulation
 -   **Cybernetic interfaces**: Neural implants amplify and focus natural electronic patterns
 

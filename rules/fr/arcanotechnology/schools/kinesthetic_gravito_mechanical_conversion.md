@@ -1,9 +1,9 @@
 ---
-title: "Kinesthésique — Conversion gravito-mécanique"
+title: "Kinesthésique - Conversion gravito-mécanique"
 order: 4
 ---
 
-**Principe :** Transformation du mana en travail mécanique (poussée, pression, gravité locale).
+**Principe :** Transformation du Flux en travail mécanique (poussée, pression, gravité locale).
 
 **Forces :**
 

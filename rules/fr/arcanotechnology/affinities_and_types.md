@@ -7,8 +7,8 @@ order: 1
 
 Le système d'affinité repose sur deux axes :
 
-- **École** — la nature de l’énergie manipulée (Feu, Givre, Lumière, etc.)
-- **Type** — la manière dont le mana est transformé en énergie (Destruction, Altération, etc.)
+- **École** - la nature de l’énergie manipulée (Feu, Givre, Lumière, etc.)
+- **Type** - la manière dont le Flux est converti en énergie (Destruction, Altération, etc.)
 
 Un sort est défini par une École et un Type.
 Les affinités d’un personnage déterminent **quels sorts il peut apprendre**, pas leur puissance.
@@ -117,7 +117,7 @@ Le généraliste accède au sort avec **3 points de moins** que le spécialiste 
 
 ## 🔹 Liste des Types d'Arcanotechnie
 
-Les **Types** représentent la manière dont un Arcanotechnicien transforme le mana en énergie.
+Les **Types** représentent la manière dont un Arcanotechnicien convertit le Flux en énergie.
 Ils reflètent la _vitesse, la stabilité et la complexité_ de cette conversion.
 
 ---
@@ -125,7 +125,7 @@ Ils reflètent la _vitesse, la stabilité et la complexité_ de cette conversion
 ### ⚡ Destruction
 
 **Nature :** Décharge simple et immédiate.
-**Principe :** conversion directe du mana en énergie brute, sans structure complexe.
+**Principe :** conversion directe du Flux en énergie brute, sans structure complexe.
 **Profil :** rapide, instinctif, peu exigeant mentalement.
 
 **Caractéristiques :**
@@ -141,8 +141,8 @@ Trait de feu, Éclair, Onde de choc.
 
 ### 💥 Annihilation
 
-**Nature :** Compression et libération explosive du mana.
-**Principe :** le Arcanotechnicien concentre le flux avant de le libérer brutalement, augmentant sa densité énergétique.
+**Nature :** Compression et libération explosive du Flux.
+**Principe :** l'Arcanotechnicien concentre le Flux avant de le libérer brutalement, augmentant sa densité énergétique.
 **Profil :** rapide, violent, instable.
 
 **Caractéristiques :**
@@ -159,7 +159,7 @@ Lance quantique, Implosion lumineuse, Décharge critique.
 ### 🌋 Cataclysme
 
 **Nature :** Accumulation lente et massive d’énergie arcanotechnique.
-**Principe :** le Arcanotechnicien canalise le mana sur une longue durée avant sa libération.
+**Principe :** l'Arcanotechnicien canalise le Flux sur une longue durée avant sa libération.
 **Profil :** lent, stable, dévastateur.
 
 **Caractéristiques :**
@@ -193,7 +193,7 @@ Gel affaiblissant, Drain vital, Distorsion de phase.
 ### 🧠 Amélioration
 
 **Nature :** Conversion harmonique et interne.
-**Principe :** le Arcanotechnicien réinjecte le mana dans un système existant pour le renforcer ou le stabiliser.
+**Principe :** l'Arcanotechnicien réinjecte le Flux dans un système existant pour le renforcer ou le stabiliser.
 **Profil :** stable, équilibré, endurant.
 
 **Caractéristiques :**
@@ -210,7 +210,7 @@ Bénédiction, Accélération lumineuse, Renforcement kinesthésique.
 ### ⚔️ Arme
 
 **Nature :** Canalisation d'énergie arcanotechnique à travers les armes physiques.
-**Principe :** le Arcanotechnicien infuse ses armes avec du mana pour augmenter leur efficacité au combat.
+**Principe :** l'Arcanotechnicien infuse ses armes avec du Flux pour augmenter leur efficacité au combat.
 **Profil :** tactique, polyvalent, orienté combat.
 
 **Caractéristiques :**
@@ -284,7 +284,7 @@ Le Type et l'École d'un sort déterminent **quelle résistance** s'applique con
 
 ## 💡 Philosophie du système
 
-> Le **Type** reflète la capacité mentale et physique du Arcanotechnicien à transformer le mana.
+> Le **Type** reflète la capacité mentale et physique de l'Arcanotechnicien à convertir le Flux.
 > Il définit son _style énergétique_ et sa _relation au flux arcanotechnique_, pas sa puissance brute.
 > Deux Arcanotechniciens de même école peuvent être radicalement différents selon leur type :
 >

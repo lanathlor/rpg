@@ -1,9 +1,9 @@
 ---
-title: "Feu — Conversion thermique rapide"
+title: "Feu - Conversion thermique rapide"
 order: 1
 ---
 
-**Principe :** Conversion directe du mana en énergie cinétique moléculaire, provoquant la combustion ou l’explosion.
+**Principe :** Conversion directe du Flux en énergie cinétique moléculaire, provoquant la combustion ou l’explosion.
 
 **Forces :**
 
@@ -13,7 +13,7 @@ order: 1
 
 **Faiblesses :**
 
-- Consommation de mana importante.
+- Consommation de Flux importante.
 - Faible contrôle.
 - Inefficace en atmosphère pauvre en oxygène.
 

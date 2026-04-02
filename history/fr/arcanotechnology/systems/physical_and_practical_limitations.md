@@ -9,7 +9,7 @@ Malgré leur puissance apparente, les systèmes automatisés présentent des **c
 
 Pour égaler la capacité de conversion d'**un seul arcanotechnicien correctement formé**, un système cristallin nécessite :
 
--   Un cristal de mana de classe industrielle (~5-10 kg)
+-   Un cristal de Flux de classe industrielle (~5-10 kg)
 -   Un modulateur arcanotechnique avec générateurs de signaux (~40-50 kg)
 -   Des systèmes de refroidissement et stabilisation (intégrés au modulateur)
 -   **Masse totale : 50 à 60 kilogrammes**

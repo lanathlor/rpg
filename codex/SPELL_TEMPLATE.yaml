@@ -32,7 +32,7 @@ levels:
       perception_required: 14      # For precision/targeting spells
 
       # Resource costs
-      flux_cost: 8                 # Mana/flux cost
+      flux_cost: 8                 # Flux energy cost
 
       # Special conditions
       activation: "How spell is triggered"  # Only if not standard casting

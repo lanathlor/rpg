@@ -66,14 +66,14 @@ Il sert de référence rapide pour les joueurs et les maîtres du jeu.
 
 ---
 
-## Arcanotechnie et mana
+## Arcanotechnie et Flux
 
 | Terme               | Définition                                                                                   |
 | ------------------- | -------------------------------------------------------------------------------------------- |
-| **Mana**            | Énergie potentielle utilisée pour alimenter les sorts et manipuler les flux arcanotechniques.        |
-| **Flux arcanotechnique**    | Courant d’énergie reliant toutes les formes de mana. Peut être manipulé, bloqué ou amplifié. |
-| **École d'arcanotechnie**  | Catégorie représentant la nature de l'énergie arcanotechnique (Feu, Givre, Lumière, etc.).           |
-| **Type d'arcanotechnie**   | Manière de transformer le mana (Destruction, Annihilation, Cataclysme, etc.).                |
+| **Flux**            | Énergie primique potentielle utilisée pour alimenter les sorts et les systèmes arcanotechniques.     |
+| **Flux arcanotechnique**    | Courant d’énergie primique canalisé et dirigé. Peut être manipulé, bloqué ou amplifié.       |
+| **École d’arcanotechnie**  | Catégorie représentant la nature de l’énergie arcanotechnique (Feu, Givre, Lumière, etc.).           |
+| **Type d’arcanotechnie**   | Manière de convertir le Flux (Destruction, Annihilation, Cataclysme, etc.).                  |
 | **Affinité**        | Mesure de la maîtrise d'une École ou d'un Type. Détermine les sorts accessibles.             |
 | **Sort**            | Expression concrète de l'arcanotechnie, définie par une École et un Type.                           |
 | **Cristal de Flux** | Objet permettant de stocker ou restaurer du Flux.                                            |

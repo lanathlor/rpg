@@ -32,7 +32,7 @@ Cette unification marqua la fin des guerres civiles humaines et le début d'une 
 
 Après avoir posé des bases solides dans son système proche, l'Empire commence à s'étendre dans l'espace et à rencontrer d'autres groupes humains isolés.
 Menés par le **Conseil des Gardiens**, les humains de l'Empire se positionnent rapidement comme des leaders lors des premiers dialogues interstellaires.
-**Blanc**, chef du Conseil, se montre très présent lors des rencontres diplomatiques et ne cache pas sa volonté de fédérer tous les peuples humains sous la bannière impériale.
+**Sérac**, chef du Conseil, se montre très présent lors des rencontres diplomatiques et ne cache pas sa volonté de fédérer tous les peuples humains sous la bannière impériale.
 
 ---
 
@@ -134,15 +134,15 @@ Leur statut semi-indépendant les rend à la fois admirés et redoutés.
 
 Le **Conseil des Gardiens** constitue l'autorité suprême de l'Empire. Ces cinq êtres immortels aux capacités exceptionnelles dirigent l'humanité depuis la Fondation, chacun selon ses domaines d'expertise naturelle :
 
-- **Blanc** _(nom temporaire)_ : **Chef du Conseil en temps de guerre**. Stratège militaire et négociateur hors pair, il assume le leadership durant le conflit acéra grâce à son génie tactique et diplomatique.
+- **Sérac** : **Chef du Conseil en temps de guerre**. Stratège militaire et négociateur hors pair, il assume le leadership durant le conflit acéra grâce à son génie tactique et diplomatique.
 
-- **Le Scientifique** _(nom à définir)_ : **Recherche et Industrie**. Arcanotechnologue de premier plan, il supervise l'innovation technologique et les processus industriels de l'Empire.
+- **Théon** : **Recherche et Industrie**. Arcanotechnologue de premier plan, il supervise l'innovation technologique et les processus industriels de l'Empire.
 
-- **L'Explorateur** _(nom à définir)_ : **Expansion et Renseignement**. Responsable de la colonisation de nouveaux mondes et des réseaux de renseignement impériaux.
+- **Veyra** : **Expansion et Renseignement**. Responsable de la colonisation de nouveaux mondes et des réseaux de renseignement impériaux.
 
-- **Le Biologiste** _(nom à définir)_ : **Terraformation et Santé**. Maître de l'adaptation écologique et de la médecine, il gère la terraformation des planètes et la santé publique de l'Empire.
+- **Olis** : **Terraformation et Santé**. Maître de l'adaptation écologique et de la médecine, il gère la terraformation des planètes et la santé publique de l'Empire.
 
-- **L'Administrateur** _(nom à définir)_ : **Économie et Infrastructure**. Gestionnaire des ressources, du commerce et de l'ingénierie architecturale à l'échelle galactique.
+- **Carène** : **Économie et Infrastructure**. Gestionnaire des ressources, du commerce et de l'ingénierie architecturale à l'échelle galactique.
 
 Ces êtres semi-divins maîtrisent parfaitement l'arcanotechnie et possèdent une intelligence largement supérieure à la moyenne humaine. Leur immortalité apparente et leurs capacités extraordinaires inspirent à la fois respect et mystère parmi la population.
 
@@ -191,11 +191,11 @@ Malgré la centralisation autoritaire, le niveau de vie global reste élevé.
 
 La arcanotechnique constitue une **énergie potentielle fondamentale**, appelée **énergie primique**, omniprésente dans la structure même de l'univers. Intrinsèque à toute matière, elle imprègne chaque atome, chaque particule, formant le substrat énergétique de la réalité physique.
 
-Les pratiquants — appelés **canalisateurs** — ont appris à extraire et convertir cette énergie primique en différentes formes d'énergie mesurable : énergie thermique (chaleur), électromagnétique (lumière, électricité), mécanique (gravité, pression), ou encore biologique et informationnelle.
+Les pratiquants - appelés **canalisateurs** - ont appris à extraire et convertir cette énergie primique en différentes formes d'énergie mesurable : énergie thermique (chaleur), électromagnétique (lumière, électricité), mécanique (gravité, pression), ou encore biologique et informationnelle.
 
 Chaque **École d'arcanotechnie** correspond à une **conversion spécifique** d'énergie arcanotechnique vers un type d'énergie physique particulier :
 
-- Le **Feu** convertit le mana en énergie cinétique moléculaire
+- Le **Feu** convertit le Flux en énergie cinétique moléculaire
 - L'**Électricité** le transforme en champ électromagnétique ordonné
 - La **Lumière** génère un flux photonique cohérent et confiné
 - Le **Kinesthésique** produit un travail mécanique et gravitationnel
@@ -204,7 +204,7 @@ Cette compréhension scientifique de l'arcanotechnie a révolutionné les approc
 
 ### Révolution arcanotechnique
 
-Grâce au Conseil des Gardiens, l'Empire a développé une maîtrise industrielle du **mana**. Les **cristaux de pouvoir** et **cellules d'arcanotechnie solide** permettent désormais de stocker, canaliser et convertir cette énergie universelle en puissance mécanique ou numérique, fusionnant définitivement science et sorcellerie.
+Grâce au Conseil des Gardiens, l'Empire a développé une maîtrise industrielle du **Flux**. Les **cristaux de pouvoir** et **cellules d'arcanotechnie solide** permettent désormais de stocker, canaliser et convertir cette énergie universelle en puissance mécanique ou numérique, fusionnant définitivement science et arcanotechnie.
 
 Les sorts sont devenus de véritables **programmes arcanotechniques** : les **Arcanotechnologue**, scientifiques spécialisés en théorie arcanotechnique, conçoivent et codent ces séquences de conversion énergétique, tandis que les **Arcanotechniciens** opérationnels les exécutent sur le terrain.
 
@@ -212,8 +212,8 @@ Ces **programmes arcanotechniques** sont développés selon les mêmes principes
 
 Cette symbiose entre technologie et arcanotechnique a transformé les champs de bataille modernes. Les Arcanotechniciens impériaux sont désormais des armes de destruction comparables à l'artillerie lourde, capables de manipuler les forces fondamentales de la nature avec la précision d'un instrument scientifique.
 
-> Dans ce contexte, la frontière entre ingénieur et sorcier a définitivement disparu.
-> L'Empire a bâti sa suprématie galactique sur cette union parfaite entre la compréhension scientifique du mana et sa maîtrise pratique.
-> L'arcanotechnie n'est plus mystique — elle est devenue une science exacte.
+> Dans ce contexte, la frontière entre ingénieur et arcanotechnicien a définitivement disparu.
+> L'Empire a bâti sa suprématie galactique sur cette union parfaite entre la compréhension scientifique du Flux et sa maîtrise pratique.
+> L'arcanotechnie n'est plus mystique - elle est devenue une science exacte.
 
 ---

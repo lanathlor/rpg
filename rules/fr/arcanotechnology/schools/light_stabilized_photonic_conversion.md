@@ -1,9 +1,9 @@
 ---
-title: '️Lumière — Conversion photonique stabilisée'
+title: '️Lumière - Conversion photonique stabilisée'
 order: 5
 ---
 
-**Principe :** Conversion du mana en flux photonique cohérent contenu dans un champ photoarcanotechnique.
+**Principe :** Conversion du Flux en énergie photonique cohérent contenu dans un champ photoarcanotechnique.
 Permet la création de **murs de lumière solide** via confinement et rétro-alimentation énergétique.
 
 **Forces :**

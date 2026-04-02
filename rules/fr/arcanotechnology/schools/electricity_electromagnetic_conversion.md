@@ -1,9 +1,9 @@
 ---
-title: "Électricité — Conversion électromagnétique"
+title: "Électricité - Conversion électromagnétique"
 order: 3
 ---
 
-**Principe :** Transformation du mana en champ électromagnétique ordonné (éclairs, décharges).
+**Principe :** Transformation du Flux en champ électromagnétique ordonné (éclairs, décharges).
 
 **Forces :**
 

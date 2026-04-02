@@ -1,9 +1,9 @@
 ---
-title: "Gravitonique — Conversion gravitationnelle"
+title: "Gravitonique - Conversion gravitationnelle"
 order: 16
 ---
 
-**Principe :** Altération du champ gravitationnel local à l’aide du mana.
+**Principe :** Altération du champ gravitationnel local à l’aide du Flux.
 
 **Forces :**
 

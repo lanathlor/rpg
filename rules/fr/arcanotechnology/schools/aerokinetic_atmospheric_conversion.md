@@ -1,9 +1,9 @@
 ---
-title: '️Aérocinétique — Conversion atmosphérique'
+title: '️Aérocinétique - Conversion atmosphérique'
 order: 10
 ---
 
-**Principe :** Conversion du mana en énergie mécanique macroscopique (vent, pression).
+**Principe :** Conversion du Flux en énergie mécanique macroscopique (vent, pression).
 
 **Forces :**
 

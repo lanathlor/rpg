@@ -1,9 +1,9 @@
 ---
-title: "Sonique — Conversion vibratoire"
+title: "Sonique - Conversion vibratoire"
 order: 14
 ---
 
-**Principe :** Transformation du mana en ondes acoustiques ou sismiques.
+**Principe :** Transformation du Flux en ondes acoustiques ou sismiques.
 
 **Forces :**
 

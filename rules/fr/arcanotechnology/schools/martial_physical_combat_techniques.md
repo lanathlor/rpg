@@ -1,5 +1,5 @@
 ---
-title: '️Martial — Techniques de combat physique'
+title: '️Martial - Techniques de combat physique'
 order: 18
 ---
 
@@ -7,7 +7,7 @@ order: 18
 
 **Forces :**
 
--   Aucune consommation de mana.
+-   Aucune consommation de Flux.
 -   Fonctionne en toutes circonstances.
 -   Améliore les capacités d'armement de mêlée.
 
