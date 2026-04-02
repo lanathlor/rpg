@@ -17,7 +17,7 @@ Cette unification marqua la fin des guerres civiles humaines et le début d'une 
 
 Après avoir posé des bases solides dans son système proche, l'Empire commence à s'étendre dans l'espace et à rencontrer d'autres groupes humains isolés.
 Menés par le **Conseil des Gardiens**, les humains de l'Empire se positionnent rapidement comme des leaders lors des premiers dialogues interstellaires.
-**Blanc**, chef du Conseil, se montre très présent lors des rencontres diplomatiques et ne cache pas sa volonté de fédérer tous les peuples humains sous la bannière impériale.
+**Sérac**, chef du Conseil, se montre très présent lors des rencontres diplomatiques et ne cache pas sa volonté de fédérer tous les peuples humains sous la bannière impériale.
 
 ---
 
@@ -64,11 +64,11 @@ Après plus de deux siècles de guerre positionnelle et d'usure, le conflit entr
 
 Cette escalade finale génère des débats intenses à l'**Assemblée Impériale**. Trois courants majeurs s'affrontent :
 
-- Certains soutiennent la stratégie de Blanc, convaincus qu'une dernière offensive décisive apportera la victoire
+- Certains soutiennent la stratégie de Sérac, convaincus qu'une dernière offensive décisive apportera la victoire
 - D'autres réclament l'ouverture de négociations de paix, estimant le coût humain déjà trop élevé
 - Un troisième groupe accepte de poursuivre le conflit à condition d'obtenir des garanties sur la durée et les pertes
 
-Le Conseil, mené par Blanc, maintient le cap sur la victoire militaire en s'appuyant sur son crédit politique et sa capacité à naviguer les divisions parlementaires. Blanc promet à l'Assemblée que la guerre se terminera dans les neuf années à venir — une prédiction qui s'avérera exacte avec la signature de la paix en 5764.
+Le Conseil, mené par Sérac, maintient le cap sur la victoire militaire en s'appuyant sur son crédit politique et sa capacité à naviguer les divisions parlementaires. Sérac promet à l'Assemblée que la guerre se terminera dans les neuf années à venir - une prédiction qui s'avérera exacte avec la signature de la paix en 5764.
 
 ### Missions des Héros
 

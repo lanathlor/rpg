@@ -22,11 +22,11 @@ Welcome to the Human Empire, the greatest achievement of our species! Whether yo
 
 Our five immortal Guardians have guided humanity for 5,755 years with incomparable wisdom:
 
-- **Blanc** - Our brilliant strategist, leading the defense against the Acéras threat
-- **The Scientist** - Architect of our arcanotechnological miracles
-- **The Explorer** - Opening new worlds for humanity
-- **The Biologist** - Guaranteeing health and longevity for all
-- **The Administrator** - Orchestrating our economy of abundance
+- **Sérac** - Our brilliant strategist, leading the defense against the Acéras threat
+- **Théon** - Architect of our arcanotechnological miracles
+- **Veyra** - Opening new worlds for humanity
+- **Olis** - Guaranteeing health and longevity for all
+- **Carène** - Orchestrating our economy of abundance
 
 Their long-term vision - impossible for us mortals - ensures the continued stability and prosperity of the Empire.
 
@@ -59,7 +59,7 @@ With their suspended parks, their infinite vertical levels, and their dazzling a
 
 ## The Acéras War: A Temporary Challenge
 
-Yes, we have been at war for two centuries. But under the wise leadership of Blanc and the Council, victory is near! Only 3-5% of our population serves on the front - a modest effort to protect our way of life.
+Yes, we have been at war for two centuries. But under the wise leadership of Sérac and the Council, victory is near! Only 3-5% of our population serves on the front - a modest effort to protect our way of life.
 
 The Acéras, xenophobic and aggressive, have rejected all our peace offers. But don't worry: our legendary Heroes, our elite Opals, and our superior strategies guarantee our final triumph.
 

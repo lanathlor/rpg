@@ -37,7 +37,7 @@ He says this loudly, without fear. Being a critical "rebel" is perfectly accepta
 
 In the evening, Lyra joins friends at a stim bar. All drugs are legal, after all. She takes a mild euphoric while they watch the broadcast of an augmented reality e-sport tournament. Players manipulate holographic armies in three-dimensional space - playful preparation for the real war that 5% of the population is currently waging.
 
-On the secondary screens, the official news scrolls by. The Council of Guardians announces a new offensive. The Imperial Assembly voted the credits. As always, the representatives follow the Council's "suggestions." Blanc, the Council's leader in wartime, promises that victory is near. He's been promising that for twenty years.
+On the secondary screens, the official news scrolls by. The Council of Guardians announces a new offensive. The Imperial Assembly voted the credits. As always, the representatives follow the Council's "suggestions." Sérac, the Council's leader in wartime, promises that victory is near. He's been promising that for twenty years.
 
 An elderly man at the bar murmurs that he's heard about rebel cells in the peripheral systems, secretly funded by the Empire to destabilize the remaining autonomous factions. Nobody responds. Some things, even in this "free" society, are not discussed.
 

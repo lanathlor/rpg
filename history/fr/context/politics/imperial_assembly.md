@@ -26,7 +26,7 @@ Le Conseil des Gardiens agit comme **pouvoir exécutif**. Il met en œuvre les l
 
 ### Équilibre des pouvoirs
 
-Si l'Assemblée dispose théoriquement du pouvoir de limiter le Conseil, les Gardiens — par leur immortalité, leur expérience millénaire et leur intelligence supérieure — sont des politiciens exceptionnels. Ils savent négocier, persuader et naviguer les complexités parlementaires pour obtenir ce qu'ils jugent nécessaire, rarement par la force, toujours par l'habileté politique.
+Si l'Assemblée dispose théoriquement du pouvoir de limiter le Conseil, les Gardiens - par leur immortalité, leur expérience millénaire et leur intelligence supérieure - sont des politiciens exceptionnels. Ils savent négocier, persuader et naviguer les complexités parlementaires pour obtenir ce qu'ils jugent nécessaire, rarement par la force, toujours par l'habileté politique.
 
 Cette dynamique crée un équilibre subtil : l'Empire apparaît démocratique et représentatif, mais le Conseil maintient une influence déterminante sur l'orientation générale de la civilisation humaine.
 
@@ -34,7 +34,7 @@ Cette dynamique crée un équilibre subtil : l'Empire apparaît démocratique et
 
 Durant cette dernière phase de la guerre acéra, l'Assemblée est divisée en plusieurs courants :
 
-- Partisans de la poursuite du conflit jusqu'à la victoire totale, confiants dans la stratégie de Blanc
+- Partisans de la poursuite du conflit jusqu'à la victoire totale, confiants dans la stratégie de Sérac
 - Favorables à des négociations de paix, estimant que deux siècles de guerre suffisent
 - Soutiens du Conseil exigeant des garanties sur les coûts humains et économiques
 

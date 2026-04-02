@@ -3,19 +3,19 @@ title: "Le Conseil des Gardiens"
 order: 1
 ---
 
-L'Empire n'est pas un empire au sens traditionnel — il n'y a pas d'empereur mortel compensant sa brève existence par une cupidité sans limite. Le Conseil des Gardiens, immortel, ne cherche pas de gloire rapide par des guerres sanguinaires. Cependant, cette même immortalité signifie qu'ils ne laissent jamais vraiment leur place à de nouvelles visions.
+L'Empire n'est pas un empire au sens traditionnel - il n'y a pas d'empereur mortel compensant sa brève existence par une cupidité sans limite. Le Conseil des Gardiens, immortel, ne cherche pas de gloire rapide par des guerres sanguinaires. Cependant, cette même immortalité signifie qu'ils ne laissent jamais vraiment leur place à de nouvelles visions.
 
 Le **Conseil des Gardiens** constitue l'autorité suprême de l'Empire. Ces cinq êtres immortels aux capacités exceptionnelles dirigent l'humanité depuis la Fondation, chacun selon ses domaines d'expertise naturelle :
 
-- **Blanc** _(nom temporaire)_ : **Chef du Conseil en temps de guerre**. Stratège militaire et négociateur hors pair, il assume le leadership durant le conflit acéra grâce à son génie tactique et diplomatique.
+- **Sérac** : **Chef du Conseil en temps de guerre**. Stratège militaire et négociateur hors pair, il assume le leadership durant le conflit acéra grâce à son génie tactique et diplomatique.
 
-- **Le Scientifique** _(nom à définir)_ : **Recherche et Industrie**. Arcanotechnologue de premier plan, il supervise l'innovation technologique et les processus industriels de l'Empire.
+- **Théon** : **Recherche et Industrie**. Arcanotechnologue de premier plan, il supervise l'innovation technologique et les processus industriels de l'Empire.
 
-- **L'Explorateur** _(nom à définir)_ : **Expansion et Renseignement**. Responsable de la colonisation de nouveaux mondes et des réseaux de renseignement impériaux.
+- **Veyra** : **Expansion et Renseignement**. Responsable de la colonisation de nouveaux mondes et des réseaux de renseignement impériaux.
 
-- **Le Biologiste** _(nom à définir)_ : **Terraformation et Santé**. Maître de l'adaptation écologique et de la médecine, il gère la terraformation des planètes et la santé publique de l'Empire.
+- **Olis** : **Terraformation et Santé**. Maître de l'adaptation écologique et de la médecine, il gère la terraformation des planètes et la santé publique de l'Empire.
 
-- **L'Administrateur** _(nom à définir)_ : **Économie et Infrastructure**. Gestionnaire des ressources, du commerce et de l'ingénierie architecturale à l'échelle galactique.
+- **Carène** : **Économie et Infrastructure**. Gestionnaire des ressources, du commerce et de l'ingénierie architecturale à l'échelle galactique.
 
 Ces êtres semi-divins maîtrisent parfaitement l'arcanotechnie et possèdent une intelligence largement supérieure à la moyenne humaine. Leur immortalité apparente et leurs capacités extraordinaires inspirent à la fois respect et mystère parmi la population.
 

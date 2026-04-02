@@ -1,6 +1,6 @@
 name: Weapons Master
 type: Fighter
-description: Weapons Masters embody the spearhead of the imperial army. Being one of the oldest martial schools of humanity, Weapons Masters have proven their worth on countless battlefields and have entered legend. Often forming the front line, few Weapons Masters get the chance to be called veterans. But those who do are, rightfully, feared by all and seen as the arm of Blanc within the army.
+description: Weapons Masters embody the spearhead of the imperial army. Being one of the oldest martial schools of humanity, Weapons Masters have proven their worth on countless battlefields and have entered legend. Often forming the front line, few Weapons Masters get the chance to be called veterans. But those who do are, rightfully, feared by all and seen as the arm of Sérac within the army.
 equipment:
   weapons:
     - Heavy sword

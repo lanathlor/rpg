@@ -17,7 +17,7 @@ This unification marked the end of human civil wars and the beginning of an era 
 
 After establishing solid foundations in their nearby systems, the Empire began to expand into space and encounter other isolated human groups.
 Led by the **Council of Guardians**, the humans of the Empire quickly positioned themselves as leaders during the first interstellar dialogues.
-**Blanc**, head of the Council, was very present during diplomatic encounters and made no secret of his desire to federate all human peoples under the imperial banner.
+**Sérac**, head of the Council, was very present during diplomatic encounters and made no secret of his desire to federate all human peoples under the imperial banner.
 
 ---
 
@@ -64,11 +64,11 @@ After more than two centuries of positional warfare and attrition, the conflict 
 
 This final escalation generates intense debates in the **Imperial Assembly**. Three major currents clash:
 
-- Some support Blanc's strategy, convinced that one last decisive offensive will bring victory
+- Some support Sérac's strategy, convinced that one last decisive offensive will bring victory
 - Others demand the opening of peace negotiations, believing the human cost is already too high
 - A third group agrees to continue the conflict on the condition of obtaining guarantees on duration and casualties
 
-The Council, led by Blanc, maintains its course toward military victory by leveraging its political capital and its ability to navigate parliamentary divisions. Blanc promises the Assembly that the war will end within the next nine years - a prediction that will prove correct with the signing of peace in 5764.
+The Council, led by Sérac, maintains its course toward military victory by leveraging its political capital and its ability to navigate parliamentary divisions. Sérac promises the Assembly that the war will end within the next nine years - a prediction that will prove correct with the signing of peace in 5764.
 
 ### Hero Missions
 

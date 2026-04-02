@@ -22,11 +22,11 @@ Bienvenue dans l'Empire Humain, la plus grande réussite de notre espèce ! Que 
 
 Nos cinq Gardiens immortels guident l'humanité depuis 5755 ans avec une sagesse incomparable :
 
-- **Blanc** - Notre brillant stratège, menant la défense contre la menace acéra
-- **Le Scientifique** - Architecte de nos miracles arcanotechniques
-- **L'Explorateur** - Ouvrant de nouveaux mondes pour l'humanité
-- **Le Biologiste** - Garantissant santé et longévité à tous
-- **L'Administrateur** - Orchestrant notre économie d'abondance
+- **Sérac** - Notre brillant stratège, menant la défense contre la menace acéra
+- **Théon** - Architecte de nos miracles arcanotechniques
+- **Veyra** - Ouvrant de nouveaux mondes pour l'humanité
+- **Olis** - Garantissant santé et longévité à tous
+- **Carène** - Orchestrant notre économie d'abondance
 
 Leur vision à long terme - impossible pour nous, mortels - assure la stabilité et la prospérité continues de l'Empire.
 
@@ -59,7 +59,7 @@ Avec leurs parcs suspendus, leurs niveaux verticaux infinis et leur architecture
 
 ## La Guerre Acéra : Un Défi Temporaire
 
-Oui, nous sommes en guerre depuis deux siècles. Mais sous la direction sage de Blanc et du Conseil, la victoire approche ! Seulement 3-5% de notre population sert au front - un effort modeste pour protéger notre mode de vie.
+Oui, nous sommes en guerre depuis deux siècles. Mais sous la direction sage de Sérac et du Conseil, la victoire approche ! Seulement 3-5% de notre population sert au front - un effort modeste pour protéger notre mode de vie.
 
 Les Acéras, xénophobes et agressifs, ont rejeté toutes nos offres de paix. Mais ne vous inquiétez pas : nos Héros légendaires, nos Opales d'élite et nos stratégies supérieures garantissent notre triomphe final.
 

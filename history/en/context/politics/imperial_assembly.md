@@ -34,7 +34,7 @@ This dynamic creates a subtle equilibrium: the Empire appears democratic and rep
 
 During this final phase of the Acéras war, the Assembly is divided into several currents:
 
-- Supporters of continuing the conflict until total victory, confident in Blanc's strategy
+- Supporters of continuing the conflict until total victory, confident in Sérac's strategy
 - Proponents of peace negotiations, believing that two centuries of war are enough
 - Council supporters demanding guarantees on human and economic costs
 

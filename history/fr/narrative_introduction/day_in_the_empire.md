@@ -37,7 +37,7 @@ Il dit ça fort, sans crainte. Être un "rebelle" critique est parfaitement acce
 
 Le soir, Lyra rejoint des amis dans un bar à stims. Toutes les drogues sont légales, après tout. Elle prend un euphorisant léger pendant qu'ils regardent la retransmission d'un tournoi e-sport en réalité augmentée. Les joueurs manipulent des armées holographiques dans l'espace tridimensionnel, préparation ludique à la vraie guerre que 5% de la population mène actuellement.
 
-Sur les écrans secondaires, les infos officielles défilent. Le Conseil des Gardiens annonce une nouvelle offensive. L'Assemblée Impériale a voté les crédits. Comme toujours, les représentants suivent les "suggestions" du Conseil. Blanc, le chef du Conseil en temps de guerre, promet que la victoire est proche. Il le promet depuis vingt ans.
+Sur les écrans secondaires, les infos officielles défilent. Le Conseil des Gardiens annonce une nouvelle offensive. L'Assemblée Impériale a voté les crédits. Comme toujours, les représentants suivent les "suggestions" du Conseil. Sérac, le chef du Conseil en temps de guerre, promet que la victoire est proche. Il le promet depuis vingt ans.
 
 Un homme âgé au bar murmure qu'il a entendu parler de cellules rebelles dans les systèmes périphériques, financées en secret par l'Empire pour déstabiliser les dernières factions autonomes. Personne ne répond. Certaines choses, même dans cette société "libre", ne se discutent pas.
 
