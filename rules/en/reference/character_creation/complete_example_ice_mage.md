@@ -1,5 +1,5 @@
 ---
-title: "Complete Example: Creating an Ice Mage"
+title: "Complete Example: Creating a Frost Arcanotechnician"
 order: 9
 ---
 
@@ -7,7 +7,7 @@ Let's create an arcanotechnician specializing in the Frost school.
 
 ### Concept
 
-A spellcaster specializing in area control and ice damage, with arcanotechnological defense.
+An arcanotechnician specializing in area control and frost damage, with arcanotechnological defense.
 
 ### Base Stats (20 points)
 
@@ -16,7 +16,7 @@ A spellcaster specializing in area control and ice damage, with arcanotechnologi
 
 **Total: 20 points**
 
-A typical spellcaster profile: decent survivability with good mobility for repositioning.
+A typical arcanotechnician profile: decent survivability with good mobility for repositioning.
 
 ### Innate Resistances (14 points)
 
@@ -73,7 +73,7 @@ Investment in RINT (very rare on equipment) and some RRAD to resist elemental sp
 
 ### Skills (20 points)
 
--   Arcanotechnology Armor (A) -- **15 pts** (magical protection)
+-   Arcanotechnology Armor (A) -- **15 pts** (arcanotechnological protection)
 -   Quantum Sight (E) -- **5 pts** (spell detection)
 
 **Total: 20 points**
@@ -91,6 +91,6 @@ Investment in RINT (very rare on equipment) and some RRAD to resist elemental sp
 | Skills                     | 20      | 8%         |
 | **TOTAL**                  | **248** | **100%**   |
 
-This character falls in the **Mid-High** tier, with strong spellcasting capability thanks to high Flux and arcanotechnological affinities. The investment in RINT (Internal Resistance) allows them to better resist life drains and Flux corruption.
+This character falls in the **Mid-High** tier, with strong arcanotechnological capability thanks to high Flux and arcanotechnological affinities. The investment in RINT (Internal Resistance) allows them to better resist life drains and Flux corruption.
 
 ---

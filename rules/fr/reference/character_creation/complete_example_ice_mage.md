@@ -1,5 +1,5 @@
 ---
-title: "Exemple Complet : Création d'un Mage de Glace"
+title: "Exemple Complet : Création d'un Arcanotechnicien Givre"
 order: 9
 ---
 
@@ -7,7 +7,7 @@ Créons un arcanotechnicien spécialisé dans l'école du Givre.
 
 ### Concept
 
-Un lanceur de sorts spécialisé en contrôle de zone et dégâts de glace, avec une défense arcanotechnique.
+Un arcanotechnicien spécialisé en contrôle de zone et dégâts de givre, avec une défense arcanotechnique.
 
 ### Statistiques de Base (20 points)
 
@@ -16,7 +16,7 @@ Un lanceur de sorts spécialisé en contrôle de zone et dégâts de glace, avec
 
 **Total : 20 points**
 
-Un profil typique de lanceur de sorts : survivabilité correcte avec bonne mobilité pour se repositionner.
+Un profil typique d'arcanotechnicien : survivabilité correcte avec bonne mobilité pour se repositionner.
 
 ### Résistances Innées (14 points)
 
@@ -73,7 +73,7 @@ Investissement dans RINT (très rare sur l'équipement) et un peu de RRAD pour r
 
 ### Compétences (20 points)
 
--   Armure d'arcanotechnie (A) → **15 pts** (protection magique)
+-   Armure d'arcanotechnie (A) → **15 pts** (protection arcanotechnique)
 -   Vue des quantiques (E) → **5 pts** (détection des sorts)
 
 **Total : 20 points**
@@ -91,6 +91,6 @@ Investissement dans RINT (très rare sur l'équipement) et un peu de RRAD pour r
 | Compétences                | 20      | 8%         |
 | **TOTAL**                  | **248** | **100%**   |
 
-Ce personnage se situe dans le palier **Moyen-Élevé**, avec une forte capacité de lancement de sorts grâce à son Flux élevé et ses affinités arcanotechniques. L'investissement en RINT (résistance interne) lui permet de mieux résister aux drains de vie et à la corruption du Flux.
+Ce personnage se situe dans le palier **Moyen-Élevé**, avec une forte capacité arcanotechnique grâce à son Flux élevé et ses affinités arcanotechniques. L'investissement en RINT (résistance interne) lui permet de mieux résister aux drains de vie et à la corruption du Flux.
 
 ---
