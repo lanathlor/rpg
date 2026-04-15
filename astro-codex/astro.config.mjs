@@ -5,8 +5,8 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://lanathlor.github.io',
-  base: '/rpg/',
+  site: 'https://ttrpg.pyrrhic-stars.com',
+  base: '/',
   i18n: {
     defaultLocale: 'en',
     locales: ['en', 'fr'],
