@@ -1,6 +1,7 @@
 ---
 title: "Le Conseil des Gardiens"
 order: 1
+tags: [Gardiens, Sérac, Théon, Veyra, immortels]
 ---
 
 L'Empire n'est pas un empire au sens traditionnel - il n'y a pas d'empereur mortel compensant sa brève existence par une cupidité sans limite. Le Conseil des Gardiens, immortel, ne cherche pas de gloire rapide par des guerres sanguinaires. Cependant, cette même immortalité signifie qu'ils ne laissent jamais vraiment leur place à de nouvelles visions.

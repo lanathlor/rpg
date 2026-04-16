@@ -1,6 +1,7 @@
 ---
 title: "Resistances"
 order: 1
+tags: [Mechanical Resistance, Radiative Resistance, Internal Resistance, arcanotechnological damage]
 ---
 
 ## Fundamental Principle

@@ -1,6 +1,7 @@
 ---
 title: "Movement"
 order: 3
+tags: [Speed, Running, movement]
 ---
 
 - A character's **speed** indicates the **number of meters traveled per turn** while running (straight line).

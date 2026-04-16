@@ -1,6 +1,7 @@
 ---
 title: "Gravitonic -- Gravitational Conversion"
 order: 16
+tags: [Gravitonic, Gravitonic School]
 ---
 
 **Principle:** Alteration of the local gravitational field using Flux.

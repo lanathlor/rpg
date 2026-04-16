@@ -2,6 +2,7 @@
 title: "Combat"
 order: 2
 description: "Système de combat, initiative et défense"
+tags: [Combat]
 ---
 
 Cette section présente les règles de combat mises à jour selon le système de défense et de protection introduit dans la dernière version du manuel.

@@ -2,6 +2,7 @@
 title: "Création de personnage"
 order: 4
 description: "Système de Point Buy et construction de personnage"
+tags: [Création de personnage, Point Buy]
 ---
 
 Cette section explique comment créer un personnage joueur à l'aide du **système de Point Buy**.

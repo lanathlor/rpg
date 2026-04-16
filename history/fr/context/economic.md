@@ -1,6 +1,7 @@
 ---
 title: "Contexte économique"
 order: 1
+tags: [Économie, Portes cosmiques, commerce]
 ---
 
 L'Empire bénéficie d'une avance technologique modérée mais décisive.

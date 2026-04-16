@@ -1,6 +1,7 @@
 ---
 title: "Le Mécanisme de Couplage Électron-Flux"
 order: 2
+tags: [Couplage électron-Flux, état métastable, conversion]
 ---
 
 La percée majeure du Conseil des Gardiens fut la découverte du **mécanisme de couplage** entre les électrons et le champ primique. Cette interaction quantique explique comment les êtres vivants - et certains dispositifs technologiques - peuvent déclencher la conversion du Flux.

@@ -1,6 +1,7 @@
 ---
 title: "Les Cristaux de Flux"
 order: 2
+tags: [Cristaux de Flux, cristaux, réservoir de Flux]
 ---
 
 L'une des plus grandes percées arcanotechniques fut la création des **cristaux de Flux** - des matrices cristallines spécialement conçues qui exploitent le mécanisme de couplage électron-Flux. Ces cristaux agissent comme des **réservoirs de Flux** à haute entropie négative et comme des convertisseurs contrôlables.

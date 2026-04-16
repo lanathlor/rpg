@@ -1,6 +1,7 @@
 ---
 title: "Governmental Structure"
 order: 2
+tags: [Government, distribution of power]
 ---
 
 The Empire functions as a **centralized federation** whose power rests on three pillars: the Council of Guardians, the Imperial Assembly, and the Warlords.

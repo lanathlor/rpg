@@ -1,6 +1,7 @@
 ---
 title: "Applications industrielles"
 order: 3
+tags: [Arcanoprogrammation, métallurgie arcanotechnique, industrie]
 ---
 
 L'arcanotechnie est principalement utilisée dans l'**industrie et la défense**. La stabilisation de cristaux permettant de capter et utiliser le flux reste complexe, mais le domaine a fait suffisamment d'avancées pour produire à un rythme soutenu ces sources d'énergie.

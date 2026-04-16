@@ -1,6 +1,7 @@
 ---
 title: "Implications Tactiques et Stratégiques"
 order: 9
+tags: [Vaisseaux spatiaux, doctrine, tactique]
 ---
 
 Ces limitations expliquent la doctrine d'emploi actuelle :

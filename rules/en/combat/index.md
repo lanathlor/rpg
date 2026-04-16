@@ -2,6 +2,7 @@
 title: "Combat"
 order: 2
 description: "Combat system, initiative, and defense"
+tags: [Combat system]
 ---
 
 This section presents the combat rules updated according to the defense and protection system introduced in the latest version of the handbook.

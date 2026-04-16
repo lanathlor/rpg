@@ -1,6 +1,7 @@
 ---
 title: "L'Arcanotechnie dans la Société Moderne"
 order: 1
+tags: [Académies arcanotechniques, formation arcanotechnique, affinité au Flux]
 ---
 
 Aujourd'hui, l'arcanotechnie imprègne chaque aspect de la société impériale. Des simples cristaux de Flux qui alimentent les appareils domestiques aux armes arcanotechniques qui équipent les soldats, le Flux est omniprésent.

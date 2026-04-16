@@ -1,6 +1,7 @@
 ---
 title: "Résumé historique"
 order: 1
+tags: [Histoire, Fondation, Acéras, Conseil des Gardiens, Guerre, Empire]
 ---
 
 ## 1. La Fondation de l'Empire

@@ -1,6 +1,7 @@
 ---
 title: "The Council of Guardians"
 order: 1
+tags: [The Guardians, five immortals, supreme authority]
 ---
 
 The Empire is not an empire in the traditional sense - there is no mortal emperor compensating for a brief existence with boundless greed. The Council of Guardians, immortal, does not seek quick glory through bloody wars. However, this same immortality means they never truly make way for new visions.

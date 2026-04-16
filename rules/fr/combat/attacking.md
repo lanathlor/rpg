@@ -1,6 +1,7 @@
 ---
 title: '️Attaquer'
 order: 5
+tags: [Jet d'attaque, Jet de dégâts, attaque, réussite critique, échec critique]
 ---
 
 Une attaque se déroule en deux étapes : **jet d’attaque**, puis **jet de dégâts**.

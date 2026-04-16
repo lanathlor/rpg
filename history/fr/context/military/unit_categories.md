@@ -1,6 +1,7 @@
 ---
 title: "Catégories d'unités"
 order: 3
+tags: [Infanterie, Spécialistes, Élite, Héros]
 ---
 
 | Rang               | Type          | Description                                                                |

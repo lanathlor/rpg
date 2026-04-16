@@ -1,6 +1,7 @@
 ---
 title: "Defense and Resistances"
 order: 4
+tags: [DS, Defense Score, Defense]
 ---
 
 The defense system relies on two fixed values:

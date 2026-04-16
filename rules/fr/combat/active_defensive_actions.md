@@ -1,6 +1,7 @@
 ---
 title: "Actions défensives actives"
 order: 6
+tags: [Action défensive, Parade, Esquive, Bloquer]
 ---
 
 Un personnage peut renoncer à attaquer pour se défendre activement.

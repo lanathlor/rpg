@@ -1,6 +1,7 @@
 ---
 title: "Structure de l'armée"
 order: 2
+tags: [Armée, Corps spatial, Corps tellurique, Seigneurs de Guerre, armée impériale]
 ---
 
 L'armée est divisée en deux grands corps :

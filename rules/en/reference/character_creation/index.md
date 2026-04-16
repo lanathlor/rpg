@@ -2,6 +2,7 @@
 title: "Character Creation"
 order: 4
 description: "Point Buy system and character building"
+tags: [Character creation, Point Buy system]
 ---
 
 This section explains how to create a player character using the **Point Buy system**.

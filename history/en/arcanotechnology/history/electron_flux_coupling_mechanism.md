@@ -1,6 +1,7 @@
 ---
 title: "The Electron-Flux Coupling Mechanism"
 order: 2
+tags: [Electron-Flux coupling, metastable state, Flux conversion]
 ---
 
 The major breakthrough of the Council of Guardians was the discovery of the **coupling mechanism** between electrons and the primic field. This quantum interaction explains how living beings - and certain technological devices - can trigger Flux conversion.

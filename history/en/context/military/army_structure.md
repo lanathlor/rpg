@@ -1,6 +1,7 @@
 ---
 title: "Army Structure"
 order: 2
+tags: [Army, Space Corps, Telluric Corps, Warlords, imperial army]
 ---
 
 The army is divided into two major branches:

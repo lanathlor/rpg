@@ -1,6 +1,7 @@
 ---
 title: "Initiative"
 order: 2
+tags: [Initiative, embuscade]
 ---
 
 Au début du combat, chaque participant lance **1d20 + DEX**.

@@ -1,6 +1,7 @@
 ---
 title: "Fin du Combat"
 order: 9
+tags: [Fin du combat, fuite, victoire]
 ---
 
 Le combat prend fin lorsque tous les ennemis d’un camp sont :

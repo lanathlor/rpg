@@ -15,6 +15,18 @@ import fs from 'node:fs';
 import path from 'node:path';
 import yaml from 'js-yaml';
 import type { Loader } from 'astro/loaders';
+import { autoLinkHtml } from './htmlAutoLink';
+import { buildTagRegistry } from './tagRegistry';
+
+// Global tag registry for auto-linking
+let tagRegistry: Map<string, string> | null = null;
+
+function getTagRegistry(rootPath: string): Map<string, string> {
+  if (!tagRegistry) {
+    tagRegistry = buildTagRegistry(rootPath);
+  }
+  return tagRegistry;
+}
 
 const LOCALES = ['fr', 'en'] as const;
 
@@ -203,11 +215,24 @@ export function localizedMarkdownLoader(options: LocalizedMarkdownLoaderOptions)
             fileURL: new URL(`file://${sourceFile}`),
           });
 
+          // Apply auto-linking to rendered HTML
+          // The rules/ and history/ are in the parent of astro-codex/
+          const projectRoot = path.resolve(config.root.pathname, '..');
+          const tagMap = getTagRegistry(projectRoot);
+          const renderedCode = rendered.html ?? '';
+          let processedHtml = renderedCode;
+          if (tagMap && tagMap.size > 0 && renderedCode) {
+            processedHtml = autoLinkHtml(renderedCode, tagMap);
+          }
+
           const digest = generateDigest(parsed.body);
 
           store.set({
             id,
-            data,
+            data: {
+              ...parsed.data,
+              renderedHtml: processedHtml,
+            },
             body: parsed.body,
             filePath: relFile,
             digest,

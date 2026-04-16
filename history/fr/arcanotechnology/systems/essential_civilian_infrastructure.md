@@ -1,6 +1,7 @@
 ---
 title: "Infrastructure Civile Essentielle"
 order: 7
+tags: [Transport, lévitation magnétique, terraformation, communications]
 ---
 
 L'Empire moderne ne pourrait fonctionner sans les systèmes automatisés :

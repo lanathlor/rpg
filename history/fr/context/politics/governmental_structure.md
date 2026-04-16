@@ -1,6 +1,7 @@
 ---
 title: "Structure gouvernementale"
 order: 2
+tags: [Gouvernement, répartition des pouvoirs]
 ---
 
 L'Empire fonctionne comme une **fédération centralisée** dont le pouvoir repose sur trois piliers : le Conseil des Gardiens, l'Assemblée Impériale et les Seigneurs de Guerre.

@@ -1,6 +1,7 @@
 ---
 title: "Classification des Modes de Conversion"
 order: 1
+tags: [Modes de conversion, harmoniques, résonance]
 ---
 
 Au fil des siècles, les arcanotechniciens identifièrent et cataloguèrent différentes manières de convertir le Flux. Chaque **école** représente un mode de conversion spécifique - une façon particulière d'extraire le Flux ambiant et de le transformer en un type de phénomène physique.

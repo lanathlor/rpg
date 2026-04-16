@@ -1,6 +1,7 @@
 ---
 title: "Interstellar Travel"
 order: 4
+tags: [Warp drive, FTL travel, spatial distortion]
 ---
 
 The Empire has two main methods of interstellar travel, each with its advantages and limitations.

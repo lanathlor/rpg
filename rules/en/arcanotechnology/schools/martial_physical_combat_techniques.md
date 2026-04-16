@@ -1,6 +1,7 @@
 ---
 title: 'Martial -- Physical Combat Techniques'
 order: 18
+tags: [Physical Combat, melee weapons]
 ---
 
 **Principle:** Close combat techniques developed through training and experience, involving no arcanotechnological manipulation. Based on mastery of the body, melee weapons, and strategy.

@@ -1,6 +1,7 @@
 ---
 title: "Ballistic -- Ranged Combat Techniques"
 order: 19
+tags: [Ranged Combat, ranged weapons]
 ---
 
 **Principle:** Shooting and ranged combat techniques developed through specialized training with ranged weapons. Mastery of precision, rate of fire, and specialized ammunition.

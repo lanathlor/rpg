@@ -1,6 +1,7 @@
 ---
 title: "Déplacement"
 order: 3
+tags: [Vitesse, Course, déplacement]
 ---
 
 - La **vitesse** d’un personnage indique le **nombre de mètres parcourus par tour** en courant (ligne droite).

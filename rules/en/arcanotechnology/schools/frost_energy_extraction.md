@@ -1,6 +1,7 @@
 ---
 title: 'Frost -- Energy Extraction'
 order: 2
+tags: [Frost, Frost School]
 ---
 
 **Principle:** Removal of ambient kinetic energy, creating a negative thermal gradient.

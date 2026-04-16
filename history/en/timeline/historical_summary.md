@@ -1,6 +1,7 @@
 ---
 title: "Historical Summary"
 order: 1
+tags: [Historical summary, Human Empire, Aceras war]
 ---
 
 ## 1. The Foundation of the Empire

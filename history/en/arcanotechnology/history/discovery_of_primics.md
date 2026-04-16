@@ -1,6 +1,7 @@
 ---
 title: "The Discovery of the Primic"
 order: 1
+tags: [Primic, primic field, ultra-stable bosons]
 ---
 
 ### The Primic Field: A Revolution in Physics

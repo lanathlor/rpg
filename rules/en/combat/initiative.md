@@ -1,6 +1,7 @@
 ---
 title: "Initiative"
 order: 2
+tags: [Initiative roll, ambush]
 ---
 
 At the start of combat, each participant rolls **1d20 + DEX**.

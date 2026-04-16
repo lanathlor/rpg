@@ -1,6 +1,7 @@
 ---
 title: "Révolution arcanotechnique"
 order: 2
+tags: [Révolution arcanotechnique, cristaux de pouvoir, Arcanotechnologue, programmes arcanotechniques]
 ---
 
 Grâce au Conseil des Gardiens, l'Empire a développé une maîtrise industrielle du **Flux**. Les **cristaux de pouvoir** et **cellules d'arcanotechnie solide** permettent désormais de stocker, canaliser et convertir cette énergie universelle en puissance mécanique ou numérique, fusionnant définitivement science et arcanotechnie.

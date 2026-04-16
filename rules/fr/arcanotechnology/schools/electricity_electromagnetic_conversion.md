@@ -1,6 +1,7 @@
 ---
 title: "Électricité - Conversion électromagnétique"
 order: 3
+tags: [Électricité, École d'Électricité]
 ---
 
 **Principe :** Transformation du Flux en champ électromagnétique ordonné (éclairs, décharges).

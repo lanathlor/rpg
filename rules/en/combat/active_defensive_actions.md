@@ -1,6 +1,7 @@
 ---
 title: "Active Defensive Actions"
 order: 6
+tags: [Defensive action, Parry, Dodge, Block]
 ---
 
 A character may forgo attacking to actively defend themselves.

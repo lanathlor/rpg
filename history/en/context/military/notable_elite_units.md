@@ -1,6 +1,7 @@
 ---
 title: "Notable Elite Units"
 order: 4
+tags: [Opals, elite units, exoskeleton]
 ---
 
 ### The Opals

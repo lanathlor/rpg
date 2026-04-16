@@ -1,6 +1,7 @@
 ---
 title: "L'Origine Cosmologique du Flux"
 order: 3
+tags: [Multivers, origine du Flux, Big Bang]
 ---
 
 Une découverte récente a révolutionné notre compréhension de la nature du Flux : **il n'existe pas dans un univers unique, mais dans un multivers**.

@@ -1,6 +1,7 @@
 ---
 title: "Pure -- Arcanotechnological Flux Manipulation"
 order: 9
+tags: [Flux Manipulation, amplification]
 ---
 
 **Principle:** Action on arcanotechnology itself: interruption, deflection, Flux burn, amplification.

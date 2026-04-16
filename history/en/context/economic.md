@@ -1,6 +1,7 @@
 ---
 title: "Economic Context"
 order: 1
+tags: [Economy, Cosmic Gates, trade]
 ---
 
 The Empire benefits from a moderate but decisive technological advantage.

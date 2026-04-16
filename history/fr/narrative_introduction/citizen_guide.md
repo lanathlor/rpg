@@ -1,6 +1,7 @@
 ---
 title: "Guide du citoyen"
 order: 3
+tags: [Citoyen, guide]
 ---
 
 *Document officiel de bienvenue - Édition 5755*

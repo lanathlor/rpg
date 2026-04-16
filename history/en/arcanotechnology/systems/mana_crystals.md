@@ -1,6 +1,7 @@
 ---
 title: "Flux Crystals"
 order: 2
+tags: [Flux Crystals, crystals, Flux reservoir]
 ---
 
 One of the greatest arcanotechnic breakthroughs was the creation of **Flux crystals** - specially designed crystalline matrices that exploit the electron-Flux coupling mechanism. These crystals act as **Flux reservoirs** with high negative entropy and as controllable converters.

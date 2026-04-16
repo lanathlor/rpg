@@ -1,6 +1,7 @@
 ---
 title: 'Light -- Stabilized Photonic Conversion'
 order: 5
+tags: [Light, Light School]
 ---
 
 **Principle:** Conversion of Flux into coherent photonic flow contained within a photoarcanotechnological field.

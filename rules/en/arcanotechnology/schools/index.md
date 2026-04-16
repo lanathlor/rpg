@@ -2,6 +2,7 @@
 title: "Arcanotechnology Schools"
 order: 2
 description: "The 19 Flux conversion schools"
+tags: [Arcanotechnie Schools, 19 schools]
 ---
 
 Arcanotechnology is a **fundamental potential energy**, present in all matter. Practitioners -- called _channelers_ -- learn to convert this energy into different measurable physical forms: heat, light, electromagnetic field, gravity, etc.

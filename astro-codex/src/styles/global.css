@@ -73,3 +73,8 @@ details > summary {
 details > summary::-webkit-details-marker {
   display: none;
 }
+
+/* Wiki-style auto-links */
+.prose a.auto-link {
+  @apply text-primary font-medium underline decoration-primary/30 hover:decoration-primary transition-colors;
+}

@@ -1,6 +1,7 @@
 ---
 title: "Les Écoles Biologiques"
 order: 5
+tags: [Écoles biologiques, influx nerveux, interface neuronale]
 ---
 
 ### École Bioarcanotechnique

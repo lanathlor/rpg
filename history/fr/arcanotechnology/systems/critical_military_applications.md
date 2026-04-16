@@ -1,6 +1,7 @@
 ---
 title: "Applications Militaires Critiques"
 order: 6
+tags: [Canons à plasma, boucliers énergétiques, propulsion spatiale, moteurs gravitoniques]
 ---
 
 Le secteur militaire dépend entièrement des systèmes automatisés :

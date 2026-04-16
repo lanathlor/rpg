@@ -1,6 +1,7 @@
 ---
 title: "Arcanotechnic Communication"
 order: 5
+tags: [Neural implants, arcanotechnic communication]
 ---
 
 ### Neural Implants

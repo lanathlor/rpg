@@ -1,6 +1,7 @@
 ---
 title: "Flux System"
 order: 3
+tags: [Flux Reserve, Flux Influx, arcanotechnological energy]
 ---
 
 Arcanotechnology in this universe relies on the manipulation of a fundamental energy: the **Flux**.

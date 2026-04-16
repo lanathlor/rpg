@@ -1,6 +1,7 @@
 ---
 title: "Quantum -- Quantum Manipulation"
 order: 8
+tags: [Quantum Manipulation, subatomic]
 ---
 
 **Principle:** Alteration of subatomic bonds and states of matter (spin, charge, phase).

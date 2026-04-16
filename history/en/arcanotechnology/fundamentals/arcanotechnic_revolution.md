@@ -1,6 +1,7 @@
 ---
 title: "Arcanotechnic Revolution"
 order: 2
+tags: [Arcanotechnic revolution, power crystals, Arcanotechnologist, arcanotechnic programs]
 ---
 
 Thanks to the Council of Guardians, the Empire has developed an industrial mastery of the **Flux**. **Power crystals** and **solid arcanotechnic cells** now allow the storage, channeling, and conversion of this universal energy into mechanical or digital power, definitively merging science and arcanotechnology.

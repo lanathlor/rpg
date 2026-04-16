@@ -1,6 +1,7 @@
 ---
 title: "Glossary"
 order: 3
+tags: [Glossary, Terms]
 ---
 
 This glossary gathers terms commonly used in the game system.

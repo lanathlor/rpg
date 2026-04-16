@@ -1,6 +1,7 @@
 ---
 title: "Quantique - Manipulation quantique"
 order: 8
+tags: [Quantique, École Quantique]
 ---
 
 **Principe :** Altération des liaisons subatomiques et états de matière (spin, charge, phase).

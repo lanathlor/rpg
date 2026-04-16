@@ -1,6 +1,7 @@
 ---
 title: "Fundamental Nature of Arcanotechnology"
 order: 1
+tags: [Primic energy, channelers, energy conversion]
 ---
 
 Arcanotechnology constitutes a **fundamental potential energy**, called **primic energy**, omnipresent in the very structure of the universe. Intrinsic to all matter, it permeates every atom, every particle, forming the energetic substrate of physical reality.

@@ -1,6 +1,7 @@
 ---
 title: 'Chronodynamic -- Temporal Conversion'
 order: 15
+tags: [Chronodynamic, Chronodynamic School]
 ---
 
 **Principle:** Manipulation of local time flow through compression or dilation of Flux.

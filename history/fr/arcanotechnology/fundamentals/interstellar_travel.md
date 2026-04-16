@@ -1,6 +1,7 @@
 ---
 title: "Voyage interstellaire"
 order: 4
+tags: [Warp, FTL, voyage interstellaire, distorsion spatiale]
 ---
 
 L'Empire dispose de deux principales méthodes de voyage interstellaire, chacune avec ses avantages et limitations.

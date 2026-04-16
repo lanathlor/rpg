@@ -1,6 +1,7 @@
 ---
 title: "Kinesthetic -- Gravito-Mechanical Conversion"
 order: 4
+tags: [Kinesthetic, Kinesthetic School]
 ---
 
 **Principle:** Transformation of Flux into mechanical work (thrust, pressure, local gravity).

@@ -1,6 +1,7 @@
 ---
 title: "Kinesthésique - Conversion gravito-mécanique"
 order: 4
+tags: [Kinesthésique, École Kinesthésique]
 ---
 
 **Principe :** Transformation du Flux en travail mécanique (poussée, pression, gravité locale).

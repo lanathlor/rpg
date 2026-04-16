@@ -1,6 +1,7 @@
 ---
 title: "Political Structure"
 order: 4
+tags: [Representative federation, integration stages, territorial status]
 ---
 
 The Empire functions as a representative federation distinguishing two types of territories:

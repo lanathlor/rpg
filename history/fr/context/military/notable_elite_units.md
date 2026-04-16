@@ -1,6 +1,7 @@
 ---
 title: "Unités d'élite remarquables"
 order: 4
+tags: [Opales, unités d'élite, exosquelette]
 ---
 
 ### Les Opales

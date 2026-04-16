@@ -1,6 +1,7 @@
 ---
 title: "Opportunity Attacks"
 order: 7
+tags: [Opportunity attack, opportunity roll]
 ---
 
 When an enemy leaves your engagement zone (melee range), you may perform an opportunity attack.

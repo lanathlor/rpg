@@ -1,6 +1,7 @@
 ---
 title: "Attacking"
 order: 5
+tags: [Attack roll, damage roll, attack, critical success, critical failure]
 ---
 
 An attack proceeds in two steps: **attack roll**, then **damage roll**.

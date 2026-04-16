@@ -1,6 +1,7 @@
 ---
 title: "Illusion - Manipulation de la perception"
 order: 17
+tags: [Illusion, École d'Illusion]
 ---
 
 **Principe :** Transformation du Flux en signaux informationnels altérant la perception sensorielle.

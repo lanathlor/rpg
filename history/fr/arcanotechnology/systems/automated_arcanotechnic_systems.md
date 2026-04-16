@@ -1,6 +1,7 @@
 ---
 title: "Les Systèmes Arcanotechniques Automatisés"
 order: 4
+tags: [Modulateurs arcanotechniques, systèmes automatisés]
 ---
 
 La véritable révolution industrielle vint avec le développement de **modulateurs arcanotechniques capables de contrôler la conversion du Flux** sans intervention humaine directe. Ces systèmes automatisés forment aujourd'hui la **colonne vertébrale de la civilisation impériale**.

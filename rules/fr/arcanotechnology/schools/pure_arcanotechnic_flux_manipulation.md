@@ -1,6 +1,7 @@
 ---
 title: "Pure - Manipulation du flux arcanotechnique"
 order: 9
+tags: [Pure, École Pure]
 ---
 
 **Principe :** Action sur l'arcanotechnie elle-même : interruption, déviation, brûlure de Flux, amplification.

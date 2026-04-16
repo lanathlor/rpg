@@ -1,6 +1,7 @@
 ---
 title: "Bases des règles"
 order: 2
+tags: [Règles, Système de jeu]
 ---
 
 Cette section présente les règles fondamentales du jeu.

@@ -1,6 +1,7 @@
 ---
 title: "Gravitonique - Conversion gravitationnelle"
 order: 16
+tags: [Gravitonique, École Gravitonique]
 ---
 
 **Principe :** Altération du champ gravitationnel local à l’aide du Flux.

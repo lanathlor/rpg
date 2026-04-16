@@ -1,6 +1,7 @@
 ---
 title: "Limitations Physiques et Pratiques"
 order: 8
+tags: [Limitations, système cristallin, encombrement]
 ---
 
 Malgré leur puissance apparente, les systèmes automatisés présentent des **contraintes majeures** qui limitent leur déploiement :

@@ -160,6 +160,7 @@ const mdFrontmatterSchema = z.object({
   title: z.string(),
   order: z.number().optional(),
   description: z.string().optional(),
+  tags: z.array(z.string()).optional(),
 });
 
 const reglesCollection = defineCollection({

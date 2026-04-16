@@ -1,6 +1,7 @@
 ---
 title: "War and Society"
 order: 4
+tags: [Imperial society, veterans, pacifism]
 ---
 
 ### Perception of the Acéras War

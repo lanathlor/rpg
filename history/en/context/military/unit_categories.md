@@ -1,6 +1,7 @@
 ---
 title: "Unit Categories"
 order: 3
+tags: [Infantry, Specialists, Elite, Heroes]
 ---
 
 | Rank               | Type          | Description                                                                |
