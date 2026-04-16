@@ -1,7 +1,7 @@
 ---
 title: "The Imperial Assembly"
 order: 3
-tags: [Imperial Assembly, elections, representatives]
+tags: [Imperial Assembly]
 ---
 
 The **Imperial Assembly** constitutes the legislative body of the Empire. Created several centuries after the Foundation to address tensions linked to rapid expansion, it represents the interests of populations across the galaxy.

@@ -1,7 +1,7 @@
 ---
 title: "Dice Roll"
 order: 12
-tags: [Roll, DC, Difficulty Class, dice roll]
+tags: [Roll, dice roll]
 ---
 
 ## General Principle

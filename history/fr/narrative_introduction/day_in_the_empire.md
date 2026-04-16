@@ -1,7 +1,7 @@
 ---
 title: "Un jour dans l'Empire"
 order: 2
-tags: [Prime, vie quotidienne, Lyra]
+tags: [Prime]
 ---
 
 _An 5755, Prime, Secteur résidentiel 47-B_

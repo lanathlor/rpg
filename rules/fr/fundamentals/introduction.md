@@ -1,7 +1,6 @@
 ---
 title: "Introduction"
 order: 1
-tags: [Introduction, Manuel du joueur]
 ---
 
 ## Abstract

@@ -1,7 +1,7 @@
 ---
 title: "Les Écoles Cinétiques"
 order: 3
-tags: [Écoles cinétiques, contrôle météorologique, propulsion]
+tags: [propulsion]
 ---
 
 ### École Aérocinétique

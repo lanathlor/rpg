@@ -1,7 +1,6 @@
 ---
 title: "Progression and Experience"
 order: 12
-tags: [Character progression, Experience system]
 ---
 
 The Point Buy system is primarily used for initial creation. Character progression during a campaign will be managed by the experience system defined by the GM.

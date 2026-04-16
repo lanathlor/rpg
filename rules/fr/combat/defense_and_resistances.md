@@ -1,7 +1,7 @@
 ---
 title: '️Défense et Résistances'
 order: 4
-tags: [SD, Score de Défense, Défense]
+tags: [Score de Défense, Défense]
 ---
 
 Le système de défense repose sur deux valeurs fixes :

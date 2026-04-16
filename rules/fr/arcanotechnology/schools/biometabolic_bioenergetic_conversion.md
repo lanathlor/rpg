@@ -1,7 +1,7 @@
 ---
 title: "Biométabolique - Conversion bioénergétique"
 order: 7
-tags: [Biométabolique, École Biométabolique]
+tags: [Biométabolique]
 ---
 
 **Principe :** Manipule le champ vital des organismes : extraction, transfert ou inversion de l’énergie biologique.

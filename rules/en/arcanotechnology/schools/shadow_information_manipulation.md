@@ -1,7 +1,7 @@
 ---
 title: "Shadow -- Information Manipulation"
 order: 6
-tags: [Shadow, Shadow School]
+tags: [Shadow]
 ---
 
 **Principle:** Modifies the propagation of light and sound waves, acting on perception rather than matter.

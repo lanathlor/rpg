@@ -1,7 +1,7 @@
 ---
 title: "Unités secrètes"
 order: 5
-tags: [Unités secrètes, renseignement, guerre psychologique]
+tags: [Unités secrètes, renseignement]
 ---
 
 Les **unités secrètes** représentent l'échelon le plus classifié de l'armée impériale. Contrairement aux agences de renseignement connues d'autres civilisations, **leur existence même est secrète** au sein de la population générale.

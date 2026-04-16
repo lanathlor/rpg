@@ -1,7 +1,7 @@
 ---
 title: 'Aerokinetic -- Atmospheric Conversion'
 order: 10
-tags: [Aerokinetic, Aerokinetic School]
+tags: [Aerokinetic]
 ---
 
 **Principle:** Conversion of Flux into macroscopic mechanical energy (wind, pressure).

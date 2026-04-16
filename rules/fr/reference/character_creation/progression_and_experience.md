@@ -1,7 +1,7 @@
 ---
 title: "Progression et Expérience"
 order: 12
-tags: [Progression, Expérience, XP, entraînement]
+tags: [Expérience, XP, entraînement]
 ---
 
 Le système de Point Buy sert principalement à la création initiale. La progression du personnage en cours de campagne sera gérée par le système d'expérience défini par le MJ.

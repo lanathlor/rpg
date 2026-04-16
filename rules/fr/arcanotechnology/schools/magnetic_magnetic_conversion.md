@@ -1,7 +1,7 @@
 ---
 title: "Magnétique - Conversion magnétique"
 order: 12
-tags: [Magnétique, École Magnétique]
+tags: [Magnétique]
 ---
 
 **Principe :** Génération de champs magnétiques puissants via le Flux.

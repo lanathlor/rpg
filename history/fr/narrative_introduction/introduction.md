@@ -1,7 +1,7 @@
 ---
 title: "Introduction"
 order: 1
-tags: [Contexte historique, politique]
+tags: [politique]
 ---
 
 Cette section présente le contexte historique et politique de l'univers du jeu.

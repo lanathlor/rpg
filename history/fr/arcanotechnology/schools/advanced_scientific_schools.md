@@ -1,7 +1,6 @@
 ---
 title: "Les Écoles Scientifiques Avancées"
 order: 4
-tags: [Écoles scientifiques, guidage de missiles, canon à rails]
 ---
 
 ### École Balistique

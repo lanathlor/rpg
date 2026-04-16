@@ -1,7 +1,7 @@
 ---
 title: "Manœuvres"
 order: 8
-tags: [Manœuvre, action non offensive]
+tags: [Manœuvre]
 ---
 
 Les manœuvres regroupent toutes les actions non offensives : utilisation d'objets, environnement, interactions spéciales, etc.

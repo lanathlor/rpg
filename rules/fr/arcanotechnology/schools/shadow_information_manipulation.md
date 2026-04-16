@@ -1,7 +1,7 @@
 ---
 title: "Ombre - Manipulation de l’information"
 order: 6
-tags: [Ombre, École d’Ombre]
+tags: [Ombre]
 ---
 
 **Principe :** Modifie la propagation des ondes lumineuses et sonores, agissant sur la perception plutôt que la matière.

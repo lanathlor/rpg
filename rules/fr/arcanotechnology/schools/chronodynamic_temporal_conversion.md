@@ -1,7 +1,7 @@
 ---
 title: '️Chronodynamique - Conversion temporelle'
 order: 15
-tags: [Chronodynamique, École Chronodynamique]
+tags: [Chronodynamique]
 ---
 
 **Principe :** Manipulation du rythme local du temps via compression ou dilatation du champ de Flux.

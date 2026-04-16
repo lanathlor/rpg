@@ -1,7 +1,7 @@
 ---
 title: "Education"
 order: 1
-tags: [Universal education, scientific curriculum]
+tags: [Universal education]
 ---
 
 ### Universal Education System

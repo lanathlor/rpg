@@ -1,7 +1,7 @@
 ---
 title: "Normes sociales"
 order: 3
-tags: [Famille, mariage, espérance de vie]
+tags: [Famille, espérance de vie]
 ---
 
 ### Structure familiale

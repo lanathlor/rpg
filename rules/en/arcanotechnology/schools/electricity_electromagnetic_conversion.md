@@ -1,7 +1,7 @@
 ---
 title: "Electricity -- Electromagnetic Conversion"
 order: 3
-tags: [Electricity, Electricity School]
+tags: [Electricity]
 ---
 
 **Principle:** Transformation of Flux into an ordered electromagnetic field (lightning, discharges).

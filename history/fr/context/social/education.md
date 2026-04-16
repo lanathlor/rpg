@@ -1,7 +1,7 @@
 ---
 title: "Éducation"
 order: 1
-tags: [Éducation, sciences, formation]
+tags: [sciences, formation]
 ---
 
 ### Système éducatif universel

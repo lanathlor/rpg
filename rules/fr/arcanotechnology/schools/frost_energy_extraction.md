@@ -1,7 +1,7 @@
 ---
 title: '️Givre - Extraction énergétique'
 order: 2
-tags: [Givre, École de Givre]
+tags: [Givre]
 ---
 
 **Principe :** Retrait de l’énergie cinétique ambiante, créant un gradient thermique négatif.

@@ -1,7 +1,6 @@
 ---
 title: "Applications Industrielles"
 order: 5
-tags: [Forges arcanotechniques, centrales de conversion, manufacture]
 ---
 
 Les systèmes automatisés ont transformé l'industrie impériale :

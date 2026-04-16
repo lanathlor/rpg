@@ -1,7 +1,7 @@
 ---
 title: "Gestion de l'opposition et de la dissidence"
 order: 5
-tags: [Opposition, dissidence, répression]
+tags: [Opposition]
 ---
 
 Malgré sa façade démocratique et son niveau de vie élevé, l'Empire fait face à diverses formes d'opposition. Le Conseil des Gardiens a développé des stratégies sophistiquées pour gérer la dissidence sans recourir à une répression visible.

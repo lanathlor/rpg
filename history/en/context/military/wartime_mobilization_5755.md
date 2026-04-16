@@ -1,7 +1,6 @@
 ---
 title: "Wartime Mobilization (5755)"
 order: 1
-tags: [Wartime mobilization, military conscription]
 ---
 
 During the final phase of the Acéras war, the Empire maintains an **exceptional mobilization of 3 to 5% of its population**. This rate, extraordinarily high for an interstellar civilization, reflects the urgency of the situation and the total nature of the conflict.

@@ -1,7 +1,7 @@
 ---
 title: "Combat Flow"
 order: 1
-tags: [Turn, main action, minor action, combat flow]
+tags: [Turn, main action, minor action]
 ---
 
 A combat is divided into **turns** of 6 seconds, each representing a brief window of action.

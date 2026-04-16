@@ -1,7 +1,7 @@
 ---
 title: "L'Assemblée Impériale"
 order: 3
-tags: [Assemblée Impériale, élections, représentants]
+tags: [Assemblée Impériale]
 ---
 
 L'**Assemblée Impériale** constitue le corps législatif de l'Empire. Créée plusieurs siècles après la Fondation pour répondre aux tensions liées à l'expansion rapide, elle représente les intérêts des populations à travers la galaxie.

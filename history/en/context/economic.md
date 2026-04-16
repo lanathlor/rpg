@@ -8,9 +8,9 @@ The Empire benefits from a moderate but decisive technological advantage.
 Interstellar travel is primarily conducted via:
 
 - **Cosmic Gates**, stable but rare,
-- or the **Warp**, a spatial distortion technology that shortens distances.
+- or the **Warp drive**, a spatial distortion technology that shortens distances.
 
-> The Warp is dangerous: a calculation error can send a ship into a star or disintegrate it.
+> The Warp drive is dangerous: a calculation error can send a ship into a star or disintegrate it.
 > Trips are therefore limited to already-charted zones, making exploration slow and perilous.
 
 Humanity currently controls two **ecumenopoleis**: **Prime** (political capital housing the Council and the Assembly) and **Nexus** (secondary administrative center). Entirely urbanized with approximately 1.9 trillion inhabitants each, they depend massively on imports from agricultural planets for their food supply and stand as symbols of imperial power.

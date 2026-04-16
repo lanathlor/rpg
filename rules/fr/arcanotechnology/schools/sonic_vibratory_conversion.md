@@ -1,7 +1,7 @@
 ---
 title: "Sonique - Conversion vibratoire"
 order: 14
-tags: [Sonique, École Sonique]
+tags: [Sonique]
 ---
 
 **Principe :** Transformation du Flux en ondes acoustiques ou sismiques.

@@ -1,7 +1,6 @@
 ---
 title: "Les Écoles Élémentaires"
 order: 2
-tags: [Écoles élémentaires, conversion thermique, énergie cinétique]
 ---
 
 ### École du Feu

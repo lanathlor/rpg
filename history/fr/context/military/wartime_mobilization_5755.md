@@ -1,7 +1,7 @@
 ---
 title: "Mobilisation en temps de guerre (5755)"
 order: 1
-tags: [Mobilisation, conscription, An 5755]
+tags: [Mobilisation]
 ---
 
 Durant la phase finale de la guerre acéra, l'Empire maintient une **mobilisation exceptionnelle de 3 à 5% de sa population**. Ce taux, extraordinairement élevé pour une civilisation interstellaire, reflète l'urgence de la situation et la nature totale du conflit.

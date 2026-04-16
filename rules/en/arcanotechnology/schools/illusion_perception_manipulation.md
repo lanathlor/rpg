@@ -1,7 +1,6 @@
 ---
 title: "Illusion -- Perception Manipulation"
 order: 17
-tags: [Perception Manipulation, sensory perception]
 ---
 
 **Principle:** Transformation of Flux into informational signals altering sensory perception.

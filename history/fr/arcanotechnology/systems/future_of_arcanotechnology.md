@@ -1,7 +1,7 @@
 ---
 title: "L'Avenir de l'Arcanotechnie"
 order: 10
-tags: [Recherche, interfaces neuronales, conversion hybride]
+tags: [Recherche, interfaces neuronales]
 ---
 
 Les frontières de l'arcanotechnie continuent de s'étendre. Les chercheurs explorent :

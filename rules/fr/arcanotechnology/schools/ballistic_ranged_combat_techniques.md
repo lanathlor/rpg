@@ -1,7 +1,7 @@
 ---
 title: "Balistique - Techniques de combat à distance"
 order: 19
-tags: [Balistique, École Balistique]
+tags: [Balistique]
 ---
 
 **Principe :** Techniques de tir et de combat à distance développées par l'entraînement spécialisé avec les armes de tir. Maîtrise de la précision, de la cadence et des munitions spécialisées.

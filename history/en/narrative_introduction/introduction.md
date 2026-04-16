@@ -1,7 +1,6 @@
 ---
 title: "Introduction"
 order: 1
-tags: [Historical context, politics]
 ---
 
 This section presents the historical and political context of the game's universe.

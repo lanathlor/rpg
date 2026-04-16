@@ -1,7 +1,7 @@
 ---
 title: "End of Combat"
 order: 9
-tags: [End of combat, flee, victory]
+tags: [End of combat]
 ---
 
 Combat ends when all enemies of one side are:

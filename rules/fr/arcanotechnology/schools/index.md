@@ -2,7 +2,6 @@
 title: "Écoles d'arcanotechnie"
 order: 2
 description: "Les 19 écoles de conversion du Flux"
-tags: [Écoles d'arcanotechnie, 19 écoles]
 ---
 
 L'arcanotechnie est une **énergie potentielle fondamentale**, présente dans toute matière. Les pratiquants - appelés _canalisateurs_ - apprennent à convertir cette énergie en différentes formes physiques mesurables : chaleur, lumière, champ électromagnétique, gravité, etc.

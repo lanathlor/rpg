@@ -1,7 +1,7 @@
 ---
 title: "Structure politique"
 order: 4
-tags: [Fédération, intégration, Caste, État, Colonie]
+tags: [intégration, Caste]
 ---
 
 L'Empire fonctionne comme une fédération représentative distinguant deux types de territoires :

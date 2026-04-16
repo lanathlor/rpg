@@ -1,7 +1,7 @@
 ---
 title: "Interface Directe : Arcanotechniciens et Cristaux"
 order: 3
-tags: [Interface directe, praticien, patterns électroniques]
+tags: [praticien, patterns électroniques]
 ---
 
 Un développement important fut la découverte que les **arcanotechniciens formés peuvent interfacer directement avec les cristaux** sans nécessiter le modulateur de contrôle :

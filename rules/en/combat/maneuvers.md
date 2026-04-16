@@ -1,7 +1,7 @@
 ---
 title: "Maneuvers"
 order: 8
-tags: [Maneuver, non-offensive action]
+tags: [Maneuver]
 ---
 
 Maneuvers encompass all non-offensive actions: item use, environment interaction, special interactions, etc.

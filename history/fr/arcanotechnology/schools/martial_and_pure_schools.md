@@ -1,7 +1,7 @@
 ---
 title: "Les Écoles Martiales et Pures"
 order: 6
-tags: [Techniques de combat, amplification musculaire, réflexes]
+tags: [Techniques de combat]
 ---
 
 ### École Martiale

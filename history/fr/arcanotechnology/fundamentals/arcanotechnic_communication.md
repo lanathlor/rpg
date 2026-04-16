@@ -1,7 +1,7 @@
 ---
 title: "Communication arcanotechnique"
 order: 5
-tags: [Implants neuraux, communication, télépathie]
+tags: [Implants neuraux, communication]
 ---
 
 ### Implants neuraux

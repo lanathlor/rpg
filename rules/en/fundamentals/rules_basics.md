@@ -1,7 +1,7 @@
 ---
 title: "Rules Basics"
 order: 2
-tags: [Rules, Game system]
+tags: [Rules]
 ---
 
 This section presents the fundamental rules of the game.

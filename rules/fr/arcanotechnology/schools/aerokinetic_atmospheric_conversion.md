@@ -1,7 +1,7 @@
 ---
 title: '️Aérocinétique - Conversion atmosphérique'
 order: 10
-tags: [Aérocinétique, École Aérocinétique]
+tags: [Aérocinétique]
 ---
 
 **Principe :** Conversion du Flux en énergie mécanique macroscopique (vent, pression).

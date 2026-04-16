@@ -1,7 +1,7 @@
 ---
 title: "Magnetic -- Magnetic Conversion"
 order: 12
-tags: [Magnetic, Magnetic School]
+tags: [Magnetic]
 ---
 
 **Principle:** Generation of powerful magnetic fields via Flux.

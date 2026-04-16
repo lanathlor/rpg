@@ -1,7 +1,7 @@
 ---
 title: "Feu - Conversion thermique rapide"
 order: 1
-tags: [Feu, École de Feu]
+tags: [Feu]
 ---
 
 **Principe :** Conversion directe du Flux en énergie cinétique moléculaire, provoquant la combustion ou l’explosion.

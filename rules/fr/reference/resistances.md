@@ -1,7 +1,7 @@
 ---
 title: "Résistances"
 order: 1
-tags: [RMEC, RRAD, RINT, Résistance Mécanique, Résistance Radiative, Résistance Interne, dégâts arcanotechniques]
+tags: [RMEC, RRAD, RINT, Résistance Mécanique, Résistance Radiative, Résistance Interne]
 ---
 
 ## 🧬 Principe Fondamental

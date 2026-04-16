@@ -1,7 +1,6 @@
 ---
 title: "Lexique"
 order: 3
-tags: [Lexique, Glossaire, Termes]
 ---
 
 Ce lexique regroupe les termes couramment utilisés dans le système de jeu.

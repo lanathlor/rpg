@@ -1,7 +1,7 @@
 ---
 title: "Guerre et société"
 order: 4
-tags: [Société impériale, vétérans, pacifisme]
+tags: [Société impériale]
 ---
 
 ### Perception de la guerre acéra

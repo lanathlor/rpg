@@ -1,7 +1,7 @@
 ---
 title: '️Déroulement du Combat'
 order: 1
-tags: [Tour, action principale, action mineure, déroulement]
+tags: [Tour, action principale, action mineure]
 ---
 
 Un combat se divise en **tours** de 6 secondes, chacun représentant une fenêtre d’action brève.

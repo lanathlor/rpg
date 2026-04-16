@@ -1,7 +1,7 @@
 ---
 title: '️Lumière - Conversion photonique stabilisée'
 order: 5
-tags: [Lumière, École de Lumière]
+tags: [Lumière]
 ---
 
 **Principe :** Conversion du Flux en énergie photonique cohérent contenu dans un champ photoarcanotechnique.

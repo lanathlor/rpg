@@ -1,7 +1,7 @@
 ---
 title: "La Découverte du Primique"
 order: 1
-tags: [Primique, champ primique, bosons]
+tags: [Primique, champ primique]
 ---
 
 ### Le Champ Primique : Une Révolution Physique

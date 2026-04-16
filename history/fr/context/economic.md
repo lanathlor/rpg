@@ -1,11 +1,11 @@
 ---
 title: "Contexte économique"
 order: 1
-tags: [Économie, Portes cosmiques, commerce]
+tags: [Portes cosmiques, commerce]
 ---
 
 L'Empire bénéficie d'une avance technologique modérée mais décisive.
-Les voyages interstellaires s'effectuent principalement via :
+Le voyage interstellaire s'effectue principalement via :
 
 - les **Portes cosmiques**, stables mais rares,
 - ou le **Warp**, technologie de distorsion spatiale raccourcissant les distances.

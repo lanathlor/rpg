@@ -1,7 +1,7 @@
 ---
 title: "Social Norms"
 order: 3
-tags: [Family, marriage, life expectancy]
+tags: [Family, life expectancy]
 ---
 
 ### Family Structure

@@ -1,7 +1,6 @@
 ---
 title: "Bioarcanotechnology -- Biological Conversion"
 order: 13
-tags: [Bioarcanotechnology, Biological Conversion School]
 ---
 
 **Principle:** Use of Flux to influence cellular growth and regeneration.

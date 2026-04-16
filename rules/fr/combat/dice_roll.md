@@ -1,7 +1,7 @@
 ---
 title: "Jet de dés"
 order: 12
-tags: [Jet, DD, Degré de Difficulté, d20]
+tags: [Jet, d20]
 ---
 
 ## ⚙️ Principe général

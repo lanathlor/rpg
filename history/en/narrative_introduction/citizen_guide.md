@@ -1,7 +1,6 @@
 ---
 title: "Citizen's Guide"
 order: 3
-tags: [Citizen's guide, welcome document]
 ---
 
 *Official Welcome Document - Edition 5755*

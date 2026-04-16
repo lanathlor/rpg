@@ -1,7 +1,7 @@
 ---
 title: "Affinities and Types"
 order: 1
-tags: [Affinity system, School requirement, Type requirement]
+tags: [Affinity system]
 ---
 
 ## General Principle

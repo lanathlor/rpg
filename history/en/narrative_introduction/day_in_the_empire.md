@@ -1,7 +1,6 @@
 ---
 title: "A Day in the Empire"
 order: 2
-tags: [Daily life, citizen daily routine]
 ---
 
 _Year 5755, Prime, Residential Sector 47-B_

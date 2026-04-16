@@ -1,7 +1,7 @@
 ---
 title: '️Martial - Techniques de combat physique'
 order: 18
-tags: [Martial, École Martiale]
+tags: [Martial]
 ---
 
 **Principe :** Techniques de combat rapproché développées par l'entraînement et l'expérience, n'impliquant aucune manipulation arcanotechnique. Basées sur la maîtrise du corps, des armes de mêlée et de la stratégie.

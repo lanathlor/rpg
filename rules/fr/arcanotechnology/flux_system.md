@@ -1,7 +1,7 @@
 ---
 title: "Système de Flux"
 order: 3
-tags: [Flux, Réserve de Flux, Afflux, énergie arcanotechnique]
+tags: [Flux, Réserve de Flux, Afflux]
 ---
 
 L'arcanotechnie dans cet univers repose sur la manipulation d'une énergie fondamentale : le **Flux**.

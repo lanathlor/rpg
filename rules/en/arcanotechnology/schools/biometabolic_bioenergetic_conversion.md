@@ -1,7 +1,7 @@
 ---
 title: "Biometabolic -- Bioenergetic Conversion"
 order: 7
-tags: [Biometabolic, Biometabolic School]
+tags: [Biometabolic]
 ---
 
 **Principle:** Manipulates the vital field of organisms: extraction, transfer, or inversion of biological energy.

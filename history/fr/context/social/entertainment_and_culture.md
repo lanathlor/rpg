@@ -1,7 +1,7 @@
 ---
 title: "Divertissement et culture"
 order: 2
-tags: [Divertissement, sports arcanotechniques, culture]
+tags: [Divertissement, culture]
 ---
 
 Dans une société où la majorité des citoyens dispose de temps libre considérable, le divertissement est **crucial** pour maintenir la cohésion sociale et le contentement général.

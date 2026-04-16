@@ -1,7 +1,7 @@
 ---
 title: "Hydrodynamic -- Fluid Conversion"
 order: 11
-tags: [Hydrodynamic, Hydrodynamic School]
+tags: [Hydrodynamic]
 ---
 
 **Principle:** Transformation of Flux into energy controlling water and its states.

@@ -1,7 +1,7 @@
 ---
 title: "Affinités et types"
 order: 1
-tags: [École, Type, Affinité, A.École, A.Type, ReqÉcole, ReqType, ReqMixte]
+tags: [Affinité]
 ---
 
 ## 🎯 Principe général

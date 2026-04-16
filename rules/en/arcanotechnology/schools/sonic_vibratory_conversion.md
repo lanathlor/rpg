@@ -1,7 +1,7 @@
 ---
 title: "Sonic -- Vibratory Conversion"
 order: 14
-tags: [Sonic, Sonic School]
+tags: [Sonic]
 ---
 
 **Principle:** Transformation of Flux into acoustic or seismic waves.
