@@ -2,11 +2,14 @@
 import SidebarTree from './SidebarTree.astro';
 import { getRulesTree, getHistoryTree } from '@/lib/dataUtils';
 import { findAncestors } from '@/lib/treeUtils';
-import { t, type Lang } from '@/lib/i18n';
+import { t, setLang, detectLocaleFromPath } from '@/lib/i18n';
 
-const locale = (Astro.currentLocale || 'en') as Lang;
+// Detect locale from URL path (root = English, /fr/ = French)
+const basePath = import.meta.env.BASE_URL;
 const pathname = Astro.url.pathname;
-const base = import.meta.env.BASE_URL + locale + '/';
+const { locale, isFrench } = detectLocaleFromPath(pathname, basePath);
+setLang(locale);
+const base = isFrench ? `${basePath}fr/` : basePath;
 
 function isActive(href: string): boolean {
   const fullHref = base + href.replace(/^\//, '');

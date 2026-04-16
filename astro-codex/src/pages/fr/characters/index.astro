@@ -1,0 +1,39 @@
+---
+import MainLayout from '@/layouts/MainLayout.astro';
+import { setLang } from '@/lib/i18n';
+import { CharacterCreatorIsland } from '@/components/islands/CharacterCreatorIsland';
+import { getClasses, getSpells, getWeapons, getArmors, getSkills, getConsumables } from '@/lib/dataUtils';
+
+
+
+const locale = 'fr';
+setLang(locale);
+
+const [classEntries, spellEntries, weaponEntries, armorEntries, skillEntries, consumableEntries] = await Promise.all([
+  getClasses(locale),
+  getSpells(locale),
+  getWeapons(locale),
+  getArmors(locale),
+  getSkills(locale),
+  getConsumables(locale),
+]);
+
+const classes = classEntries.map(e => e.data);
+const spells = spellEntries.map(e => e.data);
+const weapons = weaponEntries.map(e => e.data);
+const armors = armorEntries.map(e => e.data);
+const skills = skillEntries.map(e => e.data);
+const consumables = consumableEntries.map(e => e.data);
+---
+
+<MainLayout title="Personnages - Pyrrhic Stars" description="Créer et gérer vos personnages">
+  <CharacterCreatorIsland
+    classes={classes}
+    spells={spells}
+    weapons={weapons}
+    armors={armors}
+    skills={skills}
+    consumables={consumables}
+    client:load
+  />
+</MainLayout>

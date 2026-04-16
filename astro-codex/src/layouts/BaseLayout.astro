@@ -1,22 +1,34 @@
 ---
-import { setLang, type Lang } from '@/lib/i18n';
+import { setLang, detectLocaleFromPath } from '@/lib/i18n';
 
 interface Props {
   title: string;
   description?: string;
 }
 
-const locale = (Astro.currentLocale || 'en') as Lang;
+// Get locale from URL path (root or /en/ = English, /fr/ = French)
+const basePath = import.meta.env.BASE_URL;
+const pathname = Astro.url.pathname;
+const { locale, isFrench, isExplicitEnglish } = detectLocaleFromPath(pathname, basePath);
 setLang(locale);
 
-const { title, description = 'Pyrrhic Stars - Sci-fi tabletop RPG in a galactic empire at war' } = Astro.props;
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+// Check if this is a root page (not /en/ or /fr/) - these pages hydrate based on user preference
+const isRootPage = !isFrench && !isExplicitEnglish;
 
-// Build hreflang alternate URLs
-const basePath = import.meta.env.BASE_URL;
-const pathWithoutLocale = Astro.url.pathname.replace(new RegExp(`^${basePath}(en|fr)/`), '/');
-const enURL = new URL(`${basePath}en${pathWithoutLocale}`, Astro.site);
-const frURL = new URL(`${basePath}fr${pathWithoutLocale}`, Astro.site);
+const { title, description = 'Pyrrhic Stars - Sci-fi tabletop RPG in a galactic empire at war' } = Astro.props;
+
+// Build canonical URL: root for English (even if on /en/), /fr/ for French
+// Strip /fr/ or /en/ from path to get the base path
+const pathAfterBase = pathname.replace(basePath, '');
+const pathWithoutLocale = pathAfterBase.replace(/^(en|fr)\//, '');
+const canonicalPath = isFrench
+  ? `${basePath}fr/${pathWithoutLocale}`
+  : `${basePath}${pathWithoutLocale}`; // English canonical is always root (not /en/)
+const canonicalURL = new URL(canonicalPath, Astro.site);
+
+// Build hreflang alternate URLs: English → root, French → /fr/
+const enURL = new URL(`${basePath}${pathWithoutLocale}`, Astro.site);
+const frURL = new URL(`${basePath}fr/${pathWithoutLocale}`, Astro.site);
 ---
 
 <!doctype html>
@@ -34,7 +46,7 @@ const frURL = new URL(`${basePath}fr${pathWithoutLocale}`, Astro.site);
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalURL} />
     <meta name="generator" content={Astro.generator} />
-    <link rel="icon" type="image/svg+xml" href="/rpg/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href={`${basePath}favicon.svg`} />
     <title>{title}</title>
     <!-- Prevent FOUC: apply theme before paint -->
     <script is:inline>
@@ -46,6 +58,68 @@ const frURL = new URL(`${basePath}fr${pathWithoutLocale}`, Astro.site);
         }
       })();
     </script>
+    {isRootPage && (
+      <!-- Locale hydration: swap content if user prefers French -->
+      <script is:inline define:vars={{ basePath }}>
+        (function() {
+          var LOCALE_KEY = 'rpg-locale-preference';
+          var pref = localStorage.getItem(LOCALE_KEY);
+
+          // If no preference stored, detect from browser and save
+          if (!pref) {
+            pref = (navigator.language || '').split('-')[0] || 'en';
+            localStorage.setItem(LOCALE_KEY, pref);
+          }
+
+          // Rewrite links to remove /fr/ prefix (keep URLs on root path)
+          function rewriteLinks(container) {
+            container.querySelectorAll('a[href]').forEach(function(a) {
+              var href = a.getAttribute('href');
+              if (href && href.indexOf(basePath + 'fr/') === 0) {
+                a.setAttribute('href', href.replace(basePath + 'fr/', basePath));
+              }
+            });
+          }
+
+          // If user prefers French, fetch and swap content
+          if (pref === 'fr') {
+            var path = window.location.pathname;
+            var pathAfterBase = path.replace(basePath, '');
+            var frPath = basePath + 'fr/' + pathAfterBase;
+
+            fetch(frPath)
+              .then(function(r) { return r.ok ? r.text() : Promise.reject(); })
+              .then(function(html) {
+                var doc = new DOMParser().parseFromString(html, 'text/html');
+
+                // Swap main content
+                var frMain = doc.querySelector('main');
+                var enMain = document.querySelector('main');
+                if (frMain && enMain) {
+                  enMain.innerHTML = frMain.innerHTML;
+                  rewriteLinks(enMain);
+                }
+
+                // Swap sidebar content
+                var frAside = doc.querySelector('aside');
+                var enAside = document.querySelector('aside');
+                if (frAside && enAside) {
+                  enAside.innerHTML = frAside.innerHTML;
+                  rewriteLinks(enAside);
+                }
+
+                document.documentElement.lang = 'fr';
+
+                // Notify React components of locale change (after hydration)
+                setTimeout(function() {
+                  window.dispatchEvent(new CustomEvent('locale-changed', { detail: { locale: 'fr' } }));
+                }, 100);
+              })
+              .catch(function() {}); // Silently fail, show English
+          }
+        })();
+      </script>
+    )}
   </head>
   <body>
     <slot />

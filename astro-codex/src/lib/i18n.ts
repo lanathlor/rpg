@@ -7,6 +7,66 @@ const translations: Record<Lang, Record<string, string>> = { fr, en };
 
 let currentLang: Lang = 'en';
 
+// === localStorage-based locale preference ===
+export const LOCALE_STORAGE_KEY = 'rpg-locale-preference';
+
+/** Get user's language preference from localStorage */
+export function getStoredLocale(): string | null {
+  if (typeof window === 'undefined') return null;
+  return localStorage.getItem(LOCALE_STORAGE_KEY);
+}
+
+/** Save user's language preference to localStorage */
+export function setStoredLocale(locale: string): void {
+  if (typeof window === 'undefined') return;
+  localStorage.setItem(LOCALE_STORAGE_KEY, locale);
+}
+
+/** Get browser's preferred language (e.g., 'fr', 'en', 'es') */
+export function getBrowserLocale(): string {
+  if (typeof window === 'undefined') return 'en';
+  return navigator.language?.split('-')[0] || 'en';
+}
+
+/** Initialize locale preference: use stored, or detect from browser and save */
+export function initLocalePreference(): string {
+  const stored = getStoredLocale();
+  if (stored) return stored;
+  const browser = getBrowserLocale();
+  setStoredLocale(browser);
+  return browser;
+}
+
+/** Convert URL locale param to actual Lang */
+export function paramToLang(param: string | undefined): Lang {
+  if (param === 'fr') return 'fr';
+  return 'en';
+}
+
+/** Check if this is the root English version (no locale prefix) */
+export function isRootLocale(pathname: string, baseUrl: string): boolean {
+  const pathAfterBase = pathname.replace(baseUrl, '');
+  return !pathAfterBase.match(/^(en|fr)\//);
+}
+
+/** Get static paths for French-only locale pages */
+export function getFrenchPaths() {
+  return [{ params: { locale: 'fr' } }];
+}
+
+/** Get base URL for links based on whether we're in French or English (root) */
+export function getLocaleBase(isFrench: boolean, baseUrl: string): string {
+  return isFrench ? `${baseUrl}fr/` : baseUrl;
+}
+
+/** Detect locale from URL path */
+export function detectLocaleFromPath(pathname: string, baseUrl: string): { locale: Lang; isFrench: boolean; isExplicitEnglish: boolean } {
+  const pathAfterBase = pathname.replace(baseUrl, '');
+  const isFrench = pathAfterBase.startsWith('fr/') || pathAfterBase === 'fr';
+  const isExplicitEnglish = pathAfterBase.startsWith('en/') || pathAfterBase === 'en';
+  return { locale: isFrench ? 'fr' : 'en', isFrench, isExplicitEnglish };
+}
+
 // Client-side: detect locale from URL path
 if (typeof window !== 'undefined') {
   const path = window.location.pathname;

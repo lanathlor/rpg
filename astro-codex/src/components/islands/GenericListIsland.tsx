@@ -1,5 +1,6 @@
 import { useState, useMemo } from 'react';
-import { t } from '@/lib/i18n';
+import { t, setLang } from '@/lib/i18n';
+import { useLocale } from '@/lib/useLocale';
 
 interface ListItem {
   slug: string;
@@ -27,6 +28,9 @@ function truncate(str: string | undefined, len: number): string {
 }
 
 export function GenericListIsland({ items, base, basePath, searchPlaceholder = 'Rechercher...', categoryLabel = 'Catégorie', itemLabel = 'résultat' }: Props) {
+  const locale = useLocale();
+  setLang(locale);
+
   const [search, setSearch] = useState('');
   const [filterCategory, setFilterCategory] = useState('');
   const [sortBy, setSortBy] = useState('name-asc');

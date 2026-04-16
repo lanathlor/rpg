@@ -1,5 +1,6 @@
 import { useState, useMemo } from 'react';
-import { t } from '@/lib/i18n';
+import { t, setLang } from '@/lib/i18n';
+import { useLocale } from '@/lib/useLocale';
 
 interface SkillItem {
   slug: string;
@@ -41,6 +42,9 @@ function truncate(str: string | undefined, len: number): string {
 }
 
 export function SkillListIsland({ skills, base }: Props) {
+  const locale = useLocale();
+  setLang(locale);
+
   const [search, setSearch] = useState('');
   const [filterSubcategory, setFilterSubcategory] = useState('');
   const [activeTiers, setActiveTiers] = useState<Set<string>>(new Set());

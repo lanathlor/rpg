@@ -2,11 +2,14 @@
 import { ThemeToggle } from './ThemeToggle';
 import { LangToggle } from './LangToggle';
 import { MobileSidebar } from './MobileSidebar';
-import { t, type Lang } from '@/lib/i18n';
+import { t, setLang, detectLocaleFromPath } from '@/lib/i18n';
 
-const locale = (Astro.currentLocale || 'en') as Lang;
-const base = import.meta.env.BASE_URL + locale + '/';
+// Detect locale from URL path (root = English, /fr/ = French)
+const basePath = import.meta.env.BASE_URL;
 const pathname = Astro.url.pathname;
+const { locale, isFrench } = detectLocaleFromPath(pathname, basePath);
+setLang(locale);
+const base = isFrench ? `${basePath}fr/` : basePath;
 ---
 
 <header class="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -23,7 +26,7 @@ const pathname = Astro.url.pathname;
         />
       </form>
     </div>
-    <LangToggle client:load />
+    <LangToggle basePath={basePath} client:load />
     <ThemeToggle client:load />
   </div>
 </header>

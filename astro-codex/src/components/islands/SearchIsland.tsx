@@ -1,5 +1,6 @@
 import { useState, useMemo } from 'react';
-import { t } from '@/lib/i18n';
+import { t, setLang } from '@/lib/i18n';
+import { useLocale } from '@/lib/useLocale';
 
 interface SearchItem {
   name: string;
@@ -25,6 +26,9 @@ const typeColors: Record<string, string> = {
 };
 
 export function SearchIsland({ items, initialQuery = '' }: Props) {
+  const locale = useLocale();
+  setLang(locale);
+
   const [query, setQuery] = useState(initialQuery);
   const [filterType, setFilterType] = useState('');
 

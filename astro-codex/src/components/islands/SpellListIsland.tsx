@@ -1,5 +1,6 @@
 import { useState, useMemo } from 'react';
-import { t } from '@/lib/i18n';
+import { t, setLang } from '@/lib/i18n';
+import { useLocale } from '@/lib/useLocale';
 
 interface SpellLevel {
   conditions?: { flux_cost?: number; recharge?: string };
@@ -65,6 +66,10 @@ function truncate(str: string | undefined, len: number): string {
 }
 
 export function SpellListIsland({ spells, base }: Props) {
+  // Subscribe to locale changes to re-render with correct translations
+  const locale = useLocale();
+  setLang(locale); // Ensure t() uses current locale
+
   const [search, setSearch] = useState('');
   const [filterSchool, setFilterSchool] = useState('');
   const [filterType, setFilterType] = useState('');

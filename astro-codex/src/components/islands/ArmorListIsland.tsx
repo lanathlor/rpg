@@ -1,5 +1,6 @@
 import { useState, useMemo } from 'react';
-import { t } from '@/lib/i18n';
+import { t, setLang } from '@/lib/i18n';
+import { useLocale } from '@/lib/useLocale';
 
 interface ArmorItem {
   slug: string;
@@ -42,6 +43,9 @@ function truncate(str: string | undefined, len: number): string {
 }
 
 export function ArmorListIsland({ armors, base }: Props) {
+  const locale = useLocale();
+  setLang(locale);
+
   const [search, setSearch] = useState('');
   const [filterCategory, setFilterCategory] = useState('');
   const [filterSubcategory, setFilterSubcategory] = useState('');

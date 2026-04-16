@@ -1,6 +1,7 @@
 import { useState, useMemo } from 'react';
 import { RangeSlider } from '@/components/ui/range-slider';
-import { t } from '@/lib/i18n';
+import { t, setLang } from '@/lib/i18n';
+import { useLocale } from '@/lib/useLocale';
 
 interface ClassItem {
   slug: string;
@@ -31,6 +32,9 @@ function truncate(str: string | undefined, len: number): string {
 }
 
 export function ClassListIsland({ classes, base }: Props) {
+  const locale = useLocale();
+  setLang(locale);
+
   const globalMin = useMemo(() => Math.min(...classes.map(c => c.points)), [classes]);
   const globalMax = useMemo(() => Math.max(...classes.map(c => c.points)), [classes]);
 
