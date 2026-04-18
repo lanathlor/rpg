@@ -14,5 +14,5 @@ levels:
     effects:
       defense: +4 en défense
       damage_reduction: Réduit les dégâts de 3 points
-      special: Peut bloquer les attaques énergétiques
+      special: "Applique Protégé au lanceur. Peut bloquer les attaques énergétiques"
     duration: 5 tours

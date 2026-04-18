@@ -12,7 +12,6 @@ levels:
       perception_required: 16
       flux_cost: 4
     effects:
-      - "Si la cible a un exosquelette: -1 aux jets d'attaques"
+      - "Applique Équipement désactivé à la cible"
       - "-2 à la détection du camouflage"
-      - Désactive les communications à distance des ennemies
     duration: 1d4 tours

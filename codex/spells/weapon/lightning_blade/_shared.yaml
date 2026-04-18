@@ -1,2 +1,4 @@
 school: électricité
 type: arme
+status_effects:
+  - Paralyzed

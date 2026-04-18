@@ -16,7 +16,7 @@ levels:
       resistance: RINT
       special: Le lanceur regagne la moitié des dégâts en PV
       specials:
-        - La cible subit -1 à tous ses jets pendant 2 tours
+        - "Applique Affaibli 1 à la cible pendant 2 tours"
   - level: "2"
     name: Drain vital majeur
     prerequisites:
@@ -32,5 +32,5 @@ levels:
       resistance: RINT
       special: Le lanceur regagne tous les dégâts en PV
       specials:
-        - La cible subit -2 à tous ses jets pendant 3 tours
+        - "Applique Affaibli 2 à la cible pendant 3 tours"
         - Peut cibler jusqu'à 2 ennemis adjacents

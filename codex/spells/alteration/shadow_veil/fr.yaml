@@ -13,7 +13,7 @@ levels:
       flux_cost: 5
     effects:
       specials:
-        - "-2 aux jets d'attaque de la cible"
+        - "Applique Affaibli 2 à la cible"
         - "-2 à la détection et perception de la cible"
         - La cible devient partiellement invisible aux capteurs optiques
     duration: 2d4 tours
@@ -29,7 +29,7 @@ levels:
       flux_cost: 6
     effects:
       specials:
-        - "-3 aux jets d'attaque de la cible"
+        - "Applique Affaibli 3 à la cible"
         - "-3 à la détection et perception de la cible"
         - La cible devient invisible aux capteurs optiques
         - Peut affecter jusqu'à 3 cibles

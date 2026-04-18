@@ -12,7 +12,7 @@ levels:
       intelligence_required: 14
       flux_cost: 4
     effects:
-      emp: Désactive les bonus des exosquelettes et stop tous les appareils électriques d'une cible
+      emp: "Applique Équipement désactivé à une cible"
     duration: 1 tour
   - level: "2"
     name: Void II
@@ -25,5 +25,5 @@ levels:
       intelligence_required: 14
       flux_cost: 6
     effects:
-      emp: Désactive les bonus des exosquelettes et stop tous les appareils électriques de 2 cibles
+      emp: "Applique Équipement désactivé à 2 cibles"
     duration: 1 tour

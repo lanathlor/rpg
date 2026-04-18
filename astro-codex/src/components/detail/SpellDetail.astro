@@ -1,7 +1,7 @@
 ---
 import type { Spell, SpellLevel } from '@/types/spells';
 import { rateSpell } from '@/lib/spellRatingCalculator';
-import { t } from '@/lib/i18n';
+import { t, getLang } from '@/lib/i18n';
 
 interface Props {
   spell: Spell;
@@ -52,6 +52,186 @@ function getTypeColor(type: string): string {
   return colors[type] || 'bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-300';
 }
 
+// Status effect auto-linking
+interface StatusDef { name: string; anchor: string }
+
+const enStatuses: StatusDef[] = [
+  { name: 'Arcanotechnically Resistant', anchor: 'arcanotechnically-resistant' },
+  { name: 'Equipment Disabled', anchor: 'equipment-disabled' },
+  { name: 'Mind Controlled', anchor: 'mind-controlled' },
+  { name: 'Knocked Down', anchor: 'knocked-down' },
+  { name: 'Hallucinating', anchor: 'hallucinating' },
+  { name: 'Incapacitated', anchor: 'incapacitated' },
+  { name: 'Immobilized', anchor: 'immobilized' },
+  { name: 'Camouflaged', anchor: 'camouflaged' },
+  { name: 'Suppressed', anchor: 'suppressed' },
+  { name: 'Restrained', anchor: 'restrained' },
+  { name: 'Deflecting', anchor: 'deflecting' },
+  { name: 'Reinforced', anchor: 'reinforced' },
+  { name: 'Paralyzed', anchor: 'paralyzed' },
+  { name: 'Frostbite', anchor: 'frostbite' },
+  { name: 'Weakened', anchor: 'weakened' },
+  { name: 'Shielded', anchor: 'shielded' },
+  { name: 'Fatigued', anchor: 'fatigued' },
+  { name: 'Blinded', anchor: 'blinded' },
+  { name: 'Grappled', anchor: 'grappled' },
+  { name: 'Burning', anchor: 'burning' },
+  { name: 'Slowed', anchor: 'slowed' },
+  { name: 'Hasted', anchor: 'hasted' },
+];
+
+const frStatuses: StatusDef[] = [
+  { name: 'Résistance arcanotechnique', anchor: 'résistance-arcanotechnique' },
+  { name: 'Contrôlé mentalement', anchor: 'contrôlé-mentalement' },
+  { name: 'Équipement désactivé', anchor: 'équipement-désactivé' },
+  { name: 'Knocked Down', anchor: 'à-terre' }, // fallback EN name
+  { name: 'À terre', anchor: 'à-terre' },
+  { name: 'Neutralisé', anchor: 'neutralisé' },
+  { name: 'Immobilisé', anchor: 'immobilisé' },
+  { name: 'Halluciné', anchor: 'halluciné' },
+  { name: 'Camouflé', anchor: 'camouflé' },
+  { name: 'Supprimé', anchor: 'supprimé' },
+  { name: 'Aveuglé', anchor: 'aveuglé' },
+  { name: 'Paralysé', anchor: 'paralysé' },
+  { name: 'Renforcé', anchor: 'renforcé' },
+  { name: 'Affaibli', anchor: 'affaibli' },
+  { name: 'Fatigué', anchor: 'fatigué' },
+  { name: 'Accéléré', anchor: 'accéléré' },
+  { name: 'Protégé', anchor: 'protégé' },
+  { name: 'Déviant', anchor: 'déviant' },
+  { name: 'Agrippé', anchor: 'agrippé' },
+  { name: 'Entravé', anchor: 'entravé' },
+  { name: 'Ralenti', anchor: 'ralenti' },
+  { name: 'Gelure', anchor: 'gelure' },
+  { name: 'Brûlure', anchor: 'brûlure' },
+];
+
+// EN→FR status name translation (for header badges from _shared.yaml)
+const statusTranslations: Record<string, string> = {
+  'Arcanotechnically Resistant': 'Résistance arcanotechnique',
+  'Equipment Disabled': 'Équipement désactivé',
+  'Mind Controlled': 'Contrôlé mentalement',
+  'Knocked Down': 'À terre',
+  'Hallucinating': 'Halluciné',
+  'Incapacitated': 'Neutralisé',
+  'Immobilized': 'Immobilisé',
+  'Camouflaged': 'Camouflé',
+  'Suppressed': 'Supprimé',
+  'Restrained': 'Entravé',
+  'Deflecting': 'Déviant',
+  'Reinforced': 'Renforcé',
+  'Paralyzed': 'Paralysé',
+  'Frostbite': 'Gelure',
+  'Weakened': 'Affaibli',
+  'Shielded': 'Protégé',
+  'Fatigued': 'Fatigué',
+  'Blinded': 'Aveuglé',
+  'Grappled': 'Agrippé',
+  'Burning': 'Brûlure',
+  'Slowed': 'Ralenti',
+  'Hasted': 'Accéléré',
+};
+
+const statusTooltipsEn: Record<string, string> = {
+  'Blinded': 'Cannot attack or defend; auto-fail perception checks',
+  'Paralyzed': 'Cannot act. Melee attacks auto-hit',
+  'Incapacitated': 'Cannot act. Broken upon taking damage',
+  'Immobilized': 'Cannot move. Can still act in place',
+  'Knocked Down': 'Prone. Melee +2 / Ranged -2 against target',
+  'Mind Controlled': 'Controlled by the caster',
+  'Hallucinating': 'Must attack nearest creature (ally or enemy)',
+  'Grappled': 'Cannot move. Can still act',
+  'Restrained': 'Cannot move, -2 attacks, attackers gain +2',
+  'Equipment Disabled': 'Exoskeleton and electronics nullified',
+  'Suppressed': '-4 to all actions, pinned down',
+  'Camouflaged': 'Hidden. Opposed PER check to detect',
+  'Frostbite': '-1 speed/-1 hit per stack. 5 stacks = 2d20+8 explosion',
+  'Burning': 'Fire damage each turn (1d4 to 4d6)',
+  'Weakened': '-X to all rolls',
+  'Slowed': '-X to movement speed',
+  'Fatigued': '-X to all rolls, half movement speed',
+  'Hasted': 'Extra actions and increased movement speed',
+  'Shielded': '+X Defense Score and/or damage reduction',
+  'Reinforced': '+X to all resistances (RMEC, RRAD, RINT)',
+  'Deflecting': 'Automatically deflects projectiles',
+  'Arcanotechnically Resistant': '+X resistance to arcanotechnic effects',
+};
+
+const statusTooltipsFr: Record<string, string> = {
+  'Blinded': 'Ne peut ni attaquer ni se défendre ; échec auto perception',
+  'Paralyzed': 'Ne peut pas agir. Attaques mêlée touchent auto',
+  'Incapacitated': 'Ne peut pas agir. Annulé si subit des dégâts',
+  'Immobilized': 'Ne peut pas se déplacer. Peut agir sur place',
+  'Knocked Down': 'Au sol. Mêlée +2 / Distance -2 contre la cible',
+  'Mind Controlled': 'Contrôlé par le lanceur',
+  'Hallucinating': 'Doit attaquer la créature la plus proche',
+  'Grappled': 'Ne peut pas se déplacer. Peut agir',
+  'Restrained': 'Immobile, -2 attaques, attaquants +2',
+  'Equipment Disabled': 'Exosquelette et électronique désactivés',
+  'Suppressed': '-4 à toutes les actions, cloué au sol',
+  'Camouflaged': 'Caché. Jet de PER opposé pour détecter',
+  'Frostbite': '-1 vitesse/-1 toucher par accumulation. 5 = 2d20+8',
+  'Burning': 'Dégâts de feu chaque tour (1d4 à 4d6)',
+  'Weakened': '-X à tous les jets',
+  'Slowed': '-X à la vitesse de déplacement',
+  'Fatigued': '-X à tous les jets, vitesse réduite de moitié',
+  'Hasted': 'Actions supplémentaires et vitesse accrue',
+  'Shielded': '+X Score de Défense et/ou réduction de dégâts',
+  'Reinforced': '+X à toutes les résistances (RMEC, RRAD, RINT)',
+  'Deflecting': 'Dévie automatiquement les projectiles',
+  'Arcanotechnically Resistant': '+X résistance aux effets arcanotechniques',
+};
+
+function statusTooltip(enName: string, locale: string): string {
+  return (locale === 'fr' ? statusTooltipsFr : statusTooltipsEn)[enName] || '';
+}
+
+function translateStatus(enName: string, locale: string): string {
+  if (locale === 'fr') return statusTranslations[enName] || enName;
+  return enName;
+}
+
+function statusAnchor(enName: string, locale: string): string {
+  if (locale === 'fr') {
+    const frName = statusTranslations[enName];
+    if (frName) return frName.toLowerCase().replace(/\s+/g, '-');
+  }
+  return enName.toLowerCase().replace(/\s+/g, '-');
+}
+
+function escapeHtml(str: string): string {
+  return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+// Build locale-name → EN-name reverse map for tooltip lookups
+const frToEn: Record<string, string> = {};
+for (const [en, fr] of Object.entries(statusTranslations)) {
+  frToEn[fr.toLowerCase()] = en;
+}
+
+function linkifyStatus(text: unknown): string {
+  const str = String(text ?? '');
+  const locale = getLang();
+  const statuses = locale === 'fr' ? frStatuses : enStatuses;
+  const tooltips = locale === 'fr' ? statusTooltipsFr : statusTooltipsEn;
+  const prefix = locale === 'fr' ? '/fr' : '';
+  const baseUrl = `${prefix}/rules/reference/status_effects`;
+  const linkClass = 'text-violet-600 dark:text-violet-400 hover:underline font-semibold';
+
+  let result = escapeHtml(str);
+  for (const { name, anchor } of statuses) {
+    const escaped = name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const regex = new RegExp(escaped, 'gi');
+    // Look up tooltip by EN key
+    const enKey = locale === 'fr' ? (frToEn[name.toLowerCase()] || name) : name;
+    const tip = escapeHtml(tooltips[enKey] || '');
+    result = result.replace(regex, (match) =>
+      `<a href="${baseUrl}#${anchor}" title="${tip}" class="${linkClass}">${match}</a>`
+    );
+  }
+  return result;
+}
+
 // Pre-compute ratings for all levels
 const levelRatings = (spell.levels || []).map(level => ({
   level,
@@ -72,16 +252,37 @@ const levelRatings = (spell.levels || []).map(level => ({
       <div class="flex gap-2">
         {spell.school && (
           <span class={`inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold ${getSchoolColor(spell.school)}`}>
-            {spell.school}
+            {t(`school.${spell.school}` as any) !== `school.${spell.school}` ? t(`school.${spell.school}` as any) : spell.school}
           </span>
         )}
         {spell.type && (
           <span class={`inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold ${getTypeColor(spell.type)}`}>
-            {spell.type}
+            {t(`type.${spell.type}` as any) !== `type.${spell.type}` ? t(`type.${spell.type}` as any) : spell.type}
           </span>
         )}
       </div>
     </div>
+
+    {spell.status_effects && spell.status_effects.length > 0 && (
+      <div>
+        <h3 class="font-semibold text-sm mb-2">{t('detail.spell.statusEffects')}</h3>
+        <div class="flex flex-wrap gap-2">
+          {spell.status_effects.map((effect: string) => {
+            const locale = getLang();
+            const localePrefix = locale === 'fr' ? '/fr' : '';
+            const anchor = statusAnchor(effect, locale);
+            const href = `${localePrefix}/rules/reference/status_effects#${anchor}`;
+            const label = translateStatus(effect, locale);
+            const tooltip = statusTooltip(effect, locale);
+            return (
+              <a href={href} title={tooltip} class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold bg-violet-100 text-violet-800 dark:bg-violet-900 dark:text-violet-300 hover:bg-violet-200 dark:hover:bg-violet-800 transition-colors">
+                {label}
+              </a>
+            );
+          })}
+        </div>
+      </div>
+    )}
 
     {spell.description_base && (
       <div>
@@ -203,85 +404,85 @@ const levelRatings = (spell.levels || []).map(level => ({
                 <h4 class="font-semibold text-sm mb-2">{t('detail.effects')}</h4>
                 <div class="space-y-1 text-sm">
                   {Array.isArray(level.effects) && level.effects.map((effect: string) => (
-                    <div><span class="font-medium text-teal-600 dark:text-teal-400">•</span> {effect}</div>
+                    <div><span class="font-medium text-teal-600 dark:text-teal-400">•</span> <Fragment set:html={linkifyStatus(effect)} /></div>
                   ))}
                   {level.effects?.damage && (
-                    <div><span class="font-medium text-red-600 dark:text-red-400">{t('common.damage')}</span> {level.effects.damage}</div>
+                    <div><span class="font-medium text-red-600 dark:text-red-400">{t('common.damage')}</span> <Fragment set:html={linkifyStatus(level.effects.damage)} /></div>
                   )}
                   {level.effects?.area_damage && (
-                    <div><span class="font-medium text-red-600 dark:text-red-400">{t('detail.spell.zoneDamage')}</span> {level.effects.area_damage}</div>
+                    <div><span class="font-medium text-red-600 dark:text-red-400">{t('detail.spell.zoneDamage')}</span> <Fragment set:html={linkifyStatus(level.effects.area_damage)} /></div>
                   )}
                   {level.effects?.resistance && (
                     <div><span class="font-medium text-amber-600 dark:text-amber-400">{t('detail.spell.resistance')}</span> <span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold ml-1">{level.effects.resistance}</span></div>
                   )}
                   {level.effects?.damage_bonus && (
-                    <div><span class="font-medium text-red-600 dark:text-red-400">{t('detail.spell.bonusDamage')}</span> {level.effects.damage_bonus}</div>
+                    <div><span class="font-medium text-red-600 dark:text-red-400">{t('detail.spell.bonusDamage')}</span> <Fragment set:html={linkifyStatus(level.effects.damage_bonus)} /></div>
                   )}
                   {level.effects?.burning_chance && (
-                    <div><span class="font-medium text-red-600 dark:text-red-400">{t('detail.spell.burnChance')}</span> {level.effects.burning_chance}</div>
+                    <div><span class="font-medium text-red-600 dark:text-red-400">{t('detail.spell.burnChance')}</span> <Fragment set:html={linkifyStatus(level.effects.burning_chance)} /></div>
                   )}
                   {level.effects?.debuff && (
-                    <div><span class="font-medium text-purple-600 dark:text-purple-400">{t('detail.spell.debuff')}</span> {level.effects.debuff}</div>
+                    <div><span class="font-medium text-purple-600 dark:text-purple-400">{t('detail.spell.debuff')}</span> <Fragment set:html={linkifyStatus(level.effects.debuff)} /></div>
                   )}
                   {level.effects?.status && (
-                    <div><span class="font-medium text-purple-600 dark:text-purple-400">{t('detail.spell.status')}</span> {level.effects.status}</div>
+                    <div><span class="font-medium text-purple-600 dark:text-purple-400">{t('detail.spell.status')}</span> <Fragment set:html={linkifyStatus(level.effects.status)} /></div>
                   )}
                   {level.effects?.emp && (
-                    <div><span class="font-medium text-orange-600 dark:text-orange-400">{t('detail.spell.emp')}</span> {level.effects.emp}</div>
+                    <div><span class="font-medium text-orange-600 dark:text-orange-400">{t('detail.spell.emp')}</span> <Fragment set:html={linkifyStatus(level.effects.emp)} /></div>
                   )}
                   {level.effects?.movement && (
-                    <div><span class="font-medium text-blue-600 dark:text-blue-400">{t('spells.movement')}</span> {level.effects.movement}</div>
+                    <div><span class="font-medium text-blue-600 dark:text-blue-400">{t('spells.movement')}</span> <Fragment set:html={linkifyStatus(level.effects.movement)} /></div>
                   )}
                   {level.effects?.teleport && (
-                    <div><span class="font-medium text-blue-600 dark:text-blue-400">{t('detail.spell.teleport')}</span> {level.effects.teleport}</div>
+                    <div><span class="font-medium text-blue-600 dark:text-blue-400">{t('detail.spell.teleport')}</span> <Fragment set:html={linkifyStatus(level.effects.teleport)} /></div>
                   )}
                   {level.effects?.protection && (
-                    <div><span class="font-medium text-green-600 dark:text-green-400">{t('common.protection')}</span> {level.effects.protection}</div>
+                    <div><span class="font-medium text-green-600 dark:text-green-400">{t('common.protection')}</span> <Fragment set:html={linkifyStatus(level.effects.protection)} /></div>
                   )}
                   {level.effects?.defense && (
-                    <div><span class="font-medium text-green-600 dark:text-green-400">{t('common.defense')}</span> {level.effects.defense}</div>
+                    <div><span class="font-medium text-green-600 dark:text-green-400">{t('common.defense')}</span> <Fragment set:html={linkifyStatus(level.effects.defense)} /></div>
                   )}
                   {level.effects?.defense_bonus && (
-                    <div><span class="font-medium text-green-600 dark:text-green-400">{t('detail.spell.bonusDefense')}</span> {level.effects.defense_bonus}</div>
+                    <div><span class="font-medium text-green-600 dark:text-green-400">{t('detail.spell.bonusDefense')}</span> <Fragment set:html={linkifyStatus(level.effects.defense_bonus)} /></div>
                   )}
                   {level.effects?.damage_reduction && (
-                    <div><span class="font-medium text-green-600 dark:text-green-400">{t('detail.spell.damageReduction')}</span> {level.effects.damage_reduction}</div>
+                    <div><span class="font-medium text-green-600 dark:text-green-400">{t('detail.spell.damageReduction')}</span> <Fragment set:html={linkifyStatus(level.effects.damage_reduction)} /></div>
                   )}
                   {level.effects?.attack_bonus && (
-                    <div><span class="font-medium text-yellow-600 dark:text-yellow-400">{t('detail.spell.bonusAttack')}</span> {level.effects.attack_bonus}</div>
+                    <div><span class="font-medium text-yellow-600 dark:text-yellow-400">{t('detail.spell.bonusAttack')}</span> <Fragment set:html={linkifyStatus(level.effects.attack_bonus)} /></div>
                   )}
                   {level.effects?.critical_chance && (
-                    <div><span class="font-medium text-yellow-600 dark:text-yellow-400">{t('detail.spell.critical')}</span> {level.effects.critical_chance}</div>
+                    <div><span class="font-medium text-yellow-600 dark:text-yellow-400">{t('detail.spell.critical')}</span> <Fragment set:html={linkifyStatus(level.effects.critical_chance)} /></div>
                   )}
                   {level.effects?.multiple_attack && (
-                    <div><span class="font-medium text-yellow-600 dark:text-yellow-400">{t('detail.spell.multiAttack')}</span> {level.effects.multiple_attack}</div>
+                    <div><span class="font-medium text-yellow-600 dark:text-yellow-400">{t('detail.spell.multiAttack')}</span> <Fragment set:html={linkifyStatus(level.effects.multiple_attack)} /></div>
                   )}
                   {level.effects?.information && (
-                    <div><span class="font-medium text-gray-600 dark:text-gray-400">{t('detail.spell.information')}</span> {level.effects.information}</div>
+                    <div><span class="font-medium text-gray-600 dark:text-gray-400">{t('detail.spell.information')}</span> <Fragment set:html={linkifyStatus(level.effects.information)} /></div>
                   )}
                   {level.effects?.prediction && (
-                    <div><span class="font-medium text-gray-600 dark:text-gray-400">{t('detail.spell.prediction')}</span> {level.effects.prediction}</div>
+                    <div><span class="font-medium text-gray-600 dark:text-gray-400">{t('detail.spell.prediction')}</span> <Fragment set:html={linkifyStatus(level.effects.prediction)} /></div>
                   )}
                   {level.effects?.success && (
-                    <div><span class="font-medium text-gray-600 dark:text-gray-400">{t('detail.spell.onSuccess')}</span> {level.effects.success}</div>
+                    <div><span class="font-medium text-gray-600 dark:text-gray-400">{t('detail.spell.onSuccess')}</span> <Fragment set:html={linkifyStatus(level.effects.success)} /></div>
                   )}
                   {level.effects?.failure && (
-                    <div><span class="font-medium text-gray-600 dark:text-gray-400">{t('detail.spell.onFailure')}</span> {level.effects.failure}</div>
+                    <div><span class="font-medium text-gray-600 dark:text-gray-400">{t('detail.spell.onFailure')}</span> <Fragment set:html={linkifyStatus(level.effects.failure)} /></div>
                   )}
                   {level.effects?.area && (
-                    <div><span class="font-medium text-indigo-600 dark:text-indigo-400">{t('detail.spell.zone')}</span> {level.effects.area}</div>
+                    <div><span class="font-medium text-indigo-600 dark:text-indigo-400">{t('detail.spell.zone')}</span> <Fragment set:html={linkifyStatus(level.effects.area)} /></div>
                   )}
                   {level.effects?.area_effect && (
-                    <div><span class="font-medium text-indigo-600 dark:text-indigo-400">{t('detail.spell.zoneEffect')}</span> {level.effects.area_effect === true ? t('detail.spell.yes') : level.effects.area_effect}</div>
+                    <div><span class="font-medium text-indigo-600 dark:text-indigo-400">{t('detail.spell.zoneEffect')}</span> <Fragment set:html={level.effects.area_effect === true ? t('detail.spell.yes') : linkifyStatus(level.effects.area_effect)} /></div>
                   )}
                   {level.effects?.special && (
-                    <div><span class="font-medium text-teal-600 dark:text-teal-400">{t('common.special')}</span> {level.effects.special}</div>
+                    <div><span class="font-medium text-teal-600 dark:text-teal-400">{t('common.special')}</span> <Fragment set:html={linkifyStatus(level.effects.special)} /></div>
                   )}
                   {level.effects?.spell_enhancement && (
-                    <div><span class="font-medium text-teal-600 dark:text-teal-400">{t('detail.spell.enhancement')}</span> {level.effects.spell_enhancement}</div>
+                    <div><span class="font-medium text-teal-600 dark:text-teal-400">{t('detail.spell.enhancement')}</span> <Fragment set:html={linkifyStatus(level.effects.spell_enhancement)} /></div>
                   )}
                   {level.effects?.specials && Array.isArray(level.effects.specials) && level.effects.specials.map((special: string) => (
-                    <div><span class="font-medium text-teal-600 dark:text-teal-400">•</span> {special}</div>
+                    <div><span class="font-medium text-teal-600 dark:text-teal-400">•</span> <Fragment set:html={linkifyStatus(special)} /></div>
                   ))}
                 </div>
               </div>

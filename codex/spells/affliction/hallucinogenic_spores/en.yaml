@@ -14,8 +14,8 @@ levels:
     effects:
       area: 5m radius zone
       resistance: RINT
-      debuff: "-2 to Perception and attack rolls"
-      special: Affected targets suffer hallucinations for 3 turns and may attack allies
+      debuff: "Applies Hallucinating to targets in the area"
+      special: "Affected targets must attack the nearest creature (ally or enemy) for 3 turns"
       duration: 3 turns
     timing:
       casting_time: 1 action
@@ -34,9 +34,9 @@ levels:
     effects:
       area: 8m radius zone
       resistance: RINT
-      debuff: "-3 to Perception, attack, and all rolls"
+      debuff: "Applies Hallucinating and Weakened 3 to targets in the area"
       damage: 1d6 per turn
-      special: Affected targets suffer violent hallucinations for 5 turns and must attack the nearest creature
+      special: "Affected targets must attack the nearest creature for 5 turns"
       duration: 5 turns
     timing:
       casting_time: 1 action

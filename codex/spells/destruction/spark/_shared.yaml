@@ -1,2 +1,4 @@
 school: feu
 type: destruction
+status_effects:
+  - Burning

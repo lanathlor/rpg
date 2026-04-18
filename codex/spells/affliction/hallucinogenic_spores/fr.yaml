@@ -14,8 +14,8 @@ levels:
     effects:
       area: Zone de 5m de rayon
       resistance: RINT
-      debuff: "-2 aux jets de Perception et d'attaque"
-      special: Les cibles touchées subissent des hallucinations pendant 3 tours et peuvent attaquer des alliés
+      debuff: "Applique Halluciné aux cibles dans la zone"
+      special: "Les cibles affectées doivent attaquer la créature la plus proche (allié ou ennemi) pendant 3 tours"
       duration: 3 tours
     timing:
       casting_time: 1 action
@@ -34,9 +34,9 @@ levels:
     effects:
       area: Zone de 8m de rayon
       resistance: RINT
-      debuff: "-3 aux jets de Perception, d'attaque et tous les jets"
+      debuff: "Applique Halluciné et Affaibli 3 aux cibles dans la zone"
       damage: 1d6 par tour
-      special: Les cibles touchées subissent des hallucinations violentes pendant 5 tours et doivent attaquer la créature la plus proche
+      special: "Les cibles affectées doivent attaquer la créature la plus proche pendant 5 tours"
       duration: 5 tours
     timing:
       casting_time: 1 action

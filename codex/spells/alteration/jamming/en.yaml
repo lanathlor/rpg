@@ -12,7 +12,6 @@ levels:
       perception_required: 16
       flux_cost: 4
     effects:
-      - "If the target has an exoskeleton: -1 to attack rolls"
+      - "Applies Equipment Disabled to the target"
       - "-2 to camouflage detection"
-      - Disables enemy remote communications
     duration: 1d4 turns

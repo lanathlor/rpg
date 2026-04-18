@@ -22,6 +22,7 @@ const spellItems = spells.map(s => {
     name: s.data.name || s.data.spell_series || s.id,
     school: s.data.school || '',
     type: s.data.type || '',
+    statusEffects: s.data.status_effects || [],
     description: s.data.description_base || '',
     levelCount: s.data.levels?.length || 0,
     firstLevel: firstLevel ? {

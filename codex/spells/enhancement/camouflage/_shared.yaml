@@ -1,2 +1,4 @@
 school: électricité
 type: amelioration
+status_effects:
+  - Camouflaged

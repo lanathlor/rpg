@@ -1,2 +1,4 @@
 school: magnétique
 type: alteration
+status_effects:
+  - Equipment Disabled

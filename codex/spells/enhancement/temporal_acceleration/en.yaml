@@ -13,9 +13,9 @@ levels:
       flux_cost: 6
     effects:
       specials:
+        - "Applies Hasted to the caster"
         - +1 additional action this turn
         - +3 to initiative for the duration
-        - Doubles movement speed
     duration: 2 turns
   - level: "2"
     name: Greater Temporal Acceleration
@@ -29,8 +29,8 @@ levels:
       flux_cost: 10
     effects:
       specials:
+        - "Applies Hasted to the caster"
         - +2 additional actions this turn
         - +5 to initiative for the duration
-        - Triples movement speed
         - Can automatically dodge the first attack each turn
     duration: 3 turns

@@ -1,2 +1,4 @@
 school: bioarcanotechnique
 type: alteration
+status_effects:
+  - Mind Controlled

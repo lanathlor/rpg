@@ -1,2 +1,4 @@
 school: bioarcanotechnique
 type: affliction
+status_effects:
+  - Hallucinating

@@ -11,6 +11,6 @@ levels:
       intelligence_required: 15
       flux_cost: 12
     effects:
-      special: +5 to all resistances (RMEC, RRAD, RINT) for the caster. Visible energy shield.
+      special: "Applies Reinforced 5 to the caster (RMEC, RRAD, RINT). Visible energy shield."
     duration: 3 turns
     recharge_time: 1 turn

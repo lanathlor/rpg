@@ -1,3 +1,5 @@
 image: images/spells/lame_de_lumiere_absolue.png
 school: lumière
 type: arme
+status_effects:
+  - Blinded

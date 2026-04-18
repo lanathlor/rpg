@@ -9,7 +9,7 @@ levels:
       activation: Triggered by a frost spell
       flux_cost: 0
     effects:
-      debuff: "-1 speed, -1 hit score per stack"
+      debuff: "Applies Frostbite — Slowed 1 and Weakened 1 per stack"
       resistance: RRAD
       special: Stackable. New application resets duration to 0. 5 stacks = 2d20+8 damage then lose 5 'Frostbite'
       duration: 2 turns

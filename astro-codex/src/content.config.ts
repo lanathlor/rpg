@@ -14,6 +14,7 @@ const sortsCollection = defineCollection({
     description_base: z.string().optional(),
     player_castable: z.boolean().optional(),
     image: z.string().optional(),
+    status_effects: z.array(z.string()).optional(),
     levels: z.array(z.object({
       level: z.string(),
       name: z.string().optional(),

@@ -1,2 +1,4 @@
 school: aérocinétique
 type: deplacement
+status_effects:
+  - Deflecting

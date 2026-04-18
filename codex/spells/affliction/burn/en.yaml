@@ -9,7 +9,7 @@ levels:
       activation: triggered by a spell
     recharge_time: instant
     effects:
-      damage: 1d4 each turn
+      damage: "Burning 1 — 1d4 each turn"
       resistance: RRAD
       dice_rolled_once: true
     duration: 3 turns
@@ -21,7 +21,7 @@ levels:
       activation: triggered by a spell
     recharge_time: instant
     effects:
-      damage: 1d4 + 3 each turn
+      damage: "Burning 2 — 1d4+3 each turn"
       resistance: RRAD
       dice_rolled_once: true
     duration: 3 turns

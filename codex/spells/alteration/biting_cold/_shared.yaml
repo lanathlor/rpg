@@ -1,2 +1,4 @@
 school: givre
 type: alteration
+status_effects:
+  - Frostbite

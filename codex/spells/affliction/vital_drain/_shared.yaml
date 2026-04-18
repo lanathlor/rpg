@@ -1,2 +1,4 @@
 school: biométabolique
 type: affliction
+status_effects:
+  - Weakened

@@ -1,2 +1,4 @@
 school: givre
 type: destruction
+status_effects:
+  - Frostbite

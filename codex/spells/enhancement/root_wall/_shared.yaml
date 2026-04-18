@@ -1,2 +1,5 @@
 school: bioarcanotechnique
 type: amelioration
+status_effects:
+  - Grappled
+  - Restrained

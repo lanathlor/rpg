@@ -1,2 +1,4 @@
 school: pure
 type: protection
+status_effects:
+  - Arcanotechnically Resistant

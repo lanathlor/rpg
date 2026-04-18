@@ -14,5 +14,5 @@ levels:
     effects:
       defense: +4 to defense
       damage_reduction: Reduces damage by 3 points
-      special: Can block energy attacks
+      special: "Applies Shielded to the caster. Can block energy attacks"
     duration: 5 turns

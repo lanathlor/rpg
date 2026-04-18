@@ -12,7 +12,7 @@ levels:
       intelligence_required: 14
       flux_cost: 4
     effects:
-      status: The target can no longer act or defend itself
+      status: "The target is Blinded"
       resistance: RRAD
     duration: 1 turn
   - level: "2"
@@ -26,6 +26,6 @@ levels:
       intelligence_required: 14
       flux_cost: 7
     effects:
-      status: The target can no longer act or defend itself
+      status: "The target is Blinded"
       resistance: RRAD
     duration: 2 turns

@@ -1,2 +1,4 @@
 school: quantique
 type: alteration
+status_effects:
+  - Incapacitated

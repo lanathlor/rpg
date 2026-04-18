@@ -1,2 +1,4 @@
 school: électricité
 type: alteration
+status_effects:
+  - Paralyzed

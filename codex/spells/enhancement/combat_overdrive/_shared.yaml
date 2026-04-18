@@ -1,3 +1,6 @@
 image: images/spells/surmultiplication_combat.png
 school: martial
 type: amelioration
+status_effects:
+  - Hasted
+  - Fatigued

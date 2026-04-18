@@ -1,2 +1,4 @@
 school: kinesthésique
 type: destruction
+status_effects:
+  - Immobilized

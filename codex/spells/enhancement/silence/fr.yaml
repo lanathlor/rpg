@@ -11,5 +11,5 @@ levels:
     conditions: null
     recharge_time: 5 tours
     effects:
-      special: Réduit les chances d'être détecté lors de mouvements
+      special: "Applique Camouflé au lanceur (sonore uniquement). Réduit la détection lors de mouvements"
     duration: 1 min

@@ -1,2 +1,4 @@
 school: martial
 type: arme
+status_effects:
+  - Knocked Down

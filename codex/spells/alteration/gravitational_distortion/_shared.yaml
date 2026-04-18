@@ -1,2 +1,4 @@
 school: gravitonique
 type: alteration
+status_effects:
+  - Slowed

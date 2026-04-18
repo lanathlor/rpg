@@ -74,6 +74,11 @@ details > summary::-webkit-details-marker {
   display: none;
 }
 
+/* Anchor offset for sticky header */
+[id] {
+  scroll-margin-top: 5rem;
+}
+
 /* Wiki-style auto-links */
 .prose a.auto-link {
   @apply text-primary font-medium underline decoration-primary/30 hover:decoration-primary transition-colors;

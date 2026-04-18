@@ -13,7 +13,7 @@ levels:
       flux_cost: 5
     effects:
       specials:
-        - "-2 to the target's attack rolls"
+        - "Applies Weakened 2 to the target"
         - "-2 to the target's detection and perception"
         - The target becomes partially invisible to optical sensors
     duration: 2d4 turns
@@ -29,7 +29,7 @@ levels:
       flux_cost: 6
     effects:
       specials:
-        - "-3 to the target's attack rolls"
+        - "Applies Weakened 3 to the target"
         - "-3 to the target's detection and perception"
         - The target becomes invisible to optical sensors
         - Can affect up to 3 targets

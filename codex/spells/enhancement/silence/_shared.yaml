@@ -1,2 +1,4 @@
 school: martial
 type: amelioration
+status_effects:
+  - Camouflaged

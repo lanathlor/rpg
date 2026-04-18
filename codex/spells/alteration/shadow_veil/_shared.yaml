@@ -1,2 +1,4 @@
 school: ombre
 type: alteration
+status_effects:
+  - Weakened

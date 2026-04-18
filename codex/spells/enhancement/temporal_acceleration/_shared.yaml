@@ -1,2 +1,4 @@
 school: chronodynamique
 type: amelioration
+status_effects:
+  - Hasted

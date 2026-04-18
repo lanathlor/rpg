@@ -1,2 +1,4 @@
 school: givre
 type: deplacement
+status_effects:
+  - Frostbite

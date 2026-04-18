@@ -14,7 +14,7 @@ levels:
     effects:
       area: Transforms terrain into difficult terrain (mud, water) over 20m²
       specials:
-        - Enemies in the area suffer -2 to their movement
+        - Enemies in the area are Slowed 2
         - Can extinguish flames and cool hot surfaces
     duration: 3d4 turns
   - level: "2"
@@ -31,6 +31,6 @@ levels:
       area: Transforms terrain into difficult terrain over 40m²
       damage: 1d4 drowning to enemies in the area each turn
       specials:
-        - Enemies in the area suffer -3 to their movement and attacks
+        - Enemies in the area are Slowed 3 and Weakened 3
         - Can carry away light objects and debris
     duration: 4d4 turns

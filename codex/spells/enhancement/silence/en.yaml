@@ -11,5 +11,5 @@ levels:
     conditions: null
     recharge_time: 5 turns
     effects:
-      special: Reduces the chances of being detected during movement
+      special: "Applies Camouflaged to the caster (sound only). Reduces detection during movement"
     duration: 1 min

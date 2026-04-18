@@ -1,2 +1,4 @@
 school: lumière
 type: amelioration
+status_effects:
+  - Reinforced

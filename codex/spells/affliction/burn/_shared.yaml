@@ -1,3 +1,5 @@
 player_castable: false
 school: feu
 type: alteration
+status_effects:
+  - Burning

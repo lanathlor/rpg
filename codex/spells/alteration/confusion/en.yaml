@@ -12,7 +12,7 @@ levels:
       charisma_required: 16
       flux_cost: 6
     effects:
-      debuff: "-2 to attack rolls of 1d3+1 targets"
+      debuff: "Applies Weakened 2 to 1d3+1 targets"
       resistance: RINT
     duration: 1 turn
   - level: "2"
@@ -26,6 +26,6 @@ levels:
       charisma_required: 16
       flux_cost: 8
     effects:
-      debuff: "-2 to attack rolls of 1d4+1 targets"
+      debuff: "Applies Weakened 2 to 1d4+1 targets"
       resistance: RINT
     duration: 2 turns

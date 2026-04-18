@@ -1,3 +1,5 @@
 image: images/spells/onde_de_choc.png
 school: sonique
 type: destruction
+status_effects:
+  - Weakened

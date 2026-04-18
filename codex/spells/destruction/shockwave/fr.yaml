@@ -16,7 +16,7 @@ levels:
       resistance: RMEC
       special: Traverse les armures légères (ignore 2 points de protection)
       specials:
-        - Les cibles subissent -2 aux jets de perception pendant 3 tours
+        - "Applique Affaibli 2 aux cibles pendant 3 tours"
   - level: "2"
     name: Onde de choc devastatrice
     prerequisites:
@@ -32,5 +32,5 @@ levels:
       resistance: RMEC
       special: Traverse les armures moyennes (ignore 4 points de protection)
       specials:
-        - Les cibles subissent -3 aux jets de perception et attaques pendant 4 tours
+        - "Applique Affaibli 3 aux cibles pendant 4 tours"
         - Peut briser les objets fragiles et vitres dans la zone

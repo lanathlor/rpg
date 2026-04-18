@@ -14,7 +14,7 @@ levels:
     effects:
       specials:
         - Réduit le poids d'une cible de 50% (double sa vitesse de déplacement)
-        - Ou augmente le poids d'un ennemi de 100% (divise sa vitesse par 2)
+        - Ou applique Ralenti à un ennemi (double son poids, divise sa vitesse par 2)
         - Affect la trajectoire des projectiles dans la zone
     duration: 3 tours
   - level: "2"

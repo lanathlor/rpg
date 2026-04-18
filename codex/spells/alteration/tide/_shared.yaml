@@ -1,2 +1,5 @@
 school: hydrodynamique
 type: alteration
+status_effects:
+  - Slowed
+  - Weakened

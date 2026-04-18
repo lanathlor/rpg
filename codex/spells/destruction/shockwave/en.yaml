@@ -16,7 +16,7 @@ levels:
       resistance: RMEC
       special: Pierces light armor (ignores 2 points of protection)
       specials:
-        - Targets suffer -2 to perception rolls for 3 turns
+        - "Applies Weakened 2 to targets for 3 turns"
   - level: "2"
     name: Devastating Shockwave
     prerequisites:
@@ -32,5 +32,5 @@ levels:
       resistance: RMEC
       special: Pierces medium armor (ignores 4 points of protection)
       specials:
-        - Targets suffer -3 to perception and attack rolls for 4 turns
+        - "Applies Weakened 3 to targets for 4 turns"
         - Can shatter fragile objects and windows in the area

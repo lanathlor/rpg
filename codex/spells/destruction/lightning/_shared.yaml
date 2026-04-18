@@ -1,2 +1,5 @@
 school: électricité
 type: destruction
+status_effects:
+  - Paralyzed
+  - Equipment Disabled

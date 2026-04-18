@@ -14,7 +14,7 @@ levels:
     effects:
       specials:
         - Reduces a target's weight by 50% (doubles their movement speed)
-        - Or increases an enemy's weight by 100% (halves their speed)
+        - Or applies Slowed to an enemy (doubles their weight, halves speed)
         - Affects projectile trajectories in the area
     duration: 3 turns
   - level: "2"

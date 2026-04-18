@@ -16,7 +16,7 @@ levels:
       resistance: RINT
       special: The caster regains half the damage dealt as HP
       specials:
-        - The target suffers -1 to all rolls for 2 turns
+        - "Applies Weakened 1 to the target for 2 turns"
   - level: "2"
     name: Greater Vital Drain
     prerequisites:
@@ -32,5 +32,5 @@ levels:
       resistance: RINT
       special: The caster regains all damage dealt as HP
       specials:
-        - The target suffers -2 to all rolls for 3 turns
+        - "Applies Weakened 2 to the target for 3 turns"
         - Can target up to 2 adjacent enemies

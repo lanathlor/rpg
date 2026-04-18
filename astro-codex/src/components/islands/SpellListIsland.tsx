@@ -13,6 +13,7 @@ interface SpellItem {
   name: string;
   school: string;
   type: string;
+  statusEffects: string[];
   description: string;
   levelCount: number;
   firstLevel?: SpellLevel;
@@ -60,6 +61,48 @@ const typeColors: Record<string, string> = {
   'affliction': 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300',
 };
 
+const statusTooltips: Record<string, { en: string; fr: string }> = {
+  'Blinded': { en: 'Cannot attack or defend; auto-fail perception checks', fr: 'Ne peut ni attaquer ni se défendre ; échec auto perception' },
+  'Paralyzed': { en: 'Cannot act. Melee attacks auto-hit', fr: 'Ne peut pas agir. Attaques mêlée touchent auto' },
+  'Incapacitated': { en: 'Cannot act. Broken upon taking damage', fr: 'Ne peut pas agir. Annulé si subit des dégâts' },
+  'Immobilized': { en: 'Cannot move. Can still act in place', fr: 'Ne peut pas se déplacer. Peut agir sur place' },
+  'Knocked Down': { en: 'Prone. Melee +2 / Ranged -2 against target', fr: 'Au sol. Mêlée +2 / Distance -2 contre la cible' },
+  'Mind Controlled': { en: 'Controlled by the caster', fr: 'Contrôlé par le lanceur' },
+  'Hallucinating': { en: 'Must attack nearest creature (ally or enemy)', fr: 'Doit attaquer la créature la plus proche' },
+  'Grappled': { en: 'Cannot move. Can still act', fr: 'Ne peut pas se déplacer. Peut agir' },
+  'Restrained': { en: 'Cannot move, -2 attacks, attackers gain +2', fr: 'Immobile, -2 attaques, attaquants +2' },
+  'Equipment Disabled': { en: 'Exoskeleton and electronics nullified', fr: 'Exosquelette et électronique désactivés' },
+  'Suppressed': { en: '-4 to all actions, pinned down', fr: '-4 à toutes les actions, cloué au sol' },
+  'Camouflaged': { en: 'Hidden. Opposed PER check to detect', fr: 'Caché. Jet de PER opposé pour détecter' },
+  'Frostbite': { en: '-1 speed/-1 hit per stack. 5 stacks = 2d20+8', fr: '-1 vitesse/-1 toucher par accumulation. 5 = 2d20+8' },
+  'Burning': { en: 'Fire damage each turn (1d4 to 4d6)', fr: 'Dégâts de feu chaque tour (1d4 à 4d6)' },
+  'Weakened': { en: '-X to all rolls', fr: '-X à tous les jets' },
+  'Slowed': { en: '-X to movement speed', fr: '-X à la vitesse de déplacement' },
+  'Fatigued': { en: '-X to all rolls, half movement speed', fr: '-X à tous les jets, vitesse réduite de moitié' },
+  'Hasted': { en: 'Extra actions and increased movement speed', fr: 'Actions supplémentaires et vitesse accrue' },
+  'Shielded': { en: '+X Defense Score and/or damage reduction', fr: '+X Score de Défense et/ou réduction de dégâts' },
+  'Reinforced': { en: '+X to all resistances (RMEC, RRAD, RINT)', fr: '+X à toutes les résistances (RMEC, RRAD, RINT)' },
+  'Deflecting': { en: 'Automatically deflects projectiles', fr: 'Dévie automatiquement les projectiles' },
+  'Arcanotechnically Resistant': { en: '+X resistance to arcanotechnic effects', fr: '+X résistance aux effets arcanotechniques' },
+};
+
+function getStatusTooltip(name: string, locale: string): string {
+  const entry = statusTooltips[name];
+  return entry ? (locale === 'fr' ? entry.fr : entry.en) : '';
+}
+
+function translateSchool(school: string): string {
+  const key = `school.${school}` as any;
+  const translated = t(key);
+  return translated !== key ? translated : school;
+}
+
+function translateType(type: string): string {
+  const key = `type.${type}` as any;
+  const translated = t(key);
+  return translated !== key ? translated : type;
+}
+
 function truncate(str: string | undefined, len: number): string {
   if (!str) return '';
   return str.length > len ? str.slice(0, len) + '...' : str;
@@ -73,17 +116,20 @@ export function SpellListIsland({ spells, base }: Props) {
   const [search, setSearch] = useState('');
   const [filterSchool, setFilterSchool] = useState('');
   const [filterType, setFilterType] = useState('');
+  const [filterStatus, setFilterStatus] = useState('');
   const [sortBy, setSortBy] = useState('name-asc');
 
   const schools = useMemo(() => [...new Set(spells.map(s => s.school).filter(Boolean))].sort(), [spells]);
   const types = useMemo(() => [...new Set(spells.map(s => s.type).filter(Boolean))].sort(), [spells]);
+  const statuses = useMemo(() => [...new Set(spells.flatMap(s => s.statusEffects || []))].sort(), [spells]);
 
   const filtered = useMemo(() => {
     const result = spells.filter(s => {
       const matchSearch = !search || s.name.toLowerCase().includes(search.toLowerCase()) || s.description?.toLowerCase().includes(search.toLowerCase());
       const matchSchool = !filterSchool || s.school === filterSchool;
       const matchType = !filterType || s.type === filterType;
-      return matchSearch && matchSchool && matchType;
+      const matchStatus = !filterStatus || (s.statusEffects || []).includes(filterStatus);
+      return matchSearch && matchSchool && matchType && matchStatus;
     });
     result.sort((a, b) => {
       switch (sortBy) {
@@ -96,9 +142,9 @@ export function SpellListIsland({ spells, base }: Props) {
       }
     });
     return result;
-  }, [spells, search, filterSchool, filterType, sortBy]);
+  }, [spells, search, filterSchool, filterType, filterStatus, sortBy]);
 
-  const hasFilters = search || filterSchool || filterType;
+  const hasFilters = search || filterSchool || filterType || filterStatus;
 
   return (
     <div className="space-y-6">
@@ -116,12 +162,18 @@ export function SpellListIsland({ spells, base }: Props) {
         <div className="flex flex-col sm:flex-row gap-2 flex-wrap">
           <select value={filterSchool} onChange={(e) => setFilterSchool(e.target.value)} className="border rounded px-3 py-2 bg-background text-sm">
             <option value="">{t('spells.allSchools')}</option>
-            {schools.map(s => <option key={s} value={s}>{s}</option>)}
+            {schools.map(s => <option key={s} value={s}>{translateSchool(s)}</option>)}
           </select>
           <select value={filterType} onChange={(e) => setFilterType(e.target.value)} className="border rounded px-3 py-2 bg-background text-sm">
             <option value="">{t('spells.allTypes')}</option>
-            {types.map(tp => <option key={tp} value={tp}>{tp}</option>)}
+            {types.map(tp => <option key={tp} value={tp}>{translateType(tp)}</option>)}
           </select>
+          {statuses.length > 0 && (
+            <select value={filterStatus} onChange={(e) => setFilterStatus(e.target.value)} className="border rounded px-3 py-2 bg-background text-sm">
+              <option value="">{t('spells.allStatuses')}</option>
+              {statuses.map(st => <option key={st} value={st} title={getStatusTooltip(st, locale)}>{st}</option>)}
+            </select>
+          )}
           <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="border rounded px-3 py-2 bg-background text-sm">
             <option value="name-asc">{t('common.sort.nameAZ')}</option>
             <option value="name-desc">{t('common.sort.nameZA')}</option>
@@ -131,7 +183,7 @@ export function SpellListIsland({ spells, base }: Props) {
             <option value="value-asc">{t('spells.sort.valueAsc')}</option>
           </select>
           {hasFilters && (
-            <button onClick={() => { setSearch(''); setFilterSchool(''); setFilterType(''); }} className="border rounded px-3 py-2 bg-background text-sm hover:bg-accent">
+            <button onClick={() => { setSearch(''); setFilterSchool(''); setFilterType(''); setFilterStatus(''); }} className="border rounded px-3 py-2 bg-background text-sm hover:bg-accent">
               {t('common.reset')}
             </button>
           )}
@@ -155,15 +207,24 @@ export function SpellListIsland({ spells, base }: Props) {
               <div className="flex gap-2 flex-wrap mt-2">
                 {spell.school && (
                   <span className={`inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold ${schoolColors[spell.school] || 'bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-300'}`}>
-                    {spell.school}
+                    {translateSchool(spell.school)}
                   </span>
                 )}
                 {spell.type && (
                   <span className={`inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold ${typeColors[spell.type] || 'bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-300'}`}>
-                    {spell.type}
+                    {translateType(spell.type)}
                   </span>
                 )}
               </div>
+              {spell.statusEffects.length > 0 && (
+                <div className="flex gap-1.5 flex-wrap mt-1">
+                  {spell.statusEffects.map(se => (
+                    <span key={se} title={getStatusTooltip(se, locale)} className="inline-flex items-center rounded-full border px-2 py-0.5 text-xs font-semibold bg-violet-100 text-violet-800 dark:bg-violet-900 dark:text-violet-300">
+                      {se}
+                    </span>
+                  ))}
+                </div>
+              )}
               <p className="text-sm text-muted-foreground line-clamp-3">{truncate(spell.description, 120)}</p>
             </div>
             <div className="p-6 pt-0 space-y-2">

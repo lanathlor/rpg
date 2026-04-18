@@ -12,7 +12,7 @@ levels:
       intelligence_required: 14
       flux_cost: 4
     effects:
-      emp: Disables exoskeleton bonuses and shuts down all electrical devices of a target
+      emp: "Applies Equipment Disabled to a target"
     duration: 1 turn
   - level: "2"
     name: Void II
@@ -25,5 +25,5 @@ levels:
       intelligence_required: 14
       flux_cost: 6
     effects:
-      emp: Disables exoskeleton bonuses and shuts down all electrical devices of 2 targets
+      emp: "Applies Equipment Disabled to 2 targets"
     duration: 1 turn
