@@ -90,7 +90,7 @@ npm install -g pnpm
 
 ### Images and Assets
 
-**⚠️ AI-Generated Images Disclaimer:**
+**AI-Generated Images Disclaimer:**
 
 Currently, the images in this project are **generated using AI tools** (such as DALL-E, Midjourney, or similar). The project maintainer is not a visual artist and cannot create these illustrations independently.
 
@@ -394,13 +394,13 @@ Fix type errors by:
 
 **Active Development:**
 
--   ✅ Core resistance system implemented
--   ✅ Web codex viewer functional
--   ✅ Character creator with point buy
--   ✅ YAML import/export
--   🔄 Migrating legacy spells to YAML
--   🔄 Equipment prerequisite system
--   📋 Planned: Campaign management tools
+-   Core resistance system implemented
+-   Web codex viewer functional
+-   Character creator with point buy
+-   YAML import/export
+-   Migrating legacy spells to YAML
+-   Equipment prerequisite system
+-   Planned: Campaign management tools
 
 ## License
 
@@ -411,11 +411,11 @@ This project uses a **dual-license** approach:
 
 This means:
 
--   ✅ You can use, modify, and distribute the game content freely (even commercially) as long as you provide attribution and share your modifications under the same license
--   ✅ You can use, modify, and distribute the software code freely (even commercially) with minimal restrictions
--   ✅ You can create your own games based on this system
--   ✅ You can run commercial campaigns using these rules
--   ✅ You can publish adventures and supplements
+-   You can use, modify, and distribute the game content freely (even commercially) as long as you provide attribution and share your modifications under the same license
+-   You can use, modify, and distribute the software code freely (even commercially) with minimal restrictions
+-   You can create your own games based on this system
+-   You can run commercial campaigns using these rules
+-   You can publish adventures and supplements
 
 See [LICENSE.md](LICENSE.md) for full details and attribution guidelines.
 
