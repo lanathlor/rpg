@@ -11,12 +11,12 @@ Welcome to the Human Empire, the greatest achievement of our species! Whether yo
 
 **Congratulations!** As an imperial citizen, you benefit from:
 
-✓ **Free housing** - Every citizen receives housing suited to their needs
-✓ **Guaranteed food and healthcare** - Never again hunger or untreated illness
-✓ **Life expectancy of 150-200 years** - Thanks to our advanced arcanotechnological medicine
-✓ **Optional work** - Choose to contribute based on your passions, not your needs!
-✓ **Universal education** - Unlimited access to human knowledge
-✓ **Democratic representation** - Your voice matters at the Imperial Assembly!
+**Free housing** - Every citizen receives housing suited to their needs
+**Guaranteed food and healthcare** - Never again hunger or untreated illness
+**Life expectancy of 150-200 years** - Thanks to our advanced arcanotechnological medicine
+**Optional work** - Choose to contribute based on your passions, not your needs!
+**Universal education** - Unlimited access to human knowledge
+**Democratic representation** - Your voice matters at the Imperial Assembly!
 
 ## The Council of Guardians: Eternal Wisdom
 

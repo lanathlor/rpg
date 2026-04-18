@@ -8,7 +8,7 @@ Elle sert de référence pour les joueurs et le MJ afin de situer les événemen
 
 ---
 
-## 📜 Périodes clés
+## Périodes clés
 
 - **0 ans** : **La Fondation** - Le Conseil des Gardiens unifie les premières factions humaines, créant l'Empire.
 - ~3500 ans après la fondation : l'Empire commence son expansion à grande échelle.
@@ -18,7 +18,7 @@ Elle sert de référence pour les joueurs et le MJ afin de situer les événemen
 
 ---
 
-## 🌌 Résumé historique
+## Résumé historique
 
 ### 1. La Fondation de l'Empire
 
@@ -97,7 +97,7 @@ Les retombées de cette guerre sont multiples et complexes. La paix signée en 5
 
 ---
 
-## 🪖 Contexte militaire
+## Contexte militaire
 
 L’Empire est vaste et continue de s’étendre durant cette période.
 De nombreuses stratégies et doctrines apparaissent pour affronter les Acéras.
@@ -128,7 +128,7 @@ Leur statut semi-indépendant les rend à la fois admirés et redoutés.
 
 ---
 
-## 🏛️ Contexte politique de l'Empire
+## Contexte politique de l'Empire
 
 ### Le Conseil des Gardiens
 
@@ -163,7 +163,7 @@ Les populations non fédérées envient souvent la sécurité et le confort de l
 
 ---
 
-## ⚙️ Contexte économique et technologique
+## Contexte économique et technologique
 
 L’Empire bénéficie d’une avance technologique modérée mais décisive.
 Les voyages interstellaires s’effectuent principalement via :
@@ -185,7 +185,7 @@ Malgré la centralisation autoritaire, le niveau de vie global reste élevé.
 
 ---
 
-## 🔮 Arcanotechnie et technologie
+## Arcanotechnie et technologie
 
 ### Nature fondamentale de l'arcanotechnie
 

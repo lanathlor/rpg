@@ -9,7 +9,7 @@ Elle sert de référence pour les joueurs et le MJ afin de situer les événemen
 
 ---
 
-## 📜 Périodes clés
+## Périodes clés
 
 - **0 ans** : **La Fondation** - Le Conseil des Gardiens unifie les premières factions humaines, créant l'Empire.
 - ~3500 ans après la fondation : l'Empire commence son expansion à grande échelle.

@@ -12,12 +12,12 @@ Bienvenue dans l'Empire Humain, la plus grande réussite de notre espèce ! Que 
 
 **Félicitations !** En tant que citoyen impérial, vous bénéficiez de :
 
-✓ **Logement gratuit** - Chaque citoyen reçoit un habitat adapté à ses besoins
-✓ **Nourriture et soins garantis** - Plus jamais de faim ou de maladie non traitée
-✓ **Espérance de vie de 150-200 ans** - Grâce à notre médecine arcanotechnique avancée
-✓ **Travail optionnel** - Choisissez de contribuer selon vos passions, pas vos besoins !
-✓ **Éducation universelle** - Accès illimité au savoir humain
-✓ **Représentation démocratique** - Votre voix compte à l'Assemblée Impériale !
+**Logement gratuit** - Chaque citoyen reçoit un habitat adapté à ses besoins
+**Nourriture et soins garantis** - Plus jamais de faim ou de maladie non traitée
+**Espérance de vie de 150-200 ans** - Grâce à notre médecine arcanotechnique avancée
+**Travail optionnel** - Choisissez de contribuer selon vos passions, pas vos besoins !
+**Éducation universelle** - Accès illimité au savoir humain
+**Représentation démocratique** - Votre voix compte à l'Assemblée Impériale !
 
 ## Le Conseil des Gardiens : Sagesse Éternelle
 

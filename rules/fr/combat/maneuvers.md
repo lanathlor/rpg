@@ -11,7 +11,7 @@ Les manœuvres regroupent toutes les actions non offensives : utilisation d'obje
 
 Les personnages avec la compétence **Stratège** peuvent effectuer **deux manœuvres par tour**.
 
-### 📋 Exemples de Manœuvres par Statistique
+### Exemples de Manœuvres par Statistique
 
 #### **Manœuvres basées sur le Charisme (CHA)**
 - **Intimidation** : Démoraliser un ennemi (jet CHA) → -2 aux attaques de la cible pendant 2 tours

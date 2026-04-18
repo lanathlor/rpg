@@ -4,7 +4,7 @@ order: 12
 tags: [Jet, d20]
 ---
 
-## ⚙️ Principe général
+## Principe général
 
 Toutes les actions, qu’elles soient physiques, arcanotechniques ou sociales, utilisent la même mécanique de jet :
 
@@ -18,7 +18,7 @@ Ce système unique s’applique à tout : attaque, compétence, sauvegarde, perc
 
 ---
 
-## 🎯 Table des Degrés de Difficulté (DD)
+## Table des Degrés de Difficulté (DD)
 
 ### DD Standard (pour personnages avec modificateurs totaux de +10 à +25)
 
@@ -50,7 +50,7 @@ Ce système unique s’applique à tout : attaque, compétence, sauvegarde, perc
 
 ---
 
-## 🎲 Calcul du jet
+## Calcul du jet
 
 > **Résultat final = d20 + Caractéristique + Compétence + Modificateurs contextuels**
 
@@ -62,7 +62,7 @@ Ce système unique s’applique à tout : attaque, compétence, sauvegarde, perc
 
 ---
 
-## 📊 Guide des niveaux de puissance
+## Guide des niveaux de puissance
 
 Pour adapter les défis au niveau des personnages, considérez leurs modificateurs totaux :
 
@@ -81,7 +81,7 @@ Pour adapter les défis au niveau des personnages, considérez leurs modificateu
 > -   **Réaliste** : DD = Modificateur total + 10 (50% de réussite)
 > -   **Brutal** : DD = Modificateur total + 15 (25% de réussite)
 
-## ⭐ Réussites et Échecs critiques
+## Réussites et Échecs critiques
 
 -   **20 naturel** (avant ajout de bonus) → **Réussite critique**
 
@@ -97,7 +97,7 @@ Pour adapter les défis au niveau des personnages, considérez leurs modificateu
 
 ---
 
-## ⚔️ Jets opposés
+## Jets opposés
 
 Lorsqu’une action est directement opposée à celle d’un autre personnage (ex : duel, lutte, dissimulation, persuasion contre mensonge) :
 
@@ -113,7 +113,7 @@ Lorsqu’une action est directement opposée à celle d’un autre personnage (e
 
 ---
 
-## 🌀 Avantage et Désavantage
+## Avantage et Désavantage
 
 Certaines conditions confèrent un **avantage** ou un **désavantage** :
 
@@ -129,7 +129,7 @@ Certaines conditions confèrent un **avantage** ou un **désavantage** :
 
 ---
 
-## 🧠 Jets de sauvegarde
+## Jets de sauvegarde
 
 Les jets de sauvegarde permettent d’éviter un effet néfaste : piège, sort, explosion, poison, etc.
 
@@ -146,7 +146,7 @@ Les jets de sauvegarde permettent d’éviter un effet néfaste : piège, sort, 
 
 ---
 
-## 🧩 Modificateurs contextuels
+## Modificateurs contextuels
 
 Le MJ peut appliquer des bonus ou malus selon la situation :
 
@@ -160,7 +160,7 @@ Le MJ peut appliquer des bonus ou malus selon la situation :
 
 ---
 
-## 💡 Philosophie du système
+## Philosophie du système
 
 > Un seul principe pour tout : lancer 1d20, ajouter les bons modificateurs, dépasser le DD.
 > La simplicité garantit la fluidité du jeu, mais les choix de caractéristiques et de contexte gardent tout leur poids.

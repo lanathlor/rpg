@@ -4,7 +4,7 @@ order: 1
 tags: [Affinité]
 ---
 
-## 🎯 Principe général
+## Principe général
 
 Le système d'affinité repose sur deux axes :
 
@@ -16,14 +16,14 @@ Les affinités d’un personnage déterminent **quels sorts il peut apprendre**,
 
 ---
 
-## ⚙️ Mécanique de déblocage des sorts
+## Mécanique de déblocage des sorts
 
 Chaque personnage possède des valeurs d’affinité :
 
 - `A.École[Nom]` → niveau d’affinité avec une école (ex: Feu, Givre, etc.)
 - `A.Type[Nom]` → niveau d’affinité avec un type (ex: Destruction, Altération, etc.)
 
-### 🔑 Règle d'accès à un sort
+### Règle d'accès à un sort
 
 Un sort est utilisable si le personnage remplit **une** des conditions suivantes :
 
@@ -35,7 +35,7 @@ Cela signifie qu'un Arcanotechnicien peut accéder à un sort :
 - en développant **les deux affinités** requises (école ET type),
 - ou en compensant par un investissement total plus élevé (spécialisation avec pénalité).
 
-### 💰 Pénalité de spécialisation (50%)
+### Pénalité de spécialisation (50%)
 
 **Les spécialistes paient un coût en affinité supplémentaire.**
 
@@ -53,12 +53,12 @@ Un personnage équilibré développe ses affinités de manière naturelle et com
 
 Un sort nécessitant `École 4, Type 4` a un `ReqMixte = 12` (4+4 × 1.5)
 
-- **Build équilibré** : École 4 + Type 4 = **8 points investis** → Accès ✅
-- **Build spécialisé** : École 12 + Type 0 = **12 points investis** → Accès ✅ (mais 4 points de plus)
+- **Build équilibré** : École 4 + Type 4 = **8 points investis** → Accès 
+- **Build spécialisé** : École 12 + Type 0 = **12 points investis** → Accès (mais 4 points de plus)
 
 La spécialisation pure est viable mais moins efficiente.
 
-### 📊 Progression standard des sorts
+### Progression standard des sorts
 
 | Niveau de Sort | ReqÉcole | ReqType | ReqMixte | Points (équilibré) | Points (spécialisé) |
 |----------------|----------|---------|----------|-------------------|---------------------|
@@ -70,7 +70,7 @@ La spécialisation pure est viable mais moins efficiente.
 
 **Note importante :** Ces valeurs sont des **lignes directrices**, pas des règles absolues.
 
-### 🎯 Sorts signature vs sorts de niche
+### Sorts signature vs sorts de niche
 
 **Le niveau d'un sort ne détermine PAS ses exigences d'affinité.**
 
@@ -94,7 +94,7 @@ Un sort **niveau 5** peut avoir des exigences **école 3** s'il est une amélior
 - Sorts **polyvalents** : Utilisables par plusieurs archétypes → exigences moyennes
 - Sorts **de niche** : Techniques avancées ou spécialisées → exigences élevées
 
-### 🧊 Exemple
+### Exemple
 
 **Sort : Lance de Givre (Niveau 2)**
 
@@ -104,24 +104,24 @@ Un sort **niveau 5** peut avoir des exigences **école 3** s'il est une amélior
 
 | Build                        | Givre | Destruction | Total | Accès ? | Coût en points |
 | ---------------------------- | ----- | ----------- | ----- | ------- | -------------- |
-| Cryomancien pur              | 9     | 0           | 9     | ✅      | 9 (spécialisé) |
-| Destructeur pur              | 0     | 9           | 9     | ✅      | 9 (spécialisé) |
-| Généraliste équilibré        | 3     | 3           | 6     | ✅      | 6 (équilibré)  |
-| Hybride léger                | 4     | 2           | 6     | ✅      | 6              |
-| Débutant                     | 2     | 2           | 4     | ❌      | N/A            |
+| Cryomancien pur              | 9     | 0           | 9     |      | 9 (spécialisé) |
+| Destructeur pur              | 0     | 9           | 9     |      | 9 (spécialisé) |
+| Généraliste équilibré        | 3     | 3           | 6     |      | 6 (équilibré)  |
+| Hybride léger                | 4     | 2           | 6     |      | 6              |
+| Débutant                     | 2     | 2           | 4     |      | N/A            |
 
 Le généraliste accède au sort avec **3 points de moins** que le spécialiste pur.
 
 ---
 
-## 🔹 Liste des Types d'Arcanotechnie
+## Liste des Types d'Arcanotechnie
 
 Les **Types** représentent la manière dont un Arcanotechnicien convertit le Flux en énergie.
 Ils reflètent la _vitesse, la stabilité et la complexité_ de cette conversion.
 
 ---
 
-### ⚡ Destruction
+### Destruction
 
 **Nature :** Décharge simple et immédiate.
 **Principe :** conversion directe du Flux en énergie brute, sans structure complexe.
@@ -138,7 +138,7 @@ Trait de feu, Éclair, Onde de choc.
 
 ---
 
-### 💥 Annihilation
+### Annihilation
 
 **Nature :** Compression et libération explosive du Flux.
 **Principe :** l'Arcanotechnicien concentre le Flux avant de le libérer brutalement, augmentant sa densité énergétique.
@@ -155,7 +155,7 @@ Lance quantique, Implosion lumineuse, Décharge critique.
 
 ---
 
-### 🌋 Cataclysme
+### Cataclysme
 
 **Nature :** Accumulation lente et massive d’énergie arcanotechnique.
 **Principe :** l'Arcanotechnicien canalise le Flux sur une longue durée avant sa libération.
@@ -172,7 +172,7 @@ Tempête de feu, Séisme, Voile glaciaire.
 
 ---
 
-### 🧬 Altération
+### Altération
 
 **Nature :** Transformation subtile et ciblée.
 **Principe :** manipulation fine du flux pour modifier une propriété physique, arcanotechnique ou biologique.
@@ -189,7 +189,7 @@ Gel affaiblissant, Drain vital, Distorsion de phase.
 
 ---
 
-### 🧠 Amélioration
+### Amélioration
 
 **Nature :** Conversion harmonique et interne.
 **Principe :** l'Arcanotechnicien réinjecte le Flux dans un système existant pour le renforcer ou le stabiliser.
@@ -206,7 +206,7 @@ Bénédiction, Accélération lumineuse, Renforcement kinesthésique.
 
 ---
 
-### ⚔️ Arme
+### Arme
 
 **Nature :** Canalisation d'énergie arcanotechnique à travers les armes physiques.
 **Principe :** l'Arcanotechnicien infuse ses armes avec du Flux pour augmenter leur efficacité au combat.
@@ -223,7 +223,7 @@ Tir surchargé, Plombs à haute vélocité, Tir à la tête.
 
 ---
 
-### 🏃 Déplacement
+### Déplacement
 
 **Nature :** Manipulation spatiale et cinétique.
 **Principe :** l'Arcanotechnicien convertit le Flux en mouvement, repositionnement ou distorsion spatiale.
@@ -240,7 +240,7 @@ Charge, Roulade de combat, Pas dimensionnel.
 
 ---
 
-### 🛡️ Protection
+### Protection
 
 **Nature :** Conversion défensive et blindage.
 **Principe :** l'Arcanotechnicien façonne le Flux en barrières, protections ou champs d'atténuation des dégâts.
@@ -257,7 +257,7 @@ Bouclier de lumière solide, Bouclier renforcé, Barrière cinétique.
 
 ---
 
-### 🩸 Affliction
+### Affliction
 
 **Nature :** Dégradation persistante et débilitation.
 **Principe :** l'Arcanotechnicien implante une conversion de Flux soutenue dans une cible, causant des effets nocifs continus.
@@ -274,7 +274,7 @@ Poison, Corrosion, Hémorragie de Flux.
 
 ---
 
-## 🧩 Résumé comparatif
+## Résumé comparatif
 
 | Type             | Vitesse     | Puissance   | Stabilité  | Complexité mentale | Style de conversion    |
 | ---------------- | ----------- | ----------- | ---------- | ------------------ | ---------------------- |
@@ -290,7 +290,7 @@ Poison, Corrosion, Hémorragie de Flux.
 
 ---
 
-## 🛡️ Types d'Arcanotechnie et Résistances
+## Types d'Arcanotechnie et Résistances
 
 Le Type et l'École d'un sort déterminent **quelle résistance** s'applique contre lui. Ce n'est pas le fait qu'il soit "arcanotechnique" qui compte, mais **la nature physique de l'effet produit**.
 
@@ -335,7 +335,7 @@ Le Type et l'École d'un sort déterminent **quelle résistance** s'applique con
 
 ---
 
-## 💡 Philosophie du système
+## Philosophie du système
 
 > Le **Type** reflète la capacité mentale et physique de l'Arcanotechnicien à convertir le Flux.
 > Il définit son _style énergétique_ et sa _relation au flux arcanotechnique_, pas sa puissance brute.

@@ -4,7 +4,7 @@ order: 1
 tags: [RMEC, RRAD, RINT, Résistance Mécanique, Résistance Radiative, Résistance Interne]
 ---
 
-## 🧬 Principe Fondamental
+## Principe Fondamental
 
 Dans cet univers, il n'existe pas de "dégâts arcanotechniques". Le Flux est une énergie potentielle qui se convertit en phénomènes physiques réels. Une fois la conversion effectuée, l'effet produit (feu, impact, radiation, etc.) obéit aux lois de la physique.
 
@@ -14,7 +14,7 @@ Que l'attaque provienne d'une épée, d'une balle, d'un arcane de feu ou d'un ra
 
 ---
 
-## ⚔️ Les Trois Résistances
+## Les Trois Résistances
 
 ### 1. RMEC - Résistance Mécanique
 
@@ -95,7 +95,7 @@ RINT est la résistance la plus rare et la plus difficile à augmenter. Elle rep
 
 ---
 
-## 📊 Tableau Récapitulatif
+## Tableau Récapitulatif
 
 | Résistance  | Abréviation | Vecteur d'attaque                  | Exemples                                        |
 | ----------- | ----------- | ---------------------------------- | ----------------------------------------------- |
@@ -105,7 +105,7 @@ RINT est la résistance la plus rare et la plus difficile à augmenter. Elle rep
 
 ---
 
-## ⚖️ Cas Limites et Arbitrages
+## Cas Limites et Arbitrages
 
 Certaines attaques affectent plusieurs résistances ou nécessitent une interprétation.
 
@@ -123,7 +123,7 @@ Certaines attaques affectent plusieurs résistances ou nécessitent une interpr�
 
 ---
 
-## 🛡️ Sources de Résistance
+## Sources de Résistance
 
 Les résistances peuvent provenir de différentes sources. Certaines protections sont efficaces contre certains types de dégâts, mais pas contre d'autres.
 
@@ -145,7 +145,7 @@ Les résistances peuvent provenir de différentes sources. Certaines protections
 
 ---
 
-## 🧮 Formule de Dégâts
+## Formule de Dégâts
 
 ### Calcul de base
 
@@ -178,7 +178,7 @@ Le MJ choisit la méthode selon la complexité souhaitée.
 
 ---
 
-## 📈 Progression des Résistances
+## Progression des Résistances
 
 ### Comment augmenter ses résistances
 
@@ -201,7 +201,7 @@ Le MJ choisit la méthode selon la complexité souhaitée.
 
 ---
 
-## 💡 Philosophie du Système
+## Philosophie du Système
 
 > **Une seule réalité physique.**
 > Le Flux ne crée pas de "dégâts magiques" - il crée du feu, de la glace, des projectiles, de l'énergie cinétique.
@@ -222,7 +222,7 @@ Le MJ choisit la méthode selon la complexité souhaitée.
 
 ---
 
-## 🎯 Conseils au MJ
+## Conseils au MJ
 
 ### Concevoir des ennemis équilibrés
 

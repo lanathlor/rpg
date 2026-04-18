@@ -52,7 +52,7 @@ Concentration :
 - Tour 2 : 10/12
 - Tour 3 : 12/12 → le sort est prêt au début du tour.
 
-### ⚡ Sorts instantanés
+### Sorts instantanés
 
 **Si l'Afflux par Tour ≥ Coût du sort**, le sort est lancé **immédiatement** le même tour.
 

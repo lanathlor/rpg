@@ -5,17 +5,17 @@ order: 5
 
 Bienvenue ! Ce guide vous explique comment participer au développement de ce jeu de rôle. **Aucune connaissance technique n'est requise** - si vous savez utiliser un navigateur web et écrire dans un fichier texte, vous pouvez contribuer !
 
-## 🎯 Vue Rapide : Que Puis-je Faire ?
+## Vue Rapide : Que Puis-je Faire ?
 
-- **🎨 Artistes** → Créer des illustrations pour remplacer les images IA temporaires
-- **✨ Créateurs** → Inventer des sorts, armes, armures, classes de personnage
-- **📝 Rédacteurs** → Améliorer les règles, corriger les fautes, clarifier les textes
-- **🎲 Testeurs** → Jouer et signaler ce qui ne va pas
-- **💡 Penseurs** → Proposer de nouvelles idées et mécaniques
+- **Artistes** → Créer des illustrations pour remplacer les images IA temporaires
+- **Créateurs** → Inventer des sorts, armes, armures, classes de personnage
+- **Rédacteurs** → Améliorer les règles, corriger les fautes, clarifier les textes
+- **Testeurs** → Jouer et signaler ce qui ne va pas
+- **Penseurs** → Proposer de nouvelles idées et mécaniques
 
 ---
 
-## 📧 Méthode 1 : Par Email (Le Plus Simple !)
+## Méthode 1 : Par Email (Le Plus Simple !)
 
 **Parfait si vous n'aimez pas les sites web compliqués.**
 
@@ -48,7 +48,7 @@ Merci !
 
 ---
 
-## 🌐 Méthode 2 : GitHub Sans Compte Développeur
+## Méthode 2 : GitHub Sans Compte Développeur
 
 **GitHub est le site où le projet est hébergé. Vous pouvez contribuer directement depuis votre navigateur !**
 
@@ -99,7 +99,7 @@ Description : Un expert en fusion de la technologie et du Flux...
    - Cliquez sur `codex` pour voir les sorts, armes, classes...
    - Cliquez sur `rules` pour les règles du jeu
 3. **Cliquez sur un fichier** pour l'ouvrir
-4. **Cliquez sur l'icône crayon** ✏️ (en haut à droite du fichier)
+4. **Cliquez sur l'icône crayon** (en haut à droite du fichier)
 5. **Faites vos modifications** directement dans la page
 6. **En bas de la page** :
    - Dans "Commit changes", décrivez ce que vous avez changé
@@ -119,7 +119,7 @@ Description : Un expert en fusion de la technologie et du Flux...
 
 ---
 
-## 📝 Créer du Contenu de Jeu
+## Créer du Contenu de Jeu
 
 ### Format Simplifié pour les Sorts
 
@@ -197,7 +197,7 @@ COMPÉTENCES :
 
 ---
 
-## 🎨 Pour les Artistes
+## Pour les Artistes
 
 **Nous cherchons activement des artistes !** Les images actuelles sont générées par IA temporairement.
 
@@ -222,7 +222,7 @@ COMPÉTENCES :
 
 ---
 
-## ❓ Questions Fréquentes
+## Questions Fréquentes
 
 ### "Je n'y connais rien en programmation, puis-je vraiment aider ?"
 
@@ -260,7 +260,7 @@ Vous recevrez une notification par email (si vous avez utilisé GitHub) ou une r
 
 ---
 
-## 📚 Ressources Utiles
+## Ressources Utiles
 
 ### Où Trouver de l'Inspiration
 
@@ -271,12 +271,12 @@ Vous recevrez une notification par email (si vous avez utilisé GitHub) ou une r
 
 ### Outils Recommandés (Optionnels)
 
-**📝 Éditeur de texte recommandé :**
+**Éditeur de texte recommandé :**
 - **Visual Studio Code** (gratuit, tous systèmes) - https://code.visualstudio.com/
-  - ✅ Coloration syntaxique pour YAML et Markdown
-  - ✅ Détection automatique des erreurs de format
-  - ✅ Interface simple et intuitive
-  - ✅ Extensions utiles disponibles (YAML, Markdown Preview)
+  - Coloration syntaxique pour YAML et Markdown
+  - Détection automatique des erreurs de format
+  - Interface simple et intuitive
+  - Extensions utiles disponibles (YAML, Markdown Preview)
 
 **Autres éditeurs simples** (alternatives) :
 - **Windows** : Bloc-notes (déjà installé) ou Notepad++ (gratuit)
@@ -290,15 +290,15 @@ Vous recevrez une notification par email (si vous avez utilisé GitHub) ou une r
 
 ---
 
-## 🤝 L'Esprit du Projet
+## L'Esprit du Projet
 
 Ce projet est **collaboratif et ouvert**. Cela signifie :
 
-- ✅ **Tout le monde peut contribuer**, peu importe son niveau
-- ✅ **Toutes les idées sont bienvenues**
-- ✅ **Les erreurs sont normales** et on apprend ensemble
-- ✅ **Le respect et la bienveillance** sont essentiels
-- ✅ **Le plaisir de créer** est notre motivation principale
+- **Tout le monde peut contribuer**, peu importe son niveau
+- **Toutes les idées sont bienvenues**
+- **Les erreurs sont normales** et on apprend ensemble
+- **Le respect et la bienveillance** sont essentiels
+- **Le plaisir de créer** est notre motivation principale
 
 ### Licence Simplifiée
 
@@ -310,7 +310,7 @@ En contribuant, vous acceptez que :
 
 ---
 
-## 📮 Contact
+## Contact
 
 **Email principal :** valentin@viviersoft.com
 
@@ -326,7 +326,7 @@ En contribuant, vous acceptez que :
 
 ---
 
-**🎉 Merci de votre intérêt pour ce projet !**
+**Merci de votre intérêt pour ce projet !**
 
 Chaque contribution, petite ou grande, rend le jeu meilleur. Que vous créiez un seul sort ou une classe entière, que vous corrigiez une faute ou proposiez une nouvelle mécanique, **votre participation compte**.
 
