@@ -1,27 +1,31 @@
 ---
 import type { Entity } from '@/types/entities';
+import type { LinkMaps, ItemLink } from '@/lib/dataUtils';
+import ItemBadge from './ItemBadge.astro';
 import { t } from '@/lib/i18n';
 
 interface Props {
   entity: Entity;
+  linkMaps?: LinkMaps;
 }
 
-const { entity } = Astro.props;
+const { entity, linkMaps } = Astro.props;
 const base = import.meta.env.BASE_URL;
+
+function resolve(map: Record<string, ItemLink> | undefined, name: string): ItemLink | undefined {
+  return map?.[name] ?? map?.[name.toLowerCase()];
+}
 
 function getAlignementColor(alignement?: string): string {
   if (!alignement) return 'bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300';
   const a = alignement.toLowerCase();
-  if (a === 'amical' || a === 'ami' || a === 'allié') return 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300';
-  if (a === 'hostile' || a === 'ennemi') return 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300';
-  if (a === 'neutre') return 'bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300';
+  if (a === 'amical' || a === 'ami' || a === 'allié' || a === 'friendly' || a === 'allied') return 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300';
+  if (a === 'hostile' || a === 'ennemi' || a === 'enemy') return 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300';
+  if (a === 'neutre' || a === 'neutral') return 'bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300';
   return 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300';
 }
 
-const statLabels: Record<string, string> = {
-  force: 'Force', dexterite: 'Dextérité', constitution: 'Constitution',
-  intelligence: 'Intelligence', perception: 'Perception', precision: 'Précision', charisme: 'Charisme',
-};
+const statKeys = ['force', 'dexterite', 'constitution', 'intelligence', 'perception', 'precision', 'charisme'] as const;
 
 const affinities = entity.affinities || {};
 const schools = affinities.schools || {};
@@ -110,7 +114,7 @@ const hasEquipment = entity.equipment && (
           <div class="grid grid-cols-2 gap-3">
             {Object.entries(entity.stats).map(([statName, value]) => (
               <div class="flex items-center justify-between">
-                <span class="text-sm font-medium">{statLabels[statName] || statName}</span>
+                <span class="text-sm font-medium">{t(`common.stat.${statName}` as any) || statName}</span>
                 <span class="inline-flex items-center rounded-full bg-secondary px-2.5 py-0.5 text-xs font-semibold">{value}</span>
               </div>
             ))}
@@ -134,14 +138,14 @@ const hasEquipment = entity.equipment && (
         {Object.keys(schools).length > 0 && (
           <div class="grid grid-cols-2 gap-2">
             {Object.entries(schools).map(([school, level]) => level > 0 && (
-              <div class="flex justify-between"><span class="text-sm capitalize">{school}</span><span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold">{level}</span></div>
+              <div class="flex justify-between"><span class="text-sm capitalize">{t(`school.${school}` as any) || school}</span><span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold">{level}</span></div>
             ))}
           </div>
         )}
         {Object.keys(types).length > 0 && (
           <div class="border-t pt-4 grid grid-cols-2 gap-2">
             {Object.entries(types).map(([type, level]) => level > 0 && (
-              <div class="flex justify-between"><span class="text-sm capitalize">{type}</span><span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold">{level}</span></div>
+              <div class="flex justify-between"><span class="text-sm capitalize">{t(`type.${type}` as any) || type}</span><span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold">{level}</span></div>
             ))}
           </div>
         )}
@@ -158,9 +162,10 @@ const hasEquipment = entity.equipment && (
           <div>
             <h4 class="text-sm font-medium text-muted-foreground mb-2">{t('detail.class.weapons')}</h4>
             <div class="flex flex-wrap gap-2">
-              {entity.equipment.weapons.map((w: string) => (
-                <span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold">{w}</span>
-              ))}
+              {entity.equipment.weapons.map((w: string) => {
+                const link = resolve(linkMaps?.weapons, w);
+                return <ItemBadge name={w} href={link ? `${base}weapons/${link.slug}/` : undefined} link={link} />;
+              })}
             </div>
           </div>
         )}
@@ -168,9 +173,10 @@ const hasEquipment = entity.equipment && (
           <div>
             <h4 class="text-sm font-medium text-muted-foreground mb-2">{t('detail.class.armor')}</h4>
             <div class="flex flex-wrap gap-2">
-              {entity.equipment.armor.map((a: string) => (
-                <span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold">{a}</span>
-              ))}
+              {entity.equipment.armor.map((a: string) => {
+                const link = resolve(linkMaps?.armor, a);
+                return <ItemBadge name={a} href={link ? `${base}equipment/${link.slug}/` : undefined} link={link} />;
+              })}
             </div>
           </div>
         )}
@@ -178,11 +184,11 @@ const hasEquipment = entity.equipment && (
           <div>
             <h4 class="text-sm font-medium text-muted-foreground mb-2">{t('detail.class.consumables')}</h4>
             <div class="flex flex-wrap gap-2">
-              {entity.equipment.consumables.map((item: any) => (
-                <span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold">
-                  {item.name}{item.quantity > 1 && ` x${item.quantity}`}
-                </span>
-              ))}
+              {entity.equipment.consumables.map((item: any) => {
+                const link = resolve(linkMaps?.consumables, item.name);
+                const label = item.name + (item.quantity > 1 ? ` x${item.quantity}` : '');
+                return <ItemBadge name={label} href={link ? `${base}consumables/${link.slug}/` : undefined} link={link} />;
+              })}
             </div>
           </div>
         )}
@@ -196,9 +202,10 @@ const hasEquipment = entity.equipment && (
       <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-lg font-semibold">{t('detail.class.skills')}</h3></div>
       <div class="p-6 pt-0">
         <div class="flex flex-wrap gap-2">
-          {entity.skills.map((skill: string) => (
-            <span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold">{skill}</span>
-          ))}
+          {entity.skills.map((skill: string) => {
+            const link = resolve(linkMaps?.skills, skill);
+            return <ItemBadge name={skill} href={link ? `${base}skills/${link.slug}/` : undefined} link={link} />;
+          })}
         </div>
       </div>
     </div>
@@ -212,7 +219,10 @@ const hasEquipment = entity.equipment && (
         <div class="flex flex-wrap gap-2">
           {entity.spells.map((spell: any) => {
             const spellName = typeof spell === 'string' ? spell : spell.series || spell.name;
-            return <span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold">{spellName}</span>;
+            const spellLevel = typeof spell === 'string' ? '1' : (spell.level || '1');
+            const link = resolve(linkMaps?.spells, spellName);
+            const label = `${spellName} (${t('detail.class.spellLevel')} ${spellLevel})`;
+            return <ItemBadge name={label} href={link ? `${base}spells/${link.slug}/` : undefined} link={link} level={spellLevel} />;
           })}
         </div>
       </div>

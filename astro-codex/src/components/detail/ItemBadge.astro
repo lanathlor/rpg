@@ -1,0 +1,42 @@
+---
+import type { ItemLink } from '@/lib/dataUtils';
+
+interface Props {
+  name: string;
+  href?: string;
+  link?: ItemLink;
+  /** When set, use levelDetails[level] instead of default details */
+  level?: string;
+}
+
+const { name, href, link, level } = Astro.props;
+const effectiveDetails = level && link?.levelDetails?.[level] ? link.levelDetails[level] : link?.details;
+const hasTooltip = link?.description || (effectiveDetails && effectiveDetails.length > 0);
+const badgeClass = 'inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold';
+const linkClass = badgeClass + ' hover:bg-accent transition-colors';
+---
+
+{hasTooltip ? (
+  <span class="relative group/tip inline-flex">
+    {href
+      ? <a href={href} class={linkClass}>{name}</a>
+      : <span class={badgeClass}>{name}</span>
+    }
+    <span class="pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-64 rounded-md border bg-popover px-3 py-2 text-popover-foreground shadow-md opacity-0 scale-95 transition-all duration-150 group-hover/tip:opacity-100 group-hover/tip:scale-100 z-50 text-xs">
+      {link!.description && (
+        <span class="block text-muted-foreground leading-snug">{link!.description}</span>
+      )}
+      {effectiveDetails && effectiveDetails.length > 0 && (
+        <span class="flex flex-wrap gap-1.5 mt-1.5">
+          {effectiveDetails.map((d: string) => (
+            <span class="inline-flex items-center rounded bg-secondary px-1.5 py-0.5 font-medium">{d}</span>
+          ))}
+        </span>
+      )}
+    </span>
+  </span>
+) : href ? (
+  <a href={href} class={linkClass}>{name}</a>
+) : (
+  <span class={badgeClass}>{name}</span>
+)}

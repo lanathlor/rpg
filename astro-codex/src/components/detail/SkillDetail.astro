@@ -1,7 +1,7 @@
 ---
 import type { Skill, EffectType } from '@/types/skills';
 import { getCompetenceTier } from '@/lib/pointBuyCalculator';
-import { t } from '@/lib/i18n';
+import { t, getLang } from '@/lib/i18n';
 
 interface Props {
   skill: Skill;
@@ -81,15 +81,8 @@ const tier = skill.point_cost !== undefined ? getCompetenceTier(skill.point_cost
 
 // Tier description text
 function getTierDescription(tierLetter: string): string {
-  const descriptions: Record<string, string> = {
-    'S': ' Les competences de tier S (18 pts) sont les plus puissantes et offrent des avantages majeurs comme les attaques multiples.',
-    'A': ' Les competences de tier A (15 pts) offrent des capacites defensives ou de mobilite tres puissantes.',
-    'B': ' Les competences de tier B (12 pts) conferent des avantages tactiques significatifs.',
-    'C': ' Les competences de tier C (10 pts) donnent des bonus de statistiques utiles.',
-    'D': ' Les competences de tier D (8 pts) offrent des capacites utilitaires pratiques.',
-    'E': ' Les competences de tier E (5 pts) conferent des bonus mineurs ou des connaissances specialisees.',
-  };
-  return descriptions[tierLetter] || '';
+  const key = `detail.skill.tierDesc.${tierLetter}` as any;
+  return ' ' + t(key);
 }
 ---
 
@@ -166,10 +159,7 @@ function getTierDescription(tierLetter: string): string {
           </span>
         </div>
         <div class="mt-3 text-sm text-muted-foreground">
-          <p>
-            Cette competence appartient au tier <strong>{tier.tier}</strong> de puissance.
-            {getTierDescription(tier.tier)}
-          </p>
+          <p set:html={t('detail.skill.tierBelongs').replace('{tier}', `<strong>${tier.tier}</strong>`) + getTierDescription(tier.tier)} />
         </div>
       </div>
     </div>

@@ -542,6 +542,7 @@ export const fr = {
   'detail.class.consumables': 'Consommables',
   'detail.class.skills': 'Compétences',
   'detail.class.spells': 'Sorts',
+  'detail.class.spellLevel': 'Niv.',
   'detail.class.gameplayGuide': 'Guide de jeu',
   // Consumable detail
   'detail.consumable.healing': 'Soins:',
@@ -561,6 +562,13 @@ export const fr = {
   'detail.skill.movement': 'Mouvement',
   'detail.skill.passive': 'Passif',
   'detail.skill.special': 'Spécial',
+  'detail.skill.tierBelongs': 'Cette compétence appartient au tier {tier} de puissance.',
+  'detail.skill.tierDesc.S': 'Les compétences de tier S (18 pts) sont les plus puissantes et offrent des avantages majeurs comme les attaques multiples.',
+  'detail.skill.tierDesc.A': 'Les compétences de tier A (15 pts) offrent des capacités défensives ou de mobilité très puissantes.',
+  'detail.skill.tierDesc.B': 'Les compétences de tier B (12 pts) confèrent des avantages tactiques significatifs.',
+  'detail.skill.tierDesc.C': 'Les compétences de tier C (10 pts) donnent des bonus de statistiques utiles.',
+  'detail.skill.tierDesc.D': 'Les compétences de tier D (8 pts) offrent des capacités utilitaires pratiques.',
+  'detail.skill.tierDesc.E': 'Les compétences de tier E (5 pts) confèrent des bonus mineurs ou des connaissances spécialisées.',
   // Scenario detail (Astro)
   'detail.scenario.sessionInfo': 'Informations de session',
   'detail.scenario.duration': 'Durée:',

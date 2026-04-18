@@ -2,17 +2,17 @@
 import MainLayout from '@/layouts/MainLayout.astro';
 import { setLang, t } from '@/lib/i18n';
 import EntityDetail from '@/components/detail/EntityDetail.astro';
-import { getEntities } from '@/lib/dataUtils';
+import { getEntities, buildLinkMaps } from '@/lib/dataUtils';
 
 export async function getStaticPaths() {
-  const entities = await getEntities('fr');
+  const [entities, linkMaps] = await Promise.all([getEntities('fr'), buildLinkMaps()]);
   return entities.map(e => ({
     params: { slug: e.slug },
-    props: { entity: e.data },
+    props: { entity: e.data, linkMaps },
   }));
 }
 
-const { entity } = Astro.props;
+const { entity, linkMaps } = Astro.props;
 const locale = 'fr';
 setLang(locale);
 const base = import.meta.env.BASE_URL + 'fr/';
@@ -21,6 +21,6 @@ const base = import.meta.env.BASE_URL + 'fr/';
 <MainLayout title={`${entity.name} - Entités - Pyrrhic Stars`} description={entity.description}>
   <div>
     <a href={`${base}entities/`} class="text-sm text-muted-foreground hover:text-foreground mb-4 inline-block">{t('page.back.entities')}</a>
-    <EntityDetail entity={entity} />
+    <EntityDetail entity={entity} linkMaps={linkMaps} />
   </div>
 </MainLayout>
