@@ -9,9 +9,9 @@ equipment:
   armor:
     - Gilet pare-balles léger
   consumables:
-    - name: Kit de soins
+    - name: Healing kit
       quantity: 1
 skills:
-  - Tacticien
+  - Tactician
 spells: []
 gameplay_guide: Resistance fighter with basic military training. Uses cover and guerrilla tactics. Less disciplined than imperial soldiers but motivated by their cause. Prefers ranged combat. Flees if overwhelmed or isolated. Dangerous in coordinated groups.

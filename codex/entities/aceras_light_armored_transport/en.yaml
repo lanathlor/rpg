@@ -5,7 +5,7 @@ alignement: hostile
 description: Aceras armored troop transport vehicle equipped with a mounted plasma cannon. Can transport a full squad while providing devastating fire support.
 equipment:
   weapons:
-    - Canon à plasma
+    - Plasma cannon
   armor: []
   consumables: []
 skills: []

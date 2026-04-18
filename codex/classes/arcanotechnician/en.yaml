@@ -13,11 +13,11 @@ equipment:
       quantity: 1
 skills:
   - Arcanotechnology armor
-  - Quantum sight
+  - Quantum Vision
 spells:
   - Ice javelin
   - Biting wind
-  - Bitter cold
+  - Biting Cold
   - Frost
   - One with the cold
 gameplay_guide: The Arcanotechnician is a class that deals massive damage in a short time, but cannot sustain it over time. They are most efficient in short fights or with many enemies clustered together thanks to flame columns. Their survivability is limited. The Arcanotechnician's spells and positioning must be carefully considered.

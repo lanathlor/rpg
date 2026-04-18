@@ -5,13 +5,13 @@ alignement: neutral
 description: A private security agent, typically employed to protect civilian or commercial installations.
 equipment:
   weapons:
-    - Pistolet
+    - Pistol
   armor:
-    - Tenue de survie
+    - Survival suit
   consumables:
-    - name: Kit de soins
+    - name: Healing kit
       quantity: 1
 skills:
-  - Guerrier
+  - Warrior
 spells: []
 gameplay_guide: A standard security agent, equipped with a pistol and basic survival gear. More vigilant than combative, excels at detecting intrusions. Prefers to alert and delay rather than engage in direct combat.

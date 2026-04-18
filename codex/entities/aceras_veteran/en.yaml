@@ -5,14 +5,14 @@ alignement: hostile
 description: Aceras war veteran, experienced combatant and competent tactician. Equipped with heavy armor and advanced armament.
 equipment:
   weapons:
-    - Fusil mitrailleur
+    - Machine gun
   armor:
-    - Armure de plate lourde
+    - Heavy plate armor
   consumables:
-    - name: Kit de soins
+    - name: Healing kit
       quantity: 2
 skills:
-  - Tacticien
-  - Vétéran
+  - Tactician
+  - Veteran
 spells: []
 gameplay_guide: Aceras veteran with combat experience and tactical capabilities. Well protected by heavy plate armor, equipped with a versatile machine gun. Disciplined combatant who exploits enemy weaknesses and coordinates with their unit. Effective at medium range combat.

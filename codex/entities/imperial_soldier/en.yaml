@@ -5,14 +5,14 @@ alignement: variable
 description: Standard imperial soldier with complete military training. Equipped with regulation armament and armor. Represents the baseline combatant of the imperial forces.
 equipment:
   weapons:
-    - Fusil mitrailleur
+    - Machine gun
   armor:
-    - Armure de plate légère
+    - Light plate armor
   consumables:
-    - name: Kit de soins
+    - name: Healing kit
       quantity: 1
 skills:
-  - Tacticien
-  - Vétéran
+  - Tactician
+  - Veteran
 spells: []
 gameplay_guide: Standard imperial soldier with tactical training. Disciplined and coordinated combat. Uses cover intelligently and exploits enemy weaknesses. Can be customized with notes to represent lighter soldiers (recruit) or heavier ones (elite).

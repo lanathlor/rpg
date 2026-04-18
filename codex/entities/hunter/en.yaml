@@ -7,12 +7,12 @@ equipment:
   weapons:
     - Fusil d'assaut
   armor:
-    - Armure de plate légère
+    - Light plate armor
   consumables:
-    - name: Kit de soins
+    - name: Healing kit
       quantity: 1
 skills:
-  - Tacticien
-  - Vétéran
+  - Tactician
+  - Veteran
 spells: []
 gameplay_guide: Versatile hunter with good balance between ranged and melee combat. High Perception and Precision for effective ranged combat. Tactician and Veteran skills provide tactical expertise. Uses cover intelligently and coordinates with allies. Represents an experienced professional soldier.

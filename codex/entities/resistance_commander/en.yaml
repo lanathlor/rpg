@@ -9,13 +9,13 @@ equipment:
   armor:
     - Armure légère tactique
   consumables:
-    - name: Kit de soins
+    - name: Healing kit
       quantity: 1
 skills:
   - Tacticienne
   - Tir de précision
-  - Vétéran
+  - Veteran
   - Leadership
 spells: []
-gameplay_guide: "Resistance commander: tactical leader and elite marksman. Exceptional tactician with +2 Initiative and ability to coordinate allies. Precision Shot gives +3 to Precision rolls. Ranged combat, stays back with protection (bodyguards). High Dexterity and Precision (16) for deadly shots. Leadership inspires allies. ~230 points."
+gameplay_guide: 'Resistance commander: tactical leader and elite marksman. Exceptional tactician with +2 Initiative and ability to coordinate allies. Precision Shot gives +3 to Precision rolls. Ranged combat, stays back with protection (bodyguards). High Dexterity and Precision (16) for deadly shots. Leadership inspires allies. ~230 points.'
 notes: Archetype for resistance commanders. Can be customized with name, motivations, and special equipment per scenario (e.g., detonator, encrypted communicator, etc.).

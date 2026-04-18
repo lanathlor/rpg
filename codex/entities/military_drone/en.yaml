@@ -5,11 +5,11 @@ alignement: neutral
 description: Heavy combat drone equipped with advanced military armament. Reinforced armor and automated weapon systems. Used for fire support and area control.
 equipment:
   weapons:
-    - Fusil mitrailleur
+    - Machine gun
   armor:
     - Blindage de drone
   consumables: []
 skills:
-  - Tacticien
+  - Tactician
 spells: []
 gameplay_guide: Heavy military drone with significant armor and armament. Provides sustained fire support and area control. More resilient than the light drone but less mobile. Serious threat in support of ground units.

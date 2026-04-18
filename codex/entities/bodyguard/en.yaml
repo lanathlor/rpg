@@ -5,14 +5,14 @@ alignement: variable
 description: Personal protection professional. Extensive military or police training, disciplined, loyal. Ready to sacrifice their life to protect their employer. Stays calm under pressure and constantly evaluates threats.
 equipment:
   weapons:
-    - Fusil mitrailleur
+    - Machine gun
   armor:
-    - Armure de plate légère
+    - Light plate armor
   consumables:
-    - name: Kit de soins
+    - name: Healing kit
       quantity: 1
 skills:
-  - Tacticien
+  - Tactician
   - Protecteur
 spells: []
-gameplay_guide: "Professional bodyguard. Absolute priority: protect their employer. Always positions between the threat and their charge. Uses cover intelligently and covers retreats. Disciplined and coordinated combat. High Perception to detect dangers. Protector skill allows intercepting attacks."
+gameplay_guide: 'Professional bodyguard. Absolute priority: protect their employer. Always positions between the threat and their charge. Uses cover intelligently and covers retreats. Disciplined and coordinated combat. High Perception to detect dangers. Protector skill allows intercepting attacks.'

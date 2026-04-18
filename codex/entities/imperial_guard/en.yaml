@@ -5,13 +5,13 @@ alignement: neutral
 description: A standard Imperial guard, trained for military installation defense and peacekeeping.
 equipment:
   weapons:
-    - Fusil mitrailleur
+    - Machine gun
   armor:
-    - Armure de plate légère
+    - Light plate armor
   consumables:
-    - name: Kit de soins
+    - name: Healing kit
       quantity: 1
 skills:
-  - Guerrier
+  - Warrior
 spells: []
 gameplay_guide: A standard Imperial guard. Good in close combat with light plate armor, equipped with a machine gun to cover strategic zones. Prefers tactical group combat.

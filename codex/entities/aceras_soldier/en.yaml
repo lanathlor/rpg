@@ -5,13 +5,13 @@ alignement: hostile
 description: An Aceras infantry soldier, trained in urban combat tactics and rapid assault operations.
 equipment:
   weapons:
-    - Fusil à pompe surchargé
+    - Overcharged shotgun
   armor:
-    - Armure de plate légère
+    - Light plate armor
   consumables:
-    - name: Kit de soins
+    - name: Healing kit
       quantity: 1
 skills:
-  - Tacticien
+  - Tactician
 spells: []
 gameplay_guide: Aceras infantry soldier specializing in rapid assaults. Equipped with a shotgun for close-range combat and light plate armor. Favors aggressive and coordinated small-group tactics. More mobile than Imperial guards.

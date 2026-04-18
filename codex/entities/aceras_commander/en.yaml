@@ -5,23 +5,23 @@ alignement: hostile
 description: Elite Aceras commander in heavy combat armor, with cybernetic augmentations. Brilliant tactician and formidable combatant with advanced energy weapons and arcanotechnological capabilities.
 equipment:
   weapons:
-    - Canon à plasma
-    - Lames énergétiques
+    - Plasma cannon
+    - Energy blades
   armor:
-    - Exosquelette de combat
+    - Combat exoskeleton
   consumables:
-    - name: Kit de soins
+    - name: Healing kit
       quantity: 3
 skills:
-  - Guerrier
-  - Tacticien
-  - Vétéran
-  - Course
+  - Warrior
+  - Tactician
+  - Veteran
+  - Sprint
 spells:
-  - Régénération protocolaire
-  - Surcharge plasma
-  - Analyse tactique
-  - Bouclier renforcé
+  - Protocol Regeneration
+  - Plasma Overcharge
+  - Tactical Analysis
+  - Reinforced Shield
 gameplay_guide: |
   BOSS FIGHT - Aceras Commander
 

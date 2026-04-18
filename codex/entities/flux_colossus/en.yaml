@@ -8,23 +8,23 @@ equipment:
   armor: []
   consumables: []
 skills:
-  - Guerrier
-  - Régénération
-  - Contrôle végétal
-  - Vétéran
-  - Armure vivante
-  - Résistance toxique
+  - Warrior
+  - Regeneration
+  - Plant Control
+  - Veteran
+  - Living Armor
+  - Toxic Resistance
 spells:
-  - series: Drain vital
-    level: "2"
-  - series: Spores hallucinogènes
-    level: "2"
-  - series: Mur de racines
-    level: "2"
-  - series: Croissance accélérée
-    level: "1"
-  - series: Corruption du Flux
-    level: "1"
+  - series: Vital Drain
+    level: '2'
+  - series: Hallucinogenic Spores
+    level: '2'
+  - series: Root Wall
+    level: '2'
+  - series: Accelerated Growth
+    level: '1'
+  - series: Flux Corruption
+    level: '1'
 gameplay_guide: |
   EXTREME BOSS (~500 points) - Massive hybrid plant/flesh creature
 

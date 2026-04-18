@@ -5,7 +5,7 @@ alignement: hostile
 description: Autonomous Aceras reconnaissance drone equipped with thermal sensors and a light submachine gun. Fast and mobile surveillance unit.
 equipment:
   weapons:
-    - Mitraillette de drone légère
+    - Light drone submachine gun
   armor: []
   consumables: []
 skills: []

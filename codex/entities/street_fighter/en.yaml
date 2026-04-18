@@ -5,11 +5,11 @@ alignement: hostile
 description: A seasoned street fighter, accustomed to brawls and confrontations in urban areas. Aggressive and unpredictable.
 equipment:
   weapons:
-    - Épée courte
+    - Short sword
   armor:
-    - Tunique
+    - Tunic
   consumables: []
 skills:
-  - Rôdeur
+  - Stalker
 spells: []
 gameplay_guide: An aggressive street fighter who favors melee combat. Fast and impulsive, often charges without strategy. Weak in armor but compensates with mobility and street fighting experience.

@@ -5,12 +5,12 @@ alignement: hostile
 description: Aceras technician specializing in maintenance and electronic systems. Non-combatant personnel with basic light weapons training. Competent in hacking and repairs.
 equipment:
   weapons:
-    - Pistolet
+    - Pistol
   armor: []
   consumables: []
 skills:
   - Hacker
-  - Ingénieur
+  - Engineer
 spells: []
 gameplay_guide: |
   Non-combatant technical personnel. High Intelligence for technical tasks but weak martial capabilities.

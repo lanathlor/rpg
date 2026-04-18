@@ -5,69 +5,69 @@ alignement: Loyal (to the Empire)
 description: Opals represent the Elite rank of the imperial army - units capable of single-handedly influencing the course of a battle. Exosoldiers equipped with the most advanced Generation 7 prototype exoskeleton ever designed, they form a strategic strike force deployed only during critical missions. Their training lasts decades, their equipment is worth more than entire starships. Each Opal is a living weapon, capable of accomplishing alone what would normally require a battalion. Their mere presence on a battlefield shifts the balance of power. Few in number, strategically decisive.
 equipment:
   weapons:
-    - Fusil de précision arcanotechnique 'Silencieux'
-    - Lame arcanotechnique 'Éclair'
+    - Arcanotechnical precision rifle 'Silencer'
+    - Arcanotechnical blade 'Lightning'
   armor:
-    - Exosquelette Prototype OPAL-XS7
+    - OPAL-XS7 Prototype Exoskeleton
   consumables: []
 skills:
-  - Guerrier
-  - Œil d'aigle
-  - Vétéran
-  - À l'affût
-  - Tacticien
-  - Rôdeur
-  - Expert des terrains
-  - Hackeur
-  - Ingénieur
-  - Traque
-  - Scientifique
-  - Vue des quantiques
-  - Connaisseur d'arcanotechnie
-  - Charismatique
-  - Maître armurier
-  - As du pilotage
-  - Commandant
-  - Tacticien avancé
-  - Médecin de combat
-  - Espion
+  - Warrior
+  - Eagle Eye
+  - Veteran
+  - On Alert
+  - Tactician
+  - Stalker
+  - Terrain Expert
+  - Hacker
+  - Engineer
+  - Tracking
+  - Scientist
+  - Quantum Vision
+  - Arcanotechnology Expert
+  - Charismatic
+  - Master Armorer
+  - Ace Pilot
+  - Commander
+  - Advanced Tactician
+  - Combat Medic
+  - Spy
   - Assassin
-  - Maître du Flux
-  - Maître arcanotechnicien
+  - Flux Master
+  - Master Arcanotechnician
   - Prescience
-  - Réflexes surhumains
-  - Endurance surhumaine
-  - Force titanesque
-  - Esprit analytique
-  - Leadership inspirant
+  - Superhuman Reflexes
+  - Superhuman Endurance
+  - Titanic Strength
+  - Analytical Mind
+  - Inspiring Leadership
   - Intimidation
-  - Diplomate
-  - Négociateur
-  - Polyglotte
-  - Sens du danger
-  - Chanceux
-  - Résistance mentale
-  - Volonté de fer
-  - Maître stratège
-  - Virtuose au combat
-  - Légende vivante
+  - Diplomat
+  - Negotiator
+  - Polyglot
+  - Danger Sense
+  - Lucky
+  - Mental Resistance
+  - Iron Will
+  - Master Strategist
+  - Combat Virtuoso
+  - Living Legend
 spells:
-  - series: Boule de feu
-    level: "4"
-  - series: Éclaire
-    level: "4"
-  - series: Salve dévastatrice
-    level: "2"
-  - series: Tir surchargé
-    level: "3"
-  - series: Lame de foudre
-    level: "3"
-  - series: Lame de lumière absolue
-    level: "2"
-  - series: Attaque de force
-    level: "3"
-  - series: Surmultiplication au combat
-    level: "2"
+  - series: Fireball
+    level: '4'
+  - series: Lightning
+    level: '4'
+  - series: Devastating Salvo
+    level: '2'
+  - series: Overcharged Shot
+    level: '3'
+  - series: Lightning Blade
+    level: '3'
+  - series: Absolute Light Blade
+    level: '2'
+  - series: Power Attack
+    level: '3'
+  - series: Combat Overdrive
+    level: '2'
 gameplay_guide: |
   *** ELITE RANK (~10,000 POINTS) ***
 
@@ -259,4 +259,4 @@ gameplay_guide: |
   An Opal without their exo remains formidable (~5000 pts)
   but becomes vulnerable and can be defeated by a coordinated group.
   Destroying or disabling the exoskeleton is a viable strategy.
-notes: "ELITE RANK ~10,000 POINTS. Opals are among the most fearsome combatants of the Empire. Elite rank of the army - capable of single-handedly influencing the course of a battle. Their exoskeleton alone is worth more than some starships. Few in the entire Empire, deployed only for strategically critical missions. The Gen-7 prototype exoskeleton provides massive bonuses: stats, resistances, Flux, and affinities. Without the exo, an Opal remains formidable (~5000 pts) but vulnerable. Mentioned in war reports as an example of imperial tactical superiority."
+notes: 'ELITE RANK ~10,000 POINTS. Opals are among the most fearsome combatants of the Empire. Elite rank of the army - capable of single-handedly influencing the course of a battle. Their exoskeleton alone is worth more than some starships. Few in the entire Empire, deployed only for strategically critical missions. The Gen-7 prototype exoskeleton provides massive bonuses: stats, resistances, Flux, and affinities. Without the exo, an Opal remains formidable (~5000 pts) but vulnerable. Mentioned in war reports as an example of imperial tactical superiority.'

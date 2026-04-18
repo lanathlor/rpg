@@ -5,7 +5,7 @@ alignement: hostile
 description: Heavy defensive turret equipped with a multi-barrel rotary cannon. Fortified installation capable of saturating an entire zone with projectiles. Critical point defense.
 equipment:
   weapons:
-    - Canon rotatif lourd
+    - Heavy rotary cannon
   armor: []
   consumables: []
 skills: []

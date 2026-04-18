@@ -5,7 +5,7 @@ alignement: hostile
 description: Automated defensive turret equipped with an automatic rifle and 360-degree sensors. Standard perimeter defense system for Aceras installations.
 equipment:
   weapons:
-    - Fusil automatique de tourelle
+    - Turret automatic rifle
   armor: []
   consumables: []
 skills: []

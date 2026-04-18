@@ -9,13 +9,13 @@ equipment:
   armor:
     - Tunique renforcée
   consumables:
-    - name: Kit de soins
+    - name: Healing kit
       quantity: 1
-    - name: Cristal de Flux
+    - name: Flux Crystal
       quantity: 2
 skills:
   - Arcanotechnicien
-  - Scientifique
+  - Scientist
 spells:
   - Projectile de Flux
   - Bouclier arcanotechnique

@@ -12,9 +12,9 @@ equipment:
       quantity: 2
 skills:
   - Sprint
-  - Prowler
+  - Stalker
 spells:
-  - Multi-attack
+  - Multiple Attack
   - Cleave
   - Precise strike
   - Weak point strike

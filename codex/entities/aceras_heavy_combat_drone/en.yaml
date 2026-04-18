@@ -5,7 +5,7 @@ alignement: hostile
 description: Aceras military combat drone equipped with a plasma rifle. Autonomous mobile combat platform, well-armed.
 equipment:
   weapons:
-    - Fusil à plasma
+    - Plasma rifle
   armor: []
   consumables: []
 skills: []
