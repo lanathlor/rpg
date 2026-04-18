@@ -36,7 +36,7 @@ const SCHOOL_COSTS: Record<string, number> = {
   feu: 3,
   electricite: 3,
   givre: 3,
-  lumiere: 3,
+  lumière: 3,
   martial: 3,
   balistique: 3,
   illusion: 3,

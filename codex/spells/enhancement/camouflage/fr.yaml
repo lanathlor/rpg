@@ -13,7 +13,7 @@ levels:
         - Rôdeur
     conditions:
       dexterity_required: 16
-    recharge_time: 80 sec
+    recharge_time: 13 tours
     effects:
       success: vous êtes camouflée automatiquement pendant 3 tours
       failure: "-1 aux jets d'attaques contre vous"

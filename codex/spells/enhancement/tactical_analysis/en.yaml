@@ -13,4 +13,4 @@ levels:
     effects:
       special: Reveals the resistances and weaknesses of a target. Allies gain Advantage on their next attack roll against that target.
     duration: 3 turns
-    recharge_time: 3 sec
+    recharge_time: 1 turn

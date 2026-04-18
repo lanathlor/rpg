@@ -13,4 +13,4 @@ levels:
     effects:
       special: Révèle les résistances et faiblesses d'une cible. Les alliés obtiennent Avantage sur leur prochain jet d'attaque contre cette cible.
     duration: 3 tours
-    recharge_time: 3 sec
+    recharge_time: 1 tour

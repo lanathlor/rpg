@@ -14,7 +14,7 @@ const ruleSections = [
   { id: '03_systeme_affinites_et_types', title: 'Système d\'affinités et types' },
   { id: '04_ecoles_d_arcanotechnique', title: 'Écoles d\'arcanotechnique' },
   { id: '05_regles_jet_de_des', title: 'Règles de jet de dés' },
-  { id: '06_systeme_de_mana', title: 'Système de mana' },
+  { id: '06_systeme_de_flux', title: 'Système de Flux' },
   { id: '07_systeme_de_resistances', title: 'Système de résistances' },
   { id: '10_creation_personnage', title: 'Création de personnage' },
   { id: '09_lexique', title: 'Lexique' },

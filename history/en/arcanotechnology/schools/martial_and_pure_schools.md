@@ -25,5 +25,5 @@ The **Pure School** manipulates the Flux in its rawest form, without channeling 
 
 **Related documents:**
 
--   For the discovery and physical foundations of the Flux, see `histoire_arcanotechnie.md`
--   For modern technological applications (crystals, modulators, automated systems), see `systemes_automatises.md`
+-   For the discovery and physical foundations of the Flux, see [History of Arcanotechnology](/en/history/arcanotechnology/history/)
+-   For modern technological applications (crystals, modulators, automated systems), see [Automated Arcanotechnic Systems](/en/history/arcanotechnology/systems/automated_arcanotechnic_systems/)

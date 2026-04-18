@@ -53,12 +53,12 @@ const fileMap = {
   givre_extraction_energetique: 'frost_energy_extraction',
   gravitonique_conversion_gravitationnelle: 'gravitonic_gravitational_conversion',
   hydrodynamique_conversion_fluide: 'hydrodynamic_fluid_conversion',
-  illusion_manipulation_de_la_perception: 'illusion_perception_manipulation',
+  illusion_manipulation_de_la_perception: 'illusion_cognitive_manipulation',
   kinesthesique_conversion_gravito_mecanique: 'kinesthetic_gravito_mechanical_conversion',
   lumiere_conversion_photonique_stabilisee: 'light_stabilized_photonic_conversion',
   magnetique_conversion_magnetique: 'magnetic_magnetic_conversion',
   martial_techniques_de_combat_physique: 'martial_physical_combat_techniques',
-  ombre_manipulation_de_l_information: 'shadow_information_manipulation',
+  ombre_manipulation_de_l_information: 'shadow_photonic_absorption',
   pure_manipulation_du_flux_arcanotechnique: 'pure_arcanotechnic_flux_manipulation',
   quantique_manipulation_quantique: 'quantum_quantum_manipulation',
   sonique_conversion_vibratoire: 'sonic_vibratory_conversion',
@@ -122,7 +122,7 @@ const fileMap = {
   le_mecanisme_de_couplage_electron_flux: 'electron_flux_coupling_mechanism',
 
   // history/arcanotechnie/systemes
-  les_cristaux_de_mana: 'mana_crystals',
+  les_cristaux_de_mana: 'flux_crystals',
   interface_directe_arcanotechniciens_et_cristaux: 'direct_interface_arcanotechnicians_and_crystals',
   les_systemes_arcanotechniques_automatises: 'automated_arcanotechnic_systems',
   // applications_industrielles already mapped above

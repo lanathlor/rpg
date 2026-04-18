@@ -13,7 +13,7 @@ levels:
         - "INT: 18"
     conditions:
       intelligence_required: 20
-      flux_cost: 35
+    recharge_time: 20 tours
     description: Technique secrète des maîtres de guerre impériaux. Accélère tous les processus cognitifs et physiques pour transcender les limites humaines normales.
     effects:
       attack_bonus: +3 attaques supplémentaires par tour, +5 à tous les jets d'attaque
@@ -33,7 +33,7 @@ levels:
         - "INT: 22"
     conditions:
       intelligence_required: 24
-      flux_cost: 60
+    recharge_time: 30 tours
     description: État de transe de combat ultime. Le guerrier devient une tornade de destruction, se déplaçant si vite qu'il semble se démultiplier sur le champ de bataille.
     effects:
       attack_bonus: +5 attaques supplémentaires par tour, +8 à tous les jets d'attaque, +10 à l'initiative

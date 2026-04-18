@@ -142,7 +142,7 @@ Overload is never lethal, but it limits the abuse of heavy spells.
 Each spell belongs to:
 
 - a **School** (Fire, Frost, Light, Shadow, etc.)
-- and a **Type** (Destruction, Annihilation, Cataclysm, Alteration, Enhancement)
+- and a **Type** (Destruction, Annihilation, Cataclysm, Alteration, Enhancement, Weapon, Displacement, Protection, Affliction)
 
 These elements do **not** modify the Flux cost, but they influence:
 
@@ -150,7 +150,18 @@ These elements do **not** modify the Flux cost, but they influence:
 - overload risks,
 - and the affinities required to unlock the spell.
 
-### 6.2. Access Conditions
+### 6.2. Flux Cost vs. Recharge
+
+Techniques fall into two cost categories based on their physical nature:
+
+- **Flux cost:** Techniques that convert Flux into energy (arcanotechnic effects) consume Flux from the caster's reserve. Most Schools use this model.
+- **Recharge (cooldown):** Techniques that rely on physical prowess rather than Flux conversion (Martial, Ballistic) use a cooldown measured in turns. These represent the body's recovery time, not energy expenditure.
+
+This distinction reflects the setting's core mechanic: Martial and Ballistic techniques are physical actions enhanced by training, not Flux manipulation. They do not deplete energy reserves but require time between uses.
+
+**Flux-infused techniques:** Advanced Martial and Ballistic techniques may combine both a recharge cooldown and a Flux cost. These represent high-level maneuvers where physical skill is augmented by Flux energy — the warrior channels Flux through their body or weapon to achieve effects beyond pure physicality. Such techniques are rare and demand both physical mastery and arcanotechnic aptitude.
+
+### 6.3. Access Conditions
 
 A spell is accessible if:
 
@@ -160,7 +171,7 @@ A spell is accessible if:
 
 See the file: `03_systeme_affinites_et_types.md`.
 
-### 6.3. Spell Availability
+### 6.4. Spell Availability
 
 **Codex access:** A character can use **any spell from the codex** if they meet the required affinity conditions. There is no learning cost or availability restriction beyond affinities.
 

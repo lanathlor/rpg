@@ -10,7 +10,7 @@ levels:
         mixed_requirement: "A.École[martial] + A.Type[arme]: 6"
     conditions:
       special: aucune
-    recharge_time: 30 sec
+    recharge_time: 5 tours
     effects:
       attack_bonus: +5 au jet d'attaque de la prochaine attaque physique
       resistance: RMEC

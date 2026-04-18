@@ -23,8 +23,6 @@ Chaque personnage possède des valeurs d’affinité :
 - `A.École[Nom]` → niveau d’affinité avec une école (ex: Feu, Givre, etc.)
 - `A.Type[Nom]` → niveau d’affinité avec un type (ex: Destruction, Altération, etc.)
 
-Les affinités vont de **0 à 5**.
-
 ### 🔑 Règle d'accès à un sort
 
 Un sort est utilisable si le personnage remplit **une** des conditions suivantes :
@@ -225,6 +223,57 @@ Tir surchargé, Plombs à haute vélocité, Tir à la tête.
 
 ---
 
+### 🏃 Déplacement
+
+**Nature :** Manipulation spatiale et cinétique.
+**Principe :** l'Arcanotechnicien convertit le Flux en mouvement, repositionnement ou distorsion spatiale.
+**Profil :** réactif, mobile, orienté tactique.
+
+**Caractéristiques :**
+
+- Repositionnement rapide sur le champ de bataille.
+- Capacités d'évasion et de poursuite.
+- Synergie avec l'initiative et les stratégies basées sur le mouvement.
+
+**Exemples :**
+Charge, Roulade de combat, Pas dimensionnel.
+
+---
+
+### 🛡️ Protection
+
+**Nature :** Conversion défensive et blindage.
+**Principe :** l'Arcanotechnicien façonne le Flux en barrières, protections ou champs d'atténuation des dégâts.
+**Profil :** réactif, stable, orienté équipe.
+
+**Caractéristiques :**
+
+- Effets de réduction et d'absorption des dégâts.
+- Déni de zone et création de couverture.
+- Grande stabilité, faible potentiel offensif.
+
+**Exemples :**
+Bouclier de lumière solide, Bouclier renforcé, Barrière cinétique.
+
+---
+
+### 🩸 Affliction
+
+**Nature :** Dégradation persistante et débilitation.
+**Principe :** l'Arcanotechnicien implante une conversion de Flux soutenue dans une cible, causant des effets nocifs continus.
+**Profil :** effet lent, insidieux, orienté attrition.
+
+**Caractéristiques :**
+
+- Effets de dégâts dans le temps et d'affaiblissement.
+- Difficile à dissiper une fois appliqué.
+- Nécessite une concentration mentale soutenue.
+
+**Exemples :**
+Poison, Corrosion, Hémorragie de Flux.
+
+---
+
 ## 🧩 Résumé comparatif
 
 | Type             | Vitesse     | Puissance   | Stabilité  | Complexité mentale | Style de conversion    |
@@ -235,6 +284,9 @@ Tir surchargé, Plombs à haute vélocité, Tir à la tête.
 | **Altération**   | Moyenne     | Variable    | Très haute | Moyenne            | Transformation fine    |
 | **Amélioration** | Moyenne     | Faible      | Très haute | Moyenne            | Réinjection harmonique |
 | **Arme**         | Rapide      | Variable    | Haute      | Faible             | Infusion d'arme        |
+| **Déplacement**  | Très rapide | Aucune      | Moyenne    | Faible             | Redirection cinétique  |
+| **Protection**   | Moyenne     | Aucune      | Très haute | Moyenne            | Façonnage défensif     |
+| **Affliction**   | Lente       | Faible      | Haute      | Élevée             | Implantation soutenue  |
 
 ---
 
@@ -242,7 +294,7 @@ Tir surchargé, Plombs à haute vélocité, Tir à la tête.
 
 Le Type et l'École d'un sort déterminent **quelle résistance** s'applique contre lui. Ce n'est pas le fait qu'il soit "arcanotechnique" qui compte, mais **la nature physique de l'effet produit**.
 
-> Pour une compréhension complète du système de résistances, consultez [Système de Résistances](07_systeme_de_resistances.md).
+> Pour une compréhension complète du système de résistances, consultez [Système de Résistances](../reference/resistances.md).
 
 ### Correspondances générales
 

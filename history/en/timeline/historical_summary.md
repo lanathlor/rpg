@@ -10,7 +10,7 @@ Before the Foundation, humanity was scattered across several star systems, divid
 
 It was then that the **Council of Guardians** appeared: five beings with human features but endowed with formidable intelligence and apparent immortality. Through diplomacy and the demonstration of their wisdom, they convinced several major factions to unite under their guidance, thus creating the Empire in Year 0.
 
-![The Council of Guardians](../images/world/conseil_des_gardiens.png)
+![The Council of Guardians](/images/world/conseil_des_gardiens.png)
 
 This unification marked the end of human civil wars and the beginning of an era of prosperity and coordinated expansion.
 
@@ -34,7 +34,7 @@ The Acéras are tall beings but possess less physical strength than humans. Thei
 - **Comparable technology**: Their technological level rivals that of the Empire, making the conflict particularly long and costly.
 - **Bellicose mentality**: Convinced of their superiority and frightened by differences, they categorically refuse any negotiation with the Empire.
 
-![Acéras Warrior](../images/world/aceras_warrior.png)
+![Acéras Warrior](/images/world/aceras_warrior.png)
 
 ### The Conflict
 

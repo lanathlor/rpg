@@ -10,7 +10,7 @@ levels:
         mixed_requirement: "A.École[balistique] + A.Type[arme]: 9"
     conditions:
       special: aucune
-    recharge_time: 35 sec
+    recharge_time: 6 tours
     effects:
       damage: +4d4+2 aux dégâts d'arme
       resistance: RMEC

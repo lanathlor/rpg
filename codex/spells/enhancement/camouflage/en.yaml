@@ -13,7 +13,7 @@ levels:
         - Rôdeur
     conditions:
       dexterity_required: 16
-    recharge_time: 80 sec
+    recharge_time: 13 turns
     effects:
       success: you are automatically camouflaged for 3 turns
       failure: "-1 to attack rolls against you"

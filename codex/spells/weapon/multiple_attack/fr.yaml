@@ -10,7 +10,7 @@ levels:
         mixed_requirement: "A.École[martial] + A.Type[arme]: 9"
     conditions:
       dexterity_required: 16
-    recharge_time: 60 sec
+    recharge_time: 10 tours
     effects:
       multiple_attack: Lance une copie de la prochaine attaque
       resistance: RMEC
@@ -23,7 +23,7 @@ levels:
         mixed_requirement: "A.École[martial] + A.Type[arme]: 12"
     conditions:
       dexterity_required: 16
-    recharge_time: 40 sec
+    recharge_time: 7 tours
     effects:
       multiple_attack: Lance une copie de la prochaine attaque
       resistance: RMEC

@@ -18,5 +18,5 @@ The frontiers of arcanotechnology continue to expand. Researchers are exploring:
 
 **Related documents:**
 
--   For the discovery and physical foundations of the Flux, see `histoire_arcanotechnie.md`
--   For the complete classification of arcanotechnic schools, see `ecoles_arcanotechniques.md`
+-   For the discovery and physical foundations of the Flux, see [History of Arcanotechnology](/en/history/arcanotechnology/history/)
+-   For the complete classification of arcanotechnic schools, see [Arcanotechnic Schools](/en/history/arcanotechnology/schools/)

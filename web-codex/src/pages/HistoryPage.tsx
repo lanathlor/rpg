@@ -87,7 +87,7 @@ const historySections = [
   {
     id: 'systemes_automatises',
     title: 'Systèmes Arcanotechniques Automatisés',
-    description: 'Cristaux de mana, modulateurs, applications industrielles et limitations',
+    description: 'Cristaux de Flux, modulateurs, applications industrielles et limitations',
     icon: <Sparkles className="h-5 w-5" />,
     color: 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300',
     category: 'Arcanotechnie'

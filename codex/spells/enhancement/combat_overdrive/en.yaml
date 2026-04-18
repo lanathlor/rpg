@@ -13,7 +13,7 @@ levels:
         - "INT: 18"
     conditions:
       intelligence_required: 20
-      flux_cost: 35
+    recharge_time: 20 turns
     description: Secret technique of the Imperial war masters. Accelerates all cognitive and physical processes to transcend normal human limits.
     effects:
       attack_bonus: +3 additional attacks per turn, +5 to all attack rolls
@@ -33,7 +33,7 @@ levels:
         - "INT: 22"
     conditions:
       intelligence_required: 24
-      flux_cost: 60
+    recharge_time: 30 turns
     description: Ultimate combat trance state. The warrior becomes a tornado of destruction, moving so fast they seem to multiply across the battlefield.
     effects:
       attack_bonus: +5 additional attacks per turn, +8 to all attack rolls, +10 to initiative

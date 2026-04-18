@@ -1,5 +1,5 @@
 ---
-title: "A Day in the Empire"
+title: 'A Day in the Empire'
 order: 2
 ---
 
@@ -9,7 +9,7 @@ Lyra wakes naturally around 10:30 AM, her neural implant having filtered non-ess
 
 Her apartment on Prime is modest, only 45 square meters. Space is precious on an ecumenopolis of 1.9 trillion inhabitants, even with the vertical architecture stretching kilometers upward. But it's free, provided by the State like all basic housing. If she wanted something bigger, she would need to contribute more to the Empire. Or settle on a more remote planet - but who would want to leave the beating heart of civilization?
 
-![Civilian life on Prime](../images/world/prime_civilian_life.png)
+![Civilian life on Prime](/images/world/prime_civilian_life.png)
 
 ## Morning: Leisure and Creation
 

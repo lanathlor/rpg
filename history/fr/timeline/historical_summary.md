@@ -10,7 +10,7 @@ Avant la Fondation, l'humanité était dispersée à travers plusieurs systèmes
 
 C'est alors qu'apparut le **Conseil des Gardiens** : cinq êtres aux traits humains mais dotés d'une intelligence redoutable et d'une apparente immortalité. Par la diplomatie et la démonstration de leur sagesse, ils convaincurent plusieurs factions majeures de s'unir sous leur tutelle, créant ainsi l'Empire en l'an 0.
 
-![Le Conseil des Gardiens](../images/world/conseil_des_gardiens.png)
+![Le Conseil des Gardiens](/images/world/conseil_des_gardiens.png)
 
 Cette unification marqua la fin des guerres civiles humaines et le début d'une ère de prospérité et d'expansion coordonnée.
 
@@ -34,7 +34,7 @@ Les Acéras sont des êtres de grande taille mais dotés d'une force physique mo
 - **Technologie comparable** : Leur niveau technologique rivalise avec celui de l'Empire, rendant le conflit particulièrement long et coûteux.
 - **Mentalité belliqueuse** : Convaincus de leur supériorité et effrayés par les différences, ils refusent catégoriquement toute négociation avec l'Empire.
 
-![Guerrier Acéras](../images/world/aceras_warrior.png)
+![Guerrier Acéras](/images/world/aceras_warrior.png)
 
 ### Le Conflit
 

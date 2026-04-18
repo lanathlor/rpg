@@ -10,7 +10,7 @@ levels:
         mixed_requirement: "A.École[martial] + A.Type[deplacement]: 6"
     conditions:
       dexterity_required: 14
-    recharge_time: 20 sec
+    recharge_time: 3 tours
     effects:
       movement: Déplacement de 5m + esquive automatique
       defense_bonus: +2 en défense jusqu'au prochain tour
@@ -26,7 +26,7 @@ levels:
         - Exosquelette
     conditions:
       dexterity_required: 12
-    recharge_time: 40 sec
+    recharge_time: 7 tours
     description: Grâce à la rapidité de vos mouvements et à la puissance conférée par l'exosquelette, vous vous propulsez loin du danger.
     effects:
       movement: Déplacement de 1d8 + vitesse dans n'importe quelle direction

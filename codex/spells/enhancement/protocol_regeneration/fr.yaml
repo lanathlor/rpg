@@ -12,4 +12,4 @@ levels:
       flux_cost: 8
     effects:
       special: Soigne 25 PV immédiatement. Auto-ciblage uniquement.
-    recharge_time: 3 sec
+    recharge_time: 1 tour

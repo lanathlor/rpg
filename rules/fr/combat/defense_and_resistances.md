@@ -9,7 +9,7 @@ Le système de défense repose sur deux valeurs fixes :
 -   le **Score de Défense (SD)** : détermine si une attaque touche.
 -   les **Résistances** : réduisent les dégâts une fois l'attaque réussie.
 
-> Pour une compréhension complète du système de résistances, consultez [Système de Résistances](07_systeme_de_resistances.md).
+> Pour une compréhension complète du système de résistances, consultez [Système de Résistances](../reference/resistances.md).
 
 ### 1. Score de Défense (SD)
 

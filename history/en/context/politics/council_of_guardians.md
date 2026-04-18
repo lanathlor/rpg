@@ -20,4 +20,4 @@ The **Council of Guardians** constitutes the supreme authority of the Empire. Th
 
 These semi-divine beings have perfect mastery of Arcanotechnology and possess intelligence far superior to the human average. Their apparent immortality and extraordinary abilities inspire both respect and mystery among the population.
 
-![The Council of Guardians in session](../../images/world/conseil_des_gardiens2.png)
+![The Council of Guardians in session](/images/world/conseil_des_gardiens2.png)

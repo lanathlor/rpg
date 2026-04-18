@@ -9,7 +9,7 @@ The defense system relies on two fixed values:
 -   the **Defense Score (DS)**: determines whether an attack hits.
 -   the **Resistances**: reduce damage once the attack succeeds.
 
-> For a complete understanding of the resistance system, see [Resistance System](07_systeme_de_resistances.md).
+> For a complete understanding of the resistance system, see [Resistance System](../reference/resistances.md).
 
 ### 1. Defense Score (DS)
 

@@ -10,7 +10,7 @@ levels:
         mixed_requirement: "A.École[martial] + A.Type[arme]: 9"
     conditions:
       dexterity_required: 14
-    recharge_time: 30 sec
+    recharge_time: 5 turns
     effects:
       damage: +1d8+3 to weapon damage
       resistance: RMEC
@@ -24,7 +24,7 @@ levels:
         mixed_requirement: "A.École[martial] + A.Type[arme]: 12"
     conditions:
       perception_required: 18
-    recharge_time: 120 sec
+    recharge_time: 20 turns
     description: Finds the target's vital points and attacks them as priority, dealing enormous damage.
     effects:
       damage: 2d20 + 10

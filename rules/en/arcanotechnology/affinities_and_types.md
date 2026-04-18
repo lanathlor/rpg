@@ -23,8 +23,6 @@ Each character has affinity values:
 - `A.School[Name]` -> affinity level with a school (e.g.: Fire, Frost, etc.)
 - `A.Type[Name]` -> affinity level with a type (e.g.: Destruction, Alteration, etc.)
 
-Affinities range from **0 to 5**.
-
 ### Spell Access Rule
 
 A spell is usable if the character meets **one** of the following conditions:
@@ -225,6 +223,57 @@ Overcharged Shot, High-Velocity Slugs, Headshot.
 
 ---
 
+### Displacement
+
+**Nature:** Spatial and kinetic manipulation.
+**Principle:** the Arcanotechnician converts Flux into movement, repositioning, or spatial distortion.
+**Profile:** reactive, mobile, tactically oriented.
+
+**Characteristics:**
+
+- Rapid repositioning on the battlefield.
+- Evasion and pursuit capabilities.
+- Synergy with initiative and movement-based strategies.
+
+**Examples:**
+Charge, Combat Roll, Blink Step.
+
+---
+
+### Protection
+
+**Nature:** Defensive conversion and shielding.
+**Principle:** the Arcanotechnician shapes Flux into barriers, wards, or damage-mitigating fields.
+**Profile:** reactive, stable, team-oriented.
+
+**Characteristics:**
+
+- Damage reduction and absorption effects.
+- Area denial and cover creation.
+- High stability, low offensive output.
+
+**Examples:**
+Solid Light Shield, Reinforced Shield, Kinetic Barrier.
+
+---
+
+### Affliction
+
+**Nature:** Persistent degradation and debilitation.
+**Principle:** the Arcanotechnician implants a sustained Flux conversion within a target, causing ongoing harmful effects.
+**Profile:** slow-acting, insidious, attrition-oriented.
+
+**Characteristics:**
+
+- Damage-over-time and debuff effects.
+- Difficult to dispel once applied.
+- Requires sustained mental focus.
+
+**Examples:**
+Poison, Corrosion, Flux Hemorrhage.
+
+---
+
 ## Comparative Summary
 
 | Type             | Speed       | Power       | Stability  | Mental Complexity  | Conversion Style       |
@@ -235,6 +284,9 @@ Overcharged Shot, High-Velocity Slugs, Headshot.
 | **Alteration**   | Medium      | Variable    | Very high  | Medium             | Fine transformation    |
 | **Enhancement**  | Medium      | Low         | Very high  | Medium             | Harmonic reinjection   |
 | **Weapon**       | Fast        | Variable    | High       | Low                | Weapon infusion        |
+| **Displacement** | Very fast   | None        | Medium     | Low                | Kinetic redirection    |
+| **Protection**   | Medium      | None        | Very high  | Medium             | Defensive shaping      |
+| **Affliction**   | Slow        | Low         | High       | High               | Sustained implantation |
 
 ---
 
@@ -242,7 +294,7 @@ Overcharged Shot, High-Velocity Slugs, Headshot.
 
 The Type and School of a spell determine **which resistance** applies against it. What matters is not the fact that it is "arcanotechnological," but **the physical nature of the effect produced**.
 
-> For a complete understanding of the resistance system, see [Resistance System](07_systeme_de_resistances.md).
+> For a complete understanding of the resistance system, see [Resistance System](../reference/resistances.md).
 
 ### General Correspondences
 

@@ -19,5 +19,5 @@ Les frontières de l'arcanotechnie continuent de s'étendre. Les chercheurs expl
 
 **Documents connexes :**
 
--   Pour la découverte et les fondements physiques du Flux, voir `histoire_arcanotechnie.md`
--   Pour la classification complète des écoles arcanotechniques, voir `ecoles_arcanotechniques.md`
+-   Pour la découverte et les fondements physiques du Flux, voir [Histoire de l'Arcanotechnie](/fr/history/arcanotechnology/history/)
+-   Pour la classification complète des écoles arcanotechniques, voir [Écoles Arcanotechniques](/fr/history/arcanotechnology/schools/)

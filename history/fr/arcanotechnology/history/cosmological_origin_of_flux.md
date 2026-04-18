@@ -59,5 +59,5 @@ _"Le Flux est l'ordre pur dans un univers tendant vers le chaos. Chaque conversi
 
 **Documents connexes :**
 
--   Pour la classification complète des écoles arcanotechniques, voir `ecoles_arcanotechniques.md`
--   Pour les applications technologiques modernes (cristaux, modulateurs, systèmes automatisés), voir `systemes_automatises.md`
+-   Pour la classification complète des écoles arcanotechniques, voir [Écoles Arcanotechniques](/fr/history/arcanotechnology/schools/)
+-   Pour les applications technologiques modernes (cristaux, modulateurs, systèmes automatisés), voir [Systèmes Arcanotechniques Automatisés](/fr/history/arcanotechnology/systems/automated_arcanotechnic_systems/)

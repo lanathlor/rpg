@@ -63,8 +63,8 @@ const rulesSections = [
     category: 'Fondamentaux'
   },
   {
-    id: '06_systeme_de_mana',
-    title: 'Système de mana',
+    id: '06_systeme_de_flux',
+    title: 'Système de Flux',
     description: 'Gestion des ressources arcanotechniques et flux d\'énergie',
     icon: <Zap className="h-5 w-5" />,
     color: 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300',

@@ -26,5 +26,5 @@ L'**École Pure** manipule le Flux dans sa forme la plus brute, sans le canalise
 
 **Documents connexes :**
 
--   Pour la découverte et les fondements physiques du Flux, voir `histoire_arcanotechnie.md`
--   Pour les applications technologiques modernes (cristaux, modulateurs, systèmes automatisés), voir `systemes_automatises.md`
+-   Pour la découverte et les fondements physiques du Flux, voir [Histoire de l'Arcanotechnie](/fr/history/arcanotechnology/history/)
+-   Pour les applications technologiques modernes (cristaux, modulateurs, systèmes automatisés), voir [Systèmes Arcanotechniques Automatisés](/fr/history/arcanotechnology/systems/automated_arcanotechnic_systems/)

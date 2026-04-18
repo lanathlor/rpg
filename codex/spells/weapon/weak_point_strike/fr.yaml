@@ -10,7 +10,7 @@ levels:
         mixed_requirement: "A.École[martial] + A.Type[arme]: 9"
     conditions:
       dexterity_required: 14
-    recharge_time: 30 sec
+    recharge_time: 5 tours
     effects:
       damage: +1d8+3 aux dégâts d'arme
       resistance: RMEC
@@ -24,7 +24,7 @@ levels:
         mixed_requirement: "A.École[martial] + A.Type[arme]: 12"
     conditions:
       perception_required: 18
-    recharge_time: 120 sec
+    recharge_time: 20 tours
     description: Trouve les points vitaux de la cible et les attaque en priorité, infligeant d'énormes dégâts.
     effects:
       damage: 2d20 + 10

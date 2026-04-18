@@ -12,7 +12,7 @@ levels:
         - Vétéran
     conditions:
       perception_required: 14
-    recharge_time: 30 sec
+    recharge_time: 5 turns
     effects:
       prediction: Predicts the target's action, accuracy increases with the roll
     notes: This spell is considered a maneuver

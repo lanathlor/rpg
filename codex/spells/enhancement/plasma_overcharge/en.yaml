@@ -13,4 +13,4 @@ levels:
     effects:
       special: The next ranged attack deals +3d6 additional RRAD damage. Must be used within the next 2 turns or the effect dissipates.
     duration: 2 turns (until used)
-    recharge_time: 2 sec
+    recharge_time: 1 turn

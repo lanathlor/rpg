@@ -11,7 +11,7 @@ levels:
     conditions:
       special: none
       flux_cost: 8
-    recharge_time: 60 sec
+    recharge_time: 10 turns
     effects:
       damage: +3d6+6 to weapon damage
       resistance: RMEC
@@ -26,7 +26,7 @@ levels:
     conditions:
       intelligence_required: 18
       flux_cost: 12
-    recharge_time: 60 sec
+    recharge_time: 10 turns
     effects:
       damage: +5d6+12 to weapon damage
       resistance: RMEC
@@ -42,7 +42,7 @@ levels:
     conditions:
       intelligence_required: 20
       flux_cost: 18
-    recharge_time: 60 sec
+    recharge_time: 10 turns
     effects:
       damage: +8d6+20 to weapon damage
       resistance: RMEC

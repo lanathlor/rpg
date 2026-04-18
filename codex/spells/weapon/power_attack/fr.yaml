@@ -12,7 +12,7 @@ levels:
         - "FOR: 14"
     conditions:
       special: aucune
-    recharge_time: 30 sec
+    recharge_time: 5 tours
     effects:
       damage_bonus: +1d8 a la prochaine attaque physique
       resistance: RMEC
@@ -28,7 +28,7 @@ levels:
     conditions:
       special: aucune
       flux_cost: 8
-    recharge_time: 30 sec
+    recharge_time: 5 tours
     effects:
       damage_bonus: +2d8 + 8 a la prochaine attaque physique
       resistance: RMEC
@@ -44,7 +44,7 @@ levels:
     conditions:
       intelligence_required: 20
       flux_cost: 12
-    recharge_time: 30 sec
+    recharge_time: 5 tours
     effects:
       damage_bonus: +4d10 + 16 a la prochaine attaque physique
       resistance: RMEC

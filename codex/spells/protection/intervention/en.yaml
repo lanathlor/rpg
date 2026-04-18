@@ -12,7 +12,7 @@ levels:
         - Gardien
     conditions:
       special: none
-    recharge_time: 30 sec
+    recharge_time: 5 turns
     effects:
       protection: Takes damage in place of an ally
       movement: Instant movement to the ally

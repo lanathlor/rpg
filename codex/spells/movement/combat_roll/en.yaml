@@ -10,7 +10,7 @@ levels:
         mixed_requirement: "A.École[martial] + A.Type[deplacement]: 6"
     conditions:
       dexterity_required: 14
-    recharge_time: 20 sec
+    recharge_time: 3 turns
     effects:
       movement: 5m movement + automatic dodge
       defense_bonus: +2 to defense until next turn
@@ -26,7 +26,7 @@ levels:
         - Exosquelette
     conditions:
       dexterity_required: 12
-    recharge_time: 40 sec
+    recharge_time: 7 turns
     description: Thanks to the speed of your movements and the power granted by the exoskeleton, you propel yourself far from danger.
     effects:
       movement: Movement of 1d8 + speed in any direction

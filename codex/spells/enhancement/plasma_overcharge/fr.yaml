@@ -13,4 +13,4 @@ levels:
     effects:
       special: La prochaine attaque à distance inflige +3d6 dégâts RRAD supplémentaires. Doit être utilisé dans les 2 tours suivants ou l'effet se dissipe.
     duration: 2 tours (jusqu'à utilisation)
-    recharge_time: 2 sec
+    recharge_time: 1 tour

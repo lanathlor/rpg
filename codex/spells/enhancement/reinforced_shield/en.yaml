@@ -13,4 +13,4 @@ levels:
     effects:
       special: +5 to all resistances (RMEC, RRAD, RINT) for the caster. Visible energy shield.
     duration: 3 turns
-    recharge_time: 4 sec
+    recharge_time: 1 turn

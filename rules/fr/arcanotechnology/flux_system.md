@@ -142,7 +142,7 @@ La surcharge n’est jamais mortelle, mais elle limite l’abus de sorts lourds.
 Chaque sort appartient :
 
 - à une **École** (Feu, Givre, Lumière, Ombre, etc.)
-- et à un **Type** (Destruction, Annihilation, Cataclysme, Altération, Amélioration)
+- et à un **Type** (Destruction, Annihilation, Cataclysme, Altération, Amélioration, Arme, Déplacement, Protection, Affliction)
 
 Ces éléments ne modifient **pas** le coût en flux, mais influencent :
 
@@ -150,7 +150,18 @@ Ces éléments ne modifient **pas** le coût en flux, mais influencent :
 - les risques de surcharge,
 - et les affinités nécessaires pour débloquer le sort.
 
-### 6.2. Conditions d'accès
+### 6.2. Coût en Flux vs. Recharge
+
+Les techniques se divisent en deux catégories de coût selon leur nature physique :
+
+- **Coût en Flux :** Les techniques qui convertissent le Flux en énergie (effets arcanotechniques) consomment du Flux de la réserve du lanceur. La plupart des Écoles utilisent ce modèle.
+- **Recharge (cooldown) :** Les techniques reposant sur la prouesse physique plutôt que sur la conversion du Flux (Martial, Balistique) utilisent un temps de recharge mesuré en tours. Celui-ci représente le temps de récupération du corps, pas une dépense d'énergie.
+
+Cette distinction reflète la mécanique centrale du système : les techniques Martiales et Balistiques sont des actions physiques améliorées par l'entraînement, pas des manipulations du Flux. Elles n'épuisent pas les réserves d'énergie mais nécessitent un délai entre chaque utilisation.
+
+**Techniques infusées de Flux :** Les techniques Martiales et Balistiques avancées peuvent combiner un temps de recharge et un coût en Flux. Elles représentent des manœuvres de haut niveau où la maîtrise physique est augmentée par l'énergie du Flux — le guerrier canalise le Flux à travers son corps ou son arme pour obtenir des effets dépassant la pure physicalité. Ces techniques sont rares et exigent à la fois une maîtrise physique et une aptitude arcanotechnique.
+
+### 6.3. Conditions d'accès
 
 Un sort est accessible si :
 
@@ -160,7 +171,7 @@ Un sort est accessible si :
 
 Voir le fichier : `03_systeme_affinites_et_types.md`.
 
-### 6.3. Disponibilité des sorts
+### 6.4. Disponibilité des sorts
 
 **Accès au codex :** Un personnage peut utiliser **n'importe quel sort du codex** s'il remplit les conditions d'affinité requises. Il n'y a pas de coût d'apprentissage ni de restriction de disponibilité au-delà des affinités.
 
